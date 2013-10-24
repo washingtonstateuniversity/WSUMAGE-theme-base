@@ -228,6 +228,8 @@ div#slideshow {
 	
 }
 
+/* nav */
+#nav .tags-list a{display:inline-block;}
 
 /*_______________________ toolbar  _______________________ */
 #wrapper #toolbar {
@@ -405,6 +407,20 @@ div#slideshow {
  
  
 /*_______________________  main list  _______________________ */
+
+#wrapper #content h5 a{
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding: 0px;
+	color:#981e32;
+	text-decoration:none;
+}
+
+.at300bs.at15t_compact{
+	background-image:none;
+}
+.at300bs{
+	display:inline;
+}
 
 
 
@@ -744,7 +760,7 @@ margin-right: 20px;
 }
 
 
-.tittle{
+.title{
 	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-weight:bold;
 	margin:10px 10px 10px 15px;
