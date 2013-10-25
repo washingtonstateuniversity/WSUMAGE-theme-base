@@ -282,6 +282,10 @@ div#slideshow {
 	float:right;
 }
 
+/* Nav */
+#nav .tags-list a{display:inline-block }
+
+
 /*_______________________  main  _______________________ */
 
 #wrapper #content #main { 

@@ -47,7 +47,9 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>varien/form.js</script></action>
                 <!--<action method="addJs"><script>varien/menu.js</script></action>-->
                 <action method="addJs"><script>mage/translate.js</script></action>
-                <action method="addJs"><script>mage/cookies.js</script></action>
+
+				<action method="addItem"><type>skin_js</type><name>js/jquery.cycle2.min.js</name><params/></action>
+				<action method="addItem"><type>skin_js</type><name>js/controller.js</name><params/></action>
 
 
 				<!-- base for all WSU -->
