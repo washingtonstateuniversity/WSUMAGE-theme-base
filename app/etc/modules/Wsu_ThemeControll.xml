@@ -13,6 +13,7 @@
             <active>true</active>
             <codePool>local</codePool>
 			<depends>
+				<Wsu_Storeutilities/>
 				<Wsu_Wsu/>
 				<!--
 				<Wsu_Brands/>

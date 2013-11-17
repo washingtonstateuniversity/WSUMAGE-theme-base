@@ -50,13 +50,8 @@ Default layout, loads most of the pages
 
 				<action method="addItem"><type>skin_js</type><name>js/jquery.cycle2.min.js</name><params/></action>
 				<action method="addItem"><type>skin_js</type><name>js/controller.js</name><params/></action>
-
-
+				
 				<!-- base for all WSU -->
-					<action method="addItem"><type>cdn_js</type><name>//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</name>
-																			<params/><if/><cond/><window_obj>jQuery</window_obj><local_path>/js/jquery-1.10.2.min.js</local_path></action>
-					<action method="addItem"><type>cdn_js</type><name>//code.jquery.com/jquery-migrate-1.2.1.min.js</name>
-																			<params/><if/><cond/><window_obj>jQuery</window_obj><local_path>/js/jquery-migrate-1.2.1.min.js</local_path></action>
 					<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
 	
 					<action method="addItem"><type>external_js</type><name>//images.wsu.edu/javascripts/print_v2.js</name></action>
