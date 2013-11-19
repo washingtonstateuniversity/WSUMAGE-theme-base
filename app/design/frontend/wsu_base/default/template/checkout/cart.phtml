@@ -136,7 +136,7 @@
         </fieldset>
     </form>
     <div class="cart-collaterals">
-        <div class="col2-set">
+        <div class="col1-set">
             <div class="col-1">
                 <?php if($_crosssell = $this->getChildHtml('crosssell')): ?>
                     <?php echo $_crosssell; ?>
@@ -147,6 +147,8 @@
                 </div>
                 <?php endif; ?>
             </div>
+        </div>
+        <div class="col2-set">
             <div class="col-2">
                 <?php /* Extensions placeholder */ ?>
                 <?php echo $this->getChildHtml('checkout.cart.extra') ?>

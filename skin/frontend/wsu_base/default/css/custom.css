@@ -2,7 +2,6 @@
 
 .quick-access .links a {
 	text-decoration:none;
-	
 }
 .top-bar .breadcrumbs {
   width: 391px;
@@ -10,4 +9,11 @@
 .top-bar .breadcrumbs li {
   display: inline-block;
 }
+.cart .cart-collaterals .col2-set .col-1{
+}
+.cart .cart-collaterals .col1-set .col-1 li{
+	width: 222px; display: inline-block;
+}
+
+
 
