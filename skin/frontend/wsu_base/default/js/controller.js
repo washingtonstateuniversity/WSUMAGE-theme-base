@@ -96,7 +96,7 @@
 })(jQuery);
 
 
-//replace this asap
+//replace this asap using jquery
 function protoTabs(){
 	//from app\design\frontend\wsu_base\default\template\catalog\product\view\TABS.phtml
 	Varien.Tabs = Class.create();
