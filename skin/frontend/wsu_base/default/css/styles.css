@@ -1758,35 +1758,25 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .block ol{padding:0px;}
 
 
 
 
 
-
 /*
-#262a2d
+SAMPLE
 EVENTS PULL THIS OUT TO THE EVENT EXTENSION
 */
-.event.verse{text-align: center; background-color:#981e32; color:#e4e4e4 !important;}
-.event.time{text-align: center;background-color:#E4E4E4;color:#981e32;}
-.event.status{text-align: center;}
-.event.status.comming{}
-.event.status.soldout{}
+.catalog-category-view .event.verse{text-align: center; background-color:#981e32;}
+.catalog-category-view .event.verse a{color:#e4e4e4 !important; text-decoration:none;}
+.catalog-category-view .event.verse.away{text-align: center;background-color:#E4E4E4;}
+.catalog-category-view .event.verse.away a{color:#981e32 !important;}
+
+.catalog-category-view .event.time{text-align: center;background-color:#E4E4E4;color:#981e32;}
+.catalog-category-view .event.time.away{text-align: center;background-color:#981e32;}
+.catalog-category-view .event.time.away a{color:#e4e4e4 !important; text-decoration:none;}
+
+.catalog-category-view .event.status{text-align: center;text-decoration:none;}
+.catalog-category-view .event.status.comming{}
+.catalog-category-view .event.status.soldout{}
