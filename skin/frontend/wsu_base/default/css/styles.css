@@ -1779,3 +1779,14 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 
+
+
+/*
+#262a2d
+EVENTS PULL THIS OUT TO THE EVENT EXTENSION
+*/
+.event.verse{text-align: center; background-color:#981e32; color:#e4e4e4 !important;}
+.event.time{text-align: center;background-color:#E4E4E4;color:#981e32;}
+.event.status{text-align: center;}
+.event.status.comming{}
+.event.status.soldout{}
