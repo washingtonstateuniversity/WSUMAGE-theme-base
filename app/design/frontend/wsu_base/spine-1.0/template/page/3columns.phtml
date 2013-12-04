@@ -34,11 +34,12 @@
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
-<body class="hybrid <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 	<?php echo $this->getChildHtml('after_body_start') ?>
     <div id = "wrapper">
-			<?php echo $this->getChildHtml('header') ?>
-			<?php echo $this->getChildHtml('left') ?>
+<?php echo $this->getChildHtml('header') ?>
+			<?php echo $this->getChildHtml('right') ?>
+            <?php echo $this->getChildHtml('left') ?>
         </div><!--end nav-->
             <div id="main">
 				<?php echo $this->getChildHtml('topContainer'); ?>
@@ -56,9 +57,6 @@
 	
     <?php echo $this->getChildHtml('before_body_end') ?>
 	<?php echo $this->getAbsoluteFooter() ?>
-    
     <div id="wsufooter"><a href="http://publishing.wsu.edu/copyright/Wsu.html">&copy; 2013</a> <a href="http://www.wsu.edu">Washington State University</a> | <a href="http://access.wsu.edu/">Accessibility</a> | <a href="http://policies.wsu.edu/">Policies</a> | <a href="http://publishing.wsu.edu/copyright/Wsu.html">Copyright</a></div>
-    
-    
 </body>
 </html>

@@ -1,0 +1,131 @@
+<?php
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+ 
+ $store = Mage::app()->getStore();
+ $name = $store->getFrontendName();
+ 
+?>
+
+<!-- SPINE -->
+<div id="spine" class="dark">
+    <div id="glue" class="clearfix">
+        <header><a href="http://www.wsu.edu/" id="logo">Washington State University</a></header>
+        <!-- ACTIONS -->
+        <section id="wsu-actions" class="clearfix" role="actions">
+            <!-- Tabs -->
+            <ul id="wsu-actions-tabs" class="spine-tabs clearfix">
+                    <li id="wsu-search-tab" class="closed" label="Search"><button>Search</button></li>
+                    <li id="wsu-contact-tab" class="closed" label="Contact"><button>Contact</button></li>
+                    <li id="wsu-share-tab" class="closed" label="Share"><button>Share</button></li>
+                    <li id="wsu-print-tab" class="closed" label="Print"><button>Print</button></li>
+            </ul>
+            <!-- Search/Index ( In great FLUX ) -->
+            <section id="wsu-search" class="tools closed" data-default="site-search">
+                <!--
+                You can turn off default search functions by adding classes to #wsu-search
+                Options: .nix-index, .nix-site, .nix-wsu, .nix-facstaff, .nix-students
+                -->
+                <?php echo $this->getChildHtml('topBar') ?>
+                <!--<form name="search" id="search">
+                        <input id="searchterm" name="term" type="text" value="" placeholder="search">
+                        <button id="submit-search">Submit</button>
+                </form>-->
+                
+                <div id="wsu-search-results" class="spine-results">
+                        <div id="index-search-results" class="active"></div>
+                </div>
+                     
+                </section>
+            </section>
+        </section><!--/#wsu-actions-->
+        <nav id="navigation">
+            <nav id="site" class="homeless">
+                <!-- Your navigation list here
+                    • Active link should be denoted with an "active" or "current" link on the link's parent li tag.
+                    • First link should be home link (otherwise, add "homeless" class to #site nav)
+                    • Replace example navigation list below
+                -->
+                <ul>
+                    <li><a href="<?=Mage::helper('core/url')->getHomeUrl()?>">Store Home</a></li>
+                    <?php //echo $this->getChildHtml('topMenu') ?>
+                    <?php $_menu = $this->getLayout()->getBlockSingleton('catalog/navigation')->renderCategoriesMenuHtml(0,'')?>
+					<?php if($_menu): ?>
+                        <?php echo $_menu ?>
+                    <?php endif ?>
+                </ul>
+            </nav>
+            <nav id="offsite">
+                <ul>
+                
+                <?php 
+					$currentUrl = Mage::helper('core/url')->getCurrentUrl();
+					$currentUrl = str_ireplace('www.', '', parse_url($currentUrl, PHP_URL_HOST));
+					
+					$websites = Mage::getModel('core/website')->getCollection();
+					$sessionId = Mage::getSingleton("core/session")->getEncryptedSessionId(); 
+					if(count($websites)>5):?>
+                
+                        <li><select id="website-changer" onChange="document.location=this.options[selectedIndex].value">
+                                <option selected="selected">Switch stores</option>
+                            <?php
+                            foreach($websites as $website) {
+                                $default_store = $website->getDefaultStore();
+                                $url_obj = new Mage_Core_Model_Url();
+                                $default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
+                            ?>
+                                <!--<option <?php if(strstr($default_store_path,$currentUrl )>-1):?>selected="selected"<?php endif; ?> value="<?php echo $default_store_path."?SID=".$sessionId ?>"  data-default_store_path="<?=$default_store_path ?>" data-currentUrl="<?=$currentUrl ?>"><?php echo $website->getName()?></option>-->
+                                <option value="<?php echo $default_store_path."?SID=".$sessionId ?>"  data-default_store_path="<?=$default_store_path ?>" data-currentUrl="<?=$currentUrl ?>">
+                                    <?php echo $website->getName()?>
+                                </option>
+                            <?php
+                            }
+                            ?>
+                            </select>
+                        </li>
+                    <?php else: ?>
+<?php
+                        foreach($websites as $website) {
+                            $default_store = $website->getDefaultStore();
+                            $url_obj = new Mage_Core_Model_Url();
+                            $default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
+                        ?>
+                            <li><a href="<?php echo $default_store_path."?SID=".$sessionId ?>"><?php echo $website->getName()?></a></li>
+                        <?php
+                        }
+                        ?>
+                    <?php endif; ?>
+                    <!--<li><a href="">Offsite Link</a></li>
+                    <li><a href="">Another</a></li>-->
+                </ul>
+            </nav>
+        </nav><!-- #navigation -->
+        <!-- Social and Global Links -->
+        <footer>
+            <nav id="social">
+                <ul>
+                    <li id="facebook"><a href="http://facebook.com/wsupullman">Facebook</a></li>
+                    <li id="twitter"><a href="http://twitter.com/wsupullman">Twitter</a></li>
+                    <li id="youtube"><a href="http://www.youtube.com/washingtonstateuniv">YouTube</a></li>
+                    <li id="social"><a href="http://social.wsu.edu">Social</a></li>
+                    <!-- You can replace default social channels with your own. Available channels are:
+                            • Facebook, Twitter, Youtube, Google+, Tumblr, Pinterest, Flickr, 
+                            • Example: <li id="pinterest"><a href="http://pinterest.com/user">Pinterest</a></li>
+                            • Maximum number of channels is four
+                    -->
+                </ul>
+            </nav>
+            <nav id="global">
+                <ul>
+                    <li id="zzusis"><a href="https://zzusis.wsu.edu/">Zzu<strong>sis</strong></a></li>
+                    <li id="access"><a href="http://access.wsu.edu/">Access</a></li>
+                    <li id="policies"><a href="http://policies.wsu.edu/">Policies</a></li>
+                    <li id="copyright"><a href="http://copyright.wsu.edu">&nbsp;&copy;</a></li>
+                </ul>
+            </nav>        
+            <!-- <small id="copyright"><a href="http://copyright.wsu.edu">&copy; Washington State University</a></small> -->
+        </footer>
+    </div><!--/glue-->
+</div><!--/spine-->
+<!-- /SPINE -->

@@ -1,0 +1,69 @@
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+$lang=$this->getLang();
+$store = Mage::app()->getStore();
+$name = $store->getFrontendName();
+ 
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?php echo $lang ?>"> <![endif]-->
+<!--[if IE 7]><html class="no-js no-svg lt-ie9 lt-ie8" lang="<?php echo $lang ?>"> <![endif]-->
+<!--[if IE 8]><html class="no-js no-svg lt-ie9" lang="<?php echo $lang ?>"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="<?php echo $lang ?>"><!--<![endif]-->
+<head>
+<?php echo $this->getChildHtml('head') ?>
+
+</head>
+<body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
+    <!-- WRAPPING -->
+    <div id="jacket">
+        <div id="binder" class="hyrbrid">
+            <!-- CONTENT -->
+            <main id="page" role="main">
+                <section class="row" id="siteID">
+                    <div style="float:right;">
+                        <div class="quick-access" style="font-size:12px; font-weight:bold;">
+                            <?php echo $this->getChildHtml('topLinks') ?>
+                        </div>
+                    </div>
+                    <h2>WSU Marketplace</h2>
+                    <h1><?=$name?></h1>
+					<?php echo $this->getChildHtml('breadcrumbs') ?> 
+                </section>
+                <!-- Responsive Sections -->
+                <section class="row sidebar">
+                    <div class="column one">
+                        <article>
+                            <?php echo $this->getChildHtml('after_body_start') ?>
+                            <div id="main">
+                                <?php echo $this->getChildHtml('topContainer'); ?>
+                                <?php echo $this->getChildHtml('global_notices') ?>
+                                <?php echo $this->getChildHtml('global_messages') ?>
+                                <?php echo $this->getChildHtml('content') ?>
+                            </div><!-- end of main -->   
+                        </article>
+                    </div><!--/column-->
+                    <div class="column two">
+                        <aside>
+                            <section>
+                            	<?php echo $this->getChildHtml('right'); ?>
+                            </section>
+                        </aside>
+                    </div><!--/column-->
+                </section>
+                <footer>
+					<?php echo $this->getChildHtml('footer') ?>
+                    <?php echo $this->getChildHtml('before_body_end') ?>
+                    <?php echo $this->getAbsoluteFooter() ?>
+				</footer>
+            </main><!--/#page-->
+            <!-- /CONTENT -->
+    
+            <?php echo $this->getChildHtml('header') ?>
+        </div><!--/cover-->
+    </div><!--/jacket-->
+    <!-- /WRAPPING -->
+</body>
+</html>
