@@ -3,9 +3,27 @@ ol li {
 }
 ul li {
     list-style: none;
+	padding:0;
+	margin:0;
 }
+ul{padding:0;
+	margin:0;}
 
 
+/* twelfths */
+.twelfths > .column { width: 8.33%; } .twelfths > .column:nth-of-type(odd) { width: 8.34%; } .fixed .twelfths > .column { width: 66px; }
+.row .column.one-twelfth { width: 8.33% } .fixed .one-twelfth { width: 66px; }
+.two-twelfths { width: 16.66% } .fixed .two-twelfths { width: 132px; }
+.row .column.three-twelfths { width: 25% } .fixed .three-twelfths { width: 198px; }
+.row .column.four-twelfths { width: 33.33% } .fixed .four-twelfths { width: 264px; }
+.row .column.five-twelfths { width: 41.66% } .fixed .five-twelfths { width: 330px; }
+.row .column.six-twelfths { width: 50% } .fixed .six-twelfths { width: 396px; }
+.row .column.five-twelfths { width: 58.33% } .fixed .seven-twelfths { width: 462px; }
+.row .column.eight-twelfths { width: 64.66% } .fixed .eight-twelfths { width: 528px; }
+.row .column.nine-twelfths { width: 75% } .fixed .nine-twelfths { width: 594px; }
+.ten-twelfths { width: 83.33% } .fixed .ten-twelfths { width: 660px; }
+.row .column.eleven-twelfths { width: 91.66% } .fixed .eleven-twelfths { width: 726px; }
+.row .column.twelve-twelfths { width: 100% } .fixed .twelve-twelfths { width: 792px; }
 
 
 

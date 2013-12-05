@@ -19,7 +19,7 @@ $name = $store->getFrontendName();
 <body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
     <!-- WRAPPING -->
     <div id="jacket">
-        <div id="binder" class="hyrbrid">
+        <div id="binder" class="hyrbrid folio max-1584">
             <!-- CONTENT -->
             <main id="page" role="main">
                 <section class="row" id="siteID">
@@ -32,8 +32,8 @@ $name = $store->getFrontendName();
                     <h1><?=$name?></h1>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row sidebar">
-                    <div class="column one">
+                <section class="twelfths">
+                    <div class="twelve-twelfths">
                         <article>
                             <?php echo $this->getChildHtml('after_body_start') ?>
                             <div id="main">
@@ -44,12 +44,6 @@ $name = $store->getFrontendName();
                                 <?php echo $this->getChildHtml('content') ?>
                             </div><!-- end of main -->   
                         </article>
-                    </div><!--/column-->
-                    <div class="column two">
-                        <aside>
-                            <section>
-                            </section>
-                        </aside>
                     </div><!--/column-->
                 </section>
                 <footer>

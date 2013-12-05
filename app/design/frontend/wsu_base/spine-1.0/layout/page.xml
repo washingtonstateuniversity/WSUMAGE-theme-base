@@ -50,11 +50,11 @@ Default layout, loads most of the pages
                 <!--<action method="addJs"><script>varien/menu.js</script></action>-->
                 <action method="addJs"><script>mage/translate.js</script></action>
 
-				<action method="addItem"><type>skin_js</type><name>js/jquery.cycle2.min.js</name><params/></action>
+				<action method="addItem"><type>skin_js</type><name>js/jquery.cycle2.js</name><params/></action>
 				<action method="addItem"><type>skin_js</type><name>js/controller.js</name><params/></action>
 				
 				<!-- base for all WSU -->
-					<action method="addItem"><type>external_css</type><name>http://nbj.me/spine/1/styles.css</name></action>
+					<action method="addItem"><type>external_css</type><name>https://raw.github.com/washingtonstateuniversity/WSU-spine/master/styles/styles.css</name></action>
 					<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
 					<action method="addItem"><type>external_js</type><name>http://nbj.me/spine/1/1.0/scripts/modernizr/modernizr.custom.95689.js</name></action>
 					<action method="addItem"><type>external_js</type><name>http://nbj.me/spine/1/1.0/scripts/spine.js</name></action>

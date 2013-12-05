@@ -1,26 +1,24 @@
 (function($){
 	$(function(){
-		var slideshow = $( '.cycle-slideshow' );
-		var progress = $('#progress');
-
-		slideshow.on( 'cycle-initialized cycle-before', function( e, opts ) {
-			progress.stop(true).css( 'width', 0 );
+		$.each($( '.cycle-slideshow' ),function(){
+			var slideshow = $(this);
+			var progress = slideshow.next('.progress');
+			slideshow.on( 'cycle-initialized cycle-before', function( e, opts ) {
+				progress.stop(true).css( 'width', 0 );
+			});
+			
+			slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
+				if ( ! slideshow.is('.cycle-paused') )
+					progress.animate({ width: '100%' }, opts.timeout, 'linear' );
+			});
+			
+			slideshow.on( 'cycle-paused', function( e, opts ) {
+			   progress.stop(); 
+			});
+			slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
+				progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
+			});
 		});
-		
-		slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
-			if ( ! slideshow.is('.cycle-paused') )
-				progress.animate({ width: '100%' }, opts.timeout, 'linear' );
-		});
-		
-		slideshow.on( 'cycle-paused', function( e, opts ) {
-		   progress.stop(); 
-		});
-		slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
-			progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
-		});
-		
-		
-		
 		$('.button.btn-cart').on('click',function(e){
 			//from app\design\frontend\wsu_base\default\template\catalog\product\view.phtml
 			var productAddToCartForm = new VarienForm('product_addtocart_form');
