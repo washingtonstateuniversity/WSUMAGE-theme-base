@@ -88,11 +88,13 @@
 <?php
                         foreach($websites as $website) {
                             $default_store = $website->getDefaultStore();
-                            $url_obj = new Mage_Core_Model_Url();
-                            $default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
-                        ?>
-                            <li><a href="<?php echo $default_store_path."?SID=".$sessionId ?>"><?php echo $website->getName()?></a></li>
-                        <?php
+							if(!empty($default_store)){
+								$url_obj = new Mage_Core_Model_Url();
+								$default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
+							?>
+						<li><a href="<?php echo $default_store_path."?SID=".$sessionId ?>"><?php echo $website->getName()?></a></li>
+							<?php
+							}
                         }
                         ?>
                     <?php endif; ?>
