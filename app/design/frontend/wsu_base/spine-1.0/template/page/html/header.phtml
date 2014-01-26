@@ -25,12 +25,10 @@
  $home_link = Mage::helper('core/url')->getHomeUrl();
  $home_text = 'Store Home';
  $homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
-
- $searchOptionClasses = implode(' ', array('nix-index','nix-site','nix-wsu','nix-facstaff','nix-students') );
+ $searchOps = array();//array('nix-index','nix-site','nix-wsu','nix-facstaff','nix-students');
+ $searchOptionClasses = implode(' ', $searchOps );
 
 ?>
-
-
 <!-- SPINE -->
 <div id="spine" class="<?=$spineClasses?>">
     <div id="glue" class="clearfix">
@@ -63,7 +61,7 @@
             </section>
         </section><!--/#wsu-actions-->
         <nav id="navigation">
-            <nav id="site" class="<?=(!empty($homelink)?'homeless':'')?>">
+            <nav id="site" class="<?=(!empty($homelink)?'':'homeless')?>">
                 <!-- Your navigation list here
                     • Active link should be denoted with an "active" or "current" link on the link's parent li tag.
                     • First link should be home link (otherwise, add "homeless" class to #site nav)

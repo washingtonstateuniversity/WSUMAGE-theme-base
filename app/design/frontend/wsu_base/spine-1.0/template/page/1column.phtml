@@ -8,18 +8,17 @@ $name = $store->getFrontendName();
  
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?php echo $lang ?>"> <![endif]-->
-<!--[if IE 7]><html class="no-js no-svg lt-ie9 lt-ie8" lang="<?php echo $lang ?>"> <![endif]-->
-<!--[if IE 8]><html class="no-js no-svg lt-ie9" lang="<?php echo $lang ?>"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="<?php echo $lang ?>"><!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
+<!--[if IE 7]><html class="no-js no-svg lt-ie9 lt-ie8" lang="<?=$lang ?>"> <![endif]-->
+<!--[if IE 8]><html class="no-js no-svg lt-ie9" lang="<?=$lang ?>"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="<?=$lang ?>"><!--<![endif]-->
 <head>
-<?php echo $this->getChildHtml('head') ?>
-
+<?=$this->getChildHtml('head')?>
 </head>
 <body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
     <!-- WRAPPING -->
     <div id="jacket">
-        <div id="binder" class="hyrbrid folio max-1584">
+        <div id="binder" class="folio max-1584">
             <!-- CONTENT -->
             <main id="page" role="main">
                 <section class="row" id="siteID">
@@ -28,8 +27,11 @@ $name = $store->getFrontendName();
                             <?php echo $this->getChildHtml('topLinks') ?>
                         </div>
                     </div>
-                    <h2>WSU Marketplace</h2>
-                    <h1><?=$name?></h1>
+                    <article>
+                        <h2>WSU Marketplace</h2>
+                        <h1><?=$name?></h1>
+                        <?php echo $this->getChildHtml('breadcrumbs') ?> 
+                    </article>
                 </section>
                 <!-- Responsive Sections -->
                 <section class="twelfths">
