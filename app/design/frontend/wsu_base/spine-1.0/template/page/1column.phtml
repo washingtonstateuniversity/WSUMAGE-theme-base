@@ -27,15 +27,15 @@ $name = $store->getFrontendName();
                             <?php echo $this->getChildHtml('topLinks') ?>
                         </div>
                     </div>
-                    <article>
-                        <h2>WSU Marketplace</h2>
-                        <h1><?=$name?></h1>
-                        <?php echo $this->getChildHtml('breadcrumbs') ?> 
-                    </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="twelfths">
-                    <div class="twelve-twelfths">
+                <section class="row">
+                    <div class="column twelve-twelfths">
+                        <article>
+                            <h2>WSU Marketplace</h2>
+                            <h1><?=$name?></h1>
+                            <?php echo $this->getChildHtml('breadcrumbs') ?> 
+                        </article>
                         <article>
                             <?php echo $this->getChildHtml('after_body_start') ?>
                             <div id="main">
