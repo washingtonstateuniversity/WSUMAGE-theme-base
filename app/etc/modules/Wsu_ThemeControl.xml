@@ -15,12 +15,6 @@
 			<depends>
 				<Wsu_Storeutilities/>
 				<Wsu_Wsu/>
-				<!--
-				<Wsu_Brands/>
-				<Wsu_CloudZoom/>
-				<Wsu_UltraMegamenu/>
-				<Wsu_UltraSlideshow/>
-				-->
 			</depends>
         </Wsu_ThemeControl>
     </modules>

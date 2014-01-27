@@ -10,10 +10,10 @@ class Wsu_Wsu_Block_Adminhtml_System_Config_Form_Field_Color_Minicolors extends 
         $html = $element->getElementHtml(); //Default HTML
         if (Mage::registry('colorPickerFirstUse') == false) {
             $html .= '
-			<script type="text/javascript" src="' . $this->getJsUrl('infortis/jquery/jquery-1.7.2.min.js') . '"></script>
-			<script type="text/javascript" src="' . $this->getJsUrl('infortis/jquery/plugins/minicolors/jquery.minicolors.min.js') . '"></script>
+			<script type="text/javascript" src="' . $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js') . '"></script>
+			<script type="text/javascript" src="' . $this->getJsUrl('wsu/jquery/plugins/minicolors/jquery.minicolors.min.js') . '"></script>
 			<script type="text/javascript">jQuery.noConflict();</script>
-            <link type="text/css" rel="stylesheet" href="' . $this->getJsUrl('infortis/jquery/plugins/minicolors/jquery.minicolors.css') . '" />
+            <link type="text/css" rel="stylesheet" href="' . $this->getJsUrl('wsu/jquery/plugins/minicolors/jquery.minicolors.css') . '" />
             ';
             Mage::register('colorPickerFirstUse', 1);
         }

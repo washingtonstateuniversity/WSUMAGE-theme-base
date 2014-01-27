@@ -17,7 +17,7 @@ class Wsu_ThemeControl_Model_System_Config_Source_Design_Tex_Names{
             array('value' => '11', 'label' => Mage::helper('wsu_themecontrol')->__('11')),
 			array('value' => '12', 'label' => Mage::helper('wsu_themecontrol')->__('12')),
 			array('value' => '13', 'label' => Mage::helper('wsu_themecontrol')->__('13')),
-			array('value' => '14', 'label' => Mage::helper('themecontrol')->__('14')),
+			array('value' => '14', 'label' => Mage::helper('wsu_themecontrol')->__('14')),
 			array('value' => '15', 'label' => Mage::helper('wsu_themecontrol')->__('15')),
 			array('value' => '16', 'label' => Mage::helper('wsu_themecontrol')->__('16')),
 			

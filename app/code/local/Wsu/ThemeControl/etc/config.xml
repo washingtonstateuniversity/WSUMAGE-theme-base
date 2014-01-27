@@ -13,37 +13,6 @@
             <version>0.1.0</version>
         </Wsu_ThemeControl>
     </modules>
-	<!--<frontend>
-        <layout>
-            <updates>
-                <wsu_themecontrol module="wsu_themecontrol">
-                    <file>wsu_themecontrol.xml</file>
-                </wsu_themecontrol>
-            </updates>
-        </layout>
-    </frontend>-->
-	<!--<frontend>
-		<routers>
-			<wsu_themecontrol>
-				<use>standard</use>
-				<args>
-					<module>Wsu_ThemeControl</module>
-					<frontName>wsu_themecontrol</frontName>
-				</args>
-			</wsu_themecontrol>
-		</routers>
-	</frontend>-->
-	<admin>
-		<routers>
-			<adminhtml>
-				<args>
-					<modules>
-						<wsu_themecontrol before="Mage_Adminhtml">Wsu_ThemeControl_Adminhtml</wsu_themecontrol>
-					</modules>
-				</args>
-			</adminhtml>
-		</routers>
-	</admin>
     <global>
         <blocks>
             <wsu_themecontrol>
@@ -58,7 +27,7 @@
 		<models>
             <wsu_themecontrol>
                 <class>Wsu_ThemeControl_Model</class>
-				<!--<resourceModel>wsu_auditing_resource</resourceModel>-->
+				<!--<resourceModel>wsu_themecontrol_resource</resourceModel>-->
             </wsu_themecontrol>
         </models>
 		<resources>
@@ -113,6 +82,37 @@
 			</store_edit>
 		</events>
 	</adminhtml>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Wsu_ThemeControl before="Mage_Adminhtml">Wsu_ThemeControl_Adminhtml</Wsu_ThemeControl>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<!--<frontend>
+        <layout>
+            <updates>
+                <wsu_themecontrol module="wsu_themecontrol">
+                    <file>wsu_themecontrol.xml</file>
+                </wsu_themecontrol>
+            </updates>
+        </layout>
+    </frontend>-->
+	<frontend>
+		<routers>
+			<wsu_themecontrol>
+				<use>standard</use>
+				<args>
+					<module>Wsu_ThemeControl</module>
+					<frontName>wsu_themecontrol</frontName>
+				</args>
+			</wsu_themecontrol>
+		</routers>
+	</frontend><!---->
 	<default>
 		<!-- Main settings -->
 		<wsu_themecontrol>

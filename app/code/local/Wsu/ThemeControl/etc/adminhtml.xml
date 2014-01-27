@@ -2,9 +2,6 @@
 <config>
     <acl>
         <resources>
-            <all>
-                <title>Allow Everything</title>
-            </all>
             <admin>
                 <children>
                     <system>
@@ -15,7 +12,7 @@
 										<title>Theme Admin</title>
 										<sort_order>1</sort_order> 
                                     </wsu_themecontrol>
-									<wsu_wsu_themecontrol_design translate="title" module="wsu_themecontrol">
+									<wsu_themecontrol_design translate="title" module="wsu_themecontrol">
 										<title>Theme Design</title>
 										<sort_order>1</sort_order> 
                                     </wsu_themecontrol_design>
