@@ -2,14 +2,14 @@
 <!-- 
 /**
  * @category	Wsu
- * @package		Wsu_ThemeControll
+ * @package		Wsu_ThemeControl
  * @author		Wsu
  * @copyright	Copyright 2012 Wsu
  */
  -->
 <config>
     <modules>
-        <Wsu_ThemeControll>
+        <Wsu_ThemeControl>
             <active>true</active>
             <codePool>local</codePool>
 			<depends>
@@ -22,6 +22,6 @@
 				<Wsu_UltraSlideshow/>
 				-->
 			</depends>
-        </Wsu_ThemeControll>
+        </Wsu_ThemeControl>
     </modules>
 </config> 
