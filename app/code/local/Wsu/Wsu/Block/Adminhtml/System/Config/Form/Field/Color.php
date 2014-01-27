@@ -8,8 +8,8 @@ class Wsu_Wsu_Block_Adminhtml_System_Config_Form_Field_Color extends Mage_Adminh
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
         $html   = $element->getElementHtml(); //Default HTML
-        $jsPath = $this->getJsUrl('infortis/jquery/jquery-1.7.2.min.js');
-        $mcPath = $this->getJsUrl('infortis/jquery/plugins/mcolorpicker/');
+        $jsPath = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
+        $mcPath = $this->getJsUrl('wsu/jquery/plugins/mcolorpicker/');
         if (Mage::registry('jqueryLoaded') == false) {
             $html .= '
 			<script type="text/javascript" src="' . $jsPath . '"></script>

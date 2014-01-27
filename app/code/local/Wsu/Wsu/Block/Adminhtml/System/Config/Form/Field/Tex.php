@@ -8,8 +8,8 @@ class Wsu_Wsu_Block_Adminhtml_System_Config_Form_Field_Tex extends Mage_Adminhtm
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
         $html        = $element->getElementHtml(); //Default HTML
-        $jsUrl       = $this->getJsUrl('infortis/jquery/jquery-1.7.2.min.js');
-        $texUrl      = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . Mage::helper('themecontroll')->getTexPath();
+        $jsUrl       = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
+        $texUrl      = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . Mage::helper('wsu_themecontrol')->getTexPath();
         //Recreate ID of the background color picker which is related with this pattern
         $bgcPickerId = str_replace('_tex', '_bg_color', $element->getHtmlId());
         //Create ID of the pattern preview box

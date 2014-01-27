@@ -1,0 +1,1121 @@
+<root>
+   <blocks>
+      <cms_block>
+         <title>Custom landing page 1</title>
+         <identifier>block_landing_page1</identifier>
+         <content><![CDATA[<div class="landing-page nested-container">
+	<br />
+    
+	<div class="vertical-section grid12-4 persistent-grid2-1">
+        <a href="{{store direct_url="downloadable/ebooks.html"}}">
+        	<img class="center-block" src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/vert1.jpg"}}" alt="Sample banner" />
+            <div class="caption dark2 full-width">
+                <h2 class="heading permanent">Lorem</h2>
+                <p class="permanent">Nullam ornare enim nectis</p>
+                <p>Lorem ipsum dolor </p>
+            </div>
+        </a>
+	</div>
+	<div class="vertical-section grid12-4 persistent-grid2-1">
+        <a href="{{store direct_url="downloadable/music.html"}}">
+        	<img class="center-block" src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/vert2.jpg"}}" alt="Sample banner" />
+            <div class="caption dark2 full-width">
+	            <h2 class="heading permanent">Ipsum</h2>
+    	        <p class="permanent">In eget metus ornare itis est</p>
+        	    <p>Lorem ipsum dolor </p>
+            </div>
+        </a>
+	</div>
+	<div class="vertical-section grid12-4 persistent-grid2-1">
+        <a href="{{store direct_url="downloadable/software.html"}}">
+        	<img class="center-block" src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/vert3.jpg"}}" alt="Sample banner" />
+            <div class="caption dark2 full-width">
+	            <h2 class="heading permanent">Dolor</h2>
+    	        <p class="permanent">Etiam neque velit blandit sed</p>
+        	    <p>Lorem ipsum dolor </p>
+            </div>
+        </a>
+	</div>
+    <br />
+    
+	<div class="vertical-section grid-full">
+		{{block type="catalog/product_new" products_count="8" block_name="See Also: Recommended New Products" template="catalog/product/new.phtml"}}
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom footer links 2</title>
+         <identifier>block_footer_links2</identifier>
+         <content><![CDATA[<ul class="links hide-below-768">
+
+	<li class="first">
+		<a href="{{store direct_url='about-magento-demo-store/'}}">About Us</a>
+	</li>
+	<li class="last">
+		<a href="{{store direct_url='customer-service/'}}">Customer Service</a>
+	</li>
+
+</ul>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom footer links</title>
+         <identifier>block_footer_links</identifier>
+         <content><![CDATA[<ul class="links">
+
+    <li class="first">
+    	<a href="{{store url='catalog/seo_sitemap/category'}}" title="The Site Map">Site Map</a>
+    </li>
+    <li>
+    	<a href="{{store url='catalogsearch/term/popular'}}" title="Search Terms">Search Terms</a>
+    </li>
+    <li>
+    	<a href="{{store url='catalogsearch/advanced'}}" title="Advanced Search">Advanced Search</a>
+    </li>
+    <li>
+    	<a href="{{store url='sales/guest/form'}}" title="Orders and Returns">Orders and Returns</a>
+    </li>
+    <li>
+    	<a href="{{store url='contacts'}}" title="Contact Us">Contact Us</a>
+    </li>
+    <li class=" last">
+    	<a class="link-rss" href="{{store url='rss'}}" title="RSS">RSS</a>
+    </li>
+    
+</ul>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Category above collection</title>
+         <identifier>block_category_above_collection</identifier>
+         <content><![CDATA[<div class="sample-block">Static CMS block displayed above list/grid of products. Put your own content here.</div>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer social</title>
+         <identifier>block_footer_primary_bottom_left</identifier>
+         <content><![CDATA[<div class="social-links icon-wrapper-square">
+
+	<a class="first" href="#" title="Follow us on Twitter">
+		<span class="icon icon-hover i-twitter-w"></span>
+	</a>
+	<a href="#" title="Join us on Facebook">
+		<span class="icon icon-hover i-facebook-w"></span>
+	</a>
+	<a href="#" title="Join us on Google Plus">
+		<span class="icon icon-hover i-googleplus-w"></span>
+	</a>
+	<a href="#" title="Youtube">
+		<span class="icon icon-hover i-youtube-w"></span>
+	</a>
+	<a href="#" title="Vimeo">
+		<span class="icon icon-hover i-vimeo-w"></span>
+	</a>
+	<a href="#" title="Wordpress">
+		<span class="icon icon-hover i-wordpress-w"></span>
+	</a>
+	<a href="#" title="Pinterest">
+		<span class="icon icon-hover i-pinterest-w"></span>
+	</a>
+	<a href="#" title="Linked in">
+		<span class="icon icon-hover i-linkedin-w"></span>
+	</a>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer payment</title>
+         <identifier>block_footer_payment</identifier>
+         <content><![CDATA[<img src="{{media url="wysiwyg/wsu/themecontrol/custom/payment.gif}}" alt="Payment methods" title="Sample image with payment methods" />]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Category below collection</title>
+         <identifier>block_category_below_collection</identifier>
+         <content><![CDATA[<div class="nested-container hide-below-768">
+
+    <div class="page-banners clearer">
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/01.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/03.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+    </div>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Category above empty collection</title>
+         <identifier>block_category_above_empty_collection</identifier>
+         <content><![CDATA[<div class="note-msg empty-catalog">
+
+	<h3>There are no products matching the selection</h3>
+	This is a custom CMS block displayed if category is empty.<br>
+	You can replace it with any custom content.
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Product secondary column bottom</title>
+         <identifier>block_product_secondary_bottom</identifier>
+         <content><![CDATA[<div class="feature feature-icon-hover indent first">
+	<span class="icon">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/icons/delivery.png"}}" />
+	</span>
+	<p class="no-margin ">We will send this product in 2 days. <a href="#">Read more...</a></p>
+</div>
+<div class="feature feature-icon-hover indent">
+	<span class="icon">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/icons/phone.png"}}" />
+	</span>
+	<p class="no-margin ">Call us now for more info about our products.</p>
+</div>
+<div class="feature feature-icon-hover indent">
+	<span class="icon">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/icons/back.png"}}" />
+	</span>
+	<p class="no-margin ">Return purchased items and get all your money back.</p>
+</div>
+<div class="feature feature-icon-hover indent last">
+	<span class="icon">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/icons/star.png"}}" />
+	</span>
+	<p class="no-margin ">Buy this product and earn 10 special loyalty points!</p>
+</div>
+
+
+<!-- Social bookmarks from http://www.addthis.com/get/sharing  -->
+<div class="feature-wrapper top-border">
+	<div class="addthis_toolbox addthis_default_style ">
+	<a class="addthis_button_preferred_1"></a>
+	<a class="addthis_button_preferred_2"></a>
+	<a class="addthis_button_preferred_3"></a>
+	<a class="addthis_button_preferred_4"></a>
+	<a class="addthis_button_compact"></a>
+	<a class="addthis_counter addthis_bubble_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5054e6c6502d114f"></script>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Product - primary column bottom</title>
+         <identifier>block_product_primary_bottom</identifier>
+         <content><![CDATA[CMS block - put your own content here. Product page, primary column bottom.]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Cart - below totals</title>
+         <identifier>block_cart_below_totals</identifier>
+         <content><![CDATA[<div class="hide-below-320" style="display: table; float: right; padding-right: 10px; text-align: right;"><span style="display: table-cell; vertical-align: middle;">Sample info about SSL Certificate</span> <img src="{{media url="wysiwyg/wsu/themecontrol/custom/block_cart_below_totals.png"}}" alt="Example Image" title="Static CMS block displayed below totals. Put your own content here." /></div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>One page checkout  below progress</title>
+         <identifier>block_opc_below_progress</identifier>
+         <content><![CDATA[<div class="sample-block">Custom CMS block displayed below the one page checkout progress block. Put your own content here.</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Mini cart above products</title>
+         <identifier>block_mini_cart_above_products</identifier>
+         <content><![CDATA[<div style="padding:15px; background-color:#f5f5f5; color:#d90000;" title="Customizable CMS block for promo info">
+<a class="go" href="{{store url=""}}">Check our latest super promotions!</a>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom Tab 1</title>
+         <identifier>block_product_tab1</identifier>
+         <content><![CDATA[<p>Custom CMS block displayed as a tab. You can use it to display info about returns and refunds, latest promotions etc. You can put your own content here: text, HTML, images - whatever you like. There are <strong>many similar blocks</strong> accross the store. All CMS blocks are editable from the admin panel.</p>
+
+<div class="feature indent first">
+	<span class="icon i-right no-bg-color"></span>
+	<p class="no-margin"><strong>Magento Community Edition is the most powerful</strong> open source e-commerce software and can be downloaded 100% for free. Developers can modify the core code, add custom features and functionality by installing extensions from Magento Connect marketplace.</p>
+</div>
+<div class="feature indent">
+	<span class="icon i-right no-bg-color"></span>
+	<p class="no-margin"><strong>Manage the fully dynamic catalog</strong> with the intutive admistrative interface. The flexible catalog system includes various options for the display of items. Magento is also integrated with a variety of major payment gateways out of the box.</p>
+</div>
+<div class="feature indent last">
+	<span class="icon i-right no-bg-color"></span>
+	<p class="no-margin"><strong>Magento is a fully global platform</strong>, allowing for the expansion of business or simply offering multiple versions of your site to meet the needs of your customers.
+Translated into over 60 languages, supporting multiple currencies, payment methods and taxes, Magento allows for internationalization of your online stores.</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom Tab 2</title>
+         <identifier>block_product_tab2</identifier>
+         <content><![CDATA[<p>Another custom CMS block displayed as a tab. You can use it to display info about returns and refunds, latest promotions etc. You can put your own content here: text, HTML, images - whatever you like. There are <strong>many similar blocks</strong> accross the store. All CMS blocks are editable from the admin panel.</p>
+
+<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque quis. Nullam ornare enim nec justo bibendum lobortis. In eget metus.</p>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Cart - below table</title>
+         <identifier>block_cart_below_table</identifier>
+         <content><![CDATA[<div class="nested-container hide-below-768">
+
+    <div class="page-banners clearer">
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Static CMS block displayed below the cart. Put your own content here.">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/01.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Static CMS block displayed below the cart. Put your own content here.">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/02.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+    </div>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 1</title>
+         <identifier>block_footer_column1</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">About ThemeControl</h6>
+
+	<div class="block-content">
+
+		<div class="feature first last">
+			<img class="icon" src="{{media url="wysiwyg/wsu/themecontrol/icons/info.png"}}" alt="About ThemeControl Magento theme" />
+			<p class="text">ThemeControl is a premium Magento theme. It’s extremely customizable, easy to use and fully responsive. Suitable for every type of store. Great as a starting point for your custom projects.</p>
+			<h5><a class="go" href="http://themeforest.net/item/themecontrol-fluid-responsive-magento-theme/3231798?ref=wsu">Buy this theme</a></h5>
+		</div>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 2</title>
+         <identifier>block_footer_column2</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Key Features</h6>
+
+	<div class="block-content">
+
+		<div class="feature feature-icon-hover indent first">
+			<span class="icon">
+				<img src="{{media url='wysiwyg/wsu/themecontrol/icons/one.png'}}" alt="Sample icon"  />
+			</span>
+			<p class="no-margin">Unlimited colors, dozens of customizable elements</p>
+		</div>
+		<div class="feature feature-icon-hover indent">
+			<span class="icon">
+				<img src="{{media url='wysiwyg/wsu/themecontrol/icons/two.png'}}" alt="Sample icon" />
+			</span>
+			<p class="no-margin ">Customizable responsive layout based on fluid grid</p>
+		</div>
+		<div class="feature feature-icon-hover indent">
+			<span class="icon">
+				<img src="{{media url='wysiwyg/wsu/themecontrol/icons/three.png'}}" alt="Sample icon" />
+			</span>
+			<p class="no-margin ">50+ placeholders to display custom content</p>
+		</div>
+		<div class="feature feature-icon-hover indent last">
+			<span class="icon">
+				<img src="{{media url='wysiwyg/wsu/themecontrol/icons/four.png'}}" alt="Sample icon" />
+			</span>
+			<p class="no-margin ">Create your custom sub-themes (variants)</p>
+		</div>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 3</title>
+         <identifier>block_footer_column3</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Theme Features</h6>
+
+	<div class="block-content">
+	
+		<ul class="bullet">
+			<li><a href="{{store url='themecontrol-responsive-magento-theme'}}">Theme Features</a></li>
+			<li><a href="{{store url='typography'}}">Typography</a></li>
+			<li><a href="#">Sample Link</a></li>
+			<li><a href="#">Meat Our Best Partners</a></li>
+			<li><a href="#">Our Other Projects</a></li>
+			<li><a href="#">One Click To Join Us</a></li>
+			<li><a href="#">Follow Us On Twitter</a></li>
+			<li><a href="http://wsu-themes.com/">Magento Themes</a></li>
+		</ul>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 4</title>
+         <identifier>block_footer_column4</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Company Info</h6>
+
+	<div class="block-content">
+
+		<div class="feature indent first">
+			<span class="icon">
+				<img src="{{media url="wysiwyg/wsu/themecontrol/icons/phone.png"}}" alt="Sample image" />
+			</span>
+			<p class="no-margin ">Call Us +001 555 801<br/>Fax +001 555 802</p>
+		</div>
+		<div class="feature indent">
+			<span class="icon">
+				<img src="{{media url="wysiwyg/wsu/themecontrol/icons/mobile.png"}}" alt="Sample image" />
+			</span>
+			<p class="no-margin ">+77 123 1234<br/>+42 98 9876</p>
+		</div>
+		<div class="feature indent">
+			<span class="icon">
+				<img src="{{media url="wysiwyg/wsu/themecontrol/icons/email.png"}}" alt="Sample image" />
+			</span>
+			<p class="no-margin ">boss@example.com<br/>me@example.com</p>
+		</div>
+		<div class="feature indent last">
+			<span class="icon">
+				<img src="{{media url="wysiwyg/wsu/themecontrol/icons/skype.png"}}" alt="Sample image" />
+			</span>
+			<p class="no-margin ">Skype: contact_us<br/>skype_support</p>
+		</div>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 5</title>
+         <identifier>block_footer_column5</identifier>
+         <content><![CDATA[<h6 class="heading">On Our Blog</h6>
+<ul>
+<li><a href="#">Premium Magento themes</a></li>
+<li><a href="#">Responsive theme</a></li>
+<li><a href="#">Latest news</a></li>
+<li><a href="#">All about our offer</a></li>
+<li><a href="#">About our new brands</a></li>
+<li><a href="#">New design</a></li>
+<li><a href="#">Join us on Facebook</a></li>
+<li><a href="#">On our blog</a></li>
+</ul>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer column 6</title>
+         <identifier>block_footer_column6</identifier>
+         <content><![CDATA[<h6 class="heading">Sample Column</h6>
+<ul>
+<li><a href="#">Responsive Magento Theme</a></li>
+<li><a href="#">Magento Extensions</a></li>
+<li><a href="#">Store Overview</a></li>
+<li><a href="#">Buy This</a></li>
+<li><a href="#">Sample Link</a></li>
+<li><a href="#">Some Other Link</a></li>
+<li><a href="#">Link Example</a></li>
+</ul>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom</title>
+         <identifier>block_header_nav_dropdown</identifier>
+         <content><![CDATA[<div class="grid12-3">
+
+	<h2 class="heading">Responsive Magento Theme</h2>
+	<p>ThemeControl is a premium Magento theme with advanced admin module. It's extremely customizable and fully responsive. Can be used for every type of store.</p>
+	<h5><a class="go" href="http://themeforest.net/item/themecontrol-fluid-responsive-magento-theme/3231798?ref=wsu" style="color:red;">Buy this Magento theme</a></h5>
+
+</div>
+<div class="grid12-3">
+
+	<img src="{{media url='wysiwyg/demo/wsu/themecontrol/slideshow/banner/01.png'}}" alt="Magento CMS blocks" />
+	<h4 class="heading">50+ CMS blocks</h4>
+	<p>You can use CMS blocks as content placeholders to display custom content in almost every part of the store. Import sample CMS blocks from the demo.</p>
+	<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+
+</div>
+<div class="grid12-3">
+
+	<img src="{{media url='wysiwyg/demo/wsu/themecontrol/slideshow/banner/02.png'}}" alt="Magento theme documentation" />
+	<h4 class="heading">130-pages documentation</h4>
+	<p>The best Magento theme documentation on ThemeForest. It also describes selected Magento features which you need to know when starting to work with Magento.</p>
+	<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+
+</div>
+<div class="grid12-3">
+
+	<img src="{{media url='wysiwyg/demo/wsu/themecontrol/slideshow/banner/03.png'}}" alt="Create Magento sub-themes" />
+	<h4 class="heading">Easy to customize</h4>
+	<p>Use ThemeControl as a starting point for your custom projects. Unlike many other themes, ThemeControl lets you create multiple custom sub-themes (theme variants) for your clients.</p>
+	<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>CMS page top</title>
+         <identifier>block_cms_page_top</identifier>
+         <content><![CDATA[<div class="nested-container">
+
+    <div class="page-banners clearer">
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/01.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+        <div class="grid12-6 banner">
+            <a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
+                <img src="{{media url="wysiwyg/wsu/themecontrol/custom/banners/02.png"}}" alt="Sample banner" />
+            </a>
+        </div>
+
+    </div>
+
+</div>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Product replace related</title>
+         <identifier>block_product_replace_related</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Replace related</span></strong>
+	</div>
+
+	<p style="background-color: #eee; padding:10px; margin-bottom:10px; margin-top:10px;">
+		Custom CMS block replacing related products. Put your own content here: text, HTML, images - whatever you want.
+	</p>
+	<p style="background-color: #eee; padding:10px;">
+		There are many similar blocks accross the store. All editable from admin panel.
+	</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Product replace up-sell</title>
+         <identifier>block_product_replace_upsell</identifier>
+         <content><![CDATA[<div class="sample-block">Custom CMS block displayed when you want to replace up-sell products with custom content. You can put here simple text, images, HTML or whatever you like.</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Header top left 2</title>
+         <identifier>block_header_top_left2</identifier>
+         <content><![CDATA[<div class="show-separators">
+
+	<ul class="links">
+		<li class="first hide-below-480">
+			<a href="http://themecontrol.wsu-themes.com/demo/select-demo/" title="See more demos">All demos</a>
+		</li>
+		<li class="hide-below-768">
+			<a href="{{store url='themecontrol-responsive-magento-theme'}}" title="See the list of all features">Features</a>
+		</li>
+		<li class="last hide-below-480">
+			<a href="http://themeforest.net/item/themecontrol-fluid-responsive-magento-theme/3231798?ref=wsu" title="Click to buy this theme">Buy me!</a>
+		</li>
+	</ul>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Header top left</title>
+         <identifier>block_header_top_left</identifier>
+         <content><![CDATA[<div class="hide-below-768 phone" title="You can put here a phone number or some additional help info">Call +001 555 801</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Right sidebar top</title>
+         <identifier>block_right_top</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Right Top Block</span></strong>
+	</div>
+
+	<p style="background-color: #f5f5f5; color:#666; padding:10px; margin-bottom:10px; margin-top:10px;">
+		Custom CMS block displayed at the top of the right sidebar. Put your own content here: text, HTML, images - whatever you like.
+	</p>
+	<p style="background-color: #f5f5f5; color:#666; padding:10px;">
+		There are many similar content placeholders across the store. All editable from admin panel.
+	</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom Top Links (to replace Magento's default Top Links)</title>
+         <identifier>block_header_top_links</identifier>
+         <content><![CDATA[<ul class="links">
+
+	<li class="first">
+		<a href="{{store url='customer/account'}}" title="Customer Account">Custom</a>
+	</li>
+	<li>
+		<a href="{{store url='wishlist'}}" title="Wishlist">Wishlist</a>
+	</li>
+	<li class="">
+		<a href="{{store url='customer/account/login'}}" title="Log In">Log In</a>
+	</li>
+	<li class="last">
+		<a href="{{store url='customer/account/create'}}" title="Sign Up">Sign Up</a>
+	</li>
+
+</ul>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom Top Links 2</title>
+         <identifier>block_header_top_links2</identifier>
+         <content><![CDATA[<ul class="links">
+
+	<li>
+		<a href="{{store url='about-magento-demo-store'}}" title="Custom link">Sample</a>
+	</li>
+	<li>
+		<a href="{{store url='any/custom/page'}}" title="Link Hidden on Mobile">Links</a>
+	</li>
+
+</ul>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Left sidebar top</title>
+         <identifier>block_left_top</identifier>
+         <content><![CDATA[{{block type="brands/brands" show_items="1" block_name="Brands" template="wsu/brands/brand_slider.phtml"}}]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Left sidebar bottom</title>
+         <identifier>block_left_bottom</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Custom Block - Bottom</span></strong>
+	</div>
+	<div class="block-content sample-block">
+		<p>Custom CMS block displayed in the sidebar below the other blocks. Put your own content here.</p>
+	</div>
+	<div class="block-content sample-block">
+		<p>There are many similar content placeholders across the store. All editable from admin panel.</p>
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer newsletter</title>
+         <identifier>block_footer_primary_bottom_right</identifier>
+         <content><![CDATA[{{block type="newsletter/subscribe" template="newsletter/subscribe.phtml"}}]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 1</title>
+         <identifier>block_footer_row2_column1</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">First Heading</h6>
+
+	<div class="block-content">
+
+		<ul class="bullet">
+			<li><a href="{{store url="themecontrol-responsive-magento-theme"}}">This is just a sample link</a></li>
+			<li><a href="#">And this is some other link</a></li>
+			<li><a href="#">Another dummy text</a></li>
+		</ul>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 2</title>
+         <identifier>block_footer_row2_column2</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Second Heading</h6>
+
+	<div class="block-content">
+
+		<ul class="bullet">
+			<li><a href="{{store url="themecontrol-responsive-magento-theme"}}">This is just a sample link</a></li>
+			<li><a href="#">And this is some other link</a></li>
+			<li><a href="#">Another dummy text</a></li>
+		</ul>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 3</title>
+         <identifier>block_footer_row2_column3</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Third Heading</h6>
+
+	<div class="block-content">
+
+		<ul class="bullet">
+			<li><a href="{{store url="themecontrol-responsive-magento-theme"}}">This is just a sample link</a></li>
+			<li><a href="#">And this is some other link</a></li>
+			<li><a href="#">Another dummy text</a></li>
+		</ul>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 5</title>
+         <identifier>block_footer_row2_column5</identifier>
+         <content><![CDATA[Sample content of block_footer_row2_column5]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 6</title>
+         <identifier>block_footer_row2_column6</identifier>
+         <content><![CDATA[Sample content of block_footer_row2_column6]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 4</title>
+         <identifier>block_footer_row2_column4</identifier>
+         <content><![CDATA[<div class="collapsible mobile-collapsible">
+	<h6 class="block-title heading">Fourth Heading</h6>
+
+	<div class="block-content">
+
+		<ul class="bullet">
+			<li><a href="{{store url="themecontrol-responsive-magento-theme"}}">Link example</a></li>
+			<li><a href="#">And this is some other link</a></li>
+			<li><a href="#">Last Sample Link</a></li>
+		</ul>
+
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom landing page 2</title>
+         <identifier>block_landing_page2</identifier>
+         <content><![CDATA[<div class="landing-page">
+
+	<p class="horizontal-section sample-block">This is a custom landing page with sidebar: a CMS block which can replace category products. You can put your own content here: text, HTML, images - whatever you want. You can create landing page for every category.</p>
+
+	<a class="horizontal-section" href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own content.">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/horiz1.jpg"}}" alt="Sample Image" />
+	</a>
+
+	<a class="horizontal-section" href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own content.">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/horiz2.jpg"}}" alt="Sample Image" />
+	</a>
+
+	<a class="horizontal-section" href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own content.">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/horiz3.jpg"}}" alt="Sample Image" />
+	</a>
+
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home slide 1</title>
+         <identifier>block_slide1</identifier>
+         <content><![CDATA[<a href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/01.jpg'}}" alt="Sample slide" />
+
+		<div class="caption light2 full-width">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+			<p>Nullam ornare enim nec justo</p>
+		</div>
+
+</a>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home slide 2</title>
+         <identifier>block_slide2</identifier>
+         <content><![CDATA[<a href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/02.jpg'}}" alt="Sample slide" />
+
+		<div class="caption light3">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+		</div>
+
+		<div class="caption light2 bottom-right narrow">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+		</div>
+
+		<div class="caption light1 top-right narrow">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+		</div>
+
+		<div class="caption light1 top">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+		</div>
+
+</a>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home slide 3</title>
+         <identifier>block_slide3</identifier>
+         <content><![CDATA[<a href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/03.jpg'}}" alt="Sample slide" />
+
+		<div class="caption dark3">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Etiam neque velit, blandit sed scelerisque quis. Lorem ipsum.</p>
+			<p>Lorem ipsum dolor sit amet consectetur</p>
+		</div>
+
+		<div class="caption dark1 top-right">
+			<h2 class="heading permanent">Sample Caption</h2>
+			<p>Nullam ornare enim nec justo bibendum lobortis metus</p>
+		</div>
+
+</a>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Custom landing page 3 - category banner</title>
+         <identifier>block_landing_page3</identifier>
+         <content><![CDATA[<div class="horizontal-section">
+
+	<a href="{{store direct_url='#'}}">
+		<img src="{{media url="wysiwyg/wsu/themecontrol/custom/landing/category01.jpg"}}" title="You can edit this block or replace it with custom content" alt="Sample banner" />
+    
+		<div class="caption light2 full-width">
+			<h2 class="heading permanent">Category Banner</h2>
+			<p>Upload image and description for every category in the store</p>
+			<p>Create custom category blocks</p>
+		</div>
+	</a>
+    
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Slideshow banners</title>
+         <identifier>block_slideshow_banners</identifier>
+         <content><![CDATA[<a class="banner" href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/banner/01.png'}}" alt="Sample banner" />
+
+	<div class="caption light1 full-width right">
+		<p class="right">Sample caption</p>
+	</div>
+
+</a>
+
+<a class="banner" href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/banner/02.png'}}" alt="Sample banner" />
+
+	<div class="caption dark1 full-width right">
+		<p class="right">Add custom text</p>
+	</div>
+
+</a>
+
+<a class="banner" href="{{store url='about-magento-demo-store'}}">
+	<img src="{{media url='wysiwyg/wsu/themecontrol/slideshow/banner/03.png'}}" alt="Sample banner" />
+
+	<div class="caption dark3 full-width right">
+		<p class="right">Simple example</p>
+	</div>
+</a>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - preface</title>
+         <identifier>block_home_preface</identifier>
+         <content><![CDATA[<span class="section-line"></span>
+<br/>
+<div class="grid12-3">
+
+	<div class="feature feature-icon-hover large">
+		<span class="icon large">
+			<img src="{{media url='wysiwyg/wsu/themecontrol/icons/large/paintbrush.png'}}" />
+		</span>
+		<h6 class="above-heading">Customizable design</h6>
+		<h3>Unlimited Colors</h3>
+		<p>You have never seen so many options! Change colors of dozens of elements, apply textures, upload background images...</p>
+		<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+	</div>
+
+</div>
+<div class="grid12-3">
+
+	<div class="feature feature-icon-hover large">
+		<span class="icon large">
+			<img src="{{media url='wysiwyg/wsu/themecontrol/icons/large/responsive.png'}}" />
+		</span>
+		<h6 class="above-heading">12-column grid</h6>
+		<h3>Responsive Layout</h3>
+		<p>ThemeControl can be displayed on any screen. It is based on fluid grid system. If screen is resized, layout will be automatically adjusted...</p>
+		<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+	</div>
+
+</div>
+<div class="grid12-3">
+
+	<div class="feature feature-icon-hover large">
+		<span class="icon large">
+			<img src="{{media url='wysiwyg/wsu/themecontrol/icons/large/menu.png'}}" />
+		</span>
+		<h6 class="above-heading">Customizable drop-down menu</h6>
+		<h3>Mega Menu</h3>
+		<p>Two styles: wide mega menu or classic drop-down menu. You can add any custom content (images, text, HTML) to any category in the catalog...</p>
+		<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+	</div>
+
+</div>
+<div class="grid12-3">
+
+	<div class="feature feature-icon-hover large">
+		<span class="icon large">
+			<img src="{{media url='wysiwyg/wsu/themecontrol/icons/large/star.png'}}" />
+		</span>
+		<h6 class="above-heading">Content placeholders</h6>
+		<h3>50+ CMS blocks</h3>
+		<p>You can use content placeholders to display custom content in almost every part of the store. Import sample CMS blocks from the demo...</p>
+		<a href="{{store url='themecontrol-responsive-magento-theme'}}" class="go">See all features</a>
+	</div>
+
+</div>
+<div class="clearer"></div>
+<br/>
+<span class="section-line"></span>
+<br/>
+<br/>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - left 2</title>
+         <identifier>block_home_left2</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Home Custom Block</span></strong>
+	</div>
+
+	<p style="background-color: #f5f5f5; color:#666; padding:10px; margin-bottom:10px; margin-top:10px;">
+		Custom CMS block displayed at the left sidebar on the home page. Put your own content here: text, HTML, images - whatever you like.
+	</p>
+	<p style="background-color: #f5f5f5; color:#666; padding:10px;">
+		There are many similar content placeholders across the store. All editable from admin panel.
+	</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - left 1</title>
+         <identifier>block_home_left1</identifier>
+         <content><![CDATA[{{block type="ultramegamenu/navigation" template="wsu/ultramegamenu/categories.phtml"}}]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - left 3</title>
+         <identifier>block_home_left3</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Another Custom Block</span></strong>
+	</div>
+
+	<p style="background-color: #f5f5f5; color:#666; padding:10px; margin-bottom:10px; margin-top:10px;">
+		Custom CMS block displayed at the left sidebar on the home page. Put your own content here: text, HTML, images - whatever you like.
+	</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - postscript</title>
+         <identifier>block_home_postscript</identifier>
+         <content><![CDATA[{{block type="brands/brands" show_items="5" is_responsive="1" block_name="Best Store and Best Brands" template="wsu/brands/brand_slider.phtml"}}]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - right 3</title>
+         <identifier>block_home_right3</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Another Custom Block</span></strong>
+	</div>
+	<div class="block-content sample-block">
+		<p>Custom CMS block displayed at the right sidebar on the home page. Put your own content here: text, HTML, images - whatever you like.</p>
+	</div>
+	<div class="block-content sample-block">
+		<p>There are many similar content placeholders across the store. All editable from admin panel. </p>
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - right 2</title>
+         <identifier>block_home_right2</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Home Custom Block</span></strong>
+	</div>
+
+	<p style="background-color: #f5f5f5; color:#666; padding:10px; margin-bottom:10px; margin-top:10px;">
+		Custom CMS block displayed at the right sidebar on the home page. Put your own content here: text, HTML, images - whatever you like.
+	</p>
+	<p style="background-color: #f5f5f5; color:#666; padding:10px;">
+		There are many similar content placeholders across the store. All editable from admin panel.
+	</p>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Home page - right 1</title>
+         <identifier>block_home_right1</identifier>
+         <content><![CDATA[{{block type="ultramegamenu/navigation" template="wsu/ultramegamenu/categories.phtml"}}
+
+{{block type="brands/brands" show_items="1" block_name="Brands" template="wsu/brands/brand_slider.phtml"}}]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Right sidebar bottom</title>
+         <identifier>block_right_bottom</identifier>
+         <content><![CDATA[<div class="block">
+	<div class="block-title">
+		<strong><span>Right Bottom Block</span></strong>
+	</div>
+	<div class="block-content sample-block">
+		<p>Custom CMS block displayed at the bottom of the right sidebar.  There are many similar content placeholders across the store.</p>
+	</div>
+</div>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Header top right 2</title>
+         <identifier>block_header_top_right2</identifier>
+         <content><![CDATA[<div class="dropdown lang-switcher item"  title="Multiple languages are supported. This is only a demo switcher so it doesn't switch languages.">
+
+	<div class="dropdown-toggle cover">
+		<div>
+			<div style="background-image:url({{skin url='images/flags/default.png'}})" class="label dropdown-icon flag"></div>
+			<div class="value">English</div>
+			<div class="caret"></div>
+		</div>
+	</div>
+    
+	<ul class="dropdown-menu left-hand">
+		<li class="current">
+			<span style="background-image:url({{skin url='images/flags/default.png'}});" class="label dropdown-icon"></span>English</li>
+		<li>
+			<a href="#"><span style="background-image:url({{skin url='images/flags/default_de.png'}});" class="label dropdown-icon"></span>German</a>
+		</li>
+		<li>
+			<a href="#"><span style="background-image:url({{skin url='images/flags/it.png'}});" class="label dropdown-icon"></span>Italian</a>
+		</li>
+		<li>
+			<a href="#"><span style="background-image:url({{skin url='images/flags/fr.png'}});" class="label dropdown-icon"></span>French</a>
+		</li>
+	</ul>
+
+</div>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Footer - row 2 column 1 [s3+s4]</title>
+         <identifier>block_footer_row2_column1</identifier>
+         <content><![CDATA[Sample...]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Header top right</title>
+         <identifier>block_header_top_right</identifier>
+         <content><![CDATA[<div class="show-separators">
+
+	<ul class="links">
+		<li class="first hide-below-960">
+			<a href="#" title="Sample header content">Sample</a>
+		</li>
+		<li class="last hide-below-960">
+			<a href="#" title="Replace it with custom content">Link</a>
+		</li>
+	</ul>
+
+</div>]]></content>
+         <is_active>0</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+      <cms_block>
+         <title>Main menu - custom links</title>
+         <identifier>block_nav_links</identifier>
+         <content><![CDATA[	<li class="level0 level-top right">
+		<a class="level-top" href="{{store direct_url='about-magento-demo-store'}}" title="About Us">
+			<span>About Us</span>
+		</a>
+	</li>]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+   </blocks>
+</root>
