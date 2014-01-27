@@ -5,7 +5,7 @@
 $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
- 
+$random = array('n1','n2','n3','n4');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
@@ -15,7 +15,7 @@ $name = $store->getFrontendName();
 <head>
 <?=$this->getChildHtml('head')?>
 </head>
-<body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
+<body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?> <?php echo $random[rand(0,2)] ?>">
     <!-- WRAPPING -->
     <div id="jacket">
         <div id="binder" class="folio max-1584">
