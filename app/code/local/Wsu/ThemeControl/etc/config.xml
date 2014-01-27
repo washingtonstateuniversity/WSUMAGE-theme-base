@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Wsu_ThemeControl>
-            <version>1.5.1</version>
+            <version>0.1.0</version>
         </Wsu_ThemeControl>
     </modules>
 	<!--<frontend>
@@ -35,13 +35,13 @@
 	</frontend>-->
 	<admin>
 		<routers>
-			<wsu_themecontrol>
-				<use>admin</use>
+			<adminhtml>
 				<args>
-					<module>Wsu_ThemeControl</module>
-					<frontName>wsu_themecontrol</frontName>
+					<modules>
+						<wsu_themecontrol before="Mage_Adminhtml">Wsu_ThemeControl_Adminhtml</wsu_themecontrol>
+					</modules>
 				</args>
-			</wsu_themecontrol>
+			</adminhtml>
 		</routers>
 	</admin>
     <global>
@@ -55,15 +55,16 @@
                 <class>Wsu_ThemeControl_Helper</class>
             </wsu_themecontrol>
         </helpers>
-        <models>
+		<models>
             <wsu_themecontrol>
                 <class>Wsu_ThemeControl_Model</class>
+				<!--<resourceModel>wsu_auditing_resource</resourceModel>-->
             </wsu_themecontrol>
         </models>
 		<resources>
 			<wsu_themecontrol_setup>
 				<setup>
-					<module>Wsu_ThemeControl</module>
+					<module>wsu_themecontrol</module>
 					<class>Wsu_ThemeControl_Model_Resource_Mysql4_Setup</class>
 					<!--<class>Wsu_ThemeControl_Model_Resource_Eav_Mysql4_Setup</class>-->
 				</setup>
@@ -84,6 +85,13 @@
 		</resources>
     </global>
 	<adminhtml>
+		<layout>
+            <updates>
+                <wsu_themecontrol>
+                    <file>wsu/themecontrol.xml</file>
+                </wsu_themecontrol>
+            </updates>
+        </layout>
 		<events>            	
 			<controller_action_postdispatch_adminhtml_system_config_save>
 				<observers>
