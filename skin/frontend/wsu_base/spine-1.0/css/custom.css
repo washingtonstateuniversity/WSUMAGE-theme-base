@@ -15,3 +15,10 @@
 	width: 222px; display: inline-block;
 }
 
+
+
+
+#spine nav:not(.homeless)#site > ul > li:first-of-type.active > a, #spine nav:not(.homeless)#site > ul > li:first-of-type > a:hover, #spine nav:not(.homeless)#site > ul > li:first-of-type > a::before {
+    background-position: left center;
+	background-repeat: no-repeat;
+}

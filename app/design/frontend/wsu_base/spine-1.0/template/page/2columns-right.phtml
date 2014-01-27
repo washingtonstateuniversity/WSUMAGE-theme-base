@@ -16,22 +16,28 @@ $name = $store->getFrontendName();
 <?=$this->getChildHtml('head')?>
 </head>
 <body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?>">
-	<?php echo $this->getChildHtml('after_body_start') ?>
     <!-- WRAPPING -->
     <div id="jacket">
-        <div id="binder" class="hybrid folio max-1386">
+        <div id="binder" class="folio max-1386">
             <!-- CONTENT -->
             <main id="page" role="main">
                 <section class="row" id="siteID">
-					<?php echo $this->getChildHtml('topLinks') ?>
-                    <h2>WSU Marketplace</h2>
-                    <h1><?=$name?></h1>
-					<?php echo $this->getChildHtml('breadcrumbs') ?> 
+                    <div style="float:right;">
+                        <div class="quick-access" style="font-size:12px; font-weight:bold;">
+                            <?php echo $this->getChildHtml('topLinks') ?>
+                        </div>
+                    </div>
                 </section>
                 <!-- Responsive Sections -->
                 <section class="row">
-                    <div class="column twe-twelfths">
+                    <div class="column ten-twelfths">
                         <article>
+                            <h2>WSU Marketplace</h2>
+                            <h1><?=$name?></h1>
+                            <?php echo $this->getChildHtml('breadcrumbs') ?> 
+                        </article>
+                        <article>
+                        	<?php echo $this->getChildHtml('after_body_start') ?>
                             <div id="main">
                                 <?php echo $this->getChildHtml('topContainer'); ?>
                                 <?php echo $this->getChildHtml('global_notices') ?>
