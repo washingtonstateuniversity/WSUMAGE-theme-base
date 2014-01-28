@@ -40,12 +40,7 @@ class Wsu_ThemeControl_Helper_Data extends Mage_Core_Helper_Abstract {
         else
             return Mage::getStoreConfig('wsu_themecontrol_design');
     }
-    /**
-     * Deprecated: old method - for backward compatibility
-     */
-    public function getDesignCfgSection($storeId = NULL) {
-        return $this->getCfgSectionDesign($storeId);
-    }
+
     // Get theme config /////////////////////////////////////////////////////////////////
     /**
      * Get theme's main settings (single option)
@@ -71,15 +66,8 @@ class Wsu_ThemeControl_Helper_Data extends Mage_Core_Helper_Abstract {
     public function getCfgLayout($optionString, $storeCode = NULL) {
         return Mage::getStoreConfig('wsu_themecontrol_layout/' . $optionString, $storeCode);
     }
-    /**
-     * Deprecated: old methods - for backward compatibility
-     */
-    public function getDesignCfg($optionString) {
-        return $this->getCfgDesign($optionString);
-    }
-    public function getLayoutCfg($optionString, $storeCode = NULL) {
-        return $this->getCfgLayout($optionString, $storeCode);
-    }
+
+
     // Get selected settings /////////////////////////////////////////////////////////////////
     /**
      * Get maximum page width from the config
@@ -108,6 +96,52 @@ class Wsu_ThemeControl_Helper_Data extends Mage_Core_Helper_Abstract {
             return 0;
         }
     }
+    /**
+     * Build the Binder Class String.
+     * @return string
+     */
+    public function getBinderClassStr($storeCode = NULL) {
+		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
+
+		
+		$binderClassStr = "folio ";
+		$binderClassStr .= $this->getBinderType($storeCode).' ';
+		
+		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
+		if($width>0){
+			$binderClassStr .= ' max-'.$width ;
+		}
+		return $binderClassStr;
+    }
+    /**
+     * Build the Binder Style String.
+     * @return string
+     */
+    public function getBinderStyleStr($storeCode = NULL) {
+		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
+
+		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
+		$binderStyleStr = "";
+		$w = intval($this->getCfgLayout('responsive/max_width_custom', $storeCode));
+		if($width=='custom'){	
+			$binderStyleStr.="width:{$width};";
+		}
+		return $binderStyleStr;
+    }
+
+    /**
+     * Build the Binder type.
+     * @return string
+     */
+    public function getBinderType($storeCode = NULL) {
+		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
+		$type = $this->getCfgLayout('responsive/fluid_width', $storeCode);
+		return $type;
+    }	
+	
+	
+	
+	
     // Background images and textures /////////////////////////////////////////////////////////////////
     /**
      * Get background images directory path
