@@ -2,7 +2,7 @@
 class Wsu_ThemeControl_Model_System_Config_Source_Layout_Screen_Width_WideCustom{
     public function toOptionArray(){
 		return array(
-			array('value' => '990',		'label' => Mage::helper('wsu_themecontrol')->__('990 px')),
+			array('value' => 'default',		'label' => Mage::helper('wsu_themecontrol')->__('990 px')),
 			array('value' => '1188',	'label' => Mage::helper('wsu_themecontrol')->__('1188 px')),
 			array('value' => '1386',	'label' => Mage::helper('wsu_themecontrol')->__('1386 px')),
 			array('value' => '1584',	'label' => Mage::helper('wsu_themecontrol')->__('1584 px')),
