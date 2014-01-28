@@ -6,6 +6,10 @@ $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
 $random = array('n1','n2','n3','n4');
+
+$binderClassStr = $this->helper('wsu_themecontrol')->getBinderClassStr();
+$binderStyleStr =  $this->helper('wsu_themecontrol')->getBinderStyleStr();
+$bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->getThemeBodyClasses() .' '. $random[rand(0,2)];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
@@ -13,12 +17,12 @@ $random = array('n1','n2','n3','n4');
 <!--[if IE 8]><html class="no-js no-svg lt-ie9" lang="<?=$lang ?>"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="<?=$lang ?>"><!--<![endif]-->
 <head>
-<?=$this->getChildHtml('head')?>
+	<?=$this->getChildHtml('head')?>
 </head>
-<body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?> <?php echo $random[rand(0,2)] ?>">
+<body class=" <?=$bodyClasses?>">
     <!-- WRAPPING -->
     <div id="jacket">
-        <div id="binder" class="folio max-1584">
+        <div id="binder" class="<?=$binderClassStr?>" style="<?=$binderStyleStr?>">
             <!-- CONTENT -->
             <main id="page" role="main">
                 <section class="row" id="siteID">
