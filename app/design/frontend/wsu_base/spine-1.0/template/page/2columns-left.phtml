@@ -13,9 +13,10 @@ $random = array('n1','n2','n3','n4');
 <!--[if IE 8]><html class="no-js no-svg lt-ie9" lang="<?=$lang ?>"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="<?=$lang ?>"><!--<![endif]-->
 <head>
-<?=$this->getChildHtml('head')?>
+	<?=$this->getChildHtml('head')?>
 </head>
-<body class=" <?php echo $this->getBodyClass()?''.$this->getBodyClass().'':'' ?> <?php echo $random[rand(0,2)] ?>">
+<?php $bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->getThemeBodyClasses() .' '. $random[rand(0,2)]; ?>
+<body class=" <?=$bodyClasses?>">
     <!-- WRAPPING -->
     <div id="jacket">
         <div id="binder" class="folio max-1386">
