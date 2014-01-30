@@ -6,9 +6,9 @@ $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
 $random = array('n1','n2','n3','n4');
-
-$binderClassStr = $this->helper('wsu_themecontrol')->getBinderClassStr();
-$binderStyleStr =  $this->helper('wsu_themecontrol')->getBinderStyleStr();
+$storeCode = $store->getCode();
+$binderClassStr = $this->helper('wsu_themecontrol')->getBinderClassStr($storeCode);
+$binderStyleStr =  $this->helper('wsu_themecontrol')->getBinderStyleStr($storeCode);
 $bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->getThemeBodyClasses() .' '. $random[rand(0,2)];
 ?>
 <!DOCTYPE html>

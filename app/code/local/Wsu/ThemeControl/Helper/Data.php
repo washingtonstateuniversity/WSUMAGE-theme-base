@@ -103,14 +103,11 @@ class Wsu_ThemeControl_Helper_Data extends Mage_Core_Helper_Abstract {
     public function getBinderClassStr($storeCode = NULL) {
 		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
 
-		
-		$binderClassStr = "folio ";
+		$binderClassStr = "";
 		$binderClassStr .= $this->getBinderType($storeCode).' ';
-		
+		$binderClassStr .= " folio ";
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
-		if($width>0){
-			$binderClassStr .= ' max-'.$width ;
-		}
+		if($width!='custom')$binderClassStr .= ' max-'.$width ;
 		return $binderClassStr;
     }
     /**
@@ -159,6 +156,7 @@ class Wsu_ThemeControl_Helper_Data extends Mage_Core_Helper_Abstract {
     public function getTexPath() {
         return $this->_texPath;
     }
+	
     // Other /////////////////////////////////////////////////////////////////
     /**
      * Get alternative image HTML of the given product

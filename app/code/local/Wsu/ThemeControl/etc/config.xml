@@ -337,9 +337,9 @@
 		<wsu_themecontrol_layout>
 			<responsive>
 				<responsive>1</responsive>
-				<max_width>1280</max_width>
+				<max_width>1584</max_width>
 				<max_width_custom></max_width_custom>
-				<fluid_width>1</fluid_width>
+				<fluid_width>fluid</fluid_width>
 			</responsive>
 		</wsu_themecontrol_layout>
 	</default>
