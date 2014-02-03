@@ -23,5 +23,15 @@
 	
 	</page_three_columns>
 	
+	<!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_logged_out>
+		
+		<reference name="top.links">
+            <action method="addLink" translate="label title"><label>Sign Up</label><url>customer/account/create</url><title>Sign Up</title><prepare>true</prepare><urlParams/><position>101</position><liParams>id="link-sign-up"</liParams></action>
+        </reference>
+		
+	</customer_logged_out>
+	
+	
 	
 </layout>
