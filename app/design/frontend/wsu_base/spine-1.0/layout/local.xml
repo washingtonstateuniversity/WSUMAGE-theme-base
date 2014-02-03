@@ -40,7 +40,9 @@
 			<block type="cms/block" name="block_cart_below_table">
                 <action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
             </block>
-
+			<block type="cms/block" name="block_cart_below_totals">
+                <action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
+            </block>
 			
 		</reference>
 		
