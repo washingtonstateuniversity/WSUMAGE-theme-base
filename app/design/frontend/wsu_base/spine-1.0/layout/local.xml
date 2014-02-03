@@ -31,7 +31,20 @@
         </reference>
 		
 	</customer_logged_out>
-	
+	<!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<checkout_cart_index>
+
+		<!-- Custom static blocks -->
+		<reference name="checkout.cart">
+		
+			<block type="cms/block" name="block_cart_below_table">
+                <action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
+            </block>
+
+			
+		</reference>
+		
+	</checkout_cart_index>	
 	
 	
 </layout>
