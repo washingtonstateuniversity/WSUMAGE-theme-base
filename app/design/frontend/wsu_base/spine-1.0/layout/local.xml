@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout version="0.1.0">
-
+	<default>
+	
+	
+	
+	
+	
+	
+	</default>
+	
+	
+	<!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<page_three_columns>
+	
+		<reference name="right">
+			<action method="unsetChild"><name>paypal.partner.right.logo</name></action>
+		</reference>
+		
+		<reference name="left">
+			<action method="unsetChild"><name>wishlist</name></action>
+		</reference>
+	
+	</page_three_columns>
+	
+	
 </layout>
