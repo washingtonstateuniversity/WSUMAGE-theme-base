@@ -86,5 +86,13 @@
 		</reference>
 	</cms_page>	
 	
+	<!-- Remove static blocks displayed on CMS pages from these pages: home page, 404 no route 
+		IMPORTANT: make sure that you use correct ID -->
+	<cms_index_noroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_noroute>
+	
 	
 </layout>
