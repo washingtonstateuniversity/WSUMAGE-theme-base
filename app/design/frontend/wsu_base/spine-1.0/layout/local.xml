@@ -52,5 +52,25 @@
 			</block>
 		</reference>
 	</checkout_onepage_index>	
+
+<!-- REVIEWS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<review_product_list>
+		<!-- IMPORTANT: same as 'catalog_product_view'. -->
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+	</review_product_list>
+
+	
+<!-- CUSTOMER ACCOUNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_account>
+		<reference name="left">
+			<!-- Remove cart from the left column -->
+			<action method="unsetChild"><name>cart_sidebar</name></action>
+		</reference>
+	</customer_account>
+	
+	
+	
 	
 </layout>
