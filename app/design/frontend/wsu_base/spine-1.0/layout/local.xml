@@ -93,6 +93,10 @@
 		<remove name="block_right_top"/>
 		<remove name="block_right_bottom"/>
 	</cms_index_noroute>
-	
+	<cms_index_defaultnoroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_defaultnoroute>
 	
 </layout>
