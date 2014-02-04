@@ -332,6 +332,9 @@
 				<link_color></link_color>
 				<link_hover_color></link_hover_color>
 			</footer_bottom>
+			<spine>
+				<spine_color>dark</spine_color>
+			</spine>
 		</wsu_themecontrol_design>
 		<!-- Layout settings -->
 		<wsu_themecontrol_layout>

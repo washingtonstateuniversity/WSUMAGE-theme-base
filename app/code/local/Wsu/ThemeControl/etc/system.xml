@@ -726,6 +726,28 @@
 			<show_in_website>1</show_in_website>
 			<show_in_store>1</show_in_store>
             <groups>
+			
+				<spine translate="label">
+                    <label>Colors</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<spine_color translate="label"><!-- we need to abstrack this more for real OS -->
+							<label>Spine colors</label>
+                            <frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_wsubrand</backend_model>
+                            <sort_order>410</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</spine_color>
+					</fields>
+				</spine>			
+			
 				<colors translate="label">
                     <label>Colors</label>
                     <frontend_type>text</frontend_type>
