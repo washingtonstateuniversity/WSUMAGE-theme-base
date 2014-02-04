@@ -10,42 +10,34 @@
 	</default>
 	
 	
-	<!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<page_three_columns>
-	
 		<reference name="right">
 			<action method="unsetChild"><name>paypal.partner.right.logo</name></action>
 		</reference>
-		
 		<reference name="left">
 			<action method="unsetChild"><name>wishlist</name></action>
 		</reference>
-	
 	</page_three_columns>
 	
-	<!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_logged_out>
-		
 		<reference name="top.links">
             <action method="addLink" translate="label title"><label>Sign Up</label><url>customer/account/create</url><title>Sign Up</title><prepare>true</prepare><urlParams/><position>101</position><liParams>id="link-sign-up"</liParams></action>
         </reference>
-		
 	</customer_logged_out>
-	<!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	
+<!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_cart_index>
-
 		<!-- Custom static blocks -->
 		<reference name="checkout.cart">
-		
 			<block type="cms/block" name="block_cart_below_table">
                 <action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
             </block>
 			<block type="cms/block" name="block_cart_below_totals">
                 <action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
             </block>
-			
 		</reference>
-		
 	</checkout_cart_index>	
 	
 	
