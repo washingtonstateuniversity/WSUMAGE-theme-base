@@ -13,4 +13,30 @@
 	$t = Mage::helper('wsu_wsu');
 	$d = $t->getCfgSectionDesign(Mage::registry('cssgen_store'));
 
+	//Determine background color of the main content area
+	$mainBgColor = '#fff';
+	if ($t->isColor($d['main']['inner_bg_color'])) {
+		$mainBgColor = $d['main']['inner_bg_color'];
+	} elseif ($t->isColor($d['main']['bg_color'])) {
+		$mainBgColor = $d['main']['bg_color'];
+	} elseif ($t->isColor($d['page']['bg_color'])) {
+		$mainBgColor = $d['page']['bg_color'];
+	}
 ?>
+<?php
+//Global
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+?>
+
+body {
+	<?php if ($t->isColor($d['colors']['color'])){ 
+		echo "color: ".$d['colors']['color'].";"; 
+		} ?>
+	<?php if ($d['font']['font_size']){
+		echo "font-size:".$d['font']['font_size'].";";
+		} ?>
+	<?php if ($d['page']['viewport_bg_color']){
+		echo "background-color:".$d['page']['viewport_bg_color'].";";
+		} ?>
+}
+
