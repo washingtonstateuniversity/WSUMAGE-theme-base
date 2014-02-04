@@ -8,7 +8,15 @@
 	
 	
 	</default>
-	
+<!-- Header ====================================================================== -->
+		<reference name="header">
+
+			<!-- Welcome message as block (added after Magento 1.7.0.2) -->
+			<block type="page/html_welcome" name="welcome" as="welcome"/>
+		
+			
+			
+		</reference>	
 	
 <!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<page_three_columns>
