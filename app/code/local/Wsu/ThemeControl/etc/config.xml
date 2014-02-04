@@ -128,8 +128,18 @@
 			</category>
 			<category_grid>
 				<column_count>3</column_count>
+				<column_count_768>3</column_count_768>
+				<column_count_640>2</column_count_640>
+				<column_count_480>2</column_count_480>
 				<equal_height>1</equal_height>
 				<hover_effect>1</hover_effect>
+				<disable_hover_effect>320</disable_hover_effect>
+				<hide_addto_links>480</hide_addto_links>
+				<centered>1</centered>
+				<elements_size></elements_size>
+				<display_name>2</display_name>
+				<display_name_single_line>0</display_name_single_line>
+				<display_price>2</display_price>
 				<display_rating>1</display_rating>
 				<display_addtocart>2</display_addtocart>
 				<display_addtolinks>1</display_addtolinks>
