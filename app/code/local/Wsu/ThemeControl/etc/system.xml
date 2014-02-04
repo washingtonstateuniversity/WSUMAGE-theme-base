@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <config>
 	<tabs>
-        <wsu_themecontrol translate="label" module="wsu_themecontrol">
+        <wsu_themecontrol translate="label comment" module="wsu_themecontrol">
             <label>WSU Theme Control</label>
             <sort_order>150</sort_order>
 			<class>wsu_themecontrol</class>
         </wsu_themecontrol>
     </tabs>
     <sections>
-        <wsu_themecontrol translate="label" module="wsu_themecontrol">
+        <wsu_themecontrol translate="label comment" module="wsu_themecontrol">
 			<label>Theme Settings</label>
 			<tab>wsu_themecontrol</tab>
 			<frontend_type>text</frontend_type>
@@ -24,7 +24,7 @@
 					<show_in_website>1</show_in_website>
 					<show_in_store>1</show_in_store>
 				</hint>
-				<header translate="label">
+				<header translate="label comment">
                     <label>Header</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>30</sort_order>
@@ -32,28 +32,64 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<hide_on_mobile translate="label">
+						<heading_search translate="label comment">
+							<label>Search</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_search>
+						<search_position translate="label comment">
+							<label>Position of Search Box</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_header_search_position</source_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</search_position>
+						<heading_usermenu translate="label comment">
+							<label>Elements of the User Menu</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_usermenu>
+						<toplinks_break_position translate="label comment">
+							<label>Position of Additional Line Break</label>
+							<comment>E.g. add a line break after the cart drop-down to force other elements of the User Menu to be displayed in the new line (below the cart). Note that elements of the User Menu are aligned to the right edge of the header and are rendered in the following order: cart drop-down, "Compare" block, Top Links, custom static block.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_header_toplinks_break_position</source_model>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</toplinks_break_position>
+						<compare translate="label comment">
+							<label>Block "Compare" in the Header</label>
+							<comment>If disabled, block "Compare" will be displayed in Magento's default position (left sidebar).</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</compare>
+						<hide_on_mobile translate="label comment">
 							<label>Hide Empty Cart on Mobile Devices</label>
 							<comment>Empty cart can be hidden on mobile devices (if browser viewport is narrower than 480 pixels).</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</hide_on_mobile>
-						<compare translate="label">
-                            <label>Block "Compare" in the Header</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </compare>
 					</fields>
 				</header>
-				<category translate="label">
+				<category translate="label comment">
                     <label>Category View</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>100</sort_order>
@@ -61,7 +97,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<heading_images translate="label">
+						<heading_images translate="label comment">
 							<label>Images</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>0</sort_order>
@@ -69,7 +105,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</heading_images>
-						<aspect_ratio translate="label">
+						<aspect_ratio translate="label comment">
 							<label>Keep Image Aspect Ratio</label>
 							<comment>Set "Yes", to keep aspect ratio of the product images (height of the images will be calculated automatically based on width).</comment>
                             <frontend_type>select</frontend_type>
@@ -79,7 +115,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</aspect_ratio>
-						<alt_image translate="label">
+						<alt_image translate="label comment">
 							<label>Alternative Image</label>
 							<comment>Show alternative image on mouse hover over the main image.</comment>
                             <frontend_type>select</frontend_type>
@@ -89,7 +125,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</alt_image>
-						<alt_image_column translate="label">
+						<alt_image_column translate="label comment">
 							<label>Select Alt. Image By Column</label>
 							<comment>
 								<![CDATA[Which column of the product image gallery will mark alternative images of your products.]]>
@@ -104,7 +140,7 @@
 								<alt_image>1</alt_image>
 							</depends>
 						</alt_image_column>
-						<alt_image_column_value translate="label">
+						<alt_image_column_value translate="label comment">
                             <label>Alt. Image Column Value</label>
 							<comment>
 								<![CDATA[Specify the value which will mark alternative images of your products. E.g.: if <strong>Select Alt. Image By Column</strong> is set to "Sort Order", specify the number which will mark (in "Sort Order" column of the product image gallery) alternative images, for example: "2".]]>
@@ -120,7 +156,7 @@
                         </alt_image_column_value>
 					</fields>
 				</category>
-				<category_grid translate="label">
+				<category_grid translate="label comment">
                     <label>Category View (Grid Mode)</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>110</sort_order>
@@ -128,7 +164,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <column_count translate="label">
+                        <column_count translate="label comment">
 							<label>Number of Columns</label>
 							<comment>
 								<![CDATA[Number of products displayed in a single row, if the <strong>Maximum Page Width</strong> is set to 1024 px. If the <strong>Maximum Page Width</strong> is larger, the number of columns will be automatically increased to show more products in a row. For example: if the <strong>Number of Columns</strong> = 3 and the <strong>Maximum Page Width</strong> = 1280 px, on wide screens you will see 4 products in a row.]]>
@@ -140,7 +176,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</column_count>
-						<equal_height translate="label">
+						<equal_height translate="label comment">
 							<label>Equal Height of Grid Items (Products)</label>
 							<comment>If enabled, all grid items have the same height and "Add to cart" button is displayed at the bottom edge of the item.</comment>
                             <frontend_type>select</frontend_type>
@@ -150,7 +186,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</equal_height>
-						<hover_effect translate="label">
+						<hover_effect translate="label comment">
 							<label>Product Hover Effect</label>
 							<comment>
 								<![CDATA[Effect is visible on mouse hover over the product. <strong style="color:red;">Important:</strong> enable in order to use "Display On Hover" in <strong>Display Selected Elements</strong>.]]>
@@ -163,7 +199,7 @@
                             <show_in_store>1</show_in_store>
 						</hover_effect>
 						
-						<heading_display translate="label">
+						<heading_display translate="label comment">
 							<label>Display Selected Elements</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
@@ -172,7 +208,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_display>
 						
-						<display_rating translate="label">
+						<display_rating translate="label comment">
 							<label>Ratings</label>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
@@ -181,7 +217,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</display_rating>
-						<display_addtocart translate="label">
+						<display_addtocart translate="label comment">
 							<label>Add To Cart</label>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
@@ -190,7 +226,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</display_addtocart>
-						<display_addtolinks translate="label">
+						<display_addtolinks translate="label comment">
 							<label>"Add to" Links</label>
 							<comment>"Add to wishlist" and "Add to compare" links.</comment>
                             <frontend_type>select</frontend_type>
@@ -200,7 +236,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</display_addtolinks>
-						<addtolinks_simple translate="label">
+						<addtolinks_simple translate="label comment">
                             <label>Show "Add to" Links as Icons Above the Image</label>
 							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links.</comment>
                             <frontend_type>select</frontend_type>
@@ -212,7 +248,7 @@
                         </addtolinks_simple>
 					</fields>
 				</category_grid>
-				<category_list translate="label">
+				<category_list translate="label comment">
                     <label>Category View (List Mode)</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>120</sort_order>
@@ -220,7 +256,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<hover_effect translate="label">
+						<hover_effect translate="label comment">
 							<label>Product Hover Effect</label>
 							<comment>Effect is visible on mouse hover over the product.</comment>
                             <frontend_type>select</frontend_type>
@@ -230,7 +266,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</hover_effect>
-						<addtolinks_simple translate="label">
+						<addtolinks_simple translate="label comment">
                             <label>Show "Add to" Links as Simple Icons</label>
 							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links with icons.</comment>
                             <frontend_type>select</frontend_type>
@@ -242,7 +278,7 @@
                         </addtolinks_simple>
 					</fields>
 				</category_list>
-				<product_page translate="label">
+				<product_page translate="label comment">
                     <label>Product Page</label>
 					<comment>
 						<![CDATA[<strong>IMPORTANT:</strong><br/>Width of the product page columns (<strong>Image Column</strong>, <strong>Primary Column</strong>, <strong>Secondary Column</strong>) is specified in grid units. Sum of all columns has to be <strong>equal 12 grid units</strong>. Otherwise default values will be used.<br/><br/>]]>
@@ -253,7 +289,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<image_column translate="label">
+						<image_column translate="label comment">
 							<label>Image Column Width</label>
 							<comment>Specify value in grid units (between 4 and 6).</comment>
                             <frontend_type>text</frontend_type>
@@ -264,7 +300,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</image_column>
-						<primary_column translate="label">
+						<primary_column translate="label comment">
 							<label>Primary Column Width</label>
 							<comment>Specify value in grid units (between 3 and 8).</comment>
                             <frontend_type>text</frontend_type>
@@ -274,7 +310,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</primary_column>
-                        <secondary_column translate="label">
+                        <secondary_column translate="label comment">
 							<label>Secondary Column Width</label>
 							<comment>Specify value in grid units (between 2 and 6). Leave empty to remove this column.</comment>
                             <frontend_type>text</frontend_type>
@@ -284,7 +320,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</secondary_column>
-						<replace_upsell translate="label">
+						<replace_upsell translate="label comment">
 							<label>Up-sell Products</label>
 							<comment>
 								<![CDATA[To replace Up-sell Products first enable static block with ID <strong>block_product_replace_upsell</strong>]]>
@@ -297,7 +333,7 @@
                             <show_in_store>1</show_in_store>
 						</replace_upsell>
 						
-						<heading_related translate="label">
+						<heading_related translate="label comment">
 							<label>Related Products</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -306,7 +342,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_related>
 						
-						<replace_related translate="label">
+						<replace_related translate="label comment">
 							<label>Related Products</label>
 							<comment>
 								<![CDATA[To replace Related Products first enable static block with ID <strong>block_product_replace_related</strong>]]>
@@ -318,7 +354,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</replace_related>
-						<related_template translate="label">
+						<related_template translate="label comment">
 							<label>Related Products Layout</label>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_themecontrol/system_config_source_product_related_template</source_model>
@@ -327,7 +363,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</related_template>
-						<related_position translate="label">
+						<related_position translate="label comment">
 							<label>Position of Related Products</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_themecontrol/system_config_source_product_related_position</source_model>
@@ -336,7 +372,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</related_position>
-						<related_count translate="label">
+						<related_count translate="label comment">
 							<label>Number of Visible Products</label>
 							<comment>Number of related products displayed in each slide.</comment>
 							<frontend_type>text</frontend_type>
@@ -351,7 +387,7 @@
 						</related_count>
 					</fields>
 				</product_page>
-				<product_labels translate="label">
+				<product_labels translate="label comment">
                     <label>Product Labels</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>220</sort_order>
@@ -359,7 +395,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <new translate="label">
+                        <new translate="label comment">
 							<label>Show "New" Label</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -368,7 +404,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</new>
-						<sale translate="label">
+						<sale translate="label comment">
 							<label>Show "Sale" Label</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -379,7 +415,7 @@
 						</sale>
 					</fields>
 				</product_labels>
-				<footer translate="label">
+				<footer translate="label comment">
                     <label>Footer</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>300</sort_order>
@@ -387,7 +423,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<links_column_auto_width translate="label">
+						<links_column_auto_width translate="label comment">
 							<label>Automatic Column Width Calculation</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
@@ -398,7 +434,7 @@
 						</links_column_auto_width>
 					</fields>
 				</footer>
-				<product_slider translate="label">
+				<product_slider translate="label comment">
                     <label>Product Sliders</label>
 					<comment>This section is related to product sliders. "Speed" will be applied for all existing product sliders, also on product page. Other settings are only applied to Featured Products Slider blocks and New Products blocks.</comment>
                     <frontend_type>text</frontend_type>
@@ -407,7 +443,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<timeout translate="label">
+						<timeout translate="label comment">
                             <label>Timeout</label>
 							<comment>To enable automatic scrolling of the product sliders, specify time (in milliseconds) between slide transitions. Leave empty to disable automatic scrolling. Note that 1000 miliseconds = 1 second.</comment>
                             <frontend_type>text</frontend_type>
@@ -416,7 +452,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </timeout>
-						<speed translate="label">
+						<speed translate="label comment">
                             <label>Speed</label>
 							<comment>Duration (in milliseconds) of scrolling animation.</comment>
                             <frontend_type>text</frontend_type>
@@ -425,7 +461,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </speed>
-						<move_items translate="label">
+						<move_items translate="label comment">
                             <label>Move Items</label>
 							<comment>Number of items that should move on animation. Enter 0 to move all visible items.</comment>
                             <frontend_type>text</frontend_type>
@@ -436,7 +472,7 @@
                         </move_items>
 					</fields>
 				</product_slider>
-				<magento_blocks translate="label">
+				<magento_blocks translate="label comment">
                     <label>Default Magento Blocks</label>
 					<comment>In this section you can disable default Magento blocks.</comment>
                     <frontend_type>text</frontend_type>
@@ -445,7 +481,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<top_links translate="label">
+						<top_links translate="label comment">
 							<label>Top Links</label>
 							<comment>Links in the header: Accoun, Wishlist, Log In etc.</comment>
 							<frontend_type>select</frontend_type>
@@ -455,7 +491,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</top_links>
-						<footer_links translate="label">
+						<footer_links translate="label comment">
 							<label>Footer Links</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_enabledisable</source_model>
@@ -464,7 +500,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</footer_links>
-						<footer_newsletter translate="label">
+						<footer_newsletter translate="label comment">
 							<label>Newsletter Subscribe Form</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_enabledisable</source_model>
@@ -473,7 +509,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</footer_newsletter>
-						<related_products_checkbox translate="label">
+						<related_products_checkbox translate="label comment">
 							<label>Product Page: Related Products Checkbox</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_enabledisable</source_model>
@@ -484,7 +520,7 @@
 						</related_products_checkbox>
 					</fields>
 				</magento_blocks>
-				<sidebar_blocks_home translate="label">
+				<sidebar_blocks_home translate="label comment">
                     <label>Disable Sidebar Blocks (On Home Page)</label>
 					<comment>In this section you can disable blocks which are displayed in sidebars. These setting only affect the home page.</comment>
                     <frontend_type>text</frontend_type>
@@ -493,7 +529,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<heading_left translate="label">
+						<heading_left translate="label comment">
 							<label>Left Sidebar</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>10</sort_order>
@@ -502,7 +538,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_left>
 						
-						<compare translate="label">
+						<compare translate="label comment">
 							<label>Disable: Compare</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -511,7 +547,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</compare>
-						<compared translate="label">
+						<compared translate="label comment">
 							<label>Disable: Compared Products</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -520,7 +556,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</compared>
-						<viewed translate="label">
+						<viewed translate="label comment">
 							<label>Disable: Viewed Products</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -529,7 +565,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</viewed>
-						<wishlist translate="label">
+						<wishlist translate="label comment">
 							<label>Disable: Wishlist</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -538,7 +574,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</wishlist>
-						<poll translate="label">
+						<poll translate="label comment">
 							<label>Disable: Poll</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -547,7 +583,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</poll>
-						<tags translate="label">
+						<tags translate="label comment">
 							<label>Disable: Tags</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -556,7 +592,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</tags>
-						<paypal translate="label">
+						<paypal translate="label comment">
 							<label>Disable: Paypal</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -565,7 +601,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</paypal>
-						<block_left_top translate="label">
+						<block_left_top translate="label comment">
 							<label>Disable: Static Block 'block_left_top'</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -574,7 +610,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</block_left_top>
-						<block_left_bottom translate="label">
+						<block_left_bottom translate="label comment">
 							<label>Disable: Static Block 'block_left_bottom'</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -584,7 +620,7 @@
 							<show_in_store>1</show_in_store>
 						</block_left_bottom>
 						
-						<heading_right translate="label">
+						<heading_right translate="label comment">
 							<label>Right Sidebar</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -593,7 +629,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_right>
 						
-						<block_right_top translate="label">
+						<block_right_top translate="label comment">
 							<label>Disable: Static Block 'block_right_top'</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -602,7 +638,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</block_right_top>
-						<block_right_bottom translate="label">
+						<block_right_bottom translate="label comment">
 							<label>Disable: Static Block 'block_right_bottom'</label>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -613,7 +649,7 @@
 						</block_right_bottom>
 					</fields>
 				</sidebar_blocks_home>
-				<install translate="label">
+				<install translate="label comment">
                     <label>Theme Installation</label>
 					<comment>
 						<![CDATA[
@@ -628,7 +664,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<heading_import_blocks translate="label">
+						<heading_import_blocks translate="label comment">
 							<label>Import Static Blocks</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
@@ -637,7 +673,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_import_blocks>
 						
-						<import_blocks translate="label">
+						<import_blocks translate="label comment">
                             <label>Static Blocks</label>
 							<comment>
 								<![CDATA[Click this button to create all static blocks provided with this theme.]]>
@@ -650,7 +686,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </import_blocks>
-						<overwrite_blocks translate="label">
+						<overwrite_blocks translate="label comment">
                             <label>Overwrite Existing Blocks</label>
 							<comment>If set to "Yes", imported blocks will overwrite existing blocks with the same identifiers (if any blocks with the same identifiers already exist). To change value of this field, save the configuration (without saving, the option will remain unchanged after you refresh the page).</comment>
                             <frontend_type>select</frontend_type>
@@ -661,7 +697,7 @@
                             <show_in_store>1</show_in_store>
                         </overwrite_blocks>
 						
-						<heading_import_pages translate="label">
+						<heading_import_pages translate="label comment">
 							<label>Import Pages</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -670,7 +706,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_import_pages>
 						
-						<import_pages translate="label">
+						<import_pages translate="label comment">
                             <label>Pages</label>
 							<comment>
 								<![CDATA[Click this button to create CMS pages provided with this theme.]]>
@@ -683,7 +719,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </import_pages>
-						<overwrite_pages translate="label">
+						<overwrite_pages translate="label comment">
                             <label>Overwrite Existing Pages</label>
 							<comment>If set to "Yes", imported pages will overwrite existing pages with the same identifiers (if any pages with the same identifiers already exist). To change value of this field, save the configuration (without saving, the option will remain unchanged after you refresh the page).</comment>
                             <frontend_type>select</frontend_type>
@@ -695,7 +731,7 @@
                         </overwrite_pages>
 					</fields>
 				</install>
-				<customization translate="label">
+				<customization translate="label comment">
                     <label>Customization Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1000</sort_order>
@@ -703,7 +739,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<custom_css translate="label">
+						<custom_css translate="label comment">
 							<label>Load Custom CSS</label>
 							<comment>Enable this option to load "custom.css" file in which you can override the default styling of the theme. To create "custom.css" you can use the file "SAMPLE.custom.css" which is located in skin/frontend/themecontrol/default/css directory.</comment>
 							<frontend_type>select</frontend_type>
@@ -717,7 +753,7 @@
 				</customization>
             </groups>
         </wsu_themecontrol>
-		<wsu_themecontrol_design translate="label" module="wsu_themecontrol">
+		<wsu_themecontrol_design translate="label comment" module="wsu_themecontrol">
 			<label>Theme Design</label>
 			<tab>wsu_themecontrol</tab>
 			<frontend_type>text</frontend_type>
@@ -727,7 +763,7 @@
 			<show_in_store>1</show_in_store>
             <groups>
 			
-				<spine translate="label">
+				<spine translate="label comment">
                     <label>Spine Options</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>5</sort_order>
@@ -735,7 +771,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<spine_color translate="label"><!-- we need to abstrack this more for real OS -->
+						<spine_color translate="label comment"><!-- we need to abstrack this more for real OS -->
 							<label>Spine colors</label>
                             <frontend_type>select</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -745,20 +781,34 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</spine_color>
-						<spine_tool_bar_color translate="label"><!-- we need to abstrack this more for real OS -->
+						<spine_tool_bar_color translate="label comment"><!-- we need to abstrack this more for real OS -->
 							<label>Spine tool bar colors</label>
                             <frontend_type>select</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
                             <source_model>wsu_wsu/system_config_source_design_color_wsubrand</source_model>
-                            <sort_order>410</sort_order>
+                            <sort_order>420</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</spine_tool_bar_color>
+						
+						
+						<spine_bleed translate="label comment">
+							<label>Should the spine area bleed left?</label>
+							<comment>If disabled, block "Compare" will be displayed in Magento's default position (left sidebar).</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>430</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</spine_bleed>
+						
+						
 					</fields>
 				</spine>			
 			
-				<colors translate="label">
+				<colors translate="label comment">
                     <label>Colors</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>5</sort_order>
@@ -766,7 +816,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>						
-						<heading_basic_colors translate="label">
+						<heading_basic_colors translate="label comment">
 							<label>Basic Colors</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>0</sort_order>
@@ -775,7 +825,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_basic_colors>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -785,7 +835,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -795,7 +845,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -806,7 +856,7 @@
                             <show_in_store>1</show_in_store>
 						</link_hover_color>
 						
-						<heading_buttons translate="label">
+						<heading_buttons translate="label comment">
 							<label>Buttons</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
@@ -815,7 +865,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_buttons>
 						
-						<button_bg_color translate="label">
+						<button_bg_color translate="label comment">
 							<label>Button Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -825,7 +875,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_bg_color>
-						<button_color translate="label">
+						<button_color translate="label comment">
 							<label>Button Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -836,7 +886,7 @@
                             <show_in_store>1</show_in_store>
 						</button_color>
 						
-						<button_hover_bg_color translate="label">
+						<button_hover_bg_color translate="label comment">
 							<label>Button Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -846,7 +896,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_hover_bg_color>
-						<button_hover_color translate="label">
+						<button_hover_color translate="label comment">
 							<label>Button Hover Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -857,7 +907,7 @@
                             <show_in_store>1</show_in_store>
 						</button_hover_color>
 						
-						<button_active_bg_color translate="label">
+						<button_active_bg_color translate="label comment">
 							<label>Button Active Background Color</label>
 							<comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment>
                             <frontend_type>text</frontend_type>
@@ -868,7 +918,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_active_bg_color>
-						<button_active_color translate="label">
+						<button_active_color translate="label comment">
 							<label>Button Active Text Color</label>
 							<comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment>
                             <frontend_type>text</frontend_type>
@@ -880,7 +930,7 @@
                             <show_in_store>1</show_in_store>
 						</button_active_color>
 						
-						<heading_tool_icons translate="label">
+						<heading_tool_icons translate="label comment">
 							<label>Interface Icons</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -889,7 +939,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_tool_icons>
 						
-						<tool_icon_bg_color translate="label">
+						<tool_icon_bg_color translate="label comment">
 							<label>Icon Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -899,7 +949,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tool_icon_bg_color>
-						<tool_icon_hover_bg_color translate="label">
+						<tool_icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -909,7 +959,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tool_icon_hover_bg_color>
-						<tool_icon_active_bg_color translate="label">
+						<tool_icon_active_bg_color translate="label comment">
 							<label>Icon Active Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -920,7 +970,7 @@
                             <show_in_store>1</show_in_store>
 						</tool_icon_active_bg_color>
 						
-						<heading_custom_icons translate="label">
+						<heading_custom_icons translate="label comment">
 							<label>Custom Icons</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>300</sort_order>
@@ -929,7 +979,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_custom_icons>
 						
-						<icon_bg_color translate="label">
+						<icon_bg_color translate="label comment">
 							<label>Icon Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -939,7 +989,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</icon_bg_color>
-						<icon_hover_bg_color translate="label">
+						<icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -949,7 +999,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</icon_hover_bg_color>
-						<social_icon_bg_color translate="label">
+						<social_icon_bg_color translate="label comment">
 							<label>Social Icon Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -959,7 +1009,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</social_icon_bg_color>
-						<social_icon_hover_bg_color translate="label">
+						<social_icon_hover_bg_color translate="label comment">
 							<label>Social Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -970,7 +1020,7 @@
                             <show_in_store>1</show_in_store>
 						</social_icon_hover_bg_color>
 						
-						<heading_special_links translate="label">
+						<heading_special_links translate="label comment">
 							<label>Horizontal Links</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>400</sort_order>
@@ -979,7 +1029,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_special_links>
 						
-						<important_link_hover_color translate="label">
+						<important_link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -989,7 +1039,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</important_link_hover_color>
-						<important_link_hover_bg_color translate="label">
+						<important_link_hover_bg_color translate="label comment">
 							<label>Link Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1000,7 +1050,7 @@
                             <show_in_store>1</show_in_store>
 						</important_link_hover_bg_color>
 						
-						<heading_labels translate="label">
+						<heading_labels translate="label comment">
 							<label>Product Labels</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>500</sort_order>
@@ -1009,7 +1059,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_labels>
 						
-						<label_new_bg_color translate="label">
+						<label_new_bg_color translate="label comment">
 							<label>Label "New" Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1019,7 +1069,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_new_bg_color>
-						<label_new_color translate="label">
+						<label_new_color translate="label comment">
 							<label>Label "New" Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1029,7 +1079,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_new_color>
-						<label_sale_bg_color translate="label">
+						<label_sale_bg_color translate="label comment">
 							<label>Label "Sale" Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1039,7 +1089,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_sale_bg_color>
-						<label_sale_color translate="label">
+						<label_sale_color translate="label comment">
 							<label>Label "Sale" Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1050,7 +1100,7 @@
                             <show_in_store>1</show_in_store>
 						</label_sale_color>
 						
-						<heading_misc translate="label">
+						<heading_misc translate="label comment">
 							<label>Other</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>800</sort_order>
@@ -1059,7 +1109,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_misc>
 						
-						<price_color translate="label">
+						<price_color translate="label comment">
 							<label>Price Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1071,7 +1121,7 @@
 						</price_color>
 					</fields>
 				</colors>
-				<font translate="label">
+				<font translate="label comment">
                     <label>Font</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>10</sort_order>
@@ -1079,7 +1129,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<font_size translate="label">
+						<font_size translate="label comment">
                             <label>Basic Font Size</label>
 							<comment>Size of the regular text. Font size of most of the other elements will be calculated relative to this value.</comment>
                             <frontend_type>select</frontend_type>
@@ -1089,7 +1139,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </font_size>
-						<primary_font_family_group translate="label">
+						<primary_font_family_group translate="label comment">
                             <label>Headings Font Family</label>
 							<comment>Select predefined font stack, Google Fonts or type in your custom font stack.</comment>
                             <frontend_type>select</frontend_type>
@@ -1100,7 +1150,7 @@
                             <show_in_store>1</show_in_store>
                         </primary_font_family_group>
 						
-						<primary_font_family_custom translate="label">
+						<primary_font_family_custom translate="label comment">
                             <label>Custom</label>
 							<comment>
 								<![CDATA[Type in your custom font stack, e.g.:<br/>
@@ -1117,7 +1167,7 @@
 							</depends>
                         </primary_font_family_custom>
 						
-						<primary_font_family translate="label">
+						<primary_font_family translate="label comment">
                             <label>Headings Font Family - Google Fonts</label>
 							<comment>
 								<![CDATA[Font preview is available on <a href="http://www.google.com/webfonts">Google Web Fonts</a>]]>
@@ -1132,7 +1182,7 @@
 								<primary_font_family_group>google</primary_font_family_group>
 							</depends>
                         </primary_font_family>
-						<primary_char_latin_ext translate="label">
+						<primary_char_latin_ext translate="label comment">
                             <label>Character Set: Latin Extended</label>
 							<comment>
 								<![CDATA[Only selected fonts support extended character sets. For a complete list of available fonts and font subsets please refer to <a href="http://www.google.com/webfonts">Google Web Fonts</a>.]]>
@@ -1150,7 +1200,7 @@
 						
 					</fields>
 				</font>
-				<effects translate="label">
+				<effects translate="label comment">
                     <label>Effects</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>15</sort_order>
@@ -1158,7 +1208,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<shadow translate="label">
+						<shadow translate="label comment">
                             <label>Shadow</label>
 							<comment>
 								<![CDATA[If set to "Yes", all sections with nontransparent <strong>Inner Background Color</strong>, will drop shadow.]]>
@@ -1172,7 +1222,7 @@
                         </shadow>
 					</fields>
 				</effects>
-				<page translate="label">
+				<page translate="label comment">
                     <label>Page</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>20</sort_order>
@@ -1180,8 +1230,20 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
-							<label>Background Color</label>
+						<viewport_bg_color translate="label comment">
+							<label>Viewport Background Color</label>
+							<comment><![CDATA[Background color of the web browser viewport (applied for HTML <code>body</code> element). Set the same color as for footer background to avoid blank space below the footer on large screens.]]></comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</viewport_bg_color>
+						<bg_color translate="label comment">
+							<label>Page Background Color</label>
+							<comment>Background color applied for all sections of the page: header, main content area and footer</comment>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
@@ -1191,7 +1253,7 @@
                             <show_in_store>1</show_in_store>
 						</bg_color>
 						
-						<bg_image translate="label">
+						<bg_image translate="label comment">
 							<label>Background Image</label>
 							<frontend_type>image</frontend_type>
 							<backend_model>adminhtml/system_config_backend_image</backend_model>
@@ -1206,7 +1268,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_image>
-						<bg_repeat translate="label">
+						<bg_repeat translate="label comment">
 							<label>Background Repeat</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_css_background_repeat</source_model>
@@ -1215,7 +1277,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_repeat>
-						<bg_attachment translate="label">
+						<bg_attachment translate="label comment">
 							<label>Background Attachment</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_css_background_attachment</source_model>
@@ -1224,7 +1286,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_attachment>
-						<bg_positionx translate="label">
+						<bg_positionx translate="label comment">
 							<label>Background Position (x-axis)</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_css_background_positionx</source_model>
@@ -1233,7 +1295,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_positionx>
-						<bg_positiony translate="label">
+						<bg_positiony translate="label comment">
 							<label>Background Position (y-axis)</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_css_background_positiony</source_model>
@@ -1243,7 +1305,7 @@
                             <show_in_store>1</show_in_store>
 						</bg_positiony>
 						
-						<tex translate="label">
+						<tex translate="label comment">
 							<label>Pattern</label>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
@@ -1255,7 +1317,7 @@
 						</tex>
 					</fields>
 				</page>
-				<header translate="label">
+				<header translate="label comment">
                     <label>Header</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>30</sort_order>
@@ -1263,7 +1325,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<top_border_color translate="label">
+						<top_border_color translate="label comment">
 							<label>Top Border Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1273,7 +1335,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</top_border_color>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1283,7 +1345,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<tex translate="label">
+						<tex translate="label comment">
 							<label>Pattern</label>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
@@ -1293,7 +1355,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1304,7 +1366,7 @@
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1314,7 +1376,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1324,7 +1386,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1335,7 +1397,7 @@
                             <show_in_store>1</show_in_store>
 						</link_hover_color>
 						
-						<heading_search translate="label">
+						<heading_search translate="label comment">
 							<label>Search box</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>300</sort_order>
@@ -1344,7 +1406,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_search>
 						
-						<search_color translate="label">
+						<search_color translate="label comment">
 							<label>Search Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1354,7 +1416,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</search_color>
-						<search_hover_color translate="label">
+						<search_hover_color translate="label comment">
 							<label>Search Hover Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1364,7 +1426,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</search_hover_color>
-						<search_border_color translate="label">
+						<search_border_color translate="label comment">
 							<label>Search Border Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1374,7 +1436,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</search_border_color>
-						<search_border_hover_color translate="label">
+						<search_border_hover_color translate="label comment">
 							<label>Search Border Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1385,7 +1447,7 @@
                             <show_in_store>1</show_in_store>
 						</search_border_hover_color>
 						
-						<heading_dropdown translate="label">
+						<heading_dropdown translate="label comment">
 							<label>Drop-down boxes</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>800</sort_order>
@@ -1394,7 +1456,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_dropdown>
 						
-						<dropdown_bg_color translate="label">
+						<dropdown_bg_color translate="label comment">
 							<label>Drop-down Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1404,7 +1466,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_bg_color>
-						<dropdown_color translate="label">
+						<dropdown_color translate="label comment">
 							<label>Drop-down Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1414,7 +1476,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_color>
-						<dropdown_link_color translate="label">
+						<dropdown_link_color translate="label comment">
 							<label>Drop-down Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1424,7 +1486,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_link_color>
-						<dropdown_link_hover_color translate="label">
+						<dropdown_link_hover_color translate="label comment">
 							<label>Drop-down Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1436,7 +1498,7 @@
 						</dropdown_link_hover_color>
 					</fields>
 				</header>
-				<nav translate="label">
+				<nav translate="label comment">
                     <label>Main Menu</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>40</sort_order>
@@ -1444,7 +1506,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1454,7 +1516,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
-						<stretched translate="label">
+						<stretched translate="label comment">
 							<label>Stretched</label>
 							<comment>If set to "Yes", main menu will have the same width as the main content area.</comment>
                             <frontend_type>select</frontend_type>
@@ -1464,7 +1526,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</stretched>
-						<border translate="label">
+						<border translate="label comment">
 							<label>Show Bottom Border</label>
 							<comment>
 								<![CDATA[Border has the same color as <strong>Active Background Color</strong>.]]>
@@ -1476,7 +1538,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</border>
-						<font_size translate="label">
+						<font_size translate="label comment">
                             <label>Font Size</label>
 							<comment>Top-level items</comment>
                             <frontend_type>text</frontend_type>
@@ -1486,7 +1548,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </font_size>
-						<font_uppercase translate="label">
+						<font_uppercase translate="label comment">
                             <label>Uppercase</label>
 							<comment>Top-level items</comment>
                             <frontend_type>select</frontend_type>
@@ -1497,7 +1559,7 @@
                             <show_in_store>1</show_in_store>
                         </font_uppercase>
 						
-						<heading_menubar translate="label">
+						<heading_menubar translate="label comment">
 							<label>Colors</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -1506,7 +1568,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_menubar>
 						
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1516,7 +1578,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<color translate="label">
+						<color translate="label comment">
 							<label>Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1526,7 +1588,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<hover_bg_color translate="label">
+						<hover_bg_color translate="label comment">
 							<label>Hover Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1536,7 +1598,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</hover_bg_color>
-						<hover_color translate="label">
+						<hover_color translate="label comment">
 							<label>Hover Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1546,7 +1608,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</hover_color>
-						<active_bg_color translate="label">
+						<active_bg_color translate="label comment">
 							<label>Active Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1556,7 +1618,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</active_bg_color>
-						<active_color translate="label">
+						<active_color translate="label comment">
 							<label>Active Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1567,7 +1629,7 @@
                             <show_in_store>1</show_in_store>
 						</active_color>
 						
-						<heading_menuicons translate="label">
+						<heading_menuicons translate="label comment">
 							<label>Link Icons: drop-down arrows, open/close icons in mobile menu</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>300</sort_order>
@@ -1576,7 +1638,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_menuicons>
 						
-						<mobile_opener_color translate="label">
+						<mobile_opener_color translate="label comment">
 							<label>Link Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
@@ -1586,7 +1648,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</mobile_opener_color>
-						<mobile_opener_hover_color translate="label">
+						<mobile_opener_hover_color translate="label comment">
 							<label>Link Hover Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
@@ -1596,7 +1658,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</mobile_opener_hover_color>
-						<mobile_opener_current_color translate="label">
+						<mobile_opener_current_color translate="label comment">
 							<label>Link Active Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
@@ -1607,7 +1669,7 @@
                             <show_in_store>1</show_in_store>
 						</mobile_opener_current_color>
 						
-						<heading_menumobile translate="label">
+						<heading_menumobile translate="label comment">
 							<label>Mobile Menu</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>400</sort_order>
@@ -1616,7 +1678,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_menumobile>
 						
-						<mobile_link_separator_color translate="label">
+						<mobile_link_separator_color translate="label comment">
 							<label>Link Separator Color</label>
 							<comment>Vertical space between links in mobile version of the main menu. Leave empty to remove separator.</comment>
                             <frontend_type>text</frontend_type>
@@ -1628,7 +1690,7 @@
                             <show_in_store>1</show_in_store>
 						</mobile_link_separator_color>
 						
-						<heading_dropdown translate="label">
+						<heading_dropdown translate="label comment">
 							<label>Drop-down boxes</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>500</sort_order>
@@ -1637,7 +1699,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_dropdown>
 						
-						<dropdown_bg_color translate="label">
+						<dropdown_bg_color translate="label comment">
 							<label>Drop-down Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1647,7 +1709,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_bg_color>
-						<dropdown_color translate="label">
+						<dropdown_color translate="label comment">
 							<label>Drop-down Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1657,7 +1719,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_color>
-						<dropdown_link_color translate="label">
+						<dropdown_link_color translate="label comment">
 							<label>Drop-down Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1667,7 +1729,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_link_color>
-						<dropdown_link_hover_color translate="label">
+						<dropdown_link_hover_color translate="label comment">
 							<label>Drop-down Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1678,7 +1740,7 @@
                             <show_in_store>1</show_in_store>
 						</dropdown_link_hover_color>
 						
-						<heading_labels translate="label">
+						<heading_labels translate="label comment">
 							<label>Category Labels</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>600</sort_order>
@@ -1687,7 +1749,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_labels>
 						
-						<label_bg_color translate="label">
+						<label_bg_color translate="label comment">
 							<label>Label-1 Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1697,7 +1759,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_bg_color>
-						<label_color translate="label">
+						<label_color translate="label comment">
 							<label>Label-1 Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1707,7 +1769,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_color>
-						<label_bg_color2 translate="label">
+						<label_bg_color2 translate="label comment">
 							<label>Label-2 Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1717,7 +1779,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_bg_color2>
-						<label_color2 translate="label">
+						<label_color2 translate="label comment">
 							<label>Label-2 Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1727,7 +1789,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_color2>
-						<label_hover_bg_color translate="label">
+						<label_hover_bg_color translate="label comment">
 							<label>Label Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1737,7 +1799,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</label_hover_bg_color>
-						<label_hover_color translate="label">
+						<label_hover_color translate="label comment">
 							<label>Label Hover Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1749,7 +1811,7 @@
 						</label_hover_color>
 					</fields>
 				</nav>
-				<main translate="label">
+				<main translate="label comment">
                     <label>Main</label>
 					<comment>In this tab, you can configure the main section of the page (the section located
 between the header and the footer).</comment>
@@ -1759,7 +1821,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1769,7 +1831,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<tex translate="label">
+						<tex translate="label comment">
 							<label>Pattern</label>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
@@ -1779,7 +1841,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1791,7 +1853,7 @@ between the header and the footer).</comment>
 						</inner_bg_color>
 					</fields>
 				</main>
-				<product_page translate="label">
+				<product_page translate="label comment">
                     <label>Product Page</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>60</sort_order>
@@ -1799,7 +1861,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<heading_icons translate="label">
+						<heading_icons translate="label comment">
 							<label>Add-to... Icons</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
@@ -1808,7 +1870,7 @@ between the header and the footer).</comment>
 							<show_in_store>1</show_in_store>
 						</heading_icons>
 						
-						<addto_icon_bg_color translate="label">
+						<addto_icon_bg_color translate="label comment">
 							<label>Add-to Icon Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1818,7 +1880,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</addto_icon_bg_color>
-						<addto_icon_hover_bg_color translate="label">
+						<addto_icon_hover_bg_color translate="label comment">
 							<label>Add-to Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1829,7 +1891,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</addto_icon_hover_bg_color>
 						
-						<heading_tabs translate="label">
+						<heading_tabs translate="label comment">
 							<label>Tabs</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
@@ -1838,7 +1900,7 @@ between the header and the footer).</comment>
 							<show_in_store>1</show_in_store>
 						</heading_tabs>
 						
-						<tab_inner_bg_color translate="label">
+						<tab_inner_bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1848,7 +1910,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_inner_bg_color>
-						<tab_bg_color translate="label">
+						<tab_bg_color translate="label comment">
 							<label>Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1858,7 +1920,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_bg_color>
-						<tab_color translate="label">
+						<tab_color translate="label comment">
 							<label>Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1868,7 +1930,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_color>
-						<tab_hover_bg_color translate="label">
+						<tab_hover_bg_color translate="label comment">
 							<label>Hover Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1878,7 +1940,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_hover_bg_color>
-						<tab_hover_color translate="label">
+						<tab_hover_color translate="label comment">
 							<label>Hover Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1888,7 +1950,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_hover_color>
-						<tab_active_bg_color translate="label">
+						<tab_active_bg_color translate="label comment">
 							<label>Active Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1898,7 +1960,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_active_bg_color>
-						<tab_active_color translate="label">
+						<tab_active_color translate="label comment">
 							<label>Active Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1908,7 +1970,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_active_color>
-						<tab_panel_bg_color translate="label">
+						<tab_panel_bg_color translate="label comment">
 							<label>Panel Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1919,7 +1981,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</tab_panel_bg_color>
 						
-						<heading_accordion translate="label">
+						<heading_accordion translate="label comment">
 							<label>Accordion Tabs</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>300</sort_order>
@@ -1928,7 +1990,7 @@ between the header and the footer).</comment>
 							<show_in_store>1</show_in_store>
 						</heading_accordion>
 						
-						<acco_active_bg_color translate="label">
+						<acco_active_bg_color translate="label comment">
 							<label>Accordion Active Item Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1938,7 +2000,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</acco_active_bg_color>
-						<acco_active_color translate="label">
+						<acco_active_color translate="label comment">
 							<label>Accordion Active Item Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1950,7 +2012,7 @@ between the header and the footer).</comment>
 						</acco_active_color>
 					</fields>
 				</product_page>
-				<footer translate="label">
+				<footer translate="label comment">
                     <label>Footer</label>
 					<comment>In this tab, you can configure the entire footer of the page. Settings from this tab are inherited by all the other sub-sections of the footer. Some of the settings can be overridden in sub-sections.</comment>
                     <frontend_type>text</frontend_type>
@@ -1959,7 +2021,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1969,7 +2031,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<tex translate="label">
+						<tex translate="label comment">
 							<label>Pattern</label>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
@@ -1979,7 +2041,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1990,7 +2052,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2000,7 +2062,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2010,7 +2072,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2021,7 +2083,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</link_hover_color>
 						
-						<button_bg_color translate="label">
+						<button_bg_color translate="label comment">
 							<label>Button Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2031,7 +2093,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_bg_color>
-						<button_color translate="label">
+						<button_color translate="label comment">
 							<label>Button Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2041,7 +2103,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_color>
-						<button_hover_bg_color translate="label">
+						<button_hover_bg_color translate="label comment">
 							<label>Button Hover Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2051,7 +2113,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</button_hover_bg_color>
-						<button_hover_color translate="label">
+						<button_hover_color translate="label comment">
 							<label>Button Hover Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2063,7 +2125,7 @@ between the header and the footer).</comment>
 						</button_hover_color>
 					</fields>
 				</footer>
-				<footer_top translate="label">
+				<footer_top translate="label comment">
                     <label>Footer - Top</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>510</sort_order>
@@ -2071,7 +2133,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2081,7 +2143,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2092,7 +2154,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2102,7 +2164,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2112,7 +2174,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2124,7 +2186,7 @@ between the header and the footer).</comment>
 						</link_hover_color>
 					</fields>
 				</footer_top>
-				<footer_primary translate="label">
+				<footer_primary translate="label comment">
                     <label>Footer - Primary</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>520</sort_order>
@@ -2132,7 +2194,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2142,7 +2204,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2153,7 +2215,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2163,7 +2225,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2173,7 +2235,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2184,7 +2246,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</link_hover_color>
 						
-						<padding_top translate="label">
+						<padding_top translate="label comment">
                             <label>Top Padding</label>
 							<comment>Specify additional gap above this section of the footer. Value in pixels.</comment>
                             <frontend_type>text</frontend_type>
@@ -2194,7 +2256,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </padding_top>
-						<padding_bottom translate="label">
+						<padding_bottom translate="label comment">
                             <label>Bottom Padding</label>
 							<comment>Specify additional gap below this section of the footer. Value in pixels.</comment>
                             <frontend_type>text</frontend_type>
@@ -2206,7 +2268,7 @@ between the header and the footer).</comment>
                         </padding_bottom>
 					</fields>
 				</footer_primary>
-				<footer_bottom translate="label">
+				<footer_bottom translate="label comment">
                     <label>Footer - Bottom</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>530</sort_order>
@@ -2214,7 +2276,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label">
+						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2224,7 +2286,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
-						<inner_bg_color translate="label">
+						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2235,7 +2297,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label">
+						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2245,7 +2307,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label">
+						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2255,7 +2317,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label">
+						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -2269,7 +2331,7 @@ between the header and the footer).</comment>
 				</footer_bottom>
 			</groups>
 		</wsu_themecontrol_design>
-		<wsu_themecontrol_layout translate="label" module="wsu_themecontrol">
+		<wsu_themecontrol_layout translate="label comment" module="wsu_themecontrol">
 			<label>Theme Layout</label>
 			<tab>wsu_themecontrol</tab>
 			<frontend_type>text</frontend_type>
@@ -2278,7 +2340,7 @@ between the header and the footer).</comment>
 			<show_in_website>1</show_in_website>
 			<show_in_store>1</show_in_store>
             <groups>
-				<responsive translate="label">
+				<responsive translate="label comment">
                     <label>Responsive Layout</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>10</sort_order>
@@ -2286,7 +2348,7 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<responsive translate="label">
+						<responsive translate="label comment">
                             <label>Responsive Layout</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
@@ -2295,7 +2357,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </responsive>
-						<max_width translate="label">
+						<max_width translate="label comment">
 							<label>Maximum Page Width</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_layout_screen_width_widecustom</source_model>
@@ -2304,7 +2366,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</max_width>
-						<max_width_custom translate="label">
+						<max_width_custom translate="label comment">
                             <label>Custom Maximum Page Width (px)</label>
 							<comment>Specify value in pixels, do not add "px" suffix.</comment>
                             <frontend_type>text</frontend_type>
@@ -2317,7 +2379,7 @@ between the header and the footer).</comment>
 								<max_width>custom</max_width>
 							</depends>
                         </max_width_custom>
-						<fluid_width translate="label">
+						<fluid_width translate="label comment">
                             <label>Fluid Width</label>
                             <frontend_type>select</frontend_type>
                             <source_model>wsu_wsu/system_config_source_layout_screen_response_type</source_model>
