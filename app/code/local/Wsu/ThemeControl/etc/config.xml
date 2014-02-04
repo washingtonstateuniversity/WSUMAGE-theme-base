@@ -334,6 +334,7 @@
 			</footer_bottom>
 			<spine>
 				<spine_color>dark</spine_color>
+				<spine_tool_bar_color>dark</spine_tool_bar_color>
 			</spine>
 		</wsu_themecontrol_design>
 		<!-- Layout settings -->

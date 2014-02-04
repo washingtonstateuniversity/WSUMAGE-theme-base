@@ -6,6 +6,13 @@ $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
 $random = array('n1','n2','n3','n4');
+$storeId = $store->getStoreId();
+$storeCode = $store->getCode();
+$theme = $this->helper('wsu_themecontrol');
+$binderClassStr = $theme->getBinderClassStr($storeCode);
+$binderStyleStr =  $theme->getBinderStyleStr($storeCode);
+$bodyClasses = $this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
