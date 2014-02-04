@@ -164,6 +164,13 @@
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
 		</reference>
+		<reference name="left">
+			<!-- Keep layered navigation always on top. Replace: after="currency" with: before="-" -->
+			<!--<action method="unsetChild"><name>catalogsearch.leftnav</name></action>
+			<block type="catalogsearch/layer" name="catalogsearch.leftnav" before="-" template="catalog/layer/view.phtml"/>-->
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>
+		</reference>
 	</catalogsearch_result_index>
 
 
