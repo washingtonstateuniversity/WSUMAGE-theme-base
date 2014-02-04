@@ -172,7 +172,13 @@
 			<action method="unsetChild"><name>currency</name></action>
 		</reference>
 	</catalogsearch_result_index>
-
+	<!-- Advanced search -->
+	<catalogsearch_advanced_index>
+		<!-- Remove (right) currency switcher from sidebar -->
+		<reference name="left">
+			<action method="unsetChild"><name>right_currency</name></action>
+		</reference>
+	</catalogsearch_advanced_index>
 
 	
 </layout>
