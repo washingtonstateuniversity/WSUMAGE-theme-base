@@ -72,7 +72,7 @@
 		</reference>
 	</customer_account>
 	
-	<!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_page>
 		<!-- Custom static blocks -->
 		<!-- IMPORTANT: These blocks are removed from home page and 404 no route page -->
@@ -157,6 +157,15 @@
             </block>
 		</reference>
 	</catalog_category_layered>
+
+<!-- SEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Quick search -->
+	<catalogsearch_result_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+	</catalogsearch_result_index>
+
 
 	
 </layout>
