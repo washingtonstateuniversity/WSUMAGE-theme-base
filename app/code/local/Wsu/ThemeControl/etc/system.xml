@@ -172,7 +172,8 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</heading_columns>
-                        <column_count translate="label comment">
+
+						<column_count translate="label comment">
 							<label>Number of Columns</label>
 							<comment><![CDATA[Number of products displayed in a single row, if the value of <strong>Maximum Page Width</strong> is set to 1024 px.<br/><strong style="color:red;">Important:</strong> if the value of <strong>Maximum Page Width</strong> is bigger, the number of columns will be automatically increased to show more products in a row. For example: if the <strong>Number of Columns</strong> = 3 and the <strong>Maximum Page Width</strong> = 1280 px, then 4 products in a row will be displayed.]]></comment>
 							<frontend_type>select</frontend_type>
@@ -182,76 +183,186 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</column_count>
+						<column_count_768 translate="label comment">
+							<label>Number of Columns Below 768px</label>
+							<comment><![CDATA[Number of columns displayed if browser viewport width is between 640 px and 768 px.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_columncountmobile</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</column_count_768>
+						<column_count_640 translate="label comment">
+							<label>Number of Columns Below 640px</label>
+							<comment><![CDATA[Number of columns displayed if browser viewport width is between 480px and 640 px.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_columncountmobile</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</column_count_640>
+						<column_count_480 translate="label comment">
+							<label>Number of Columns Below 480px</label>
+							<comment><![CDATA[Number of columns displayed if browser viewport width is between 320 px and 480 px. Below that width products are displayed in a single column.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_columncountmobile</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</column_count_480>
+
+						<heading_display_effects translate="label comment">
+							<label>Product Grid Display</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_display_effects>
+
 						<equal_height translate="label comment">
 							<label>Equal Height of Grid Items (Products)</label>
 							<comment>If enabled, all grid items have the same height and "Add to cart" button is displayed at the bottom edge of the item.</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</equal_height>
 						<hover_effect translate="label comment">
 							<label>Product Hover Effect</label>
-							<comment>
-								<![CDATA[Effect is visible on mouse hover over the product. <strong style="color:red;">Important:</strong> enable in order to use "Display On Hover" in <strong>Display Selected Elements</strong>.]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
-                            <sort_order>30</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<comment><![CDATA[Emphasize the product on mouse hover over the product.<br/><strong style="color:red;">Important:</strong> enable in order to use "Display On Hover" in <strong>Display Selected Elements</strong>. Otherwise displaying elements on mouse hover over the product will not work properly.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</hover_effect>
+						<disable_hover_effect translate="label comment">
+							<label>Disable Hover Effect Below...</label>
+							<comment><![CDATA[<strong>Product Hover Effect</strong> will be disabled if width of the browser viewport is below selected value.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_hovereffect_below</source_model>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<hover_effect>1</hover_effect>
+							</depends>
+						</disable_hover_effect>
+						<hide_addto_links translate="label comment">
+							<label>Hide "Add to" Links Below...</label>
+							<comment><![CDATA["Add to wishlist" and "Add to compare" links will be hidden if width of the browser viewport is below selected value.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_hovereffect_below</source_model>
+							<sort_order>240</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</hide_addto_links>
+						<centered translate="label comment">
+							<label>Align Center</label>
+							<comment>Align center elements of the grid item: product name, price, button etc.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>250</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</centered>
+
+						<elements_size translate="label comment">
+							<label>Size of Elements</label>
+							<comment><![CDATA[Control size of the elements of the grid item: product name, button, product labels. If "Default" is selected, size of the elements will be automatically decreased if width of the browser viewport is below 768px.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_category_grid_size</source_model>
+							<sort_order>260</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</elements_size>
 						
 						<heading_display translate="label comment">
 							<label>Display Selected Elements</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
-							<sort_order>100</sort_order>
+							<sort_order>300</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</heading_display>
-						
+
+						<display_name translate="label comment">
+							<label>Name</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</display_name>
+						<display_name_single_line translate="label comment">
+							<label>Display Name in Single Line</label>
+							<comment><![CDATA[If set to "Yes": if product name is too long to be displayed in a single line, it will be clipped and an ellipsis ('…', U+2026 HORIZONTAL ELLIPSIS) will be appended at the end of the line to represent clipped text. This will only take effect if the field <strong>Name</strong> is set to "Display".]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</display_name_single_line>
+						<display_price translate="label comment">
+							<label>Price</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</display_price>
 						<display_rating translate="label comment">
 							<label>Ratings</label>
-                            <frontend_type>select</frontend_type>
+							<frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
-                            <sort_order>110</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>340</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</display_rating>
 						<display_addtocart translate="label comment">
 							<label>Add To Cart</label>
-                            <frontend_type>select</frontend_type>
+							<frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
-                            <sort_order>120</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>350</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</display_addtocart>
 						<display_addtolinks translate="label comment">
 							<label>"Add to" Links</label>
 							<comment>"Add to wishlist" and "Add to compare" links.</comment>
-                            <frontend_type>select</frontend_type>
+							<frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_layout_element_displayonhover</source_model>
-                            <sort_order>130</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>360</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</display_addtolinks>
 						<addtolinks_simple translate="label comment">
-                            <label>Show "Add to" Links as Icons Above the Image</label>
-							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links.</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>140</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </addtolinks_simple>
+							<label>Show "Add to" Links as Icons Above the Image</label>
+							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links. Otherwise, links will be displayed as simple icons above the product image.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>370</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</addtolinks_simple>
 					</fields>
 				</category_grid>
 				<category_list translate="label comment">
