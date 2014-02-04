@@ -12,7 +12,7 @@
  $mainInnerBgColor		= $theme->getCfgDesign('main/inner_bg_color');
  
  $spineColor = $theme->getCfgDesign('spine/spine_color');
- $spineBleed="bleed";
+ $spineBleed = $theme->getCfgDesign('spine/spine_bleed')?"bleed":"";
  $spineClasses = implode(' ',array($spineColor,$spineBleed));
  $socialChannels = array(
 					'facebook'=>array('url'=>'http://facebook.com/wsupullman','text'=>'Facebook'),
