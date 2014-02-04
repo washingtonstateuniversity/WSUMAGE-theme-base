@@ -114,7 +114,16 @@
 	<catalog_category_default>
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
-		</reference>	
+		</reference>
+		<reference name="product_list">
+			<!-- HOWTO: Change review summary template
+			<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action> -->
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+                <action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+            </block>
+
+		</reference>
 		<!-- Remove currency switcher from sidebar -->
 		<reference name="left">
 			<action method="unsetChild"><name>currency</name></action>
