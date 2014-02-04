@@ -98,5 +98,14 @@
 		<remove name="block_right_top"/>
 		<remove name="block_right_bottom"/>
 	</cms_index_defaultnoroute>
+	<cms_index_index>
+		<remove name="i_block_cms_page_top"/>
+		<!-- Uncomment to allow MAP functionality on home page -->
+		<!--<update handle="MAP_popup" />-->
+    </cms_index_index>
+	
+	
+	
+	
 	
 </layout>
