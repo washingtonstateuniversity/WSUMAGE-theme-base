@@ -135,7 +135,9 @@
 		</reference>
 	</catalog_category_default>
 
-
+	<!-- Category with layered navigation -->
+	<catalog_category_layered>
+	</catalog_category_layered>
 
 	
 </layout>
