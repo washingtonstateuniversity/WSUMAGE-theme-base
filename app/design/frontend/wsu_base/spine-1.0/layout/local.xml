@@ -67,6 +67,8 @@
 		<reference name="left">
 			<!-- Remove cart from the left column -->
 			<action method="unsetChild"><name>cart_sidebar</name></action>
+			<!-- Remove Compare block, it is already inserted in DEFAULT section -->
+			<action method="unsetChild"><name>catalog.compare.sidebar</name></action>
 		</reference>
 	</customer_account>
 	
