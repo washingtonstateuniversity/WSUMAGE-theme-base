@@ -1180,8 +1180,20 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+						<viewport_bg_color translate="label">
+							<label>Viewport Background Color</label>
+							<comment><![CDATA[Background color of the web browser viewport (applied for HTML <code>body</code> element). Set the same color as for footer background to avoid blank space below the footer on large screens.]]></comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</viewport_bg_color>
 						<bg_color translate="label">
-							<label>Background Color</label>
+							<label>Page Background Color</label>
+							<comment>Background color applied for all sections of the page: header, main content area and footer</comment>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
