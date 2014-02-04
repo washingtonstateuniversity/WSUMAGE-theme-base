@@ -140,6 +140,10 @@
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
 		</reference>
+		<reference name="left">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>			
+		</reference>
 	</catalog_category_layered>
 
 	
