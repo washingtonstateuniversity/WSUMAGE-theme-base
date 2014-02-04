@@ -72,7 +72,19 @@
 		</reference>
 	</customer_account>
 	
-	
+	<!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<cms_page>
+		<!-- Custom static blocks -->
+		<!-- IMPORTANT: These blocks are removed from home page and 404 no route page -->
+        <reference name="content">
+			<block type="page/html_wrapper" name="i_block_cms_page_top" before="-">
+				<action method="setElementClass"><value>block_cms_page_top std</value></action>
+				<block type="cms/block" name="block_cms_page_top">
+					<action method="setBlockId"><block_id>block_cms_page_top</block_id></action>
+				</block>
+			</block>
+		</reference>
+	</cms_page>	
 	
 	
 </layout>
