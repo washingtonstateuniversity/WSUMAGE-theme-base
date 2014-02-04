@@ -114,6 +114,10 @@
 	<catalog_category_default>
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>	
+		<!-- Remove currency switcher from sidebar -->
+		<reference name="left">
+			<action method="unsetChild"><name>currency</name></action>
 		</reference>
 	</catalog_category_default>
 
