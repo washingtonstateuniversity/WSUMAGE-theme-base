@@ -5,7 +5,13 @@
  
  $store = Mage::app()->getStore();
  $name = $store->getFrontendName();
- $spineColor = "dark";
+ 
+ $theme = $this->helper('wsu_themecontrol');	
+ $headerInnerBgColor	= $theme->getCfgDesign('header/inner_bg_color');
+ $navStretched			= $theme->getCfgDesign('nav/stretched');
+ $mainInnerBgColor		= $theme->getCfgDesign('main/inner_bg_color');
+ 
+ $spineColor = $theme->getCfgDesign('spine/spine_color');
  $spineBleed="bleed";
  $spineClasses = implode(' ',array($spineColor,$spineBleed));
  $socialChannels = array(

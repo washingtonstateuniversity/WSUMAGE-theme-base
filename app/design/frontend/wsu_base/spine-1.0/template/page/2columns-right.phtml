@@ -6,10 +6,14 @@ $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
 $random = array('n1','n2','n3','n4');
+$storeId = $store->getStoreId();
 $storeCode = $store->getCode();
-$binderClassStr = $this->helper('wsu_themecontrol')->getBinderClassStr($storeCode);
-$binderStyleStr =  $this->helper('wsu_themecontrol')->getBinderStyleStr($storeCode);
-$bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$theme = $this->helper('wsu_themecontrol');
+$binderClassStr = $theme->getBinderClassStr($storeCode);
+$binderStyleStr =  $theme->getBinderStyleStr($storeCode);
+$bodyClasses = $this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
@@ -27,7 +31,7 @@ $bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->ge
             <main id="page" role="main">
                 <section class="row" id="siteID">
                     <div style="float:right;">
-                        <div class="quick-access" style="font-size:12px; font-weight:bold;">
+                        <div class="quick-access <?=$spine_tool_bar_color; ?>" style="font-size:12px; font-weight:bold;">
                             <?php echo $this->getChildHtml('topLinks') ?>
                         </div>
                     </div>
@@ -51,7 +55,7 @@ $bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->ge
                         </article>
                     </div><!--/column-->
                     <div class="column two-twelfths ">
-                        <aside>
+                        <aside id="sidebar_area">
                             <section>
                             	<?php echo $this->getChildHtml('right'); ?>
                             </section>

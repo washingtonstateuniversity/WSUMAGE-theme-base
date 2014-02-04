@@ -28,10 +28,16 @@
 /**
  * @deprecated after 1.4.0.1
  */
+ 
 ?>
 <?php if($toplinks && is_array($toplinks)): ?>
+<?php 
+
+
+ var_dump($spine_tool_bar_color);die();
+?>
 <div style="float:right;">
-	<div class="quick-access" style="font-size:12px; font-weight:bold;">
+	<div class="quick-access <?php echo $spine_tool_bar_color; ?>" style="font-size:12px; font-weight:bold;">
         <ul class="links">
             <?php echo $this->getChildHtml() ?>
             <?php foreach($toplinks as $_toplink): ?>
