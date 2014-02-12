@@ -74,12 +74,12 @@ $totalProducts	= $panlesPer * $productsPer;
 						}
 						if($productsPer>0 && $j>($productsPer-1) && $j%$productsPer==0 && $j!=count($randCollection)-1){ 
 							$content.=" </div>";
-							$content.="<div class='slidepanle item' style='display: none; opacity: 0; '>";
+							$content.="<div class='slidepanle item row' style='display: none; opacity: 0; '>";
 						}	
 
 						$_proId =  $product->getId();
 						$_product= $product; 
-						$content .= "<div style='width:47%;display:inline-block;padding:0px 1%; ".(($j%2 > 0)?"border-left: 1px solid #666;":"")." '><a href='" . $_product->getProductUrl() . "'  style='display:inline-block;float:left;'><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize(95, 95) ."' alt='' width='95' border='0' /></a> <p style='padding:5px;margin-left: 95px'><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p></div>";
+						$content .= "<div class='column six-twelfths' style='width:47%;display:inline-block;padding:0px 1%; ".(($j%2 > 0)?"border-left: 1px solid #666;":"")." '><a href='" . $_product->getProductUrl() . "'  style='display:inline-block;float:left;'><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize(95, 95) ."' alt='' width='95' border='0' /></a> <p style='padding:5px;margin-left: 95px'><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p></div>";
 						
 						if($j==count($randCollection)-1){ 
 							$content.=" </div>";
