@@ -66,8 +66,8 @@
                 </section>
             </section>
         </section><!--/#wsu-actions-->
-        <nav id="navigation">
-            <nav id="site" class="<?=(!empty($homelink)?'':'homeless')?>">
+        <nav id="spine-navigation">
+            <nav id="spine-sitenav" class="<?=(!empty($homelink)?'':'homeless')?>">
                 <!-- Your navigation list here
                     • Active link should be denoted with an "active" or "current" link on the link's parent li tag.
                     • First link should be home link (otherwise, add "homeless" class to #site nav)
@@ -82,7 +82,7 @@
                     <?php endif ?>
                 </ul>
             </nav>
-            <nav id="offsite">
+            <nav id="spine-offsitenav">
                 <ul>
                 
                 <?php 
@@ -131,18 +131,18 @@
         </nav><!-- #navigation -->
         <!-- Social and Global Links -->
         <footer>
-            <nav id="social">
+            <nav id="wsu-social-channels">
                 <ul>
 				<?php
                     foreach($socialChannels as $channel=>$prop) {
 					?>
-						<li id="<?=$channel?>"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
+						<li class="<?=$channel?>-channel"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
 					<?php
                     }
                 ?>
                 </ul>
             </nav>
-            <nav id="global">
+            <nav id="wsu-global-links">
                 <ul>
 				<?php
                     foreach($wsuChannels as $channel=>$prop) {
@@ -153,7 +153,7 @@
                 ?>
                 </ul>
             </nav>        
-            <!-- <small id="copyright"><a href="http://copyright.wsu.edu">&copy; Washington State University</a></small> -->
+            <!-- <small class="copyright-link"><a href="http://copyright.wsu.edu">&copy; Washington State University</a></small> -->
         </footer>
     </div><!--/glue-->
 </div><!--/spine-->
