@@ -11,7 +11,7 @@ $storeCode = $store->getCode();
 $theme = $this->helper('wsu_themecontrol');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
-$bodyClasses = $this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
 ?>
