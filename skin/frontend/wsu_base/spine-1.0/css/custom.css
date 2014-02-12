@@ -22,7 +22,7 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
     background-position: left center;
 	background-repeat: no-repeat;
 }
-
+.quick-access.lighter .links a{color:#444 !important;}
 
 #siteID article { padding-left:15px;}
 
