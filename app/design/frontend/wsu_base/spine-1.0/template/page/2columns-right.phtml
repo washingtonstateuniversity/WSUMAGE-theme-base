@@ -11,7 +11,7 @@ $storeCode = $store->getCode();
 $theme = $this->helper('wsu_themecontrol');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
-$bodyClasses = $this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
 ?>
@@ -35,15 +35,15 @@ $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
                             <?php echo $this->getChildHtml('topLinks') ?>
                         </div>
                     </div>
+                    <article>
+                        <h2>WSU Marketplace</h2>
+                        <h1><?=$name?></h1>
+                        <?php echo $this->getChildHtml('breadcrumbs') ?> 
+                    </article>
                 </section>
                 <!-- Responsive Sections -->
                 <section class="row">
                     <div class="column ten-twelfths">
-                        <article>
-                            <h2>WSU Marketplace</h2>
-                            <h1><?=$name?></h1>
-                            <?php echo $this->getChildHtml('breadcrumbs') ?> 
-                        </article>
                         <article>
                         	<?php echo $this->getChildHtml('after_body_start') ?>
                             <div id="main">

@@ -1,5 +1,5 @@
 /* CSS Document */
-
+body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repeat-x center top !important; }
 .quick-access .links a {
 	text-decoration:none;
 }
@@ -22,9 +22,23 @@
     background-position: left center;
 	background-repeat: no-repeat;
 }
+.quick-access.lighter .links a{color:#444 !important;}
+
+#siteID article { padding-left:15px;}
 
 
 .category-football.n0 #jacket{background: transparent url(/media/store-media/eventstore/band1.jpg) right top no-repeat;}
 .category-football.n1 #jacket{background: transparent url(/media/store-media/eventstore/btc-surfing.jpg) right top no-repeat;}
 .category-football.n2 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
 .category-football.n3 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
+
+
+
+.studentstore5 .main-ad-block{background:transparent url(/media/store-media/studentstore/student_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
+
+
+.studentstore5 .main-ad-block .seven-twelfths img{padding:10px}
+.studentstore5 .main-ad-block .home-spot img{display:none;}
+
+
+

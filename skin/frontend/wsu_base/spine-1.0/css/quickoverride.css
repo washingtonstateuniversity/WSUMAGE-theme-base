@@ -10,7 +10,7 @@ ul{padding:0;
 	margin:0;}
 
 
-/* twelfths */
+/* twelfths
 .twelfths > .column { width: 8.33%; } .twelfths > .column:nth-of-type(odd) { width: 8.34%; } .fixed .twelfths > .column { width: 66px; }
 .row .column.one-twelfth { width: 8.33% } .fixed .one-twelfth { width: 66px; }
 .two-twelfths { width: 16.66% } .fixed .two-twelfths { width: 132px; }
@@ -24,7 +24,9 @@ ul{padding:0;
 .ten-twelfths { width: 83.33% } .fixed .ten-twelfths { width: 660px; }
 .row .column.eleven-twelfths { width: 91.66% } .fixed .eleven-twelfths { width: 726px; }
 .row .column.twelve-twelfths { width: 100% } .fixed .twelve-twelfths { width: 792px; }
-
+ */
+.seven-twelfths.squared { width: 58.33% } .hybrid .seven-twelfths.squared, .fixed .seven-twelfths.squared { width: 462px; }
+.seven-twelfths { width: 58.33% } .hybrid .seven-twelfths, .fixed .seven-twelfths { width: 462px; }
 
 
 #wrapper #nav .tags-list a{display:inline;}
