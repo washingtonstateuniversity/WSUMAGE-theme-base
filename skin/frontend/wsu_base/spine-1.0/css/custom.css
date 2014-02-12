@@ -37,8 +37,7 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
 .studentstore5 .main-ad-block{background:transparent url(/media/store-media/studentstore/student_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
 
 
-.studentstore5 .main-ad-block .seven-twelfths img{padding:10px}
+.studentstore5 .main-ad-block .seven-twelfths img{margin:2%;max-width:96%;}
 .studentstore5 .main-ad-block .home-spot img{display:none;}
 
-
-
+.techstore6 .main-ad-block{background:transparent url(/media/store-media/techstore/tech_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
