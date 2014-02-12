@@ -136,7 +136,7 @@
 				<?php
                     foreach($socialChannels as $channel=>$prop) {
 					?>
-						<li id="<?=$channel?>"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
+						<li class="<?=$channel?>-channel"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
 					<?php
                     }
                 ?>
