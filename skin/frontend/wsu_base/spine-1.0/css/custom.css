@@ -33,10 +33,12 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
 .category-football.n3 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
 
 .siteslist{}
-.siteslist li{height:140px;}
+.siteslist li{}
+.siteslist .cycle-slideshow{height:100px;}
 .siteblock{padding:0px 5px;}
 .siteslist .cycle-slideshow{border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;font-size: 11px;padding: 8px 10px 8px 8px;}
-
+.slidepanle img{display:inline-block;float:left;}
+.slidepanle p{padding:5px;margin-left: 95px;}
 .studentstore5 .main-ad-block{background:transparent url(/media/store-media/studentstore/student_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
 
 
