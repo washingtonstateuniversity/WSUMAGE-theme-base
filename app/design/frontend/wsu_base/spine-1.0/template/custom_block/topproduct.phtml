@@ -4,7 +4,8 @@
 	$imgh	= (int)$this->getData('imgh');
 	$imgw	= (int)$this->getData('imgw');
 	
-	$storeId=Mage::app()->getStore()->getStoreId();
+	$store=Mage::app()->getStore();
+	$storeId=$store->getStoreId();
 	$collection = Mage::getResourceModel('reports/product_collection');
 	$collection->addStoreFilter($storeId);
 	$total_products_in_store = $collection->getSize();	
