@@ -70,10 +70,10 @@ $totalProducts	= $panlesPer * $productsPer;
 					}
 					foreach($randCollection as $product){
 						if($j==0){ 
-							$content.="<div class='slidepanle item'>";
+							$content.="<div class='slidepanle item'><div class='row'>";
 						}
 						if($productsPer>0 && $j>($productsPer-1) && $j%$productsPer==0 && $j!=count($randCollection)-1){ 
-							$content.="</div> </div>";
+							$content.="</div></div>";
 							$content.="<div class='slidepanle item ' style='display: none; opacity: 0; '><div class='row'>";
 						}	
 
@@ -93,7 +93,7 @@ $totalProducts	= $panlesPer * $productsPer;
 					
 					echo "<li>
 						<h2>".$name." Featured Products</h2>
-						<div style='".$style."'>
+						<div style='".$style." clear:both;'>
 							<div style='border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;font-size: 11px;padding: 8px 10px 8px 8px;'  class='cycle-slideshow'
         data-cycle-fx='fadeout'
         data-cycle-pause-on-hover=true
