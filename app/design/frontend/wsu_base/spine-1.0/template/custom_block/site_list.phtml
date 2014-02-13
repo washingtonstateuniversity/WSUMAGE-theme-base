@@ -1,4 +1,4 @@
-<ul class="sitelist">
+<ul class="siteslist">
 	<?php
 
 $storesPer		= (int)$this->getData('stores_per');
@@ -87,22 +87,18 @@ $totalProducts	= $panlesPer * $productsPer;
 						$j++;
 					}
 					
-					$style = "background: url(../../modern/images/best_selling_tr_".(( $i%2 > 0 )?"odd":"even")."_bg.gif) repeat-x scroll 0 100% #EEEEEE;padding:0px 5px;";
+					$style = "";
 					
 					
 					
 					echo "<li>
 						<h2>".$name." Featured Products</h2>
-						<div style='".$style." clear:both;'>
-							<div style='border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;font-size: 11px;padding: 8px 10px 8px 8px;'  class='cycle-slideshow'
-        data-cycle-fx='fadeout'
-        data-cycle-pause-on-hover=true
-        data-cycle-slides='> div'>
+						<div class='siteblock ".(( $i%2 > 0 )?"odd":"even")."'>
+							<div class='cycle-slideshow' data-cycle-fx='fadeout' data-cycle-pause-on-hover=true  data-cycle-slides='> div'>
 							".$content."
 							</div>
 							<div class='progress' style='height:5px; background-color:#868686;'></div>
 						</div>
-						
 					</li>";
 					
 				}
