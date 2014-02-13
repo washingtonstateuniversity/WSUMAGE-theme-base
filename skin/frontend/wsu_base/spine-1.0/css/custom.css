@@ -45,8 +45,18 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
 .studentstore5 .main-ad-block .seven-twelfths img{margin:2%;max-width:96%;}
 .studentstore5 .main-ad-block .home-spot img{display:none;}
 
+
+
+
 .techstore6 .main-ad-block{background:transparent url(/media/store-media/techstore/tech_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
-.techstore6 .main-ad-block .product_feature{background:transparent url(/media/store-media/default/nav-link-background.png) right top repeat;}
+.techstore6 .main-ad-block .product_feature{background:transparent url(/media/store-media/default/nav-link-background-crimson.png) right top repeat;}
 .techstore6 .main-ad-block .product_feature:hover{background:transparent url(/media/store-media/default/nav-link-background-hover.png) right top repeat;}
-.techstore6 .main-ad-block .product_feature{margin:3%;max-width:94%;}
+.techstore6 .main-ad-block .product_feature a{color:#ECECEC; font-weight:bold;}
+.techstore6 .main-ad-block img[src*="placeholder"]{max-height:220px;}
+.techstore6 .main-ad-block .product_feature {
+    padding: 1%;
+    max-width: 31%;
+    margin: 1%;
+}
+
 

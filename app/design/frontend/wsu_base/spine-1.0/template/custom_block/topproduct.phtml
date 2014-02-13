@@ -4,8 +4,10 @@
 	$imgh	= (int)$this->getData('imgh');
 	$imgw	= (int)$this->getData('imgw');
 	
-	$store=Mage::app()->getStore();
-	$storeId=$store->getStoreId();
+	$_store=Mage::app()->getStore();
+	$storeId=$_store->getStoreId();
+	$store=Mage::getModel('core/store')->load($storeId);
+	
 	$collection = Mage::getResourceModel('reports/product_collection');
 	$collection->addStoreFilter($storeId);
 	$total_products_in_store = $collection->getSize();	
@@ -40,12 +42,15 @@
 		$randCollection->setPage(1,$products_limit);
 		$j=0;
 		if(!empty($randCollection) && count($randCollection)>0){
+			$content="";
 			foreach($randCollection as $product){
 				$_proId =  $product->getId();
 				$_product= $product; 
-				$content .= "<div class='column four-twelfths product_feature'><a href='" . $_product->getProductUrl() . "'  style='display:inline-block;float:left;'><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize($imgw,$imgh) ."' alt='' width='".$imgw."' border='0' /></a> <p style='padding:5px;margin-left:".$imgw."px'><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p></div>";
+				$content .= "<div class='column four-twelfths product_feature'><a href='" . $_product->getProductUrl() . "'  style='display:inline-block;float:left;max-width:".$imgw."px;width:33%;'><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize($imgw,$imgh) ."' alt='' style='max-width:".$imgw."px;width:100%;' border='0' /></a> <p style='padding:5px;margin-left:33%'><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p></div>";
 			}
 			echo $content;
 		}
+		
+		
 	}
 ?>
