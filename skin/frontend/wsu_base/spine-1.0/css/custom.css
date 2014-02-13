@@ -32,6 +32,9 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
 .category-football.n2 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
 .category-football.n3 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
 
+.sitelist{}
+.sitelist li{height:140px;}
+
 
 
 .studentstore5 .main-ad-block{background:transparent url(/media/store-media/studentstore/student_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
