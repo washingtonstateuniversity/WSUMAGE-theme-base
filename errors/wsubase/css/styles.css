@@ -25,7 +25,6 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#496778 url(../../default%20-%20Copy/images/bkg_body.gif) 50% 0 repeat-y; font:12px/1.55 Arial, Helvetica, sans-serif; color:#2f2f2f; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -223,3 +222,4 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .footer-container .bottom-container:after,
 .col-main:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
 /* ======================================================================================= */
+ul,li { list-style: none !important; }

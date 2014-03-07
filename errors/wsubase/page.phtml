@@ -34,6 +34,7 @@
 <head>
 
 	<meta charset="utf-8">
+	
 	<title><?php echo $this->pageTitle?> | Washington State University</title>
 
 	
@@ -43,7 +44,8 @@
 	<!-- STYLESHEETS -->
 	<link href="http://repo.wsu.edu/spine/1/spine.min.css" rel="stylesheet" type="text/css" />
 	<!-- Your custom stylesheets here -->
-	
+	<base href="<?php echo $this->getSkinUrl()?>" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
 	<!-- RESPOND -->
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	
