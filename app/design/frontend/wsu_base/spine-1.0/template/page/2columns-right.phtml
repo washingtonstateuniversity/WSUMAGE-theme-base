@@ -5,13 +5,13 @@
 $lang=$this->getLang();
 $store = Mage::app()->getStore();
 $name = $store->getFrontendName();
-$random = array('n1','n2','n3','n4');
+$randomClass = 'five'.rand(0,5).' ten'.rand(0,10);
 $storeId = $store->getStoreId();
 $storeCode = $store->getCode();
 $theme = $this->helper('wsu_themecontrol');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
-$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $random[rand(0,2)];
+$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
 ?>
