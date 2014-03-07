@@ -24,38 +24,119 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-svg lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-svg lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-svg lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
 <head>
-<title><?php echo $this->pageTitle?></title>
-<base href="<?php echo $this->getSkinUrl()?>" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<meta name="robots" content="*" />
-<link rel="stylesheet" href="../default - Copy/css/styles.css" type="text/css" />
-<link rel="icon" href="../default - Copy/images/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="../default - Copy/images/favicon.ico" type="image/x-icon" />
+
+	<meta charset="utf-8">
+	<title><?php echo $this->pageTitle?> | Washington State University</title>
+
+	
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="http://repo.wsu.edu/spine/1/favicon.ico" />
+	
+	<!-- STYLESHEETS -->
+	<link href="http://repo.wsu.edu/spine/1/spine.min.css" rel="stylesheet" type="text/css" />
+	<!-- Your custom stylesheets here -->
+	
+	<!-- RESPOND -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript">
+        var spineoptions={
+            search:false
+        };
+    </script>  
+	<script src="http://repo.wsu.edu/spine/1/spine.min.js"></script>
+	<!-- Your supplementary scripts here (jQuery Mobile, modernizr, site specific scripts, etcetera) -->
+	
+	<!-- COMPATIBILITY -->
+	<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png";</script><![endif]--> 
+	
+	<!-- DOCS -->
+	<link rel="author" href="https://plus.google.com/109412257237874861202?rel=author">
+	<link type="text/plain" rel="authors" href="http://repo.wsu.edu/spine/1/authors.txt">
+	<link type="text/html" rel="docs" href="http://brand.wsu.edu">
+	
+
+	
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="page">
-            <div class="header-container">
-                <div class="header">
-                    <a href="<?php echo $this->getBaseUrl()?>" title="Magento Commerce" class="logo"><img src="../default - Copy/images/logo.gif" alt="Magento Commerce" /></a>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="main col1-layout">
-                    <?php require_once $contentTemplate; ?>
-                </div>
-            </div>
-            <div class="footer-container">
-                <div class="footer">
-                    <address class="copyright">Magento is a trademark of Magento Inc. Copyright &copy; 2013 Magento Inc.</address>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<!-- WRAPPING -->
+<div id="jacket">
+<div id="binder" class="hybrid">
+
+<!-- CONTENT -->
+<main>
+
+<!-- Responsive Sections -->
+<section class="row sidebar">
+
+	<div class="column one">
+		<article>
+			
+			<h1>Heading using the h1tag</h1>
+			<?php require_once $contentTemplate; ?>
+		</article>
+	</div><!--/column-->
+</section>
+
+</main>
+<!-- /CONTENT -->
+
+<!-- SPINE -->
+<div id="spine" class="shelved">
+<div id="glue">
+
+<header><a href="http://www.wsu.edu/" id="wsu-signature">Washington State University</a></header>
+
+<!-- ACTIONS
+<section id="wsu-actions">
+	<ul id="wsu-actions-tabs" class="spine-tabs clearfix">
+		<li id="wsu-search-tab" class="closed"><button>Search</button></li>
+		<li id="wsu-contact-tab" class="closed"><button>Contact</button></li>
+		<li id="wsu-share-tab" class="closed"><button>Share</button></li>
+		<li id="wsu-print-tab" class="closed"><button>Print</button></li>
+	</ul>
+</section> --><!--/#wsu-actions-->
+
+<nav id="spine-navigation">
+
+<nav id="spine-sitenav">
+<ul>
+	<li><a href="<?php echo $this->getBaseUrl()?>">Start over</a></li>
+</ul>
+</nav>
+
+</nav>
+<footer>
+	<nav id="wsu-global-links">
+		<ul>
+			<li class="zzusis-link"><a href="http://zzusis.wsu.edu/">Zzusis</a></li>
+			<li class="access-link"><a href="http://access.wsu.edu/">Access</a></li>
+			<li class="policies-link"><a href="http://policies.wsu.edu/">Policies</a></li>
+			<li class="copyright-link"><a href="http://copyright.wsu.edu">&copy;</a></li>
+		</ul>
+	</nav>	
+</footer>
+
+</div><!--/glue-->
+</div><!--/spine-->
+<!-- /SPINE -->
+
+</div><!--/cover-->
+</div><!--/jacket-->
+<!-- /WRAPPING -->
+
 </body>
 </html>
