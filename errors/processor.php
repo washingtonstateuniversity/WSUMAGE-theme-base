@@ -279,7 +279,7 @@ class Error_Processor
 					// trim for safety measures
 					$ip = trim($ip);
 					// attempt to validate IP
-					if (validate_ip($ip)) {
+					if ($this->validate_ip($ip)) {
 						return $ip;
 					}
 				}
@@ -287,7 +287,16 @@ class Error_Processor
 		}
 		return isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'undefined';
     }
-
+	/**
+	 * Ensures an ip address is both a valid IP and does not fall within
+	 * a private network range.
+	 */
+	public function validate_ip($ip) {
+		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+			return false;
+		}
+		return true;
+	}
     /**
      * Get index dir
      *
@@ -572,6 +581,7 @@ class Error_Processor
         }
     }
 
+	
     /**
      * Validate submitted post data
      *
