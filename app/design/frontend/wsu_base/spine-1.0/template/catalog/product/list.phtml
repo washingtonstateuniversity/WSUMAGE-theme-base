@@ -15,13 +15,13 @@
 	<div class="block_category_above_collection std"><?php echo $tmpHtml; ?></div>
 <?php endif; ?>
 
-<?php if(!$_collectionSize): ?>
-	<?php if ($tmpHtml = $this->getChildHtml('block_category_above_empty_collection')): ?>
-		<div class="block_category_above_empty_collection std"><?php echo $tmpHtml; ?></div>
-	<?php else: ?>
-		<p class="note-msg empty-catalog"><?php echo $this->__('There are no products matching the selection.') ?></p>
-	<?php endif; ?>
-<?php else: ?>
+<?php if(!$_collectionSize): ?><?php
+	 if ($tmpHtml = $this->getChildHtml('block_category_above_empty_collection')) {
+		?><div class="block_category_above_empty_collection std"><?php echo $tmpHtml; ?></div><?php
+	 } else {
+		?><p class="note-msg empty-catalog"><?php echo $this->__('There are no products matching the selection.') ?></p><?php
+	 }
+?><?php else: ?>
 
 <?php
 	$_helper = $this->helper('catalog/output');
@@ -50,7 +50,7 @@
 		<?php echo $this->getToolbarHtml() ?>
 	<?php endif; ?>
 	<?php if($this->getMode()!='grid'): //List mode ?>
-
+<!-- Lists -->
 	<?php
 		//Get list configuration array
 		$lc = $theme->getCfgGroup('category_list');
@@ -101,17 +101,18 @@
 			<?php endif; ?>
 			<?php //Product Image ?>
 			<div class="product-image-wrapper grid12-4 mobile-grid-half">
-
-				<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image" style="max-width:<?php echo $imgWidth; ?>px;">
-					<img src="<?php echo $helpImg->getImg($_product, $imgWidth, $imgHeight, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
-					
-					<?php if ($theme->getCfg('category/alt_image')): ?>
-						<?php echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight); ?>
-					<?php endif; ?>
-					
-					<?php echo $helpLabels->getLabels($_product); //Product labels ?>
+				<?php 
+					$imgLable = $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true); 
+				?>
+				<a href="<?=$_product->getProductUrl()?>" title="<?=$imgLable?>" class="product-image" style="max-width:<?php echo $imgWidth; ?>px;">
+					<img src="<?php echo $helpImg->getImg($_product, $imgWidth, $imgHeight, 'small_image'); ?>" alt="<?=$imgLable?>" />
+					<?php
+						if ($theme->getCfg('category/alt_image')) { 
+							echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight);
+						}
+						echo $helpLabels->getLabels($_product); //Product labels
+					?>
 				</a>
-
 			</div> <!-- end: product-image-wrapper -->
 
 			<?php //Product description ?>
@@ -143,7 +144,7 @@
 					echo $helpTemplate->getCategoryAddtoLinks($_product, $this->getAddToCompareUrl($_product), 'addto-gaps-right');
 				} else {
 					if($productType != 'event' && $_compareUrl=$this->getAddToCompareUrl($_product)){ 
-					?> <!-- <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li> --> <?php
+						?> <!-- <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li> --> <?php
 					} 
 					echo $helpTemplate->getCategoryAddtoLinksComplex($_product, $this->getAddToCompareUrl($_product), 'addto-gaps-right');
 				}
@@ -156,7 +157,7 @@
 	<script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
 
 	<?php else: //Grid mode ?>
-
+<!-- Grinds -->
 	<?php
 		//Get grid configuration array
 		$gc = $theme->getCfgGroup('category_grid');
@@ -242,18 +243,22 @@
 								echo "<h6 class='event status soldout'>Sold OUT!!</h6>";
 							}
 						?>
-				<?php endif; ?>            
+				<?php endif; ?>
+				
+
+				    
 				<div class="product-image-wrapper" style="max-width:<?php echo $imgWidth; ?>px;">
 					<?php 
-					$imgLable = $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true); 
+						$imgLable = $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true); 
 					?>
 					<a href="<?=$_product->getProductUrl()?>" title="<?=$imgLable?>" class="product-image">
 						<img src="<?php echo $helpImg->getImg($_product, $imgWidth, $imgHeight, 'small_image'); ?>" alt="<?=$imgLable?>" />
-						<?php if ($theme->getCfg('category/alt_image')): ?>
-							<?php echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight); ?>   
-						<?php endif; ?>
-
-						<?php echo $helpLabels->getLabels($_product); //Product labels ?>
+						<?php
+							if ($theme->getCfg('category/alt_image')) {
+								echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight);
+							}
+							echo $helpLabels->getLabels($_product); //Product labels 
+						?>
 					</a>
 				
 					<?php //Add-to links
