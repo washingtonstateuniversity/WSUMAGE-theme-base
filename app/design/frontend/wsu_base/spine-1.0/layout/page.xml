@@ -56,7 +56,7 @@ Default layout, loads most of the pages
 				<!-- base for all WSU -->
 					<action method="addItem"><type>external_css</type><name>http://repo.wsu.edu/spine/1/spine.min.css</name></action>
 					<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
-					<action method="addItem"><type>external_js</type><name>http://nbj.me/spine/1/1.0/scripts/modernizr/modernizr.custom.95689.js</name></action>
+					<!--<action method="addItem"><type>external_js</type><name>http://nbj.me/spine/1/1.0/scripts/modernizr/modernizr.custom.95689.js</name></action>-->
 					<action method="addItem"><type>external_js</type><name>http://repo.wsu.edu/spine/1/spine.min.js</name></action>
 					<!--
 					<action method="addItem"><type>external_js</type><name>//images.wsu.edu/javascripts/print_v2.js</name></action>
@@ -76,6 +76,7 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>skin_js</type><name>js/ie6.js</name><params/><if>lt IE 7</if></action>
 				
 				<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
+				<action method="addItem"><type>skin_css</type><name>css/quickoverride.css</name></action>
 				
             </block>
 
