@@ -129,6 +129,12 @@
 			<block type="cms/block" name="block_category_above_empty_collection">
                 <action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
             </block>
+			<block type="cms/block" name="block_category_above_product">
+                <action method="setBlockId"><block_id>block_category_above_product</block_id></action>
+            </block>
+			<block type="cms/block" name="block_category_below_product">
+                <action method="setBlockId"><block_id>block_category_below_product</block_id></action>
+            </block>
 			<block type="cms/block" name="block_category_below_collection">
                 <action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
             </block>
