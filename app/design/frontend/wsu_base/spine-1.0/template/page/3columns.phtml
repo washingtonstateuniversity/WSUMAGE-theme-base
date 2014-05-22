@@ -22,7 +22,6 @@ $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 <head>
 	<?=$this->getChildHtml('head')?>
 </head>
-<?php $bodyClasses = $this->getBodyClass() .' '. $this->helper('wsu_themecontrol')->getThemeBodyClasses() .' '. $random[rand(0,2)]; ?>
 <body class=" <?=$bodyClasses?>">
 	<?php echo $this->getChildHtml('after_body_start') ?>
     <div id = "wrapper">
