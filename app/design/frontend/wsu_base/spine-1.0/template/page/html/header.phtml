@@ -43,10 +43,10 @@
         <section id="wsu-actions" class="clearfix" role="actions">
             <!-- Tabs -->
             <ul id="wsu-actions-tabs" class="spine-tabs clearfix">
-                    <li id="wsu-search-tab" class="closed" label="Search"><button>Search</button></li>
-                    <li id="wsu-contact-tab" class="closed" label="Contact"><button>Contact</button></li>
-                    <li id="wsu-share-tab" class="closed" label="Share"><button>Share</button></li>
-                    <li id="wsu-print-tab" class="closed" label="Print"><button>Print</button></li>
+                    <li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li>
+                    <li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
+                    <li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
+                    <li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li>
             </ul>
             <section id="wsu-search" class="<?=$searchOptionClasses?> tools closed" data-default="site-search">
                 <!--
@@ -66,7 +66,7 @@
                 </section>
             </section>
         </section><!--/#wsu-actions-->
-        <nav id="spine-navigation">
+        <section id="spine-navigation" class="spine-navigation">
             <nav id="spine-sitenav" class="<?=(!empty($homelink)?'':'homeless')?>">
                 <!-- Your navigation list here
                     • Active link should be denoted with an "active" or "current" link on the link's parent li tag.
@@ -128,7 +128,7 @@
                     <li><a href="">Another</a></li>-->
                 </ul>
             </nav>
-        </nav><!-- #navigation -->
+        </section><!-- #spine-navigation -->
         <!-- Social and Global Links -->
         <footer>
             <nav id="wsu-social-channels">
