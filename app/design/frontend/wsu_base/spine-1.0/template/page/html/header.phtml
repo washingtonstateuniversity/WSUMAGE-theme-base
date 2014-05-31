@@ -40,9 +40,9 @@
     <div id="glue" class="clearfix">
         <header><a href="http://www.wsu.edu/" id="wsu-signature">Washington State University</a></header>
         <!-- ACTIONS -->
-        <section id="wsu-actions" class="clearfix" role="actions">
+        <section id="wsu-actions" class="spine-actions">
             <!-- Tabs -->
-            <ul id="wsu-actions-tabs" class="spine-tabs clearfix">
+            <ul id="wsu-actions-tabs" class="spine-actions-tabs clearfix">
                     <li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li>
                     <li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
                     <li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
@@ -67,7 +67,7 @@
             </section>
         </section><!--/#wsu-actions-->
         <section id="spine-navigation" class="spine-navigation">
-            <nav id="spine-sitenav" class="<?=(!empty($homelink)?'':'homeless')?>">
+            <nav class="spine-sitenav <?=(!empty($homelink)?'':'homeless')?>">
                 <!-- Your navigation list here
                     • Active link should be denoted with an "active" or "current" link on the link's parent li tag.
                     • First link should be home link (otherwise, add "homeless" class to #site nav)
@@ -82,7 +82,7 @@
                     <?php endif ?>
                 </ul>
             </nav>
-            <nav id="spine-offsitenav">
+            <nav class="spine-offsitenav">
                 <ul>
                 
                 <?php 
@@ -130,8 +130,8 @@
             </nav>
         </section><!-- #spine-navigation -->
         <!-- Social and Global Links -->
-        <footer>
-            <nav id="wsu-social-channels">
+        <footer class="spine-footer">
+            <nav id="wsu-social-channels" class="spine-social-channels">
                 <ul>
 				<?php
                     foreach($socialChannels as $channel=>$prop) {
@@ -142,7 +142,7 @@
                 ?>
                 </ul>
             </nav>
-            <nav id="wsu-global-links">
+            <nav id="wsu-global-links" class="spine-global-links">
                 <ul>
 				<?php
                     foreach($wsuChannels as $channel=>$prop) {
