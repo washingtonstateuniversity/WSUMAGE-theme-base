@@ -491,7 +491,7 @@ tr.summary-details-excluded { font-style:italic; }
 .quick-access .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
 .quick-access .links { padding-left:8px; }
 .quick-access .links,
-.quick-access .links li { display:inline; }
+.quick-access .links li { display:inline-block; }
 .quick-access .links li { padding:0 4px 0 1px; }
 .quick-access .links a { color:#ddd; }
 .quick-access .links a { padding:0 7px 0 0; background:url(../../spine-1.0/images/bkg_pipe1.gif) no-repeat 100% 50%; }
@@ -1678,7 +1678,11 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container .bottom-container { margin:0 0 8px; text-align:right; }
 /* ======================================================================================= */
 
-
+#search_mini_form .form-search button.button span {
+  background-image: none;
+  height: inherit;
+  line-height: inherit;
+}
 
 /* ============================================ *
  * Slideshow
