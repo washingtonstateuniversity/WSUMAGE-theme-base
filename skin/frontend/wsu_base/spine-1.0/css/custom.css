@@ -1,5 +1,5 @@
 /* CSS Document */
-body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repeat-x center top !important; }
+body{background:#fff url('../images/gradient-south-lightest-white.png') repeat-x center top !important; }
 .quick-access .links a {
 	text-decoration:none;
 }
@@ -26,11 +26,11 @@ body{background:#f9f9f9 url('../images/gradient-south-lightest-white.png') repea
 
 #siteID article { padding-left:15px;}
 
-
-.category-football.n0 #jacket{background: transparent url(/media/store-media/eventstore/band1.jpg) right top no-repeat;}
-.category-football.n1 #jacket{background: transparent url(/media/store-media/eventstore/btc-surfing.jpg) right top no-repeat;}
-.category-football.n2 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
-.category-football.n3 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
+/* examples, needless yes but good to show it's usage */
+.category-football.five1 #jacket{background: transparent url(/media/store-media/eventstore/band1.jpg) right top no-repeat;}
+.category-football.five2 #jacket{background: transparent url(/media/store-media/eventstore/btc-surfing.jpg) right top no-repeat;}
+.category-football.five3 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
+.category-football.five4 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
 
 .siteslist{}
 .siteslist li{}
