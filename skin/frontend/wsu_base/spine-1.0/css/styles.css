@@ -497,8 +497,8 @@ tr.summary-details-excluded { font-style:italic; }
 .quick-access .links a { padding:0 7px 0 0; background:url(../../spine-1.0/images/bkg_pipe1.gif) no-repeat 100% 50%; }
 .quick-access .links li.last a { padding:0; background:none; }
 
-.top-bar { padding:3px 12px 2px 12px; border:1px solid #bbb; border-bottom-color:#dedede; background:#efefef; line-height:21px; }
-.top-bar .breadcrumbs { float:left; width:580px; overflow:hidden; }
+/*.top-bar { padding:3px 12px 2px 12px; border:1px solid #bbb; border-bottom-color:#dedede; background:#efefef; line-height:21px; }
+.top-bar .breadcrumbs { float:left; width:580px; overflow:hidden; }*/
 .form-search { float:right; }
 .form-search label { float:left; font-size:12px; font-weight:bold; padding:0 5px 0 0; }
 .form-search input.input-text { float:left; width:212px; margin-right:5px; }
@@ -1876,7 +1876,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header-container:after,
 .header-container .top-container:after,
 .header:after,
-.top-bar:after,
+/*.top-bar:after,*/
 .quick-access:after,
 .form-search:after,
 .main:after,
