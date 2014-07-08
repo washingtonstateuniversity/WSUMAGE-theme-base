@@ -3,16 +3,42 @@
 	<default>
 	
 		<reference name="head">
+		
 
+		<!-- remove the rwd defaults -->
+			<action method="removeItem"><type>skin_js</type><name>js/lib/jquery-1.10.2.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/app.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+
+			<action method="removeItem"><type>link_rel</type><name>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/minicart.js</name></action>
+
+			<!-- Add stylesheets with no media queries for use in IE 8 and below -->
+			<action method="removeItem"><type>skin_css</type><name>css/styles-ie8.css</name></action>
+			<action method="removeItem"><type>skin_css</type><name>css/madisonisland-ie8.css</name></action>
+
+			<!-- Add stylesheets with media queries for use by modern browsers -->
+			<action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+			<action method="removeItem"><type>skin_css</type><name>css/madisonisland.css</name></action>
+
+		
+		
 		<!-- JS -->
 			<action method="addItem"><type>external_js</type><name>//html5shiv.googlecode.com/svn/trunk/html5.js</name><params/><if>if lt IE 9</if></action>
 			<!-- base for all WSU -->
-				<action method="addItem"><type>external_css</type><name>//repo.wsu.edu/spine/1/spine.min.css</name></action>
-				<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
-				<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
+			<action method="addItem"><type>external_css</type><name>//repo.wsu.edu/spine/1/spine.min.css</name></action>
+			<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
+			<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
 			<!-- End of WSU base -->
 
-		
 		<!-- CSS: -->
 			<!-- CSS base -->
 			<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
