@@ -24,12 +24,12 @@
 			<!-- Common styles and system design config -->
 			<action method="addItem"><type>skin_css</type><name>css/common.css</name><params/></action>
 
-			<!-- Design settings -->
-			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
-			<!-- Override components, modules -->
+			<!-- Design settings
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action> -->
+			<!-- Override components, modules
 			<action method="addItem"><type>skin_css</type><name>css/override-components.css</name><params/></action>
 			<action method="addItem"><type>skin_css</type><name>css/override-modules.css</name><params/></action>
-			<action method="addItem"><type>skin_css</type><name>css/override-theme.css</name><params/></action>
+			<action method="addItem"><type>skin_css</type><name>css/override-theme.css</name><params/></action> -->
 			<!--<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getGridFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>-->
 				
