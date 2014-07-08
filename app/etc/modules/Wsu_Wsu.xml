@@ -12,6 +12,9 @@
         <Wsu_Wsu>
             <active>true</active>
             <codePool>local</codePool>
+			<depends>
+				<Wsu_Storeutilities/>
+			</depends>
         </Wsu_Wsu>
     </modules>
 </config> 
