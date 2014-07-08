@@ -40,85 +40,17 @@
 		</reference>
 <!-- Header ====================================================================== -->
 		<reference name="header">
-
-
-		</reference>	
-
-	</default>
-		
-    <default translate="label" module="page">
-        <label>All Pages</label>
-        <block type="page/html" name="root" output="toHtml" template="page/2columns-left.phtml">
-			<block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
-			<block type="page/template_links" name="top.links" as="topLinks" />
-
-            <block type="core/text_list" name="after_body_start" as="after_body_start" translate="label">
-                <label>Page Top</label>
-            </block>
-
-
-            <block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml" />
-
-
-            <block type="page/html_header" name="header" as="header">
-				<!--<block type="core/text_list" name="catalog.topnav" as="storenav"/>
-                <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
-                    <label>Navigation Bar</label>
-                    <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml" />
-                </block>-->
+			<remove name="catalog.topnav"/>
+			<remove name="top.menu"/>
 				<block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
-
-
 					<action method="setElementClass"><value>top-bar</value></action>
 				</block>
-            </block>
-			<block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs" translate="label">
-				<label>Breadcrumbs</label>
-			</block>
-			<block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
-				<label>Page Header</label>
-				<action method="setElementClass"><value>top-container</value></action>
-			</block>
+		</reference>	
 
-
-
-
-            <block type="core/text_list" name="left" as="left" translate="label">
-                <label>Left Column</label>
-            </block>
-
-
-            <block type="core/messages" name="global_messages" as="global_messages"/>
-            <block type="core/messages" name="messages" as="messages"/>
-
-
-            <block type="core/text_list" name="content" as="content" translate="label">
-                <label>Main Content Area</label>
-            </block>
-
-
-            <block type="core/text_list" name="right" as="right" translate="label">
-                <label>Right Column</label>
-            </block>
-
-
-            <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
-                <block type="page/html_wrapper" name="bottom.container" as="bottomContainer" translate="label">
-                    <label>Page Footer</label>
-                    <action method="setElementClass"><value>bottom-container</value></action>
-                </block>
-                <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
-                <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
-            </block>
-
-
-            <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
-                <label>Page Bottom</label>
-            </block>
-        </block>
-
-
-        <block type="core/profiler" output="toHtml" name="core_profiler"/>
+        <reference name="root">
+			<remove name="store_language"/>
+			<block type="page/template_links" name="top.links" as="topLinks" />
+        </reference>
     </default>
 		
 		
