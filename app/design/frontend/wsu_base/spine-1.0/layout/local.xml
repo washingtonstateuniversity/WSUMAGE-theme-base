@@ -47,7 +47,7 @@
 				
 				<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 				<action method="addItem"><type>skin_css</type><name>css/quickoverride.css</name></action>
-				
+				<action method="addItem"><type>skin_css</type><name>css/custom.css</name></action>
 				
             </block>
 
