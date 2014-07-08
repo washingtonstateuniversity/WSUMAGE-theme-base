@@ -71,19 +71,133 @@
 
 
 		</reference>	
-		<!-- Top links (user menu) ====================================================================== -->
-		<reference name="top.links">
-		
-			<action method="setTemplate">
-				<template>page/template/links_top.phtml</template> <!-- Deprecated, will be removed in the next update -->
-			</action>
-					
-			<!-- Remove checkout links -->
-			<remove name="checkout_cart_link" />
-			
-		</reference>	
+
 	</default>
 		
+    <default translate="label" module="page">
+        <label>All Pages</label>
+        <block type="page/html" name="root" output="toHtml" template="page/2columns-left.phtml">
+			<block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
+			<block type="page/template_links" name="top.links" as="topLinks" />
+
+
+            <block type="page/html_head" name="head" as="head">
+                <action method="addJs"><script>prototype/prototype.js</script></action>
+                <action method="addJs"><script>lib/ccard.js</script></action>
+                <action method="addJs"><script>prototype/validation.js</script></action>
+                <action method="addJs"><script>scriptaculous/builder.js</script></action>
+                <action method="addJs"><script>scriptaculous/effects.js</script></action>
+                <action method="addJs"><script>scriptaculous/dragdrop.js</script></action>
+                <action method="addJs"><script>scriptaculous/controls.js</script></action>
+                <action method="addJs"><script>scriptaculous/slider.js</script></action>
+                <action method="addJs"><script>varien/js.js</script></action>
+                <action method="addJs"><script>varien/form.js</script></action>
+                <!--<action method="addJs"><script>varien/menu.js</script></action>-->
+                <action method="addJs"><script>mage/translate.js</script></action>
+
+<!--
+				<action method="addItem"><type>skin_js</type><name>js/jquery.cycle2.js</name><params/></action>
+				<action method="addItem"><type>skin_js</type><name>js/controller.js</name><params/></action>
+-->
+
+				<!-- base for all WSU -->
+					<action method="addItem"><type>external_css</type><name>https://repo.wsu.edu/spine/1/spine.min.css</name></action>
+					<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>
+					<!--<action method="addItem"><type>external_js</type><name>http://nbj.me/spine/1/1.0/scripts/modernizr/modernizr.custom.95689.js</name></action>-->
+					<action method="addItem"><type>external_js</type><name>https://repo.wsu.edu/spine/1/spine.min.js</name></action>
+					<!--
+					<action method="addItem"><type>external_js</type><name>//images.wsu.edu/javascripts/print_v2.js</name></action>
+					-->
+				<!-- End of WSU base -->
+
+
+                <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
+                <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
+                <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
+				
+
+                <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+
+
+                <action method="addItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
+                <action method="addItem"><type>skin_js</type><name>js/ie6.js</name><params/><if>lt IE 7</if></action>
+
+
+				<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
+				<action method="addCss"><stylesheet>css/custom.css</stylesheet></action>
+
+
+            </block>
+
+
+            <block type="core/text_list" name="after_body_start" as="after_body_start" translate="label">
+                <label>Page Top</label>
+            </block>
+
+
+            <block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml" />
+
+
+            <block type="page/html_header" name="header" as="header">
+				<!--<block type="core/text_list" name="catalog.topnav" as="storenav"/>
+                <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
+                    <label>Navigation Bar</label>
+                    <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml" />
+                </block>-->
+				<block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
+
+
+					<action method="setElementClass"><value>top-bar</value></action>
+				</block>
+            </block>
+			<block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs" translate="label">
+				<label>Breadcrumbs</label>
+			</block>
+			<block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
+				<label>Page Header</label>
+				<action method="setElementClass"><value>top-container</value></action>
+			</block>
+
+
+
+
+            <block type="core/text_list" name="left" as="left" translate="label">
+                <label>Left Column</label>
+            </block>
+
+
+            <block type="core/messages" name="global_messages" as="global_messages"/>
+            <block type="core/messages" name="messages" as="messages"/>
+
+
+            <block type="core/text_list" name="content" as="content" translate="label">
+                <label>Main Content Area</label>
+            </block>
+
+
+            <block type="core/text_list" name="right" as="right" translate="label">
+                <label>Right Column</label>
+            </block>
+
+
+            <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
+                <block type="page/html_wrapper" name="bottom.container" as="bottomContainer" translate="label">
+                    <label>Page Footer</label>
+                    <action method="setElementClass"><value>bottom-container</value></action>
+                </block>
+                <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+                <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
+            </block>
+
+
+            <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
+                <label>Page Bottom</label>
+            </block>
+        </block>
+
+
+        <block type="core/profiler" output="toHtml" name="core_profiler"/>
+    </default>
 		
 		
 <!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
