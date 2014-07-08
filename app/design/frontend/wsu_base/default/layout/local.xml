@@ -14,7 +14,6 @@
 
 		
 		<!-- CSS: -->
-			
 			<!-- CSS base -->
 			<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
 			<action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
