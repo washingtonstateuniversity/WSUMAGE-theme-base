@@ -1,81 +1,115 @@
-<ul  style="margin-left:210px;">
+<ul class="siteslist">
 	<?php
 
-		$i=0;
-        foreach (Mage::app()->getWebsites() as $website) {
+	$storesPer		= (int)$this->getData('stores_per');
+	$productsPer	= (int)$this->getData('products_per');
+	$panlesPer		= (int)$this->getData('panles_per');
+	
+	$totalProducts	= $panlesPer * $productsPer;
+	$stores=array();
+	foreach (Mage::app()->getWebsites() as $website) {
+		foreach ($website->getGroups() as $group) {
+			$name = $group->getName();
+			foreach ($group->getStores() as $store) {
+				if(!empty($store))$stores[] = array("name"=>$name,"store"=>$store);
+			}
+		}
+	}
+	$i=0;
+	
+	foreach ($stores as $storeObj) {
+		$store=$storeObj['store'];
+		$name=$storeObj['name'];
+		if($i==0){ 
+			//echo "starting"; 
+		}
+		
+		//$name = $store->getFrontendName();
+		$content="";
+		$storeId = $store->getStoreId();
+
+		$collection = Mage::getResourceModel('reports/product_collection');
+		$collection->addStoreFilter($storeId);
+		$total_products_in_store = $collection->getSize();	
+		if($total_products_in_store>0){
 			
-            foreach ($website->getGroups() as $group) {
-				$name = $group->getName();
-
+			
+			
+			$_rootcatID = $store->getRootCategoryId();				
+			$cat = Mage::getModel('catalog/category')->load($_rootcatID);
+			$subcats = $cat->getChildren();
+			$cats = array();
+			foreach(explode(',',$subcats) as $subCatid) {
+			  $_category = Mage::getModel('catalog/category')->load($subCatid);
+			  if($_category->getIsActive()) {
+				$sub_cat = Mage::getModel('catalog/category')->load($_category->getId());
+				$cats[]=$_category->getId();
 				
-                $stores = $group->getStores();
-                foreach ($stores as $store) {
-                    //$name = $store->getFrontendName();
-					$content="";
-					$storeId = $store->getStoreId();
-
-					$collection = Mage::getResourceModel('reports/product_collection');
-					$collection->addStoreFilter($storeId);
-					$total_products_in_store = $collection->getSize();	
-					if($total_products_in_store>0){
-						$_rootcatID = $store->getRootCategoryId();				
-						$cat = Mage::getModel('catalog/category')->load($_rootcatID);
-						$subcats = $cat->getChildren();
-						$cats = array();
-						foreach(explode(',',$subcats) as $subCatid) {
-						  $_category = Mage::getModel('catalog/category')->load($subCatid);
-						  if($_category->getIsActive()) {
-							$sub_cat = Mage::getModel('catalog/category')->load($_category->getId());
-							$cats[]=$_category->getId();
-							
-							$sub_subcats = $sub_cat->getChildren();
-							foreach(explode(',',$sub_subcats) as $sub_subCatid) {
-								  $_sub_category = Mage::getModel('catalog/category')->load($sub_subCatid);
-								  if($_sub_category->getIsActive()) {
-									 $cats[]=$_sub_category->getId();
-								  }
-							 }
-						  }
-						}
-						$randCollection = null;
-						$randCollection = Mage::getResourceModel('catalog/product_collection')
-							->joinField('category_id','catalog/category_product','category_id','product_id=entity_id',null,'left')
-							->addAttributeToFilter('category_id', array('in' => $cats))
-							->addAttributeToFilter('small_image', array('neq' => ''))
-							->addAttributeToFilter('small_image', array('neq' => 'no_selection'))
-							->addAttributeToSelect('*'); 					
-						$randCollection->getSelect()->order(new Zend_Db_Expr('RAND()'));
-						$randCollection->setPage(1,2);
-						$j=0;
-						if(!empty($randCollection) && count($randCollection)>0){
-							foreach($randCollection as $product){
-								$_proId =  $product->getId();
-								$_product= $product; 
-								
-								$content .= "<div style='width:47%;display:inline-block;padding:0px 1%; ".(($j%2 > 0)?"border-left: 1px solid #666;":"")."'><a href='" . $_product->getProductUrl() . "'  style='display:inline-block;float:left;'><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize(95, 95) ."' alt='' width='95' border='0' /></a> <p style='padding:5px;margin-left: 95px'><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p> </div>";
-								$j++;
-							}
-							if( $i%2 > 0 ){
-								$style = "background: url(../../modern/images/best_selling_tr_odd_bg.gif) repeat-x scroll 0 100% #EEEEEE;padding:0px 5px;";
-							}else{
-								$style = "background: url(../../modern/images/best_selling_tr_even_bg.gif) repeat-x scroll 0 100% #FFFFFF;padding:0px 5px;";	
-							}
-							
-							
-							echo "<li>
-								<h2>".$name." Featured Products</h2>
-								<div style='".$style."'>
-									<div style='border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;font-size: 11px;padding: 8px 10px 8px 8px;'>
-									".$content."
-									</div>
-								</div>
-							</li>";
-							$i++;
-						}
-					}
+				$sub_subcats = $sub_cat->getChildren();
+				foreach(explode(',',$sub_subcats) as $sub_subCatid) {
+					  $_sub_category = Mage::getModel('catalog/category')->load($sub_subCatid);
+					  if($_sub_category->getIsActive()) {
+						 $cats[]=$_sub_category->getId();
+					  }
+				 }
+			  }
+			}
+			$randCollection = null;
+			$randCollection = Mage::getResourceModel('catalog/product_collection')
+				->joinField('category_id','catalog/category_product','category_id','product_id=entity_id',null,'left')
+				->addAttributeToFilter('category_id', array('in' => $cats))
+				->addAttributeToFilter('small_image', array('neq' => ''))
+				->addAttributeToFilter('small_image', array('neq' => 'no_selection'))
+				->addAttributeToSelect('*'); 					
+			$randCollection->getSelect()->order(new Zend_Db_Expr('RAND()'));
+			$randCollection->setPage(1,$totalProducts);
+			$j=0;
+			if(!empty($randCollection) && count($randCollection)>0){
+				if($i!=0 && $storesPer>0 && $i!=count($stores)){ 
+					//echo "a middle"; 
 				}
-            }
-        }
+				foreach($randCollection as $product){
+					if($j==0){ 
+						$content.="<div class='slidepanle item'><div class=''>";
+					}
+					if($productsPer>0 && $j>($productsPer-1) && $j%$productsPer==0 && $j!=count($randCollection)-1){ 
+						$content.="</div></div>";
+						$content.="<div class='slidepanle item ' style='display: none; opacity: 0; '><div class=''>";
+					}	
+
+					$_proId =  $product->getId();
+					$_product= $product; 
+					$content .= "<div class='column six-twelfths ".(($j%2 > 0)?"two":"one")."'><a href='" . $_product->getProductUrl() . "' ><img src='". $this->helper('catalog/image')->init($_product, 'small_image')->resize(95, 95) ."' alt='' width='95' border='0' /></a><p><a href='" .$_product->getProductUrl(). "'>" .$this->htmlEscape($_product->getName()). "</a></p></div>";
+					
+					if($j==count($randCollection)-1){ 
+						$content.=" </div></div>";
+					}
+					$j++;
+				}
+				
+				$style = "";
+				
+				
+				
+				echo "<li>
+
+					<div class='siteblock ".(( $i%2 > 0 )?"odd":"even")." row'>
+						<h4>".$name." Featured Products</h4>
+						<div class='cycle-slideshow' data-cycle-fx='fadeout' data-cycle-pause-on-hover=true  data-cycle-slides='> div'>
+						".$content."
+						</div>
+						<div class='progress' style='height:5px; background-color:#868686;'></div>
+					</div>
+				</li>";
+				
+			}
+			$i++;
+		}
+		if($i==count($stores)){ 
+			//echo "the end";
+		}
+	}		
+
+	
     ?>
 </ul>
-<div></div>
