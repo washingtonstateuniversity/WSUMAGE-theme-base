@@ -84,8 +84,8 @@
 
 			<!-- To re-add 'My Cart' or 'Checkout' after removing both -->
 			<block type="checkout/links" name="checkout_cart_link_custom">
-				<action method="addCartLink"></action>
-				<action method="addCheckoutLink"></action>
+				<action method="addCartLink"><position>10</position></action>
+				<action method="addCheckoutLink"><position>11</position></action>
 			</block>
 		</reference>
 
@@ -118,7 +118,7 @@
 				<title>Sign Up</title>
 				<prepare>true</prepare>
 				<urlParams/>
-				<position>101</position>
+				<position>1</position>
 				<liParams>id="link-sign-up"</liParams>
 			</action>
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
@@ -128,7 +128,7 @@
 				<title>Log In</title>
 				<prepare/>
 				<urlParams/>
-				<position>100</position>
+				<position>2</position>
 			</action>
 		</reference>
 		<!---<reference name="right">
