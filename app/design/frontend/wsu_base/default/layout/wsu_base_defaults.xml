@@ -84,6 +84,17 @@
 
 		
     </default>
+	
+	
+<!-- top.link block alerations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_logged_in>
+		<reference name="top.links">
+			<action method="addLink" translate="label title" module="customer"><label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position></action>
+		</reference>
+	</customer_logged_in>
+
+	
+	
 		
 		
 <!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
