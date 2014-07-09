@@ -109,8 +109,24 @@
 <!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_logged_out>
 		<reference name="top.links">
-			<action method="addLink" translate="label title"><label>Sign Up</label><url>customer/account/create</url><title>Sign Up</title><prepare>true</prepare><urlParams/><position>101</position><liParams>id="link-sign-up"</liParams></action>
-			<action method="addLink" translate="label title" module="customer"><label><![CDATA[<i class="fa fa-sign-in"></i>  Log In ]]></label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position></action>
+			<action method="addLink" translate="label title">
+				<label>Sign Up</label>
+				<url>customer/account/create</url>
+				<title>Sign Up</title>
+				<prepare>true</prepare>
+				<urlParams/>
+				<position>101</position>
+				<liParams>id="link-sign-up"</liParams>
+			</action>
+			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-sign-in"></i>  Log In ]]></label>
+				<url helper="customer/getLoginUrl"/>
+				<title>Log In</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
 		</reference>
 		<!---<reference name="right">
 			<block type="customer/form_login" name="customer_form_mini_login" before="-" template="customer/form/mini.login.phtml"/>
@@ -119,7 +135,13 @@
 	</customer_logged_out>
 	<customer_logged_in>
 		<reference name="top.links">
-			<action method="addLink" translate="label title" module="customer"><label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position></action>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label>
+				<url helper="customer/getLogoutUrl"/><title>Log Out</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
 		</reference>
 	</customer_logged_in>
 
