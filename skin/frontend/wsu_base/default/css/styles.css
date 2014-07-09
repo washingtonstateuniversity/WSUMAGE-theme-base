@@ -1943,16 +1943,9 @@ tr.summary-details-excluded { font-style:italic; }
 /* ======================================================================================= */
 body{background:#fff url('../images/gradient-south-lightest-white.png') repeat-x center top !important; }
 
-ol li {
-    list-style: none;
-}
-ul li {
-    list-style: none;
-	padding:0;
-	margin:0;
-}
-ul{padding:0;
-	margin:0;}
+ol li { list-style: none; }
+ul li { list-style: none; padding:0; margin:0; }
+ul{padding:0; margin:0;}
 
 .seven-twelfths.squared { width: 58.33% } .hybrid .seven-twelfths.squared, .fixed .seven-twelfths.squared { width: 462px; }
 .seven-twelfths { width: 58.33% } .hybrid .seven-twelfths, .fixed .seven-twelfths { width: 462px; }
