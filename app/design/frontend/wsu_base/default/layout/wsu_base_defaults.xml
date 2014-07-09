@@ -77,14 +77,7 @@
 		<reference name="top.links">
 			<block type="wishlist/links" name="wishlist_link" />
 			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
-			<action method="addLink" translate="label title" module="customer">
-				<label><![CDATA[<i class="fa fa-cogs"></i>  My Account ]]></label>
-				<url helper="customer/getAccountUrl"/>
-				<title>My Account</title>
-				<prepare/>
-				<urlParams/>
-				<position>10</position>
-			</action>
+
 			<!-- Removes 'My Cart' AND 'Checkout' links
 			Default position: 40 and 50 respectively -->
 			<remove name="checkout_cart_link"/>
@@ -153,6 +146,14 @@
 				<position>100</position>
 			</action>
 		</reference>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-cogs"></i>  My Account ]]></label>
+				<url helper="customer/getAccountUrl"/>
+				<title>My Account</title>
+				<prepare/>
+				<urlParams/>
+				<position>10</position>
+			</action>
 	</customer_logged_in>
 
 
