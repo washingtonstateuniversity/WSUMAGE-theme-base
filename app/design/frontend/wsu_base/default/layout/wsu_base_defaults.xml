@@ -46,9 +46,6 @@
 			
 			<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
 
-			<!-- Common styles and system design config -->
-			<action method="addItem"><type>skin_css</type><name>css/common.css</name><params/></action>
-
 			<!-- Design settings
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action> -->
 			<!-- Override components, modules
@@ -57,9 +54,9 @@
 			<action method="addItem"><type>skin_css</type><name>css/override-theme.css</name><params/></action> -->
 			<!--<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getGridFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>-->
-				
-			<action method="addCss"	ifconfig="wsu_themecontrol/customization/custom_css"><stylesheet>css/custom.css</stylesheet></action>
-
+				<!--
+			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
+-->
 			<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />
 			
 		</reference>
@@ -76,6 +73,13 @@
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
         </reference>
+		
+		<reference name="top.links">
+			<block type="wishlist/links" name="wishlist_link" />
+			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
+		</reference>
+
+		
     </default>
 		
 		
