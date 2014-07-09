@@ -73,6 +73,13 @@
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
         </reference>
+		
+		<reference name="top.links">
+			<block type="wishlist/links" name="wishlist_link" />
+			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
+		</reference>
+
+		
     </default>
 		
 		
