@@ -5,6 +5,20 @@
 				<?=$this->getChildHtml() ?> 
                 <address><?=$this->getCopyright() ?></address>
                 <a href="http://web.wsu.edu/">University Web Communications</a>, Washington State University, PO Box 645910, Pullman, WA, 99164-5910 USA 509-335-2700 <a href="mailto:web.support@wsu.edu">Contact Us</a>
+				
+			<div id="contact-details" itemscope itemtype="http://schema.org/Organization"> 
+				<span itemprop="department"  content="University Unit"></span> 
+				<span itemprop="name" content="Washington State University"></span> 
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="location" content="<?=nl2br(Mage::getStoreConfig('general/store_information/address'));?>"><?=nl2br(Mage::getStoreConfig('general/store_information/address'));?></span>
+				</div>
+				<span itemprop="telephone" content="<?=Mage::getStoreConfig('general/store_information/phone');?>"></span>
+				<span itemprop="email" content="<?=Mage::getStoreConfig('general/store_information/phone');?>"></span>
+				<span itemprop="contactPoint" content="<?=Mage::getStoreConfig('general/store_information/phone');?>"></span>
+				<span itemprop="url" content="http://your-unit.wsu.edu"></span>
+			</div>
+				
+				
             </article>
         </div>
     </section>
