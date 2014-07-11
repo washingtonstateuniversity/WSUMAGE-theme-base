@@ -43,25 +43,15 @@
         <section id="wsu-actions" class="spine-actions">
             <!-- Tabs -->
             <ul id="wsu-actions-tabs" class="spine-actions-tabs clearfix">
-                    <li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li>
-                    <li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
-                    <li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
-                    <li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li>
+				<li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li>
+				<li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
+				<li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
+				<li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li>
             </ul>
             <section id="wsu-search" class="<?=$searchOptionClasses?> tools closed" data-default="site-search">
-                <!--
-                You can turn off default search functions by adding classes to #wsu-search
-                Options: .nix-index, .nix-site, .nix-wsu, .nix-facstaff, .nix-students
-                -->
                 <?php echo $this->getChildHtml('topBar') ?>
-                <!--<form name="search" id="search">
-                        <input id="searchterm" name="term" type="text" value="" placeholder="search">
-                        <button id="submit-search">Submit</button>
-                </form>-->
-                
-                <div id="spine-shortcuts" class="spine-shortcuts"></div>
-                     
-                </section>
+                <!--<div id="spine-shortcuts" class="spine-shortcuts"></div>
+                </section>-->
             </section>
         </section><!--/#wsu-actions-->
         <section id="spine-navigation" class="spine-navigation">

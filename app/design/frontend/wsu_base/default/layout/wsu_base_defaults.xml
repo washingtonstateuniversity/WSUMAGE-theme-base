@@ -69,18 +69,34 @@
 				</block>
 		</reference>	
 
-        <reference name="root">
+		<reference name="root">
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
-        </reference>
+		</reference>
 		
 		<reference name="top.links">
 			<block type="wishlist/links" name="wishlist_link" />
 			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
+
+			<!-- Removes 'My Cart' AND 'Checkout' links
+			Default position: 40 and 50 respectively -->
+			<remove name="checkout_cart_link"/>
+
+			<!-- To re-add 'My Cart' or 'Checkout' after removing both -->
+			<block type="checkout/links" name="checkout_cart_link_custom">
+				<action method="addCartLink"><position>10</position></action>
+				<action method="addCheckoutLink"><position>11</position></action>
+			</block>
 		</reference>
 
 		
-    </default>
+	</default>
+	
+	
+<!-- top.link block alerations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+	
+	
 		
 		
 <!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -96,20 +112,63 @@
 <!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_logged_out>
 		<reference name="top.links">
-            <action method="addLink" translate="label title"><label>Sign Up</label><url>customer/account/create</url><title>Sign Up</title><prepare>true</prepare><urlParams/><position>101</position><liParams>id="link-sign-up"</liParams></action>
-        </reference>
+			<action method="addLink" translate="label title">
+				<label>Sign Up</label>
+				<url>customer/account/create</url>
+				<title>Sign Up</title>
+				<prepare>true</prepare>
+				<urlParams/>
+				<position>1</position>
+				<liParams>id="link-sign-up"</liParams>
+			</action>
+			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-sign-in"></i>  Log In ]]></label>
+				<url helper="customer/getLoginUrl"/>
+				<title>Log In</title>
+				<prepare/>
+				<urlParams/>
+				<position>2</position>
+			</action>
+		</reference>
+		<!---<reference name="right">
+			<block type="customer/form_login" name="customer_form_mini_login" before="-" template="customer/form/mini.login.phtml"/>
+		</reference>-->
+		<!--<remove name="reorder"></remove>-->
 	</customer_logged_out>
+	<customer_logged_in>
+		<reference name="top.links">
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label>
+				<url helper="customer/getLogoutUrl"/><title>Log Out</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
+		</reference>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[<i class="fa fa-cogs"></i>  My Account ]]></label>
+				<url helper="customer/getAccountUrl"/>
+				<title>My Account</title>
+				<prepare/>
+				<urlParams/>
+				<position>10</position>
+			</action>
+	</customer_logged_in>
+
+
+
 	
 <!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_cart_index>
 		<!-- Custom static blocks -->
 		<reference name="checkout.cart">
 			<block type="cms/block" name="block_cart_below_table">
-                <action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
+			</block>
 			<block type="cms/block" name="block_cart_below_totals">
-                <action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
+			</block>
 		</reference>
 	</checkout_cart_index>
 	
@@ -120,8 +179,8 @@
 			<block type="page/html_wrapper" name="i_block_opc_below_progress">
 				<action method="setElementClass"><value>block block_opc_below_progress std</value></action>
 				<block type="cms/block" name="block_opc_below_progress" after="checkout.progress.wrapper">
-                	<action method="setBlockId"><block_id>block_opc_below_progress</block_id></action>
-            	</block>
+					<action method="setBlockId"><block_id>block_opc_below_progress</block_id></action>
+				</block>
 			</block>
 		</reference>
 	</checkout_onepage_index>	
@@ -130,8 +189,8 @@
 	<review_product_list>
 		<!-- IMPORTANT: same as 'catalog_product_view'. -->
 		<reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>
-        </reference>
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
 	</review_product_list>
 
 	
@@ -149,7 +208,7 @@
 	<cms_page>
 		<!-- Custom static blocks -->
 		<!-- IMPORTANT: These blocks are removed from home page and 404 no route page -->
-        <reference name="content">
+		<reference name="content">
 			<block type="page/html_wrapper" name="i_block_cms_page_top" before="-">
 				<action method="setElementClass"><value>block_cms_page_top std</value></action>
 				<block type="cms/block" name="block_cms_page_top">
@@ -175,7 +234,7 @@
 		<remove name="i_block_cms_page_top"/>
 		<!-- Uncomment to allow MAP functionality on home page -->
 		<!--<update handle="MAP_popup" />-->
-    </cms_index_index>
+	</cms_index_index>
 	
 <!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_index_index>
@@ -193,16 +252,16 @@
 			<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action> -->
 			<!-- Custom static blocks -->
 			<block type="cms/block" name="block_category_above_collection">
-                <action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
 			<block type="cms/block" name="block_category_above_empty_collection">
-                <action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
 			<block type="catalog/product_list_aboveproduct" name="block_category_above_product" as="block_category_above_product" />
 			<block type="catalog/product_links_belowproduct" name="block_category_below_product" as="block_category_below_product" />
 			<block type="cms/block" name="block_category_below_collection">
-                <action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
 		</reference>
 		<!-- Remove currency switcher from sidebar -->
 		<reference name="left">
@@ -222,14 +281,14 @@
 		<reference name="product_list">
 			<!-- Custom static blocks -->
 			<block type="cms/block" name="block_category_above_collection">
-                <action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
 			<block type="cms/block" name="block_category_above_empty_collection">
-                <action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
 			<block type="cms/block" name="block_category_below_collection">
-                <action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
-            </block>
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
 		</reference>
 	</catalog_category_layered>
 

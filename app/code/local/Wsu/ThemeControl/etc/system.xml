@@ -8,6 +8,162 @@
         </wsu_themecontrol>
     </tabs>
     <sections>
+	
+	
+	
+		<general translate="label comment">
+			<label>Theme Settings</label>
+			<tab>general</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+            <groups>
+				<store_information translate="label comment">
+					<comment>
+						<![CDATA[ Use the contact address for what will show on invoices, use the rest on what will be shown on the store.  The store information is based on the <a href="http://schema.org/Organization" target="_blank">"Organizational" section of the schema.org site</a>]]>
+					</comment>
+                    <fields>
+						<department translate="label comment">
+                            <label>Department</label>
+							<comment>
+								<![CDATA[This is the location as in "University Unit X" ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </department>
+						<name translate="label comment">
+                            <label>Name</label>
+							<comment>
+								<![CDATA[This is the location as in "Washington State University" ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+						<location translate="label comment">
+                            <label>Location</label>
+							<comment>
+								<![CDATA[This is the location as in "Third floor" or "First right after light" ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </location>
+						<streetAddress translate="label comment">
+                            <label>Street Address</label>
+							<comment>
+								<![CDATA[This is the location as in "PO Box 15555" or "1st st." ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </streetAddress>
+						<addressLocality translate="label comment">
+                            <label>Address Locality</label>
+							<comment>
+								<![CDATA[This is the city location as in "Pullman" ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </addressLocality>						
+						<addressRegion translate="label comment">
+                            <label>Address Region</label>
+							<comment>
+								<![CDATA[This is the state location as in "WA".  note this will be a dropdown later ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </addressRegion>		
+						<postalCode translate="label comment">
+                            <label>Postal Code</label>
+							<comment>
+								<![CDATA[This is the postal Code as in "99999-9999". ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>46</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </postalCode>	
+						<telephone translate="label comment">
+                            <label>Telephone</label>
+							<comment>
+								<![CDATA[This is the telephone as in "(509) 335-0000". ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>47</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </telephone>						
+						<email translate="label comment">
+                            <label>Main contact email</label>
+							<comment>
+								<![CDATA[This is the email you want to display on site.  This can be the same as your contact that is used to send of emails from the store. ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>48</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email>							
+						<contactPoint translate="label comment">
+                            <label>Point of Contact</label>
+							<comment>
+								<![CDATA[This is the contact pathway as in "http://contactpage.wsu.edu".  It should be noted that it will not be checked that the information is a url or a name. ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </contactPoint>
+						<url translate="label comment">
+                            <label>Display url</label>
+							<comment>
+								<![CDATA[This is the url you want to present for the store or your main site. ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </url>						
+						
+						
+						
+						
+						
+					</fields>
+				</store_information>
+				
+				
+				
+				
+				
+			</groups>
+		</general>
+	
+	
+	
+	
         <wsu_themecontrol translate="label comment" module="wsu_themecontrol">
 			<label>Theme Settings</label>
 			<tab>wsu_themecontrol</tab>
@@ -258,7 +414,7 @@
 						</disable_hover_effect>
 						<hide_addto_links translate="label comment">
 							<label>Hide "Add to" Links Below...</label>
-							<comment><![CDATA["Add to wishlist" and "Add to compare" links will be hidden if width of the browser viewport is below selected value.]]></comment>
+							<comment><![CDATA[ "Add to wishlist" and "Add to compare" links will be hidden if width of the browser viewport is below selected value. ]]></comment>
 							<frontend_type>select</frontend_type>
 							<source_model>wsu_themecontrol/system_config_source_category_grid_hovereffect_below</source_model>
 							<sort_order>240</sort_order>
@@ -2505,6 +2661,15 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </fluid_width>
+						<show_breadcrumbs translate="label comment">
+                            <label>Show Breadcrumbs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_breadcrumbs>
 					</fields>
 				</responsive>
 			</groups>
