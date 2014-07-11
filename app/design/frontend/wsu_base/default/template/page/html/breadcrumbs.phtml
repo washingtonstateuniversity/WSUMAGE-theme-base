@@ -1,4 +1,4 @@
-<?php if($crumbs && is_array($crumbs)): ?>
+<?php if(Mage::getStoreConfig('wsu_themecontrol_layout/responsive/show_breadcrumbs') && $crumbs && is_array($crumbs)): ?>
 <div class="breadcrumbs">
     <ul>
         <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
