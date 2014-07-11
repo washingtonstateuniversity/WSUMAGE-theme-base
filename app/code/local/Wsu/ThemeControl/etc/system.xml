@@ -8,6 +8,62 @@
         </wsu_themecontrol>
     </tabs>
     <sections>
+	
+	
+	
+		<general translate="label comment">
+			<label>Theme Settings</label>
+			<tab>general</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+            <groups>
+				<store_information translate="label comment">
+					<comment>
+						<![CDATA[ Use the contact address for what will show on invoices, use the rest on what will be shown on the store.  The store information is based on the <a href="http://schema.org/Organization" target="_blank">"Organizational" section of the schema.org site</a>]]>
+					</comment>
+                    <fields>
+						<location translate="label comment">
+                            <label>Location</label>
+							<comment>
+								<![CDATA[This is the location as in "Third floor" or "First right after light" ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </location>
+						<streetAddress translate="label comment">
+                            <label>Street Address</label>
+							<comment>
+								<![CDATA[This is the location as in "PO Box 15555" or "1st st." ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </streetAddress>
+						
+						
+						
+						
+					</fields>
+				</store_information>
+				
+				
+				
+				
+				
+			</groups>
+		</general>
+	
+	
+	
+	
         <wsu_themecontrol translate="label comment" module="wsu_themecontrol">
 			<label>Theme Settings</label>
 			<tab>wsu_themecontrol</tab>
