@@ -57,7 +57,6 @@ $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
                 </section>
                 <footer class="padded">
 					<?=$this->getChildHtml('footer') ?>
-                    <?=$this->getChildHtml('before_body_end') ?>
                     <?=$this->getAbsoluteFooter() ?>
 				</footer>
             </main><!--/#page-->
@@ -67,5 +66,6 @@ $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
         </div><!--/cover-->
     </div><!--/jacket-->
     <!-- /WRAPPING -->
+	<?=$this->getChildHtml('before_body_end') ?>
 </body>
 </html>
