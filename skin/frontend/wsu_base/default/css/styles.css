@@ -132,6 +132,9 @@ ul,ol         { list-style:none; }
 /* ======================================================================================= */
 
 
+
+ul,ul li{ list-style:none; }
+
 /* Global Styles ========================================================================= */
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
