@@ -489,10 +489,10 @@ tr.summary-details-excluded { font-style:italic; }
 .quick-access .form-language label { font-weight:bold; padding-right:5px; color:#fff; vertical-align:middle; }
 .quick-access .form-language select { padding:0; }
 .quick-access .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.quick-access .links { padding-left:8px; }
+.quick-access .links { padding:0px; }
 .quick-access .links,
 .quick-access .links li { display:inline-block; }
-.quick-access .links li { padding:0 4px 0 1px; }
+.quick-access .links li { padding:0 0px 0 1px; }
 .quick-access .links a { color:#ddd; }
 .quick-access .links a { padding:0 7px 0 0; background:url(../../spine-1.0/images/bkg_pipe1.gif) no-repeat 100% 50%; }
 .quick-access .links li.last a { padding:0; background:none; }
