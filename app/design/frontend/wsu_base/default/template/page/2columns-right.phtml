@@ -9,10 +9,12 @@ $randomClass = 'five'.rand(0,5).' ten'.rand(0,10);
 $storeId = $store->getStoreId();
 $storeCode = $store->getCode();
 $theme = $this->helper('wsu_themecontrol');
+$template = $this->helper('wsu_themecontrol/template');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
 $bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
+$mainContentClasses= $template->getBlockClasses("main_content"); 
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
                     <div class="column ten-twelfths">
                         <article>
                         	<?=$this->getChildHtml('after_body_start') ?>
-                            <div id="main">
+                            <div id="main" class="<?=$mainContentClasses?>" >
                                 <?=$this->getChildHtml('topContainer'); ?>
                                 <?=$this->getChildHtml('global_notices') ?>
                                 <?=$this->getChildHtml('global_messages') ?>

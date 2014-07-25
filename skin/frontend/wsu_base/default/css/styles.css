@@ -132,6 +132,9 @@ ul,ol         { list-style:none; }
 /* ======================================================================================= */
 
 
+
+ul,ul li{ list-style:none !important;}
+
 /* Global Styles ========================================================================= */
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
@@ -145,18 +148,18 @@ textarea { overflow:auto; }
 input.radio { margin-right:3px; }
 input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
-button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
-button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { float:left; height:28px; background:transparent url(../../spine-1.0/images/bkg_btn.png) 0 0 no-repeat; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; }
-button.button span span { background-position:100% 0; padding:0 15px 0 9px; }
-button.disabled span { color:#bbb !important; }
+xbutton.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
+xbutton.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
+xbutton.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
+xbutton.button span { float:left; height:28px; background:transparent url(../../spine-1.0/images/bkg_btn.png) 0 0 no-repeat; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; }
+xbutton.button span span { background-position:100% 0; padding:0 15px 0 9px; }
+xbutton.disabled span { color:#bbb !important; }
 
 /*button.btn-cart span {}*/
-button.btn-checkout span { height:28px; border:0; background-image:url(../../spine-1.0/images/btn_checkout.gif); padding:0 0 0 6px; font:bold 12px/26px Arial, Helvetica, sans-serif; color:#fff; }
-button.btn-checkout span span { padding:0 40px 0 34px; }
-button.btn-checkout.no-checkout span { background-position:0 100%; color:#cfcfcf; }
-button.btn-checkout.no-checkout span span { background-position:100% 100%; }
+xbutton.btn-checkout span { height:28px; border:0; background-image:url(../../spine-1.0/images/btn_checkout.gif); padding:0 0 0 6px; font:bold 12px/26px Arial, Helvetica, sans-serif; color:#fff; }
+xbutton.btn-checkout span span { padding:0 40px 0 34px; }
+xbutton.btn-checkout.no-checkout span { background-position:0 100%; color:#cfcfcf; }
+xbutton.btn-checkout.no-checkout span span { background-position:100% 100%; }
 
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
@@ -489,10 +492,10 @@ tr.summary-details-excluded { font-style:italic; }
 .quick-access .form-language label { font-weight:bold; padding-right:5px; color:#fff; vertical-align:middle; }
 .quick-access .form-language select { padding:0; }
 .quick-access .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.quick-access .links { padding-left:8px; }
+.quick-access .links { padding:0px; }
 .quick-access .links,
 .quick-access .links li { display:inline-block; }
-.quick-access .links li { padding:0 4px 0 1px; }
+.quick-access .links li { padding:0 0px 0 1px; }
 .quick-access .links a { color:#ddd; }
 .quick-access .links a { padding:0 7px 0 0; background:url(../../spine-1.0/images/bkg_pipe1.gif) no-repeat 100% 50%; }
 .quick-access .links li.last a { padding:0; background:none; }

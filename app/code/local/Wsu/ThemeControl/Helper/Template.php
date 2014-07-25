@@ -92,4 +92,23 @@ class Wsu_ThemeControl_Helper_Template extends Mage_Core_Helper_Abstract {
         }
         return $html;
     }
+	
+	/**
+	 * Set up classes for a block called by name
+	 */
+	public function getBlockClasses($block){
+		//@todo
+		//set options to make settings
+		//add logic to build
+		$pad_main = " padded ";
+		$pad_main_style = ($pad_main==="")? "" : " narrow short ";
+		$classes=$pad_main." ".$pad_main_style;
+		return $classes;
+	}
+	
+	
+	
+	
+	
+	
 }
