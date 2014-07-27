@@ -8,11 +8,14 @@ class Wsu_ThemeControl_Helper_Cssgen extends Mage_Core_Helper_Abstract {
     protected $_generatedCssFolder;
     protected $_generatedCssPath;
     protected $_generatedCssDir;
+	protected $_templatePath;
+	
     public function __construct() {
         //Create paths
         $this->_generatedCssFolder = 'css/_config/';
         $this->_generatedCssPath   = 'frontend/themecontrol/default/' . $this->_generatedCssFolder;
         $this->_generatedCssDir    = Mage::getBaseDir('skin') . '/' . $this->_generatedCssPath;
+		$this->_templatePath = 'wsu/themecontrol/css/';
     }
     /**
      * Get automatically generated CSS directory
@@ -22,6 +25,16 @@ class Wsu_ThemeControl_Helper_Cssgen extends Mage_Core_Helper_Abstract {
     public function getGeneratedCssDir() {
         return $this->_generatedCssDir;
     }
+	/**
+	 * Get path to CSS template
+	 *
+	 * @return string
+	 */
+	public function getTemplatePath() {
+        return $this->_templatePath;
+    }
+	
+	
     /**
      * Get file path: CSS grid
      *
