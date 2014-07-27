@@ -2681,7 +2681,7 @@ between the header and the footer).</comment>
                     <show_in_store>1</show_in_store>
                     <fields>
 						<show_search translate="label comment">
-                            <label>Show Search</label>
+                            <label>Show Search tab</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>30</sort_order>
@@ -2689,6 +2689,20 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </show_search>
+						<show_content translate="label comment">
+                            <label>Show Content tab</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_content>
+						
+						
+						
+						
+						
 					</fields>
 				</spine>
 				

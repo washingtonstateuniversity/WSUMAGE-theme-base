@@ -30,7 +30,7 @@
  
  
  $show_search		= $theme->getCfgLayout('spine/show_search');
- 
+ $show_content		= $theme->getCfgLayout('spine/show_content'); 
  
  
  $home_link = Mage::helper('core/url')->getHomeUrl();
@@ -49,7 +49,7 @@
             <!-- Tabs -->
             <ul id="wsu-actions-tabs" class="spine-actions-tabs clearfix">
 				<?php if($show_search): ?><li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li><?php endif ?>
-				<li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
+				<?php if($show_content): ?><li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li><?php endif ?>
 				<li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
 				<li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li>
             </ul>
