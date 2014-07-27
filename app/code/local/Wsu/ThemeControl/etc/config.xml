@@ -363,6 +363,7 @@
 				<show_print>1</show_print>
 				<show_homelink>1</show_homelink>
 				<homelinkText>Store Home</homelinkText>
+				<show_storenetwork>1</show_storenetwork>
 			</spine>
 		</wsu_themecontrol_layout>
 	</default>
