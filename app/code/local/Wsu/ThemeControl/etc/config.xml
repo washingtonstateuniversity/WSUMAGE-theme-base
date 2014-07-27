@@ -356,7 +356,14 @@
 				<max_width_custom></max_width_custom>
 				<fluid_width>fluid</fluid_width>
 			</responsive>
-			
+			<spine>
+				<show_search>1</show_search>
+				<show_contact>1</show_contact>
+				<show_share>1</show_share>
+				<show_print>1</show_print>
+				<show_homelink>1</show_homelink>
+				<homelinkText>Store Home</homelinkText>
+			</spine>
 		</wsu_themecontrol_layout>
 	</default>
 </config>

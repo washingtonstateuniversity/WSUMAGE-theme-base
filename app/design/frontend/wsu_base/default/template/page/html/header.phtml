@@ -30,7 +30,7 @@
  
  
 $show_search		= $theme->getCfgLayout('spine/show_search');
-$show_content		= $theme->getCfgLayout('spine/show_content');
+$show_contact		= $theme->getCfgLayout('spine/show_contact');
 $show_share			= $theme->getCfgLayout('spine/show_share');
 $show_print			= $theme->getCfgLayout('spine/show_print');
 $show_homelink		= $theme->getCfgLayout('spine/show_homelink');
@@ -56,7 +56,7 @@ $searchOptionClasses = implode(' ', $searchOps );
             <!-- Tabs -->
             <ul id="wsu-actions-tabs" class="spine-actions-tabs clearfix">
 				<?php if($show_search): ?><li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li><?php endif ?>
-				<?php if($show_content): ?><li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li><?php endif ?>
+				<?php if($show_contact): ?><li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li><?php endif ?>
 				<?php if($show_share): ?><li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li><?php endif ?>
 				<?php if($show_print): ?><li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li><?php endif ?>
             </ul>
