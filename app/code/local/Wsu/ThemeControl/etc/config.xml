@@ -356,6 +356,7 @@
 				<max_width_custom></max_width_custom>
 				<fluid_width>fluid</fluid_width>
 			</responsive>
+			
 		</wsu_themecontrol_layout>
 	</default>
 </config>

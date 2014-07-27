@@ -34,11 +34,12 @@ $show_content		= $theme->getCfgLayout('spine/show_content');
 $show_share			= $theme->getCfgLayout('spine/show_share');
 $show_print			= $theme->getCfgLayout('spine/show_print');
 $show_homelink		= $theme->getCfgLayout('spine/show_homelink');
+$homelinkText		= $theme->getCfgLayout('spine/homelinkText');
 
 $homelink="";
 if($show_homelink){
 	$home_link = Mage::helper('core/url')->getHomeUrl();
-	$home_text = 'Store Home';
+	$home_text = ($homelinkText!=="")?$homelinkText:'Store Home';
 	$homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
 }
 
