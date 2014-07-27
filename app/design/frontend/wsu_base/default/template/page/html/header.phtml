@@ -33,11 +33,15 @@ $show_search		= $theme->getCfgLayout('spine/show_search');
 $show_content		= $theme->getCfgLayout('spine/show_content');
 $show_share			= $theme->getCfgLayout('spine/show_share');
 $show_print			= $theme->getCfgLayout('spine/show_print');
+$show_homelink		= $theme->getCfgLayout('spine/show_homelink');
 
+$homelink="";
+if($show_homelink){
+	$home_link = Mage::helper('core/url')->getHomeUrl();
+	$home_text = 'Store Home';
+	$homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
+}
 
-$home_link = Mage::helper('core/url')->getHomeUrl();
-$home_text = 'Store Home';
-$homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
 $searchOps = array();//array('nix-index','nix-site','nix-wsu','nix-facstaff','nix-students');
 $searchOptionClasses = implode(' ', $searchOps );
 
