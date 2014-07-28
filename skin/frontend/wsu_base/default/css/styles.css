@@ -451,9 +451,6 @@ tr.summary-details-excluded { font-style:italic; }
 .btn-remove2 { display:block; width:16px; height:16px; font-size:0; line-height:0; background:url(../../default/images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 .btn-edit    { display:block; width:12px; height:12px; font-size:0; line-height:0; background:url(../../default/images/btn_edit.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 
-.remove-cart-item{}
-.remove-cart-item i {font-size:1.5em;}
-.remove-cart-item i:hover {color:#c60c30}
 
 
 .cards-list dt { margin:5px 0 0; }
@@ -1178,6 +1175,14 @@ tr.summary-details-excluded { font-style:italic; }
     background-color: #eddccc;
     color: #cb9b6e;
 }
+
+.edit-cart-item{color:#00a5bd}
+.edit-cart-item i {font-size:1.5em;}
+.edit-cart-item i:hover {color:#203639}
+.remove-cart-item{color:#2a3033}
+.remove-cart-item i {font-size:1.5em;}
+.remove-cart-item i:hover {color:#c60c30}
+
 
 
 
