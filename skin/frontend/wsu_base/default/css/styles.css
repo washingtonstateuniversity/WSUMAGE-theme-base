@@ -2030,6 +2030,9 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
 .cart .cart-collaterals .col1-set .col-1 li{
 	width: 222px; display: inline-block;
 }
+.ui-widget-overlay {
+    background: #aaa none;
+}
 
 
 #sidebar_area{padding:10px 0px 0px 0px;}
