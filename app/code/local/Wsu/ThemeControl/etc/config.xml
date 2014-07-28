@@ -364,6 +364,7 @@
 				<show_homelink>1</show_homelink>
 				<homelinkText>Store Home</homelinkText>
 				<show_storenetwork>1</show_storenetwork>
+				<show_headerstorename>1</show_headerstorename>
 			</spine>
 		</wsu_themecontrol_layout>
 	</default>
