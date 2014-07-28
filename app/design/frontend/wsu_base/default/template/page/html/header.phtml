@@ -28,11 +28,25 @@
 				);
  if ( !isset($cropping) ) { $cropping = ''; } else { $cropping = ' '.$cropping; }
  
- $home_link = Mage::helper('core/url')->getHomeUrl();
- $home_text = 'Store Home';
- $homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
- $searchOps = array();//array('nix-index','nix-site','nix-wsu','nix-facstaff','nix-students');
- $searchOptionClasses = implode(' ', $searchOps );
+ 
+$show_search		= $theme->getCfgLayout('spine/show_search');
+$show_contact		= $theme->getCfgLayout('spine/show_contact');
+$show_share			= $theme->getCfgLayout('spine/show_share');
+$show_print			= $theme->getCfgLayout('spine/show_print');
+$show_homelink		= $theme->getCfgLayout('spine/show_homelink');
+$homelinkText		= $theme->getCfgLayout('spine/homelinkText');
+$show_storenetwork	= $theme->getCfgLayout('spine/show_storenetwork');
+
+
+$homelink="";
+if($show_homelink){
+	$home_link = Mage::helper('core/url')->getHomeUrl();
+	$home_text = ($homelinkText!=="")?$homelinkText:'Store Home';
+	$homelink = "<li><a href='{$home_link}'>{$home_text}</a></li>";
+}
+
+$searchOps = array();//array('nix-index','nix-site','nix-wsu','nix-facstaff','nix-students');
+$searchOptionClasses = implode(' ', $searchOps );
 
 ?>
 <!-- SPINE -->
@@ -43,16 +57,16 @@
         <section id="wsu-actions" class="spine-actions">
             <!-- Tabs -->
             <ul id="wsu-actions-tabs" class="spine-actions-tabs clearfix">
-				<li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li>
-				<li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li>
-				<li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li>
-				<li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li>
+				<?php if($show_search): ?><li id="wsu-search-tab" class="spine-search-tab closed" label="Search"><button>Search</button></li><?php endif ?>
+				<?php if($show_contact): ?><li id="wsu-contact-tab" class="spine-contact-tab closed" label="Contact"><button>Contact</button></li><?php endif ?>
+				<?php if($show_share): ?><li id="wsu-share-tab" class="spine-share-tab closed" label="Share"><button>Share</button></li><?php endif ?>
+				<?php if($show_print): ?><li id="wsu-print-tab" class="spine-print-tab closed" label="Print"><button>Print</button></li><?php endif ?>
             </ul>
+            <?php if($show_search): ?>
             <section id="wsu-search" class="<?=$searchOptionClasses?> tools closed" data-default="site-search">
                 <?php echo $this->getChildHtml('topBar') ?>
-                <!--<div id="spine-shortcuts" class="spine-shortcuts"></div>
-                </section>-->
             </section>
+            <?php endif ?>
         </section><!--/#wsu-actions-->
         <section id="spine-navigation" class="spine-navigation">
             <nav class="spine-sitenav <?=(!empty($homelink)?'':'homeless')?>">
@@ -70,6 +84,8 @@
                     <?php endif ?>
                 </ul>
             </nav>
+            
+            <?php if($show_storenetwork): ?>
             <nav class="spine-offsitenav">
                 <ul>
                 
@@ -112,10 +128,9 @@
                         }
                         ?>
                     <?php endif; ?>
-                    <!--<li><a href="">Offsite Link</a></li>
-                    <li><a href="">Another</a></li>-->
                 </ul>
             </nav>
+            <?php endif; ?>
         </section><!-- #spine-navigation -->
         <!-- Social and Global Links -->
         <footer class="spine-footer">
