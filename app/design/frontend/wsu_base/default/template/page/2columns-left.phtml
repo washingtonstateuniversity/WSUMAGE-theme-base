@@ -14,6 +14,7 @@ $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
 $bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
+$show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
 $mainContentClasses= $template->getBlockClasses("main_content"); 
 ?>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                     </div>
                     <article>
                         <h2>WSU Marketplace</h2>
-                        <h1><?=$name?></h1>
+                        <?php if($show_headerstorename==1):?><h1><?=$name?></h1><?php endif; ?>
                         <?=$this->getChildHtml('breadcrumbs') ?> 
                     </article>
                 </section>
