@@ -56,6 +56,16 @@
             <remove_layouts>
                 <layouts>empty,two_columns_right,three_columns</layouts>
             </remove_layouts>
+						
+			<layouts>
+				<page_halves module="page" translate="label">
+					<label>Halves Page Layout</label>
+					<template>page/halves.phtml</template>
+					<layout_handle>page_halves</layout_handle>
+				</page_halves>
+			</layouts>
+			
+			
         </page>   
     </global>
 	<adminhtml>
