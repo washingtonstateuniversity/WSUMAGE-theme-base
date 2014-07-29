@@ -100,9 +100,13 @@ class Wsu_ThemeControl_Helper_Template extends Mage_Core_Helper_Abstract {
 		//@todo
 		//set options to make settings
 		//add logic to build
+		
+		
+		
+		
 		$pad_main = " padded ";
 		$pad_main_style = ($pad_main==="")? "" : " narrow short ";
-		$classes=$pad_main." ".$pad_main_style;
+		$classes="row ".$theme->getCfgLayout('content_area/row_type')." ".$pad_main." ".$pad_main_style;
 		return $classes;
 	}
 	

@@ -52,6 +52,11 @@
 				</connection>
 			</wsu_themecontrol_read>
 		</resources>
+        <page>
+            <remove_layouts>
+                <layouts>empty,two_columns_right,three_columns</layouts>
+            </remove_layouts>
+        </page>   
     </global>
 	<adminhtml>
 		<layout>

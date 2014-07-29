@@ -13,6 +13,7 @@
             <active>true</active>
             <codePool>local</codePool>
 			<depends>
+				<Mage_Page />
 				<Wsu_Storeutilities/>
 				<Wsu_Wsu/>
 			</depends>
