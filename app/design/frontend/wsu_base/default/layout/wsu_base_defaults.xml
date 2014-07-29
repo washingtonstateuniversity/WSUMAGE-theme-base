@@ -104,7 +104,7 @@
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
         </reference>
-    </page_empty>
+    </page_halves>
 	
 		
 		
