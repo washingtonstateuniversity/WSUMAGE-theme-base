@@ -2675,7 +2675,7 @@ between the header and the footer).</comment>
 				<spine translate="label comment">
                     <label>Spine Layout Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>10</sort_order>
+                    <sort_order>20</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -2762,7 +2762,30 @@ between the header and the footer).</comment>
 					</fields>
 				</spine>
 				
-				
+				<content_area translate="label comment">
+                    <label>Spine Layout Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<row_type translate="label comment">
+                            <label>Set the row type for the main content</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
+							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </row_type>	
+
+					</fields>
+				</content_area>
 				
 				
 				
