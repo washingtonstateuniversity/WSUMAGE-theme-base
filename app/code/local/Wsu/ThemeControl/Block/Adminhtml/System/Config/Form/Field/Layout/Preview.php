@@ -11,7 +11,7 @@ class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
         $html .= '
 		<br/>
 		<style>
-			#layoutPreview{min-height:45px;}
+			#layoutPreview{min-height:70px;}
 			#layoutPreview table{display:none;}
 			
 	
@@ -130,7 +130,7 @@ class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
 					layoutselect.on("change", function() {
 						$("#layoutPreview table").hide();
 						$("#row_" + layoutselect.val()).show();
-					});
+					}).trigger("change");
 				});
 			})(jQuery);
 		</script>

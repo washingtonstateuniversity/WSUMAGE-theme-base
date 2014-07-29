@@ -3,7 +3,6 @@ class Wsu_ThemeControl_Model_System_Config_Source_Layout_Rows_Type{
     public function toOptionArray(){
 		//'single','halves','thirds','side-left', 'side-right', 'margin-left','margin-right','triptych','quarters','eighths'
 		return array(
-			array('value' => '',				'label' => Mage::helper('wsu_themecontrol')->__('None')),
 			array('value' => 'single',			'label' => Mage::helper('wsu_themecontrol')->__('single')),
 			array('value' => 'halves',			'label' => Mage::helper('wsu_themecontrol')->__('halves')),
 			array('value' => 'thirds',			'label' => Mage::helper('wsu_themecontrol')->__('thirds')),
