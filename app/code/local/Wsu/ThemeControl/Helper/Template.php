@@ -102,7 +102,7 @@ class Wsu_ThemeControl_Helper_Template extends Mage_Core_Helper_Abstract {
 		//add logic to build
 		
 		
-		
+		$theme = $this->helper('wsu_themecontrol');
 		
 		$pad_main = " padded ";
 		$pad_main_style = ($pad_main==="")? "" : " narrow short ";
