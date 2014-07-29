@@ -1,5 +1,5 @@
 <?php
-class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Perview extends Mage_Adminhtml_Block_System_Config_Form_Field {
+class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview extends Mage_Adminhtml_Block_System_Config_Form_Field {
     /**
      * Add texture preview
      *
