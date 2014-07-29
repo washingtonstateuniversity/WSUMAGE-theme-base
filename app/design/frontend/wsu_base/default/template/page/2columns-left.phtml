@@ -44,8 +44,8 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                     </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row">
-                    <div class="column ten-twelfths">
+                <section class="row side-left">
+                    <div class="column one">
                         <article>
                         	<?=$this->getChildHtml('after_body_start') ?>
                             <div id="main" class="<?=$mainContentClasses?>" >
@@ -56,7 +56,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                             </div><!-- end of main -->   
                         </article>
                     </div><!--/column-->
-                    <div class="column two-twelfths ">
+                    <div class="column two">
                         <aside id="sidebar_area">
                             <section>
                             	<?=$this->getChildHtml('left'); ?>

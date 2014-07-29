@@ -58,7 +58,12 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                     <div class="column one">
                         <article>
                             <div id="main"  class="<?=$mainContentClasses?>">
-                                <?=$this->getChildHtml('content') ?>
+                                <?=$this->getChildHtml('content')?>
+								<!--
+									what needs to happen here is that we should have blocks that are for the areas
+									just like the default mage does.  We only call those and push the sub block inner that, 
+									just like the content block.
+								--> 
                             </div><!-- end of main -->   
                         </article>
                     </div><!--/column-->

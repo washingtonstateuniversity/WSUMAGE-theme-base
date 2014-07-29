@@ -54,7 +54,7 @@
 		</resources>
         <page>
             <remove_layouts>
-                <layouts>empty,two_columns_right,three_columns</layouts>
+                <layouts><!--empty,two_columns_right,three_columns--></layouts>
             </remove_layouts>
 						
 			<layouts>
