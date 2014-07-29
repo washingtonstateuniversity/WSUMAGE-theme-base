@@ -1,5 +1,5 @@
 <?php
-class Wsu_ThemeControl_Model_System_Config_Source_Layout_Row_Type{
+class Wsu_ThemeControl_Model_System_Config_Source_Layout_Rows_Type{
     public function toOptionArray(){
 		//'single','halves','thirds','side-left', 'side-right', 'margin-left','margin-right','triptych','quarters','eighths'
 		return array(
