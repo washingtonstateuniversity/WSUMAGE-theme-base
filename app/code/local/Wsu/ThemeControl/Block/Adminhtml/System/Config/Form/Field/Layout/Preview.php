@@ -119,7 +119,7 @@ class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
 			(function($){
 				$(document).ready(function(){
 					var layoutselect = $("#' . $element->getHtmlId() . '");
-					tex.on("change", function() {
+					layoutselect.on("change", function() {
 						$("#layoutPreview").hide();
 						$("row_" + layoutselect.val()).show();
 					});
