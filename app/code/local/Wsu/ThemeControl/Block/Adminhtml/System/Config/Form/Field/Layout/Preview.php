@@ -11,8 +11,16 @@ class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
         $html .= '
 		<br/>
 		<style>
-		#layoutPreview{}
-		#layoutPreview table{display:none;}
+			#layoutPreview{min-height:45px;}
+			#layoutPreview table{display:none;}
+			
+	
+			#layoutPreview table th, #layoutPreview table td {
+				border: 1px solid #ddd;
+				padding: 6px 13px;
+				text-align: center;
+				vertical-align: middle;
+			}
 		</style>
 		
 		<div id="layoutPreview" style="">
@@ -121,7 +129,7 @@ class Wsu_ThemeControl_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
 					var layoutselect = $("#' . $element->getHtmlId() . '");
 					layoutselect.on("change", function() {
 						$("#layoutPreview table").hide();
-						$("row_" + layoutselect.val()).show();
+						$("#row_" + layoutselect.val()).show();
 					});
 				});
 			})(jQuery);
