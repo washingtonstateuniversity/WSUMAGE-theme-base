@@ -102,12 +102,15 @@ class Wsu_ThemeControl_Helper_Template extends Mage_Core_Helper_Abstract {
 		//add logic to build
 		
 		
-		//$theme = $this->helper('wsu_themecontrol');
-		//$theme->getCfgLayout('content_area/row_type')
-		$pad_main = " padded ";
-		$pad_main_style = ($pad_main==="")? "" : " narrow short ";
-		$classes="row  ".$pad_main." ".$pad_main_style;
-		return $classes;
+		$theme = Mage::helper('wsu_themecontrol');
+		//$theme->getCfgLayout('content_area/row_type');
+		$pad_main = " ".$theme->getCfgLayout('content_area/padding')." ";
+		$pad_main .= " ".$theme->getCfgLayout('content_area/padding_flanks')." ";
+		$pad_main .= " ".$theme->getCfgLayout('content_area/padding_ends')." ";
+		$theme->getCfgLayout('content_area/row_type');
+
+		$classes="row  ".$pad_main;
+		return trim($classes);
 	}
 	
 	
