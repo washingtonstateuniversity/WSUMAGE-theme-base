@@ -1130,6 +1130,9 @@ tr.summary-details-excluded { font-style:italic; }
 /* Shopping Cart ========================================================================= */
 .cart .page-title {}
 
+.col-img{min-width:100px;}
+
+
 /* Checkout Types */
 .cart .page-title .checkout-types { display:none !important; }
 .cart .checkout-types .paypal-or { margin:0 8px; line-height:2.3; }
