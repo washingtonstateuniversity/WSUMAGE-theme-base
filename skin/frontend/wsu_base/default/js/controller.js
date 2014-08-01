@@ -58,7 +58,7 @@
 			e.preventDefault();
 			e.stopPropagation();
 			var btn=$(this);
-			
+			var table=btn.closest('table');
 			$.popup_message(
 			"Are you sure you want to remove this item? <a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a>",
 			true,
@@ -74,6 +74,9 @@
 							$( "#mess" ).dialog( "close" );
 							btn.closest('tr').fadeOut(500,function(){
 								$(this).remove();
+								if(table.find('tbody tr').length<=0){
+									table.find('tbody').append('<tr><td colspan="'+table.find('thead th').length+'" style="text-align:center">No Items in your cart currently</td></tr>');
+								}
 							});
 						});
 					});
