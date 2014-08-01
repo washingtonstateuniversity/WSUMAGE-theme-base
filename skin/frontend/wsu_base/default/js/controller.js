@@ -1,6 +1,6 @@
 (function($){
 	"use strict";
-	function currencyFormat(n) {
+	$.currencyFormat = function(n) {
 		var opts = {};
 		opts.style = "currency";
 		opts.currency = "USD";
@@ -13,7 +13,6 @@
 			return "$"+parseFloat(n).toFixed(2);   
 		}
 	}
-	
 	//$( document ).tooltip();
 	$.popup_message = function(html_message,clean,callback) {
 		if(typeof(clean)==="undefined"){
