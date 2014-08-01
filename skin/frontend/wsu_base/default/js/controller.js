@@ -50,7 +50,20 @@
 		});
 	}
 	$(function(){
-
+		
+		$('.remove-cart-item').off().on('click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var btn=$(this);
+			var url = btn.data('remove_item_url');
+			
+			$.get(url, function(){
+				btn.closest('tr').fadeOut(500,function(){
+					$(this).remove();
+				});
+			});
+		});
+		
 		
 		
 		
