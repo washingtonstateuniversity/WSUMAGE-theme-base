@@ -1,5 +1,4 @@
 (function($){
-	$(function(){
 	"use strict";
 	function currencyFormat(n) {
 		var opts = {};
@@ -16,7 +15,7 @@
 	}
 	
 	//$( document ).tooltip();
-	function popup_message(html_message,clean){
+	$.popup_message = function(html_message,clean) {
 		if(typeof(clean)==="undefined"){
 			clean=false;
 		}
@@ -50,10 +49,11 @@
 			}
 		});
 	}
-	
-	
-	
+	$(function(){
 
+		
+		
+		
 		/*
 		var formatter = new Intl.NumberFormat('en-US', {
 		  style: 'currency',
@@ -61,13 +61,6 @@
 		  minimumFractionDigits: 2,
 		});
 		*/
-
-
-
-
-
-		
-		
     // ==============================================
     // UI Pattern - Slideshow
     // ==============================================
