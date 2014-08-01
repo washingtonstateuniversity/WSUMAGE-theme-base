@@ -15,7 +15,7 @@
 	}
 	
 	//$( document ).tooltip();
-	$.popup_message = function(html_message,clean) {
+	$.popup_message = function(html_message,clean,callback) {
 		if(typeof(clean)==="undefined"){
 			clean=false;
 		}
@@ -36,16 +36,19 @@
 					$(".ui-dialog-buttonpane").remove();
 				}
 				$('body').css({overflow:"hidden"});
+				((callback&&callback.create)||null)?callback.create():null;
 			},
 			buttons:{
 				Ok:function(){
 					$( this ).dialog( "close" );
+					((callback&&callback.ok)||null)?callback.ok():null;
 				}
 			},
 			close: function() {
 				$('body').css({overflow:"auto"});
 				$( "#mess" ).dialog( "destroy" );
 				$( "#mess" ).remove();
+				((callback&&callback.close)||null)?callback.close():null;
 			}
 		});
 	}
@@ -55,13 +58,34 @@
 			e.preventDefault();
 			e.stopPropagation();
 			var btn=$(this);
-			var url = btn.data('remove_item_url');
 			
-			$.get(url, function(){
-				btn.closest('tr').fadeOut(500,function(){
-					$(this).remove();
-				});
-			});
+			$.popup_message(
+			"Are you sure you want to remove this item? <a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a>",
+			true,
+			{
+				create:function(){
+					$('#yes_remove').off().on('click',function(e){
+						e.preventDefault();
+						e.stopPropagation();
+						var url = btn.data('remove_item_url');
+						$( "#mess" ).dialog( "close" );
+						$.popup_message("<h4><i class='fa fa-spinner fa-spin'></i> Processing</h4>",true);
+						$.get(url, function(){
+							$( "#mess" ).dialog( "close" );
+							btn.closest('tr').fadeOut(500,function(){
+								$(this).remove();
+							});
+						});
+					});
+					$('#no_remove').off().on('click',function(e){
+						e.preventDefault();
+						e.stopPropagation();
+						$( "#mess" ).dialog( "close" );
+					});
+				}
+			}
+			);
+
 		});
 		
 		
