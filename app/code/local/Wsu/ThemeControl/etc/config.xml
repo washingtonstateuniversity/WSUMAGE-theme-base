@@ -52,6 +52,21 @@
 				</connection>
 			</wsu_themecontrol_read>
 		</resources>
+        <page>
+            <remove_layouts>
+                <layouts><!--empty,two_columns_right,three_columns--></layouts>
+            </remove_layouts>
+						
+			<layouts>
+				<page_halves module="page" translate="label">
+					<label>Halves Page Layout</label>
+					<template>page/halves.phtml</template>
+					<layout_handle>page_halves</layout_handle>
+				</page_halves>
+			</layouts>
+			
+			
+        </page>   
     </global>
 	<adminhtml>
 		<layout>
@@ -364,6 +379,7 @@
 				<show_homelink>1</show_homelink>
 				<homelinkText>Store Home</homelinkText>
 				<show_storenetwork>1</show_storenetwork>
+				<show_headerstorename>1</show_headerstorename>
 			</spine>
 		</wsu_themecontrol_layout>
 	</default>

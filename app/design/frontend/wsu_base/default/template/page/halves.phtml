@@ -14,7 +14,9 @@ $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
 $bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
+
 $show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
+
 $mainContentClasses= $template->getBlockClasses("main_content"); 
 
 ?>
@@ -45,24 +47,32 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                     </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row side-right">
+				<section class="notice_area">
+					<?=$this->getChildHtml('after_body_start') ?>
+					<?=$this->getChildHtml('topContainer'); ?>
+					<?=$this->getChildHtml('topBar') ?>
+					<?=$this->getChildHtml('global_notices') ?>
+					<?=$this->getChildHtml('global_messages') ?>
+				</section>
+                <section class="row halves">
                     <div class="column one">
                         <article>
-                        	<?=$this->getChildHtml('after_body_start') ?>
-                            <div id="main" class="<?=$mainContentClasses?>" >
-                                <?=$this->getChildHtml('topContainer'); ?>
-                                <?=$this->getChildHtml('global_notices') ?>
-                                <?=$this->getChildHtml('global_messages') ?>
-                                <?=$this->getChildHtml('content') ?>
+                            <div id="main"  class="<?=$mainContentClasses?>">
+                                <?=$this->getChildHtml('content')?>
+								<!--
+									what needs to happen here is that we should have blocks that are for the areas
+									just like the default mage does.  We only call those and push the sub block inner that, 
+									just like the content block.
+								--> 
                             </div><!-- end of main -->   
                         </article>
                     </div><!--/column-->
                     <div class="column two">
-                        <aside id="sidebar_area">
-                            <section>
-                            	<?=$this->getChildHtml('right'); ?>
-                            </section>
-                        </aside>
+                        <article>
+                            <div id="main"  class="<?=$mainContentClasses?>">
+                                <?=$this->getChildHtml('content') ?>
+                            </div><!-- end of main -->   
+                        </article>
                     </div><!--/column-->
                 </section>
                 <footer class="padded">
@@ -76,6 +86,6 @@ $mainContentClasses= $template->getBlockClasses("main_content");
         </div><!--/cover-->
     </div><!--/jacket-->
     <!-- /WRAPPING -->
-    <?=$this->getChildHtml('before_body_end') ?>
+	<?=$this->getChildHtml('before_body_end') ?>
 </body>
 </html>

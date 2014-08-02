@@ -15,6 +15,7 @@ $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
 $bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
+$show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
 
 $mainContentClasses= $template->getBlockClasses("main_content"); 
 
@@ -41,13 +42,13 @@ $mainContentClasses= $template->getBlockClasses("main_content");
                     </div>
                     <article>
                         <h2>WSU Marketplace</h2>
-                        <h1><?=$name?></h1>
+                        <?php if($show_headerstorename==1):?><h1><?=$name?></h1><?php endif; ?>
                         <?=$this->getChildHtml('breadcrumbs') ?> 
                     </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row">
-                    <div class="column twelve-twelfths">
+                <section class="row single">
+                    <div class="column">
                         <article>
                             <?=$this->getChildHtml('after_body_start') ?>
                             <div id="main" class="<?=$mainContentClasses?>" >
