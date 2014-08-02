@@ -2835,7 +2835,7 @@ between the header and the footer).</comment>
                     <show_in_store>1</show_in_store>
                     <fields>
 						<row_type translate="label comment">
-                            <label>Set the row type for the main content</label>
+                            <label>Set the row type</label>
 							<comment>
 								<![CDATA[ ]]>
 							</comment>
@@ -2848,7 +2848,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
                         </row_type>	
 						<padding translate="label comment">
-                            <label>Set the padding the main content</label>
+                            <label>Set the padding</label>
 							<comment>
 								<![CDATA[ ]]>
 							</comment>
@@ -2861,7 +2861,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
                         </padding>
 						<padding_flanks translate="label comment">
-                            <label>Padding flank style for main content</label>
+                            <label>Padding flank style</label>
 							<comment>
 								<![CDATA[ ]]>
 							</comment>
@@ -2874,7 +2874,7 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
                         </padding_flanks>
 						<padding_ends translate="label comment">
-                            <label>Padding end style for main content</label>
+                            <label>Padding end style</label>
 							<comment>
 								<![CDATA[ ]]>
 							</comment>
