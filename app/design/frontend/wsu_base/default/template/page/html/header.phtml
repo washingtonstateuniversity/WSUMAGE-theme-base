@@ -171,24 +171,16 @@ $searchOptionClasses = implode(' ', $searchOps );
         <footer class="spine-footer">
             <nav id="wsu-social-channels" class="spine-social-channels">
                 <ul>
-				<?php
-                    foreach($socialChannels as $channel=>$prop) {
-					?>
+					<?php foreach($socialChannels as $channel=>$prop) : ?>
 						<li class="<?=$channel?>-channel"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
-					<?php
-                    }
-                ?>
+					<?php endforeach;  ?>
                 </ul>
             </nav>
             <nav id="wsu-global-links" class="spine-global-links">
                 <ul>
-				<?php
-                    foreach($wsuChannels as $channel=>$prop) {
-                    ?>
+					<?php foreach($wsuChannels as $channel=>$prop) : ?>
                         <li id="<?=$channel?>"><a href="<?=(isset($prop['url'])?$prop['url']:'#')?>"><?=(isset($prop['text'])?$prop['text']:'#')?></a></li>
-                    <?php
-                    }
-                ?>
+                    <?php endforeach;  ?>
                 </ul>
             </nav>        
             <!-- <small class="copyright-link"><a href="http://copyright.wsu.edu">&copy; Washington State University</a></small> -->
