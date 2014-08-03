@@ -23,28 +23,36 @@ $slot_two = $theme->getCfgGroup('spine_social/slot_two');
 $slot_three = $theme->getCfgGroup('spine_social/slot_three');
 $slot_four = $theme->getCfgGroup('spine_social/slot_four');
  
- if($slot_one!="skip"){
-	 $socialChannels[$slot_one]=array('url'=>$slot_one_url,'text'=>$slot_one_text);
- }
+if($slot_one!="skip"){
+	 $url = $theme->getCfgGroup('spine_social/slot_one_url');
+	 $text = $theme->getCfgGroup('spine_social/slot_one_text');
+	 $socialChannels[$slot_one]=array('url'=>$url,'text'=>$text);
+}
  
-  if($slot_two!="skip"){
-	 $socialChannels[$slot_two]=array('url'=>$slot_two_url,'text'=>$slot_two_text);
- }
-  if($slot_three!="skip"){
-	 $socialChannels[$slot_three]=array('url'=>$slot_three_url,'text'=>$slot_three_text);
- }
-  if($slot_four!="skip"){
-	 $socialChannels[$slot_four]=array('url'=>$slot_four_url,'text'=>$slot_four_text);
- }
+if($slot_two!="skip"){
+  	 $url = $theme->getCfgGroup('spine_social/slot_two_url');
+	 $text = $theme->getCfgGroup('spine_social/slot_two_text');
+	 $socialChannels[$slot_two]=array('url'=>$url,'text'=>$text);
+}
+if($slot_three!="skip"){
+	 $url = $theme->getCfgGroup('spine_social/slot_three_url');
+	 $text = $theme->getCfgGroup('spine_social/slot_three_text');
+	 $socialChannels[$slot_three]=array('url'=>$url,'text'=>$text);
+}
+if($slot_four!="skip"){
+	 $url = $theme->getCfgGroup('spine_social/slot_four_url');
+	 $text = $theme->getCfgGroup('spine_social/slot_four_text');
+	 $socialChannels[$slot_four]=array('url'=>$url,'text'=>$text);
+}
  
  
  
- $socialChannels = array(
+ /*$socialChannels = array(
 					'facebook'=>array('url'=>'http://facebook.com/wsupullman','text'=>'Facebook'),
 					'twitter'=>array('url'=>'http://twitter.com/wsupullman','text'=>'Twitter'),
 					'youtube'=>array('url'=>'http://www.youtube.com/washingtonstateuniv','text'=>'YouTube'),
 					'social'=>array('url'=>'http://social.wsu.edu','text'=>'Social'),
-				);
+				);*/
  $wsuChannels = array(
 					'zzusis'=>array('url'=>'https://zzusis.wsu.edu/','text'=>'Zzu<strong>sis</strong>'),
 					'access'=>array('url'=>'http://access.wsu.edu/','text'=>'Access'),
