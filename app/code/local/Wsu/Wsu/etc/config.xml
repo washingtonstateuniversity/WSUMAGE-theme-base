@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category	Wsu
+ * @package		Wsu_Wsu
+ * @author		Wsu
+ * @copyright	Copyright 2013 Wsu
+ */
+-->
+<config>
+    <modules>
+        <Wsu_Wsu>
+            <version>0.9.0</version>
+        </Wsu_Wsu>
+    </modules>
+    <global>
+        <blocks>
+            <wsu_wsu>
+                <class>Wsu_Wsu_Block</class>
+            </wsu_wsu>
+        </blocks>
+        <helpers>
+            <wsu_wsu>
+                <class>Wsu_Wsu_Helper</class>
+            </wsu_wsu>
+        </helpers>
+        <models>
+            <wsu_wsu>
+                <class>Wsu_Wsu_Model</class>
+            </wsu_wsu>
+        </models>
+    </global>
+</config>
