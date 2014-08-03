@@ -288,6 +288,19 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </slot_four_url>
+						<slot_four_text translate="label comment">
+                            <label>Set the social media outlet text for slot four</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slot_four_text>
+						
+						
 					</fields>
 				</spine_social>
 				

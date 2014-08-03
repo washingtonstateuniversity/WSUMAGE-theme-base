@@ -14,6 +14,31 @@
  $spineColor = $theme->getCfgDesign('spine/spine_color');
  $spineBleed = $theme->getCfgDesign('spine/spine_bleed')?"bleed":"";
  $spineClasses = implode(' ',array($spineColor,$spineBleed));
+ 
+$socialChannels=array();
+ 
+ 
+$slot_one = $theme->getCfgGroup('spine_social/slot_one');
+$slot_two = $theme->getCfgGroup('spine_social/slot_two');
+$slot_three = $theme->getCfgGroup('spine_social/slot_three');
+$slot_four = $theme->getCfgGroup('spine_social/slot_four');
+ 
+ if($slot_one!="skip"){
+	 $socialChannels[$slot_one]=array('url'=>$slot_one_url,'text'=>$slot_one_text);
+ }
+ 
+  if($slot_two!="skip"){
+	 $socialChannels[$slot_two]=array('url'=>$slot_two_url,'text'=>$slot_two_text);
+ }
+  if($slot_three!="skip"){
+	 $socialChannels[$slot_three]=array('url'=>$slot_three_url,'text'=>$slot_three_text);
+ }
+  if($slot_four!="skip"){
+	 $socialChannels[$slot_four]=array('url'=>$slot_four_url,'text'=>$slot_four_text);
+ }
+ 
+ 
+ 
  $socialChannels = array(
 					'facebook'=>array('url'=>'http://facebook.com/wsupullman','text'=>'Facebook'),
 					'twitter'=>array('url'=>'http://twitter.com/wsupullman','text'=>'Twitter'),
