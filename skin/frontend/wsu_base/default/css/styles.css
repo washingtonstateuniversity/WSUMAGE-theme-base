@@ -2049,10 +2049,7 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
 #siteID article { padding-left:15px;}
 
 /* examples, needless yes but good to show it's usage */
-.category-football.five1 #jacket{background: transparent url(/media/store-media/eventstore/band1.jpg) right top no-repeat;}
-.category-football.five2 #jacket{background: transparent url(/media/store-media/eventstore/btc-surfing.jpg) right top no-repeat;}
-.category-football.five3 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
-.category-football.five4 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
+
 
 .siteslist{}
 .siteslist li{}
@@ -2061,14 +2058,11 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
 .siteslist .cycle-slideshow{border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;font-size: 11px;padding: 8px 10px 8px 8px;}
 .slidepanle img{display:inline-block;float:left;}
 .slidepanle p{padding:5px;margin-left: 95px;}
+
+
 .studentstore5 .main-ad-block{background:transparent url(/media/store-media/studentstore/student_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
-
-
 .studentstore5 .main-ad-block .seven-twelfths img{margin:2%;max-width:96%;}
 .studentstore5 .main-ad-block .home-spot img{display:none;}
-
-
-
 
 .techstore6 .main-ad-block{background:transparent url(/media/store-media/techstore/tech_home_banner_back.jpg) right top no-repeat; background-size:100% auto}
 .techstore6 .main-ad-block .product_feature{background:transparent url(/media/store-media/default/nav-link-background-crimson.png) right top repeat;}
@@ -2081,8 +2075,8 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
     margin: 1%;
 }
 
-
-
-
-
+.category-football.five1 #jacket{background: transparent url(/media/store-media/eventstore/band1.jpg) right top no-repeat;}
+.category-football.five2 #jacket{background: transparent url(/media/store-media/eventstore/btc-surfing.jpg) right top no-repeat;}
+.category-football.five3 #jacket{background: transparent url(/media/store-media/eventstore/crowd1.jpg) right top no-repeat;}
+.category-football.five4 #jacket{background: transparent url(/media/store-media/eventstore/crowd2.jpg) right top no-repeat;}
 
