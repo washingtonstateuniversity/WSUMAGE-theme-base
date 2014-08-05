@@ -148,12 +148,12 @@ textarea { overflow:auto; }
 input.radio { margin-right:3px; }
 input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
-xbutton.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
-xbutton.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
+/*xbutton.button::-moz-focus-inner { padding:0; border:0; } 
+xbutton.button { -webkit-border-fit:lines; }
 xbutton.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
 xbutton.button span { float:left; height:28px; background:transparent url(../../default/images/bkg_btn.png) 0 0 no-repeat; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; }
 xbutton.button span span { background-position:100% 0; padding:0 15px 0 9px; }
-xbutton.disabled span { color:#bbb !important; }
+xbutton.disabled span { color:#bbb !important; }*/
 
 /*button.btn-cart span {}*/
 xbutton.btn-checkout span { height:28px; border:0; background-image:url(../../default/images/btn_checkout.gif); padding:0 0 0 6px; font:bold 12px/26px Arial, Helvetica, sans-serif; color:#fff; }
