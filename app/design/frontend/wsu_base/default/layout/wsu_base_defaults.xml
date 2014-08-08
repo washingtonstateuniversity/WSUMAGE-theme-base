@@ -58,7 +58,7 @@
 				<!--
 			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
 -->
-			<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />
+			<!--<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />-->
 			<action method="addItem"><type>skin_js</type><name>js/custom.js</name></action>
 		</reference>
 <!-- Header ====================================================================== -->
