@@ -90,7 +90,22 @@
 
 		});
 		
-		
+		/* remeber me block js */
+		$(document).ready(function(){
+			
+			$('.remember-me-box a, .remember-me-popup a').off().on('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				var parentForm = $(this).closest('form');
+				var popup = parentForm.find('.remember-me-popup');
+				if(popup.is(':visible')){
+					popup.hide();
+				}else{
+					popup.show();
+				}
+			});
+		});
+				
 		
 		
 		/*
