@@ -1,0 +1,39 @@
+<?php 
+/* if this was on all.. maybe the admin should just use drop down and then pick what it can find, or a custom and then add to list.  look to grid system
+$_helper = $this->helper('catalog/output');
+
+$theme = $this->helper('wsu_themecontrol');
+$template = $this->helper('wsu_themecontrol/template');
+
+
+$row_type				= $theme->getCfgLayout('dashboard/row_type');
+$padding				= $theme->getCfgLayout('dashboard/padding');
+$padding_flanks			= $theme->getCfgLayout('dashboard/padding_flanks');
+$padding_ends			= $theme->getCfgLayout('dashboard/padding_ends');
+*/
+?>
+<div class="dashboard">
+    <div class="page-title">
+        <h1><?=$this->__('My Dashboard') ?></h1>
+    </div>
+    <?=$this->getMessagesBlock()->getGroupedHtml() ?>
+	<?=$this->getChildHtml('hello') ?>
+	<?=$this->getChildHtml('top') ?>
+	<div class="row side-left">
+		<div class="column one">
+			<div class="box-account box-info">
+				<div class="box-head">
+					<h2><?=$this->__('Account Information') ?></h2>
+				</div>
+				<?php /* Extensions placeholder */ ?>
+				<?=$this->getChildHtml('customer.account.dashboard.extra') ?>
+				<?=$this->getChildHtml('info') ?>
+			</div>
+		</div>
+		<div class="column two">		
+			<?=$this->getChildHtml('address') ?>
+			<?=$this->getChildHtml('info1') ?>
+			<?=$this->getChildHtml('info2') ?>
+		</div>
+	</div>
+</div>

@@ -206,14 +206,24 @@
 	
 <!-- CUSTOMER ACCOUNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_account>
-		<reference name="left">
-			<!-- Remove cart from the left column -->
-			<action method="unsetChild"><name>cart_sidebar</name></action>
-			<!-- Remove Compare block, it is already inserted in DEFAULT section -->
-			<action method="unsetChild"><name>catalog.compare.sidebar</name></action>
-		</reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="addBodyClass"><class>customer-account</class></action>
+        </reference>
+        <reference name="right">
+            <block type="customer/account_navigation" name="customer_account_navigation" before="-" template="customer/account/navigation.phtml">
+                <action method="addLink" translate="label" module="customer"><name>account</name><path>customer/account/</path><label>Account Dashboard</label></action>
+                <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
+                <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>Address Book</label></action>
+            </block>
+        </reference>
 	</customer_account>
-	
+	<customer_account_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="addBodyClass"><class>customer-account</class></action>
+        </reference>
+	</customer_account_index>	
 <!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_page>
 		<!-- Custom static blocks -->
