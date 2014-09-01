@@ -19,8 +19,8 @@ $padding_ends			= $theme->getCfgLayout('dashboard/padding_ends');
     <?=$this->getMessagesBlock()->getGroupedHtml() ?>
 	<?=$this->getChildHtml('hello') ?>
 	<?=$this->getChildHtml('top') ?>
-	<div class="row side-left">
-		<div class="column one">
+	<div class="row">
+		<div class="column two">
 			<div class="box-account box-info">
 				<div class="box-head">
 					<h2><?=$this->__('Account Information') ?></h2>
@@ -30,7 +30,7 @@ $padding_ends			= $theme->getCfgLayout('dashboard/padding_ends');
 				<?=$this->getChildHtml('info') ?>
 			</div>
 		</div>
-		<div class="column two">		
+		<div class="column one">		
 			<?=$this->getChildHtml('address') ?>
 			<?=$this->getChildHtml('info1') ?>
 			<?=$this->getChildHtml('info2') ?>
