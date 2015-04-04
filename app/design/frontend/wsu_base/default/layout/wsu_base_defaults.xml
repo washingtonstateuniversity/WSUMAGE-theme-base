@@ -46,9 +46,9 @@
 			<action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
 			
 			<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
-
+			<action ifconfig="wsu_themecontrol/customization/custom_css"  method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<!-- Design settings
-			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action> -->
+			 -->
 			<!-- Override components, modules
 			<action method="addItem"><type>skin_css</type><name>css/override-components.css</name><params/></action>
 			<action method="addItem"><type>skin_css</type><name>css/override-modules.css</name><params/></action>
