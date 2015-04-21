@@ -13,7 +13,7 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
     public function __construct() {
         //Create paths
         $this->_generatedCssFolder = 'css/_config/';
-        $this->_generatedCssPath   = 'frontend/themecontrol/default/' . $this->_generatedCssFolder;
+        $this->_generatedCssPath   = 'frontend/wsu_base/default/' . $this->_generatedCssFolder;
         $this->_generatedCssDir    = Mage::getBaseDir('skin') . '/' . $this->_generatedCssPath;
 		$this->_templatePath = 'wsu/themecontrol/css/';
     }
@@ -58,5 +58,13 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
      */
     public function getDesignFile() {
         return $this->_generatedCssFolder . 'design_' . Mage::app()->getStore()->getCode() . '.css';
+    }
+    /**
+     * Get file path: CSS Override
+     *
+     * @return string
+     */
+    public function getOverrideFile() {
+        return $this->_generatedCssFolder . 'override_' . Mage::app()->getStore()->getCode() . '.css';
     }
 }

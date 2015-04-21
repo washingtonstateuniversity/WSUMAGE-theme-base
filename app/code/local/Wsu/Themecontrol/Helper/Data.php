@@ -35,12 +35,24 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return array
      */
     public function getCfgSectionDesign($storeId = NULL) {
-        if ($storeId)
+        if ($storeId){
             return Mage::getStoreConfig('wsu_themecontrol_design', $storeId);
-        else
+		}else{
             return Mage::getStoreConfig('wsu_themecontrol_design');
+		}
     }
-
+    /**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
+    public function getCfgSectionOverride($storeId = NULL) {
+        if ($storeId){
+            return Mage::getStoreConfig('wsu_themecontrol_override', $storeId);
+		}else{
+            return Mage::getStoreConfig('wsu_themecontrol_override');
+		}
+    }
     // Get theme config /////////////////////////////////////////////////////////////////
     /**
      * Get theme's main settings (single option)

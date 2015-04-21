@@ -20,6 +20,10 @@
 										<title>Theme Layout</title>
 										<sort_order>1</sort_order> 
                                     </wsu_themecontrol_layout>
+									<wsu_themecontrol_override translate="title" module="wsu_themecontrol">
+										<title>CSS Override</title>
+										<sort_order>1</sort_order> 
+                                    </wsu_themecontrol_override>
                                 </children>
                             </config>
                         </children>

@@ -13,5 +13,6 @@ Mage::getConfig()->saveConfig('cms/wysiwyg/enabled', 'hidden');
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('grid',   NULL, NULL);
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('layout', NULL, NULL);
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('design', NULL, NULL);
+Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('override', NULL, NULL);
 
 $installer->endSetup();

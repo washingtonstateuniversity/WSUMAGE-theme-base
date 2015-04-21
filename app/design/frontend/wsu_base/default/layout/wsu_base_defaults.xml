@@ -55,6 +55,7 @@
 			<action method="addItem"><type>skin_css</type><name>css/override-theme.css</name><params/></action> -->
 			<!--<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getGridFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>-->
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getOverrideFile" /></action>
 				<!--
 			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
 -->
