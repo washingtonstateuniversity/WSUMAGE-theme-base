@@ -2120,7 +2120,14 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
   padding: 0;
 }
 
-
+.cart .discount .buttons-set button.button span, .cart .shipping .buttons-set button.button span{
+	background:transparent none;
+	color: #494949 !important;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #02484f;
+	text-transform: uppercase;
+}
 
 
 /* for the moment REMEBER to remove */
