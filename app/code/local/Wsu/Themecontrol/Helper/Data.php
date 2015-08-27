@@ -131,10 +131,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
 		$binderStyleStr = "";
-		$w = intval($this->getCfgLayout('responsive/max_width_custom', $storeCode));
-		if($width=='custom'){	
-			$binderStyleStr.="max-width:{$width};";
+		if($width=='custom'){
+			$width = intval(trim(str_replace('px','',$this->getCfgLayout('responsive/max_width_custom', $storeCode))));
 		}
+		$binderStyleStr.="max-width:{$width}px;";
 		return $binderStyleStr;
     }
 
