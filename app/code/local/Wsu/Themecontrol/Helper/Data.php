@@ -128,7 +128,8 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     public function getBinderStyleStr($storeCode = NULL) {
 		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
-
+		//var_dump(Mage::app()->getLayout()->getUpdate()->getNode('wsu_spine/layout/responsive/max_width_custom'));
+		//var_dump(Mage::app()->getLayout()->getXml());die();
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
 		$binderStyleStr = "";
 		if($width=='custom'){
