@@ -2978,6 +2978,11 @@ between the header and the footer).</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+							<!--<depends separator=","> Come back to, as it should be or
+								<padding>
+									<value>pad,padded</value>
+								</padding>
+							</depends>-->
                         </padding_flanks>
 						<padding_ends translate="label comment">
                             <label>Padding end style</label>
@@ -2990,6 +2995,9 @@ between the header and the footer).</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+							<!--<depends separator=","> Come back to, as it should be or
+								<padding>pad,padded</padding>
+							</depends>-->
                         </padding_ends>
 
 
