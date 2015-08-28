@@ -23,6 +23,11 @@
 					<links>Wsu_Themecontrol_Block_Checkout_Links</links>
 				</rewrite>
 			</checkout>
+			<wishlist>
+				<rewrite>
+					<links>Wsu_Themecontrol_Block_Wishlist_Links</links>
+				</rewrite>
+			</wishlist>
         </blocks>
         <helpers>
             <wsu_themecontrol>
