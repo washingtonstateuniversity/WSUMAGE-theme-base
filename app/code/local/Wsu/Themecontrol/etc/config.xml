@@ -18,6 +18,11 @@
             <wsu_themecontrol>
                 <class>Wsu_Themecontrol_Block</class>
             </wsu_themecontrol>
+			<checkout>
+				<rewrite>
+					<links>Wsu_Themecontrol_Block_Checkout_Links</links>
+				</rewrite>
+			</checkout>
         </blocks>
         <helpers>
             <wsu_themecontrol>
