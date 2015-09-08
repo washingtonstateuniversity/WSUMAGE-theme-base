@@ -54,13 +54,34 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		}
     }
     // Get theme config /////////////////////////////////////////////////////////////////
+	/**
+	 * Load a spine settings file value if it exists
+	 * @return string
+	 */
+	public function get_static_layout_settings( $path ){
+		$configFile = Mage::getBaseDir('design').DS.'frontend/wsu_base/'.Mage::getSingleton('core/design_package')->getTheme('frontend').'/layout/spine-settings.xml';
+		$string = file_get_contents($configFile);
+		$xml = simplexml_load_string($string, 'Varien_Simplexml_Element');
+		$path = '/wsu_spine/' . $path;
+		//var_dump( $path );
+		//var_dump($xml->xpath( $path ));
+		$value = $xml->xpath( $path );
+		if( false !== $value && count($value)>0){
+			$value=(string)$value[0];	
+		}
+		return $value;	
+	}
     /**
      * Get theme's main settings (single option)
      *
      * @return string
      */
     public function getCfg($optionString) {
-        return Mage::getStoreConfig('wsu_themecontrol/' . $optionString);
+		$value = $this->get_static_layout_settings( 'wsu_themecontrol/' . $optionString );
+		if($value == null){
+			$value = Mage::getStoreConfig('wsu_themecontrol/' . $optionString, $storeCode);
+		}
+        return $value;
     }
     /**
      * Get theme's design settings (single option)
@@ -68,7 +89,11 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return string
      */
     public function getCfgDesign($optionString, $storeCode = NULL) {
-        return Mage::getStoreConfig('wsu_themecontrol_design/' . $optionString, $storeCode);
+		$value = $this->get_static_layout_settings( 'wsu_themecontrol_design/' . $optionString );
+		if($value == null){
+			$value = Mage::getStoreConfig('wsu_themecontrol_design/' . $optionString, $storeCode);
+		}
+        return $value;
     }
     /**
      * Get theme's layout settings (single option)
@@ -76,7 +101,11 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return string
      */
     public function getCfgLayout($optionString, $storeCode = NULL) {
-        return Mage::getStoreConfig('wsu_themecontrol_layout/' . $optionString, $storeCode);
+		$value = $this->get_static_layout_settings( 'wsu_themecontrol_layout/' . $optionString );
+		if($value == null){
+			$value = Mage::getStoreConfig('wsu_themecontrol_layout/' . $optionString, $storeCode);
+		}
+        return $value;
     }
 
 
@@ -122,20 +151,25 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		if($width!='custom')$binderClassStr .= ' max-'.$width ;
 		return $binderClassStr;
     }
+	
+
+	
     /**
      * Build the Binder Style String.
      * @return string
      */
     public function getBinderStyleStr($storeCode = NULL) {
 		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
-		//var_dump(Mage::app()->getLayout()->getUpdate()->getNode('wsu_spine/layout/responsive/max_width_custom'));
-		//var_dump(Mage::app()->getLayout()->getXml());die();
+		
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
 		$binderStyleStr = "";
 		if($width=='custom'){
 			$width = intval(trim(str_replace('px','',$this->getCfgLayout('responsive/max_width_custom', $storeCode))));
 		}
 		$binderStyleStr.="max-width:{$width}px;";
+		//var_dump($binderStyleStr);
+		//die();
+		
 		return $binderStyleStr;
     }
 
