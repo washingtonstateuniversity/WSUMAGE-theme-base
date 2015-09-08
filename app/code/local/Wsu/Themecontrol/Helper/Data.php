@@ -60,14 +60,18 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 	 */
 	public function get_static_layout_settings( $path ){
 		$configFile = Mage::getBaseDir('design').DS.'frontend/wsu_base/'.Mage::getSingleton('core/design_package')->getTheme('frontend').'/layout/spine-settings.xml';
-		$string = file_get_contents($configFile);
-		$xml = simplexml_load_string($string, 'Varien_Simplexml_Element');
-		$path = '/wsu_spine/' . $path;
-		//var_dump( $path );
-		//var_dump($xml->xpath( $path ));
-		$value = $xml->xpath( $path );
-		if( false !== $value && count($value)>0){
-			$value=(string)$value[0];	
+		if(file_exists($configFile)){
+			$string = file_get_contents($configFile);
+			$xml = simplexml_load_string($string, 'Varien_Simplexml_Element');
+			$path = '/wsu_spine/' . $path;
+			//var_dump( $path );
+			//var_dump($xml->xpath( $path ));
+			$value = $xml->xpath( $path );
+			if( false !== $value && count($value)>0){
+				$value=(string)$value[0];	
+			}
+		}else{
+			$value = null;	
 		}
 		return $value;	
 	}
