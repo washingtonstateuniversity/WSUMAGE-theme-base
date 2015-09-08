@@ -80,7 +80,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      *
      * @return string
      */
-    public function getCfg($optionString) {
+    public function getCfg($optionString, $storeCode = NULL) {
 		$value = $this->get_static_layout_settings( 'wsu_themecontrol/' . $optionString );
 		if($value == null){
 			$value = Mage::getStoreConfig('wsu_themecontrol/' . $optionString, $storeCode);
