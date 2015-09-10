@@ -42,14 +42,23 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
     {
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
+			
+			$label = $this->getData('cart_label');
+			$label_signle = $this->getData('cart_label_signle');
+			$label_full = $this->getData('cart_label_full');
+			
+			$label = $label !== null ? $label : 'Cart';
+			$label_signle = $label_signle !== null ? $label_signle : 'Cart (%s item)';
+			$label_full = $label_full !== null ? $label_full : 'Cart (%s items)';
+
             $count = $this->getSummaryQty() ? $this->getSummaryQty()
                 : $this->helper('checkout/cart')->getSummaryCount();
             if ($count == 1) {
-                $text = $this->__('Cart (%s item)', $count);
+                $text = $this->__($label_signle, $count);
             } elseif ($count > 0) {
-                $text = $this->__('Cart (%s items)', $count);
+                $text = $this->__($label_full, $count);
             } else {
-                $text = $this->__('Cart');
+                $text = $this->__($label);
             }
 
             $parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
