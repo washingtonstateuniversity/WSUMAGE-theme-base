@@ -62,7 +62,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
             }
 
             $parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
-            $parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart"');
+            $parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart '.($count > 0?'with-items':'').'"');
         }
         return $this;
     }
