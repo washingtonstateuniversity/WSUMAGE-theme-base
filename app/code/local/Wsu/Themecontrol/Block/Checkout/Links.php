@@ -80,6 +80,8 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
+			$label = $this->getData('checkout_label');
+			$label = $label !== null ? $label : 'Checkout';
             $text = $this->__('Checkout');
             $parentBlock->addLink(
                 $text, 'checkout', $text,
