@@ -300,6 +300,22 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .note-msg,
 .notice-msg { border-color:#fcd344; background-color:#fafaec; color:#3d6611; }
 
+/*--jQuery-UI--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*--dialogs--*/
+#confirm_btns{
+	display: flex;
+    justify-content: space-around;
+}
+
+#confirm_btns a{
+    text-align: center;
+    width: 100%;
+}
+
+#yes_remove{ background-color: #D65656; border-radius: 5px 0px 0px 5px;}
+#no_remove{ background-color: #64B169; border-radius: 0px 5px 5px 0px;}
+
+
 /* BreadCrumbs */
 .breadcrumbs a { color:#7f7f7f; }
 .breadcrumbs li { display:inline; }
