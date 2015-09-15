@@ -59,7 +59,7 @@
 			var btn=$(this);
 			var table=btn.closest('table');
 			$.popup_message(
-			"Are you sure you want to remove this item? <a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a>",
+			"Are you sure you want to remove this item? <div id='confirm_btn'><a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a></div>",
 			true,
 			{
 				create:function(){
