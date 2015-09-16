@@ -12,6 +12,14 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      * @var array
      */
     protected $_bgImagesPath;
+	
+    /**
+     * Sectional Data block
+     *
+     * @var array
+     */
+    protected $_sectionalData;
+	
     public function __construct() {
         //Create paths
         $this->_texPath      = 'wysiwyg/wsu/themecontrol/_patterns/default/';
@@ -112,9 +120,43 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		}
         return $value;
     }
-
-
+	public function setCssData( $data ){
+		$this->_sectionalData = $data;	
+	}
+	public function resolveArrayPath( $path, $default="" ){
+		$data = $this->_sectionalData;
+		$paths = explode('/',$path);
+		$value = "";
+		foreach($paths as $path_part){
+			$value = $value==''?  isset($data[$path_part]) ? $data[$path_part] : '' : ( isset($value[$path_part]) ? $value[$path_part] : '' );
+		}
+		return $value==""?$default:$value;
+	}
     // Get selected settings /////////////////////////////////////////////////////////////////
+	
+    /**
+     * Get css built rule with checks for data built in
+     *
+     * @return int
+     */
+    public function getCssRuleAttr($cssAttr = NULL, $path = NULL, $default='', $append = '' ) {
+		$ouput = '';
+		if( $cssAttr == NULL || $path == NULL ){
+			return $ouput;	
+		}
+		
+		$value = $this->resolveArrayPath( $path, $default );
+		if($value!=''){
+			if(strpos($cssAttr,"color")!==false){
+				if(!$this->isColor($value)){
+					return $ouput;	
+				}
+			}
+			$ouput = $cssAttr . ':' . $value . $append;
+		}
+		return $ouput;	
+
+    }
     /**
      * Get maximum page width from the config
      *
