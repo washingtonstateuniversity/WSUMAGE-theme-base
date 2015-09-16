@@ -24,10 +24,11 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
      * @return array
      */
     public function getCfgGroup($group, $storeId = NULL) {
-        if ($storeId)
+        if ($storeId) {
             return Mage::getStoreConfig('wsu_themecontrol/' . $group, $storeId);
-        else
+		} else {
             return Mage::getStoreConfig('wsu_themecontrol/' . $group);
+		}
     }
     /**
      * Get theme's design section from the configuration array
