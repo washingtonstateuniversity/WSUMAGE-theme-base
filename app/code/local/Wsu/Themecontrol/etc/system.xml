@@ -1375,14 +1375,18 @@
                             <show_in_store>1</show_in_store>
 						</button_active_color>
 						
-						<heading_tool_icons translate="label comment">
+
+						<heading_tool_icons translate="label">
 							<label>Interface Icons</label>
-							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<comment>Selected interface icons, e.g.: slider arrows, category view toolbar icons.</comment>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</heading_tool_icons>
+						
+						
 						
 						<tool_icon_bg_color translate="label comment">
 							<label>Icon Background Color</label>
@@ -1394,6 +1398,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tool_icon_bg_color>
+						<tool_icon_color translate="label">
+							<label>Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_color>
 						<tool_icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1404,6 +1418,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tool_icon_hover_bg_color>
+						<tool_icon_hover_color translate="label">
+							<label>Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>240</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_hover_color>
 						<tool_icon_active_bg_color translate="label comment">
 							<label>Icon Active Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1414,6 +1438,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tool_icon_active_bg_color>
+						<tool_icon_active_color translate="label">
+							<label>Icon Active Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>260</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_active_color>
 						
 						<heading_custom_icons translate="label comment">
 							<label>Custom Icons</label>
@@ -1434,6 +1468,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</icon_bg_color>
+						<icon_color translate="label">
+							<label>Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_color>
 						<icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1444,6 +1488,17 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</icon_hover_bg_color>
+						<icon_hover_color translate="label">
+							<label>Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>340</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_hover_color>
+						
 						<social_icon_bg_color translate="label comment">
 							<label>Social Icon Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1454,6 +1509,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</social_icon_bg_color>
+						<social_icon_color translate="label">
+							<label>Social Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>360</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</social_icon_color>
 						<social_icon_hover_bg_color translate="label comment">
 							<label>Social Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1464,6 +1529,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</social_icon_hover_bg_color>
+						<social_icon_hover_color translate="label">
+							<label>Social Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>380</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</social_icon_hover_color>
 						
 						<heading_special_links translate="label comment">
 							<label>Horizontal Links</label>
@@ -1564,6 +1639,20 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</price_color>
+						<additional_bg_color translate="label">
+							<label>Additional Background Color</label>
+							<comment>Background color used to emphasize some elements and blocks, e.g. totals on the cart page</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>820</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</additional_bg_color>
+						
+						
+						
 					</fields>
 				</colors>
 				<font translate="label comment">
@@ -1584,12 +1673,20 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </font_size>
+						<heading_heading_font translate="label">
+							<label>Heading Font</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_heading_font>
 						<primary_font_family_group translate="label comment">
                             <label>Headings Font Family</label>
 							<comment>Select predefined font stack, Google Fonts or type in your custom font stack.</comment>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_design_font_family_groupcustomgoogle</source_model>
-                            <sort_order>20</sort_order>
+                            <sort_order>210</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -1603,7 +1700,7 @@
 								<strong>Important</strong>: Do not add trailing semicolon.]]>
 							</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>25</sort_order>
+                            <sort_order>220</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -1619,7 +1716,7 @@
 							</comment>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_wsu/system_config_source_design_font_family_google</source_model>
-                            <sort_order>30</sort_order>
+                            <sort_order>230</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -1627,22 +1724,29 @@
 								<primary_font_family_group>google</primary_font_family_group>
 							</depends>
                         </primary_font_family>
-						<primary_char_latin_ext translate="label comment">
-                            <label>Character Set: Latin Extended</label>
-							<comment>
-								<![CDATA[Only selected fonts support extended character sets. For a complete list of available fonts and font subsets please refer to <a href="http://www.google.com/webfonts">Google Web Fonts</a>.]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>adminhtml/system_config_source_enabledisable</source_model>
-                            <sort_order>40</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+						<primary_char_subset translate="label">
+							<label>Character Sets</label>
+							<comment><![CDATA[Some of the fonts support multiple scripts (like Latin and Cyrillic for example). You need to select at least one character set.<br/><strong style="color:red;">Important</strong>: not all fonts support extended character sets. For a complete list of available fonts and font subsets refer to <a href="http://www.google.com/webfonts">Google Web Fonts</a>.<br/><strong style="color:red;">Important</strong>: using multiple character sets affects performance, so only select the character sets that you actually need.]]></comment>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>wsu_wsu/system_config_source_design_font_google_subset</source_model>
+							<sort_order>240</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 							<depends>
 								<primary_font_family_group>google</primary_font_family_group>
 							</depends>
-                        </primary_char_latin_ext>
-						
+						</primary_char_subset>
+
+						<primary_font_weight translate="label">
+							<label>Font Weight</label>
+							<comment><![CDATA[Specify the weight of the font. You can only use <strong>numeric font weights</strong> which are available for the CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><em>font-weight</em></a>. E.g. normal weight is <em>400</em>, bold is <em>700</em>. Leave empty to use default weight.<br/><strong style="color:red;">Important</strong>: if you selected a font from Google Fonts, note that some fonts are not available in all weights. Refer to <a href="http://www.google.com/webfonts">Google Web Fonts</a> to check if the selected weight is available for your font.]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>250</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</primary_font_weight>
 					</fields>
 				</font>
 				<effects translate="label comment">
@@ -1653,18 +1757,40 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<shadow translate="label comment">
-                            <label>Shadow</label>
-							<comment>
-								<![CDATA[If set to "Yes", all sections with nontransparent <strong>Inner Background Color</strong>, will drop shadow.]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>100</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </shadow>
+						<shadow translate="label">
+							<label>Content Area Shadow</label>
+							<comment><![CDATA[If enabled, all sections with nontransparent <strong>Inner Background Color</strong>, will drop shadow.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</shadow>
+
+						<shadow_nav translate="label">
+							<label>Main Menu Shadow</label>
+							<comment><![CDATA[Select which container of the menu will drop shadow. <strong>Important:</strong> unlike other sections, menu doesn't need to have <strong>Inner Background Color</strong> to drop shadow.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_navshadow</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<shadow>1</shadow>
+							</depends>
+						</shadow_nav>
+						<structural_elements_transition translate="label">
+							<label>Structural Elements Transition</label>
+							<comment><![CDATA[If enabled, main structural elements of the page layout will be animated during web browser window resizing.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</structural_elements_transition>
 					</fields>
 				</effects>
 				<page translate="label comment">
@@ -1675,13 +1801,21 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+					<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
 						<viewport_bg_color translate="label comment">
 							<label>Viewport Background Color</label>
 							<comment><![CDATA[Background color of the web browser viewport (applied for HTML <code>body</code> element). Set the same color as for footer background to avoid blank space below the footer on large screens.]]></comment>
 							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-							<sort_order>0</sort_order>
+							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -1760,6 +1894,26 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
+						
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+						<content_padding_side translate="label">
+							<label>Side Padding</label>
+							<comment><![CDATA[Add padding space to the left and right side of all sections of the page. Leave empty to use default value. Specify value in pixels.]]></comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-1-50</validate>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_padding_side>
 					</fields>
 				</page>
 				<header translate="label comment">
@@ -1780,6 +1934,46 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</top_border_color>
+						<color translate="label">
+							<label>Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</color>
+						<link_color translate="label">
+							<label>Link Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_color>
+						<link_hover_color translate="label">
+							<label>Link Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_hover_color>
+
+						<heading_gap translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_gap>
+						
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1790,16 +1984,107 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
+						<bg_image translate="label">
+							<label>Background Image</label>
+							<frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_image</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">wysiwyg/wsu/themecontrol/_backgrounds</upload_dir>
+							<base_url type="media" scope_info="1">wysiwyg/wsu/themecontrol/_backgrounds</base_url>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_image>
+						<bg_repeat translate="label">
+							<label>Background Repeat</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_css_background_repeat</source_model>
+							<sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_repeat>
+						<bg_attachment translate="label">
+							<label>Background Attachment</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_css_background_attachment</source_model>
+							<sort_order>140</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_attachment>
+						<bg_positionx translate="label">
+							<label>Background Position (x-axis)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_css_background_positionx</source_model>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_positionx>
+						<bg_positiony translate="label">
+							<label>Background Position (y-axis)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>wsu_wsu/system_config_source_css_background_positiony</source_model>
+							<sort_order>160</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_positiony>
+
 						<tex translate="label comment">
 							<label>Pattern</label>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
 							<source_model>wsu_themecontrol/system_config_source_design_tex_names</source_model>
+							<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>
                             <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
+						<tex2 translate="label">
+							<label>Second Pattern</label>
+							<frontend_type>select</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
+							<source_model>wsu_themecontrol/system_config_source_design_tex_names</source_model>
+							<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>
+							<sort_order>171</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tex2>
+						<padding_top translate="label">
+							<label>Top Padding</label>
+							<comment>Specify additional gap above the header section. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>180</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
+							<comment>Specify additional gap below the header section. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>190</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -1811,7 +2096,7 @@
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label comment">
+						<!--<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
@@ -1840,7 +2125,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-						</link_hover_color>
+						</link_hover_color>-->
 						
 						<heading_search translate="label comment">
 							<label>Search box</label>
@@ -1851,6 +2136,26 @@
 							<show_in_store>1</show_in_store>
 						</heading_search>
 						
+						<search_bg_color translate="label">
+							<label>Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>410</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</search_bg_color>
+						<search_hover_bg_color translate="label">
+							<label>Hover Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>420</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</search_hover_bg_color>
 						<search_color translate="label comment">
 							<label>Search Text Color</label>
                             <frontend_type>text</frontend_type>
@@ -1941,8 +2246,304 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</dropdown_link_hover_color>
+						
+
+						<heading_mobile_header translate="label">
+							<label>Mobile header</label>
+							<comment>Buttons (i.e. menu, search, account, cart) displayed in mobile header.</comment>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_heading</frontend_model>
+							<sort_order>900</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_mobile_header>
+
+						<mh_item_bg_color translate="label">
+							<label>Item Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>910</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_item_bg_color>
+						<mh_item_color translate="label">
+							<label>Item Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>920</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_item_color>
+						<mh_item_active_bg_color translate="label">
+							<label>Item Active Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>930</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_item_active_bg_color>
+						<mh_item_active_color translate="label">
+							<label>Item Active Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>940</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_item_active_color>
+						<mh_content_color translate="label">
+							<label>Content Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>950</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_content_color>
+						<mh_content_link_color translate="label">
+							<label>Content Link Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>960</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_content_link_color>
+						<mh_content_link_hover_color translate="label">
+							<label>Content Link Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>970</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mh_content_link_hover_color>
+
+						
+						
 					</fields>
 				</header>
+				<header_top translate="label">
+					<label>Header - Top</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>35</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<color translate="label">
+							<label>Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</color>
+						<link_color translate="label">
+							<label>Link Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_color>
+						<link_hover_color translate="label">
+							<label>Link Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_hover_color>
+
+						<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
+
+						<bg_color translate="label">
+							<label>Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_color>
+						<padding_top translate="label">
+							<label>Top Padding</label>
+							<comment>Specify additional gap above this section of the header. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
+							<comment>Specify additional gap below this section of the header. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+						<inner_bg_color translate="label">
+							<label>Inner Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</inner_bg_color>
+						<content_padding_top translate="label">
+							<label>Content Top Padding</label>
+							<comment><![CDATA[Specify additional padding at the top of the content area of this section. Use when you want to move the content away from the top edge of the content area. Especially useful if you also configured the inner background color for this section (field: <strong>Header - Top > Inner Background Color</strong>) and the top gap for the entire header (field <strong>Header > Top Padding</strong>). Value in pixels.]]></comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_padding_top>
+						<content_padding_bottom translate="label">
+							<label>Content Bottom Padding</label>
+							<comment><![CDATA[Specify additional padding at the bottom of the content area of this section. Similar to <strong>Content Top Padding</strong>. Value in pixels.]]></comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_padding_bottom>
+						<stretched translate="label">
+							<label>Remove Content Side Padding</label>
+							<comment>If set to "Yes", padding at the left and right side of the inner container will be removed and the content area of this section will be stretched.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>340</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</stretched>
+					</fields>
+				</header_top>
+				<header_primary translate="label">
+					<label>Header - Primary</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>36</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
+
+						<padding_top translate="label">
+							<label>Top Padding</label>
+							<comment>Specify additional gap above this section of the header. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
+							<comment>Specify additional gap below this section of the header. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+						<content_padding_top translate="label">
+							<label>Content Top Padding</label>
+							<comment><![CDATA[Specify additional padding at the top of the content area of this section. Use when you want to move the content away from the top edge of the content area. Especially useful if you also configured the inner background color for this section (field: <strong>Header - Primary > Inner Background Color</strong>). Value in pixels.]]></comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_padding_top>
+						<content_padding_bottom translate="label">
+							<label>Content Bottom Padding</label>
+							<comment><![CDATA[Specify additional padding at the bottom of the content area of this section. Similar to <strong>Content Top Padding</strong>. Value in pixels.]]></comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_padding_bottom>
+						<stretched translate="label">
+							<label>Remove Content Side Padding</label>
+							<comment>If set to "Yes", padding at the left and right side of the inner container will be removed and the content area of this section will be stretched.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</stretched>
+					</fields>
+				</header_primary>
+				
+				
 				<nav translate="label comment">
                     <label>Main Menu</label>
                     <frontend_type>text</frontend_type>
@@ -2266,6 +2867,14 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+						<heading_gap translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_gap>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2286,6 +2895,35 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
+						<padding_top translate="label">
+							<label>Top Padding</label>
+							<comment>Specify additional gap above the main section of the page. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
+							<comment>Specify additional gap below the main section of the page. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>240</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2298,6 +2936,46 @@ between the header and the footer).</comment>
 						</inner_bg_color>
 					</fields>
 				</main>
+				<category translate="label">
+					<label>Category View</label>
+					<comment>In this tab, you can configure category view.</comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>55</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<heading_grid translate="label">
+							<label>Product Grid/List</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_grid>
+
+						<grid_item_bg_color translate="label">
+							<label>Item Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</grid_item_bg_color>
+						<grid_item_hover_bg_color translate="label">
+							<label>Item Hover Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</grid_item_hover_bg_color>
+					</fields>
+				</category>
 				<product_page translate="label comment">
                     <label>Product Page</label>
                     <frontend_type>text</frontend_type>
@@ -2307,7 +2985,7 @@ between the header and the footer).</comment>
                     <show_in_store>1</show_in_store>
                     <fields>
 						<heading_icons translate="label comment">
-							<label>Add-to... Icons</label>
+							<label>"Add to" Links Icons</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
 							<show_in_default>1</show_in_default>
@@ -2355,6 +3033,27 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_inner_bg_color>
+						<tab_panel_bg_color translate="label">
+							<label>Panel Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>206</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tab_panel_bg_color>
+						<tab_border_color translate="label">
+							<label>Border Color</label>
+							<comment>Boder color will be also used in accordion.</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>207</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tab_border_color>
 						<tab_bg_color translate="label comment">
 							<label>Item Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2415,16 +3114,7 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tab_active_color>
-						<tab_panel_bg_color translate="label comment">
-							<label>Panel Background Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>270</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</tab_panel_bg_color>
+						
 						
 						<heading_accordion translate="label comment">
 							<label>Accordion Tabs</label>
@@ -2435,28 +3125,122 @@ between the header and the footer).</comment>
 							<show_in_store>1</show_in_store>
 						</heading_accordion>
 						
-						<acco_active_bg_color translate="label comment">
+						<acco_bg_color translate="label">
+							<label>Accordion Item Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</acco_bg_color>
+						<acco_color translate="label">
+							<label>Accordion Item Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>320</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</acco_color>
+						<acco_active_bg_color translate="label">
 							<label>Accordion Active Item Background Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>310</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</acco_active_bg_color>
-						<acco_active_color translate="label comment">
+						<acco_active_color translate="label">
 							<label>Accordion Active Item Text Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>320</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>340</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</acco_active_color>
+
 					</fields>
 				</product_page>
+				<slideshow translate="label">
+					<label>Slideshow</label>
+					<comment>In this tab, you can configure elements related to slideshows.</comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>100</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<heading_tool_icons translate="label">
+							<label>Interface Icons</label>
+							<comment>Slider arrows and pagination.</comment>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_tool_icons>
+						
+						<tool_icon_bg_color translate="label">
+							<label>Icon Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_bg_color>
+						<tool_icon_color translate="label">
+							<label>Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_color>
+						<tool_icon_hover_bg_color translate="label">
+							<label>Icon Hover Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_hover_bg_color>
+						<tool_icon_hover_color translate="label">
+							<label>Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>240</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_hover_color>
+						<tool_icon_active_bg_color translate="label">
+							<label>Icon Active Background Color</label>
+							<comment>Active pagination button. Note: not all styles of pagination use "active state" color.</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>250</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_active_bg_color>
+					</fields>
+				</slideshow>
+
 				<footer translate="label comment">
                     <label>Footer</label>
 					<comment>In this tab, you can configure the entire footer of the page. Settings from this tab are inherited by all the other sub-sections of the footer. Some of the settings can be overridden in sub-sections.</comment>
@@ -2466,6 +3250,47 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+					
+						<color translate="label">
+							<label>Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</color>
+						<link_color translate="label">
+							<label>Link Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_color>
+						<link_hover_color translate="label">
+							<label>Link Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_hover_color>
+
+						<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
+					
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2481,11 +3306,33 @@ between the header and the footer).</comment>
 							<frontend_type>select</frontend_type>
 	                        <frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
 							<source_model>wsu_themecontrol/system_config_source_design_tex_names</source_model>
+							<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>
                             <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</tex>
+						<tex2 translate="label">
+							<label>Second Pattern</label>
+							<frontend_type>select</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_tex</frontend_model>
+							<source_model>wsu_themecontrol/system_config_source_design_tex_names</source_model>
+							<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>
+							<sort_order>221</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tex2>
+						
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2497,77 +3344,156 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label comment">
-							<label>Text Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>130</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</color>
-						<link_color translate="label comment">
-							<label>Link Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>140</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</link_color>
-						<link_hover_color translate="label comment">
-							<label>Link Hover Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>150</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</link_hover_color>
+						<heading_buttons translate="label">
+							<label>Buttons</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>400</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_buttons>
 						
-						<button_bg_color translate="label comment">
+						<button_bg_color translate="label">
 							<label>Button Background Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>210</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>410</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</button_bg_color>
-						<button_color translate="label comment">
+						<button_color translate="label">
 							<label>Button Text Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>220</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>420</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</button_color>
-						<button_hover_bg_color translate="label comment">
+						<button_hover_bg_color translate="label">
 							<label>Button Hover Background Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>230</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>430</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</button_hover_bg_color>
-						<button_hover_color translate="label comment">
+						<button_hover_color translate="label">
 							<label>Button Hover Text Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>240</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>440</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</button_hover_color>
+
+						<heading_tool_icons translate="label">
+							<label>Interface Icons</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>500</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_tool_icons>
+						
+						<tool_icon_bg_color translate="label">
+							<label>Icon Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>510</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_bg_color>
+						<tool_icon_color translate="label">
+							<label>Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>520</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_color>
+						<tool_icon_hover_bg_color translate="label">
+							<label>Icon Hover Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>530</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_hover_bg_color>
+						<tool_icon_hover_color translate="label">
+							<label>Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>540</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tool_icon_hover_color>
+
+						<heading_custom_icons translate="label">
+							<label>Custom Icons</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>600</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_custom_icons>
+						
+						<icon_bg_color translate="label">
+							<label>Icon Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>610</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_bg_color>
+						<icon_color translate="label">
+							<label>Icon Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>620</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_color>
+						<icon_hover_bg_color translate="label">
+							<label>Icon Hover Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>630</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_hover_bg_color>
+						<icon_hover_color translate="label">
+							<label>Icon Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>640</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</icon_hover_color>
+
 					</fields>
 				</footer>
 				<footer_top translate="label comment">
@@ -2578,6 +3504,45 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+						<color translate="label">
+							<label>Text Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</color>
+						<link_color translate="label">
+							<label>Link Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_color>
+						<link_hover_color translate="label">
+							<label>Link Hover Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link_hover_color>
+
+						<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2588,6 +3553,38 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 						</bg_color>
+						<padding_top translate="label">
+							<label>Top Padding</label>
+							<comment>Specify additional gap above this section of the footer. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
+							<comment>Specify additional gap below this section of the footer. Value in pixels.</comment>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-0-50</validate>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+
+						
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
@@ -2599,36 +3596,6 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</inner_bg_color>
 						
-						<color translate="label comment">
-							<label>Text Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>130</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</color>
-						<link_color translate="label comment">
-							<label>Link Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>140</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</link_color>
-						<link_hover_color translate="label comment">
-							<label>Link Hover Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>150</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</link_hover_color>
 					</fields>
 				</footer_top>
 				<footer_primary translate="label comment">
@@ -2639,78 +3606,97 @@ between the header and the footer).</comment>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<bg_color translate="label comment">
-							<label>Background Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</bg_color>
-						<inner_bg_color translate="label comment">
-							<label>Inner Background Color</label>
-                            <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-						</inner_bg_color>
-						
-						<color translate="label comment">
+						<color translate="label">
 							<label>Text Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>130</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</color>
-						<link_color translate="label comment">
+						<link_color translate="label">
 							<label>Link Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>140</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</link_color>
-						<link_hover_color translate="label comment">
+						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
 							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
-                            <sort_order>150</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
 						</link_hover_color>
-						
-						<padding_top translate="label comment">
-                            <label>Top Padding</label>
+
+						<heading_outer translate="label">
+							<label>Outer Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_outer>
+
+						<bg_color translate="label">
+							<label>Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bg_color>
+						<padding_top translate="label">
+							<label>Top Padding</label>
 							<comment>Specify additional gap above this section of the footer. Value in pixels.</comment>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<validate>validate-number validate-number-range number-range-0-50</validate>
-                            <sort_order>200</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </padding_top>
-						<padding_bottom translate="label comment">
-                            <label>Bottom Padding</label>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_top>
+						<padding_bottom translate="label">
+							<label>Bottom Padding</label>
 							<comment>Specify additional gap below this section of the footer. Value in pixels.</comment>
-                            <frontend_type>text</frontend_type>
+							<frontend_type>text</frontend_type>
 							<validate>validate-number validate-number-range number-range-0-50</validate>
-                            <sort_order>210</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </padding_bottom>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</padding_bottom>
+
+						<heading_inner translate="label">
+							<label>Inner Container</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner>
+
+						<inner_bg_color translate="label">
+							<label>Inner Background Color</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<sort_order>310</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</inner_bg_color>
+
 					</fields>
 				</footer_primary>
 				<footer_bottom translate="label comment">

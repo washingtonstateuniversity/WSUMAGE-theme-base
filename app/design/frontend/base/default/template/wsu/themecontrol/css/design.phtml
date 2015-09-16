@@ -12,6 +12,7 @@
 <?php
 	$t = Mage::helper('wsu_themecontrol');
 	$d = $t->getCfgSectionDesign(Mage::registry('cssgen_store'));
+	$t->setCssData( $d  );
 
 	//Determine background color of the main content area
 	$mainBgColor = '#fff';
@@ -30,36 +31,28 @@
 ?>
 
 body {
-	<?php if ($t->isColor($d['colors']['color'])): ?>
-		color: <?php echo $d['colors']['color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['font']['font_size'])): ?>
-		font-size: <?php echo $d['font']['font_size']; ?>;
-	<?php endif; ?>
-
-	<?php if ($d['page']['viewport_bg_color']): ?>
-		background-color: <?php echo $d['page']['viewport_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','colors/color','',';')?>
+	<?=$t->getCssRuleAttr('font-size','font/font_size','',';')?>
+	<?=$t->getCssRuleAttr('background-color','page/viewport_bg_color','',';')?>
 }
 a
 {
-	<?php if ($t->isColor($d['colors']['link_color'])): ?>
-		color: <?php echo $d['colors']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','colors/link_color','',';')?>
 }
 a:hover,
-.vertnav li.current > a
+.vertnav li.current > a,
+h2.product-name a:hover,
+h3.product-name a:hover,
+h4.product-name a:hover,
+h5.product-name a:hover,
+p.product-name a:hover
 {
-	<?php if ($t->isColor($d['colors']['link_hover_color'])): ?>
-		color: <?php echo $d['colors']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','colors/link_hover_color','',';')?>
 }
 
 <?php //Caret (the same color as text) ?>
 .caret {
-	<?php if ($t->isColor($d['colors']['color'])): ?>
-		border-top-color: <?php echo $d['colors']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('border-top-color','colors/color','',';')?>
 }
 
 
@@ -68,182 +61,41 @@ a:hover,
 -------------------------------------------------------------- */
 ?>
 <?php //All buttons ?>
-button.button span
+.button
 {
-	background-color: <?php echo $d['colors']['button_bg_color']; ?>;
-	color: <?php echo $d['colors']['button_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/button_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/button_color','',';')?>
 }
-button.button:hover span
+.button:hover,
+.button:focus
 {
-	background-color: <?php echo $d['colors']['button_hover_bg_color']; ?>;
-	color: <?php echo $d['colors']['button_hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/button_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/button_hover_color','',';')?>
 }
 
 <?php //Add to cart (product view) & Proceed to checkout ?>
-.product-view .btn-cart span,
-button.btn-checkout span
+.product-view .btn-cart,
+.btn-checkout
 {
-	background-color: <?php echo $d['colors']['button_active_bg_color']; ?>;
-	color: <?php echo $d['colors']['button_active_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/button_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/button_active_color','',';')?>
 }
-.product-view .btn-cart:hover span,
-button.btn-checkout:hover span
+.product-view .btn-cart:hover,
+.btn-checkout:hover
 {
-	background-color: <?php echo $d['colors']['button_hover_bg_color']; ?>;
-	color: <?php echo $d['colors']['button_hover_color']; ?>;
-}
-
-
-<?php
-/* Interface icons: toolbar icons, pager, prev/next slide etc.
--------------------------------------------------------------- */
-?>
-
-/* Default icon */
-/* Toolbar */
-.sorter .view-mode a,
-.sorter .sort-by .category-asc,
-.sorter .sort-by .category-desc,
-.pager .pages li a,
-
-/* Back link */
-.buttons-set .back-link small,
-
-/* Add-to links */
-
-	/* Simple icons (product grid) */
-	.add-to-links.addto-icons a, /*Deprecated*/
-
-	/* Other with standard icons */
-	.add-to-links span.icon,
-
-/* Slider arrows */
-.slider-arrows1 .owl-controls .owl-buttons div,
-.slider-arrows1 .owl-controls.clickable .owl-buttons div.disabled:hover,
-.slider-arrows2 .owl-controls .owl-buttons div,
-.slider-arrows3 .owl-controls .owl-buttons div,
-.slider-arrows3 .owl-controls.clickable .owl-buttons div.disabled:hover,
-
-	/* deprecated */
-	.gen-slider-arrows1 .direction-nav a, /* Sliders */
-	.gen-slider-arrows1 .direction-nav a.disabled:hover,
-	.gen-slider-arrows2 .direction-nav a, /* Slideshow */
-	.gen-slider-arrows2 .direction-nav a.disabled:hover,
-	.gen-slider-arrows3 .direction-nav a, /* Cloud Zoom */
-	.gen-slider-arrows3 .direction-nav a.disabled:hover,
-
-/* Slider pagination */
-.slider-pagination1 .owl-controls .owl-page span,
-.slider-pagination2 .owl-controls .owl-page span,
-
-/* Lightbox */
-#cboxPrevious,
-#cboxNext,
-#cboxClose,
-
-/* Accordion and collapsible: opener */
-.accordion-style1 .opener,
-.collapsible .opener,
-
-/* Scroll to top */
-#scroll-to-top
-{
-	background-color: <?php echo $d['colors']['tool_icon_bg_color']; ?>;
-}
-
-
-/* Hover icon */
-/* Toolbar */
-.sorter .view-mode a:hover,
-.sorter .sort-by .category-asc:hover,
-.sorter .sort-by .category-desc:hover,
-.pager .pages li a:hover,
-
-/* Back link */
-.buttons-set .back-link:hover small,
-
-/* Add-to links */
-
-	/* Simple icons (product grid) */
-	.add-to-links.addto-icons a:hover, /*Deprecated*/
-
-	/* Other with standard icons */
-	.add-to-links span.icon-hover:hover,
-	.add-to-links .feature-icon-hover:hover span.icon,
-
-/* Slider arrows */
-.slider-arrows1 .owl-controls.clickable .owl-buttons div:hover,
-.slider-arrows2 .owl-controls.clickable .owl-buttons div:hover,
-.slider-arrows3 .owl-controls.clickable .owl-buttons div:hover,
-
-	/* deprecated */
-	.gen-slider-arrows1 .direction-nav a:hover,
-	.gen-slider-arrows2 .direction-nav a:hover,
-	.gen-slider-arrows3 .direction-nav a:hover,
-
-/* Slider pagination */
-.slider-pagination1 .owl-controls.clickable .owl-page:hover span,
-.slider-pagination2 .owl-controls.clickable .owl-page:hover span,
-
-
-/* Lightbox */
-#cboxPrevious:hover,
-#cboxNext:hover,
-#cboxClose:hover,
-
-/* Accordion and collapsible: opener */
-.accordion-style1 .opener:hover,
-.collapsible .opener:hover,
-
-/* Scroll to top */
-#scroll-to-top:hover
-{
-	background-color: <?php echo $d['colors']['tool_icon_hover_bg_color']; ?>;
-}
-
-
-/* Active icon */
-/* Slider pagination */
-.slider-pagination1 .owl-controls			.owl-page.active span,
-.slider-pagination1 .owl-controls.clickable .owl-page.active:hover span, /* Active state overrides hover state */
-.slider-pagination2 .owl-controls			.owl-page.active span,
-.slider-pagination2 .owl-controls.clickable .owl-page.active:hover span, /* Active state overrides hover state */
-
-.sorter .view-mode span.grid,
-.sorter .view-mode span.list,
-.pager .pages li.current
-{
-	background-color: <?php echo $d['colors']['tool_icon_active_bg_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/button_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/button_hover_color','',';')?>
 }
 
 
 <?php
-/* Custom icons
--------------------------------------------------------------- */
-?>
-span.icon
-{
-	background-color: <?php echo $d['colors']['icon_bg_color']; ?>;
-}
-span.icon-hover:hover,
-.feature-icon-hover:hover span.icon
-{
-	background-color: <?php echo $d['colors']['icon_hover_bg_color']; ?>;
-}
-
-
-<?php
-/* Important links (on hover)
+/* Inline horizontal links (on hover)
 -------------------------------------------------------------- */
 ?>
 
 .links > li > a:hover {
-	<?php if ($t->isColor($d['colors']['important_link_hover_bg_color'])): ?>
-		background-color: <?php echo $d['colors']['important_link_hover_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['colors']['important_link_hover_color'])): ?>
-		color: <?php echo $d['colors']['important_link_hover_color']; ?> !important;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','colors/important_link_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/important_link_hover_color','',' !important;')?>
 }
 
 
@@ -252,13 +104,14 @@ span.icon-hover:hover,
 -------------------------------------------------------------- */
 ?>
 .sticker.new {
-	background-color: <?php echo $d['colors']['label_new_bg_color']; ?>;
-	color: <?php echo $d['colors']['label_new_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/label_new_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/label_new_color','',';')?>
 }
 .sticker.sale {
-	background-color: <?php echo $d['colors']['label_sale_bg_color']; ?>;
-	color: <?php echo $d['colors']['label_sale_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/label_sale_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/label_sale_color','',';')?>
 }
+
 
 
 <?php
@@ -266,20 +119,31 @@ span.icon-hover:hover,
 -------------------------------------------------------------- */
 ?>
 
-<?php //Price ?>
-/*.price-box .price*/
+<?php //Regular price ?>
+/*.products-grid .price-box .price,*/ /* All prices on product listings. If added, it would need to be later overridden by colors for old price and special price. */
 .price-box .regular-price .price,
-.price-box .minimal-price .price,
-.price-box-bundle .full-product-price .price { color: <?php echo $d['colors']['price_color']; ?>; }
+.price-box .minimal-price .price, /* Grouped product, tier price product */
+.price-box .price-from .price, /* Bundle product */
+.price-box .price-to .price, /* Bundle product */
+.price-as-configured .price /* Bundle product - final price on product page */
+{
+	<?=$t->getCssRuleAttr('color','colors/price_color','',';')?>
+}
 
+<?php //Special price ?>
+
+<?php //Old price ?>
 
 <?php //Additional background color ?>
 .additional-bg-color,
 .block-layered-nav .currently,
-.cart .totals
+.block-layered-nav .actions,
+.cart .totals,
+.checkout-agreements li
 {
-	background-color: <?=(isset($d['colors']['additional_bg_color'])?$d['colors']['additional_bg_color']:'')?>;
+	<?=$t->getCssRuleAttr('background-color','colors/additional_bg_color','',';')?>
 }
+
 
 
 
@@ -297,6 +161,7 @@ h1, h2, h3, h4, h5,
 .products-list .product-name,
 .products-grid .product-name,
 h3.product-name, /*TODO:remove*/
+.block-layered-nav .block-subtitle--filter, /* Filters */
 
 /* Generic  */
 .feature .heading,
@@ -304,16 +169,16 @@ h3.product-name, /*TODO:remove*/
 
 /* Main menu */
 	/* Regular mode */
-	.nav-regular li.level0 > a, /* level 1 */
+	.nav-regular .nav-item.level0 > a, /* level 1 */
 
 		/* Mega dropdown */
 		.nav-regular .nav-submenu--mega > li > a, /* First level of mega dropdown */
 
 	/* Mobile mode */
 	.mobnav-trigger,
-	.nav-mobile li.level0 > a, /* level 1 */
-	.nav-mobile li.level1 > a, /* level 2 */
-	.nav-mobile li.level2 > a, /* level 3 */
+	.nav-mobile .nav-item.level0 > a, /* level 1 */
+	.nav-mobile .nav-item.level1 > a, /* level 2 */
+	.nav-mobile .nav-item.level2 > a, /* level 3 */
 
 /* Block headings */
 .block .block-title,
@@ -343,21 +208,25 @@ h3.product-name, /*TODO:remove*/
 /* Captions */
 .caption .heading
 {
+	
 	<?php if ($d['font']['primary_font_family_group'] == 'google'): //Google Fonts ?>
-		font-family: "<?php echo $d['font']['primary_font_family']; ?>", georgia, serif;
+
+		<?=$t->getCssRuleAttr('font-family','font/primary_font_family','',' , georgia, serif;')?>
 		
 	<?php elseif ($d['font']['primary_font_family_group'] == 'custom'): //User-defined font stack ?>
-		font-family: <?php echo $d['font']['primary_font_family_custom']; ?>;
-		
-	<?php else: //Predefined font stack ?>
-		font-family: <?php echo $d['font']['primary_font_family_group']; ?>;
+	
+		<?=$t->getCssRuleAttr('font-family','font/primary_font_family_custom','',';')?>
 
+	<?php else: //Predefined font stack ?>
+	
+		<?=$t->getCssRuleAttr('font-family','font/primary_font_family_group','',';')?>
+		
 	<?php endif; ?>
-	<?=isset($d['font']['primary_font_weight'])?'':$d['font']['primary_font_weight']='normal'?>
-	<?php if ($d['font']['primary_font_weight']): ?>
-		font-weight: <?php echo $d['font']['primary_font_weight']; ?>;
-	<?php endif; ?>
+	
+	<?=$t->getCssRuleAttr('font-weight','font/primary_font_weight','',';')?>
+
 }
+
 
 
 
@@ -406,6 +275,152 @@ h3.product-name, /*TODO:remove*/
 }
 <?php endif; ?>
 
+<?php
+//Icons
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+?>
+
+<?php
+/* Interface icons: toolbar icons, pager, prev/next slide etc.
+-------------------------------------------------------------- */
+?>
+
+<?php //Default icon ?>
+
+/* Toolbar */
+.sorter .view-mode a,
+.sorter .sort-by .category-asc,
+.sorter .sort-by .category-desc,
+.pager .pages a,
+.pager .pages .current,
+
+/* Add-to links */
+.add-to-links .ic,
+
+/* Slider arrows */
+.slider-arrows1 .owl-controls .owl-buttons div,
+.slider-arrows1 .owl-controls.clickable .owl-buttons div.disabled:hover,
+.slider-arrows2 .owl-controls .owl-buttons div,
+.slider-arrows3 .owl-controls .owl-buttons div,
+.slider-arrows3 .owl-controls.clickable .owl-buttons div.disabled:hover,
+
+/* Slider pagination */
+.slider-pagination1 .owl-controls .owl-page span,
+.slider-pagination2 .owl-controls .owl-page span,
+
+/* Lightbox */
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+
+/* Accordion and collapsible: opener */
+.accordion-style1 .opener,
+.collapsible .opener,
+
+/* Scroll to top */
+#scroll-to-top
+{
+	<?=$t->getCssRuleAttr('background-color','colors/tool_icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/tool_icon_color','',';')?>
+}
+
+
+<?php //Hover icon ?>
+
+/* Toolbar */
+.sorter .view-mode a:hover,
+.sorter .sort-by .category-asc:hover,
+.sorter .sort-by .category-desc:hover,
+.pager .pages li a:hover,
+
+/* Add-to links */
+.add-to-links .ic:hover,
+.add-to-links .feature-icon-hover:hover .ic,
+
+/* Slider arrows */
+.slider-arrows1 .owl-controls.clickable .owl-buttons div:hover,
+.slider-arrows2 .owl-controls.clickable .owl-buttons div:hover,
+.slider-arrows3 .owl-controls.clickable .owl-buttons div:hover,
+
+/* Slider pagination */
+.slider-pagination1 .owl-controls.clickable .owl-page:hover span,
+.slider-pagination2 .owl-controls.clickable .owl-page:hover span,
+
+/* Lightbox */
+#cboxPrevious:hover,
+#cboxNext:hover,
+#cboxClose:hover,
+
+/* Accordion and collapsible: opener */
+.accordion-style1 .opener:hover,
+.collapsible .opener:hover,
+
+/* Scroll to top */
+#scroll-to-top:hover
+{
+	<?=$t->getCssRuleAttr('background-color','colors/tool_icon_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/tool_icon_hover_color','',';')?>
+}
+
+
+<?php //Active icon ?>
+
+/* Slider pagination */
+.slider-pagination1 .owl-controls			.owl-page.active span,
+.slider-pagination1 .owl-controls.clickable .owl-page.active:hover span, /* Active state overrides hover state */
+.slider-pagination2 .owl-controls			.owl-page.active span,
+.slider-pagination2 .owl-controls.clickable .owl-page.active:hover span, /* Active state overrides hover state */
+
+.sorter .view-mode span.grid,
+.sorter .view-mode span.list,
+.pager .pages .current
+{
+	<?=$t->getCssRuleAttr('background-color','colors/tool_icon_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/tool_icon_active_color','',';')?>
+}
+
+
+<?php
+/* Custom icons - iconbox
+-------------------------------------------------------------- */
+?>
+.ib,
+
+/* For backward compatibility: */
+.feature > span.icon
+{
+	<?=$t->getCssRuleAttr('background-color','colors/icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/icon_color','',';')?>
+}
+
+.ib-hover:hover,
+.feature-icon-hover:hover .ib,
+
+/* For backward compatibility: */
+.icon-hover:hover,
+.feature-icon-hover:hover > span.icon
+{
+	<?=$t->getCssRuleAttr('background-color','colors/icon_hover_bg_color','',' !important;')?>
+	<?=$t->getCssRuleAttr('color','colors/icon_hover_color','',' !important;')?>
+}
+
+
+<?php
+/* Add-to icons on product page
+-------------------------------------------------------------- */
+?>
+.ib.icon-color-productview,
+span.icon.icon-color-productview <?php //For backward compatibility ?>
+{
+	<?=$t->getCssRuleAttr('background-color','product_page/addto_icon_bg_color','',';')?>
+}
+.ib-hover.icon-color-productview:hover,
+.feature-icon-hover:hover .ib.icon-color-productview,
+.feature-icon-hover:hover span.icon.icon-color-productview <?php //For backward compatibility ?>
+{
+	<?=$t->getCssRuleAttr('background-color','product_page/addto_icon_hover_bg_color','',' !important;')?>
+}
 
 
 <?php
@@ -416,23 +431,42 @@ h3.product-name, /*TODO:remove*/
 .wrapper
 {
 	<?php //Header top border ?>
-	<?php if ($t->isColor($d['header']['top_border_color'])): ?>
-		border-top-color: <?php echo $d['header']['top_border_color']; ?>;
+	
+	<?php if (isset($d['header']['top_border_color']) && $t->isColor($d['header']['top_border_color'])): ?>
+		<?=$t->getCssRuleAttr('border-top-color','header/top_border_color','',';')?>
 	<?php else: ?>
 		border: none !important;
 	<?php endif; ?>
 
-	<?php if ($t->isColor($d['page']['bg_color'])): ?>
-		background-color: <?php echo $d['page']['bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','page/bg_color','',';')?>
 	
 	<?php if ($d['page']['bg_image']): ?>
-		background-repeat: <?php echo $d['page']['bg_repeat']; ?>;
-		background-attachment: <?php echo $d['page']['bg_attachment']; ?>;
-		background-position: <?php echo $d['page']['bg_positionx'] .' '. $d['page']['bg_positiony']; ?>;
+		<?=$t->getCssRuleAttr('background-repeat','page/bg_repeat','',';')?>
+		<?=$t->getCssRuleAttr('background-attachment','page/bg_attachment','',';')?>
+	<?php if (isset( $d['page']['bg_positionx'] ) && isset($d['page']['bg_positiony'])): ?>
+			background-position: <?php echo $d['page']['bg_positionx'] .' '. $d['page']['bg_positiony']; ?>;
+		<?php endif; ?>
 	<?php endif; ?>
 }
 
+<?php if ($d['page']['content_padding_side']): ?>
+	.inner-container {
+		<?=$t->getCssRuleAttr('padding-left','page/content_padding_side','','px;')?>
+		<?=$t->getCssRuleAttr('padding-right','page/content_padding_side','','px;')?>
+	}
+
+	<?php
+	/* Below this breakpoint, if container is stretched, some side padding needs
+	   to be added to the "inner-container" to move the contents away from the edges.
+	   Important: use the same value as for default side padding of all page sections. */
+	?>
+	@media only screen and (max-width: 479px) {
+		.container.stretched > .inner-container {
+			<?=$t->getCssRuleAttr('padding-left','page/content_padding_side','','px;')?>
+			<?=$t->getCssRuleAttr('padding-right','page/content_padding_side','','px;')?>
+		}
+	}
+<?php endif; ?>
 
 
 <?php
@@ -442,11 +476,11 @@ h3.product-name, /*TODO:remove*/
 ?>
 .header-container
 {
-	<?php if ($d['header']['bg_color']): ?>
-		background-color: <?php echo $d['header']['bg_color']; ?>;
-	<?php endif; ?>
-	<?=isset($d['header']['bg_image'])?'':$d['header']['bg_image']=false?>
-	<?php if ($d['header']['bg_image']): ?>
+
+	<?=$t->getCssRuleAttr('background-color','header/bg_color','',';')?>
+
+
+	<?php if (isset($d['header']['bg_image']) && $d['header']['bg_image']): ?>
 		background-repeat: <?php echo $d['header']['bg_repeat']; ?>;
 		background-attachment: <?php echo $d['header']['bg_attachment']; ?>;
 		background-position: <?php echo $d['header']['bg_positionx'] .' '. $d['header']['bg_positiony']; ?>;
@@ -454,36 +488,21 @@ h3.product-name, /*TODO:remove*/
 }
 .header
 {
-	<?php if ($d['header']['inner_bg_color']): ?>
-		background-color: <?php echo $d['header']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['header']['color'])): ?>
-		color: <?php echo $d['header']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','header/color','',';')?>
 }
 .header a {
-	<?php if ($t->isColor($d['header']['link_color'])): ?>
-		color: <?php echo $d['header']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/link_color','',';')?>
 }
 .header a:hover {
-	<?php if ($t->isColor($d['header']['link_hover_color'])): ?>
-		color: <?php echo $d['header']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/link_hover_color','',';')?>
 }
 
 <?php //Additional spacing ?>
 .header-container3
 {
-	<?=isset($d['header']['padding_top'])?'':$d['header']['padding_top']='0'?>
-	<?php if ($d['header']['padding_top']): ?>
-		padding-top: <?php echo intval($d['header']['padding_top']); ?>px;
-	<?php endif; ?>
-	<?=isset($d['header']['padding_bottom'])?'':$d['header']['padding_bottom']='0'?>
-	<?php if ($d['header']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['header']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('padding-top','header/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','header/padding_bottom','','px;')?>
 }
 
 <?php //Header caret (the same color as text) ?>
@@ -502,21 +521,27 @@ h3.product-name, /*TODO:remove*/
 ?>
 .form-search .input-text
 {
-	<?=isset($d['header']['search_bg_color'])?'':$d['header']['search_bg_color']=''?>
-	<?=isset($d['header']['search_border_color'])?'':$d['header']['search_border_color']=''?>
 	background-color: <?php echo $d['header']['search_bg_color']; ?>;
 	border-color: <?php echo $d['header']['search_border_color']; ?>;
+}
+.form-search .input-text:hover,
+.form-search .input-text:focus
+{
+	background-color: <?php echo $d['header']['search_hover_bg_color']; ?>;
+	border-color: <?php echo $d['header']['search_border_hover_color']; ?>;
+}
+
+.form-search .input-text,
+.form-search .button {
+
 	<?php if ($t->isColor($d['header']['search_color'])): ?>
 		color: <?php echo $d['header']['search_color']; ?>;
 	<?php endif; ?>
 }
 .form-search .input-text:hover,
-.form-search .input-text:focus
-{
-	<?=isset($d['header']['search_hover_bg_color'])?'':$d['header']['search_hover_bg_color']=''?>
-	<?=isset($d['header']['search_border_hover_color'])?'':$d['header']['search_border_hover_color']=''?>
-	background-color: <?php echo $d['header']['search_hover_bg_color']; ?>;
-	border-color: <?php echo $d['header']['search_border_hover_color']; ?>;
+.form-search .input-text:focus,
+.form-search .input-text:hover + .button,
+.form-search .button:hover {
 	<?php if ($t->isColor($d['header']['search_hover_color'])): ?>
 		color: <?php echo $d['header']['search_hover_color']; ?>;
 	<?php endif; ?>
@@ -525,7 +550,6 @@ h3.product-name, /*TODO:remove*/
 <?php //If no border color, then remove border and button's margin ?>
 <?php if ($t->isColor($d['header']['search_border_color']) == false && $t->isColor($d['header']['search_border_hover_color']) == false): ?>
 	.form-search .input-text { border: none; }
-	.form-search .button span { margin: 0; }
 <?php endif; ?>
 
 
@@ -533,8 +557,8 @@ h3.product-name, /*TODO:remove*/
 /* Header drop-downs
 -------------------------------------------------------------- */
 ?>
-.header .dropdown-menu,
-.header .open > .dropdown-toggle.cover > div,
+.header .dropdown .dropdown-content,
+.header .dropdown.open > .dropdown-heading.cover > *,
 .header .truncated .truncated_full_value .item-options,
 .header .form-search .search-autocomplete
 {
@@ -545,21 +569,21 @@ h3.product-name, /*TODO:remove*/
 	<?php endif; ?>
 	
 	<?php if ($t->isColor($d['header']['dropdown_color'])): ?>
-		color: <?php echo $d['header']['dropdown_color']; ?>;
+		color: <?php echo $d['header']['dropdown_color']; ?>; <?php //It will be inherited by child elements ?>
 	<?php endif; ?>
 }
 
 <?php //Header drop-downs: link colors ?>
-.header .dropdown-menu a,
-.header .open > .dropdown-toggle.cover > div a,
+.header .dropdown .dropdown-content a,
+.header .dropdown.open > .dropdown-heading.cover a,
 .header .form-search .search-autocomplete li
 {
 	<?php if ($t->isColor($d['header']['dropdown_link_color'])): ?>
 		color: <?php echo $d['header']['dropdown_link_color']; ?>;
 	<?php endif; ?>
 }
-.header .dropdown-menu a:hover,
-.header .open > .dropdown-toggle.cover > div a:hover,
+.header .dropdown .dropdown-content a:hover,
+.header .dropdown.open > .dropdown-heading.cover a:hover,
 .header .form-search .search-autocomplete li:hover
 {
 	<?php if ($t->isColor($d['header']['dropdown_link_hover_color'])): ?>
@@ -568,8 +592,7 @@ h3.product-name, /*TODO:remove*/
 }
 
 <?php //Caret inside dropdown-toggle (the same color as text) ?>
-<?=isset($d['header']['dropdown_color'])?'':$d['header']['dropdown_color']=''?>
-.header .open > .dropdown-toggle.cover > div .caret {
+.header .dropdown.open > .dropdown-heading.cover .caret {
 	border-top-color: <?php echo $d['header']['dropdown_color']; ?>;
 }
 
@@ -583,15 +606,14 @@ h3.product-name, /*TODO:remove*/
 
 .header-top-container
 {
-<?=isset($d['header_top']['bg_color'])?'':$d['header_top']['bg_color']=''?>
 	<?php if ($d['header_top']['bg_color']): ?>
 		background-color: <?php echo $d['header_top']['bg_color']; ?>;
 	<?php endif; ?>
-<?=isset($d['header_top']['padding_top'])?'':$d['header_top']['padding_top']='0'?>
+
 	<?php if ($d['header_top']['padding_top']): ?>
 		padding-top: <?php echo intval($d['header_top']['padding_top']); ?>px;
 	<?php endif; ?>
-<?=isset($d['header_top']['padding_bottom'])?'':$d['header_top']['padding_bottom']='0'?>
+
 	<?php if ($d['header_top']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['header_top']['padding_bottom']); ?>px;
 	<?php endif; ?>
@@ -599,33 +621,29 @@ h3.product-name, /*TODO:remove*/
 
 .header-top
 {
-	<?=isset($d['header_top']['inner_bg_color'])?'':$d['header_top']['inner_bg_color']=''?>
 	<?php if ($d['header_top']['inner_bg_color']): ?>
 		background-color: <?php echo $d['header_top']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['header_top']['color'])?'':$d['header_top']['color']=false?>
+	
 	<?php if ($t->isColor($d['header_top']['color'])): ?>
 		color: <?php echo $d['header_top']['color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['header_top']['content_padding_top'])?'':$d['header_top']['content_padding_top']='0'?>
+
 	<?php if ($d['header_top']['content_padding_top']): ?>
 		padding-top: <?php echo intval($d['header_top']['content_padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['header_top']['content_padding_bottom'])?'':$d['header_top']['content_padding_bottom']='0'?>
 	<?php if ($d['header_top']['content_padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['header_top']['content_padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .header-top a
 {
-	<?=isset($d['header_top']['link_color'])?'':$d['header_top']['link_color']=false?>
 	<?php if ($t->isColor($d['header_top']['link_color'])): ?>
 		color: <?php echo $d['header_top']['link_color']; ?>;
 	<?php endif; ?>
 }
 .header-top a:hover
 {
-	<?=isset($d['header_top']['link_hover_color'])?'':$d['header_top']['link_hover_color']=false?>
 	<?php if ($t->isColor($d['header_top']['link_hover_color'])): ?>
 		color: <?php echo $d['header_top']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -641,22 +659,19 @@ h3.product-name, /*TODO:remove*/
 
 .header-primary-container
 {
-	<?=isset($d['header_primary']['padding_top'])?'':$d['header_primary']['padding_top']='0'?>
 	<?php if ($d['header_primary']['padding_top']): ?>
 		padding-top: <?php echo intval($d['header_primary']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['header_primary']['padding_bottom'])?'':$d['header_primary']['padding_bottom']='0'?>
+
 	<?php if ($d['header_primary']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['header_primary']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .header-primary
 {
-	<?=isset($d['header_primary']['content_padding_top'])?'':$d['header_primary']['content_padding_top']='0'?>
 	<?php if ($d['header_primary']['content_padding_top']): ?>
 		padding-top: <?php echo intval($d['header_primary']['content_padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['header_primary']['content_padding_bottom'])?'':$d['header_primary']['content_padding_bottom']='0'?>
 	<?php if ($d['header_primary']['content_padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['header_primary']['content_padding_bottom']); ?>px;
 	<?php endif; ?>
@@ -665,32 +680,58 @@ h3.product-name, /*TODO:remove*/
 
 
 <?php
-//User menu
+//Mobile Header
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ?>
-<?php /*?>
-.user-menu .top-links .links > li > a,
-.user-menu .dropdown-toggle.cover
+
+.header-mobile .skip-link
 {
-	<?php if ($t->isColor($d['header']['user_menu_bg_color'])): ?>
-		background-color: <?php echo $d['colors']['user_menu_bg_color']; ?>;
+	<?php if ($d['header']['mh_item_bg_color']): ?>
+		background-color: <?php echo $d['header']['mh_item_bg_color']; ?>;
 	<?php endif; ?>
-	<?php if ($t->isColor($d['header']['user_menu_color'])): ?>
-		color: <?php echo $d['header']['user_menu_color']; ?> !important;
+	<?php if ($t->isColor($d['header']['mh_item_color'])): ?>
+		color: <?php echo $d['header']['mh_item_color']; ?>;
 	<?php endif; ?>
 }
-.user-menu .top-links .links > li > a:hover,
-.user-menu .dropdown-toggle.cover:hover
-{
-	<?php if ($t->isColor($d['header']['user_menu_hover_bg_color'])): ?>
-		background-color: <?php echo $d['colors']['user_menu_hover_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['header']['user_menu_hover_color'])): ?>
-		color: <?php echo $d['header']['user_menu_hover_color']; ?> !important;
+.header-mobile .skip-link:hover {
+	<?php //On hover item has the same color as default ?>
+	<?php if ($t->isColor($d['header']['mh_item_color'])): ?>
+		color: <?php echo $d['header']['mh_item_color']; ?>;
 	<?php endif; ?>
 }
-<?php */?>
+.header-mobile .skip-link.skip-active
+{
+	<?php if ($d['header']['mh_item_active_bg_color']): ?>
+		background-color: <?php echo $d['header']['mh_item_active_bg_color']; ?>;
+	<?php endif; ?>
+	<?php if ($t->isColor($d['header']['mh_item_active_color'])): ?>
+		color: <?php echo $d['header']['mh_item_active_color']; ?>;
+	<?php endif; ?>
+}
+
+<?php //Skip content. Important: applied only to "skip-content--style", not to "skip-content". ?>
+.header-mobile .skip-content--style
+{
+	<?php if ($d['header']['mh_item_active_bg_color']): ?>
+		background-color: <?php echo $d['header']['mh_item_active_bg_color']; ?>;
+	<?php endif; ?>
+	<?php if ($t->isColor($d['header']['mh_content_color'])): ?>
+		color: <?php echo $d['header']['mh_content_color']; ?>;
+	<?php endif; ?>
+}
+.header-mobile .skip-content--style a
+{
+	<?php if ($t->isColor($d['header']['mh_content_link_color'])): ?>
+		color: <?php echo $d['header']['mh_content_link_color']; ?>;
+	<?php endif; ?>
+}
+.header-mobile .skip-content--style a:hover
+{
+	<?php if ($t->isColor($d['header']['mh_content_link_hover_color'])): ?>
+		color: <?php echo $d['header']['mh_content_link_hover_color']; ?>;
+	<?php endif; ?>
+}
 
 
 
@@ -707,21 +748,17 @@ h3.product-name, /*TODO:remove*/
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */?>
 
 .cat-label-label1 {
-	<?=isset($d['nav']['label_bg_color'])?'':$d['nav']['label_bg_color']=''?>
 	<?php if ($d['nav']['label_bg_color']): ?>
 		background-color: <?php echo $d['nav']['label_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['nav']['label_color'])?'':$d['nav']['label_color']=false?>
 	<?php if ($t->isColor($d['nav']['label_color'])): ?>
 		color: <?php echo $d['nav']['label_color']; ?>;
 	<?php endif; ?>
 }
 .cat-label-label2 {
-	<?=isset($d['nav']['label_bg_color2'])?'':$d['nav']['label_bg_color2']=''?>
 	<?php if ($d['nav']['label_bg_color2']): ?>
 		background-color: <?php echo $d['nav']['label_bg_color2']; ?>;
 	<?php endif; ?>
-	<?=isset($d['nav']['label_color2'])?'':$d['nav']['label_color2']=false?>
 	<?php if ($t->isColor($d['nav']['label_color2'])): ?>
 		color: <?php echo $d['nav']['label_color2']; ?>;
 	<?php endif; ?>
@@ -730,13 +767,11 @@ h3.product-name, /*TODO:remove*/
 <?php //Top-category label pin ?>
 
 li.level0 > a > span > .cat-label-label1.pin-bottom:before {
-	<?=isset($d['nav']['label_bg_color'])?'':$d['nav']['label_bg_color']=''?>
 	<?php if ($d['nav']['label_bg_color']): ?>
 		border-top-color: <?php echo $d['nav']['label_bg_color']; ?>;
 	<?php endif; ?>
 }
 li.level0 > a > span > .cat-label-label2.pin-bottom:before {
-	<?=isset($d['nav']['label_bg_color2'])?'':$d['nav']['label_bg_color2']=''?>
 	<?php if ($d['nav']['label_bg_color2']): ?>
 		border-top-color: <?php echo $d['nav']['label_bg_color2']; ?>;
 	<?php endif; ?>
@@ -747,11 +782,9 @@ li.level0 > a > span > .cat-label-label2.pin-bottom:before {
 li > a:hover > span > .cat-label,
 .nav-regular li.level0:hover > a > span > .cat-label /* Top-level category label is highlighted on item hover, not on link hover */
 {
-	<?=isset($d['nav']['label_hover_bg_color'])?'':$d['nav']['label_hover_bg_color']=''?>
 	<?php if ($d['nav']['label_hover_bg_color']): ?>
 		background-color: <?php echo $d['nav']['label_hover_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['nav']['label_hover_color'])?'':$d['nav']['label_hover_color']=false?>
 	<?php if ($t->isColor($d['nav']['label_hover_color'])): ?>
 		color: <?php echo $d['nav']['label_hover_color']; ?>;
 	<?php endif; ?>
@@ -759,26 +792,24 @@ li > a:hover > span > .cat-label,
 li.level0 > a:hover > span > .pin-bottom:before,
 .nav-regular li.level0:hover > a > span > .pin-bottom:before
 {
-	<?=isset($d['nav']['label_hover_bg_color'])?'':$d['nav']['label_hover_bg_color']=''?>
 	<?php if ($d['nav']['label_hover_bg_color']): ?>
 		border-top-color: <?php echo $d['nav']['label_hover_bg_color']; ?>;
 	<?php endif; ?>
 }
 
 <?php
-/* Dropdowns
+/* Dropdowns.
    IMPORTANT: common for menu in regular and mobile mode
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */?>
 
 #nav .nav-panel--dropdown
 {
-	<?=isset($d['nav']['dropdown_bg_color'])?'':$d['nav']['dropdown_bg_color']=false?>
 	<?php if ($t->isColor($d['nav']['dropdown_bg_color'])): ?>
 		background-color: <?php echo $d['nav']['dropdown_bg_color']; ?>;
 	<?php else: ?>
 		background-color:#fff;
 	<?php endif; ?>
-	<?=isset($d['nav']['dropdown_color'])?'':$d['nav']['dropdown_color']=false?>
+	
 	<?php if ($t->isColor($d['nav']['dropdown_color'])): ?>
 		color: <?php echo $d['nav']['dropdown_color']; ?>;
 	<?php endif; ?>
@@ -788,14 +819,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 #nav .nav-panel--dropdown a
 {
-	<?=isset($d['nav']['dropdown_link_color'])?'':$d['nav']['dropdown_link_color']=false?>
 	<?php if ($t->isColor($d['nav']['dropdown_link_color'])): ?>
 		color: <?php echo $d['nav']['dropdown_link_color']; ?>;
 	<?php endif; ?>
 }
 #nav .nav-panel--dropdown a:hover
 {
-	<?=isset($d['nav']['dropdown_link_hover_color'])?'':$d['nav']['dropdown_link_hover_color']=false?>
 	<?php if ($t->isColor($d['nav']['dropdown_link_hover_color'])): ?>
 		color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
 	<?php endif; ?>
@@ -805,7 +834,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 #nav .nav-panel--dropdown a .caret
 {
-	<?=isset($d['nav']['dropdown_link_color'])?'':$d['nav']['dropdown_link_color']=false?>
 	<?php if ($t->isColor($d['nav']['dropdown_link_color'])): ?>
 		border-left-color: <?php echo $d['nav']['dropdown_link_color']; ?>;
 		border-right-color: <?php echo $d['nav']['dropdown_link_color']; ?>;
@@ -813,7 +841,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 }
 #nav .nav-panel--dropdown a:hover .caret
 {
-	<?=isset($d['nav']['dropdown_link_hover_color'])?'':$d['nav']['dropdown_link_hover_color']=false?>
 	<?php if ($t->isColor($d['nav']['dropdown_link_hover_color'])): ?>
 		border-left-color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
 		border-right-color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
@@ -824,20 +851,24 @@ li.level0 > a:hover > span > .pin-bottom:before,
 /* Dropdown borders. Only regular mode.
 -------------------------------------------------------------- */
 ?>
-<?=isset($d['nav']['dropdown_border_top'])?'':$d['nav']['dropdown_border_top']=0?>
+
 <?php if ($d['nav']['dropdown_border_top'] > 0): ?>
-/* All types, only level 1 */
-.nav-regular li.level0 > .nav-panel--dropdown,
 
-/* Type mega */
-.nav-regular .mega > .nav-panel--dropdown,
+	<?php //All types, only level 1 ?>
+	.nav-regular .nav-item.level0 > .nav-panel--dropdown
 
-/* Type classic */
-.nav-regular .classic > .nav-panel--dropdown
-{
-	<?=isset($d['nav']['dropdown_border_top_color'])?'':$d['nav']['dropdown_border_top_color']=''?>
-	border-top:<?php echo $d['nav']['dropdown_border_top']; ?>px solid <?php echo $d['nav']['dropdown_border_top_color']; ?>;
-}
+		<?php //If border should be displayed on dropdowns of all levels ?>
+		<?php if ($d['nav']['dropdown_border_all_levels']): ?>
+		,
+		.nav-regular .mega > .nav-panel--dropdown
+		,
+		.nav-regular .classic > .nav-panel--dropdown
+		<?php endif; ?>
+
+	{
+		border-top:<?php echo $d['nav']['dropdown_border_top']; ?>px solid <?php echo $d['nav']['dropdown_border_top_color']; ?>;
+	}
+
 <?php endif; ?>
 
 <?php
@@ -847,14 +878,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 <?php //Regular mode ?>
 
-<?=isset($d['nav']['dropdown_shadow'])?'':$d['nav']['dropdown_shadow']=false?>
 <?php if ($d['nav']['dropdown_shadow']): ?>
 /* All types*/
 .nav-regular .nav-panel--dropdown
 {
-	-moz-box-shadow:0 2px 10px rgba(0,0,0, 0.15);
-	-webkit-box-shadow:0 2px 10px rgba(0,0,0, 0.15);
-	box-shadow:0 2px 10px rgba(0,0,0, 0.15);
+	-moz-box-shadow:0 3px 10px rgba(0,0,0, 0.15);
+	-webkit-box-shadow:0 3px 10px rgba(0,0,0, 0.15);
+	box-shadow:0 3px 10px rgba(0,0,0, 0.15);
 }
 <?php endif; ?>
 
@@ -862,13 +892,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 //Mobile mode.
 //Apply only to top-level dropdowns which are divs (so when submenu is wrapped inside a div).
 ?>
-<?=isset($d['nav']['mobile_shadow'])?'':$d['nav']['mobile_shadow']=false?>
+
 <?php if ($d['nav']['mobile_shadow']): ?>
 .nav-mobile div.nav-panel--dropdown
 {
-	-moz-box-shadow:	0 2px 10px rgba(0,0,0, 0.15);
-	-webkit-box-shadow:	0 2px 10px rgba(0,0,0, 0.15);
-	box-shadow:			0 2px 10px rgba(0,0,0, 0.15);
+	-moz-box-shadow:	0 3px 10px rgba(0,0,0, 0.15);
+	-webkit-box-shadow:	0 3px 10px rgba(0,0,0, 0.15);
+	box-shadow:			0 3px 10px rgba(0,0,0, 0.15);
 
 	<?php //Pull dropdown above top-level items to show shadow at the bottom of the dropdown ?>
 	z-index: 1;
@@ -889,42 +919,151 @@ li.level0 > a:hover > span > .pin-bottom:before,
 /* Menu containers
 -------------------------------------------------------------- */
 ?>
+
+<?php //Menu outer container ?>
 .nav-container 
 {
-	<?=isset($d['nav']['outer_bg_color'])?'':$d['nav']['outer_bg_color']=false?>
 	<?php if ($d['nav']['outer_bg_color']): ?>
 		background-color: <?php echo $d['nav']['outer_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['nav']['padding_top'])?'':$d['nav']['padding_top']=false?>
+
 	<?php if ($d['nav']['padding_top']): ?>
 		padding-top: <?php echo intval($d['nav']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['nav']['padding_bottom'])?'':$d['nav']['padding_bottom']=false?>
+
 	<?php if ($d['nav']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['nav']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 
-<?php //Menu wrapper class ?>
-<?php //If menu bar has inner background color (to show an outline) ?>
-<?=isset($d['nav']['inner_bg_color'])?'':$d['nav']['inner_bg_color']=false?>
-<?php if ($t->isColor($d['nav']['inner_bg_color'])): ?>
+<?php
+/* Important: mobile menu in mobile header.
+   Padding is completely removed in basic mobile header rules for that block (to reset the padding which is added for all "skip-content" blocks).
+   Because of that, we need to re-apply the bottom padding for navigation container (if padding exist).
+   Bottom padding is not removed so that mobile header look more similar to regular header. */
+?>
+<?php if ($d['nav']['padding_bottom']): ?>
+.header-mobile .skip-content.nav-container {
+	padding-bottom: <?php echo intval($d['nav']['padding_bottom']); ?>px;
+}
+<?php endif; ?>
 
+<?php
+/* Menu inner container.
+   If menu bar has inner background color (to show an outline) */
+?>
+<?php if ($t->isColor($d['nav']['inner_bg_color'])): ?>
 	.nav
 	{
 		background-color: <?php echo $d['nav']['inner_bg_color']; ?>;
+	}
+<?php endif; ?>
+
+<?php
+//Bottom padding of ".header-primary" can be also applied as bottom padding of ".nav"
+//to have the same space when menu opened
+?>
+<?php if ($d['header_primary']['content_padding_bottom']): ?>
+	.header-mobile .nav
+	{
+		margin-bottom: <?php echo intval($d['header_primary']['content_padding_bottom']); ?>px;
+	}
+<?php endif; ?>
+
+<?php
+/* Menu bar - with outline.
+   If inner container has a background color, it gets additional class "has-outline".
+   Add padding, the same value as for side padding of all page sections. */
+?>
+<?php if ($d['page']['content_padding_side']): ?>
+.nav.has-outline > .inner-container {
+	padding-top: <?php echo $d['page']['content_padding_side']; ?>px;
+	padding-bottom: <?php echo $d['page']['content_padding_side']; ?>px;
+}
+<?php endif; ?>
+
+<?php
+	$headerInnerBgColor		= $d['header']['inner_bg_color']; //Bg. color of "primary header" section is inherited from "header" section
+	$headerStretched		= $d['header_primary']['stretched'];
+	$navInnerBgColor		= $d['nav']['inner_bg_color'];
+	$navStretched			= $d['nav']['stretched'];
+	$makeNavStretched = FALSE;
+
+	if ($headerInnerBgColor)
+	{
+		if (! $navInnerBgColor)
+		{
+			$makeNavStretched = TRUE;
+		}
+	}
+	if ($headerStretched)
+	{
+		if (! $navStretched)
+		{
+			$makeNavStretched = TRUE;
+		}
+	}
+?>
+<?php if ($makeNavStretched): ?>
+
+	<?php //Make inner container stretched ?>
+	.header-mobile .nav > .inner-container
+	{
+		padding: 0;
+	}
+	
+	<?php //But not below this breakpoint ?>
+	@media only screen and (max-width: 479px) {
+		.header-mobile .nav > .inner-container
+		{
+			padding-left: <?php echo $d['page']['content_padding_side']; ?>px;
+			padding-right: <?php echo $d['page']['content_padding_side']; ?>px;
+		}
 	}
 
 <?php endif; ?>
 
 
 <?php
-/* Basic colors of top-level menu items: default, hover, current
+/* Sticky menu
+--------------------------------------------------------------
+   Important: these rules have to be declared before rules
+   of the colors of non-sticky menu, so that hover item color
+   and current item color can override sticky menu rules. */
+?>
+<?php //Override default menu bar color when sticky menu is enabled. Important: regular mode only. ?>
+<?php if ($d['nav']['sticky_item_bg_color']): ?>
+	.sticky-header .sticky-container, <?php //Sticky menu container ?>
+	.sticky-header .nav-regular <?php //Sticky menu bar ?>
+	{
+		background-color: <?php echo $d['nav']['sticky_item_bg_color']; ?>;
+	}
+<?php endif; ?>
+
+<?php //Top-level menu items ?>
+<?php if ($t->isColor($d['nav']['sticky_item_color'])): ?>
+	.sticky-header .nav-regular .nav-item.level0 > a
+	{
+		color: <?php echo $d['nav']['sticky_item_color']; ?>;
+	}
+<?php endif; ?>
+
+<?php //Hide menu bottom line ?>
+<?php if (! $d['nav']['sticky_border']): ?>
+	.sticky-header #nav.nav-regular
+	{
+		border-bottom: none;
+	}
+<?php endif; ?>
+
+
+<?php
+/* Top-level menu items - basic colors (default, hover, current)
 -------------------------------------------------------------- */
 ?>
 
 <?php //Default item ?>
-	<?=isset($d['nav']['bg_color'])?'':$d['nav']['bg_color']=''?>
+
 	<?php //Regular mode only ?>
 
 		<?php //Level 1 ?>
@@ -932,8 +1071,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		{
 			background-color: <?php echo $d['nav']['bg_color']; ?>;
 		}
-		.nav-regular .nav-item.level0 > a
-		{	<?=isset($d['nav']['color'])?'':$d['nav']['color']=''?>
+		.nav-regular .nav-item.level0 > a,
+		#nav .nav-item--homeicon a <?php //Single icon has the same color as default item ?>
+		{
 			color: <?php echo $d['nav']['color']; ?>;
 		}
 
@@ -945,11 +1085,20 @@ li.level0 > a:hover > span > .pin-bottom:before,
 			background-color: <?php echo $d['nav']['bg_color']; ?>;
 			color: <?php echo $d['nav']['color']; ?>;
 		}
+		.nav-mobile .nav-item.level0 > .opener
+		{
+			color: <?php echo $d['nav']['color']; ?>;
+		}
 
 		<?php //Level 2+ ?>
+		<?php //Important: added #nav to make rule more specific and override dropdown styles of the regular menu ?>
 		#nav.nav-mobile ul.level0 .nav-item > a
 		{
 			background-color: <?php echo $d['nav']['bg_color']; ?>;
+			color: <?php echo $d['nav']['color']; ?>;
+		}
+		.nav-mobile ul.level0 .nav-item > .opener
+		{
 			color: <?php echo $d['nav']['color']; ?>;
 		}
 
@@ -958,16 +1107,24 @@ li.level0 > a:hover > span > .pin-bottom:before,
 	<?php //All modes ?>
 
 		<?php //Level 1 ?>
-		.cms-index-index .nav-regular .nav-item--home > a,
-		.nav-regular .nav-item.level0.active > a,
-		.nav-mobile .nav-item.level0.current > a
-		{<?=isset($d['nav']['active_bg_color'])?'':$d['nav']['active_bg_color']=''?>
+		.nav-regular .nav-item.level0.active > a
+		{
 			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
-			<?=isset($d['nav']['active_color'])?'':$d['nav']['active_color']=''?>
 			color: <?php echo $d['nav']['active_color']; ?>;
 		}
 
 	<?php //Mobile mode only ?>
+
+		<?php //Level 1 ?>
+		.nav-mobile .nav-item.level0.current > a
+		{
+			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
+			color: <?php echo $d['nav']['active_color']; ?>;
+		}
+		.nav-mobile .nav-item.level0.current > .opener
+		{
+			color: <?php echo $d['nav']['active_color']; ?>;
+		}
 
 		<?php //Level 2+ ?>
 		<?php //Important: added #nav to make rule more specific to override dropdown styles ?>
@@ -976,27 +1133,44 @@ li.level0 > a:hover > span > .pin-bottom:before,
 			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
 			color: <?php echo $d['nav']['active_color']; ?>;
 		}
+		.nav-mobile ul.level0 .nav-item.current > .opener
+		{
+			color: <?php echo $d['nav']['active_color']; ?>;
+		}
 
 <?php //Hover item ?>
 
 	<?php //All modes ?>
 
 		<?php //Level 1 ?>
-		.nav-regular .nav-item.level0:hover > a,
-		.nav-mobile .nav-item.level0 > a:hover
-		{<?=isset($d['nav']['hover_bg_color'])?'':$d['nav']['hover_bg_color']=''?>
+		.nav-regular .nav-item.level0:hover > a
+		{
 			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-			<?=isset($d['nav']['hover_color'])?'':$d['nav']['hover_color']=''?>
 			color: <?php echo $d['nav']['hover_color']; ?>;
 		}
 
 	<?php //Mobile mode only ?>
 
+		<?php //Level 1 ?>
+		.nav-mobile .nav-item.level0 > a:hover
+		{
+			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
+			color: <?php echo $d['nav']['hover_color']; ?>;
+		}
+		.nav-mobile .nav-item.level0 > a:hover + .opener
+		{
+			color: <?php echo $d['nav']['hover_color']; ?>;
+		}
+
 		<?php //Level 2+ ?>
-		<?php //Important: added #nav to make rule more specific to override dropdown styles ?>
+		<?php //Important: added #nav to make rule more specific and override dropdown styles of the regular menu ?>
 		#nav.nav-mobile ul.level0 .nav-item > a:hover
 		{
 			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
+			color: <?php echo $d['nav']['hover_color']; ?>;
+		}
+		.nav-mobile ul.level0 .nav-item > a:hover + .opener
+		{
 			color: <?php echo $d['nav']['hover_color']; ?>;
 		}
 
@@ -1005,9 +1179,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 /* Height of the menu bar
 -------------------------------------------------------------- */
 ?>
-<?=isset($d['nav']['line_height'])?'':$d['nav']['line_height']=0?>
+
 <?php if ($d['nav']['line_height'] > 0): ?>
-.nav-regular li.level0 > a {
+.nav-regular .nav-item.level0 > a {
 	line-height: <?php echo $d['nav']['line_height']; ?>px;
 }
 <?php endif; ?>
@@ -1047,12 +1221,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 
 <?php
-/* Opener
+/* Opener (deprecated: styles replaced with font icons)
 -------------------------------------------------------------- */
 ?>
 
-<?php //variables for different category links (3 different states) ?>
+<?php //Variables for different category links (3 different states) ?>
 <?php
+	/*
 	//Opener: for default link
 	$openerD = '';
 	if ($d['nav']['mobile_opener_color'] == 'w')
@@ -1067,47 +1242,54 @@ li.level0 > a:hover > span > .pin-bottom:before,
 	$openerC = '';
 	if ($d['nav']['mobile_opener_current_color'] == 'w')
 		$openerC = '-w';
+	*/
 ?>
 
-<?php //Opener styles ?>
+<?php
+//Opener styles.
+//Important: paths to the image files are different than in the accordion component file "accordion.css"
+//because this generated CSS file will be in different place.
+?>
 
+<?php /*
 <?php //Opener: default (collapsed item)  ?>
 	.nav-mobile li .opener {
-		background: url(../../images/infortis/ultra-megamenu/opener<?php echo $openerD; ?>.png) center center no-repeat;
+		background: url(../../images/infortis/_shared/accordion/opener<?php echo $openerD; ?>.png) center center no-repeat;
 	}
 	<?php //Hover ?>
 		.nav-mobile li:hover > .opener {
-			background-image: url(../../images/infortis/ultra-megamenu/opener<?php echo $openerH; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener<?php echo $openerH; ?>.png);
 		}
 		.nav-mobile li:hover > .opener:hover {
-			background-image: url(../../images/infortis/ultra-megamenu/opener<?php echo $openerD; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener<?php echo $openerD; ?>.png);
 		}
 
 <?php //Opener: active (opened item) ?>
 	.nav-mobile li.item-active > .opener {
-		background-image: url(../../images/infortis/ultra-megamenu/opener-active<?php echo $openerD; ?>.png);
+		background-image: url(../../images/infortis/_shared/accordion/opener-active<?php echo $openerD; ?>.png);
 	}
 	<?php //Hover ?>
 		.nav-mobile li.item-active:hover > a:hover + .opener {
-			background-image: url(../../images/infortis/ultra-megamenu/opener-active<?php echo $openerH; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener-active<?php echo $openerH; ?>.png);
 		}
 		.nav-mobile li.item-active:hover > a + .opener:hover {
-			background-image: url(../../images/infortis/ultra-megamenu/opener-active<?php echo $openerD; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener-active<?php echo $openerD; ?>.png);
 		}
 
 <?php //Opener: current (currently selected category) ?>
 	.nav-mobile li.current > .opener,
 	.nav-mobile li.current > .opener:hover {
-		background-image: url(../../images/infortis/ultra-megamenu/opener<?php echo $openerC; ?>.png);
+		background-image: url(../../images/infortis/_shared/accordion/opener<?php echo $openerC; ?>.png);
 	}
 	<?php //Active ?>
 		.nav-mobile li.item-active.current > a + .opener,
 		.nav-mobile li.item-active.current:hover > a + .opener {
-			background-image: url(../../images/infortis/ultra-megamenu/opener-active<?php echo $openerC; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener-active<?php echo $openerC; ?>.png);
 		}
 		.nav-mobile li.item-active.current > a + .opener:hover {
-			background-image: url(../../images/infortis/ultra-megamenu/opener-active<?php echo $openerC; ?>.png);
+			background-image: url(../../images/infortis/_shared/accordion/opener-active<?php echo $openerC; ?>.png);
 		}
+*/ ?>
 
 
 <?php
@@ -1165,7 +1347,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 	#nav,
 	.mobnav-trigger
 	{
-		<?=isset($d['nav']['border_color'])?'':$d['nav']['border_color']='transparent'?>
 		border-bottom:<?php echo $d['nav']['border']; ?>px solid <?php echo $d['nav']['border_color']; ?>;
 	}
 	.mobnav-trigger.active { border-bottom: none; }
@@ -1180,11 +1361,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 	<?php //Regular menu ?>
 
 		<?php //All types: level 1 ?>
-		.nav-regular li.level0 > a
+		.nav-regular .nav-item.level0 > a
 		{
-			<?=isset($d['nav']['level1_font_size'])?'':$d['nav']['level1_font_size']='0'?>
 			font-size:<?php echo $d['nav']['level1_font_size']; ?>px;
-			<?=isset($d['nav']['level1_font_uppercase'])?'':$d['nav']['level1_font_uppercase']=false?>
 			<?php if ($d['nav']['level1_font_uppercase']): ?>
 				text-transform:uppercase;
 			<?php endif; ?>
@@ -1195,9 +1374,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 			<?php //First level inside the dropdown  ?>
 			.nav-regular .nav-submenu--mega > li > a
 			{
-				<?=isset($d['nav']['mega_lev1_font_size'])?'':$d['nav']['mega_lev1_font_size']=0?>
 				font-size:<?php echo $d['nav']['mega_lev1_font_size']; ?>px;
-				<?=isset($d['nav']['mega_lev1_font_uppercase'])?'':$d['nav']['mega_lev1_font_uppercase']=false?>
 				<?php if ($d['nav']['mega_lev1_font_uppercase']): ?>
 					text-transform:uppercase;
 				<?php endif; ?>
@@ -1207,9 +1384,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 		<?php //All levels (for level 3+)
 			  //It has to be on top, settings for upper levels will override it ?>
-			  <?=isset($d['nav']['mobile_level2_font_size'])?'':$d['nav']['mobile_level2_font_size']=false?>
 		<?php
-		
 			if ($d['nav']['mobile_level2_font_size'])
 			{
 				if ($d['nav']['mobile_level2_font_size'] >= 16)
@@ -1228,13 +1403,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 		<?php //Level 1 + mobile menu trigger ?>
 		.mobnav-trigger,
-		.nav-mobile li.level0 > a
+		.nav-mobile .nav-item.level0 > a
 		{
-			<?=isset($d['nav']['mobile_level1_font_size'])?'':$d['nav']['mobile_level1_font_size']=false?>
 			<?php if ($d['nav']['mobile_level1_font_size']): ?>
 				font-size:<?php echo $d['nav']['mobile_level1_font_size']; ?>px;
 			<?php endif; ?>
-			<?=isset($d['nav']['mobile_level1_font_uppercase'])?'':$d['nav']['mobile_level1_font_uppercase']=false?>
+
 			<?php if ($d['nav']['mobile_level1_font_uppercase']): ?>
 				text-transform: uppercase;
 			<?php else: ?>
@@ -1243,13 +1417,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		}
 
 		<?php //Level 2 ?>
-		.nav-mobile li.level1 > a
+		.nav-mobile .nav-item.level1 > a
 		{
-			<?=isset($d['nav']['mobile_level2_font_size'])?'':$d['nav']['mobile_level2_font_size']=false?>
 			<?php if ($d['nav']['mobile_level2_font_size']): ?>
 				font-size:<?php echo $d['nav']['mobile_level2_font_size']; ?>px;
 			<?php endif; ?>
-			<?=isset($d['nav']['mobile_level2_font_uppercase'])?'':$d['nav']['mobile_level2_font_uppercase']=false?>
+
 			<?php if ($d['nav']['mobile_level2_font_uppercase']): ?>
 				text-transform: uppercase;
 			<?php else: ?>
@@ -1268,22 +1441,20 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .main-container
 {
-
 	<?php if ($d['main']['bg_color']): ?>
 		background-color: <?php echo $d['main']['bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['main']['padding_top'])?'':$d['main']['padding_top']='0'?>
+
 	<?php if ($d['main']['padding_top']): ?>
 		padding-top: <?php echo intval($d['main']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['main']['padding_bottom'])?'':$d['main']['padding_bottom']='0'?>
+
 	<?php if ($d['main']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['main']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .main
 {
-	<?=isset($d['main']['inner_bg_color'])?'':$d['main']['inner_bg_color']=false?>
 	<?php if ($d['main']['inner_bg_color']): ?>
 		background-color: <?php echo $d['main']['inner_bg_color']; ?>;
 	<?php endif; ?>
@@ -1315,7 +1486,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .category-products-grid .item,
 .products-list .item
 {
-	<?=isset($d['category']['grid_item_bg_color'])?'':$d['category']['grid_item_bg_color']=false?>
 	<?php if ($d['category']['grid_item_bg_color']): ?>
 		background-color: <?php echo $d['category']['grid_item_bg_color']; ?>;
 	<?php endif; ?>
@@ -1323,7 +1493,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .category-products-grid .item:hover,
 .products-list .item:hover
 {
-	<?=isset($d['category']['grid_item_hover_bg_color'])?'':$d['category']['grid_item_hover_bg_color']=false?>
 	<?php if ($d['category']['grid_item_hover_bg_color']): ?>
 		background-color: <?php echo $d['category']['grid_item_hover_bg_color']; ?>;
 	<?php endif; ?>
@@ -1338,22 +1507,6 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 
 <?php
-/* Add-to icons (and selected other) on product page
--------------------------------------------------------------- */
-?>
-span.icon.icon-color-productview
-{
-	<?=isset($d['product_page']['addto_icon_bg_color'])?'':$d['product_page']['addto_icon_bg_color']=false?>
-	background-color: <?php echo $d['product_page']['addto_icon_bg_color']; ?>;
-}
-.feature-icon-hover:hover span.icon.icon-color-productview
-{
-	<?=isset($d['product_page']['addto_icon_hover_bg_color'])?'':$d['product_page']['addto_icon_hover_bg_color']=false?>
-	background-color: <?php echo $d['product_page']['addto_icon_hover_bg_color']; ?>;
-}
-
-
-<?php
 /* Product page tabs
 -------------------------------------------------------------- */
 ?>
@@ -1361,7 +1514,6 @@ span.icon.icon-color-productview
 <?php //Tabs wrapper class ?>
 .gen-tabs .tabs
 {
-	<?=isset($d['product_page']['tab_inner_bg_color'])?'':$d['product_page']['tab_inner_bg_color']=false?>
 	<?php if ($d['product_page']['tab_inner_bg_color']): ?>
 		background-color: <?php echo $d['product_page']['tab_inner_bg_color']; ?>;
 	<?php endif; ?>
@@ -1371,54 +1523,72 @@ span.icon.icon-color-productview
 <?php //Default tab?>
 .gen-tabs .tabs a
 {
-	<?=isset($d['product_page']['tab_bg_color'])?'':$d['product_page']['tab_bg_color']=''?>
 	background-color: <?php echo $d['product_page']['tab_bg_color']; ?>;
-	<?=isset($d['product_page']['tab_color'])?'':$d['product_page']['tab_color']=''?>
 	color: <?php echo $d['product_page']['tab_color']; ?>;
 }
 
 <?php //Hover ?>
-.gen-tabs .tabs a:hover,
-.gen-tabs .tabs a:focus
+.gen-tabs .tabs a:hover
+/*, .gen-tabs .tabs a:focus */
 {
-	<?=isset($d['product_page']['tab_hover_bg_color'])?'':$d['product_page']['tab_hover_bg_color']=''?>
 	background-color: <?php echo $d['product_page']['tab_hover_bg_color']; ?>;
-	<?=isset($d['product_page']['tab_hover_color'])?'':$d['product_page']['tab_hover_color']=''?>
 	color: <?php echo $d['product_page']['tab_hover_color']; ?>;
+
+	<?php /* Border of the item on hover has the same color as background of the item. Except bottom border which is transparent. */ ?>
+	border-color: <?php echo $d['product_page']['tab_hover_bg_color']; ?>;
+	border-bottom-color: transparent;
 }
 
 <?php //Active ?>
 .gen-tabs .tabs a.current
 {
-	<?=isset($d['product_page']['tab_active_bg_color'])?'':$d['product_page']['tab_active_bg_color']=''?>
 	background-color: <?php echo $d['product_page']['tab_active_bg_color']; ?>;
-	<?=isset($d['product_page']['tab_active_color'])?'':$d['product_page']['tab_active_color']=''?>
 	color: <?php echo $d['product_page']['tab_active_color']; ?>;
 }
+
+
+<?php //Borders and panels ?>
+.gen-tabs .tabs-panels
+{
+	background-color: <?php echo $d['product_page']['tab_panel_bg_color']; ?>;
+	border-top-color: <?php echo $d['product_page']['tab_border_color']; ?>;
+}
+.gen-tabs .tabs a.current
+{
+	<?php /* Border of the active item has the same color as border of panels.
+	   Bottom border is transparent. */ ?>
+	border-color: <?php echo $d['product_page']['tab_border_color']; ?>;
+	border-bottom-color: transparent;
+}
+.gen-tabs .tabs a.current:hover
+{
+	<?php /* Bottom border is transparent. */ ?>
+	border-bottom-color: transparent;
+}
+
+
+<?php //Accordion ?>
 
 <?php //Accordion default tab ?>
 .gen-tabs .acctab
 {
-	<?=isset($d['product_page']['acco_bg_color'])?'':$d['product_page']['acco_bg_color']=''?>
 	background-color: <?php echo $d['product_page']['acco_bg_color']; ?>;
-	<?=isset($d['product_page']['acco_color'])?'':$d['product_page']['acco_color']=''?>
 	color: <?php echo $d['product_page']['acco_color']; ?>;
+
+	border-color: <?php echo $d['product_page']['tab_border_color']; ?>;
+
+	<?php if ($t->isColor($d['product_page']['acco_bg_color'])): ?>
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	<?php endif; ?>
 }
 
 <?php //Accordion active/hover tab ?>
 .gen-tabs .acctab:hover,
 .gen-tabs .acctab:focus,
 .gen-tabs .acctab.current {
-	<?=isset($d['product_page']['acco_active_bg_color'])?'':$d['product_page']['acco_active_bg_color']=''?>
 	background-color: <?php echo $d['product_page']['acco_active_bg_color']; ?>;
-	<?=isset($d['product_page']['acco_active_color'])?'':$d['product_page']['acco_active_color']=''?>
 	color: <?php echo $d['product_page']['acco_active_color']; ?>;
-}
-
-<?php //Tabs panel ?>
-.gen-tabs .tabs-panels
-{
-	background-color: <?php echo $d['product_page']['tab_panel_bg_color']; ?>;
 }
 
 
@@ -1446,8 +1616,8 @@ span.icon.icon-color-productview
 .the-slideshow.slider-pagination2 .owl-controls				.owl-page.active span,
 .the-slideshow.slider-pagination2 .owl-controls.clickable 	.owl-page.active:hover span 
 {
-	<?=isset($d['slideshow']['tool_icon_bg_color'])?'':$d['slideshow']['tool_icon_bg_color']=''?>
 	background-color: <?php echo $d['slideshow']['tool_icon_bg_color']; ?>;
+	color: <?php echo $d['slideshow']['tool_icon_color']; ?>;
 }
 
 
@@ -1459,8 +1629,8 @@ span.icon.icon-color-productview
 .the-slideshow.slider-pagination1 .owl-controls.clickable .owl-page:hover span,
 .the-slideshow.slider-pagination2 .owl-controls.clickable .owl-page:hover span
 {
-	<?=isset($d['slideshow']['tool_icon_hover_bg_color'])?'':$d['slideshow']['tool_icon_hover_bg_color']=''?>
 	background-color: <?php echo $d['slideshow']['tool_icon_hover_bg_color']; ?>;
+	color: <?php echo $d['slideshow']['tool_icon_hover_color']; ?>;
 }
 
 
@@ -1468,8 +1638,9 @@ span.icon.icon-color-productview
 .the-slideshow.slider-pagination1 .owl-controls 			.owl-page.active span,
 .the-slideshow.slider-pagination1 .owl-controls.clickable 	.owl-page.active:hover span /* Active state overrides hover state */
 {
-	<?=isset($d['slideshow']['tool_icon_active_bg_color'])?'':$d['slideshow']['tool_icon_active_bg_color']=''?>
 	background-color: <?php echo $d['slideshow']['tool_icon_active_bg_color']; ?>;
+	<?php //Not needed for pagination: ?>
+	<?php /* color: <?php echo $d['slideshow']['tool_icon_active_color']; ?>; */ ?>
 }
 
 
@@ -1481,18 +1652,16 @@ span.icon.icon-color-productview
 ?>
 .footer-container
 {
-	<?=isset($d['footer']['bg_color'])?'':$d['footer']['bg_color']=''?>
 	<?php if ($d['footer']['bg_color']): ?>
 		background-color: <?php echo $d['footer']['bg_color']; ?>;
 	<?php endif; ?>
 }
 .footer
 {
-	<?=isset($d['footer']['inner_bg_color'])?'':$d['footer']['inner_bg_color']=''?>
 	<?php if ($d['footer']['inner_bg_color']): ?>
 		background-color: <?php echo $d['footer']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer']['color'])?'':$d['footer']['color']=''?>
+	
 	<?php if ($t->isColor($d['footer']['color'])): ?>
 		color: <?php echo $d['footer']['color']; ?>;
 	<?php endif; ?>
@@ -1501,14 +1670,12 @@ span.icon.icon-color-productview
 <?php //Links ?>
 .footer a
 {
-	<?=isset($d['footer']['link_color'])?'':$d['footer']['link_color']=''?>
 	<?php if ($t->isColor($d['footer']['link_color'])): ?>
 		color: <?php echo $d['footer']['link_color']; ?>;
 	<?php endif; ?>
 }
 .footer a:hover
 {
-	<?=isset($d['footer']['link_hover_color'])?'':$d['footer']['link_hover_color']=''?>
 	<?php if ($t->isColor($d['footer']['link_hover_color'])): ?>
 		color: <?php echo $d['footer']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -1519,37 +1686,38 @@ span.icon.icon-color-productview
 /* Buttons
 -------------------------------------------------------------- */
 ?>
-.footer button.button span
+.footer .button
 {
-	<?=isset($d['footer']['button_bg_color'])?'':$d['footer']['button_bg_color']=''?>
 	background-color: <?php echo $d['footer']['button_bg_color']; ?>;
-	<?=isset($d['footer']['button_color'])?'':$d['footer']['button_color']=''?>
 	color: <?php echo $d['footer']['button_color']; ?>;
 }
-.footer button.button:hover span
+.footer .button:hover,
+.footer .button:focus
 {
-	<?=isset($d['footer']['button_hover_bg_color'])?'':$d['footer']['button_hover_bg_color']=''?>
 	background-color: <?php echo $d['footer']['button_hover_bg_color']; ?>;
-	<?=isset($d['footer']['button_hover_color'])?'':$d['footer']['button_hover_color']=''?>
 	color: <?php echo $d['footer']['button_hover_color']; ?>;
 }
 
 
 <?php
-/* Custom icons
+/* Custom icons - iconbox
 -------------------------------------------------------------- */
 ?>
-.footer span.icon
+.footer .ib,
+.footer span.icon /* For backward compatibility */
 {
-	<?=isset($d['footer']['icon_bg_color'])?'':$d['footer']['icon_bg_color']=''?>
 	background-color: <?php echo $d['footer']['icon_bg_color']; ?>;
+	color: <?php echo $d['footer']['icon_color']; ?>;
 }
-.footer span.icon-hover:hover,
-.footer .feature-icon-hover:hover span.icon
+.footer .ib-hover:hover,
+.footer span.icon-hover:hover, /* For backward compatibility */
+.footer .feature-icon-hover:hover .ib,
+.footer .feature-icon-hover:hover span.icon /* For backward compatibility */
 {
-	<?=isset($d['footer']['icon_hover_bg_color'])?'':$d['footer']['icon_hover_bg_color']=''?>
-	background-color: <?php echo $d['footer']['icon_hover_bg_color']; ?>;
+	background-color: <?php echo $d['footer']['icon_hover_bg_color']; ?> !important;
+	color: <?php echo $d['footer']['icon_hover_color']; ?> !important;
 }
+
 
 
 <?php
@@ -1558,23 +1726,12 @@ span.icon.icon-color-productview
 ?>
 
 <?php //Default icon ?>
-/* Back link */
-.footer .buttons-set .back-link small,
-
 /* Slider arrows */
 .footer .slider-arrows1 .owl-controls .owl-buttons div,
 .footer .slider-arrows1 .owl-controls.clickable .owl-buttons div.disabled:hover,
 .footer .slider-arrows2 .owl-controls .owl-buttons div,
 .footer .slider-arrows3 .owl-controls .owl-buttons div,
 .footer .slider-arrows3 .owl-controls.clickable .owl-buttons div.disabled:hover,
-
-	/* deprecated */
-	.footer .gen-slider-arrows1 .direction-nav a, /* Sliders */
-	.footer .gen-slider-arrows1 .direction-nav a.disabled:hover,
-	.footer .gen-slider-arrows2 .direction-nav a, /* Slideshow */
-	.footer .gen-slider-arrows2 .direction-nav a.disabled:hover,
-	.footer .gen-slider-arrows3 .direction-nav a, /* Cloud Zoom */
-	.footer .gen-slider-arrows3 .direction-nav a.disabled:hover,
 
 /* Slider pagination */
 .footer .slider-pagination1 .owl-controls .owl-page span,
@@ -1584,23 +1741,15 @@ span.icon.icon-color-productview
 .footer .accordion-style1 .opener,
 .footer .collapsible .opener
 {
-	<?=isset($d['footer']['tool_icon_bg_color'])?'':$d['footer']['tool_icon_bg_color']=''?>
 	background-color: <?php echo $d['footer']['tool_icon_bg_color']; ?>;
+	color: <?php echo $d['footer']['tool_icon_color']; ?>;
 }
 
 <?php //Hover icon ?>
-/* Back link */
-.footer .buttons-set .back-link:hover small,
-
 /* Slider arrows */
 .footer .slider-arrows1 .owl-controls.clickable .owl-buttons div:hover,
 .footer .slider-arrows2 .owl-controls.clickable .owl-buttons div:hover,
 .footer .slider-arrows3 .owl-controls.clickable .owl-buttons div:hover,
-
-	/* deprecated */
-	.footer .gen-slider-arrows1 .direction-nav a:hover,
-	.footer .gen-slider-arrows2 .direction-nav a:hover,
-	.footer .gen-slider-arrows3 .direction-nav a:hover,
 
 /* Slider pagination */
 .footer .slider-pagination1 .owl-controls.clickable .owl-page:hover span,
@@ -1610,8 +1759,8 @@ span.icon.icon-color-productview
 .footer .accordion-style1 .opener:hover,
 .footer .collapsible .opener:hover
 {
-	<?=isset($d['footer']['tool_icon_hover_bg_color'])?'':$d['footer']['tool_icon_hover_bg_color']=''?>
 	background-color: <?php echo $d['footer']['tool_icon_hover_bg_color']; ?>;
+	color: <?php echo $d['footer']['tool_icon_hover_color']; ?>;
 }
 
 
@@ -1621,40 +1770,36 @@ span.icon.icon-color-productview
 ?>
 .footer-top-container
 {
-	<?=isset($d['footer_top']['bg_color'])?'':$d['footer_top']['bg_color']=''?>
 	<?php if ($d['footer_top']['bg_color']): ?>
 		background-color: <?php echo $d['footer_top']['bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_top']['padding_top'])?'':$d['footer_top']['padding_top']='0'?>
+
 	<?php if ($d['footer_top']['padding_top']): ?>
 		padding-top: <?php echo intval($d['footer_top']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['footer_top']['padding_bottom'])?'':$d['footer_top']['padding_bottom']='0'?>
+
 	<?php if ($d['footer_top']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['footer_top']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .footer-top
 {
-	<?=isset($d['footer_top']['inner_bg_color'])?'':$d['footer_top']['inner_bg_color']=''?>
 	<?php if ($d['footer_top']['inner_bg_color']): ?>
 		background-color: <?php echo $d['footer_top']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_top']['color'])?'':$d['footer_top']['color']=''?>
+	
 	<?php if ($t->isColor($d['footer_top']['color'])): ?>
 		color: <?php echo $d['footer_top']['color']; ?>;
 	<?php endif; ?>
 }
 .footer-top a
 {
-	<?=isset($d['footer_top']['link_color'])?'':$d['footer_top']['link_color']=''?>
 	<?php if ($t->isColor($d['footer_top']['link_color'])): ?>
 		color: <?php echo $d['footer_top']['link_color']; ?>;
 	<?php endif; ?>
 }
 .footer-top a:hover
 {
-	<?=isset($d['footer_top']['link_hover_color'])?'':$d['footer_top']['link_hover_color']=''?>
 	<?php if ($t->isColor($d['footer_top']['link_hover_color'])): ?>
 		color: <?php echo $d['footer_top']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -1667,40 +1812,36 @@ span.icon.icon-color-productview
 ?>
 .footer-primary-container
 {
-	<?=isset($d['footer_primary']['bg_color'])?'':$d['footer_primary']['bg_color']=''?>
 	<?php if ($d['footer_primary']['bg_color']): ?>
 		background-color: <?php echo $d['footer_primary']['bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_primary']['padding_top'])?'':$d['footer_primary']['padding_top']='0'?>
+	
 	<?php if ($d['footer_primary']['padding_top']): ?>
 		padding-top: <?php echo intval($d['footer_primary']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['footer_primary']['padding_bottom'])?'':$d['footer_primary']['padding_bottom']='0'?>
+
 	<?php if ($d['footer_primary']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['footer_primary']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .footer-primary
 {
-	<?=isset($d['footer_primary']['inner_bg_color'])?'':$d['footer_primary']['inner_bg_color']=''?>
 	<?php if ($d['footer_primary']['inner_bg_color']): ?>
 		background-color: <?php echo $d['footer_primary']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_primary']['color'])?'':$d['footer_primary']['color']=''?>
+	
 	<?php if ($t->isColor($d['footer_primary']['color'])): ?>
 		color: <?php echo $d['footer_primary']['color']; ?>;
 	<?php endif; ?>
 }
 .footer-primary a
 {
-	<?=isset($d['footer_primary']['link_color'])?'':$d['footer_primary']['link_color']=''?>
 	<?php if ($t->isColor($d['footer_primary']['link_color'])): ?>
 		color: <?php echo $d['footer_primary']['link_color']; ?>;
 	<?php endif; ?>
 }
 .footer-primary a:hover
 {
-	<?=isset($d['footer_primary']['link_hover_color'])?'':$d['footer_primary']['link_hover_color']=''?>
 	<?php if ($t->isColor($d['footer_primary']['link_hover_color'])): ?>
 		color: <?php echo $d['footer_primary']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -1713,40 +1854,36 @@ span.icon.icon-color-productview
 ?>
 .footer-secondary-container
 {
-	<?=isset($d['footer_secondary']['bg_color'])?'':$d['footer_secondary']['bg_color']=''?>
 	<?php if ($d['footer_secondary']['bg_color']): ?>
 		background-color: <?php echo $d['footer_secondary']['bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_secondary']['padding_top'])?'':$d['footer_secondary']['padding_top']='0'?>
+
 	<?php if ($d['footer_secondary']['padding_top']): ?>
 		padding-top: <?php echo intval($d['footer_secondary']['padding_top']); ?>px;
 	<?php endif; ?>
-	<?=isset($d['footer_secondary']['padding_bottom'])?'':$d['footer_secondary']['padding_bottom']='0'?>
+
 	<?php if ($d['footer_secondary']['padding_bottom']): ?>
 		padding-bottom: <?php echo intval($d['footer_secondary']['padding_bottom']); ?>px;
 	<?php endif; ?>
 }
 .footer-secondary
 {
-	<?=isset($d['footer_secondary']['inner_bg_color'])?'':$d['footer_secondary']['inner_bg_color']=''?>
 	<?php if ($d['footer_secondary']['inner_bg_color']): ?>
 		background-color: <?php echo $d['footer_secondary']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_secondary']['color'])?'':$d['footer_secondary']['color']=''?>
+	
 	<?php if ($t->isColor($d['footer_secondary']['color'])): ?>
 		color: <?php echo $d['footer_secondary']['color']; ?>;
 	<?php endif; ?>
 }
 .footer-secondary a
 {
-	<?=isset($d['footer_secondary']['link_color'])?'':$d['footer_secondary']['link_color']=''?>
 	<?php if ($t->isColor($d['footer_secondary']['link_color'])): ?>
 		color: <?php echo $d['footer_secondary']['link_color']; ?>;
 	<?php endif; ?>
 }
 .footer-secondary a:hover
 {
-	<?=isset($d['footer_secondary']['link_hover_color'])?'':$d['footer_secondary']['link_hover_color']=''?>
 	<?php if ($t->isColor($d['footer_secondary']['link_hover_color'])): ?>
 		color: <?php echo $d['footer_secondary']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -1759,32 +1896,28 @@ span.icon.icon-color-productview
 ?>
 .footer-bottom-container
 {
-	<?=isset($d['footer_bottom']['bg_color'])?'':$d['footer_bottom']['bg_color']=''?>
 	<?php if ($d['footer_bottom']['bg_color']): ?>
 		background-color: <?php echo $d['footer_bottom']['bg_color']; ?>;
 	<?php endif; ?>
 }
 .footer-bottom
 {
-	<?=isset($d['footer_bottom']['inner_bg_color'])?'':$d['footer_bottom']['inner_bg_color']=''?>
 	<?php if ($d['footer_bottom']['inner_bg_color']): ?>
 		background-color: <?php echo $d['footer_bottom']['inner_bg_color']; ?>;
 	<?php endif; ?>
-	<?=isset($d['footer_bottom']['color'])?'':$d['footer_bottom']['color']=''?>
+	
 	<?php if ($t->isColor($d['footer_bottom']['color'])): ?>
 		color: <?php echo $d['footer_bottom']['color']; ?>;
 	<?php endif; ?>
 }
 .footer-bottom a
 {
-	<?=isset($d['footer_bottom']['link_color'])?'':$d['footer_bottom']['link_color']=''?>
 	<?php if ($t->isColor($d['footer_bottom']['link_color'])): ?>
 		color: <?php echo $d['footer_bottom']['link_color']; ?>;
 	<?php endif; ?>
 }
 .footer-bottom a:hover
 {
-	<?=isset($d['footer_bottom']['link_hover_color'])?'':$d['footer_bottom']['link_hover_color']=''?>
 	<?php if ($t->isColor($d['footer_bottom']['link_hover_color'])): ?>
 		color: <?php echo $d['footer_bottom']['link_hover_color']; ?>;
 	<?php endif; ?>
@@ -1803,11 +1936,16 @@ span.icon.icon-color-productview
 /* Social icons
 -------------------------------------------------------------- */
 ?>
-.social-links span.icon {
-	<?=isset($d['colors']['social_icon_bg_color'])?'':$d['colors']['social_icon_bg_color']=''?>
+
+.social-links .ib,
+.social-links a > span.icon /* For backward compatibility */
+{
 	background-color: <?php echo $d['colors']['social_icon_bg_color']; ?>;
+	color: <?php echo $d['colors']['social_icon_color']; ?>;
 }
-.social-links span.icon-hover:hover {
-	<?=isset($d['colors']['social_icon_hover_bg_color'])?'':$d['colors']['social_icon_hover_bg_color']=''?>
-	background-color: <?php echo $d['colors']['social_icon_hover_bg_color']; ?>;
+.social-links .ib-hover:hover,
+.social-links a > span.icon-hover:hover /* For backward compatibility */
+{
+	background-color: <?php echo $d['colors']['social_icon_hover_bg_color']; ?> !important;
+	color: <?php echo $d['colors']['social_icon_hover_color']; ?> !important;
 }

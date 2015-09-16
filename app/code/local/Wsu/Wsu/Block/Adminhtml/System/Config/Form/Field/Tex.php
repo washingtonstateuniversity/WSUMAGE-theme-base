@@ -7,13 +7,42 @@ class Wsu_Wsu_Block_Adminhtml_System_Config_Form_Field_Tex extends Mage_Adminhtm
      * @return String
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
-        $html        = $element->getElementHtml(); //Default HTML
-        $jsUrl       = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
-        $texUrl      = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . Mage::helper('wsu_themecontrol')->getTexPath();
+        //$html        = $element->getElementHtml(); //Default HTML
+        //$jsUrl       = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
+        //$texUrl      = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . Mage::helper('wsu_themecontrol')->getTexPath();
         //Recreate ID of the background color picker which is related with this pattern
-        $bgcPickerId = str_replace('_tex', '_bg_color', $element->getHtmlId());
+        //$bgcPickerId = str_replace('_tex', '_bg_color', $element->getHtmlId());
         //Create ID of the pattern preview box
-        $previewId   = $element->getHtmlId() . '-tex-preview';
+        //$previewId   = $element->getHtmlId() . '-tex-preview';
+        
+        
+        
+        $elementOriginalData = $element->getOriginalData();
+		$texPath = '';
+		if (isset($elementOriginalData['tex_path']))
+		{
+			$texPath = $elementOriginalData['tex_path'];
+		}
+		else
+		{
+			return 'Error: Texture path not specified in config.';
+		}
+
+		$html = $element->getElementHtml(); //Default HTML
+		$jsUrl = $this->getJsUrl('wsu/jquery/jquery-for-admin.min.js');
+		$texUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $texPath;
+		
+		//Recreate ID of the background color picker which is related with this pattern
+			//From the texture picker ID get the suffix beginning with '_tex'
+			$fieldIdSuffix = strstr($element->getHtmlId(), '_tex');
+			//Replace the suffix with suffix appropriate for the background color picker in the current options group
+			$bgcPickerId = str_replace($fieldIdSuffix, '_bg_color', $element->getHtmlId());
+		
+		//Create ID of the pattern preview box
+		$previewId = $element->getHtmlId() . '-tex-preview';
+        
+        
+        
         if (Mage::registry('jqueryLoaded') == false) {
             $html .= '
 			<script type="text/javascript" src="' . $jsUrl . '"></script>
