@@ -507,10 +507,11 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 <?php //Header caret (the same color as text) ?>
 .header .caret {
-	<?php if ($t->isColor($d['header']['color'])): ?>
-		border-top-color: <?php echo $d['header']['color']; ?>;
+	
+	<?php if (isset($d['header']['color']) && $t->isColor($d['header']['color'])): ?>
+		<?=$t->getCssRuleAttr('border-top-color','header/color','',';')?>
 	<?php else: ?>
-		border-top-color: <?php echo $d['colors']['color']; ?>;
+		<?=$t->getCssRuleAttr('border-top-color','colors/color','',';')?>
 	<?php endif; ?>
 }
 
@@ -521,34 +522,29 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 ?>
 .form-search .input-text
 {
-	background-color: <?php echo $d['header']['search_bg_color']; ?>;
-	border-color: <?php echo $d['header']['search_border_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','header/search_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('border-color','header/search_border_color','',';')?>
 }
 .form-search .input-text:hover,
 .form-search .input-text:focus
 {
-	background-color: <?php echo $d['header']['search_hover_bg_color']; ?>;
-	border-color: <?php echo $d['header']['search_border_hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','header/search_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('border-color','header/search_border_hover_color','',';')?>
 }
 
 .form-search .input-text,
 .form-search .button {
-
-	<?php if ($t->isColor($d['header']['search_color'])): ?>
-		color: <?php echo $d['header']['search_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/search_color','',';')?>
 }
 .form-search .input-text:hover,
 .form-search .input-text:focus,
 .form-search .input-text:hover + .button,
 .form-search .button:hover {
-	<?php if ($t->isColor($d['header']['search_hover_color'])): ?>
-		color: <?php echo $d['header']['search_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/search_hover_color','',';')?>
 }
 
 <?php //If no border color, then remove border and button's margin ?>
-<?php if ($t->isColor($d['header']['search_border_color']) == false && $t->isColor($d['header']['search_border_hover_color']) == false): ?>
+<?php if ( isset($d['header']['search_border_color']) && $t->isColor($d['header']['search_border_color']) == false && $t->isColor($d['header']['search_border_hover_color']) == false): ?>
 	.form-search .input-text { border: none; }
 <?php endif; ?>
 
@@ -562,15 +558,8 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 .header .truncated .truncated_full_value .item-options,
 .header .form-search .search-autocomplete
 {
-	<?php if ($t->isColor($d['header']['dropdown_bg_color'])): ?>
-		background-color: <?php echo $d['header']['dropdown_bg_color']; ?>;
-	<?php else: ?>
-		background-color:#fff;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['header']['dropdown_color'])): ?>
-		color: <?php echo $d['header']['dropdown_color']; ?>; <?php //It will be inherited by child elements ?>
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header/dropdown_bg_color','#fff',';')?>
+	<?=$t->getCssRuleAttr('color','header/dropdown_color','#fff',';')?>
 }
 
 <?php //Header drop-downs: link colors ?>
@@ -578,22 +567,18 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 .header .dropdown.open > .dropdown-heading.cover a,
 .header .form-search .search-autocomplete li
 {
-	<?php if ($t->isColor($d['header']['dropdown_link_color'])): ?>
-		color: <?php echo $d['header']['dropdown_link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/dropdown_link_color','',';')?>
 }
 .header .dropdown .dropdown-content a:hover,
 .header .dropdown.open > .dropdown-heading.cover a:hover,
 .header .form-search .search-autocomplete li:hover
 {
-	<?php if ($t->isColor($d['header']['dropdown_link_hover_color'])): ?>
-		color: <?php echo $d['header']['dropdown_link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/dropdown_link_hover_color','',';')?>
 }
 
 <?php //Caret inside dropdown-toggle (the same color as text) ?>
 .header .dropdown.open > .dropdown-heading.cover .caret {
-	border-top-color: <?php echo $d['header']['dropdown_color']; ?>;
+	<?=$t->getCssRuleAttr('border-top-color','header/dropdown_color','',';')?>
 }
 
 
@@ -606,47 +591,32 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 .header-top-container
 {
-	<?php if ($d['header_top']['bg_color']): ?>
-		background-color: <?php echo $d['header_top']['bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header_top/bg_color','',';')?>
+	
+	<?=$t->getCssRuleAttr('padding-top','header_top/padding_top','','px;')?>
 
-	<?php if ($d['header_top']['padding_top']): ?>
-		padding-top: <?php echo intval($d['header_top']['padding_top']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('padding-bottom','header_top/padding_bottom','','px;')?>
 
-	<?php if ($d['header_top']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['header_top']['padding_bottom']); ?>px;
-	<?php endif; ?>
 }
 
 .header-top
 {
-	<?php if ($d['header_top']['inner_bg_color']): ?>
-		background-color: <?php echo $d['header_top']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['header_top']['color'])): ?>
-		color: <?php echo $d['header_top']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header_top/inner_bg_color','',';')?>
 
-	<?php if ($d['header_top']['content_padding_top']): ?>
-		padding-top: <?php echo intval($d['header_top']['content_padding_top']); ?>px;
-	<?php endif; ?>
-	<?php if ($d['header_top']['content_padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['header_top']['content_padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header_top/color','',';')?>
+
+	<?=$t->getCssRuleAttr('padding-top','header_top/content_padding_top','','px;')?>
+
+	<?=$t->getCssRuleAttr('padding-bottom','header_top/content_padding_bottom','','px;')?>
+
 }
 .header-top a
 {
-	<?php if ($t->isColor($d['header_top']['link_color'])): ?>
-		color: <?php echo $d['header_top']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header_top/link_color','',';')?>
 }
 .header-top a:hover
 {
-	<?php if ($t->isColor($d['header_top']['link_hover_color'])): ?>
-		color: <?php echo $d['header_top']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header_top/link_hover_color','',';')?>
 }
 
 
@@ -659,22 +629,19 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 .header-primary-container
 {
-	<?php if ($d['header_primary']['padding_top']): ?>
-		padding-top: <?php echo intval($d['header_primary']['padding_top']); ?>px;
-	<?php endif; ?>
 
-	<?php if ($d['header_primary']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['header_primary']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('padding-top','header_primary/padding_top','','px;')?>
+
+	<?=$t->getCssRuleAttr('padding-bottom','header_primary/padding_bottom','','px;')?>
+
 }
 .header-primary
 {
-	<?php if ($d['header_primary']['content_padding_top']): ?>
-		padding-top: <?php echo intval($d['header_primary']['content_padding_top']); ?>px;
-	<?php endif; ?>
-	<?php if ($d['header_primary']['content_padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['header_primary']['content_padding_bottom']); ?>px;
-	<?php endif; ?>
+
+	<?=$t->getCssRuleAttr('padding-top','header_primary/content_padding_top','','px;')?>
+
+	<?=$t->getCssRuleAttr('padding-bottom','header_primary/content_padding_bottom','','px;')?>
+
 }
 
 
@@ -687,50 +654,32 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 .header-mobile .skip-link
 {
-	<?php if ($d['header']['mh_item_bg_color']): ?>
-		background-color: <?php echo $d['header']['mh_item_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['header']['mh_item_color'])): ?>
-		color: <?php echo $d['header']['mh_item_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header/mh_item_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','header/mh_item_color','',';')?>
 }
 .header-mobile .skip-link:hover {
 	<?php //On hover item has the same color as default ?>
-	<?php if ($t->isColor($d['header']['mh_item_color'])): ?>
-		color: <?php echo $d['header']['mh_item_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/mh_item_color','',';')?>
 }
 .header-mobile .skip-link.skip-active
 {
-	<?php if ($d['header']['mh_item_active_bg_color']): ?>
-		background-color: <?php echo $d['header']['mh_item_active_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['header']['mh_item_active_color'])): ?>
-		color: <?php echo $d['header']['mh_item_active_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header/mh_item_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','header/mh_item_active_color','',';')?>
 }
 
 <?php //Skip content. Important: applied only to "skip-content--style", not to "skip-content". ?>
 .header-mobile .skip-content--style
 {
-	<?php if ($d['header']['mh_item_active_bg_color']): ?>
-		background-color: <?php echo $d['header']['mh_item_active_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['header']['mh_content_color'])): ?>
-		color: <?php echo $d['header']['mh_content_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','header/mh_item_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','header/mh_content_color','',';')?>
 }
 .header-mobile .skip-content--style a
 {
-	<?php if ($t->isColor($d['header']['mh_content_link_color'])): ?>
-		color: <?php echo $d['header']['mh_content_link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/mh_content_link_color','',';')?>
 }
 .header-mobile .skip-content--style a:hover
 {
-	<?php if ($t->isColor($d['header']['mh_content_link_hover_color'])): ?>
-		color: <?php echo $d['header']['mh_content_link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','header/mh_content_link_hover_color','',';')?>
 }
 
 
@@ -748,33 +697,21 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */?>
 
 .cat-label-label1 {
-	<?php if ($d['nav']['label_bg_color']): ?>
-		background-color: <?php echo $d['nav']['label_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['nav']['label_color'])): ?>
-		color: <?php echo $d['nav']['label_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','nav/label_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/label_color','',';')?>
 }
 .cat-label-label2 {
-	<?php if ($d['nav']['label_bg_color2']): ?>
-		background-color: <?php echo $d['nav']['label_bg_color2']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['nav']['label_color2'])): ?>
-		color: <?php echo $d['nav']['label_color2']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','nav/label_bg_color2','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/label_color2','',';')?>
 }
 
 <?php //Top-category label pin ?>
 
 li.level0 > a > span > .cat-label-label1.pin-bottom:before {
-	<?php if ($d['nav']['label_bg_color']): ?>
-		border-top-color: <?php echo $d['nav']['label_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('border-top-color','nav/label_bg_color','',';')?>
 }
 li.level0 > a > span > .cat-label-label2.pin-bottom:before {
-	<?php if ($d['nav']['label_bg_color2']): ?>
-		border-top-color: <?php echo $d['nav']['label_bg_color2']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('border-top-color','nav/label_bg_color2','',';')?>
 }
 
 <?php //Category label hover ?>
@@ -782,19 +719,13 @@ li.level0 > a > span > .cat-label-label2.pin-bottom:before {
 li > a:hover > span > .cat-label,
 .nav-regular li.level0:hover > a > span > .cat-label /* Top-level category label is highlighted on item hover, not on link hover */
 {
-	<?php if ($d['nav']['label_hover_bg_color']): ?>
-		background-color: <?php echo $d['nav']['label_hover_bg_color']; ?>;
-	<?php endif; ?>
-	<?php if ($t->isColor($d['nav']['label_hover_color'])): ?>
-		color: <?php echo $d['nav']['label_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','nav/label_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/label_hover_color','',';')?>
 }
 li.level0 > a:hover > span > .pin-bottom:before,
 .nav-regular li.level0:hover > a > span > .pin-bottom:before
 {
-	<?php if ($d['nav']['label_hover_bg_color']): ?>
-		border-top-color: <?php echo $d['nav']['label_hover_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('border-top-color','nav/label_hover_bg_color','',';')?>
 }
 
 <?php
@@ -804,24 +735,15 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 #nav .nav-panel--dropdown
 {
-	<?php if ($t->isColor($d['nav']['dropdown_bg_color'])): ?>
-		background-color: <?php echo $d['nav']['dropdown_bg_color']; ?>;
-	<?php else: ?>
-		background-color:#fff;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['nav']['dropdown_color'])): ?>
-		color: <?php echo $d['nav']['dropdown_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','nav/dropdown_bg_color','#fff',';')?>
+	<?=$t->getCssRuleAttr('color','nav/dropdown_color','',';')?>
 }
 
 <?php //Link colors  ?>
 
 #nav .nav-panel--dropdown a
 {
-	<?php if ($t->isColor($d['nav']['dropdown_link_color'])): ?>
-		color: <?php echo $d['nav']['dropdown_link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','nav/dropdown_link_color','',';')?>
 }
 #nav .nav-panel--dropdown a:hover
 {
