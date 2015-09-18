@@ -4,13 +4,13 @@ class Wsu_Themecontrol_Adminhtml_ImportController extends Mage_Adminhtml_Control
         $this->getResponse()->setRedirect($this->getUrl("adminhtml/system_config/edit/section/wsu_themecontrol/"));
     }
     public function blocksAction() {
-        $x0b = Mage::helper('wsu_themecontrol')->getCfg('install/overwrite_blocks');
-        Mage::getSingleton('wsu_themecontrol/import_cms')->importCmsItems('cms/block', 'blocks', $x0b);
+        $overwrite = Mage::helper('wsu_themecontrol')->getCfg('install/overwrite_blocks');
+        Mage::getSingleton('wsu_themecontrol/import_cms')->importCmsItems('cms/block', 'blocks', $overwrite);
         $this->getResponse()->setRedirect($this->getUrl("adminhtml/system_config/edit/section/wsu_themecontrol/"));
     }
     public function pagesAction() {
-        $x0b = Mage::helper('wsu_themecontrol')->getCfg('install/overwrite_pages');
-        Mage::getSingleton('wsu_themecontrol/import_cms')->importCmsItems('cms/page', 'pages', $x0b);
+        $overwrite = Mage::helper('wsu_themecontrol')->getCfg('install/overwrite_pages');
+        Mage::getSingleton('wsu_themecontrol/import_cms')->importCmsItems('cms/page', 'pages', $overwrite);
         $this->getResponse()->setRedirect($this->getUrl("adminhtml/system_config/edit/section/wsu_themecontrol/"));
     }
 }
