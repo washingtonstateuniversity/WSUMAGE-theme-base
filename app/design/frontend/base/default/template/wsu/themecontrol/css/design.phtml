@@ -747,25 +747,23 @@ li.level0 > a:hover > span > .pin-bottom:before,
 }
 #nav .nav-panel--dropdown a:hover
 {
-	<?php if ($t->isColor($d['nav']['dropdown_link_hover_color'])): ?>
-		color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','nav/dropdown_link_hover_color','',';')?>
 }
 
 <?php //Carets inside dropdowns ?>
 
 #nav .nav-panel--dropdown a .caret
 {
-	<?php if ($t->isColor($d['nav']['dropdown_link_color'])): ?>
-		border-left-color: <?php echo $d['nav']['dropdown_link_color']; ?>;
-		border-right-color: <?php echo $d['nav']['dropdown_link_color']; ?>;
+	<?php if ( isset($d['nav']['dropdown_link_color']) && $t->isColor($d['nav']['dropdown_link_color']) ): ?>
+		<?=$t->getCssRuleAttr('border-left-color','nav/dropdown_link_color','',';')?>
+		<?=$t->getCssRuleAttr('border-right-color','nav/dropdown_link_color','',';')?>
 	<?php endif; ?>
 }
 #nav .nav-panel--dropdown a:hover .caret
 {
-	<?php if ($t->isColor($d['nav']['dropdown_link_hover_color'])): ?>
-		border-left-color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
-		border-right-color: <?php echo $d['nav']['dropdown_link_hover_color']; ?>;
+	<?php if ( isset($d['nav']['dropdown_link_hover_color']) && $t->isColor($d['nav']['dropdown_link_hover_color'])): ?>
+		<?=$t->getCssRuleAttr('border-left-color','nav/dropdown_link_hover_color','',';')?>
+		<?=$t->getCssRuleAttr('border-right-color','nav/dropdown_link_hover_color','',';')?>
 	<?php endif; ?>
 }
 
@@ -774,13 +772,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 -------------------------------------------------------------- */
 ?>
 
-<?php if ($d['nav']['dropdown_border_top'] > 0): ?>
+<?php if ( isset($d['nav']['dropdown_border_top']) && $d['nav']['dropdown_border_top'] > 0): ?>
 
 	<?php //All types, only level 1 ?>
 	.nav-regular .nav-item.level0 > .nav-panel--dropdown
 
 		<?php //If border should be displayed on dropdowns of all levels ?>
-		<?php if ($d['nav']['dropdown_border_all_levels']): ?>
+		<?php if ( isset($d['nav']['dropdown_border_all_levels']) && $d['nav']['dropdown_border_all_levels']): ?>
 		,
 		.nav-regular .mega > .nav-panel--dropdown
 		,
@@ -800,7 +798,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 
 <?php //Regular mode ?>
 
-<?php if ($d['nav']['dropdown_shadow']): ?>
+<?php if ( isset($d['nav']['dropdown_shadow']) && $d['nav']['dropdown_shadow'] ): ?>
 /* All types*/
 .nav-regular .nav-panel--dropdown
 {
@@ -815,7 +813,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 //Apply only to top-level dropdowns which are divs (so when submenu is wrapped inside a div).
 ?>
 
-<?php if ($d['nav']['mobile_shadow']): ?>
+<?php if ( isset($d['nav']['mobile_shadow']) && $d['nav']['mobile_shadow']): ?>
 .nav-mobile div.nav-panel--dropdown
 {
 	-moz-box-shadow:	0 3px 10px rgba(0,0,0, 0.15);
@@ -845,17 +843,10 @@ li.level0 > a:hover > span > .pin-bottom:before,
 <?php //Menu outer container ?>
 .nav-container 
 {
-	<?php if ($d['nav']['outer_bg_color']): ?>
-		background-color: <?php echo $d['nav']['outer_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','nav/outer_bg_color','',';')?>
 
-	<?php if ($d['nav']['padding_top']): ?>
-		padding-top: <?php echo intval($d['nav']['padding_top']); ?>px;
-	<?php endif; ?>
-
-	<?php if ($d['nav']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['nav']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('padding-top','nav/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','nav/padding_bottom','','px;')?>
 }
 
 <?php
@@ -864,45 +855,42 @@ li.level0 > a:hover > span > .pin-bottom:before,
    Because of that, we need to re-apply the bottom padding for navigation container (if padding exist).
    Bottom padding is not removed so that mobile header look more similar to regular header. */
 ?>
-<?php if ($d['nav']['padding_bottom']): ?>
+
 .header-mobile .skip-content.nav-container {
-	padding-bottom: <?php echo intval($d['nav']['padding_bottom']); ?>px;
+	<?=$t->getCssRuleAttr('padding-bottom','nav/padding_bottom','','px;')?>
 }
-<?php endif; ?>
+
 
 <?php
 /* Menu inner container.
    If menu bar has inner background color (to show an outline) */
 ?>
-<?php if ($t->isColor($d['nav']['inner_bg_color'])): ?>
-	.nav
-	{
-		background-color: <?php echo $d['nav']['inner_bg_color']; ?>;
-	}
-<?php endif; ?>
+
+.nav
+{
+	<?=$t->getCssRuleAttr('background-color','nav/inner_bg_color','',';')?>
+}
+
 
 <?php
 //Bottom padding of ".header-primary" can be also applied as bottom padding of ".nav"
 //to have the same space when menu opened
 ?>
-<?php if ($d['header_primary']['content_padding_bottom']): ?>
-	.header-mobile .nav
-	{
-		margin-bottom: <?php echo intval($d['header_primary']['content_padding_bottom']); ?>px;
-	}
-<?php endif; ?>
+.header-mobile .nav
+{
+	<?=$t->getCssRuleAttr('margin-bottom','header_primary/content_padding_bottom','','px;')?>
+}
 
 <?php
 /* Menu bar - with outline.
    If inner container has a background color, it gets additional class "has-outline".
    Add padding, the same value as for side padding of all page sections. */
 ?>
-<?php if ($d['page']['content_padding_side']): ?>
 .nav.has-outline > .inner-container {
-	padding-top: <?php echo $d['page']['content_padding_side']; ?>px;
-	padding-bottom: <?php echo $d['page']['content_padding_side']; ?>px;
+	<?=$t->getCssRuleAttr('padding-top','page/content_padding_side','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','page/content_padding_side','','px;')?>
 }
-<?php endif; ?>
+
 
 <?php
 	$headerInnerBgColor		= $d['header']['inner_bg_color']; //Bg. color of "primary header" section is inherited from "header" section
@@ -938,8 +926,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 	@media only screen and (max-width: 479px) {
 		.header-mobile .nav > .inner-container
 		{
-			padding-left: <?php echo $d['page']['content_padding_side']; ?>px;
-			padding-right: <?php echo $d['page']['content_padding_side']; ?>px;
+			<?=$t->getCssRuleAttr('padding-left','page/content_padding_side','','px;')?>
+			<?=$t->getCssRuleAttr('padding-right','page/content_padding_side','','px;')?>
 		}
 	}
 
@@ -954,24 +942,20 @@ li.level0 > a:hover > span > .pin-bottom:before,
    and current item color can override sticky menu rules. */
 ?>
 <?php //Override default menu bar color when sticky menu is enabled. Important: regular mode only. ?>
-<?php if ($d['nav']['sticky_item_bg_color']): ?>
-	.sticky-header .sticky-container, <?php //Sticky menu container ?>
-	.sticky-header .nav-regular <?php //Sticky menu bar ?>
-	{
-		background-color: <?php echo $d['nav']['sticky_item_bg_color']; ?>;
-	}
-<?php endif; ?>
+.sticky-header .sticky-container, <?php //Sticky menu container ?>
+.sticky-header .nav-regular <?php //Sticky menu bar ?>
+{
+	<?=$t->getCssRuleAttr('background-color','nav/sticky_item_bg_color','',';')?>
+}
 
 <?php //Top-level menu items ?>
-<?php if ($t->isColor($d['nav']['sticky_item_color'])): ?>
-	.sticky-header .nav-regular .nav-item.level0 > a
-	{
-		color: <?php echo $d['nav']['sticky_item_color']; ?>;
-	}
-<?php endif; ?>
+.sticky-header .nav-regular .nav-item.level0 > a
+{
+	<?=$t->getCssRuleAttr('color','nav/sticky_item_color','',';')?>
+}
 
 <?php //Hide menu bottom line ?>
-<?php if (! $d['nav']['sticky_border']): ?>
+<?php if (isset($d['nav']['sticky_border']) && ! $d['nav']['sticky_border']): ?>
 	.sticky-header #nav.nav-regular
 	{
 		border-bottom: none;
@@ -991,12 +975,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-regular
 		{
-			background-color: <?php echo $d['nav']['bg_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/bg_color','',';')?>
 		}
 		.nav-regular .nav-item.level0 > a,
 		#nav .nav-item--homeicon a <?php //Single icon has the same color as default item ?>
 		{
-			color: <?php echo $d['nav']['color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 		}
 
 	<?php //Mobile mode only ?>
@@ -1004,24 +988,24 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-mobile .nav-item.level0 > a
 		{
-			background-color: <?php echo $d['nav']['bg_color']; ?>;
-			color: <?php echo $d['nav']['color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 		}
 		.nav-mobile .nav-item.level0 > .opener
 		{
-			color: <?php echo $d['nav']['color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 		}
 
 		<?php //Level 2+ ?>
 		<?php //Important: added #nav to make rule more specific and override dropdown styles of the regular menu ?>
 		#nav.nav-mobile ul.level0 .nav-item > a
 		{
-			background-color: <?php echo $d['nav']['bg_color']; ?>;
-			color: <?php echo $d['nav']['color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 		}
 		.nav-mobile ul.level0 .nav-item > .opener
 		{
-			color: <?php echo $d['nav']['color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 		}
 
 <?php //Currently selected item ?>
@@ -1031,8 +1015,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-regular .nav-item.level0.active > a
 		{
-			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
-			color: <?php echo $d['nav']['active_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/active_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/active_color','',';')?>
 		}
 
 	<?php //Mobile mode only ?>
@@ -1040,24 +1024,24 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-mobile .nav-item.level0.current > a
 		{
-			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
-			color: <?php echo $d['nav']['active_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/active_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/active_color','',';')?>
 		}
 		.nav-mobile .nav-item.level0.current > .opener
 		{
-			color: <?php echo $d['nav']['active_color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/active_color','',';')?>
 		}
 
 		<?php //Level 2+ ?>
 		<?php //Important: added #nav to make rule more specific to override dropdown styles ?>
 		#nav.nav-mobile ul.level0 .nav-item.current > a
 		{
-			background-color: <?php echo $d['nav']['active_bg_color']; ?>;
-			color: <?php echo $d['nav']['active_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/active_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/active_color','',';')?>
 		}
 		.nav-mobile ul.level0 .nav-item.current > .opener
 		{
-			color: <?php echo $d['nav']['active_color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/active_color','',';')?>
 		}
 
 <?php //Hover item ?>
@@ -1067,8 +1051,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-regular .nav-item.level0:hover > a
 		{
-			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-			color: <?php echo $d['nav']['hover_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/hover_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 		}
 
 	<?php //Mobile mode only ?>
@@ -1076,24 +1060,24 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 1 ?>
 		.nav-mobile .nav-item.level0 > a:hover
 		{
-			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-			color: <?php echo $d['nav']['hover_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/hover_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 		}
 		.nav-mobile .nav-item.level0 > a:hover + .opener
 		{
-			color: <?php echo $d['nav']['hover_color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 		}
 
 		<?php //Level 2+ ?>
 		<?php //Important: added #nav to make rule more specific and override dropdown styles of the regular menu ?>
 		#nav.nav-mobile ul.level0 .nav-item > a:hover
 		{
-			background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-			color: <?php echo $d['nav']['hover_color']; ?>;
+			<?=$t->getCssRuleAttr('background-color','nav/hover_bg_color','',';')?>
+			<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 		}
 		.nav-mobile ul.level0 .nav-item > a:hover + .opener
 		{
-			color: <?php echo $d['nav']['hover_color']; ?>;
+			<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 		}
 
 
@@ -1102,9 +1086,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 -------------------------------------------------------------- */
 ?>
 
-<?php if ($d['nav']['line_height'] > 0): ?>
+<?php if ( isset($d['nav']['line_height']) && $d['nav']['line_height'] > 0): ?>
 .nav-regular .nav-item.level0 > a {
-	line-height: <?php echo $d['nav']['line_height']; ?>px;
+	<?=$t->getCssRuleAttr('line-height','nav/line_height','','px;')?>
 }
 <?php endif; ?>
 
@@ -1114,13 +1098,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 -------------------------------------------------------------- */
 ?>
 #nav .nav-item.level0.parent > a .caret {
-	border-top-color: <?php echo $d['nav']['color']; ?>;
+	<?=$t->getCssRuleAttr('border-top-color','nav/color','',';')?>
 }
 #nav .nav-item.level0.parent.active > a .caret {
-	border-top-color: <?php echo $d['nav']['active_color']; ?>;
+	<?=$t->getCssRuleAttr('border-top-color','nav/active_color','',';')?>
 }
 #nav .nav-item.level0.parent:hover > a .caret {
-	border-top-color: <?php echo $d['nav']['hover_color']; ?>;
+	<?=$t->getCssRuleAttr('border-top-color','nav/hover_color','',';')?>
 }
 
 
@@ -1132,12 +1116,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 /* Gaps
 -------------------------------------------------------------- */
 ?>
-<?php if ($t->isColor($d['nav']['mobile_link_separator_color'])): ?>
+<?php if ( isset($d['nav']['mobile_link_separator_color']) && $t->isColor($d['nav']['mobile_link_separator_color'])): ?>
 
 	<?php //Important: gap has to be at the top of the item to show space between the first item and the mobile menu trigger.
 		  //Selector needs to have proper specificity. ?>
 	.nav-mobile li.nav-item { margin-top: 1px !important; }
-	.nav-mobile { background-color: <?php echo $d['nav']['mobile_link_separator_color']; ?>; }
+	.nav-mobile { <?=$t->getCssRuleAttr('background-color','nav/mobile_link_separator_color','',';')?> }
 
 <?php endif; ?>
 
@@ -1221,37 +1205,37 @@ li.level0 > a:hover > span > .pin-bottom:before,
 <?php //Default ?>
 .mobnav-trigger-wrapper 
 {
-	color: <?php echo $d['nav']['color']; ?>;
+	<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 }
 .mobnav-trigger
 {
-	background-color: <?php echo $d['nav']['bg_color']; ?>;
-	color: <?php echo $d['nav']['color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/color','',';')?>
 }
 
 <?php //Hover ?>
 .mobnav-trigger:hover
 {
-	background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-	color: <?php echo $d['nav']['hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 }
 
 <?php //Active ?>
 .mobnav-trigger.active
 {
-	background-color: <?php echo $d['nav']['hover_bg_color']; ?>;
-	color: <?php echo $d['nav']['hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','nav/hover_color','',';')?>
 }
 
 <?php //Icon ?>
 .mobnav-trigger .trigger-icon .line {
-	background-color: <?php echo $d['nav']['color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/color','',';')?>
 }
 .mobnav-trigger:hover .trigger-icon .line {
-	background-color: <?php echo $d['nav']['hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/hover_color','',';')?>
 }
 .mobnav-trigger.active .trigger-icon .line {
-	background-color: <?php echo $d['nav']['hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','nav/hover_color','',';')?>
 }
 
 
@@ -1265,7 +1249,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 
 <?php //Bottom border of menu bar ?>
-<?php if ($d['nav']['border'] > 0): ?>
+<?php if ( isset($d['nav']['border']) && $d['nav']['border'] > 0 && isset($d['nav']['border_color']) ): ?>
 	#nav,
 	.mobnav-trigger
 	{
@@ -1285,8 +1269,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //All types: level 1 ?>
 		.nav-regular .nav-item.level0 > a
 		{
-			font-size:<?php echo $d['nav']['level1_font_size']; ?>px;
-			<?php if ($d['nav']['level1_font_uppercase']): ?>
+			<?=$t->getCssRuleAttr('font-size','nav/level1_font_size','','px;')?>
+			<?php if ( isset($d['nav']['level1_font_uppercase']) && $d['nav']['level1_font_uppercase']): ?>
 				text-transform:uppercase;
 			<?php endif; ?>
 		}
@@ -1296,8 +1280,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 			<?php //First level inside the dropdown  ?>
 			.nav-regular .nav-submenu--mega > li > a
 			{
-				font-size:<?php echo $d['nav']['mega_lev1_font_size']; ?>px;
-				<?php if ($d['nav']['mega_lev1_font_uppercase']): ?>
+				<?=$t->getCssRuleAttr('font-size','nav/mega_lev1_font_size','','px;')?>
+				<?php if ( isset($d['nav']['mega_lev1_font_uppercase']) && $d['nav']['mega_lev1_font_uppercase']): ?>
 					text-transform:uppercase;
 				<?php endif; ?>
 			}
@@ -1307,7 +1291,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //All levels (for level 3+)
 			  //It has to be on top, settings for upper levels will override it ?>
 		<?php
-			if ($d['nav']['mobile_level2_font_size'])
+			if ( isset($d['nav']['mobile_level2_font_size']) && $d['nav']['mobile_level2_font_size'])
 			{
 				if ($d['nav']['mobile_level2_font_size'] >= 16)
 				{
@@ -1327,11 +1311,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		.mobnav-trigger,
 		.nav-mobile .nav-item.level0 > a
 		{
-			<?php if ($d['nav']['mobile_level1_font_size']): ?>
-				font-size:<?php echo $d['nav']['mobile_level1_font_size']; ?>px;
-			<?php endif; ?>
+			<?=$t->getCssRuleAttr('font-size','nav/mobile_level1_font_size','','px;')?>
 
-			<?php if ($d['nav']['mobile_level1_font_uppercase']): ?>
+			<?php if ( isset($d['nav']['mobile_level1_font_uppercase']) && $d['nav']['mobile_level1_font_uppercase']): ?>
 				text-transform: uppercase;
 			<?php else: ?>
 				text-transform: none;
@@ -1341,11 +1323,9 @@ li.level0 > a:hover > span > .pin-bottom:before,
 		<?php //Level 2 ?>
 		.nav-mobile .nav-item.level1 > a
 		{
-			<?php if ($d['nav']['mobile_level2_font_size']): ?>
-				font-size:<?php echo $d['nav']['mobile_level2_font_size']; ?>px;
-			<?php endif; ?>
 
-			<?php if ($d['nav']['mobile_level2_font_uppercase']): ?>
+			<?=$t->getCssRuleAttr('font-size','nav/mobile_level2_font_size','','px;')?>
+			<?php if ( isset($d['nav']['mobile_level2_font_uppercase']) && $d['nav']['mobile_level2_font_uppercase']): ?>
 				text-transform: uppercase;
 			<?php else: ?>
 				text-transform: none;
@@ -1363,23 +1343,13 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .main-container
 {
-	<?php if ($d['main']['bg_color']): ?>
-		background-color: <?php echo $d['main']['bg_color']; ?>;
-	<?php endif; ?>
-
-	<?php if ($d['main']['padding_top']): ?>
-		padding-top: <?php echo intval($d['main']['padding_top']); ?>px;
-	<?php endif; ?>
-
-	<?php if ($d['main']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['main']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','main/bg_color','',';')?>
+	<?=$t->getCssRuleAttr('padding-top','main/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','main/padding_bottom','','px;')?>
 }
 .main
 {
-	<?php if ($d['main']['inner_bg_color']): ?>
-		background-color: <?php echo $d['main']['inner_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','main/inner_bg_color','',';')?>
 }
 
 <?php
@@ -1408,16 +1378,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .category-products-grid .item,
 .products-list .item
 {
-	<?php if ($d['category']['grid_item_bg_color']): ?>
-		background-color: <?php echo $d['category']['grid_item_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','category/grid_item_bg_color','',';')?>
 }
 .category-products-grid .item:hover,
 .products-list .item:hover
 {
-	<?php if ($d['category']['grid_item_hover_bg_color']): ?>
-		background-color: <?php echo $d['category']['grid_item_hover_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','category/grid_item_hover_bg_color','',';')?>
 }
 
 
@@ -1436,50 +1402,48 @@ li.level0 > a:hover > span > .pin-bottom:before,
 <?php //Tabs wrapper class ?>
 .gen-tabs .tabs
 {
-	<?php if ($d['product_page']['tab_inner_bg_color']): ?>
-		background-color: <?php echo $d['product_page']['tab_inner_bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','product_page/tab_inner_bg_color','',';')?>
 }
 
 <?php //Basic colors: default, hover, active ?>
 <?php //Default tab?>
 .gen-tabs .tabs a
 {
-	background-color: <?php echo $d['product_page']['tab_bg_color']; ?>;
-	color: <?php echo $d['product_page']['tab_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','product_page/tab_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','product_page/tab_color','',';')?>
 }
 
 <?php //Hover ?>
 .gen-tabs .tabs a:hover
 /*, .gen-tabs .tabs a:focus */
 {
-	background-color: <?php echo $d['product_page']['tab_hover_bg_color']; ?>;
-	color: <?php echo $d['product_page']['tab_hover_color']; ?>;
 
+	<?=$t->getCssRuleAttr('background-color','product_page/tab_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','product_page/tab_hover_color','',';')?>
 	<?php /* Border of the item on hover has the same color as background of the item. Except bottom border which is transparent. */ ?>
-	border-color: <?php echo $d['product_page']['tab_hover_bg_color']; ?>;
+	<?=$t->getCssRuleAttr('border-color','product_page/tab_hover_bg_color','',';')?>
 	border-bottom-color: transparent;
 }
 
 <?php //Active ?>
 .gen-tabs .tabs a.current
 {
-	background-color: <?php echo $d['product_page']['tab_active_bg_color']; ?>;
-	color: <?php echo $d['product_page']['tab_active_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','product_page/tab_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','product_page/tab_active_color','',';')?>
 }
 
 
 <?php //Borders and panels ?>
 .gen-tabs .tabs-panels
 {
-	background-color: <?php echo $d['product_page']['tab_panel_bg_color']; ?>;
-	border-top-color: <?php echo $d['product_page']['tab_border_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','product_page/tab_panel_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('border-top-color','product_page/tab_border_color','',';')?>
 }
 .gen-tabs .tabs a.current
 {
 	<?php /* Border of the active item has the same color as border of panels.
 	   Bottom border is transparent. */ ?>
-	border-color: <?php echo $d['product_page']['tab_border_color']; ?>;
+	<?=$t->getCssRuleAttr('border-color','product_page/tab_border_color','',';')?>
 	border-bottom-color: transparent;
 }
 .gen-tabs .tabs a.current:hover
@@ -1494,12 +1458,11 @@ li.level0 > a:hover > span > .pin-bottom:before,
 <?php //Accordion default tab ?>
 .gen-tabs .acctab
 {
-	background-color: <?php echo $d['product_page']['acco_bg_color']; ?>;
-	color: <?php echo $d['product_page']['acco_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','product_page/acco_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','product_page/acco_color','',';')?>
+	<?=$t->getCssRuleAttr('border-color','product_page/tab_border_color','',';')?>
 
-	border-color: <?php echo $d['product_page']['tab_border_color']; ?>;
-
-	<?php if ($t->isColor($d['product_page']['acco_bg_color'])): ?>
+	<?php if ( isset($d['product_page']['acco_bg_color']) && $t->isColor($d['product_page']['acco_bg_color'])): ?>
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	<?php endif; ?>
@@ -1509,8 +1472,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .gen-tabs .acctab:hover,
 .gen-tabs .acctab:focus,
 .gen-tabs .acctab.current {
-	background-color: <?php echo $d['product_page']['acco_active_bg_color']; ?>;
-	color: <?php echo $d['product_page']['acco_active_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','product_page/acco_active_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','product_page/acco_active_color','',';')?>
 }
 
 
@@ -1538,8 +1501,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .the-slideshow.slider-pagination2 .owl-controls				.owl-page.active span,
 .the-slideshow.slider-pagination2 .owl-controls.clickable 	.owl-page.active:hover span 
 {
-	background-color: <?php echo $d['slideshow']['tool_icon_bg_color']; ?>;
-	color: <?php echo $d['slideshow']['tool_icon_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','slideshow/tool_icon_color','',';')?>
 }
 
 
@@ -1551,8 +1514,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .the-slideshow.slider-pagination1 .owl-controls.clickable .owl-page:hover span,
 .the-slideshow.slider-pagination2 .owl-controls.clickable .owl-page:hover span
 {
-	background-color: <?php echo $d['slideshow']['tool_icon_hover_bg_color']; ?>;
-	color: <?php echo $d['slideshow']['tool_icon_hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','slideshow/tool_icon_hover_color','',';')?>
 }
 
 
@@ -1560,7 +1523,7 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .the-slideshow.slider-pagination1 .owl-controls 			.owl-page.active span,
 .the-slideshow.slider-pagination1 .owl-controls.clickable 	.owl-page.active:hover span /* Active state overrides hover state */
 {
-	background-color: <?php echo $d['slideshow']['tool_icon_active_bg_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_active_bg_color','',';')?>
 	<?php //Not needed for pagination: ?>
 	<?php /* color: <?php echo $d['slideshow']['tool_icon_active_color']; ?>; */ ?>
 }
@@ -1574,33 +1537,22 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer-container
 {
-	<?php if ($d['footer']['bg_color']): ?>
-		background-color: <?php echo $d['footer']['bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer/bg_color','',';')?>
 }
 .footer
 {
-	<?php if ($d['footer']['inner_bg_color']): ?>
-		background-color: <?php echo $d['footer']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['footer']['color'])): ?>
-		color: <?php echo $d['footer']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/color','',';')?>
 }
 
 <?php //Links ?>
 .footer a
 {
-	<?php if ($t->isColor($d['footer']['link_color'])): ?>
-		color: <?php echo $d['footer']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer/link_color','',';')?>
 }
 .footer a:hover
 {
-	<?php if ($t->isColor($d['footer']['link_hover_color'])): ?>
-		color: <?php echo $d['footer']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer/link_hover_color','',';')?>
 }
 
 
@@ -1610,14 +1562,14 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer .button
 {
-	background-color: <?php echo $d['footer']['button_bg_color']; ?>;
-	color: <?php echo $d['footer']['button_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','footer/button_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/button_color','',';')?>
 }
 .footer .button:hover,
 .footer .button:focus
 {
-	background-color: <?php echo $d['footer']['button_hover_bg_color']; ?>;
-	color: <?php echo $d['footer']['button_hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','footer/button_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/button_hover_color','',';')?>
 }
 
 
@@ -1628,16 +1580,16 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .footer .ib,
 .footer span.icon /* For backward compatibility */
 {
-	background-color: <?php echo $d['footer']['icon_bg_color']; ?>;
-	color: <?php echo $d['footer']['icon_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','footer/icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/icon_color','',';')?>
 }
 .footer .ib-hover:hover,
 .footer span.icon-hover:hover, /* For backward compatibility */
 .footer .feature-icon-hover:hover .ib,
 .footer .feature-icon-hover:hover span.icon /* For backward compatibility */
 {
-	background-color: <?php echo $d['footer']['icon_hover_bg_color']; ?> !important;
-	color: <?php echo $d['footer']['icon_hover_color']; ?> !important;
+	<?=$t->getCssRuleAttr('background-color','footer/icon_hover_bg_color','',' !important;')?>
+	<?=$t->getCssRuleAttr('color','footer/icon_hover_color','',' !important;')?>
 }
 
 
@@ -1663,8 +1615,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .footer .accordion-style1 .opener,
 .footer .collapsible .opener
 {
-	background-color: <?php echo $d['footer']['tool_icon_bg_color']; ?>;
-	color: <?php echo $d['footer']['tool_icon_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','footer/tool_icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/tool_icon_color','',';')?>
 }
 
 <?php //Hover icon ?>
@@ -1681,8 +1633,8 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .footer .accordion-style1 .opener:hover,
 .footer .collapsible .opener:hover
 {
-	background-color: <?php echo $d['footer']['tool_icon_hover_bg_color']; ?>;
-	color: <?php echo $d['footer']['tool_icon_hover_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','footer/tool_icon_hover_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer/tool_icon_hover_color','',';')?>
 }
 
 
@@ -1692,39 +1644,22 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer-top-container
 {
-	<?php if ($d['footer_top']['bg_color']): ?>
-		background-color: <?php echo $d['footer_top']['bg_color']; ?>;
-	<?php endif; ?>
-
-	<?php if ($d['footer_top']['padding_top']): ?>
-		padding-top: <?php echo intval($d['footer_top']['padding_top']); ?>px;
-	<?php endif; ?>
-
-	<?php if ($d['footer_top']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['footer_top']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_top/bg_color','',';')?>
+	<?=$t->getCssRuleAttr('padding-top','footer_top/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','footer_top/padding_bottom','','px;')?>
 }
 .footer-top
 {
-	<?php if ($d['footer_top']['inner_bg_color']): ?>
-		background-color: <?php echo $d['footer_top']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['footer_top']['color'])): ?>
-		color: <?php echo $d['footer_top']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_top/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer_top/color','',';')?>
 }
 .footer-top a
 {
-	<?php if ($t->isColor($d['footer_top']['link_color'])): ?>
-		color: <?php echo $d['footer_top']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_top/link_color','',';')?>
 }
 .footer-top a:hover
 {
-	<?php if ($t->isColor($d['footer_top']['link_hover_color'])): ?>
-		color: <?php echo $d['footer_top']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_top/link_hover_color','',';')?>
 }
 
 
@@ -1734,39 +1669,23 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer-primary-container
 {
-	<?php if ($d['footer_primary']['bg_color']): ?>
-		background-color: <?php echo $d['footer_primary']['bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($d['footer_primary']['padding_top']): ?>
-		padding-top: <?php echo intval($d['footer_primary']['padding_top']); ?>px;
-	<?php endif; ?>
 
-	<?php if ($d['footer_primary']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['footer_primary']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_primary/bg_color','',';')?>
+	<?=$t->getCssRuleAttr('padding-top','footer_primary/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','footer_primary/padding_bottom','','px;')?>
 }
 .footer-primary
 {
-	<?php if ($d['footer_primary']['inner_bg_color']): ?>
-		background-color: <?php echo $d['footer_primary']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['footer_primary']['color'])): ?>
-		color: <?php echo $d['footer_primary']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_primary/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer_primary/color','',';')?>
 }
 .footer-primary a
 {
-	<?php if ($t->isColor($d['footer_primary']['link_color'])): ?>
-		color: <?php echo $d['footer_primary']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_primary/link_color','',';')?>
 }
 .footer-primary a:hover
 {
-	<?php if ($t->isColor($d['footer_primary']['link_hover_color'])): ?>
-		color: <?php echo $d['footer_primary']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_primary/link_hover_color','',';')?>
 }
 
 
@@ -1776,39 +1695,22 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer-secondary-container
 {
-	<?php if ($d['footer_secondary']['bg_color']): ?>
-		background-color: <?php echo $d['footer_secondary']['bg_color']; ?>;
-	<?php endif; ?>
-
-	<?php if ($d['footer_secondary']['padding_top']): ?>
-		padding-top: <?php echo intval($d['footer_secondary']['padding_top']); ?>px;
-	<?php endif; ?>
-
-	<?php if ($d['footer_secondary']['padding_bottom']): ?>
-		padding-bottom: <?php echo intval($d['footer_secondary']['padding_bottom']); ?>px;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_secondary/bg_color','',';')?>
+	<?=$t->getCssRuleAttr('padding-top','footer_secondary/padding_top','','px;')?>
+	<?=$t->getCssRuleAttr('padding-bottom','footer_secondary/padding_bottom','','px;')?>
 }
 .footer-secondary
 {
-	<?php if ($d['footer_secondary']['inner_bg_color']): ?>
-		background-color: <?php echo $d['footer_secondary']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['footer_secondary']['color'])): ?>
-		color: <?php echo $d['footer_secondary']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_secondary/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer_secondary/color','',';')?>
 }
 .footer-secondary a
 {
-	<?php if ($t->isColor($d['footer_secondary']['link_color'])): ?>
-		color: <?php echo $d['footer_secondary']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_secondary/link_color','',';')?>
 }
 .footer-secondary a:hover
 {
-	<?php if ($t->isColor($d['footer_secondary']['link_hover_color'])): ?>
-		color: <?php echo $d['footer_secondary']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_secondary/link_hover_color','',';')?>
 }
 
 
@@ -1818,31 +1720,20 @@ li.level0 > a:hover > span > .pin-bottom:before,
 ?>
 .footer-bottom-container
 {
-	<?php if ($d['footer_bottom']['bg_color']): ?>
-		background-color: <?php echo $d['footer_bottom']['bg_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_bottom/bg_color','',';')?>
 }
 .footer-bottom
 {
-	<?php if ($d['footer_bottom']['inner_bg_color']): ?>
-		background-color: <?php echo $d['footer_bottom']['inner_bg_color']; ?>;
-	<?php endif; ?>
-	
-	<?php if ($t->isColor($d['footer_bottom']['color'])): ?>
-		color: <?php echo $d['footer_bottom']['color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('background-color','footer_bottom/inner_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','footer_bottom/color','',';')?>
 }
 .footer-bottom a
 {
-	<?php if ($t->isColor($d['footer_bottom']['link_color'])): ?>
-		color: <?php echo $d['footer_bottom']['link_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_bottom/link_color','',';')?>
 }
 .footer-bottom a:hover
 {
-	<?php if ($t->isColor($d['footer_bottom']['link_hover_color'])): ?>
-		color: <?php echo $d['footer_bottom']['link_hover_color']; ?>;
-	<?php endif; ?>
+	<?=$t->getCssRuleAttr('color','footer_bottom/link_hover_color','',';')?>
 }
 
 
@@ -1862,12 +1753,12 @@ li.level0 > a:hover > span > .pin-bottom:before,
 .social-links .ib,
 .social-links a > span.icon /* For backward compatibility */
 {
-	background-color: <?php echo $d['colors']['social_icon_bg_color']; ?>;
-	color: <?php echo $d['colors']['social_icon_color']; ?>;
+	<?=$t->getCssRuleAttr('background-color','colors/social_icon_bg_color','',';')?>
+	<?=$t->getCssRuleAttr('color','colors/social_icon_color','',';')?>
 }
 .social-links .ib-hover:hover,
 .social-links a > span.icon-hover:hover /* For backward compatibility */
 {
-	background-color: <?php echo $d['colors']['social_icon_hover_bg_color']; ?> !important;
-	color: <?php echo $d['colors']['social_icon_hover_color']; ?> !important;
+	<?=$t->getCssRuleAttr('background-color','colors/social_icon_hover_bg_color','',' !important;')?>
+	<?=$t->getCssRuleAttr('color','colors/social_icon_hover_color','',' !important;')?>
 }
