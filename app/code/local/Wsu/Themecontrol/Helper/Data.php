@@ -120,9 +120,17 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		}
         return $value;
     }
+    /**
+     * Set the data for the css file being rendered
+     */	
 	public function setCssData( $data ){
 		$this->_sectionalData = $data;	
 	}
+    /**
+     * Find the value with in the css data array
+	 *
+     * @return string
+     */	
 	public function resolveArrayPath( $path, $default="" ){
 		$data = $this->_sectionalData;
 		$paths = explode('/',$path);
@@ -137,7 +145,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
     /**
      * Get css built rule with checks for data built in
      *
-     * @return int
+     * @return string
      */
     public function getCssRuleAttr($cssAttr = NULL, $path = NULL, $default='', $append = '' ) {
 		$ouput = '';
