@@ -12,7 +12,7 @@
                     <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
                 </div>
                 <div class="box-content">
-                    <address><?php echo $this->getPrimaryBillingAddressHtml() ?></address>
+                    <address><?php echo str_replace('\\n',' ', $this->getPrimaryBillingAddressHtml()) ?></address>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
                 </div>
                 <div class="box-content">
-                    <address><?php echo $this->getPrimaryShippingAddressHtml() ?></address>
+                    <address><?php echo str_replace('\\n',' ', $this->getPrimaryShippingAddressHtml()) ?></address>
                 </div>
             </div>
         </div>
