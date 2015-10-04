@@ -3774,7 +3774,7 @@ between the header and the footer).</comment>
 				<responsive translate="label comment">
                     <label>Responsive Layout</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>10</sort_order>
+                    <sort_order>110</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -3833,7 +3833,7 @@ between the header and the footer).</comment>
 				<spine translate="label comment">
                     <label>Spine Layout Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>20</sort_order>
+                    <sort_order>120</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -3923,7 +3923,7 @@ between the header and the footer).</comment>
 				<content_area translate="label comment">
                     <label>Main Content Layout Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>30</sort_order>
+                    <sort_order>130</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -3992,7 +3992,7 @@ between the header and the footer).</comment>
 				<product_view translate="label comment">
                     <label>Product View Layout Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>30</sort_order>
+                    <sort_order>140</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -4056,19 +4056,19 @@ between the header and the footer).</comment>
 				<customer_account_dashboard translate="label comment">
                     <label>Customer Dashboard Layout Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>30</sort_order>
+                    <sort_order>150</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
 					<comment>
-								<![CDATA[ <b>Note</b> A product is nested with in the main content normally, so this means it could gain the style padding of the main content area.]]>
-							</comment>
+						<![CDATA[  ]]>
+					</comment>
                     <fields>
 						<used translate="label comment">
-                            <label>Show Store network menu item</label>
+                            <label>Use the dyno template</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>40</sort_order>
+                            <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -4081,7 +4081,7 @@ between the header and the footer).</comment>
                             <frontend_type>select</frontend_type>
 							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
 							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
-                            <sort_order>1</sort_order>
+                            <sort_order>110</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -4096,7 +4096,7 @@ between the header and the footer).</comment>
 							</comment>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_themecontrol/system_config_source_layout_padding_type</source_model>
-                            <sort_order>10</sort_order>
+                            <sort_order>120</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -4111,7 +4111,7 @@ between the header and the footer).</comment>
 							</comment>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_themecontrol/system_config_source_layout_padding_flanks</source_model>
-                            <sort_order>11</sort_order>
+                            <sort_order>130</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -4126,7 +4126,7 @@ between the header and the footer).</comment>
 							</comment>
                             <frontend_type>select</frontend_type>
 							<source_model>wsu_themecontrol/system_config_source_layout_padding_ends</source_model>
-                            <sort_order>12</sort_order>
+                            <sort_order>140</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
