@@ -41,7 +41,7 @@
                         <?php echo str_replace('\\n',' ', $_address->format('html')) ?>
                     </address>
                     <p>
-                        <strong><a href="<?php echo $this->getUrl('customer/address/form', array('address'=>$_address->getAddressId())) ?>" class="red-link"><?php echo $this->__('Edit Address') ?></a></strong>
+                        <strong><a href="<?php echo $this->getUrl('customer/address/form', array('address'=>$_address->getAddressId())) ?>" class="red-link button"><span><?php echo $this->__('Edit Address') ?></span></a></strong>
                     </p>
                     </td>
                 </tr>
