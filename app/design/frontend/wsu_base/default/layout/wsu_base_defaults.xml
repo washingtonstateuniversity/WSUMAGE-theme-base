@@ -135,6 +135,7 @@
 				<liParams>id="link-sign-up"</liParams>
 			</action>
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+
 			<action method="addLink" translate="label title" module="customer">
 				<label><![CDATA[<i class="fa fa-sign-in"></i>  Log In ]]></label>
 				<url helper="customer/getLoginUrl"/>
@@ -151,6 +152,7 @@
 	</customer_logged_out>
 	<customer_logged_in>
 		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
 			<action method="addLink" translate="label title" module="customer">
 				<label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label>
 				<url helper="customer/getLogoutUrl"/><title>Log Out</title>
@@ -158,7 +160,7 @@
 				<urlParams/>
 				<position>100</position>
 			</action>
-		</reference>
+			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
 			<action method="addLink" translate="label title" module="customer">
 				<label><![CDATA[<i class="fa fa-cogs"></i>  My Account ]]></label>
 				<url helper="customer/getAccountUrl"/>
@@ -167,6 +169,8 @@
 				<urlParams/>
 				<position>10</position>
 			</action>
+		</reference>
+
 	</customer_logged_in>
 
 
