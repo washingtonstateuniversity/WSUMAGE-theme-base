@@ -154,15 +154,15 @@
 		<reference name="top.links">
 			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
 			<action method="addLink" translate="label title" module="customer">
-				<label><![CDATA[<i class="fa fa-sign-out"></i>  Log Out ]]></label>
+				<label><![CDATA[ Log Out ]]></label>
 				<url helper="customer/getLogoutUrl"/><title>Log Out</title>
 				<prepare/>
 				<urlParams/>
 				<position>100</position>
 			</action>
-			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+<!--			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>-->
 			<action method="addLink" translate="label title" module="customer">
-				<label><![CDATA[<i class="fa fa-cogs"></i>  My Account ]]></label>
+				<label><![CDATA[ My Account ]]></label>
 				<url helper="customer/getAccountUrl"/>
 				<title>My Account</title>
 				<prepare/>
