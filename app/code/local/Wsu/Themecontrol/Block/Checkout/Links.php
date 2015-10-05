@@ -105,4 +105,44 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
         }
         return $this;
     }
+	
+	
+	public function makeCompareLink( ) {
+
+        $itemIds = array();
+		$_productCollection = Mage::helper('catalog/product_compare')->getItemCollection();
+
+		if(count($_productCollection)>0){
+			foreach ($_productCollection as $item) {
+				$itemIds[] = $item->getId();
+			}
+	
+			 $params = array(
+				'items' => implode(',', $itemIds),
+				'_secure' => true
+			);
+	
+			//$product_compare_url = $this->_getUrl('catalog/product_compare', $params);
+	
+	
+			$parentBlock = $this->getParentBlock();
+	 
+			$hide_empty = $this->getData('checkout_hide_empty');
+			$label = $this->getData('checkout_label');
+			
+			$hide_empty = $hide_empty !== null ? $hide_empty : 0;
+			$label = $label !== null ? $label : 'Compare Products';
+
+			$text = $this->__('Compare Products');
+			$parentBlock->addLink(
+				$text, 'catalog/product_compare', $text,
+				true, $params, 60, null,
+				'class="top-link-compare"'
+			);
+
+		}
+        return $this;
+	}
+	
+	
 }
