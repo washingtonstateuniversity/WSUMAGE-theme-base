@@ -43,26 +43,30 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
 			
+			$hide_empty = $this->getData('cart_hide_empty');
 			$label = $this->getData('cart_label');
 			$label_signle = $this->getData('cart_label_signle');
 			$label_full = $this->getData('cart_label_full');
 			
+			$hide_empty = $hide_empty !== null ? $hide_empty : 0;
 			$label = $label !== null ? $label : 'Cart';
 			$label_signle = $label_signle !== null ? $label_signle : 'Cart (%s item)';
 			$label_full = $label_full !== null ? $label_full : 'Cart (%s items)';
 
             $count = $this->getSummaryQty() ? $this->getSummaryQty()
                 : $this->helper('checkout/cart')->getSummaryCount();
-            if ($count == 1) {
-                $text = $this->__($label_signle, $count);
-            } elseif ($count > 0) {
-                $text = $this->__($label_full, $count);
-            } else {
-                $text = $this->__($label);
-            }
-
-            $parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
-            $parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart '.($count > 0?'with-items':'').'"');
+			if($count > 0 || ($count==0 && $hide_empty==0)){
+				if ($count == 1) {
+					$text = $this->__($label_signle, $count);
+				} elseif ($count > 0) {
+					$text = $this->__($label_full, $count);
+				} else {
+					$text = $this->__($label);
+				}
+	
+				$parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
+				$parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart '.($count > 0?'with-items':'').'"');
+			}
         }
         return $this;
     }
@@ -80,14 +84,24 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
+			
+			$hide_empty = $this->getData('checkout_hide_empty');
 			$label = $this->getData('checkout_label');
+			
+			$hide_empty = $hide_empty !== null ? $hide_empty : 0;
 			$label = $label !== null ? $label : 'Checkout';
-            $text = $this->__('Checkout');
-            $parentBlock->addLink(
-                $text, 'checkout', $text,
-                true, array('_secure' => true), 60, null,
-                'class="top-link-checkout"'
-            );
+			
+			$count = $this->getSummaryQty() ? $this->getSummaryQty()
+                : $this->helper('checkout/cart')->getSummaryCount();
+				
+			if($count > 0 || ($count==0 && $hide_empty==0)){
+				$text = $this->__('Checkout');
+				$parentBlock->addLink(
+					$text, 'checkout', $text,
+					true, array('_secure' => true), 60, null,
+					'class="top-link-checkout"'
+				);
+			}
         }
         return $this;
     }
