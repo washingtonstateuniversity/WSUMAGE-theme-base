@@ -2411,3 +2411,10 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
   background-position: -80px -362px;
   cursor: default;
 }
+
+.ui-widget-overlay.ui-front{
+	z-index:99165;
+}
+.ui-dialog.lightbox{
+	z-index:99166;
+}
