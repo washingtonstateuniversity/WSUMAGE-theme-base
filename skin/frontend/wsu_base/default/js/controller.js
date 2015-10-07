@@ -286,6 +286,37 @@
 								//WSU_MAP.util.nullout_event(e);
 								jObj.dialog( "close" );
 							});
+							$('#product_comparison .btn-cart').on('click',function(e){
+								e.preventDefault();
+								e.stopPropagation();
+								window.location = $(this).data('add_cart');
+							});
+							
+							$('#product_comparison .btn-remove').on('click',function(e){
+								e.preventDefault();
+								e.stopPropagation();
+								
+								var header = $(this).closest('td');
+								var index = header.index() - 1;
+								var table = header.closest('table');
+								
+								var removal = $(this).attr('href');
+									table.find('thead').find('tr').find('td:eq('+index+')').css({"opacity":".45","background-color":"#C0C0C0"});
+									table.find('tbody').find('tr').find('td:eq('+index+')').css({"opacity":".45","background-color":"#C0C0C0"});
+									table.find('colgroup').find('col:eq('+(index+1)+')').css({"opacity":".45","background-color":"#C0C0C0"});
+								$.get(removal,function(data){
+									table.find('thead').find('tr').find('td:eq('+index+')').remove();
+									table.find('tbody').find('tr').find('td:eq('+index+')').remove();
+									table.find('colgroup').find('col:eq('+(index+1)+')').remove();
+									var length = table.find('colgroup').find('col').length -1;
+									
+									table.find('colgroup').find('col').attr("width", ((1/length)*100)+"%");
+									table.find('colgroup').find('col:eq(0)').attr("width",'1');
+								});/**/
+							});
+							
+							
+							
 						},
 						onClose: function(){//jObj) {
 							//WSU_MAP.util.close_dialog_modle(obj);
