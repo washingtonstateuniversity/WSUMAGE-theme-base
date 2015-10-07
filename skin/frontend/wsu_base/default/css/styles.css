@@ -2418,3 +2418,233 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
 .ui-dialog.lightbox{
 	z-index:99166;
 }
+.ui-dialog .infoClose {
+    right: -9px;
+    top: -9px;
+    z-index: 1;
+    border-radius: 15px;
+    background-color: #991b2f;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    position: absolute;
+    width: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #e2e2e2;
+}
+.infoClose:hover {
+    background-position: center bottom;
+}
+.ui-dialog,.ui-dialog .ui-dialog-content,.ui-effects-animated,.ui-effects-placeholder,.ui-effects-wrapper {
+    overflow: visible
+}
+
+.ui-widget-overlay {
+    z-index: 99998!important
+}
+
+.ui-dialog {
+    z-index: 99999!important
+}
+
+.ui-dialog .cycle {
+    position: relative;
+    margin-left: 10px;
+    -webkit-transform: translateZ(0px)
+}
+
+.ui-dialog .cycle .cWrap {
+    margin: 0 auto;
+    -webkit-transform: translateZ(0px)
+}
+
+.ui-dialog .cycle .cWrap ul {
+    display: block;
+    list-style: none outside none;
+    margin: 0 auto
+}
+
+.ui-dialog .cycle .prev {
+    left: 0;
+    top: 55px;
+    text-indent: -9999em;
+    display: block;
+    width: 24px;
+    height: 71px;
+    position: absolute;
+    background: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png) no-repeat scroll left top transparent;
+    z-index: 9
+}
+
+.ui-dialog .cycle .prev:hover {
+    background-position: left bottom
+}
+
+.ui-dialog .cycle .next {
+    right: 0;
+    top: 55px;
+    text-indent: -9999em;
+    display: block;
+    width: 24px;
+    height: 71px;
+    position: absolute;
+    background: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png) no-repeat scroll right top transparent;
+    z-index: 9
+}
+
+.ui-dialog .cycle .next:hover {
+    background-position: right bottom
+}
+
+.ui-dialog .lightbox-api {
+    background: trasparent;
+    display: block;
+    position: absolute;
+    top: 9px;
+    height: 100%;
+    width: 15%;
+    z-index: 1
+}
+
+.ui-dialog .lightbox-api:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    color: #991b2f;
+    position: absolute;
+    font-size: 3em;
+    font-weight: 900;
+    top: 50%;
+    text-shadow: #fff 0 0 5px;
+    opacity: 0
+}
+
+.ui-dialog .lightbox-api.next {
+    right: 0
+}
+
+.ui-dialog .lightbox-api.next:before {
+    content: "\f101"
+}
+
+.ui-dialog .lightbox-api.next:hover {
+    background-position: right bottom
+}
+
+.ui-dialog .lightbox-api.next:hover:before {
+    right: 25%;
+    opacity: 1
+}
+
+.ui-dialog .lightbox-api.prev {
+    left: 0
+}
+
+.ui-dialog .lightbox-api.prev:before {
+    content: "\f100"
+}
+
+.ui-dialog .lightbox-api.prev:hover {
+    background-position: right bottom
+}
+
+.ui-dialog .lightbox-api.prev:hover:before {
+    left: 25%;
+    opacity: 1
+}
+
+.ui-dialog #header_block {
+    position: absolute;
+    bottom: calc(100% - 5px);
+    left: -1px;
+    background-color: #323232;
+    color: #DDD;
+    font-weight: 700;
+    border-radius: 10px 10px 0 0;
+    width: calc(100% + 2px)
+}
+
+.ui-dialog #header_block #wrapped {
+    padding: 1em
+}
+
+.ui-dialog #modeArea #your_location {
+    position: relative;
+    font-size: 1.5em;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #323232;
+    margin-bottom: 15px
+}
+
+.ui-dialog #modeArea #your_location:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    content: "\f05b";
+    color: #2e2e2e;
+    position: absolute;
+    right: 9px;
+    top: -25spx;
+    font-size: 1.05em
+}
+
+.ui-dialog #modeArea fieldset {
+    border: 1px solid #DFDFDF
+}
+
+.ui-dialog #modeArea fieldset legend {
+    position: relative;
+    padding: 0 10px
+}
+
+.ui-dialog #modeArea fieldset ul {
+    margin: 2px 5px
+}
+
+.ui-dialog #modeArea #onMapLocations {
+    max-height: 250px;
+    overflow-y: auto
+}
+
+.ui-dialog #modeArea #customLocation {
+    position: relative
+}
+
+.ui-dialog #modeArea #customLocation input::-webkit-input-placeholder {
+    color: #bec3c6!important
+}
+
+.ui-dialog #modeArea #customLocation input:-moz-placeholder {
+    color: #bec3c6!important
+}
+
+.ui-dialog #modeArea #customLocation i:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    content: "\f002";
+    color: #9B9B9B;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2em
+}

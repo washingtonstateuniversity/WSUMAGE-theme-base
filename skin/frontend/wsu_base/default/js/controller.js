@@ -242,7 +242,7 @@
 					onOpen:function(jObj){
 						jObj.prepend('<span class="tabedBox infoClose">X</span>');
 						jObj.find('.infoClose').off().on("click",function(e){
-							WSU_MAP.util.nullout_event(e);
+							//WSU_MAP.util.nullout_event(e);
 							jObj.dialog( "close" );
 						});
 					},
