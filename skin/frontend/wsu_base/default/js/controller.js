@@ -257,17 +257,17 @@
 			
 			
 			var orgin_href = $('.top-link-compare').data('orgin_href');
+			var href = $('.top-link-compare').attr('href');
 			if(orgin_href === "undefined"){
-				var href = $('.top-link-compare').attr('href');
+				
 				$('.top-link-compare').data('orgin_href',href);
 			}
 
-			if($("#hideme").length<=0){
-				$('body').append('<div style="display:none;"><div id="hideme"></div></div>');
+			if($("#hideme_compare").length<=0){
+				$('body').append('<div style="display:none;"><div id="hideme_compare"></div></div>');
 			}
-			$('.top-link-compare').attr('href','#hideme');
-			$("#hideme").load( "/catalog/product_compare/index/ #product_comparison", function(){
-				
+			$('.top-link-compare').attr('href','#hideme_compare');
+			$("#hideme_compare").load( "/catalog/product_compare/index/ #product_comparison", function(){
 				$('.top-link-compare').lightbox({
 					dialog:{
 						resizeToBestPossibleSize: true,
