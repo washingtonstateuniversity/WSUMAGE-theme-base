@@ -253,6 +253,50 @@
 					}
 				},
 			});
+			
+			
+			
+			var orgin_href = $('.top-link-compare').data('orgin_href');
+			if(orgin_href === "undefined"){
+				var href = $('.top-link-compare').attr('href');
+				$('.top-link-compare').data('orgin_href',href);
+			}
+
+			if($("#hideme").length<=0){
+				$('body').append('<div style="display:none;"><div id="hideme"></div></div>');
+			}
+			$('.top-link-compare').attr('href','#hideme');
+			$("#hideme").load( "/catalog/product_compare/index/ #product_comparison", function(){
+				
+				$('.top-link-compare').lightbox({
+					dialog:{
+						resizeToBestPossibleSize: true,
+						autoOpen: true,
+						draggable: false,
+						resizable: false,
+						modal: true,
+						onCreate:function(){
+							$('.ui-dialog-titlebar').remove();
+							//$(".ui-dialog-buttonpane").remove();
+							$('body').css({overflow:"hidden"});
+						},
+						onOpen:function(jObj){
+							jObj.prepend('<span class="tabedBox infoClose">X</span>');
+							jObj.find('.infoClose').off().on("click",function(e){
+								//WSU_MAP.util.nullout_event(e);
+								jObj.dialog( "close" );
+							});
+						},
+						onClose: function(){//jObj) {
+							//WSU_MAP.util.close_dialog_modle(obj);
+							//jObj.remove();
+							$('body').css({overflow:"auto"});
+						}
+					},
+				});
+			});
+			
+			
 	});
 })(jQuery);
 

@@ -2648,3 +2648,7 @@ EVENTS PULL THIS OUT TO THE EVENT EXTENSION
     top: 0;
     font-size: 2em
 }
+.lightbox-content.inline{
+	    overflow: auto;
+    height: 100%;
+}

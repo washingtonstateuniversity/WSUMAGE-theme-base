@@ -659,7 +659,7 @@
 					return false;
 				}
 			});
-			type = "image";
+			//type = "image";
 			return type;
 		},
 	
