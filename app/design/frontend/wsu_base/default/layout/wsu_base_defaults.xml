@@ -39,6 +39,7 @@
 			<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/jQuery.dialog.lightbox.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/controller.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/lightbox.ini.js</name></action>
 			<!-- End of WSU base -->
 
 		<!-- CSS: -->
