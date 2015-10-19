@@ -464,7 +464,31 @@ tr.summary-details-excluded { font-style:italic; }
 .link-rss { background:url(../../default/images/i_rss.gif) 0 1px no-repeat; padding-left:18px; line-height:14px; white-space:nowrap; }
 .btn-remove { display:block; width:12px; height:12px; font-size:0; line-height:0; background:url(../../default/images/btn_remove.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 .btn-previous { display:block; width:12px; height:12px; font-size:0; line-height:0; background:url(../../default/images/btn_previous.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-remove2 { display:block; width:16px; height:16px; font-size:0; line-height:0; background:url(../../default/images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
+.btn-remove2 { 
+	display:block; width:16px; height:16px; font-size:0; line-height:0; background:url(../../default/images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden;
+}
+.btn-remove,
+.btn-remove2 {
+	background:none;
+}
+.btn-remove:before,
+.btn-remove2:before{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 13px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);	
+	content: "\f014";
+}
+
+.btn-remove:hover:before,
+.btn-remove2:hover:before{
+	color: #c60c30;
+}
+#wishlist-table .btn-remove.btn-remove2:before{ font-size:18px;}
+
 .btn-edit    { display:block; width:12px; height:12px; font-size:0; line-height:0; background:url(../../default/images/btn_edit.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 
 
