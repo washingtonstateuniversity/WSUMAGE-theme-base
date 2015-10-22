@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
-@import 'points';
+@import 'theme/reset';
+@import 'theme/layout';
 
-@import 'reset';
-
-
+@import 'theme/temp';
 
 //@import 'map_admin';
 //#campusmap{ //the NS should be a var.. 

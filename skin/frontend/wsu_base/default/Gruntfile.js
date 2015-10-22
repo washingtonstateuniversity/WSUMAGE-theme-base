@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 			combine: {
 				files: {
 					// Hmmm, in reverse order
-					'boxes.css': ['build/_precss/theme.css'],
+					'theme.css': ['build/_precss/theme.css'],
 				}
 			}
 		},
