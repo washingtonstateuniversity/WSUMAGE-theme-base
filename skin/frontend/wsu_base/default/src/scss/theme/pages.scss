@@ -20,7 +20,7 @@ $url_2: url(../../images/i_rss-big.png);
 
 .breadcrumbs {
 	a {
-		color: $color_gray_approx;
+		color: $gray_119;
 	}
 	li {
 		display: inline;
@@ -163,7 +163,7 @@ $url_2: url(../../images/i_rss-big.png);
 	color: $color_thunderbird_approx;
 }
 .link-wishlist {
-	color: $color_tundora_approx;
+	color: $gray_68;
 }
 .link-reorder {
 }
@@ -194,7 +194,7 @@ $url_2: url(../../images/i_rss-big.png);
 	font-size: 0;
 	line-height: 0;
 	height: 1px;
-	background: $color_celeste_approx;
+	background: $gray_204;
 	margin: 10px 0;
 	text-indent: -999em;
 	overflow: hidden;
@@ -208,8 +208,8 @@ $url_2: url(../../images/i_rss-big.png);
 .tags-list {
 	display: block;
 	font-size: 13px;
-	border: 1px solid $color_alto_approx;
-	background: $color_black_haze_approx;
+	border: 1px solid $gray_221;
+	background: $gray_246;
 	padding: 10px;
 	li {
 		display: inline !important;
@@ -224,7 +224,7 @@ $url_2: url(../../images/i_rss-big.png);
 }
 .advanced-search-summary {
 	margin: 10px 0;
-	border: 1px solid $color_alto_approx;
+	border: 1px solid $gray_221;
 	background: $color_ottoman_approx;
 	padding: 10px;
 	ul {
@@ -265,7 +265,7 @@ $url_2: url(../../images/i_rss-big.png);
 	.sitemap {
 		margin: 12px;
 		a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 		li {
 			margin: 3px 0;

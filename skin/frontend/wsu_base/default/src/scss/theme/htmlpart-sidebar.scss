@@ -33,24 +33,24 @@ $url_4: url(../images/btn_remove.gif);
 %extend_3 {
 	padding: 10px;
 	border: 0;
-	border-top: 1px solid $color_celeste_approx;
-	border-left: 1px solid $color_celeste_approx;
+	border-top: 1px solid $gray_204;
+	border-left: 1px solid $gray_204;
 }
 
 
 .block {
-	border: 1px solid $color_alto_approx;
+	border: 1px solid $gray_221;
 	margin: 0 0 20px;
 	line-height: 1.35;
 	.block-title {
-		border-bottom: 1px solid $color_alto_approx;
-		background: $color_mercury_approx;
+		border-bottom: 1px solid $gray_221;
+		background: $gray_228;
 		padding: 2px 10px;
 		strong {
 			display: block;
 			font: bold 12px/1.5 Arial, Helvetica, sans-serif;
 			text-transform: uppercase;
-			color: $color_tundora_approx;
+			color: $gray_68;
 			span {
 			}
 		}
@@ -62,17 +62,17 @@ $url_4: url(../images/btn_remove.gif);
 		font-size: 10px;
 		margin: 0 0 10px;
 		padding: 0 0 2px;
-		border-bottom: 1px solid $color_alto_approx;
+		border-bottom: 1px solid $gray_221;
 		text-transform: uppercase;
 	}
 	.block-content {
-		background: $color_black_haze_approx;
+		background: $gray_246;
 		padding: 12px 10px;
 		.product-name {
 			color: $color_green_leaf_approx;
 		}
 		li.item {
-			border-bottom: 1px solid $color_alto_approx;
+			border-bottom: 1px solid $gray_221;
 			padding-bottom: 5px;
 			margin-bottom: 5px;
 			&.last {
@@ -91,7 +91,7 @@ $url_4: url(../images/btn_remove.gif);
 		margin: 1px 0 2px 5px;
 	}
 	.actions {
-		border-top: 1px solid $color_alto_approx;
+		border-top: 1px solid $gray_221;
 		padding: 5px 0 0;
 		margin: 5px 0 0;
 		text-align: right;
@@ -118,7 +118,7 @@ $url_4: url(../images/btn_remove.gif);
 	.product-image {
 		float: left;
 		width: 50px;
-		border: 1px solid $color_shady_lady_approx;
+		border: 1px solid $gray_164;
 	}
 	.product-details {
 		margin-left: 60px;
@@ -177,7 +177,7 @@ $url_4: url(../images/btn_remove.gif);
 .block-account {
 	.block-title {
 		border: 0;
-		background: $color_storm_dust_approx;
+		background: $gray_102;
 		strong {
 			color: $white;
 		}
@@ -185,16 +185,16 @@ $url_4: url(../images/btn_remove.gif);
 	.block-content li {
 		a {
 			display: block;
-			border-bottom: 1px solid $color_alto_approx;
+			border-bottom: 1px solid $gray_221;
 			padding: 3px 0;
-			color: $color_chicago_approx;
+			color: $gray_88;
 			text-decoration: none !important;
 			&:hover {
-				color: $color_tundora_approx;
+				color: $gray_68;
 			}
 		}
 		&.current {
-			border-bottom: 1px solid $color_alto_approx;
+			border-bottom: 1px solid $gray_221;
 			padding: 3px 0;
 			&.last {
 				border-bottom: 0;
@@ -206,7 +206,7 @@ $url_4: url(../images/btn_remove.gif);
 	}
 }
 .block-currency {
-	background: $wild_sand;
+	background: $gray_244;
 	.block-title {
 		border: 0;
 		background: none;
@@ -254,13 +254,13 @@ $url_4: url(../images/btn_remove.gif);
 	}
 	dd {
 		padding: 0 10px 8px;
-		border-bottom: 1px solid $color_alto_approx;
+		border-bottom: 1px solid $gray_221;
 		li {
 			line-height: 1.35;
 			margin: 0 0 3px;
 		}
 		a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 	.currently {
@@ -335,21 +335,21 @@ $url_4: url(../images/btn_remove.gif);
 	}
 	tbody {
 		th {
-			background: $color_gray_nurse_approx;
+			background: $gray_233;
 			@extend %extend_3;
 		}
 		td {
 			@extend %extend_3;
 			&.last {
-				border-right: 1px solid $color_celeste_approx;
+				border-right: 1px solid $gray_204;
 			}
 		}
 		tr.last {
 			th {
-				border-bottom: 1px solid $color_celeste_approx !important;
+				border-bottom: 1px solid $gray_204 !important;
 			}
 			td {
-				border-bottom: 1px solid $color_celeste_approx !important;
+				border-bottom: 1px solid $gray_204 !important;
 			}
 		}
 	}
@@ -395,7 +395,7 @@ $url_4: url(../images/btn_remove.gif);
 		font-size: 12px;
 	}
 	label {
-		color: $color_tapa_approx;
+		color: $gray_119;
 		font-weight: bold;
 	}
 	.label {
@@ -428,7 +428,7 @@ $url_4: url(../images/btn_remove.gif);
 			padding: 0;
 		}
 		li a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 	.actions {
@@ -464,7 +464,7 @@ $url_4: url(../images/btn_remove.gif);
 	}
 	label {
 		font-weight: bold;
-		color: $color_fuscous_gray_approx;
+		color: $gray_85;
 	}
 	.actions {
 		background: none;

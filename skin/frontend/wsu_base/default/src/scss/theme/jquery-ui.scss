@@ -52,7 +52,7 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 		font-size: 16px;
 		font-weight: 700;
 		text-align: center;
-		color: $color_bon_jour_approx;
+		color: $gray_221;
 	}
 	.ui-dialog-content {
 		overflow: visible;
@@ -151,8 +151,8 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 		position: absolute;
 		bottom: calc(100% - 5px);
 		left: -1px;
-		background-color: $mine_shaft;
-		color: $color_alto_approx;
+		background-color: $gray_50;
+		color: $gray_221;
 		font-weight: 700;
 		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 		border-radius: 10px 10px 0 0;
@@ -167,7 +167,7 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 			font-size: 1.5em;
 			display: inline-block;
 			width: 100%;
-			border-bottom: 1px solid $mine_shaft;
+			border-bottom: 1px solid $gray_50;
 			margin-bottom: 15px;
 			&:before {
 				display: inline-block;
@@ -176,7 +176,7 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 				transform: translate(0,0);
 				content: "\f05b";
-				color: $color_mine_shaft_approx;
+				color: $color_gray_50_approx;
 				position: absolute;
 				right: 9px;
 				top: -25spx;
@@ -184,7 +184,7 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 			}
 		}
 		fieldset {
-			border: 1px solid $color_bon_jour_approx;
+			border: 1px solid $gray_221;
 			legend {
 				position: relative;
 				padding: 0 10px;
@@ -212,7 +212,7 @@ $url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
 				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 				transform: translate(0,0);
 				content: "\f002";
-				color: $color_star_dust_approx;
+				color: $gray_164;
 				position: absolute;
 				right: 0;
 				top: 0;

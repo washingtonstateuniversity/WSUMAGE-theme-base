@@ -78,13 +78,13 @@ $url_0: url(../../images/i_notice.gif);
 	@extend %extend_3;
 }
 .global-site-notice {
-	border: 1px solid $color_celeste_approx;
+	border: 1px solid $gray_204;
 	border-width: 0 0 1px;
 	background: $color_dolly_approx;
 	font-size: 12px;
 	line-height: 1.25;
 	text-align: center;
-	color: $color_mine_shaft_approx;
+	color: $color_gray_50_approx;
 	.notice-inner {
 		width: 860px;
 		margin: 0 auto;

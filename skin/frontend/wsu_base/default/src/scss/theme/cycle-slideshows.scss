@@ -45,7 +45,7 @@
 	display: block;
 	width: 100%;
 	margin: 10px 0;
-	border: 1px solid $color_gallery_approx;
+	border: 1px solid $gray_237;
 	.slideshow {
 		width: 100%;
 		padding: 0;
@@ -86,7 +86,7 @@
 		width: 44px;
 		height: 44px;
 		display: inline-block;
-		color: $color_alto_approx;
+		color: $gray_221;
 		cursor: pointer;
 		&:before {
 			content: '';

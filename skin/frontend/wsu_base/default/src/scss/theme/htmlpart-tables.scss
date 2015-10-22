@@ -10,7 +10,7 @@ $url_1: url(../images/bkg_collapse.gif);
 	font-size: 11px;
 	background: $white $url_0 0 100% repeat-x;
 	padding: 4px 8px;
-	border-top: 1px solid $color_alto_approx;
+	border-top: 1px solid $gray_221;
 	text-align: center;
 	.amount {
 		float: left;
@@ -44,7 +44,7 @@ $url_1: url(../images/bkg_collapse.gif);
 	font-size: 11px;
 	background: $white $url_0 0 100% repeat-x;
 	padding: 3px 8px;
-	border-top: 1px solid $color_alto_approx;
+	border-top: 1px solid $gray_221;
 	.view-mode {
 		float: left;
 		margin: 0;
@@ -80,7 +80,7 @@ $url_1: url(../images/bkg_collapse.gif);
 			background: $white;
 		}
 		&.even {
-			background: $color_alabaster_approx;
+			background: $gray_251;
 		}
 		&.last {
 			th {
@@ -108,12 +108,12 @@ $url_1: url(../images/bkg_collapse.gif);
 		vertical-align: middle;
 	}
 	thead {
-		border-top: 1px $color_bon_jour_approx solid;
-		border-right: 1px $color_bon_jour_approx solid;
-		border-left: 1px $color_bon_jour_approx solid;
-		background: $color_gray_nurse_approx;
+		border-top: 1px $gray_221 solid;
+		border-right: 1px $gray_221 solid;
+		border-left: 1px $gray_221 solid;
+		background: $gray_233;
 		tr {
-			background: $color_gray_nurse_approx;
+			background: $gray_233;
 		}
 	}
 	tfoot {
@@ -121,15 +121,15 @@ $url_1: url(../images/bkg_collapse.gif);
 		border-right: 1px solid $color_geyser_approx;
 		border-left: 1px solid $color_geyser_approx;
 		tr {
-			background-color: $color_concrete_approx !important;
+			background-color: $gray_242 !important;
 		}
 		strong {
 			font-size: 14px;
 		}
 	}
 	tbody {
-		border-right: 1px $color_bon_jour_approx solid;
-		border-left: 1px $color_bon_jour_approx solid;
+		border-right: 1px $gray_221 solid;
+		border-left: 1px $gray_221 solid;
 		th {
 			padding: 3px 8px;
 			font-size: 11px;
@@ -158,7 +158,7 @@ $url_1: url(../images/bkg_collapse.gif);
 			}
 		}
 		&.even tr {
-			background: $color_alabaster_approx;
+			background: $gray_251;
 			td {
 				border-bottom: 0;
 			}
@@ -173,7 +173,7 @@ $url_1: url(../images/bkg_collapse.gif);
 	h2 {
 		font-size: 13px;
 		font-weight: bold;
-		border-bottom: 1px solid $color_alto_approx;
+		border-bottom: 1px solid $gray_221;
 		margin: 0 0 8px;
 	}
 }
@@ -211,7 +211,7 @@ tr {
 	}
 	&.summary-details td {
 		background-color: $color_geyser_approx;
-		color: $color_storm_dust_approx;
+		color: $gray_102;
 	}
 	&.summary-details-first td {
 		border-top: 1px solid $color_iron_approx;

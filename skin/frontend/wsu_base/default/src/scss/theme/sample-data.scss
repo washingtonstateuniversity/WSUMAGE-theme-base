@@ -28,11 +28,11 @@ $url_9: url(/media/store-media/eventstore/crowd2.jpg);
 		font-size: 1.2em;
 	}
 	table {
-		border-top: 1px solid $color_celeste_approx;
+		border-top: 1px solid $gray_204;
 	}
 	tr {
 		&.odd {
-			background: $color_gallery_approx $url_0 0 100% repeat-x;
+			background: $gray_237 $url_0 0 100% repeat-x;
 		}
 		&.even {
 			background: $white $url_1 0 100% repeat-x;
@@ -40,13 +40,13 @@ $url_9: url(/media/store-media/eventstore/crowd2.jpg);
 	}
 	td {
 		width: 50%;
-		border-bottom: 1px solid $color_celeste_approx;
+		border-bottom: 1px solid $gray_204;
 		padding: 8px 10px 8px 8px;
 		font-size: 11px;
 	}
 	.product-img {
 		float: left;
-		border: 2px solid $color_alto_approx;
+		border: 2px solid $gray_221;
 	}
 	.product-description {
 		margin-left: 107px;
@@ -76,28 +76,28 @@ $url_9: url(/media/store-media/eventstore/crowd2.jpg);
 .catalog-category-view .event {
 	&.verse {
 		text-align: center;
-		background-color: $color_mexican_red_approx;
+		background-color: $color_WSU_Crimson;
 		a {
-			color: $color_mercury_approx !important;
+			color: $gray_228 !important;
 			text-decoration: none;
 		}
 		&.away {
 			text-align: center;
-			background-color: $color_mercury_approx;
+			background-color: $gray_228;
 			a {
-				color: $color_mexican_red_approx !important;
+				color: $color_WSU_Crimson !important;
 			}
 		}
 	}
 	&.time {
 		text-align: center;
-		background-color: $color_mercury_approx;
-		color: $color_mexican_red_approx;
+		background-color: $gray_228;
+		color: $color_WSU_Crimson;
 		&.away {
 			text-align: center;
-			background-color: $color_mexican_red_approx;
+			background-color: $color_WSU_Crimson;
 			a {
-				color: $color_mercury_approx !important;
+				color: $gray_228 !important;
 				text-decoration: none;
 			}
 		}

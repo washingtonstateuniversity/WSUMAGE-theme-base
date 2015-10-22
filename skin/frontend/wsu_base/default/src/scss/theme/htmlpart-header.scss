@@ -38,7 +38,7 @@ $url_2: url(../images/bkg_btn-small.png);
 	}
 }
 .quick-access {
-	background: $color_tundora_approx;
+	background: $gray_68;
 	color: $white;
 	padding: 7px 13px;
 	text-align: right;
@@ -47,7 +47,7 @@ $url_2: url(../images/bkg_btn-small.png);
 		margin: 0;
 		color: $white;
 		a {
-			color: $color_alto_approx;
+			color: $gray_221;
 		}
 	}
 	.form-language {
@@ -79,14 +79,14 @@ $url_2: url(../images/bkg_btn-small.png);
 			}
 		}
 		a {
-			color: $color_alto_approx;
+			color: $gray_221;
 			padding: 0 7px 0 0;
 			background: $url_1 no-repeat 100% 50%;
 			text-decoration: none;
 		}
 	}
 	&.lighter .links a {
-		color: $color_tundora_approx !important;
+		color: $gray_68 !important;
 	}
 }
 .form-search {
@@ -113,7 +113,7 @@ $url_2: url(../images/bkg_btn-small.png);
 				font-weight: bold;
 			}
 			&.odd {
-				background-color: $color_black_haze_approx;
+				background-color: $gray_246;
 			}
 			&.selected {
 				background-color: $color_ottoman_approx;

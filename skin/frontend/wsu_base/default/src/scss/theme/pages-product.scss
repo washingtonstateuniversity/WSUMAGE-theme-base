@@ -28,7 +28,7 @@ $url_9: url(../../images/bg_x.png);
 	margin: 10px 0;
 	padding: 10px;
 	background: $color_feta_approx;
-	border: 1px solid $color_alto_approx;
+	border: 1px solid $gray_221;
 }
 
 //original selectors
@@ -43,7 +43,7 @@ $url_9: url(../../images/bg_x.png);
 //original selectors
 //.product-tabs li.active a, .product-tabs li.active a:hover
 %extend_4 {
-	background-color: $color_storm_dust_approx;
+	background-color: $gray_102;
 	font-weight: bold;
 	color: $white;
 }
@@ -64,7 +64,7 @@ $url_9: url(../../images/bg_x.png);
 	border-radius: 3px;
 	font-size: 14px;
 	text-align: center;
-	color: $color_storm_dust_approx;
+	color: $gray_102;
 	text-decoration: none;
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: content-box;
@@ -132,7 +132,7 @@ $url_9: url(../../images/bg_x.png);
 	}
 	&.out-of-stock span {
 		color: $color_punch_approx;
-		color: $color_star_dust_approx;
+		color: $gray_164;
 	}
 }
 .availability-only {
@@ -162,7 +162,7 @@ $url_9: url(../../images/bg_x.png);
 .availability-only-details {
 	margin: 0 0 7px;
 	th {
-		background: $color_gray_nurse_approx;
+		background: $gray_233;
 		font-size: 10px;
 		padding: 0 8px;
 	}
@@ -180,7 +180,7 @@ $url_9: url(../../images/bg_x.png);
 			}
 		}
 		&.even {
-			background: $color_alabaster_approx;
+			background: $gray_251;
 		}
 		&.last td {
 			border-bottom: none;
@@ -230,7 +230,7 @@ $url_9: url(../../images/bg_x.png);
 		width: 302px;
 		.product-image {
 			margin: 0 0 10px;
-			border: 1px solid $color_pumice_approx;
+			border: 1px solid $gray_204;
 		}
 		.product-image-zoom {
 			position: relative;
@@ -288,7 +288,7 @@ $url_9: url(../../images/bg_x.png);
 				font-size: 10px;
 				font-weight: normal;
 				padding: 0 0 2px;
-				border-bottom: 1px solid $color_celeste_approx;
+				border-bottom: 1px solid $gray_204;
 				margin: 0 0 8px;
 				text-transform: uppercase;
 			}
@@ -302,7 +302,7 @@ $url_9: url(../../images/bg_x.png);
 					float: left;
 					width: 66px;
 					height: 66px;
-					border: 1px solid $color_alto_approx;
+					border: 1px solid $gray_221;
 					overflow: hidden;
 				}
 			}
@@ -524,23 +524,23 @@ $url_9: url(../../images/bg_x.png);
 	display: block;
 	font-size: 12px;
 	text-decoration: underline;
-	color: $color_tundora_approx;
+	color: $gray_68;
 	.label {
-		color: $color_tundora_approx;
+		color: $gray_68;
 	}
 	.price {
 		font-weight: normal;
-		color: $color_tundora_approx;
+		color: $gray_68;
 	}
 }
 .price-including-tax {
 	display: block;
-	color: $color_suva_gray_approx;
+	color: $gray_136;
 	.label {
 		font-size: 10px;
 		text-transform: uppercase;
 		white-space: nowrap;
-		color: $color_suva_gray_approx;
+		color: $gray_136;
 	}
 	.price {
 		font-size: 13px;
@@ -550,12 +550,12 @@ $url_9: url(../../images/bg_x.png);
 }
 .price-excluding-tax {
 	display: block;
-	color: $color_suva_gray_approx;
+	color: $gray_136;
 	.label {
 		font-size: 10px;
 		text-transform: uppercase;
 		white-space: nowrap;
-		color: $color_suva_gray_approx;
+		color: $gray_136;
 	}
 	.price {
 		font-size: 12px;
@@ -599,7 +599,7 @@ $url_9: url(../../images/bg_x.png);
 .weee {
 	display: block;
 	font-size: 11px;
-	color: $color_tundora_approx;
+	color: $gray_68;
 	.price {
 		font-size: 11px;
 		font-weight: normal;
@@ -643,7 +643,7 @@ $url_9: url(../../images/bg_x.png);
 		padding: 0 !important;
 	}
 	.price {
-		color: $color_log_cabin_approx;
+		color: $gray_34;
 	}
 }
 .product-pricing {
@@ -666,7 +666,7 @@ $url_9: url(../../images/bg_x.png);
 		line-height: 1.25;
 		padding-left: 12px;
 		a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 	.separator {
@@ -679,7 +679,7 @@ $url_9: url(../../images/bg_x.png);
 		margin-right: 5px;
 		font-weight: bold;
 		line-height: 20px;
-		color: $color_fuscous_gray_approx;
+		color: $gray_85;
 	}
 	.qty {
 		float: left;
@@ -704,8 +704,8 @@ $url_9: url(../../images/bg_x.png);
 	margin: 10px 0;
 	.add-to-cart {
 		margin: 10px 0;
-		border: 1px solid $color_gallery_approx;
-		background-color: $color_desert_storm_approx;
+		border: 1px solid $gray_237;
+		background-color: $gray_246;
 		padding: 10px;
 		text-align: right;
 		.paypal-logo {
@@ -760,14 +760,14 @@ $url_9: url(../../images/bg_x.png);
 		font-size: 12px;
 		font-weight: bold;
 		margin: 0 0 10px;
-		color: $color_mine_shaft_approx;
+		color: $color_gray_50_approx;
 	}
 }
 .product-options {
 	margin: 20px 0 0;
 	padding: 0 15px 10px;
 	background-color: $color_feta_approx;
-	border: 1px solid $color_alto_approx;
+	border: 1px solid $gray_221;
 	position: relative;
 	dt {
 		padding: 10px 0 0;
@@ -783,7 +783,7 @@ $url_9: url(../../images/bg_x.png);
 	dd {
 		padding: 5px 10px 15px;
 		margin: 0 0 5px;
-		border-bottom: 1px solid $color_alto_approx;
+		border-bottom: 1px solid $gray_221;
 		.qty-holder {
 			display: block;
 			padding: 10px 0 0;
@@ -795,7 +795,7 @@ $url_9: url(../../images/bg_x.png);
 			background: none;
 			border: 0;
 			padding: 3px;
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 		input {
 			&.input-text {
@@ -862,9 +862,9 @@ $url_9: url(../../images/bg_x.png);
 	}
 }
 .product-options-bottom {
-	background-color: $color_black_haze_approx;
+	background-color: $gray_246;
 	padding: 15px 20px;
-	border: 1px solid $color_mercury_approx;
+	border: 1px solid $gray_228;
 	border-top: 0;
 	.product-pricing {
 		@extend %extend_3;
@@ -899,11 +899,11 @@ $url_9: url(../../images/bg_x.png);
 }
 .product-tabs {
 	margin-bottom: 15px;
-	border-bottom: 1px solid $color_storm_dust_approx;
-	background: $concrete $url_6 0 100% repeat-x;
+	border-bottom: 1px solid $gray_102;
+	background: $gray_242 $url_6 0 100% repeat-x;
 	li {
 		float: left;
-		border-right: 1px solid $color_delta_approx;
+		border-right: 1px solid $gray_164;
 		border-left: 1px solid $white;
 		font-size: 1.1em;
 		line-height: 1em;
@@ -923,11 +923,11 @@ $url_9: url(../../images/bg_x.png);
 	a {
 		display: block;
 		padding: 6px 15px;
-		color: $color_tundora_approx;
+		color: $gray_68;
 		&:hover {
-			background-color: $color_alto_approx;
+			background-color: $gray_221;
 			text-decoration: none;
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 }
@@ -944,7 +944,7 @@ $url_9: url(../../images/bg_x.png);
 	}
 	.product-image {
 		display: block;
-		border: 1px solid $color_pumice_approx;
+		border: 1px solid $gray_204;
 		margin: 0 0 10px;
 	}
 	.product-name {
@@ -952,7 +952,7 @@ $url_9: url(../../images/bg_x.png);
 		margin: 0 0 6px;
 		overflow: hidden;
 		a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 			text-decoration: underline;
 			&:hover {
 				text-decoration: none;
@@ -1000,7 +1000,7 @@ $url_9: url(../../images/bg_x.png);
 			display: block;
 		}
 		.swatch-link {
-			border-color: $color_gallery_approx;
+			border-color: $gray_237;
 			position: relative;
 			&.has-image img {
 				opacity: 0.4;
@@ -1008,7 +1008,7 @@ $url_9: url(../../images/bg_x.png);
 			}
 		}
 		.swatch-label {
-			color: $color_silver_chalice_approx;
+			color: $gray_164;
 			background: $white;
 		}
 		a:focus {
@@ -1027,7 +1027,7 @@ $url_9: url(../../images/bg_x.png);
 }
 .swatch-link {
 	@extend %extend_6;
-	border: 1px solid $color_celeste_approx;
+	border: 1px solid $gray_204;
 	margin: 0 0 3px;
 	img {
 		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -1065,7 +1065,7 @@ $url_9: url(../../images/bg_x.png);
 	border: 1px solid $white;
 	margin: 0;
 	white-space: nowrap;
-	background: $wild_sand;
+	background: $gray_244;
 }
 @media only screen and(max-width: 770px) {
 	#narrow-by-list dd .configurable-swatch-list li:nth-child(odd) {
@@ -1090,7 +1090,7 @@ $url_9: url(../../images/bg_x.png);
 		display: inline-block;
 		margin: 0 0 0 3px;
 		&:hover {
-			border-color: $color_celeste_approx;
+			border-color: $gray_204;
 			cursor: default;
 		}
 	}
@@ -1179,8 +1179,8 @@ $url_9: url(../../images/bg_x.png);
 		}
 	}
 	.swatch-label {
-		background: $wild_sand;
-		border: 1px solid $color_celeste_approx;
+		background: $gray_244;
+		border: 1px solid $gray_204;
 		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 		border-radius: 3px;
 		display: block;

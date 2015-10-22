@@ -10,8 +10,8 @@ $url_2: url(../images/btn_remove.gif);
 //original selectors
 //.multiple-checkout .col2-set, .multiple-checkout .col3-set
 %extend_1 {
-	background: $color_alabaster_approx;
-	border: 1px solid $color_alto_approx;
+	background: $gray_251;
+	border: 1px solid $gray_221;
 	margin: 0 0 25px;
 	padding: 20px;
 }
@@ -25,7 +25,7 @@ $url_2: url(../images/btn_remove.gif);
 	}
 	label {
 		font-weight: bold;
-		color: $color_fuscous_gray_approx;
+		color: $gray_85;
 	}
 	.price {
 		font-weight: bold;
@@ -92,9 +92,9 @@ $url_2: url(../images/btn_remove.gif);
 	margin-left: 10px;
 }
 .tool-tip {
-	border: 2px solid $color_alto_approx;
-	border-bottom-color: $color_storm_dust_approx;
-	background: $color_black_haze_approx;
+	border: 2px solid $gray_221;
+	border-bottom-color: $gray_102;
+	background: $gray_246;
 	padding: 15px 20px;
 	position: absolute;
 	z-index: 9999;
@@ -153,7 +153,7 @@ $url_2: url(../images/btn_remove.gif);
 			margin: 0;
 			font-weight: bold;
 			text-align: center;
-			color: $color_suva_gray_approx;
+			color: $gray_136;
 		}
 		.details {
 			margin-left: 90px;
@@ -213,15 +213,15 @@ $url_2: url(../images/btn_remove.gif);
 		overflow: auto;
 		height: 12em;
 		padding: 10px;
-		background: $color_alabaster_approx;
-		border: 1px solid $color_mercury_approx;
+		background: $gray_251;
+		border: 1px solid $gray_228;
 	}
 	.agree {
 		margin: 0;
 		padding: 10px 0 10px 11px;
 		label {
 			font-weight: bold;
-			color: $color_fuscous_gray_approx;
+			color: $gray_85;
 		}
 		input.checkbox {
 			margin-right: 6px;
@@ -266,9 +266,9 @@ $url_2: url(../images/btn_remove.gif);
 		padding-left: 18px;
 	}
 	.step-title {
-		border: 1px solid $color_alto_approx;
+		border: 1px solid $gray_221;
 		border-top-color: $white;
-		background: $color_gallery_approx;
+		background: $gray_237;
 		padding: 4px 8px 6px;
 		text-align: right;
 		.number {
@@ -278,7 +278,7 @@ $url_2: url(../images/btn_remove.gif);
 			padding: 0 3px;
 			margin: 0 5px 0 0;
 			font: normal 11px/12px $font_primary, $font_secondary, $font_tertiary;
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 		h2 {
 			float: left;
@@ -294,9 +294,9 @@ $url_2: url(../images/btn_remove.gif);
 		}
 	}
 	.step {
-		border: 1px solid $color_alto_approx;
+		border: 1px solid $gray_221;
 		border-top: 0;
-		background: $color_alabaster_approx;
+		background: $gray_251;
 		padding: 15px 30px;
 		position: relative;
 		.tool-tip {
@@ -305,8 +305,8 @@ $url_2: url(../images/btn_remove.gif);
 	}
 	.gift-messages-form {
 		margin: 0 -30px;
-		background: $wild_sand;
-		border: 1px solid $color_alto_approx;
+		background: $gray_244;
+		border: 1px solid $gray_221;
 		border-width: 1px 0;
 		padding: 22px 24px 22px 30px;
 		.inner-box {
@@ -353,8 +353,8 @@ $url_2: url(../images/btn_remove.gif);
 	}
 }
 .info-set {
-	background: $color_alabaster_approx;
-	border: 1px solid $color_alto_approx;
+	background: $gray_251;
+	border: 1px solid $gray_221;
 	margin: 0 0 25px;
 	padding: 20px;
 	h2 {
@@ -367,8 +367,8 @@ $url_2: url(../images/btn_remove.gif);
 		&.legend {
 			margin: -20px -20px 15px;
 			padding: 3px 10px;
-			background: $color_tapa_approx;
-			border-bottom: 1px solid $color_tapa_approx;
+			background: $gray_119;
+			border-bottom: 1px solid $gray_119;
 			position: relative;
 			color: $white;
 			a {
@@ -437,11 +437,11 @@ $url_2: url(../images/btn_remove.gif);
 	dt {
 		font-size: 10px;
 		line-height: 1.35;
-		background: $color_gallery_approx;
-		border: 1px solid $color_alto_approx;
+		background: $gray_237;
+		border: 1px solid $gray_221;
 		margin: 0 0 6px;
 		padding: 2px 8px;
-		color: $color_fuscous_gray_approx;
+		color: $gray_85;
 		text-transform: uppercase;
 		&.complete a {
 			text-transform: none;
@@ -481,7 +481,7 @@ $url_2: url(../images/btn_remove.gif);
 #opc-login {
 	h3 {
 		font-size: 13px;
-		border-bottom: 1px solid $color_mercury_approx;
+		border-bottom: 1px solid $gray_228;
 		padding-bottom: 2px;
 		text-transform: uppercase;
 	}
@@ -489,7 +489,7 @@ $url_2: url(../images/btn_remove.gif);
 		font-size: 1em;
 		font-weight: bold;
 		margin: 0;
-		color: $color_mine_shaft_approx;
+		color: $color_gray_50_approx;
 	}
 }
 #opc-review {
@@ -519,7 +519,7 @@ $url_2: url(../images/btn_remove.gif);
 		width: 570px;
 	}
 	.warning-message {
-		color: $color_log_cabin_approx;
+		color: $gray_34;
 		font-weight: bold;
 		text-align: center;
 		padding: 10px 10px 0;
@@ -536,7 +536,7 @@ $url_2: url(../images/btn_remove.gif);
 		padding: 2px 0 0;
 		font-weight: bold;
 		text-align: center;
-		color: $color_suva_gray_approx;
+		color: $gray_136;
 		&.active {
 			border-top-color: $color_clementine_approx;
 			color: $color_clementine_approx;
@@ -597,8 +597,8 @@ $url_2: url(../images/btn_remove.gif);
 		h2.legend {
 			margin: -20px -20px 15px;
 			padding: 3px 10px;
-			background: $color_tapa_approx;
-			border-bottom: 1px solid $color_tapa_approx;
+			background: $gray_119;
+			border-bottom: 1px solid $gray_119;
 			position: relative;
 			color: $white;
 		}
@@ -668,7 +668,7 @@ $url_2: url(../images/btn_remove.gif);
 	}
 }
 .centinel .authentication {
-	border: 1px solid $color_alto_approx;
+	border: 1px solid $gray_221;
 	background: $white;
 	iframe {
 		width: 99%;
@@ -683,8 +683,8 @@ $url_2: url(../images/btn_remove.gif);
 	border-top: 0;
 }
 .checkout-multishipping-shipping .box-sp-methods {
-	border: 1px solid $color_alto_approx;
-	background: $color_gallery_approx;
+	border: 1px solid $gray_221;
+	background: $gray_237;
 	padding: 13px;
 	position: relative;
 	.pointer {

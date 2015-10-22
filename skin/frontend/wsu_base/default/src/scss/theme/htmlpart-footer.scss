@@ -9,7 +9,7 @@ $url_1: url(../images/bkg_btn-small.png);
 .footer {
 	margin: 15px 0 40px;
 	a {
-		color: $color_tundora_approx;
+		color: $gray_68;
 	}
 	.f-left {
 		width: 520px;
@@ -28,16 +28,16 @@ $url_1: url(../images/bkg_btn-small.png);
 	}
 	.bugs {
 		margin: 0;
-		color: $color_storm_dust_approx;
+		color: $gray_102;
 		a {
 			font-weight: bold;
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 	address {
-		color: $color_storm_dust_approx;
+		color: $gray_102;
 		a {
-			color: $color_tundora_approx;
+			color: $gray_68;
 		}
 	}
 	.form-subscribe {
@@ -46,7 +46,7 @@ $url_1: url(../images/bkg_btn-small.png);
 			float: left;
 			padding-top: 2px;
 			font-weight: bold;
-			color: $color_fuscous_gray_approx;
+			color: $gray_85;
 		}
 		.input-box {
 			float: left;
@@ -71,7 +71,7 @@ $url_1: url(../images/bkg_btn-small.png);
 		position: relative;
 	}
 	.store-switcher {
-		color: $color_fuscous_gray_approx;
+		color: $gray_85;
 		text-align: right;
 		label {
 			font-weight: bold;
