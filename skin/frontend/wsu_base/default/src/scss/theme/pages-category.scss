@@ -1,0 +1,134 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+.category-title {
+	margin: 0 0 7px;
+	h1 {
+		padding: 3px 0;
+		color: $color_limeade_approx;
+		font-size: 1.6em;
+		font-weight: bold;
+		line-height: 1.25;
+	}
+}
+.category-image {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 10px;
+	text-align: center;
+	img {
+	}
+}
+.category-description {
+	margin: 0 0 10px;
+}
+.category-products {
+}
+.products-grid {
+	position: relative;
+	&.last {
+		border-bottom: 0;
+	}
+	li {
+		&.item {
+			float: left;
+			width: 171px;
+			padding: 0 0 90px;
+		}
+		&.last .product-image {
+			border-right: 0;
+		}
+	}
+	.product-image {
+		display: block;
+		width: 170px;
+		height: 170px;
+		border: 1px solid $gray_221;
+		border-width: 1px 1px 1px 0;
+		margin: 0 0 10px;
+	}
+	.product-name {
+		font-size: 12px;
+		margin: 0 0 6px;
+		a {
+			color: $gray_68;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.price-box {
+		margin: 5px 0;
+	}
+	.availability {
+		line-height: 21px;
+	}
+	.actions {
+	}
+	&.first .product-image {
+		border-top: 0;
+	}
+}
+.products-list {
+	.product-shop {
+		margin-left: 185px;
+	}
+	.product-image {
+		float: left;
+		width: 170px;
+		height: 170px;
+		margin: 0 0 10px;
+	}
+	.product-name {
+		font-size: 12px;
+		margin: 0 0 6px;
+		a {
+			color: $gray_68;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.price-box {
+		float: left;
+		margin: 4px 13px 0 0;
+	}
+	.availability {
+		float: left;
+		margin: 3px 0 0;
+	}
+	.desc {
+		clear: both;
+		padding: 6px 0 0;
+		margin: 0 0 13px;
+		line-height: 1.35;
+	}
+	.add-to-links {
+		clear: both;
+	}
+	li.item {
+		border-bottom: 1px solid $color_westar_approx;
+		padding: 12px 10px;
+		&.last {
+			border-bottom: 0;
+		}
+	}
+}
+.col2-left-layout .products-grid {
+	width: 684px;
+	margin: 0 auto;
+}
+.col2-right-layout .products-grid {
+	width: 684px;
+	margin: 0 auto;
+}
+.col1-layout .products-grid {
+	width: 684px;
+	margin: 0 auto;
+}
+.page-empty .products-grid {
+	width: 684px;
+	margin: 0 auto;
+}

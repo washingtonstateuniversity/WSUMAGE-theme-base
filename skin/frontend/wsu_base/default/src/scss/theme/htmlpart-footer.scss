@@ -1,0 +1,93 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+
+//urls
+$url_0: url(images/bkg_pipe1.gif);
+$url_1: url(images/bkg_btn-small.png);
+
+.footer {
+	margin: 15px 0 40px;
+	a {
+		color: $gray_68;
+	}
+	.f-left {
+		width: 520px;
+	}
+	.f-right {
+		width: 429px;
+	}
+	ul {
+		display: inline;
+	}
+	li {
+		display: inline;
+		background: $url_0 100% 50% no-repeat;
+		padding: 0 5px 0 0;
+		margin: 0 3px 0 0;
+	}
+	.bugs {
+		margin: 0;
+		color: $gray_102;
+		a {
+			font-weight: bold;
+			color: $gray_68;
+		}
+	}
+	address {
+		color: $gray_102;
+		a {
+			color: $gray_68;
+		}
+	}
+	.form-subscribe {
+		margin: 8px 0;
+		label {
+			float: left;
+			padding-top: 2px;
+			font-weight: bold;
+			color: $gray_85;
+		}
+		.input-box {
+			float: left;
+			width: 186px;
+			margin: 0 5px;
+		}
+		button.button {
+			float: left;
+			span {
+				height: 23px;
+				background-image: $url_1;
+				line-height: 20px;
+			}
+		}
+		input.input-text {
+			width: 180px;
+		}
+	}
+	.footer-callout {
+		display: block;
+		margin: -10px 0 10px;
+		position: relative;
+	}
+	.store-switcher {
+		color: $gray_85;
+		text-align: right;
+		label {
+			font-weight: bold;
+			vertical-align: middle;
+		}
+		select {
+			padding: 0;
+			vertical-align: middle;
+		}
+	}
+	.links li.last {
+		background: none !important;
+		padding-right: 0 !important;
+	}
+}
+.footer-container .bottom-container {
+	margin: 0 0 8px;
+	text-align: right;
+}

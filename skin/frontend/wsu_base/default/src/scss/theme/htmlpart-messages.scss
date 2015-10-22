@@ -1,0 +1,127 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+//urls
+$url_0: url(images/i_notice.gif);
+
+//@extend-elements
+//original selectors
+//.messages, .messages ul
+%messages_extend_1 {
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+//original selectors
+//.error-msg, .success-msg, .note-msg, .notice-msg
+%messages_extend_2 {
+	border-style: solid !important;
+	border-width: 1px !important;
+	padding: 4px 12px !important;
+	font-size: 11px !important;
+	font-weight: bold !important;
+}
+
+//original selectors
+//.note-msg, .notice-msg
+%messages_extend_3 {
+	border-color: $color_bright_sun_approx;
+	background-color: $color_orange_white_approx;
+	color: $color_dell_approx;
+}
+
+
+.success {
+	color: $color_dell_approx;
+	font-weight: bold;
+}
+.error {
+	color: $color_grenadier_approx;
+	font-weight: bold;
+}
+.notice {
+	color: $color_bamboo_approx;
+}
+.messages {
+	@extend %messages_extend_1;
+	width: 100%;
+	overflow: hidden;
+	ul {
+		@extend %messages_extend_1;
+	}
+	li {
+		margin: 0 0 10px !important;
+		li {
+			margin: 0 0 3px !important;
+		}
+	}
+}
+.error-msg {
+	@extend %messages_extend_2;
+	border-color: $color_persimmon_approx;
+	background-color: $color_linen_approx;
+	color: $color_grenadier_approx;
+}
+.success-msg {
+	@extend %messages_extend_2;
+	border-color: $color_dell_approx;
+	background-color: $color_panache_approx;
+	color: $color_dell_approx;
+}
+.note-msg {
+	@extend %messages_extend_2;
+	@extend %messages_extend_3;
+}
+.notice-msg {
+	@extend %messages_extend_2;
+	@extend %messages_extend_3;
+}
+.global-site-notice {
+	border: 1px solid $gray_204;
+	border-width: 0 0 1px;
+	background: $color_dolly_approx;
+	font-size: 12px;
+	line-height: 1.25;
+	text-align: center;
+	color: $color_gray_50_approx;
+	.notice-inner {
+		width: 860px;
+		margin: 0 auto;
+		padding: 12px 0 12px 80px;
+		background: $url_0 20px 25px no-repeat;
+		text-align: left;
+		p {
+			margin: 0;
+			border: 1px dotted $color_chenin_approx;
+			padding: 10px;
+		}
+		.actions {
+			padding-top: 10px;
+		}
+	}
+}
+.notice-cookie {
+}
+.noscript {
+}
+.demo-notice {
+	margin: 0;
+	padding: 6px 10px;
+	background: $color_bamboo_approx;
+	font-size: 12px;
+	line-height: 1.15;
+	border: 0;
+	text-align: center;
+	color: $white;
+	.notice-inner {
+		width: auto;
+		padding: 0;
+		background: none;
+		text-align: center;
+		p {
+			padding: 0;
+			border: 0;
+		}
+	}
+}
