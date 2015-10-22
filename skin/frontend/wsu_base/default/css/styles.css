@@ -1251,7 +1251,11 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .discount h2,
 .cart .shipping h2 { float:left; width:225px; font:normal 14px/16px Arial, Helvetica, sans-serif; color:#d54c01; }
 .cart .discount .discount-form,
-.cart .shipping .shipping-form { margin-left:240px; }
+.cart .shipping .shipping-form { 
+/*	margin-left:240px; */
+clear:both;
+
+}
 .cart .discount .buttons-set,
 .cart .shipping .buttons-set { margin:10px 0 0; border:0; padding:0; text-align:left; }
 .cart .discount .buttons-set button.button,
