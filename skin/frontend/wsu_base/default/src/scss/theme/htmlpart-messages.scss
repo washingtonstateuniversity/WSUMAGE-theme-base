@@ -1,37 +1,139 @@
-/* CSS Document */
+//colors
+$color_dell_approx: rgba(61, 102, 17, 1);
+$color_grenadier_approx: rgba(223, 40, 10, 1);
+$color_bamboo_approx: rgba(226, 103, 3, 1);
+$color_persimmon_approx: rgba(241, 96, 72, 1);
+$color_linen_approx: rgba(250, 235, 231, 1);
+$color_panache_approx: rgba(239, 245, 234, 1);
+$color_bright_sun_approx: rgba(252, 211, 68, 1);
+$color_orange_white_approx: rgba(250, 250, 236, 1);
+$color_celeste_approx: rgba(207, 207, 207, 1);
+$color_dolly_approx: rgba(255, 255, 144, 1);
+$color_mine_shaft_approx: rgba(47, 47, 47, 1);
+$color_chenin_approx: rgba(204, 204, 115, 1);
+$white: rgba(255, 255, 255, 1);
 
-/* Global Messages  */
-.success { color:#3d6611; font-weight:bold; }
-.error { color:#df280a; font-weight:bold; }
-.notice { color:#e26703; }
+//urls
+$url_0: url(../../images/i_notice.gif);
 
-.messages,
-.messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
-.messages { width:100%; overflow:hidden; }
-.messages li { margin:0 0 10px !important; }
-.messages li li { margin:0 0 3px !important; }
-.error-msg,
-.success-msg,
-.note-msg,
-.notice-msg { border-style:solid !important; border-width:1px !important; padding:4px 12px !important; font-size:11px !important; font-weight:bold !important; }
-.error-msg { border-color:#f16048; background-color:#faebe7; color:#df280a; }
-.success-msg { border-color:#446423; background-color:#eff5ea; color:#3d6611; }
-.note-msg,
-.notice-msg { border-color:#fcd344; background-color:#fafaec; color:#3d6611; }
+//@extend-elements
+//original selectors
+//.messages, .messages ul
+%extend_1 {
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
 
-/* Global site notices */
-.global-site-notice { border:1px solid #cfcfcf; border-width:0 0 1px; background:#ffff90; font-size:12px; line-height:1.25; text-align:center; color:#2f2f2f; }
-.global-site-notice .notice-inner { width:860px; margin:0 auto; padding:12px 0 12px 80px; background:url(../../images/i_notice.gif) 20px 25px no-repeat; text-align:left; }
-.global-site-notice .notice-inner p { margin:0; border:1px dotted #cccc73; padding:10px; }
-.global-site-notice .notice-inner .actions { padding-top:10px; }
+//original selectors
+//.error-msg, .success-msg, .note-msg, .notice-msg
+%extend_2 {
+	border-style: solid !important;
+	border-width: 1px !important;
+	padding: 4px 12px !important;
+	font-size: 11px !important;
+	font-weight: bold !important;
+}
 
-/* Cookie Notice */
-.notice-cookie { }
+//original selectors
+//.note-msg, .notice-msg
+%extend_3 {
+	border-color: $color_bright_sun_approx;
+	background-color: $color_orange_white_approx;
+	color: $color_dell_approx;
+}
 
-/* Noscript Notice */
-.noscript {}
 
-/* Demo Notice */
-.demo-notice { margin:0; padding:6px 10px; background:#d75f07; font-size:12px; line-height:1.15; border:0; text-align:center; color:#fff; }
-.demo-notice .notice-inner { width:auto; padding:0; background:none; text-align:center; }
-.demo-notice .notice-inner p { padding:0; border:0; }
+.success {
+	color: $color_dell_approx;
+	font-weight: bold;
+}
+.error {
+	color: $color_grenadier_approx;
+	font-weight: bold;
+}
+.notice {
+	color: $color_bamboo_approx;
+}
+.messages {
+	@extend %extend_1;
+	width: 100%;
+	overflow: hidden;
+	ul {
+		@extend %extend_1;
+	}
+	li {
+		margin: 0 0 10px !important;
+		li {
+			margin: 0 0 3px !important;
+		}
+	}
+}
+.error-msg {
+	@extend %extend_2;
+	border-color: $color_persimmon_approx;
+	background-color: $color_linen_approx;
+	color: $color_grenadier_approx;
+}
+.success-msg {
+	@extend %extend_2;
+	border-color: $color_dell_approx;
+	background-color: $color_panache_approx;
+	color: $color_dell_approx;
+}
+.note-msg {
+	@extend %extend_2;
+	@extend %extend_3;
+}
+.notice-msg {
+	@extend %extend_2;
+	@extend %extend_3;
+}
+.global-site-notice {
+	border: 1px solid $color_celeste_approx;
+	border-width: 0 0 1px;
+	background: $color_dolly_approx;
+	font-size: 12px;
+	line-height: 1.25;
+	text-align: center;
+	color: $color_mine_shaft_approx;
+	.notice-inner {
+		width: 860px;
+		margin: 0 auto;
+		padding: 12px 0 12px 80px;
+		background: $url_0 20px 25px no-repeat;
+		text-align: left;
+		p {
+			margin: 0;
+			border: 1px dotted $color_chenin_approx;
+			padding: 10px;
+		}
+		.actions {
+			padding-top: 10px;
+		}
+	}
+}
+.notice-cookie {
+}
+.noscript {
+}
+.demo-notice {
+	margin: 0;
+	padding: 6px 10px;
+	background: $color_bamboo_approx;
+	font-size: 12px;
+	line-height: 1.15;
+	border: 0;
+	text-align: center;
+	color: $white;
+	.notice-inner {
+		width: auto;
+		padding: 0;
+		background: none;
+		text-align: center;
+		p {
+			padding: 0;
+			border: 0;
+		}
+	}
+}
