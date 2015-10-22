@@ -1,164 +1,182 @@
+//colors
+$color_gallery_approx: rgba(237, 237, 237, 1);
+$white: rgba(255, 255, 255, 1);
+$color_alto_approx: rgba(221, 221, 221, 1);
+$color_boston_blue_approx: rgba(46, 138, 184, 1);
+$color_jelly_bean_approx: rgba(41, 122, 163, 1);
+$black: rgba(0, 0, 0, 1);
+
+//fonts
+$font_0: arial;
+$font_1: tahoma;
+
+//@extend-elements
+//original selectors
+//.slideshow-prev, .slideshow-next
+%extend_1 {
+	position: absolute;
+	top: 0;
+	width: 15%;
+	max-width: 80px;
+	height: 100%;
+	opacity: 0.6;
+	z-index: 110;
+	cursor: pointer;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+}
+
+//original selectors
+//.slideshow-prev:before, .slideshow-next:before
+%extend_2 {
+	content: '';
+	width: 0;
+	height: 0;
+	font-size: 0;
+	position: absolute;
+	border-style: solid;
+	display: block;
+	top: 50%;
+	margin-top: -15px;
+}
+
+//original selectors
+//.slideshow-prev.disabled, .slideshow-next.disabled
+%extend_3 {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	opacity: 0.5;
+	cursor: default;
+}
+
+
 .slideshow-container {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  border: 1px solid #ededed;
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	border: 1px solid $color_gallery_approx;
+	.slideshow {
+		width: 100%;
+		padding: 0;
+		position: relative;
+		margin: 0;
+		border: 10px solid $white;
+		> li {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 0;
+			display: block;
+			margin: 0;
+			&:first-child {
+				position: static;
+				z-index: 100;
+			}
+			img {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
 }
-.slideshow-container .slideshow {
-  width: 100%;
-  padding: 0;
-  position: relative;
-  margin: 0;
-  border: 10px solid #FFFFFF;
-}
-.slideshow-container .slideshow > li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0;
-  display: block;
-  margin: 0;
-}
-.slideshow-container .slideshow > li:first-child {
-  position: static;
-  z-index: 100;
-}
-.slideshow-container .slideshow > li img {
-  max-width: 100%;
-  width: 100%;
-}
-
 .slideshow-pager {
-  text-align: center;
-  width: 100%;
-  z-index: 115;
-  position: absolute;
-  bottom: 0px;
-  top: auto;
-  overflow: hidden;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+	text-align: center;
+	width: 100%;
+	z-index: 115;
+	position: absolute;
+	bottom: 0;
+	top: auto;
+	overflow: hidden;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+	span {
+		font-family: $font_0;
+		width: 44px;
+		height: 44px;
+		display: inline-block;
+		color: $color_alto_approx;
+		cursor: pointer;
+		&:before {
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			left: 50%;
+			top: 50%;
+			margin-left: -8px;
+			margin-top: -8px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 1px;
+			background-color: $white;
+			position: relative;
+		}
+		&:hover:before {
+			background-color: $color_boston_blue_approx;
+		}
+		&.cycle-pager-active:before {
+			background-color: $color_jelly_bean_approx;
+		}
+	}
+	> * {
+		cursor: pointer;
+	}
 }
-.slideshow-pager span {
-  font-family: arial;
-  width: 44px;
-  height: 44px;
-  display: inline-block;
-  color: #DDDDDD;
-  cursor: pointer;
-}
-.slideshow-pager span:before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  left: 50%;
-  top: 50%;
-  margin-left: -8px;
-  margin-top: -8px;
-  border-radius: 1px;
-  background-color: #FFFFFF;
-  position: relative;
-}
-.slideshow-pager span:hover:before {
-  background-color: #2e8ab8;
-}
-.slideshow-pager span.cycle-pager-active:before {
-  background-color: #297aa3;
-}
-.slideshow-pager > * {
-  cursor: pointer;
-}
-
-.slideshow-prev,
-.slideshow-next {
-  position: absolute;
-  top: 0;
-  width: 15%;
-  max-width: 80px;
-  height: 100%;
-  opacity: 0.6;
-  z-index: 110;
-  cursor: pointer;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.slideshow-prev:before,
-.slideshow-next:before {
-  content: '';
-  width: 0;
-  height: 0;
-  font-size: 0;
-  position: absolute;
-  border-style: solid;
-  display: block;
-  top: 50%;
-  margin-top: -15px;
-}
-.slideshow-prev:hover,
-.slideshow-next:hover {
-  opacity: 1;
-}
-.slideshow-prev.disabled,
-.slideshow-next.disabled {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-  cursor: default;
-}
-
 .slideshow-prev {
-  left: 8px;
+	@extend %extend_1;
+	left: 8px;
+	&:before {
+		@extend %extend_2;
+		border-width: 15px 15px 15px 0;
+		border-color: transparent $white transparent transparent;
+		top: 50%;
+		left: 10px;
+	}
+	&:hover {
+		opacity: 1;
+		&:before {
+			border-color: transparent $color_boston_blue_approx transparent transparent;
+		}
+	}
+	&.disabled {
+		@extend %extend_3;
+	}
 }
-.slideshow-prev:before {
-  border-width: 15px 15px 15px 0;
-  border-color: transparent #FFFFFF transparent transparent;
-  top: 50%;
-  left: 10px;
-}
-.slideshow-prev:hover:before {
-  border-color: transparent #2e8ab8 transparent transparent;
-}
-
 .slideshow-next {
-  right: 8px;
+	@extend %extend_1;
+	right: 8px;
+	&:before {
+		@extend %extend_2;
+		border-width: 15px 0 15px 15px;
+		border-color: transparent transparent transparent $white;
+		top: 50%;
+		right: 10px;
+	}
+	&:hover {
+		opacity: 1;
+		&:before {
+			border-color: transparent transparent transparent $color_boston_blue_approx;
+		}
+	}
+	&.disabled {
+		@extend %extend_3;
+	}
 }
-.slideshow-next:before {
-  border-width: 15px 0 15px 15px;
-  border-color: transparent transparent transparent #FFFFFF;
-  top: 50%;
-  right: 10px;
-}
-.slideshow-next:hover:before {
-  border-color: transparent transparent transparent #2e8ab8;
-}
-
 .cycle-caption {
-  position: absolute;
-  color: white;
-  bottom: 15px;
-  right: 15px;
-  z-index: 110;
+	position: absolute;
+	color: $white;
+	bottom: 15px;
+	right: 15px;
+	z-index: 110;
 }
-
 .cycle-overlay {
-  font-family: tahoma, arial;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 120;
-  background: black;
-  color: white;
-  padding: 15px;
-  opacity: .5;
+	font-family: $font_1, $font_0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 120;
+	background: $black;
+	color: $white;
+	padding: 15px;
+	opacity: .5;
 }
-
-
-
