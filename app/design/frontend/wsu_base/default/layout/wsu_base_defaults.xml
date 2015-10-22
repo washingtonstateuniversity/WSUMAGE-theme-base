@@ -52,7 +52,7 @@
 
 		<!-- CSS: -->
 			<!-- CSS base -->
-			<action method="addCss"><stylesheet>css/theme.css</stylesheet></action>
+			<action method="addCss"><stylesheet>theme.css</stylesheet></action>
 			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
 			
 			<action method="addCss"><stylesheet>src/css/print.css</stylesheet><params>media="print"</params></action>
