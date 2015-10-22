@@ -1014,7 +1014,10 @@
 			this._setDesc( data );
 			$.Widget.prototype._show( this.uiDialogContent, this.options.dialog.show, function(){
 				that._setAria();
-				that.uiDialog.dialog( "focusTabbable" );
+				if ( !that.options.gallery.enabled ) {  
+					that.uiDialog.dialog( "focusTabbable" );  
+				}  
+
 				/**
 				 * Fires Callback, see {{#crossLink "lightbox/_fireCallback:method"}}{{/crossLink}} for return value.
 				 * @event on.change

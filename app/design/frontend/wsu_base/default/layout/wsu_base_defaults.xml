@@ -35,11 +35,19 @@
 			<action method="addItem"><type>external_js</type><name>//html5shiv.googlecode.com/svn/trunk/html5.js</name><params/><if>if lt IE 9</if></action>
 			<!-- base for all WSU -->
 			<action method="addItem"><type>external_css</type><name>//repo.wsu.edu/spine/1/spine.min.css</name></action>
-			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->s
+			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->
 			<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/jQuery.dialog.lightbox.js</name></action>
+			
+			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.defaults.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.state.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.frontend.js</name></action>
+			
 			<action method="addItem"><type>skin_js</type><name>js/controller.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/lightbox.ini.js</name></action>
+			
+			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.starter.js</name></action>
 			<!-- End of WSU base -->
 
 		<!-- CSS: -->
