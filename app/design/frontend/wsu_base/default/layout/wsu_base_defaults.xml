@@ -37,25 +37,25 @@
 			<action method="addItem"><type>external_css</type><name>//repo.wsu.edu/spine/1/spine.min.css</name></action>
 			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->
 			<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/jQuery.dialog.lightbox.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/jQuery.dialog.lightbox.js</name></action>
 			
-			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.defaults.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.state.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.frontend.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.defaults.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.state.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.frontend.js</name></action>
 			
-			<action method="addItem"><type>skin_js</type><name>js/controller.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/lightbox.ini.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/controller.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/lightbox.ini.js</name></action>
 			
-			<action method="addItem"><type>skin_js</type><name>js/wsu_theme.starter.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.starter.js</name></action>
 			<!-- End of WSU base -->
 
 		<!-- CSS: -->
 			<!-- CSS base -->
-			<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
-			<action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
+			<action method="addCss"><stylesheet>css/theme.css</stylesheet></action>
+			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
 			
-			<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+			<action method="addCss"><stylesheet>src/css/print.css</stylesheet><params>media="print"</params></action>
 			<action ifconfig="wsu_themecontrol/customization/custom_css"  method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<!-- Design settings
 			 -->
@@ -72,7 +72,7 @@
 			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
 -->
 			<!--<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />-->
-			<action method="addItem"><type>skin_js</type><name>js/custom.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/custom.js</name></action>
 		</reference>
 <!-- Header ====================================================================== -->
 		<reference name="header">

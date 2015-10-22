@@ -2,6 +2,25 @@
 
 @import 'theme/reset';
 @import 'theme/layout';
+@import 'theme/htmlpart-forms';
+@import 'theme/htmlpart-messages';
+@import 'theme/htmlpart-header';
+@import 'theme/htmlpart-footer';
+@import 'theme/htmlpart-sidebar';
+@import 'theme/htmlpart-tables';
+
+@import 'theme/pages';
+@import 'theme/pages-category';
+@import 'theme/pages-product';
+@import 'theme/pages-account';
+@import 'theme/pages-cart';
+@import 'theme/pages-checkout';
+
+@import 'theme/jquery-ui';
+@import 'theme/cycle-slideshows';
+
+@import 'theme/sample-data';
+
 
 @import 'theme/temp';
 
