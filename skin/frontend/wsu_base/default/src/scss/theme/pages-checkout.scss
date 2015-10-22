@@ -1,3 +1,6 @@
+@import 'vars/global';
+@import 'vars/colors';
+
 //colors
 $color_fuscous_gray_approx: rgba(85, 85, 85, 1);
 $color_alto_approx: rgba(221, 221, 221, 1);
@@ -21,12 +24,6 @@ $color_mine_shaft_approx: rgba(47, 47, 47, 1);
 $wild_sand: rgba(244, 244, 244, 1);
 $color_log_cabin_approx: rgba(34, 34, 34, 1);
 
-//fonts
-$font_0: arial;
-$font_1: helvetica;
-$font_2: sans-serif;
-$font_3: Arial;
-$font_4: Helvetica;
 
 //urls
 $url_0: url(../../images/btn_window_close.gif);
@@ -304,13 +301,13 @@ $url_2: url(../images/btn_remove.gif);
 			border: 1px solid $white;
 			padding: 0 3px;
 			margin: 0 5px 0 0;
-			font: normal 11px/12px $font_0, $font_1, $font_2;
+			font: normal 11px/12px $font_primary, $font_secondary, $font_tertiary;
 			color: $color_tundora_approx;
 		}
 		h2 {
 			float: left;
 			margin: 0;
-			font: bold 12px/14px $font_3, $font_4, $font_2;
+			font: bold 12px/14px $font_quaternary, $font_quaternary_alt, $font_tertiary;
 			color: $color_mountain_mist_approx;
 		}
 		a {

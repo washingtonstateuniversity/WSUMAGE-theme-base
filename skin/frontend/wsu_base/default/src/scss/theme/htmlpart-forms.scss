@@ -1,3 +1,6 @@
+@import 'vars/global';
+@import 'vars/colors';
+
 //colors
 $color_mine_shaft_approx: rgba(47, 47, 47, 1);
 $white: rgba(255, 255, 255, 1);
@@ -10,11 +13,6 @@ $color_mercury_approx: rgba(228, 228, 228, 1);
 $seashell: rgba(241, 241, 241, 1);
 $color_linen_approx: rgba(250, 235, 231, 1);
 $color_monza_approx: rgba(198, 12, 48, 1);
-
-//fonts
-$font_0: Arial;
-$font_1: Helvetica;
-$font_2: sans-serif;
 
 //urls
 $url_0: url(../../default/images/bkg_btn.png);
@@ -29,7 +27,7 @@ $url_6: url(../images/btn_edit.gif);
 //original selectors
 //input, select, textarea, button
 %extend_1 {
-	font: 12px/15px $font_0, $font_1, $font_2;
+	font: 12px/15px $font_primary, $font_secondary, $font_tertiary;
 	vertical-align: middle;
 	color: $color_mine_shaft_approx;
 }
@@ -500,7 +498,7 @@ xbutton.btn-checkout {
 		border: 0;
 		background-image: $url_1;
 		padding: 0 0 0 6px;
-		font: bold 12px/26px $font_0, $font_1, $font_2;
+		font: bold 12px/26px $font_primary, $font_secondary, $font_tertiary;
 		color: $white;
 		span {
 			padding: 0 40px 0 34px;

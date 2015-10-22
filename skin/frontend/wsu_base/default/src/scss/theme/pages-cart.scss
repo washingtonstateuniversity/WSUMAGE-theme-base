@@ -1,3 +1,6 @@
+@import 'vars/global';
+@import 'vars/colors';
+
 //colors
 $color_tundora_approx: rgba(68, 68, 68, 1);
 $color_grenadier_approx: rgba(223, 40, 10, 1);
@@ -22,11 +25,6 @@ $color_sherpa_blue_approx: rgba(2, 72, 79, 1);
 $color_william_approx: rgba(63, 107, 114, 1);
 $mercury: rgba(229, 229, 229, 1);
 
-//fonts
-$font_0: Arial;
-$font_1: Helvetica;
-$font_2: sans-serif;
-
 //urls
 $url_0: url(../images/bkg_btn-green.gif);
 $url_1: url(../images/bkg_cart-totals.gif);
@@ -45,7 +43,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 %extend_2 {
 	float: left;
 	width: 225px;
-	font: normal 14px/16px $font_0, $font_1, $font_2;
+	font: normal 14px/16px $font_primary, $font_secondary, $font_tertiary;
 	color: $color_grenadier_approx;
 }
 
@@ -319,7 +317,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 		span {
 			background: none;
 			padding: 0;
-			font: normal 11px/25px $font_0, $font_1, $font_2;
+			font: normal 11px/25px $font_primary, $font_secondary, $font_tertiary;
 			color: $color_green_leaf_approx;
 			text-transform: none;
 			text-decoration: underline;

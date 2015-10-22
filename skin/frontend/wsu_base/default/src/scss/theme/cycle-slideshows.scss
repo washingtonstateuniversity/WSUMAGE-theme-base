@@ -1,3 +1,7 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+
 //colors
 $color_gallery_approx: rgba(237, 237, 237, 1);
 $white: rgba(255, 255, 255, 1);
@@ -6,9 +10,6 @@ $color_boston_blue_approx: rgba(46, 138, 184, 1);
 $color_jelly_bean_approx: rgba(41, 122, 163, 1);
 $black: rgba(0, 0, 0, 1);
 
-//fonts
-$font_0: arial;
-$font_1: tahoma;
 
 //@extend-elements
 //original selectors
@@ -91,7 +92,7 @@ $font_1: tahoma;
 	//Instead of the line below you could use @include user-select($select)
 	user-select: none;
 	span {
-		font-family: $font_0;
+		font-family: $font_primary;
 		width: 44px;
 		height: 44px;
 		display: inline-block;
@@ -170,7 +171,7 @@ $font_1: tahoma;
 	z-index: 110;
 }
 .cycle-overlay {
-	font-family: $font_1, $font_0;
+	font-family: $font_secondary, $font_primary;
 	position: absolute;
 	bottom: 0;
 	width: 100%;

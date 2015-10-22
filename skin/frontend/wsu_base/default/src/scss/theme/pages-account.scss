@@ -1,3 +1,6 @@
+@import 'vars/global';
+@import 'vars/colors';
+
 //colors
 $seashell: rgba(241, 241, 241, 1);
 $black_35: rgba(0, 0, 0, 0.35);
@@ -17,12 +20,6 @@ $concrete: rgba(242, 242, 242, 1);
 $color_delta_approx: rgba(164, 164, 164, 1);
 $color_mine_shaft_approx: rgba(47, 47, 47, 1);
 
-//fonts
-$font_0: Tahoma;
-$font_1: Verdana;
-$font_2: Arial;
-$font_3: sans-serif;
-
 //urls
 $url_0: url(../../../modern/images/window_overlay.png);
 $url_1: url(../../images/btn_window_close.gif);
@@ -37,7 +34,7 @@ $url_3: url(../images/bkg_tabs.gif);
 	height: 28px;
 	background: transparent $url_2 0 0 no-repeat;
 	padding: 0 0 0 6px;
-	font: bold 11px/25px $font_0, $font_1, $font_2, $font_3;
+	font: bold 11px/25px $font_primary, $font_secondary, $font_tertiary, $font_quaternary;
 	text-transform: uppercase;
 	text-align: center;
 	white-space: nowrap;
