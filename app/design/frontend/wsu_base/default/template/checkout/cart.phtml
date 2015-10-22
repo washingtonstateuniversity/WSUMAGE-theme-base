@@ -133,27 +133,8 @@
         <!-- end: cart-table-wrapper -->
         </fieldset>
     </form>
-    <div class="cart-collaterals nested-container">
-    	<div class="cart-right-column grid12-4">
-            <div class="totals grid-full alpha omega">
-                <div class="totals-inner">
-                <?php echo $this->getChildHtml('totals'); ?>
-                <?php if(!$this->hasError()): ?>
-                    <ul class="checkout-types">
-                    <?php foreach ($this->getMethods('methods') as $method): ?>
-                    	<?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-                    		<li><?php echo $methodHtml; ?></li>
-                    	<?php endif; ?>
-                    <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-                </div>
-            </div>
-			<?php if ($tmpHtml = $this->getChildHtml('block_cart_below_totals')): ?>
-            	<div class="block_cart_below_totals grid-full alpha omega"><?php echo $tmpHtml; ?></div>
-            <?php endif; ?>
-        </div> <!-- end: cart-right-column -->
-        <div class="cart-left-column grid12-8">		
+    <div class="cart-collaterals nested-container row halves">
+        <div class="cart-left-column grid12-8 column one">		
         	<?php if ($tmpHtml = $this->getChildHtml('checkout.cart.extra')): ?>
             <div class="grid-full alpha omega">
                 <?php /* Extensions placeholder */ ?>
@@ -175,35 +156,26 @@
                 <?php echo $this->getChildHtml('crosssell') ?>
             </div>
         </div> <!-- end: cart-left-column -->
-    </div>
-	
-	
-    <div class="cart-collaterals">
-        <div class="col2-set">
-            <div class="col-1">
-                <?php echo $this->getChildHtml('crosssell') ?>
-            </div>
-            <div class="col-2">
-                <?php /* Extensions placeholder */ ?>
-                <?php echo $this->getChildHtml('checkout.cart.extra') ?>
-                <?php echo $this->getChildHtml('coupon') ?>
-                <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
-            </div>
-        </div>
-        <div class="totals">
-            <?php echo $this->getChildHtml('totals'); ?>
-            <?php if(!$this->hasError()): ?>
-            <ul class="checkout-types">
-            <?php foreach ($this->getMethods('methods') as $method): ?>
-                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-                <li><?php echo $methodHtml; ?></li>
+    	<div class="cart-right-column grid12-4 column two">
+            <div class="totals grid-full alpha omega">
+                <div class="totals-inner">
+                <?php echo $this->getChildHtml('totals'); ?>
+                <?php if(!$this->hasError()): ?>
+                    <ul class="checkout-types">
+                    <?php foreach ($this->getMethods('methods') as $method): ?>
+                    	<?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                    		<li><?php echo $methodHtml; ?></li>
+                    	<?php endif; ?>
+                    <?php endforeach; ?>
+                    </ul>
                 <?php endif; ?>
-            <?php endforeach; ?>
-            </ul>
+                </div>
+            </div>
+			<?php if ($tmpHtml = $this->getChildHtml('block_cart_below_totals')): ?>
+            	<div class="block_cart_below_totals grid-full alpha omega"><?php echo $tmpHtml; ?></div>
             <?php endif; ?>
-        </div>
+        </div> <!-- end: cart-right-column -->
+
     </div>
-	
-	
-	
+
 </div>
