@@ -3,17 +3,17 @@
 
 //urls
 $url_0: url(../../default/images/bkg_btn.png);
-$url_1: url(../images/btn_checkout.gif);
-$url_2: url(../../images/validation_advice_bg.gif);
-$url_3: url(../images/btn_remove.gif);
-$url_4: url(../images/btn_previous.gif);
-$url_5: url(../images/btn_trash.gif);
-$url_6: url(../images/btn_edit.gif);
+$url_1: url(images/btn_checkout.gif);
+$url_2: url(images/validation_advice_bg.gif);
+$url_3: url(images/btn_remove.gif);
+$url_4: url(images/btn_previous.gif);
+$url_5: url(images/btn_trash.gif);
+$url_6: url(images/btn_edit.gif);
 
 //@extend-elements
 //original selectors
 //input, select, textarea, button
-%extend_1 {
+%forms_extend_1 {
 	font: 12px/15px $font_primary, $font_secondary, $font_tertiary;
 	vertical-align: middle;
 	color: $color_gray_50_approx;
@@ -21,7 +21,7 @@ $url_6: url(../images/btn_edit.gif);
 
 //original selectors
 //.btn-remove:before, .btn-remove2:before
-%extend_2 {
+%forms_extend_2 {
 	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: 13px;
@@ -33,7 +33,7 @@ $url_6: url(../images/btn_edit.gif);
 
 
 input {
-	@extend %extend_1;
+	@extend %forms_extend_1;
 	&.input-text {
 		background: $white;
 		border: 1px solid $color_nobel_approx;
@@ -50,7 +50,7 @@ input {
 	}
 }
 select {
-	@extend %extend_1;
+	@extend %forms_extend_1;
 	background: $white;
 	border: 1px solid $color_nobel_approx;
 	padding: 1px;
@@ -66,14 +66,14 @@ select {
 	}
 }
 textarea {
-	@extend %extend_1;
+	@extend %forms_extend_1;
 	background: $white;
 	border: 1px solid $color_nobel_approx;
 	padding: 2px;
 	overflow: auto;
 }
 button {
-	@extend %extend_1;
+	@extend %forms_extend_1;
 }
 p {
 	&.required {
@@ -395,7 +395,7 @@ p {
 	overflow: hidden;
 	background: none;
 	&:before {
-		@extend %extend_2;
+		@extend %forms_extend_2;
 	}
 	&:hover:before {
 		color: $color_monza_approx;
@@ -422,7 +422,7 @@ p {
 	overflow: hidden;
 	background: none;
 	&:before {
-		@extend %extend_2;
+		@extend %forms_extend_2;
 	}
 	&:hover:before {
 		color: $color_monza_approx;

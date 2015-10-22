@@ -2,16 +2,16 @@
 @import 'vars/colors';
 
 //urls
-$url_0: url(../images/bkg_btn-small.png);
-$url_1: url(../images/bkg_block-layered-title.gif);
-$url_2: url(../images/bkg_subtotal.gif);
-$url_3: url(../../images/i_print.gif);
-$url_4: url(../images/btn_remove.gif);
+$url_0: url(images/bkg_btn-small.png);
+$url_1: url(images/bkg_block-layered-title.gif);
+$url_2: url(images/bkg_subtotal.gif);
+$url_3: url(images/i_print.gif);
+$url_4: url(images/btn_remove.gif);
 
 //@extend-elements
 //original selectors
 //.block-layered-nav .currently .btn-previous, .block-layered-nav .currently .btn-remove
-%extend_1 {
+%sidebar_extend_1 {
 	position: absolute;
 	right: 8px;
 	top: 3px;
@@ -20,7 +20,7 @@ $url_4: url(../images/btn_remove.gif);
 
 //original selectors
 //.compare-table thead tr.first th, .compare-table thead tr.first td
-%extend_2 {
+%sidebar_extend_2 {
 	border: 0;
 	background: none;
 	padding: 0 0 4px;
@@ -30,7 +30,7 @@ $url_4: url(../images/btn_remove.gif);
 
 //original selectors
 //.compare-table tbody th, .compare-table tbody td
-%extend_3 {
+%sidebar_extend_3 {
 	padding: 10px;
 	border: 0;
 	border-top: 1px solid $gray_204;
@@ -282,11 +282,11 @@ $url_4: url(../images/btn_remove.gif);
 			vertical-align: top;
 		}
 		.btn-previous {
-			@extend %extend_1;
+			@extend %sidebar_extend_1;
 			right: 22px;
 		}
 		.btn-remove {
-			@extend %extend_1;
+			@extend %sidebar_extend_1;
 		}
 	}
 	.actions {
@@ -320,10 +320,10 @@ $url_4: url(../images/btn_remove.gif);
 		tr.first {
 			background: $white;
 			th {
-				@extend %extend_2;
+				@extend %sidebar_extend_2;
 			}
 			td {
-				@extend %extend_2;
+				@extend %sidebar_extend_2;
 			}
 		}
 	}
@@ -336,10 +336,10 @@ $url_4: url(../images/btn_remove.gif);
 	tbody {
 		th {
 			background: $gray_233;
-			@extend %extend_3;
+			@extend %sidebar_extend_3;
 		}
 		td {
-			@extend %extend_3;
+			@extend %sidebar_extend_3;
 			&.last {
 				border-right: 1px solid $gray_204;
 			}

@@ -4,14 +4,14 @@
 
 //urls
 $url_0: url(../../../modern/images/window_overlay.png);
-$url_1: url(../../images/btn_window_close.gif);
-$url_2: url(../images/bkg_btn.png);
-$url_3: url(../images/bkg_tabs.gif);
+$url_1: url(images/btn_window_close.gif);
+$url_2: url(images/bkg_btn.png);
+$url_3: url(images/bkg_tabs.gif);
 
 //@extend-elements
 //original selectors
 //.remember-me-popup .remember-me-popup-body a, .remember-me-popup .remember-me-popup-body a span
-%extend_1 {
+%account_extend_1 {
 	display: inline-block;
 	height: 28px;
 	background: transparent $url_2 0 0 no-repeat;
@@ -25,7 +25,7 @@ $url_3: url(../images/bkg_tabs.gif);
 
 //original selectors
 //.dashboard .box .box-title h3, .dashboard .box .box-title h4
-%extend_2 {
+%account_extend_2 {
 	float: left;
 	margin: 0;
 	font-size: 12px;
@@ -35,7 +35,7 @@ $url_3: url(../images/bkg_tabs.gif);
 
 //original selectors
 //.order-items h2, .order-items h3
-%extend_3 {
+%account_extend_3 {
 	clear: none;
 	font-weight: bold;
 	font-size: 13px;
@@ -110,9 +110,9 @@ $url_3: url(../images/bkg_tabs.gif);
 		border-top: 1px solid $gray_228;
 		padding: 10px;
 		a {
-			@extend %extend_1;
+			@extend %account_extend_1;
 			span {
-				@extend %extend_1;
+				@extend %account_extend_1;
 				background-position: 100% 0;
 				padding: 0 15px 0 9px;
 			}
@@ -136,10 +136,10 @@ $url_3: url(../images/bkg_tabs.gif);
 			margin: 0 0 12px;
 			text-align: right;
 			h3 {
-				@extend %extend_2;
+				@extend %account_extend_2;
 			}
 			h4 {
-				@extend %extend_2;
+				@extend %account_extend_2;
 			}
 			a {
 				font-size: 10px;
@@ -358,10 +358,10 @@ $url_3: url(../images/bkg_tabs.gif);
 	width: 100%;
 	overflow-x: auto;
 	h2 {
-		@extend %extend_3;
+		@extend %account_extend_3;
 	}
 	h3 {
-		@extend %extend_3;
+		@extend %account_extend_3;
 		font-size: 12px;
 	}
 	.product-name {

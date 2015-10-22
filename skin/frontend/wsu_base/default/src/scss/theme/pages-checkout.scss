@@ -2,14 +2,14 @@
 @import 'vars/colors';
 
 //urls
-$url_0: url(../../images/btn_window_close.gif);
-$url_1: url(../images/bkg_collapse-gm.gif);
-$url_2: url(../images/btn_remove.gif);
+$url_0: url(images/btn_window_close.gif);
+$url_1: url(images/bkg_collapse-gm.gif);
+$url_2: url(images/btn_remove.gif);
 
 //@extend-elements
 //original selectors
 //.multiple-checkout .col2-set, .multiple-checkout .col3-set
-%extend_1 {
+%checkout_extend_1 {
 	background: $gray_251;
 	border: 1px solid $gray_221;
 	margin: 0 0 25px;
@@ -588,7 +588,7 @@ $url_2: url(../images/btn_remove.gif);
 		right: 20px;
 	}
 	.col2-set {
-		@extend %extend_1;
+		@extend %checkout_extend_1;
 		.divider {
 			margin: 0 -20px;
 			padding: 25px 0;
@@ -607,7 +607,7 @@ $url_2: url(../images/btn_remove.gif);
 		}
 	}
 	.col3-set {
-		@extend %extend_1;
+		@extend %checkout_extend_1;
 	}
 	.box {
 		margin: 0 0 15px;

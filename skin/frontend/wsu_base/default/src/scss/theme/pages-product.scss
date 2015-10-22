@@ -2,21 +2,21 @@
 @import 'vars/colors';
 
 //urls
-$url_0: url(../images/bkg_rating.gif);
-$url_1: url(../../images/i_availability_only.gif);
-$url_2: url(../../images/i_availability_only_arrow.gif);
-$url_3: url(../images/bkg_add-to.gif);
-$url_4: url(../../images/slider_bg.gif);
-$url_5: url(../../images/magnifier_handle.gif);
-$url_6: url(../images/bkg_tabs.gif);
-$url_7: url(../images/bkg_pipe3.gif);
-$url_8: url(../images/bkg_btn-small.png);
-$url_9: url(../../images/bg_x.png);
+$url_0: url(images/bkg_rating.gif);
+$url_1: url(images/i_availability_only.gif);
+$url_2: url(images/i_availability_only_arrow.gif);
+$url_3: url(images/bkg_add-to.gif);
+$url_4: url(images/slider_bg.gif);
+$url_5: url(images/magnifier_handle.gif);
+$url_6: url(images/bkg_tabs.gif);
+$url_7: url(images/bkg_pipe3.gif);
+$url_8: url(images/bkg_btn-small.png);
+$url_9: url(images/bg_x.png);
 
 //@extend-elements
 //original selectors
 //.ratings-table th, .ratings-table td
-%extend_1 {
+%products_extend_1 {
 	font-size: 11px;
 	line-height: 1.15;
 	padding: 3px 0;
@@ -24,7 +24,7 @@ $url_9: url(../../images/bg_x.png);
 
 //original selectors
 //.product-pricing, .tier-prices
-%extend_2 {
+%products_extend_2 {
 	margin: 10px 0;
 	padding: 10px;
 	background: $color_feta_approx;
@@ -33,7 +33,7 @@ $url_9: url(../../images/bg_x.png);
 
 //original selectors
 //.product-options-bottom .product-pricing, .product-options-bottom .tier-prices
-%extend_3 {
+%products_extend_3 {
 	margin: 0;
 	padding: 0 0 10px;
 	border: 0;
@@ -42,7 +42,7 @@ $url_9: url(../../images/bg_x.png);
 
 //original selectors
 //.product-tabs li.active a, .product-tabs li.active a:hover
-%extend_4 {
+%products_extend_4 {
 	background-color: $gray_102;
 	font-weight: bold;
 	color: $white;
@@ -50,7 +50,7 @@ $url_9: url(../../images/bg_x.png);
 
 //original selectors
 //.clearfix:after, .configurable-swatch-list:after, .product-view .product-options .swatch-attr:after
-%extend_5 {
+%products_extend_5 {
 	content: '';
 	display: table;
 	clear: both;
@@ -58,7 +58,7 @@ $url_9: url(../../images/bg_x.png);
 
 //original selectors
 //.swatch-link, .swatch-label
-%extend_6 {
+%products_extend_6 {
 	display: block;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 3px;
@@ -114,12 +114,12 @@ $url_9: url(../../images/bg_x.png);
 }
 .ratings-table {
 	th {
-		@extend %extend_1;
+		@extend %products_extend_1;
 		font-weight: bold;
 		padding-right: 8px;
 	}
 	td {
-		@extend %extend_1;
+		@extend %products_extend_1;
 		padding: 4px 0 0;
 	}
 }
@@ -411,7 +411,7 @@ $url_9: url(../../images/bg_x.png);
 			clear: both;
 			border: 0;
 			&:after {
-				@extend %extend_5;
+				@extend %products_extend_5;
 			}
 			label {
 				font-size: 12px;
@@ -647,10 +647,10 @@ $url_9: url(../../images/bg_x.png);
 	}
 }
 .product-pricing {
-	@extend %extend_2;
+	@extend %products_extend_2;
 }
 .tier-prices {
-	@extend %extend_2;
+	@extend %products_extend_2;
 	.benefit {
 		font-style: italic;
 		font-weight: bold;
@@ -867,10 +867,10 @@ $url_9: url(../../images/bg_x.png);
 	border: 1px solid $gray_228;
 	border-top: 0;
 	.product-pricing {
-		@extend %extend_3;
+		@extend %products_extend_3;
 	}
 	.tier-prices {
-		@extend %extend_3;
+		@extend %products_extend_3;
 	}
 	.price-box {
 		float: left;
@@ -914,9 +914,9 @@ $url_9: url(../../images/bg_x.png);
 			border-right: 0;
 		}
 		&.active a {
-			@extend %extend_4;
+			@extend %products_extend_4;
 			&:hover {
-				@extend %extend_4;
+				@extend %products_extend_4;
 			}
 		}
 	}
@@ -988,7 +988,7 @@ $url_9: url(../../images/bg_x.png);
 	zoom: 1;
 	clear: both;
 	&:after {
-		@extend %extend_5;
+		@extend %products_extend_5;
 	}
 	li {
 		float: left;
@@ -1026,7 +1026,7 @@ $url_9: url(../../images/bg_x.png);
 	}
 }
 .swatch-link {
-	@extend %extend_6;
+	@extend %products_extend_6;
 	border: 1px solid $gray_204;
 	margin: 0 0 3px;
 	img {
@@ -1061,7 +1061,7 @@ $url_9: url(../../images/bg_x.png);
 	}
 }
 .swatch-label {
-	@extend %extend_6;
+	@extend %products_extend_6;
 	border: 1px solid $white;
 	margin: 0;
 	white-space: nowrap;
@@ -1157,7 +1157,7 @@ $url_9: url(../../images/bg_x.png);
 	display: block;
 }
 .clearfix:after {
-	@extend %extend_5;
+	@extend %products_extend_5;
 }
 .products-grid .configurable-swatch-list li {
 	display: inline-block;

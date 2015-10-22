@@ -2,12 +2,12 @@
 @import 'vars/colors';
 
 //urls
-$url_0: url(../../images/i_notice.gif);
+$url_0: url(images/i_notice.gif);
 
 //@extend-elements
 //original selectors
 //.messages, .messages ul
-%extend_1 {
+%messages_extend_1 {
 	list-style: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -15,7 +15,7 @@ $url_0: url(../../images/i_notice.gif);
 
 //original selectors
 //.error-msg, .success-msg, .note-msg, .notice-msg
-%extend_2 {
+%messages_extend_2 {
 	border-style: solid !important;
 	border-width: 1px !important;
 	padding: 4px 12px !important;
@@ -25,7 +25,7 @@ $url_0: url(../../images/i_notice.gif);
 
 //original selectors
 //.note-msg, .notice-msg
-%extend_3 {
+%messages_extend_3 {
 	border-color: $color_bright_sun_approx;
 	background-color: $color_orange_white_approx;
 	color: $color_dell_approx;
@@ -44,11 +44,11 @@ $url_0: url(../../images/i_notice.gif);
 	color: $color_bamboo_approx;
 }
 .messages {
-	@extend %extend_1;
+	@extend %messages_extend_1;
 	width: 100%;
 	overflow: hidden;
 	ul {
-		@extend %extend_1;
+		@extend %messages_extend_1;
 	}
 	li {
 		margin: 0 0 10px !important;
@@ -58,24 +58,24 @@ $url_0: url(../../images/i_notice.gif);
 	}
 }
 .error-msg {
-	@extend %extend_2;
+	@extend %messages_extend_2;
 	border-color: $color_persimmon_approx;
 	background-color: $color_linen_approx;
 	color: $color_grenadier_approx;
 }
 .success-msg {
-	@extend %extend_2;
+	@extend %messages_extend_2;
 	border-color: $color_dell_approx;
 	background-color: $color_panache_approx;
 	color: $color_dell_approx;
 }
 .note-msg {
-	@extend %extend_2;
-	@extend %extend_3;
+	@extend %messages_extend_2;
+	@extend %messages_extend_3;
 }
 .notice-msg {
-	@extend %extend_2;
-	@extend %extend_3;
+	@extend %messages_extend_2;
+	@extend %messages_extend_3;
 }
 .global-site-notice {
 	border: 1px solid $gray_204;

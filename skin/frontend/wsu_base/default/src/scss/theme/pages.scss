@@ -2,14 +2,14 @@
 @import 'vars/colors';
 
 //urls
-$url_0: url(../images/i_print.gif);
-$url_1: url(../../images/i_rss.gif);
-$url_2: url(../../images/i_rss-big.png);
+$url_0: url(images/i_print.gif);
+$url_1: url(images/i_rss.gif);
+$url_2: url(images/i_rss-big.png);
 
 //@extend-elements
 //original selectors
 //.subtitle, .sub-title
-%extend_1 {
+%pages_extend_1 {
 	clear: both;
 	padding: 12px 0 0;
 	font-size: 16px;
@@ -71,10 +71,10 @@ $url_2: url(../../images/i_rss-big.png);
 	}
 }
 .subtitle {
-	@extend %extend_1;
+	@extend %pages_extend_1;
 }
 .sub-title {
-	@extend %extend_1;
+	@extend %pages_extend_1;
 }
 .std {
 	.subtitle {

@@ -3,13 +3,13 @@
 
 
 //urls
-$url_0: url(../images/bkg_btn-green.gif);
-$url_1: url(../images/bkg_cart-totals.gif);
+$url_0: url(images/bkg_btn-green.gif);
+$url_1: url(images/bkg_cart-totals.gif);
 
 //@extend-elements
 //original selectors
 //.cart .discount, .cart .shipping
-%extend_1 {
+%cart_extend_1 {
 	background: $color_chrome_white_approx;
 	padding: 10px 0;
 	margin: 0 12px;
@@ -17,7 +17,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.cart .discount h2, .cart .shipping h2
-%extend_2 {
+%cart_extend_2 {
 	float: left;
 	width: 225px;
 	font: normal 14px/16px $font_primary, $font_secondary, $font_tertiary;
@@ -26,7 +26,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.cart .discount .buttons-set, .cart .shipping .buttons-set
-%extend_3 {
+%cart_extend_3 {
 	margin: 10px 0 0;
 	border: 0;
 	padding: 0;
@@ -35,7 +35,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.cart .discount .buttons-set button.button span, .cart .shipping .buttons-set button.button span
-%extend_4 {
+%cart_extend_4 {
 	height: 19px;
 	background-image: $url_0;
 	padding: 0 0 0 9px;
@@ -53,7 +53,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.cart .totals tfoot th strong, .cart .totals tfoot td strong
-%extend_5 {
+%cart_extend_5 {
 	font-size: 14px;
 	font-weight: bold;
 	color: $color_grenadier_approx;
@@ -61,7 +61,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.opc-wrapper-opc .buttons-set .button span, .opc-wrapper-opc .discount-block .buttons-set .button span
-%extend_6 {
+%cart_extend_6 {
 	background: transparent none;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 3px;
@@ -73,7 +73,7 @@ $url_1: url(../images/bkg_cart-totals.gif);
 
 //original selectors
 //.opc-wrapper-opc .buttons-set .button span span, .opc-wrapper-opc .discount-block .buttons-set .button span span
-%extend_7 {
+%cart_extend_7 {
 	background: transparent none;
 	color: $gray_73 !important;
 	font-size: 18px;
@@ -116,10 +116,10 @@ $url_1: url(../images/bkg_cart-totals.gif);
 		}
 		tfoot {
 			td strong {
-				@extend %extend_5;
+				@extend %cart_extend_5;
 			}
 			th strong {
-				@extend %extend_5;
+				@extend %cart_extend_5;
 			}
 		}
 		tr.last td {
@@ -181,21 +181,21 @@ $url_1: url(../images/bkg_cart-totals.gif);
 		}
 	}
 	.discount {
-		@extend %extend_1;
+		@extend %cart_extend_1;
 		border-bottom: 1px solid $color_coriander_approx;
 		h2 {
-			@extend %extend_2;
+			@extend %cart_extend_2;
 		}
 		.discount-form {
 			clear: both;
 		}
 		.buttons-set {
-			@extend %extend_3;
+			@extend %cart_extend_3;
 			button.button {
 				float: none;
 				margin: 0;
 				span {
-					@extend %extend_4;
+					@extend %cart_extend_4;
 					span {
 						padding: 0 19px 0 10px;
 					}
@@ -214,20 +214,20 @@ $url_1: url(../images/bkg_cart-totals.gif);
 		}
 	}
 	.shipping {
-		@extend %extend_1;
+		@extend %cart_extend_1;
 		h2 {
-			@extend %extend_2;
+			@extend %cart_extend_2;
 		}
 		.shipping-form {
 			clear: both;
 		}
 		.buttons-set {
-			@extend %extend_3;
+			@extend %cart_extend_3;
 			button.button {
 				float: none;
 				margin: 0;
 				span {
-					@extend %extend_4;
+					@extend %cart_extend_4;
 					span {
 						padding: 0 19px 0 10px;
 					}
@@ -392,15 +392,15 @@ $url_1: url(../images/bkg_cart-totals.gif);
 }
 .opc-wrapper-opc {
 	.buttons-set .button span {
-		@extend %extend_6;
+		@extend %cart_extend_6;
 		span {
-			@extend %extend_7;
+			@extend %cart_extend_7;
 		}
 	}
 	.discount-block .buttons-set .button span {
-		@extend %extend_6;
+		@extend %cart_extend_6;
 		span {
-			@extend %extend_7;
+			@extend %cart_extend_7;
 		}
 	}
 }
