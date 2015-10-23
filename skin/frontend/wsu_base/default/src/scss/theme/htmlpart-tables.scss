@@ -60,6 +60,17 @@ $url_1: url(images/bkg_collapse.gif);
 			margin: 0 0 1px;
 			vertical-align: middle;
 		}
+		.sort-by-switcher{
+			width: 20px;
+			overflow: hidden;
+			display: inline-block;
+			height: 20px;
+			font-size: 20px;
+			line-height: 20px;
+			&:before{ @include fa() }
+		}
+		.sort-by-switcher--asc:before{content:"\f161";}
+		.sort-by-switcher--desc:before{content:"\f160";}
 	}
 	.link-feed {
 	}
