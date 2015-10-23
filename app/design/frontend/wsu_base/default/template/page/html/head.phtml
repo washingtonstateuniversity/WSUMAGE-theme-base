@@ -1,3 +1,4 @@
+<?php $theme = Mage::helper('wsu_themecontrol'); ?>
 <meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
 <title><?php echo $this->getTitle() ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
@@ -17,6 +18,20 @@
 <link type="text/plain" rel="author" href="http://repo.wsu.edu/spine/1/authors.txt" />
 <link type="text/html" rel="docs" href="http://brand.wsu.edu" />
 
-
-
+<?php if ($theme->getCfgDesign('font/primary_font_family_group') == 'google'): ?>
+	<?php //Include Google Fonts
+		$amp = '&amp;';
+		$charSubset = '';
+		if ($subsets = $theme->getCfgDesign('font/primary_char_subset')) {
+			$charSubset = "{$amp}subset={$subsets}";
+		}
+	
+		$fontWeight = '';
+		if ($weight = $theme->getCfgDesign('font/primary_font_weight')) {
+			$fontWeight = ':' . $weight;
+		}
+	?>
+	<link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $theme->getCfgDesign('font/primary_font_family')); 
+		echo $fontWeight; echo $charSubset; ?>' rel='stylesheet' type='text/css' />
+<?php endif;?>
 
