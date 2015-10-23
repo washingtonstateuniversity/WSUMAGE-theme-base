@@ -7,6 +7,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
      * @return String
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
+		$element->setHtmlId(str_replace('.','_',$element->getHtmlId()));
         $html        = $element->getElementHtml(); //Default HTML
         $html .= '
 		<br/>
