@@ -12,7 +12,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
         $html .= '
 		<br/>
 		<style>
-			.layoutPreview{min-height:70px; position:absolute; min-width:30%; right:0%; top:15px;}
+			.layoutPreview{min-height:70px; max-width: 50%;/*position:absolute; min-width:30%; right:0%; top:15px;*/}
 			.layoutPreview .pr-table{display:none;}
 			.layoutPreview .pr-table table th, .layoutPreview .pr-table table td {
 				border: 1px solid #ddd;
