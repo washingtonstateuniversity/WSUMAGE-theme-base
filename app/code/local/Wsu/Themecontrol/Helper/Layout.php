@@ -8,15 +8,22 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	 * @return string
 	 */
 	public function setupLayout( $ref, $extract=array() ) {
-		$blockname = $ref->getNameInLayout();
+		$BlockName = $ref->getNameInLayout();
+		$ControllerName = $ref->getRequest()->getControllerName();
+		$ActionName = $ref->getRequest()->getActionName();
+		$RouteName = $ref->getRequest()->getRouteName();
+		$ModuleName = $ref->getRequest()->getModuleName();
 		
-		$blockname = $ref->getNameInLayout();
+		$fullpath = $RouteName.'_'.$ControllerName.'_'.$ActionName.'_'.$BlockName;
+		echo '<!--';
+		var_dump($fullpath);
+		echo '-->';
 		$theme = $ref->helper('wsu_themecontrol');
-		$block_settings = $theme->getCfgLayout($blockname.'/used');
+		$block_settings = $theme->getCfgLayout($fullpath.'/used');
 		$extractables = !empty($extract) ? $extract : array('row_type','padding','padding_flanks','padding_ends');
 		$extracted = array();
 		foreach($extractables as $name){
-			$extracted[$name] = $block_settings ? $theme->getCfgLayout($blockname.'/'.$name) : '';
+			$extracted[$name] = $block_settings ? $theme->getCfgLayout($fullpath.'/'.$name) : '';
 		}
 		return $extracted;
 	}
