@@ -8,11 +8,16 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
 		$used_values = $this->helper('wsu_themecontrol/layout')
-			->getMapBlockMapping($element->getHtmlId(),$element->getValues());
+			->getMapBlockMapping(str_replace('.','_',$element->getHtmlId()),$element->getValues());
 			
 		$element->setHtmlId(str_replace('.','_',$element->getHtmlId()));
 		$element->setValues($used_values);
         $html        = $element->getElementHtml(); //Default HTML
+		
+		$html_id = str_replace('.','_',$element->getHtmlId());
+		$html_id_stub = explode('_row_type_',str_replace('.','_',$html_id));
+		$html_id_stub = isset($html_id_stub[1])?$html_id_stub[1]:'';
+		
         $html .= '
 		<br/>
 		<style>
@@ -77,7 +82,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
 			
 		</style>
 		
-		<div class="layoutPreview" style="">
+		<div class="layoutPreview '. ($html_id!=''?''.$html_id.' ':'') .'" style="">
 
 <div class="pr-table">
 <div class="wrap pr-margin"><div class="wrap pr-padding">
@@ -201,44 +206,44 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
 		<script type="text/javascript">
 			(function($){
 				$(document).ready(function(){
-					var layoutselect = $("#' . $element->getHtmlId() . '");
+					var layoutselect = $("#' . $html_id . '");
 					var _block = layoutselect.closest(".form-list");
 					
-					var pad_select = _block.find("[name*=\'[padding]\']");
-					var pad_flank_select = _block.find("[name*=\'padding_flanks\']");
-					var pad_ends_select = _block.find("[name*=\'padding_ends\']");
+					var pad_select = _block.find("[name*=\'[padding' . ($html_id_stub!=''?'_'.$html_id_stub:'') . ']\']");
+					var pad_flank_select = _block.find("[name*=\'padding_flanks' . ($html_id_stub!=''?'_'.$html_id_stub:'') . '\']");
+					var pad_ends_select = _block.find("[name*=\'padding_ends' . ($html_id_stub!=''?'_'.$html_id_stub:'') . '\']");
 					
 					pad_select.on("change", function() {
-						var current = _block.find(".pr-table:visible").data("pad")||"";
+						var current = _block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table:visible").data("pad")||"";
 						var new_state = pad_select.val();
 						
-						_block.find(".pr-table").removeClass(current);
-						_block.find(".pr-table").addClass(new_state);
-						_block.find(".pr-table").data("pad",new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").removeClass(current);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").addClass(new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").data("pad",new_state);
 					}).trigger("change");
 					
 					pad_flank_select.on("change", function() {
-						var current = _block.find(".pr-table:visible").data("flank")||"";
+						var current = _block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table:visible").data("flank")||"";
 						var new_state = pad_flank_select.val();
 						
-						_block.find(".pr-table").removeClass(current);
-						_block.find(".pr-table").addClass(new_state);
-						_block.find(".pr-table").data("flank",new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").removeClass(current);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").addClass(new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").data("flank",new_state);
 					}).trigger("change");
 					
 					
 					pad_ends_select.on("change", function() {
-						var current = _block.find(".pr-table:visible").data("ends")||"";
+						var current = _block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table:visible").data("ends")||"";
 						var new_state = pad_ends_select.val();
 						
-						_block.find(".pr-table").removeClass(current);
-						_block.find(".pr-table").addClass(new_state);
-						_block.find(".pr-table").data("ends",new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").removeClass(current);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").addClass(new_state);
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").data("ends",new_state);
 					}).trigger("change");
 
 					layoutselect.on("change", function() {
-						_block.find(".pr-table").hide();
-						_block.find(".row_" + layoutselect.val()).closest(".pr-table").show();
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.pr-table").hide();
+						_block.find("'. ($html_id!=''?'.'.$html_id.' ':'') .'.row_" + layoutselect.val()).closest(".pr-table").show();
 					}).trigger("change");
 				});
 			})(jQuery);

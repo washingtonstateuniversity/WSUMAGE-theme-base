@@ -8,22 +8,24 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	 * @return string
 	 */
 	public function setupLayout( $ref, $extract=array() ) {
-		$BlockName = $ref->getNameInLayout();
+		$BlockName = str_replace('.','_',$ref->getNameInLayout());
 		$ControllerName = $ref->getRequest()->getControllerName();
 		$ActionName = $ref->getRequest()->getActionName();
 		$RouteName = $ref->getRequest()->getRouteName();
 		$ModuleName = $ref->getRequest()->getModuleName();
 		
-		$fullpath = $RouteName.'_'.$ControllerName.'_'.$ActionName.'_'.$BlockName;
+		$fullpath = $RouteName.'_'.$ControllerName.'_'.$ActionName;
 		echo '<!--';
 		var_dump($fullpath);
+		echo '-<<-route/controll/action | block ->>-';
+		var_dump($BlockName);
 		echo '-->';
 		$theme = $ref->helper('wsu_themecontrol');
-		$block_settings = $theme->getCfgLayout($fullpath.'/used');
+		$block_settings = $theme->getCfgLayout($fullpath.'/used'.'_'.$BlockName);
 		$extractables = !empty($extract) ? $extract : array('row_type','padding','padding_flanks','padding_ends');
 		$extracted = array();
 		foreach($extractables as $name){
-			$extracted[$name] = $block_settings ? $theme->getCfgLayout($fullpath.'/'.$name) : '';
+			$extracted[$name] = $block_settings ? $theme->getCfgLayout($fullpath.'/'.$name.'_'.$BlockName) : '';
 		}
 		return $extracted;
 	}
@@ -42,7 +44,7 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		array('value' => 'eighths',			'label' => Mage::helper('wsu_themecontrol')->__('eighths'))
 		*/
 		$map = array(
-			'wsu_themecontrol_layout_catalog_product_view_product.info_row_type'=>array('single','halves','side-left','side-right')
+			'wsu_themecontrol_layout_catalog_product_view_row_type_product_info'=>array('single','halves','side-left','side-right')
 		);
 		$used_values = array();
 		if(isset($map[$block])){
