@@ -12,27 +12,20 @@ $theme = $this->helper('wsu_themecontrol');
 $template = $this->helper('wsu_themecontrol/template');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
-$bodyClasses = $storeCode.$storeId.' -store '.$this->getBodyClass() .' -mage_body '. $theme->getThemeBodyClasses() .' -theme_classes '. $randomClass;
+$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
 $show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
 
-$mainContentClasses = $template->getBlockClasses("main_content"); 
+$mainContentClasses= $template->getBlockClasses("main_content"); 
 
-?>
-<?php 
+?><?php 
 
-$blockname = $this->getNameInLayout();
-$layout = $this->helper('wsu_themecontrol/layout')
-			->setupLayout( 
-				$this, 
-				array( 
-					'row_type',
-					'padding',
-					'padding_flanks',
-					'padding_ends'
-				 )
-			);
+$row_type				= $theme->getCfgLayout('customer_dashboard/row_type');
+$padding				= $theme->getCfgLayout('customer_dashboard/padding');
+$padding_flanks			= $theme->getCfgLayout('customer_dashboard/padding_flanks');
+$padding_ends			= $theme->getCfgLayout('customer_dashboard/padding_ends');
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
@@ -42,7 +35,7 @@ $layout = $this->helper('wsu_themecontrol/layout')
 <head>
 	<?=$this->getChildHtml('head')?>
 </head>
-<body class="DYNO <?=$bodyClasses?>">
+<body class=" <?=$bodyClasses?>">
     <!-- WRAPPING -->
     <div id="jacket">
         <div id="binder" class="<?=$binderClassStr?>" style="<?=$binderStyleStr?>">
@@ -61,7 +54,7 @@ $layout = $this->helper('wsu_themecontrol/layout')
                     </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends']?> content_area">
+                <section class="row single content_area">
                     <div class="column">
                         <article>
                             <?=$this->getChildHtml('after_body_start') ?>
