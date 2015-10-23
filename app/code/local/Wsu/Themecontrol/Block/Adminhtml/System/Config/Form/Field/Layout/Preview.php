@@ -7,7 +7,11 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Preview e
      * @return String
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
+		$used_values = $this->helper('wsu_themecontrol/layout')
+			->getMapBlockMapping($element->getHtmlId(),$element->getValues());
+			
 		$element->setHtmlId(str_replace('.','_',$element->getHtmlId()));
+		$element->setValues($used_values);
         $html        = $element->getElementHtml(); //Default HTML
         $html .= '
 		<br/>

@@ -28,7 +28,36 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		return $extracted;
 	}
 	
-	
+	public function getMapBlockMapping($block,$values){
+		/*
+		array('value' => 'single',			'label' => Mage::helper('wsu_themecontrol')->__('single')),
+		array('value' => 'halves',			'label' => Mage::helper('wsu_themecontrol')->__('halves')),
+		array('value' => 'thirds',			'label' => Mage::helper('wsu_themecontrol')->__('thirds')),
+		array('value' => 'side-left',		'label' => Mage::helper('wsu_themecontrol')->__('side-left')),
+		array('value' => 'side-right',		'label' => Mage::helper('wsu_themecontrol')->__('side-right')),
+		array('value' => 'margin-left',		'label' => Mage::helper('wsu_themecontrol')->__('margin-left')),
+		array('value' => 'margin-right',	'label' => Mage::helper('wsu_themecontrol')->__('margin-right')),
+		array('value' => 'triptych',		'label' => Mage::helper('wsu_themecontrol')->__('triptych')),
+		array('value' => 'quarters',		'label' => Mage::helper('wsu_themecontrol')->__('quarters')),
+		array('value' => 'eighths',			'label' => Mage::helper('wsu_themecontrol')->__('eighths'))
+		*/
+		$map = array(
+			'wsu_themecontrol_layout_catalog_product_view_product.info_row_type'=>array('single','halves','side-left','side-right')
+		);
+		$used_values = array();
+		if(isset($map[$block])){
+			foreach($values as $item){
+				if(in_array($item['value'],$map[$block])){
+					$used_values[]=$item;
+				}
+			}
+		}else{
+			$used_values = $values;
+		}
+		
+		
+		return $used_values;	
+	}
 	
 	
 }
