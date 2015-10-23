@@ -61,7 +61,11 @@ $layout = $this->helper('wsu_themecontrol/layout')
                 </section>
                 <!-- Responsive Sections -->
                 <section class="row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends']?> content_area">
-                    <div class="column">
+                    <div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										one
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										two
+									<?php endif; ?>">
                         <article>
                             <?=$this->getChildHtml('after_body_start') ?>
                             <div id="main" class="<?=$mainContentClasses?>" >
@@ -73,6 +77,23 @@ $layout = $this->helper('wsu_themecontrol/layout')
                             </div><!-- end of main -->   
                         </article>
                     </div><!--/column-->
+					<?php if( in_array($layout['row_type'],array('halves','side-left','side-right')) ):?>
+						<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										one
+									<?php endif; ?>">
+							<aside id="sidebar_area">
+								<section>
+									<?php if( strpos($layout['row_type'],'right') !== false ):?>
+										<?=$this->getChildHtml('right'); ?>
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										<?=$this->getChildHtml('left'); ?>
+									<?php endif; ?>
+								</section>
+							</aside>
+						</div><!--/column-->
+					<?php endif; ?>
                 </section>
                 <footer class="padded">
 					<?=$this->getChildHtml('footer') ?>
