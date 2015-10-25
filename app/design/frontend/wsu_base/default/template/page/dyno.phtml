@@ -12,20 +12,26 @@ $theme = $this->helper('wsu_themecontrol');
 $template = $this->helper('wsu_themecontrol/template');
 $binderClassStr = $theme->getBinderClassStr($storeCode);
 $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
-$bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
+$bodyClasses = $storeCode.$storeId.' -store '.$this->getBodyClass() .' -mage_body '. $theme->getThemeBodyClasses() .' -theme_classes '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 
 $show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
 
-$mainContentClasses= $template->getBlockClasses("main_content"); 
+$mainContentClasses = $template->getBlockClasses("main_content");
+?>
+<?php 
 
-?><?php 
-
-$row_type				= $theme->getCfgLayout('customer_dashboard/row_type');
-$padding				= $theme->getCfgLayout('customer_dashboard/padding');
-$padding_flanks			= $theme->getCfgLayout('customer_dashboard/padding_flanks');
-$padding_ends			= $theme->getCfgLayout('customer_dashboard/padding_ends');
-
+$blockname = $this->getNameInLayout();
+$layout = $this->helper('wsu_themecontrol/layout')
+			->setupLayout( 
+				$this, 
+				array( 
+					'row_type',
+					'padding',
+					'padding_flanks',
+					'padding_ends'
+				 )
+			);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
@@ -35,7 +41,7 @@ $padding_ends			= $theme->getCfgLayout('customer_dashboard/padding_ends');
 <head>
 	<?=$this->getChildHtml('head')?>
 </head>
-<body class=" <?=$bodyClasses?>">
+<body class="DYNO <?=$bodyClasses?>">
     <!-- WRAPPING -->
     <div id="jacket">
         <div id="binder" class="<?=$binderClassStr?>" style="<?=$binderStyleStr?>">
@@ -54,8 +60,12 @@ $padding_ends			= $theme->getCfgLayout('customer_dashboard/padding_ends');
                     </article>
                 </section>
                 <!-- Responsive Sections -->
-                <section class="row single content_area">
-                    <div class="column">
+                <section class="row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends']?> content_area">
+                    <div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										one
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										two
+									<?php endif; ?>">
                         <article>
                             <?=$this->getChildHtml('after_body_start') ?>
                             <div id="main" class="<?=$mainContentClasses?>" >
@@ -67,6 +77,23 @@ $padding_ends			= $theme->getCfgLayout('customer_dashboard/padding_ends');
                             </div><!-- end of main -->   
                         </article>
                     </div><!--/column-->
+					<?php if( in_array($layout['row_type'],array('halves','side-left','side-right')) ):?>
+						<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										one
+									<?php endif; ?>">
+							<aside id="sidebar_area">
+								<section>
+									<?php if( strpos($layout['row_type'],'right') !== false ):?>
+										<?=$this->getChildHtml('right'); ?>
+									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
+										<?=$this->getChildHtml('left'); ?>
+									<?php endif; ?>
+								</section>
+							</aside>
+						</div><!--/column-->
+					<?php endif; ?>
                 </section>
                 <footer class="padded">
 					<?=$this->getChildHtml('footer') ?>

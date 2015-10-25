@@ -65,17 +65,19 @@
         <page>
             <remove_layouts>
                 <layouts><!--empty,two_columns_right,three_columns--></layouts>
-            </remove_layouts>
-						
+            </remove_layouts>	
 			<layouts>
 				<page_halves module="page" translate="label">
 					<label>Halves Page Layout</label>
 					<template>page/halves.phtml</template>
 					<layout_handle>page_halves</layout_handle>
 				</page_halves>
+				<page_dyno module="page" translate="label">
+					<label>Dynamic Layout</label>
+					<template>page/dyno.phtml</template>
+					<layout_handle>page_dyno</layout_handle>
+				</page_dyno>
 			</layouts>
-			
-			
         </page>   
     </global>
 	<adminhtml>

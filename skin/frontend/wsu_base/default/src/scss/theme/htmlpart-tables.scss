@@ -15,6 +15,7 @@ $url_1: url(images/bkg_collapse.gif);
 	.amount {
 		float: left;
 		margin: 0;
+		padding: 0px;
 	}
 	.limiter {
 		float: right;
@@ -44,22 +45,82 @@ $url_1: url(images/bkg_collapse.gif);
 	font-size: 11px;
 	background: $white $url_0 0 100% repeat-x;
 	padding: 3px 8px;
+	padding-bottom:0px;
 	border-top: 1px solid $gray_221;
 	.view-mode {
 		float: left;
 		margin: 0;
+		padding: 0px;
+		label{
+			display: inline-block;
+			float: left;
+    		margin-top: 10px;
+			padding: 0px;
+		}
+		.list,.grid{
+			width: 20px;
+			overflow: hidden;
+			display: inline-block;
+			height: 20px;
+			font-size: 20px;
+			line-height: 23px;
+			margin-left: 5px;
+			padding: 5px;
+			border: 1px #494949 solid;
+			padding-right: 6px;
+			margin-top: 5px;
+			&:before{
+				@include fa();
+				@textshadow();
+			}
+		}
+		.list{
+			&:before{content:"\f00b";}
+		}
+		.grid{
+			&:before{content:"\f00a";}
+		}
+		strong{
+			&.list{color:#9C9C9C;border: 1px #9C9C9C solid;}	
+			&.grid{color:#9C9C9C;border: 1px #9C9C9C solid;}
+		}
+		a{
+			&.list{}	
+			&.grid{}
+		}
 	}
 	.sort-by {
 		float: right;
-		padding-right: 36px;
+		padding-top: 5px;
 		label {
 			vertical-align: middle;
+			margin-top: 5px;
+			display: inline-block;
 		}
 		select {
 			padding: 0;
 			margin: 0 0 1px;
 			vertical-align: middle;
+			margin-top: 7px;
 		}
+		.sort-by-switcher{
+			width: 20px;
+			overflow: hidden;
+			display: inline-block;
+			height: 20px;
+			font-size: 20px;
+			line-height: 23px;
+			margin-left: 5px;
+			padding: 5px;
+			border: 1px #494949 solid;
+			float: right;
+			&:before{
+				@include fa();
+				@textshadow();
+			}
+		}
+		.sort-by-switcher--asc:before{content:"\f161";}
+		.sort-by-switcher--desc:before{content:"\f160";}
 	}
 	.link-feed {
 	}
