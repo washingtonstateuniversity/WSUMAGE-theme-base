@@ -73,16 +73,67 @@ $url_2: url(images/bkg_btn-small.png);
 		li {
 			display: inline-block;
 			padding: 0 0 0 1px;
-			&.last a {
+			/*&.last a {
 				padding: 0;
 				background: none;
-			}
+			}*/
 		}
 		a {
 			color: $gray_221;
 			padding: 0 7px 0 0;
 			background: $url_1 no-repeat 100% 50%;
 			text-decoration: none;
+			position: relative;
+    		padding-left: 14px;
+			
+			span:before{
+				@include fa();
+				@textshadow();
+				
+				//color:#ECECEC;
+				z-index:1;
+			
+				margin-right: 7px;
+				position: absolute;
+				top: 3px;
+				left: 0px;
+			}
+
+			/*%--icons--%*/
+			&:hover span:before{
+				color:#fff;
+			}
+			&[href*="customer/account"] span:before{
+				content: "\f085";
+			}
+			&[href*="customer/account/create"] span:before{
+				content: "\f090";
+			}
+			&[href*="customer/account/logout"] span:before{
+				content: "\f08b";
+			}
+			&[href*="customer/account/login"] span:before{
+				content: "\f090";
+			}
+			&[href*="checkout"] span:before{
+				content: "\f046";
+			}
+			&[href*="checkout/cart"] span:before{
+				content: "\f07a";
+			}
+			&.with-items[href*="checkout/cart"] span:before{
+				content: "\f217";
+			}
+			&[href*="wishlist"] span:before{
+				content: "\f005";
+			}
+			&[href*="catalog/product_compare"] span:before,
+			&[href*="#hideme_compare"] span:before{
+				content: "\f24e";
+			}
+
+			
+			
 		}
 	}
 	&.lighter .links a {
