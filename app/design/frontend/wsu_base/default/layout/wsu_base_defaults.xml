@@ -166,7 +166,7 @@
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
 
 			<action method="addLink" translate="label title" module="customer">
-				<label><![CDATA[<i class="fa fa-sign-in"></i>  Log In ]]></label>
+				<label><![CDATA[ Log In ]]></label>
 				<url helper="customer/getLoginUrl"/>
 				<title>Log In</title>
 				<prepare/>
