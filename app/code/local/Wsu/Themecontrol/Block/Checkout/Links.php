@@ -87,7 +87,9 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 			
 			$hide_empty = $this->getData('checkout_hide_empty');
 			$label = $this->getData('checkout_label');
+			$show_price = $this->getData('checkout_total');
 			
+			$show_price = $show_price !== null ? $show_price : 0;
 			$hide_empty = $hide_empty !== null ? $hide_empty : 0;
 			$label = $label !== null ? $label : 'Checkout';
 			
@@ -96,11 +98,23 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 				
 			if($count > 0 || ($count==0 && $hide_empty==0)){
 				$text = $this->__('Checkout');
+				$html_text = $text;
+				if($show_price>0){
+					$cartTotal = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+					$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+					$currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
+					$html_text .='<span class="cart_total"> [<span class="currency_symbol">'.$currency_symbol.'</span>'.
+									Mage::getModel('directory/currency')->formatTxt(
+										$cartTotal,
+										array('display' => Zend_Currency::NO_SYMBOL)
+									).
+								']</span>';
+				}
 				$parentBlock->addLink(
-					$text, 'checkout', $text,
+					$html_text, 'checkout', $text,
 					true, array('_secure' => true), 60, null,
 					'class="top-link-checkout"'
-				);
+				);//($label, $url='', $title='', $prepare=false, $urlParams=array(), $position=null, $liParams=null, $aParams=null, $beforeText='', $afterText='')
 			}
         }
         return $this;
