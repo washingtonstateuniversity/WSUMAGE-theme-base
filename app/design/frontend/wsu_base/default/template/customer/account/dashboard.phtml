@@ -15,6 +15,7 @@ $padding_ends			= $theme->getCfgLayout('dashboard/padding_ends');
 <?php 
 $layout = $this->helper('wsu_themecontrol/layout')
 			->setupLayout( $this, array( 'row_type', 'padding', 'padding_flanks', 'padding_ends' ) );
+			
 ?>
 <div class="dashboard">
     <div class="page-title">
@@ -24,7 +25,11 @@ $layout = $this->helper('wsu_themecontrol/layout')
 	<?=$this->getChildHtml('hello') ?>
 	<?=$this->getChildHtml('top') ?>
 	<div class="row <?=$layout['row_type']?> <?=$layout['padding']?>  <?=$layout['padding_flanks']?>  <?=$layout['padding_ends']?>">
-		<div class="column two">
+		<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
+										one
+									<?php endif; ?>">
 			<div class="box-account box-info">
 				<div class="box-head">
 					<h2><?=$this->__('Account Information') ?></h2>
@@ -34,7 +39,11 @@ $layout = $this->helper('wsu_themecontrol/layout')
 				<?=$this->getChildHtml('info') ?>
 			</div>
 		</div>
-		<div class="column one">		
+		<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
+										one
+									<?php endif; ?>">		
 			<?=$this->getChildHtml('address') ?>
 			<?=$this->getChildHtml('info1') ?>
 			<?=$this->getChildHtml('info2') ?>

@@ -3990,8 +3990,8 @@ between the header and the footer).</comment>
 					</fields>
 				</content_area>
 				
-				<customer_account_dashboard translate="label comment">
-                    <label>Customer Dashboard Layout Options</label>
+				<customer_account_index translate="label comment">
+                    <label>Customer Accout Layout Options</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>150</sort_order>
                     <show_in_default>1</show_in_default>
@@ -4001,7 +4001,17 @@ between the header and the footer).</comment>
 						<![CDATA[  ]]>
 					</comment>
                     <fields>
-						<used translate="label comment">
+					
+					
+						<heading_inner_root translate="label">
+							<label>block root</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner_root>
+						<used_root translate="label comment">
                             <label>Use the dyno template</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -4009,8 +4019,90 @@ between the header and the footer).</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </used>
-						<row_type translate="label comment">
+                        </used_root>
+						<row_type_root translate="label comment">
+                            <label>Set the row type</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
+							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_root>1</used_root>
+							</depends>
+                        </row_type_root>	
+						<padding_root translate="label comment">
+                            <label>Set the padding</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_type</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_root>1</used_root>
+							</depends>
+                        </padding_root>
+						<padding_flanks_root translate="label comment">
+                            <label>Padding flank style</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_flanks</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_root>1</used_root>
+							</depends>
+                        </padding_flanks_root>
+						<padding_ends_root translate="label comment">
+                            <label>Padding end style</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_ends</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_root>1</used_root>
+							</depends>
+                        </padding_ends_root>
+					
+					
+					
+					
+						<heading_inner_customer_account_dashboard translate="label">
+							<label>block dashboard</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>99</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner_customer_account_dashboard>
+						<used_customer_account_dashboard translate="label comment">
+                            <label>Use the dyno template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </used_customer_account_dashboard>
+						<row_type_customer_account_dashboard translate="label comment">
                             <label>Set the row type</label>
 							<comment>
 								<![CDATA[ ]]>
@@ -4023,10 +4115,10 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 							<depends>
-								<used>1</used>
+								<used_customer_account_dashboard>1</used_customer_account_dashboard>
 							</depends>
-                        </row_type>	
-						<padding translate="label comment">
+                        </row_type_customer_account_dashboard>	
+						<padding_customer_account_dashboard translate="label comment">
                             <label>Set the padding</label>
 							<comment>
 								<![CDATA[ ]]>
@@ -4038,10 +4130,10 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 							<depends>
-								<used>1</used>
+								<used_customer_account_dashboard>1</used_customer_account_dashboard>
 							</depends>
-                        </padding>
-						<padding_flanks translate="label comment">
+                        </padding_customer_account_dashboard>
+						<padding_flanks_customer_account_dashboard translate="label comment">
                             <label>Padding flank style</label>
 							<comment>
 								<![CDATA[ ]]>
@@ -4053,10 +4145,10 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 							<depends>
-								<used>1</used>
+								<used_customer_account_dashboard>1</used_customer_account_dashboard>
 							</depends>
-                        </padding_flanks>
-						<padding_ends translate="label comment">
+                        </padding_flanks_customer_account_dashboard>
+						<padding_ends_customer_account_dashboard translate="label comment">
                             <label>Padding end style</label>
 							<comment>
 								<![CDATA[ ]]>
@@ -4068,13 +4160,96 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
 							<depends>
-								<used>1</used>
+								<used_customer_account_dashboard>1</used_customer_account_dashboard>
 							</depends>
-                        </padding_ends>
+                        </padding_ends_customer_account_dashboard>
+
+
+
+						<heading_inner_customer_account_dashboard_address translate="label">
+							<label>block address</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>199</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_inner_customer_account_dashboard_address>
+						<used_customer_account_dashboard_address translate="label comment">
+                            <label>Use the dyno template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </used_customer_account_dashboard_address>
+						<row_type_customer_account_dashboard_address translate="label comment">
+                            <label>Set the row type</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
+							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
+							</depends>
+                        </row_type_customer_account_dashboard_address>	
+						<padding_customer_account_dashboard_address translate="label comment">
+                            <label>Set the padding</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_type</source_model>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
+							</depends>
+                        </padding_customer_account_dashboard_address>
+						<padding_flanks_customer_account_dashboard_address translate="label comment">
+                            <label>Padding flank style</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_flanks</source_model>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
+							</depends>
+                        </padding_flanks_customer_account_dashboard_address>
+						<padding_ends_customer_account_dashboard_address translate="label comment">
+                            <label>Padding end style</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>wsu_themecontrol/system_config_source_layout_padding_ends</source_model>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
+							</depends>
+                        </padding_ends_customer_account_dashboard_address>
+
+
 
 					</fields>
-				</customer_account_dashboard>
-				
+				</customer_account_index>
+
 				<catalog_category_view translate="label comment">
                     <label>Category view Layout Options</label>
                     <frontend_type>text</frontend_type>
