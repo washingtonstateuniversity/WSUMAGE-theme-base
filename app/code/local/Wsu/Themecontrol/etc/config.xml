@@ -28,6 +28,11 @@
 					<links>Wsu_Themecontrol_Block_Wishlist_Links</links>
 				</rewrite>
 			</wishlist>
+			<catalog>
+				<rewrite>
+					<navigation>Wsu_Themecontrol_Block_Navigation</navigation>
+				</rewrite>
+			</catalog>
         </blocks>
         <helpers>
             <wsu_themecontrol>
@@ -39,12 +44,21 @@
                 <class>Wsu_Themecontrol_Model</class>
 				<!--<resourceModel>wsu_themecontrol_resource</resourceModel>-->
             </wsu_themecontrol>
+			<!--<wsu_themecontrol_resource>
+				<class>Wsu_Themecontrol_Model_Mysql4</class>
+				<entities>
+					<themecontrol>
+						<table>themecontrol</table>
+					</themecontrol>
+				</entities>
+			</wsu_themecontrol_resource>-->
         </models>
 		<resources>
 			<wsu_themecontrol_setup>
 				<setup>
-					<module>wsu_themecontrol</module>
-					<class>Wsu_Themecontrol_Model_Resource_Mysql4_Setup</class>
+					<module>Wsu_Themecontrol</module>
+					<!--<class>Wsu_Themecontrol_Model_Resource_Mysql4_Setup</class>-->
+					<class>Mage_Eav_Model_Entity_Setup</class>
 					<!--<class>Wsu_Themecontrol_Model_Resource_Eav_Mysql4_Setup</class>-->
 				</setup>
 				<connection>
