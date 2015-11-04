@@ -100,13 +100,13 @@
 		margin: 3px 0 0;
 	}
 	.desc {
-		clear: both;
+		//clear: both;
 		padding: 6px 0 0;
 		margin: 0 0 13px;
 		line-height: 1.35;
 	}
 	.add-to-links {
-		clear: both;
+		//clear: both;
 	}
 	li.item {
 		border-bottom: 1px solid $color_westar_approx;
@@ -114,6 +114,9 @@
 		&.last {
 			border-bottom: 0;
 		}
+	}
+	.right-column{
+		margin-left: 185px;
 	}
 }
 .col2-left-layout .products-grid {
