@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
 	<default>
-        <reference name="root">
-            <action method="setTemplate"><template>page/dyno.phtml</template></action>
-            <!-- Mark root page block that template is applied -->
-            <action method="setIsHandle"><applied>1</applied></action>
-        </reference>
 		<reference name="head">
 		
 
@@ -90,6 +85,10 @@
 		<reference name="root">
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+			<action method="addBodyClass"><class>DYNO-DEFAULT</class></action>
 		</reference>
 		
 		<reference name="top.links">
@@ -228,6 +227,9 @@
 	
 <!-- CHECKOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_onepage_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
 		<!-- Block below progress block, inserted directly -->
 		<reference name="right">
 			<block type="page/html_wrapper" name="i_block_opc_below_progress">
@@ -238,12 +240,16 @@
 			</block>
 		</reference>
 	</checkout_onepage_index>	
-
+	<opc_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+	</opc_index_index>
 <!-- REVIEWS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<review_product_list>
 		<!-- IMPORTANT: same as 'catalog_product_view'. -->
 		<reference name="root">
-			<action method="setTemplate"><template>page/1column.phtml</template></action>
+			<!--<action method="setTemplate"><template>page/1column.phtml</template></action>-->
 		</reference>
 	</review_product_list>
 
@@ -270,6 +276,9 @@
 	</customer_account_index>	
 <!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_page>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
 		<!-- Custom static blocks -->
 		<!-- IMPORTANT: These blocks are removed from home page and 404 no route page -->
 		<reference name="content">
@@ -302,7 +311,9 @@
 	
 <!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_index_index>
-	
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
 	</cms_index_index>
 
 <!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -336,7 +347,7 @@
 	<!-- Category with layered navigation -->
 	<catalog_category_layered>
 		<reference name="root">
-			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
 		<reference name="left">
 			<!-- Remove currency switcher from sidebar -->
@@ -360,7 +371,7 @@
 	<!-- Quick search -->
 	<catalogsearch_result_index>
 		<reference name="root">
-			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
 		<reference name="left">
 			<!-- Keep layered navigation always on top. Replace: after="currency" with: before="-" -->
@@ -372,6 +383,9 @@
 	</catalogsearch_result_index>
 	<!-- Advanced search -->
 	<catalogsearch_advanced_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
 		<!-- Remove (right) currency switcher from sidebar -->
 		<reference name="left">
 			<action method="unsetChild"><name>right_currency</name></action>
@@ -379,6 +393,9 @@
 	</catalogsearch_advanced_index>
 	<!-- Advanced search results -->
 	<catalogsearch_advanced_result>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
 		<!-- Remove (right) currency switcher from RIGHT sidebar -->
 		<reference name="right">
 			<action method="unsetChild"><name>right_currency</name></action>

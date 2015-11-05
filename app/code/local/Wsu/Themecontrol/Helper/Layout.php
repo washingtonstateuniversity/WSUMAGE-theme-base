@@ -24,8 +24,21 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		$block_settings = $theme->getCfgLayout($fullpath.'/used'.'_'.$BlockName);
 		$extractables = !empty($extract) ? $extract : array('row_type','padding','padding_flanks','padding_ends');
 		$extracted = array();
+		//var_dump($block_settings);
 		foreach($extractables as $name){
-			$extracted[$name] = $block_settings ? $theme->getCfgLayout($fullpath.'/'.$name.'_'.$BlockName) : '';
+			$setting = null;
+			if($block_settings==1){
+				$setting = $theme->getCfgLayout($fullpath.'/'.$name.'_'.$BlockName);
+				//var_dump($setting);
+				//var_dump($fullpath.'/'.$name.'_'.$BlockName);
+			}
+			if($setting==null){
+				$setting = $theme->getCfgLayout('layout_default/'.$name.'_'.$BlockName);
+				//var_dump('layout_default/'.$name.'_'.$BlockName);
+				//var_dump($setting);
+			}
+			
+			$extracted[$name] = $setting;
 		}
 		return $extracted;
 	}
