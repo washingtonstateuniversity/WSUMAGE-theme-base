@@ -407,6 +407,13 @@
 				<show_storenetwork>1</show_storenetwork>
 				<show_headerstorename>1</show_headerstorename>
 			</spine>
+			<layout_default>
+				<used_root>1</used_root>
+				<row_type_root>single</row_type_root>	
+				<padding_root>pad</padding_root>
+				<padding_flanks_root>narrow</padding_flanks_root>
+				<padding_ends_root>short</padding_ends_root>
+			</layout_default>
 		</wsu_themecontrol_layout>
 	</default>
 </config>
