@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
 	<default>
-	
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
 		<reference name="head">
 		
 
@@ -207,6 +211,10 @@
 	
 <!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_cart_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <action method="addBodyClass"><class>checkout-cart</class></action>
+        </reference>
 		<!-- Custom static blocks -->
 		<reference name="checkout.cart">
 			<block type="cms/block" name="block_cart_below_table">
