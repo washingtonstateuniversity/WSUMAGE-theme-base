@@ -413,6 +413,11 @@
 				<padding_root>pad</padding_root>
 				<padding_flanks_root>narrow</padding_flanks_root>
 				<padding_ends_root>short</padding_ends_root>
+				<used_footer>1</used_footer>
+				<row_type_footer>single</row_type_footer>	
+				<padding_footer>pad</padding_footer>
+				<padding_flanks_footer>narrow</padding_flanks_footer>
+				<padding_ends_footer>short</padding_ends_footer>
 			</layout_default>
 		</wsu_themecontrol_layout>
 	</default>

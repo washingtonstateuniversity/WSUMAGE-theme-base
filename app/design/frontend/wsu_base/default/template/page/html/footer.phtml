@@ -1,5 +1,8 @@
-<div id="localfooter">
-	<section class="row sidebar">
+<?php 
+$layout = $this->helper('wsu_themecontrol/layout')
+			->setupLayout( $this, array( 'row_type', 'padding', 'padding_flanks', 'padding_ends' ) );
+?><div id="localfooter">
+	<section class="row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends'];?>">
         <div class="column one">
             <article>
 				<?=$this->getChildHtml() ?> 
