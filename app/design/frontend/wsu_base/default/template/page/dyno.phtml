@@ -61,39 +61,81 @@ $layout = $this->helper('wsu_themecontrol/layout')
                 </section>
                 <!-- Responsive Sections -->
                 <section class="row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends']?> content_area">
-                    <div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
-										one
-									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
-										two
-									<?php endif; ?>">
-                        <article>
-                            <?=$this->getChildHtml('after_body_start') ?>
-                            <div id="main" class="<?=$mainContentClasses?>" >
-                                <?=$this->getChildHtml('topContainer'); ?>
-                                <?=$this->getChildHtml('topBar') ?>
-                                <?=$this->getChildHtml('global_notices') ?>
-                                <?=$this->getChildHtml('global_messages') ?>
-                                <?=$this->getChildHtml('content') ?>
-                            </div><!-- end of main -->   
-                        </article>
-                    </div><!--/column-->
-					<?php if( in_array($layout['row_type'],array('halves','side-left','side-right')) ):?>
-						<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
-										two
-									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
-										one
-									<?php endif; ?>">
-							<aside id="sidebar_area">
-								<section>
-									<?php if( strpos($layout['row_type'],'right') !== false ):?>
-										<?=$this->getChildHtml('right'); ?>
-									<?php elseif( strpos($layout['row_type'],'left') !== false ):?>
-										<?=$this->getChildHtml('left'); ?>
-									<?php endif; ?>
-								</section>
-							</aside>
-						</div><!--/column-->
-					<?php endif; ?>
+
+
+
+
+				
+				<?php 
+				$section_layout = array(
+					'single'=>array('content'),
+					'side-left'=>array('left','content'),
+					'side-right'=>array('content','right'),
+					'halves'=>array('content','right')
+				);
+				$sections = array();
+				
+				$content; 
+				?>
+				
+<?php
+ob_start();
+?>
+	<article>
+		<?=$this->getChildHtml('after_body_start') ?>
+		<div id="main" class="<?=$mainContentClasses?>" >
+			<?=$this->getChildHtml('topContainer'); ?>
+			<?=$this->getChildHtml('topBar') ?>
+			<?=$this->getChildHtml('global_notices') ?>
+			<?=$this->getChildHtml('global_messages') ?>
+			<?=$this->getChildHtml('content') ?>
+		</div><!-- end of main -->   
+	</article>
+<?php
+$sections['content'] =  ob_get_clean();
+?>
+
+<?php
+ob_start();
+?>
+<?php if( in_array($layout['row_type'],array('halves','side-left','side-right')) ):?>
+	<aside id="sidebar_area">
+		<section>
+			<?=$this->getChildHtml('left'); ?>
+		</section>
+	</aside>
+<?php endif; ?>
+<?php
+$sections['left'] =  ob_get_clean();
+?>
+
+<?php
+ob_start();
+?>
+<?php if( in_array($layout['row_type'],array('halves','side-left','side-right')) ):?>
+	<aside id="sidebar_area">
+		<section>
+			<?=$this->getChildHtml('right'); ?>
+		</section>
+	</aside>
+<?php endif; ?>
+<?php
+$sections['right'] =  ob_get_clean();
+?>				
+				
+				<?php 
+					$number_names=array(1=>'one',2=>'two',3=>'three',4=>'four');
+					$i=1;
+					foreach($section_layout[$layout['row_type']] as $section){
+						echo "<div class='column {$number_names[$i]}'>";
+						echo $sections[$section];
+						echo "</div><!--/column-->";
+						$i++;
+					}
+				
+				?>
+
+					
                 </section>
                 <footer>
 					<?=$this->getChildHtml('footer') ?>
