@@ -303,18 +303,16 @@
 		<remove name="block_right_top"/>
 		<remove name="block_right_bottom"/>
 	</cms_index_defaultnoroute>
+	<!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_index_index>
 		<remove name="i_block_cms_page_top"/>
 		<!-- Uncomment to allow MAP functionality on home page -->
 		<!--<update handle="MAP_popup" />-->
-	</cms_index_index>
-	
-<!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-	<cms_index_index>
 		<reference name="root">
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
 	</cms_index_index>
+
 
 <!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<!-- Default category (without layered navigation) -->
