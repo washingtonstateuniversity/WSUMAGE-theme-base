@@ -31,17 +31,15 @@
  * @package     Mage_Checkout
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
-{
-    /**
-     * Add shopping cart link to parent block
-     *
-     * @return Mage_Checkout_Block_Links
-     */
-    public function addCartLink()
-    {
-        $parentBlock = $this->getParentBlock();
-        if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
+class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
+	/**
+	 * Add shopping cart link to parent block
+	 *
+	 * @return Mage_Checkout_Block_Links
+	 */
+	public function addCartLink() {
+		$parentBlock = $this->getParentBlock();
+		if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
 			
 			$hide_empty = $this->getData('cart_hide_empty');
 			$label = $this->getData('cart_label');
@@ -53,8 +51,8 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 			$label_signle = $label_signle !== null ? $label_signle : 'Cart (%s item)';
 			$label_full = $label_full !== null ? $label_full : 'Cart (%s items)';
 
-            $count = $this->getSummaryQty() ? $this->getSummaryQty()
-                : $this->helper('checkout/cart')->getSummaryCount();
+			$count = $this->getSummaryQty() ? $this->getSummaryQty()
+				: $this->helper('checkout/cart')->getSummaryCount();
 			if($count > 0 || ($count==0 && $hide_empty==0)){
 				if ($count == 1) {
 					$text = $this->__($label_signle, $count);
@@ -67,23 +65,22 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 				$parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
 				$parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart '.($count > 0?'with-items':'').'"');
 			}
-        }
-        return $this;
-    }
+		}
+		return $this;
+	}
 
-    /**
-     * Add link on checkout page to parent block
-     *
-     * @return Mage_Checkout_Block_Links
-     */
-    public function addCheckoutLink()
-    {
-        if (!$this->helper('checkout')->canOnepageCheckout()) {
-            return $this;
-        }
+	/**
+	 * Add link on checkout page to parent block
+	 *
+	 * @return Mage_Checkout_Block_Links
+	 */
+	public function addCheckoutLink() {
+		if (!$this->helper('checkout')->canOnepageCheckout()) {
+			return $this;
+		}
 
-        $parentBlock = $this->getParentBlock();
-        if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
+		$parentBlock = $this->getParentBlock();
+		if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
 			
 			$hide_empty = $this->getData('checkout_hide_empty');
 			$label = $this->getData('checkout_label');
@@ -94,7 +91,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 			$label = $label !== null ? $label : 'Checkout';
 			
 			$count = $this->getSummaryQty() ? $this->getSummaryQty()
-                : $this->helper('checkout/cart')->getSummaryCount();
+				: $this->helper('checkout/cart')->getSummaryCount();
 				
 			if($count > 0 || ($count==0 && $hide_empty==0)){
 				$text = $label;
@@ -117,29 +114,24 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 					'class="top-link-checkout"'
 				);//($label, $url='', $title='', $prepare=false, $urlParams=array(), $position=null, $liParams=null, $aParams=null, $beforeText='', $afterText='')
 			}
-        }
-        return $this;
-    }
+		}
+		return $this;
+	}
 	
 	
 	public function makeCompareLink( ) {
-
-        $itemIds = array();
+		$itemIds = array();
 		$_productCollection = Mage::helper('catalog/product_compare')->getItemCollection();
 
 		if(count($_productCollection)>0){
 			foreach ($_productCollection as $item) {
 				$itemIds[] = $item->getId();
 			}
-	
-			 $params = array(
+			$params = array(
 				'items' => implode(',', $itemIds),
 				'_secure' => true
 			);
-	
 			//$product_compare_url = $this->_getUrl('catalog/product_compare', $params);
-	
-	
 			$parentBlock = $this->getParentBlock();
 	 
 			$hide_empty = $this->getData('compare_hide_empty');
@@ -156,7 +148,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 			);
 
 		}
-        return $this;
+		return $this;
 	}
 	
 	
