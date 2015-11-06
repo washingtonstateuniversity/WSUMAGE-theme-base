@@ -77,16 +77,18 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	
 	public function getCartLabel(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label');
-		return $cart_label!=null ? $cart_label : "Cart";
+		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart');
 	}
 	public function getCartLabelSingle(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_single');
-		return $cart_label!=null ? $cart_label : "Cart (%s item)";
+		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart')." (%s ".$this->helper('wsu_themecontrol')->__('item').")";
 	}
 	public function getCartLabelFull(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
-		return $cart_label!=null ? $cart_label : "Cart (%s items)";
+		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart')." (%s ".$this->helper('wsu_themecontrol')->__('items').")";
 	}
+	
+	
 	public function getSpineVersionCss(){
 		$version = Mage::helper('wsu_themecontrol')->getCfgLayout('spine/spine_version');
 		return sprintf("//repo.wsu.edu/spine/%s/spine.min.css",($version!=null ? $version : "1"));
