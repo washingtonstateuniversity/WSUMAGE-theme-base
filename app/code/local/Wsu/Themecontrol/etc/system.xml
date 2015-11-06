@@ -407,7 +407,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_checkout>
 						<show_checkout_total translate="label comment">
-							<label>Hide the total for the checkout link</label>
+							<label>Show the total for the checkout link</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
@@ -417,7 +417,7 @@
 							<show_in_store>1</show_in_store>
 						</show_checkout_total>
 						<checkout_hide_empty translate="label comment">
-							<label>Show checkout link when cart is empty</label>
+							<label>Hide checkout link when cart is empty</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
 							<source_model>adminhtml/system_config_source_yesno</source_model>
