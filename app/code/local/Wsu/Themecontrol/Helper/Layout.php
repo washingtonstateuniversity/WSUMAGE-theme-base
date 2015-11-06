@@ -75,4 +75,20 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	}
 	
 	
+	public function getCartLabel(){
+		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label');
+		return $cart_label!=null ? $cart_label : "Cart";
+	}
+	public function getCartLabelSingle(){
+		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_single');
+		return $cart_label!=null ? $cart_label : "Cart (%s item)";
+	}
+	public function getCartLabelFull(){
+		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
+		return $cart_label!=null ? $cart_label : "Cart (%s items)";
+	}
+	
+	
+	
+	
 }

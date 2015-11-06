@@ -106,9 +106,9 @@
 			</block> -->
 			
 			<block type="checkout/links" name="checkout_cart_link_custom">
-				<action method="setData"><name>cart_label</name><value>Cart</value></action>
-				<action method="setData"><name>cart_label_signle</name><value>Cart (%s item)</value></action>
-				<action method="setData"><name>cart_label_full</name><value>Cart (%s items)</value></action>
+				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
+				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
+				<action method="setData"><name>cart_label_full</name><value helper="wsu_themecontrol/layout/getCartLabelFull" /></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/checkout_hide_empty"><name>checkout_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
