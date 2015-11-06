@@ -231,6 +231,10 @@ $url_9: url(images/bg_x.png);
 		.product-image {
 			margin: 0 0 10px;
 			border: 1px solid $gray_204;
+			img {
+				width: 100%;
+   				height: auto;
+			}
 		}
 		.product-image-zoom {
 			position: relative;
