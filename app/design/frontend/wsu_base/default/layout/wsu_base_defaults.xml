@@ -112,7 +112,7 @@
 				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/checkout_hide_empty"><name>checkout_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
-				
+				<action method="setData"><name>checkout_label</name><value helper="wsu_themecontrol/layout/getCheckoutLabel" /></action>
 				
 				<action method="addCartLink"><position>10</position></action>
 				<action method="addCheckoutLink"><position>11</position></action>

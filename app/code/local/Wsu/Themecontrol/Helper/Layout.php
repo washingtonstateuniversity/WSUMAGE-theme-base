@@ -87,6 +87,11 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
 		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart')." (%s ".$this->helper('wsu_themecontrol')->__('items').")";
 	}
+	public function getCheckoutLabel(){
+		$checkout_label = Mage::helper('wsu_themecontrol')->getCfg('header/checkout_label');
+		return $checkout_label!=null ? $checkout_label : $this->helper('wsu_themecontrol')->__('Checkout');
+	}
+	
 	
 	
 	public function getSpineVersionCss(){

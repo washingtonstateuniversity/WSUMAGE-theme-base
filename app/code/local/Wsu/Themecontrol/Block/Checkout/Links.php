@@ -97,7 +97,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
                 : $this->helper('checkout/cart')->getSummaryCount();
 				
 			if($count > 0 || ($count==0 && $hide_empty==0)){
-				$text = $this->__('Checkout');
+				$text = $label;
 				$html_text = $text;
 				if($show_price>0){
 					$cartTotal = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
