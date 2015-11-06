@@ -344,7 +344,7 @@ $url_3: url(images/bkg_tabs.gif);
 		top: calc(50% - .6em);
 		font-size: 1.1em;
 		color: #888;
-		content: "\f00e";
+		content: "\f196";
 	}
 	&:hover{
 		.shipped_address{
@@ -352,6 +352,7 @@ $url_3: url(images/bkg_tabs.gif);
 		}
 		&:before{
 			color: #92181A;
+			content:"\f0fe";
 		}
 	}
 }
