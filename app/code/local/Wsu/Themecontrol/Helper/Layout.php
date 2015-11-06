@@ -87,7 +87,14 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
 		return $cart_label!=null ? $cart_label : "Cart (%s items)";
 	}
-	
+	public function getSpineVersionCss(){
+		$version = Mage::helper('wsu_themecontrol')->getCfgLayout('spine/spine_version');
+		return sprintf("//repo.wsu.edu/spine/%s/spine.min.css",($version!=null ? $version : "1"));
+	}	
+	public function getSpineVersionJs(){
+		$version = Mage::helper('wsu_themecontrol')->getCfgLayout('spine/spine_version');
+		return sprintf("//repo.wsu.edu/spine/%s/spine.min.js",($version!=null ? $version : "1"));
+	}	
 	
 	
 	

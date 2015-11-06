@@ -33,9 +33,9 @@
 		<!-- JS -->
 			<action method="addItem"><type>external_js</type><name>//html5shiv.googlecode.com/svn/trunk/html5.js</name><params/><if>if lt IE 9</if></action>
 			<!-- base for all WSU -->
-			<action method="addItem"><type>external_css</type><name>//repo.wsu.edu/spine/1/spine.min.css</name></action>
+			<action method="addItem"><type>external_css</type><name helper="wsu_themecontrol/layout/getSpineVersionCss"/></action>
 			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->
-			<action method="addItem"><type>external_js</type><name>//repo.wsu.edu/spine/1/spine.min.js</name></action>
+			<action method="addItem"><type>external_js</type><name helper="wsu_themecontrol/layout/getSpineVersionJs"/></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/jQuery.dialog.lightbox.js</name></action>
 			
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.defaults.js</name></action>

@@ -403,6 +403,7 @@
 				<fluid_width>fluid</fluid_width>
 			</responsive>
 			<spine>
+				<spine_version>1</spine_version>
 				<show_search>1</show_search>
 				<show_contact>1</show_contact>
 				<show_share>1</show_share>
