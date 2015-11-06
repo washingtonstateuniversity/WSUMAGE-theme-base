@@ -159,6 +159,8 @@
 		<wsu_themecontrol>
 			<header>
 				<show_checkout_total>1</show_checkout_total>
+				<checkout_hide_empty>1</checkout_hide_empty>
+				<cart_hide_empty>1</cart_hide_empty>
 				<hide_on_mobile>0</hide_on_mobile>
 				<compare>1</compare>
 			</header>

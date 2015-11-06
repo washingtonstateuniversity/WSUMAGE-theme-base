@@ -109,8 +109,8 @@
 				<action method="setData"><name>cart_label</name><value>Cart</value></action>
 				<action method="setData"><name>cart_label_signle</name><value>Cart (%s item)</value></action>
 				<action method="setData"><name>cart_label_full</name><value>Cart (%s items)</value></action>
-				<action method="setData"><name>cart_hide_empty</name><value>0</value></action>
-				<action method="setData"><name>checkout_hide_empty</name><value>1</value></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/checkout_hide_empty"><name>checkout_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
 				
 				
