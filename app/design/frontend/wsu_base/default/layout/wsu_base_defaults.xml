@@ -111,7 +111,7 @@
 				<action method="setData"><name>cart_label_full</name><value>Cart (%s items)</value></action>
 				<action method="setData"><name>cart_hide_empty</name><value>0</value></action>
 				<action method="setData"><name>checkout_hide_empty</name><value>1</value></action>
-				<action method="setData"><name>checkout_total</name><value>1</value></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
 				
 				
 				<action method="addCartLink"><position>10</position></action>
