@@ -142,13 +142,13 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 	
 			$parentBlock = $this->getParentBlock();
 	 
-			$hide_empty = $this->getData('checkout_hide_empty');
-			$label = $this->getData('checkout_label');
+			$hide_empty = $this->getData('compare_hide_empty');
+			$label = $this->getData('compare_label');
 			
 			$hide_empty = $hide_empty !== null ? $hide_empty : 0;
 			$label = $label !== null ? $label : 'Compare Products';
 
-			$text = $this->__('Compare Products');
+			$text = $label;
 			$parentBlock->addLink(
 				$text, 'catalog/product_compare', $text,
 				true, $params, 60, null,
