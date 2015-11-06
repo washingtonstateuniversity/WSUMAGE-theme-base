@@ -101,14 +101,15 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
 				$html_text = $text;
 				if($show_price>0){
 					$cartTotal = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
-					$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
-					$currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
-					$html_text .='<span class="cart_total"> [<span class="currency_symbol">'.$currency_symbol.'</span>'.
-									Mage::getModel('directory/currency')->formatTxt(
+					$price_point = Mage::getModel('directory/currency')->formatTxt(
 										$cartTotal,
 										array('display' => Zend_Currency::NO_SYMBOL)
-									).
-								']</span>';
+									);
+					if( (int)$price_point != 0 ){
+						$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+						$currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
+						$html_text .='<span class="cart_total"> [<span class="currency_symbol">'.$currency_symbol.'</span>'.$price_point.']</span>';
+					}
 				}
 				$parentBlock->addLink(
 					$html_text, 'checkout', $text,
