@@ -71,7 +71,7 @@ $url_1: url(images/bkg_collapse.gif);
 			margin-top: 5px;
 			&:before{
 				@include fa();
-				@textshadow();
+				@include textshadow();
 			}
 		}
 		.list{
@@ -116,7 +116,7 @@ $url_1: url(images/bkg_collapse.gif);
 			float: right;
 			&:before{
 				@include fa();
-				@textshadow();
+				@include textshadow();
 			}
 		}
 		.sort-by-switcher--asc:before{content:"\f161";}

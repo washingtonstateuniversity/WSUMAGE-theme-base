@@ -88,7 +88,7 @@ $url_2: url(images/bkg_btn-small.png);
 			
 			span:before{
 				@include fa();
-				@textshadow();
+				@include textshadow();
 				
 				//color:#ECECEC;
 				z-index:1;
