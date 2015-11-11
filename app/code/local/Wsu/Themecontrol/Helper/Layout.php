@@ -77,19 +77,19 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	
 	public function getCartLabel(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label');
-		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart');
+		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart');
 	}
 	public function getCartLabelSingle(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_single');
-		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart')." (%s ".$this->helper('wsu_themecontrol')->__('item').")";
+		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart')." (%s ".Mage::helper('wsu_themecontrol')->__('item').")";
 	}
 	public function getCartLabelFull(){
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
-		return $cart_label!=null ? $cart_label : $this->helper('wsu_themecontrol')->__('Cart')." (%s ".$this->helper('wsu_themecontrol')->__('items').")";
+		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart')." (%s ".Mage::helper('wsu_themecontrol')->__('items').")";
 	}
 	public function getCheckoutLabel(){
 		$checkout_label = Mage::helper('wsu_themecontrol')->getCfg('header/checkout_label');
-		return $checkout_label!=null ? $checkout_label : $this->helper('wsu_themecontrol')->__('Checkout');
+		return $checkout_label!=null ? $checkout_label : Mage::helper('wsu_themecontrol')->__('Checkout');
 	}
 	
 	
