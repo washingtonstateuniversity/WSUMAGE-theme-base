@@ -34,14 +34,13 @@ ul,ul li{ list-style:none !important;}
 }
 
 /* ============================================ *
- * Slideshow
+ * General cruft to be relocated later
  * ============================================ */
-
-
-
-
-
-
+.promos li { //this is for the sample data installed based on the RWD theme, which this theme extends
+    max-width: 30%;
+    float: left;
+    margin-right: 3.33%;
+}
 
 /* Clears ================================================================================ */
 .clearer:after,
