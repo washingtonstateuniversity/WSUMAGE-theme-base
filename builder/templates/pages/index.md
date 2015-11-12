@@ -3,10 +3,10 @@
 ## Repo : [WSUMAGE-theme-base](https://github.com/washingtonstateuniversity/WSUMAGE-theme-base)
 
 <div class="row halves">
-<div class="column one">
+<div class="column">
 ![home page with sample data](site/images/home-page-preview-with-sample.png "Home page")
 </div>
-<div class="column two">
+<div class="column">
 
 
 ## Key features
