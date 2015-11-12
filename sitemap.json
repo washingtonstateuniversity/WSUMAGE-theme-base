@@ -33,8 +33,8 @@
 				"showstuff":true
 			},
 			"child_nav":{
-				"#colors":"Colors",
-				"#fonts":"Fonts"
+				"#wsu-spine-framework":"WSU Spine framework",
+				"#css-override":"CSS Override"
 			}
 		},
 		"layout":{
@@ -45,8 +45,8 @@
 				"showstuff":true
 			},
 			"child_nav":{
-				"#colors":"Colors",
-				"#fonts":"Fonts"
+				"#spine-responsive-layout-options":"Responsive layout",
+				"#spine-layout-options":"Spine layout options"
 			}
 		}
 	}
