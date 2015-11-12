@@ -23,8 +23,30 @@
 			"nav_title":"Installing",
 			"vars":{
 				"showstuff":true
+			}
+		},
+		"design":{
+			"name":"design",
+			"title":"Altering the design WSU Magneto Theme Controller",
+			"nav_title":"Design",
+			"vars":{
+				"showstuff":true
 			},
 			"child_nav":{
+				"#colors":"Colors",
+				"#fonts":"Fonts"
+			}
+		},
+		"layout":{
+			"name":"layout",
+			"title":"Altering the layout WSU Magneto Theme Controller",
+			"nav_title":"Layout",
+			"vars":{
+				"showstuff":true
+			},
+			"child_nav":{
+				"#colors":"Colors",
+				"#fonts":"Fonts"
 			}
 		}
 	}
