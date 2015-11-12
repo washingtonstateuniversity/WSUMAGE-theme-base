@@ -16,7 +16,7 @@
 	<!-- STYLESHEETS -->
 	<link href="https://repo.wsu.edu/spine/1/spine.min.css" rel="stylesheet" type="text/css" />
 	<!-- Your custom stylesheets here -->
-	<link href="site/stylesheets/git_styles.css" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/git_styles.css" rel="stylesheet" type="text/css" />
 	<!-- RESPOND -->
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	
@@ -49,19 +49,19 @@
 				<div class="column one">
 					<article class="wrapper markdown-body">
 					<h1 id="wsu-magento-theme-controller-installation">WSU Magento Theme Controller installation</h1>
-<h2 id="installation-prerequisites">Installation prerequisites</h2>
+<h2 id="installation-with-gitploy">Installation with Gitploy</h2>
 <p>There is a simple bash script, <a href="https://github.com/jeremyBass/gitploy">gitploy</a>, that is used for the install and updating of the files needs for a Magento app.  <a href="https://github.com/jeremyBass/gitploy">gitploy</a> is used to manage the install of the app.  This script will take a git repository and clone it to the server.  To avoid issues and the need for over use of submodules, gitploy tracks the local repository in a sub folder and sets things up do that you never have to worry about the install becoming corrupted.  For more information on how gitploy works please refer to the documentation.  The command that is normally run in get the up today Magento app is something like:</p>
-<p><code>gitploy -t lastest wsu_base https://github.com/washingtonstateuniversity/WSUMAGE-theme-base.git</code></p>
+<p><code>gitploy add wsu_base https://github.com/washingtonstateuniversity/WSUMAGE-theme-base.git</code></p>
 <p>What that command will do is to clone in the repo for the latest tag of the theme.  The <code>-t latest</code> option will chose the last tagged release. </p>
 <h2 id="activating">Activating</h2>
 <h3 id="setting-the-package">Setting the package</h3>
 <p>To get started, travel to the package field in the settings area of the admin</p>
-<p><strong><em><code>System&gt;Configuration&gt;General&gt;Design&gt;Package</code></em></strong></p>
+<p><strong><em><code>System&gt; Configuration&gt; General&gt; Design&gt; Package</code></em></strong></p>
 <p><img src="site/images/set-the-theme-package.png" alt="set the package"></p>
 <p>In order to activate the theme, use <code>wsu_base</code> for the package.  Any child themes would extend this package in order to maintain functionality.</p>
 <h3 id="setting-a-child-theme">Setting a child Theme</h3>
-<p>Setting a child theme (which must be correctly set up itself) is as easy as setting the default theme.  This means you will be able to have grandchild themes which can be useful when dealing with a network of <code>stores</code> under one <code>website</code>.</p>
-<p><strong><em><code>System&gt;Configuration&gt;General&gt;Design&gt;Package</code></em></strong></p>
+<p>Setting a child theme (<strong><em>which must be correctly set up itself</em></strong>) is as easy as setting the default theme.  This means you will be able to have grandchild themes which can be useful when dealing with a network of <code>stores</code> under one <code>website</code>.</p>
+<p><strong><em><code>System&gt; Configuration&gt; General&gt; Design&gt; Themes</code></em></strong></p>
 <p><img src="site/images/set-the-theme-child.png" alt="set child theme"></p>
 <p><strong>Note:</strong> More to come. Thank you for reading.</p>
 
