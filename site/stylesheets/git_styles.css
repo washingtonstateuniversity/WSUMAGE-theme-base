@@ -40,3 +40,8 @@ a:hover{
 .fluid .row.side-left > .column.one,.fluid .row.side-right > .column.two {
     width: 33%
 }
+
+body table td, body table th {
+    border: 1px solid #888888;
+    padding: 5px 10px;
+}
