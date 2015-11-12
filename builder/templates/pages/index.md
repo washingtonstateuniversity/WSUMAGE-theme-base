@@ -4,7 +4,7 @@
 
 <div class="row halves">
 <div class="column one">
-![home page with sample data](/site/images/home-page-preview-with-sample.png "Home page")
+![home page with sample data](site/images/home-page-preview-with-sample.png "Home page")
 </div>
 <div class="column two">
 
