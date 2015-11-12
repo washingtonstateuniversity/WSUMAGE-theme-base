@@ -1,0 +1,31 @@
+{
+	"globals":{
+		"google_analytics":"UA-XXXXXXXX-XX"
+	},
+	"page_defaults":{
+		"root":"../site/",
+		"nav_root":"site/",
+		"template":"main"
+	},
+	"pages":{
+		"index":{
+			"name":"index",
+			"nav_link":"",
+			"root":"../",
+			"title":"Theme Controller",
+			"vars":{
+				"showstuff":true
+			}
+		},
+		"installation":{
+			"name":"installation",
+			"title":"Installing the WSU Magneto Theme Controller",
+			"nav_title":"Installing",
+			"vars":{
+				"showstuff":true
+			},
+			"child_nav":{
+			}
+		}
+	}
+}

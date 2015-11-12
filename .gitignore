@@ -1,4 +1,8 @@
-skin/frontend/wsu_base/default/css/custom.css
-skin/frontend/wsu_base/default/build/**/*
-skin/frontend/wsu_base/default/.sass-cache/**/*scssc
-skin/frontend/wsu_base/default/node_modules/**/*
+.idea
+node_modules
+/pub
+/build
+/tmpsite
+#/test
+#!/test/preprocess
+#!/test/preprocess/blocks

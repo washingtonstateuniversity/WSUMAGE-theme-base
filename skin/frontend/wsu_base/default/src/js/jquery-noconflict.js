@@ -1,2 +1,0 @@
-// JavaScript Document
-jQuery.noConflict();
