@@ -33,7 +33,6 @@ a{
 a:hover{
 	text-decoration: underline;
 }
-
 .fluid .row.side-left > .column.two,.fluid .row.side-right > .column.one {
     width: 67%
 }
