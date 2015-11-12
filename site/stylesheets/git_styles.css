@@ -19,7 +19,7 @@
 	font-size: 0.8em;
 }
 
-.markdown-body pre > code {
+.markdown-body code:not(p > code) {
     margin: 0;
     padding: 0;
     white-space: pre;
