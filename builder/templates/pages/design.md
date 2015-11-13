@@ -11,7 +11,7 @@ To get started, travel to the package field in the settings area of the admin
 
 <table>
 	<thead>
-		<tr><th>Option Name</th><th>Desription</th><th>Options</th><th>Lowest Scope</th></tr>
+		<tr><th>Option Name</th><th>Description</th><th>Options</th><th>Lowest Scope</th></tr>
 	</thead>
 	<tbody>
 		<tr>

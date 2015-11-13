@@ -12,12 +12,12 @@ To get started, travel to the package field in the settings area of the admin
 
 <table>
 	<thead>
-		<tr><th>Option Name</th><th>Desription</th><th>Options</th><th>Lowest Scope</th></tr>
+		<tr><th>Option Name</th><th>Description</th><th>Options</th><th>Lowest Scope</th></tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Responsive Layout</td>
-			<td>Should the responive layout be used</td>
+			<td>Should the responsive layout be used</td>
 			<td><code>Enable</code><code>Disable</code></td>
 			<td>[STORE VIEW]</td>
 		</tr>
@@ -29,7 +29,7 @@ To get started, travel to the package field in the settings area of the admin
 		</tr>
 		<tr>
 			<td>Maximum Page Width Custom</td>
-			<td>Enter in a width to be used.  must be in the format of </td>
+			<td>Enter in a width to be used.  Must be in the format of number unit</td>
 			<td><em>USER INPUT</em></td>
 			<td>[STORE VIEW]</td>
 		</tr>
@@ -60,7 +60,7 @@ To get started, travel to the package field in the settings area of the admin
 
 <table>
 	<thead>
-		<tr><th>Option Name</th><th>Desription</th><th>Options</th><th>Lowest Scope</th></tr>
+		<tr><th>Option Name</th><th>Description</th><th>Options</th><th>Lowest Scope</th></tr>
 	</thead>
 	<tbody>
 		<tr>
@@ -112,7 +112,7 @@ To get started, travel to the package field in the settings area of the admin
 			<td>[STORE VIEW]</td>
 		</tr>
 		<tr>
-			<td>Lable for Home link </td>
+			<td>Label for Home link </td>
 			<td></td>
 			<td><em>USER INPUT</em></td>
 			<td>[STORE VIEW]</td>
