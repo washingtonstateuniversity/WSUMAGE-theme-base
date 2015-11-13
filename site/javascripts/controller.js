@@ -31,11 +31,7 @@
 		$(this).removeClass('closed');
     });
 	$('.img_zoom').on('click',function(){
-		if( 
-			( !$(this).is('.closed') && !$(this).is('.transition') )
-			||
-			( !$(this).is('.transition') && $(this).closest('.img_zoom_holder').has('.closed') )
-		){
+		if( $(this).is('.closed') ){
 			$(this).addClass('transition');
 			$(this).removeClass('closed');
 		}else{
