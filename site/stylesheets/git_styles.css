@@ -45,3 +45,55 @@ body table td, body table th {
     border: 1px solid #888888;
     padding: 5px 10px;
 }
+
+/* light zoom */
+ .img_zoom{
+
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+
+	z-index:999999;
+	display:block;
+	position:relative;
+	cursor:zoom-in;
+}
+.img_zoom img{
+	width:100% !important;	
+}
+.transition {
+    -webkit-transform: scale(1.5); 
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+	-webkit-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+	cursor:zoom-out;
+}
+.transition:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);	
+	color:#FFFFFF;
+	background:#700B0D;
+	border-radius:25px;
+	font-size:15px;
+	line-height:18px;
+	content:"\f00d";
+	z-index:9999999;
+	position:absolute;
+	top:-7px;
+	right:7px;
+	padding:0px 5px;
+	text-align:center;
+	cursor:pointer;
+}
+.transition:before:hover{
+	background:#903737;
+}
