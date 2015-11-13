@@ -126,6 +126,12 @@ To get started, travel to the package field in the settings area of the admin
 ### Page layout options
 ### Dyno layout template set
 
+How to work with the `dyno` templates.
+
+<p data-height="268" data-theme-id="0" data-slug-hash="pjqZWM" data-default-tab="result" data-user="jeremyBass" data-preview="true" class='codepen'>See the Pen <a href='http://codepen.io/jeremyBass/pen/pjqZWM/'>pjqZWM</a> by Jeremy Bass (<a href='http://codepen.io/jeremyBass'>@jeremyBass</a>) on <a href='http://codepen.io'>CodePen</a>.</p> <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+
 **Note:** More to come. Thank you for reading.
 	
 {% endmarkdown %}
