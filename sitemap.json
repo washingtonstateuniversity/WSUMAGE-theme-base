@@ -23,6 +23,11 @@
 			"nav_title":"Installing",
 			"vars":{
 				"showstuff":true
+			},
+			"child_nav":{
+				"#installation-with-gitploy":"Gitploy install",
+				"#setting-the-package":"Activate the Package",
+				"#setting-a-child-theme":"Set child theme"
 			}
 		},
 		"design":{
@@ -46,7 +51,8 @@
 			},
 			"child_nav":{
 				"#spine-responsive-layout-options":"Responsive layout",
-				"#spine-layout-options":"Spine layout options"
+				"#spine-layout-options":"Spine layout options",
+				"#dyno-layout-template-set":"Dynamic Layouts"
 			}
 		}
 	}
