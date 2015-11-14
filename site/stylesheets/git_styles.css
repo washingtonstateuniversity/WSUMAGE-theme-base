@@ -68,14 +68,20 @@ body table td, body table th {
     -moz-transform: scale(1.5);
     -o-transform: scale(1.5);
     transform: scale(1.5);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
 	-webkit-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
 	cursor:zoom-out;
 	position:absolute;
-	left:20%;
+    height: auto;
+    border: 1px solid #494949;
+    background: #fff;
 }
-.transition:before {
+.transition:not(.closed):before {
 	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: inherit;
@@ -97,6 +103,6 @@ body table td, body table th {
 	text-align:center;
 	cursor:pointer;
 }
-.transition:before:hover{
+.transition:not(.closed):before:hover{
 	background:#903737;
 }

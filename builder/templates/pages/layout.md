@@ -17,31 +17,31 @@ To get started, travel to the package field in the settings area of the admin
 	<tbody>
 		<tr>
 			<td>Responsive Layout</td>
-			<td>Should the responsive layout be used</td>
+			<td>Should the responsive layout be used <br/>[See Spine Docs](https://github.com/washingtonstateuniversity/WSU-spine/wiki/II.2.-Page:-Size,-Layouts,-and-Grids#size)</td>
 			<td><code>Enable</code><code>Disable</code></td>
 			<td>[STORE VIEW]</td>
 		</tr>
 		<tr>
 			<td>Maximum Page Width </td>
-			<td></td>
+			<td><br/>[See Spine Docs](https://github.com/washingtonstateuniversity/WSU-spine/wiki/II.2.-Page:-Size,-Layouts,-and-Grids#size)</td>
 			<td><code>990 px</code><code>1188 px</code><code>1386 px</code><code>1584 px</code><code>1782 px</code><code>1980 px</code><code>Custom width</code></td>
 			<td>[STORE VIEW]</td>
 		</tr>
 		<tr>
 			<td>Maximum Page Width Custom</td>
-			<td>Enter in a width to be used.  Must be in the format of number unit</td>
+			<td>Enter in a width to be used.  ***Must be in the format of number unit*** <br/>[See Spine Docs](https://github.com/washingtonstateuniversity/WSU-spine/wiki/II.2.-Page:-Size,-Layouts,-and-Grids#size)</td>
 			<td><em>USER INPUT</em></td>
 			<td>[STORE VIEW]</td>
 		</tr>
 		<tr>
 			<td>Show Breadcrumbs</td>
-			<td>Hide the breadcrumbs</td>
+			<td>Hide the breadcrumbs which provide links to parent pages.</td>
 			<td><code>Yes</code><code>No</code></td>
 			<td>[STORE VIEW]</td>
 		</tr>
 		<tr>
 			<td>Fluid Width </td>
-			<td>Set what layout type is used from the spine framework</td>
+			<td>Set what layout type is used from the spine framework <br/>[See Spine Docs](https://github.com/washingtonstateuniversity/WSU-spine/wiki/II.3.-Page:-Responsive#responsive-behavior)</td>
 			<td><code>Fluid</code><code>Fixed</code><code>Hybrid</code></td>
 			<td>[STORE VIEW]</td>
 		</tr>
