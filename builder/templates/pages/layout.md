@@ -65,7 +65,7 @@ To get started, travel to the package field in the settings area of the admin
 	<tbody>
 		<tr>
 			<td>Spine version number</td>
-			<td>Important, if you change this you may not get the latest updates.  To use the dev version just set to <code>develop</code></td>
+			<td>Important, if you change this you may not get the latest updates.  To use the dev version just set to <code>develop</code> [See Sine Docs](https://github.com/washingtonstateuniversity/WSU-spine#wsu-spine-repository)</td>
 			<td><em>USER INPUT</em></td>
 			<td>[STORE VIEW]</td>
 		</tr>

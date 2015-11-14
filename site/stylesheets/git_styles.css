@@ -1,3 +1,5 @@
+
+
 .markdown-body .highlight pre, .markdown-body pre {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
@@ -45,6 +47,64 @@ body table td, body table th {
     border: 1px solid #888888;
     padding: 5px 10px;
 }
+h2[id^="repo"][id*="github"] a{
+	position:relative;
+}
+h2[id^="repo"][id*="github"] a:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);	
+	color:#494941;
+	text-shadow:0px 0px 7px rgba(0,0,0,0.2);
+	top:0px;
+	right:-1em;
+	font-size: 1.5em;
+	line-height:1em;
+	content:"\f09b";
+	position:absolute;
+}
+/* anchor linking to match github */
+.anchorlink{
+	cursor:pointer;
+}
+.anchorlink:before{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);	
+	color:#494941;
+	text-shadow:0px 0px 7px rgba(0,0,0,0.2);
+	top:calc( 1em * 50% );
+	left:-1em;
+	font-size: 1em;
+	line-height:1em;
+	content:"\f0c1";
+	position:absolute;
+	-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+	transition: all .5s ease-in-out;
+	opacity:0;
+	z-index:9999999;
+}
+.anchorlink:hover:before{
+	color:#1456A4;
+	-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+	transition: all .5s ease-in-out;
+	opacity:1;
+}
+
 
 /* light zoom */
  .img_zoom{
@@ -53,11 +113,17 @@ body table td, body table th {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 
 	z-index:999999;
 	display:block;
 	position:relative;
 	cursor:zoom-in;
+}
+.img_zoom:not(.transition):hover{
+	-webkit-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.25);
 }
 .img_zoom img{
 	width:100% !important;	
@@ -67,11 +133,15 @@ body table td, body table th {
     -webkit-transform: scale(1.5); 
     -moz-transform: scale(1.5);
     -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
     transform: scale(1.5);
+	
     -webkit-transition: all .1s ease-in-out;
     -moz-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     -ms-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	
 	-webkit-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
@@ -106,3 +176,4 @@ body table td, body table th {
 .transition:not(.closed):before:hover{
 	background:#903737;
 }
+
