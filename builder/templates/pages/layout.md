@@ -128,7 +128,7 @@ To get started, travel to the package field in the settings area of the admin
 
 How to work with the `dyno` templates.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="pjqZWM" data-default-tab="result" data-user="jeremyBass" class='codepen'>See the Pen <a href='http://codepen.io/jeremyBass/pen/pjqZWM/'>pjqZWM</a> by Jeremy Bass (<a href='http://codepen.io/jeremyBass'>@jeremyBass</a>) on <a href='http://codepen.io'>CodePen</a>.</p> <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="377" data-theme-id="0" data-slug-hash="pjqZWM" data-default-tab="result" data-user="jeremyBass" class='codepen'>See the Pen <a href='http://codepen.io/jeremyBass/pen/pjqZWM/'>pjqZWM</a> by Jeremy Bass (<a href='http://codepen.io/jeremyBass'>@jeremyBass</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 

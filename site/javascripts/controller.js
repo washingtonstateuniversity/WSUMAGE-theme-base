@@ -6,7 +6,7 @@
 		clearTimeout(window.timeout);
 		window.timeout = setTimeout(function() {
 			
-			if( (!target.is('.closed') || !target.is('.transition')) && target.is(':hover') ){
+			if( (!target.is('.closed') || !target.is('.transition')) ){
 				clearTimeout(window.timeout);
 				target.addClass('transition');
 			}
