@@ -1,4 +1,7 @@
-
+body{
+    font-family: "Open Sans","Lucida Sans";
+    font-size: 1em;
+}
 
 .markdown-body .highlight pre, .markdown-body pre {
     background-color: #f8f8f8;
