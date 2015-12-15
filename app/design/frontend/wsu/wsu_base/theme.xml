@@ -1,11 +1,7 @@
-<?xml version="1.0"?>
-<theme>
-    <parent>rwd/default</parent>
-    <layout>
-        <updates>
-            <wsu_base>
-                <file>wsu_base_defaults.xml</file>
-            </wsu_base>
-        </updates>
-    </layout>
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+	<title>WSU base theme</title>
+	<parent>Magento/blank</parent>
+	<media>
+		<preview_image>media/preview.jpg</preview_image>
+	</media>
 </theme>
