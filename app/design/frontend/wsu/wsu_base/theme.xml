@@ -2,6 +2,6 @@
 	<title>WSU base theme</title>
 	<parent>Magento/blank</parent>
 	<media>
-		<preview_image>media/preview.jpg</preview_image>
+		<preview_image>media/preview.png</preview_image>
 	</media>
 </theme>
