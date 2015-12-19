@@ -6,9 +6,9 @@
 		<css src="https://repo.wsu.edu/spine/1/spine.min.css?2015-16-12" src_type="url" />
 		<css src="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" src_type="url" />
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" src_type="url" />
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" src_type="url" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" src_type="url" />
-		<script src="https://repo.wsu.edu/spine/1/spine.min.js?2015-16-12" src_type="url" />
+		<script src="https://repo.wsu.edu/spine/1/spine.min.js?2015-16-12" src_type="url" />-->
 		
 		<link type="text/plain" rel="author" src="https://repo.wsu.edu/spine/1/authors.txt" />
 		<link type="text/html" rel="help" src="https://brand.wsu.edu" />
