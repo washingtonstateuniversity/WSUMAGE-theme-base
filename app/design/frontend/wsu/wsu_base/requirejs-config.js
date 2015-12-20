@@ -16,8 +16,9 @@ var config = {
 		}
 	},
 	"shim": {
-        "spine" : ["jquery"]
-    },deps: [
+		"spine" : ["jquery","jquery/ui"],
+		"datatables" : ["jquery","jquery/ui"]
+	},deps: [
 		"spine",
 		"datatables"
 	]
