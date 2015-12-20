@@ -9,9 +9,9 @@
 	<update handle="empty"/>
 	<referenceContainer name="root">
 		<container name="jacket" htmlTag="div" htmlId="jacket" >
-			<container name="binder" htmlTag="div" htmlId="binder" >
+			<container name="binder" htmlTag="div" htmlId="binder" htmlClass="fluid max-1980">
 				<container name="spine.main" htmlTag="main" htmlId="page"/>
-				<container name="spine.spine" htmlTag="div" htmlId="spine" htmlClass="spine-column" after="spine.main">
+				<container name="spine.spine" htmlTag="div" htmlId="spine" htmlClass="spine-column lightly" after="spine.main">
 					<container name="spine.spine.glue" htmlTag="div" htmlId="glue" htmlClass="spine-glue" />
 				</container>
 			</container>
