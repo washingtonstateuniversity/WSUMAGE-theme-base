@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Wsu_Themecontrol" setup_version="2.0.1">
+        <!-- // not 100 yet if there is a good place this has to start or if opened up is ok
+		<sequence>
+            <module name="Magento_Catalog"/>
+        </sequence>
+		-->
+    </module>
+</config>
