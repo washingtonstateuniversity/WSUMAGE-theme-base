@@ -4,9 +4,6 @@
 		<tab id="wsu_themecontrol" translate="label comment" sortOrder="10">
 			<label>WSU Theme Control</label>
 		</tab>
-		<tab id="general" translate="label comment" sortOrder="10">
-			<label>General</label>
-		</tab>
 		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 		<!-- general  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
