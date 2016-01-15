@@ -3,8 +3,8 @@
     <module name="Wsu_Themecontrol" setup_version="2.0.1">
         <!-- // not 100 yet if there is a good place this has to start or if opened up is ok
 		<sequence>
-            <module name="Magento_Catalog"/>
+            <module name="Magento_Config"/>
         </sequence>
-		-->
+		 -->
     </module>
 </config>

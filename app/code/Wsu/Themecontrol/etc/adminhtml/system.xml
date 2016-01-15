@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="wsu_themecontrol" translate="label comment" sortOrder="10">
+			<label>WSU Theme Control</label>
+		</tab>
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!-- general  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<section id="general" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+			<tab>general</tab>
+			<group id="store_information" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Store Information (expanded)</label>
+				<field id="_header" translate="label comment" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Basic fields</label>
+					<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+					<comment>default stuff</comment> 
+				</field>
+				<field id="instructions" translate="label comment" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Schema fields</label>
+					<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+					<comment>
+					<![CDATA[Use the contact address for what will show on invoices, use the rest on what will be shown on the store.  The store information is based on the <a href="http://schema.org/Organization" target="_blank">`Organizational` section of the schema.org site</a>]]>
+					</comment> 
+				</field>
+				
+				<field id="department" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Department</label>
+					<comment>
+						<![CDATA[This is the location as in `University Unit X` ]]>
+					</comment>
+				</field>
+
+			</group>
+		</section>
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!-- wsu_themecontrol  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<section id="wsu_themecontrol" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Theme Settings</label>
+			<tab>wsu_themecontrol</tab>
+			<resource>Wsu_Themecontrol::wsu_themecontrol</resource>
+			<hint sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<frontend_model>Wsu\Themecontrol\Adminhtml\System\Config\Fieldset\Hint</frontend_model>
+			</hint>
+			<!-- wsu_themecontrol/spine_social  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<group id="spine_social" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Spine Social Media Options</label>
+				<comment>
+					<![CDATA[ <div style="width:180px; text-align:right;">Slot |</div> <br/><hr/> ]]>
+				</comment>
+				
+			</group>
+			<!-- wsu_themecontrol/header  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<group id="header" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Header</label>
+				<field id="heading_search" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Search</label>
+					<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+				</field>
+				
+				<field id="checkout_hide_empty" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Hide checkout link when cart is empty</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				
+			</group>
+		</section>
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!-- wsu_themecontrol_design  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<section id="wsu_themecontrol_design" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Theme Design</label>
+			<tab>wsu_themecontrol</tab>
+			<resource>Wsu_Themecontrol::wsu_themecontrol_design</resource>
+			<!-- wsu_themecontrol_design/spine  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<group id="spine" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Spine Options</label>
+				<field id="spine_bleed" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Should the spine area bleed left?</label>
+					<comment>If disabled, block "Compare" will be displayed in Magento's default position (left sidebar).</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<!-- wsu_themecontrol_design/colors  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<group id="colors" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Colors</label>
+				<field id="heading_basic_colors" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Basic Colors</label>
+					<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+				</field>
+			</group>
+		</section>
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!-- wsu_themecontrol_layout  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<section id="wsu_themecontrol_layout" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Theme Layout</label>
+			<tab>wsu_themecontrol</tab>
+			<resource>Wsu_Themecontrol::wsu_themecontrol_layout</resource>
+			<!-- wsu_themecontrol_layout/responsive  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<group id="responsive" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Responsive Layout</label>
+				<field id="responsive" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Responsive Layout</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				
+			</group>
+		</section>
+
+	</system>
+</config>

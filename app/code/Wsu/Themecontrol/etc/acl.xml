@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+						
+						
+						
+                            <!-- this resource id we can use in system.xml for section -->
+                            <resource id="Wsu_Themecontrol::wsu_themecontrol" title="Theme Admin" sortOrder="80" />
+							<resource id="Wsu_Themecontrol::wsu_themecontrol_design" title="Theme Design" sortOrder="80" />
+							<resource id="Wsu_Themecontrol::wsu_themecontrol_layout" title="Theme Layout" sortOrder="80" />
+							<resource id="Wsu_Themecontrol::wsu_themecontrol_override" title="CSS Override" sortOrder="80" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
