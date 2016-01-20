@@ -1,10 +1,14 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Layout_Padding_Flanks{
-    public function toOptionArray(){
+
+namespace Wsu\Themecontrol\Model\System\Config\Source;
+ 
+class Layout_Padding_Flanks implements \Magento\Framework\Option\ArrayInterface
+{
+	public function toOptionArray(){
 		return array(
-			array('value' => '',			'label' => Mage::helper('wsu_themecontrol')->__('Normal')),
-			array('value' => 'narrow',		'label' => Mage::helper('wsu_themecontrol')->__('Narrow')),
-			array('value' => 'wide',		'label' => Mage::helper('wsu_themecontrol')->__('Wide')),
-        );
-    }
+			array('value' => '',			'label' => __('Normal')), //Mage::helper('wsu_themecontrol')->
+			array('value' => 'narrow',		'label' => __('Narrow')),
+			array('value' => 'wide',		'label' => __('Wide')),
+		);
+	}
 }

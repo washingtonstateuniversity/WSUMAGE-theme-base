@@ -1,10 +1,14 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Layout_Padding_Type{
-    public function toOptionArray(){
+
+namespace Wsu\Themecontrol\Model\System\Config\Source;
+
+class Layout_Padding_Type implements \Magento\Framework\Option\ArrayInterface
+{
+	public function toOptionArray(){
 		return array(
-			array('value' => '',			'label' => Mage::helper('wsu_themecontrol')->__('none')),
-			array('value' => 'pad',			'label' => Mage::helper('wsu_themecontrol')->__('Pad (it\'s child `.column`s)')),
-			array('value' => 'padded',		'label' => Mage::helper('wsu_themecontrol')->__('Padded (itself)')),
-        );
-    }
+			array('value' => '',			'label' => __('none')), //Mage::helper('wsu_themecontrol')->
+			array('value' => 'pad',			'label' => __('Pad (it\'s child `.column`s)')),
+			array('value' => 'padded',		'label' => __('Padded (itself)')),
+		);
+	}
 }
