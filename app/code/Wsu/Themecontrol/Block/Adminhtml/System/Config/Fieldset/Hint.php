@@ -1,11 +1,11 @@
 <?php
-
-class Wsu_Themecontrol_Block_Adminhtml_System_Config_Fieldset_Hint
-    extends Mage_Adminhtml_Block_Abstract
-    implements Varien_Data_Form_Element_Renderer_Interface {
+	
+namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Fieldset;
+class Hint extends \Magento\Config\Block\System\Config\Form\Field
+{
     protected $_template = 'wsu/themecontrol/system/config/fieldset/hint.phtml';
 
-    public function render(Varien_Data_Form_Element_Abstract $element)
+    public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
         return $this->toHtml();
     }

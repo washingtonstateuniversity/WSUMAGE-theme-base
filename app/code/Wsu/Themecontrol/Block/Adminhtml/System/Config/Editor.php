@@ -1,7 +1,9 @@
 <?php
+
 namespace Wsu\Themecontrol\Block\Adminhtml\System\Config;
-class Editor extends \Magento\Config\Block\System\Config\Form\Field{
-    protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement  $element){
+class Editor extends \Magento\Config\Block\System\Config\Form\Field
+{
+    protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element){
        // $element->setWysiwyg(true);
        // $element->setConfig(Mage::getSingleton('cms/wysiwyg_config')->getConfig());
 	   
