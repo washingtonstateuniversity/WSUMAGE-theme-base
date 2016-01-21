@@ -442,7 +442,7 @@
 					<!-- <comment>
 						<![CDATA[To replace Up-sell Products first enable static block with ID <strong>block_product_replace_upsell</strong>]]>
 					</comment> -->
-					<source_model>wsu_wsu/system_config_source_layout_element_replacewithblock</source_model>
+					<source_model>Wsu\Wsu\Model\System\Config\Source\Layout\Element\Replacewithblock</source_model>
 				</field>
 				<field id="heading_related" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Related Products</label>
@@ -453,7 +453,7 @@
 					<!-- <comment>
 						<![CDATA[To replace Related Products first enable static block with ID <strong>block_product_replace_related</strong>]]>
 					</comment> -->
-					<source_model>wsu_wsu/system_config_source_layout_element_replacewithblock</source_model>
+					<source_model>Wsu\Wsu\Model\System\Config\Source\Layout\Element\Replacewithblock</source_model>
 				</field>
 				<field id="related_template" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Related Products Layout</label>
@@ -1980,7 +1980,6 @@
 				</field>
 				<field id="padding_footer" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Set the padding</label>
-					
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Layout\Padding\Type</source_model>
 					<depends>
 						<field id="*/*/used_footer">1</field>
@@ -1988,7 +1987,6 @@
 				</field>
 				<field id="padding_flanks_footer" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Padding flank style</label>
-					
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Layout\Padding\Flanks</source_model>
 					<depends>
 						<field id="*/*/used_footer">1</field>
@@ -1996,7 +1994,6 @@
 				</field>
 				<field id="padding_ends_footer" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Padding end style</label>
-					
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Layout\Padding\Ends</source_model>
 					<depends>
 						<field id="*/*/used_footer">1</field>

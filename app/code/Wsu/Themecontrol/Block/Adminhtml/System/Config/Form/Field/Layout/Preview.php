@@ -10,7 +10,7 @@ class Preview extends \Magento\Config\Block\System\Config\Form\Field
     /**
      * Add texture preview
      *
-     * @param Varien_Data_Form_Element_Abstract $element
+     * @param \Magento\Framework\Data\Form\Element\AbstractElement $element
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {

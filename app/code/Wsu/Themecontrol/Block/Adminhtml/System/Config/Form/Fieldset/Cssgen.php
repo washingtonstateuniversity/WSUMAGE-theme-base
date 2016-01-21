@@ -3,10 +3,10 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Fieldset_Cssgen extend
     /**
      * Generate CSS
      *
-     * @param Varien_Data_Form_Element_Abstract $element
+     * @param \Magento\Framework\Data\Form\Element\AbstractElement $element
      * @return String
      */
-    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
+    protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
         $elementOriginalData = $element->getOriginalData();
         if (isset($elementOriginalData['process'])) {
             $name = $elementOriginalData['process'];
