@@ -1,9 +1,7 @@
 <?php
 namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
-
-class Tex extends Mage_Adminhtml_Block_System_Config_Form_Field 
+class Tex extends \Magento\Config\Block\System\Config\Form\Field
 {
 	
     /**
@@ -13,7 +11,8 @@ class Tex extends Mage_Adminhtml_Block_System_Config_Form_Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-        $html        = $element->getElementHtml(); //Default HTML
+		die('Tex');
+        $html        = $this->toHtml(); //Default HTML
         $jsPath      = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         //$texPath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/wsu/wsu_themecontrol/patterns/default/';
         $texPath     = Mage::helper('wsu_themecontrol')->getPatternsUrl();

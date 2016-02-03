@@ -1,9 +1,7 @@
 <?php
 namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
-
-class Color extends Mage_Adminhtml_Block_System_Config_Form_Field 
+class Color extends \Magento\Config\Block\System\Config\Form\Field
 {
 
     /**
@@ -13,8 +11,8 @@ class Color extends Mage_Adminhtml_Block_System_Config_Form_Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-        $html   = $element->getElementHtml(); //Default HTML
-        $jsPath = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
+        $html   = $this->toHtml(); //Default HTML
+        /*$jsPath = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         $mcPath = $this->getJsUrl('wsu/jquery/plugins/mcolorpicker/');
         if (Mage::registry('jqueryLoaded') == false) {
             $html .= '
@@ -41,7 +39,7 @@ class Color extends Mage_Adminhtml_Block_System_Config_Form_Field
 					$("#' . $element->getHtmlId() . '").attr("data-hex", true).width("250px").mColorPicker();
 				});
 			</script>
-        ';
+        ';*/
         return $html;
     }
 }

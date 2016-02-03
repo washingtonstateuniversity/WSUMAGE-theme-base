@@ -1,10 +1,7 @@
 <?php
 
 namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
-
-use Magento\Framework\App\Config\ScopeConfigInterface;
-
-class Color extends Mage_Adminhtml_Block_System_Config_Form_Field 
+class Color extends \Magento\Config\Block\System\Config\Form\Field
 {
     /**
      * Add color picker
@@ -13,7 +10,7 @@ class Color extends Mage_Adminhtml_Block_System_Config_Form_Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-        $html = $element->getElementHtml(); //Default HTML
+        $html = $this->toHtml(); //Default HTML
         if (Mage::registry('colorPickerFirstUse') == false) {
             $html .= '
 			<script type="text/javascript" src="' . $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js') . '"></script>

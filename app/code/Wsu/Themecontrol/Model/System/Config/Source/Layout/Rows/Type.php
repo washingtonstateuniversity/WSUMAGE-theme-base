@@ -1,10 +1,10 @@
 <?php
 
-namespace Wsu\Themecontrol\Model\System\Config\Source;
+namespace Wsu\Themecontrol\Model\System\Config\Source\Layout\Rows;
 
-class Layout_Rows_Type implements \Magento\Framework\Option\ArrayInterface
+class Type implements \Magento\Framework\Option\ArrayInterface
 {
-    public function toOptionArray(){
+    public function toOptionArray(){die('Rows Type');
 		//'single','halves','thirds','side-left', 'side-right', 'margin-left','margin-right','triptych','quarters','eighths'
 		return array(
 			array('value' => 'single',			'label' => __('single')), //Mage::helper('wsu_themecontrol')->

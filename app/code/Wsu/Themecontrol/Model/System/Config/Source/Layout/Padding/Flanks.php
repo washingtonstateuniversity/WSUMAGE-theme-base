@@ -1,10 +1,10 @@
 <?php
 
-namespace Wsu\Themecontrol\Model\System\Config\Source;
+namespace Wsu\Themecontrol\Model\System\Config\Source\Layout\Padding;
  
-class Layout_Padding_Flanks implements \Magento\Framework\Option\ArrayInterface
+class Flanks implements \Magento\Framework\Option\ArrayInterface
 {
-	public function toOptionArray(){
+	public function toOptionArray(){die('Flanks');
 		return array(
 			array('value' => '',			'label' => __('Normal')), //Mage::helper('wsu_themecontrol')->
 			array('value' => 'narrow',		'label' => __('Narrow')),

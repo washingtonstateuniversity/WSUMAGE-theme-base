@@ -1,12 +1,13 @@
 <?php
 	
 namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Fieldset;
-class Hint extends \Magento\Config\Block\System\Config\Form\Field
+class Hint extends \Magento\Backend\Block\Template implements \Magento\Framework\Data\Form\Element\Renderer\RendererInterface
 {
-    protected $_template = 'wsu/themecontrol/system/config/fieldset/hint.phtml';
+    protected $_template = 'Wsu_Themecontrol::system/config/fieldset/hint.phtml';
 
     public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
+		die('hint');
         return $this->toHtml();
     }
 }

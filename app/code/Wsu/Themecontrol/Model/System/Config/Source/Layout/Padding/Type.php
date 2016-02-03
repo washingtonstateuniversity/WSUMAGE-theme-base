@@ -1,10 +1,10 @@
 <?php
 
-namespace Wsu\Themecontrol\Model\System\Config\Source;
+namespace Wsu\Themecontrol\Model\System\Config\Source\Layout\Padding;
 
-class Layout_Padding_Type implements \Magento\Framework\Option\ArrayInterface
+class Type implements \Magento\Framework\Option\ArrayInterface
 {
-	public function toOptionArray(){
+	public function toOptionArray(){die('Type');
 		return array(
 			array('value' => '',			'label' => __('none')), //Mage::helper('wsu_themecontrol')->
 			array('value' => 'pad',			'label' => __('Pad (it\'s child `.column`s)')),
