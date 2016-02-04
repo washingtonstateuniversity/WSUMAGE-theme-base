@@ -1,6 +1,6 @@
 <?php
 
-namespace Wsu\Themecontrol\Block\System\Config\Form\Field\Layout;
+namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Layout;
 
 //use Magento\Framework\App\Config\ScopeConfigInterface;
 

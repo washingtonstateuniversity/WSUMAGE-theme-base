@@ -1,7 +1,7 @@
 <?php
 
-namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
-class Color extends \Magento\Config\Block\System\Config\Form\Field
+namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field;
+class Minicolors extends \Magento\Config\Block\System\Config\Form\Field
 {
     /**
      * Add color picker

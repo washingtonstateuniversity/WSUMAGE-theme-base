@@ -1,5 +1,5 @@
 <?php
-namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
+namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field;
 
 class Color extends \Magento\Config\Block\System\Config\Form\Field
 {
@@ -12,7 +12,7 @@ class Color extends \Magento\Config\Block\System\Config\Form\Field
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
 		
-        $html   = $this->toHtml(); //Default HTML
+        $html   = ""; //Default HTML
         /*$jsPath = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         $mcPath = $this->getJsUrl('wsu/jquery/plugins/mcolorpicker/');
         if (Mage::registry('jqueryLoaded') == false) {
@@ -41,6 +41,6 @@ class Color extends \Magento\Config\Block\System\Config\Form\Field
 				});
 			</script>
         ';*/
-        return $html;
+        return parent::_getElementHtml($element) . $html;
     }
 }

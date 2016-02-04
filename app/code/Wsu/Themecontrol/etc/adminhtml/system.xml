@@ -943,7 +943,7 @@
 				</field>
 				<field id="bg_positiony" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (y-axis)</label>
-					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positony</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positiony</source_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>
@@ -1014,7 +1014,7 @@
 				</field>
 				<field id="bg_positiony" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (y-axis)</label>
-					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positony</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positiony</source_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>

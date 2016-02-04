@@ -1,13 +1,15 @@
 <?php
+namespace Wsu\Themecontrol\Model\System\Config\Source;
 
-class Wsu_Themecontrol_Model_System_Config_Source_Navshadow
+class Navshadow implements \Magento\Framework\Option\ArrayInterface
 {
+
     public function toOptionArray()
     {
         return array(
-            array('value' => '',                     'label' => Mage::helper('wsu_themecontrol')->__('None')),
-			array('value' => 'inner-container',      'label' => Mage::helper('wsu_themecontrol')->__('Inner container')),
-			array('value' => 'bar',                  'label' => Mage::helper('wsu_themecontrol')->__('Menu items')),
+            array('value' => '',                     'label' => __('None')), //Mage::helper('wsu_themecontrol')->
+			array('value' => 'inner-container',      'label' => __('Inner container')),
+			array('value' => 'bar',                  'label' => __('Menu items')),
         );
     }
 }

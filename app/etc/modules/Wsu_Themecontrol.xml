@@ -15,7 +15,6 @@
 			<depends>
 				<Mage_Page />
 				<Wsu_Storeutilities/>
-				<Wsu_Wsu/>
 			</depends>
         </Wsu_Themecontrol>
     </modules>

@@ -4,7 +4,7 @@
  *
  */
  
- namespace Wsu\Themecontrol\Block\System\Config\Form\Field;
+ namespace Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field;
 
 class Heading extends \Magento\Config\Block\System\Config\Form\Field
 {
