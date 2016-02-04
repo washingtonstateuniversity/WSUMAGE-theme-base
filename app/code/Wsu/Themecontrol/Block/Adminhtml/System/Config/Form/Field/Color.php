@@ -11,6 +11,7 @@ class Color extends \Magento\Config\Block\System\Config\Form\Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
+		
         $html   = $this->toHtml(); //Default HTML
         /*$jsPath = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         $mcPath = $this->getJsUrl('wsu/jquery/plugins/mcolorpicker/');

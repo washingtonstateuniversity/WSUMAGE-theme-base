@@ -1,9 +1,12 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Attachment {
+namespace Wsu\Themecontrol\Model\System\Config\Source\Css\Background;
+
+class Attachment implements \Magento\Framework\Option\ArrayInterface
+{
     public function toOptionArray() {
         return array(
-            array( 'value' => 'fixed', 'label' => Mage::helper('wsu_themecontrol')->__('fixed') ),
-            array( 'value' => 'scroll', 'label' => Mage::helper('wsu_themecontrol')->__('scroll') )
+            array( 'value' => 'fixed', 'label' => __('fixed') ),//Mage::helper('wsu_themecontrol')->
+            array( 'value' => 'scroll', 'label' => __('scroll') )
         );
     }
 }

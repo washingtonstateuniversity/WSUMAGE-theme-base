@@ -609,13 +609,13 @@
 				<label>Spine Options</label>
 				<field id="spine_color" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1"><!-- we need to abstrack this more for real OS -->
 					<label>Spine colors</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Color\Wsubrand</source_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Color\Wsubrand</source_model>
 				</field>
 				<field id="spine_tool_bar_color" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1"><!-- we need to abstrack this more for real OS -->
 					<label>Spine tool bar colors</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Color\Wsubrand</source_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Color\Wsubrand</source_model>
 				</field>
 				<field id="spine_bleed" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Should the spine area bleed left?</label>
@@ -632,18 +632,18 @@
 				</field>
 				<field id="color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_buttons" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Buttons</label>
@@ -651,71 +651,71 @@
 				</field>
 				<field id="button_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Hover Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
 
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_active_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Active Background Color</label>
 					<!-- <comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_active_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Active Text Color</label>
 					<!-- <comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_tool_icons" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Interface Icons</label>
 					<!-- <comment>Selected interface icons, e.g.: slider arrows, category view toolbar icons.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
 				</field>
 				<field id="tool_icon_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_active_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Active Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_active_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Active Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_custom_icons" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Custom Icons</label>
@@ -723,43 +723,43 @@
 				</field>
 				<field id="icon_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="social_icon_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Social Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="social_icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Social Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="social_icon_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Social Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="social_icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Social Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_special_links" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Horizontal Links</label>
@@ -767,13 +767,13 @@
 				</field>
 				<field id="important_link_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="important_link_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_labels" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Product Labels</label>
@@ -781,23 +781,23 @@
 				</field>
 				<field id="label_new_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label "New" Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_new_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label "New" Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_sale_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label "Sale" Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_sale_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label "Sale" Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_misc" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Other</label>
@@ -805,14 +805,14 @@
 				</field>
 				<field id="price_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Price Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="additional_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Additional Background Color</label>
 					<!-- <comment>Background color used to emphasize some elements and blocks, e.g. totals on the cart page</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/font  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -821,7 +821,7 @@
 				<field id="font_size" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Basic Font Size</label>
 					<!-- <comment>Size of the regular text. Font size of most of the other elements will be calculated relative to this value.</comment> -->
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Font\Size\Basic</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Size\Basic</source_model>
 				</field>
 				<field id="heading_heading_font" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Heading Font</label>
@@ -830,7 +830,7 @@
 				<field id="primary_font_family_group" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Headings Font Family</label>
 					<!-- <comment>Select predefined font stack, Google Fonts or type in your custom font stack.</comment> -->
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Font\Family\Groupcustomgoogle</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Family\Groupcustomgoogle</source_model>
 				</field>
 				<field id="primary_font_family_custom" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Custom</label>
@@ -848,7 +848,7 @@
 					<!-- <comment>
 						<![CDATA[Font preview is available on <a href="http://www.google.com/webfonts">Google Web Fonts</a>]]>
 					</comment> -->
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Font\Family\Google</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Family\Google</source_model>
 					<depends>
 						<field id="*/*/primary_font_family_group">google</field>
 					</depends>
@@ -858,7 +858,7 @@
 					<!-- <comment>
 						<![CDATA[Some of the fonts support multiple scripts (like Latin and Cyrillic for example). You need to select at least one character set.<br/><strong style="color:red;">Important</strong>: not all fonts support extended character sets. For a complete list of available fonts and font subsets refer to <a href="http://www.google.com/webfonts">Google Web Fonts</a>.<br/><strong style="color:red;">Important</strong>: using multiple character sets affects performance, so only select the character sets that you actually need.]]>
 					</comment> -->
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Font\Google\Subset</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Google\Subset</source_model>
 					<depends>
 						<field id="*/*/primary_font_family_group">google</field>
 					</depends>
@@ -910,14 +910,14 @@
 					<!-- <comment>
 						<![CDATA[Background color of the web browser viewport (applied for HTML <code>body</code> element). Set the same color as for footer background to avoid blank space below the footer on large screens.]]>
 					</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Page Background Color</label>
 					<!-- <comment>Background color applied for all sections of the page: header, main content area and footer</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="bg_image" translate="label comment" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Image</label>
@@ -931,23 +931,23 @@
 				</field>
 				<field id="bg_repeat" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Repeat</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Repeat</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Repeat</source_model>
 				</field>
 				<field id="bg_attachment" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Attachment</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Attachment</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Attachment</source_model>
 				</field>
 				<field id="bg_positionx" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (x-axis)</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Backggrround\Positionx</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positionx</source_model>
 				</field>
 				<field id="bg_positiony" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (y-axis)</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Positony</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positony</source_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 				</field>
 				<field id="heading_inner" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -967,23 +967,23 @@
 				<label>Header</label>
 				<field id="top_border_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Top Border Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_gap" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Outer Container</label>
@@ -991,8 +991,8 @@
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="bg_image" translate="label" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Image</label>
@@ -1002,29 +1002,29 @@
 				</field>
 				<field id="bg_repeat" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Repeat</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Repeat</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Repeat</source_model>
 				</field>
 				<field id="bg_attachment" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Attachment</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Attachment</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Attachment</source_model>
 				</field>
 				<field id="bg_positionx" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (x-axis)</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Backggrround\Positionx</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positionx</source_model>
 				</field>
 				<field id="bg_positiony" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Position (y-axis)</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Css\Background\Positony</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Css\Background\Positony</source_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 					<!--<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>-->
 				</field>
 				<field id="tex2" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Second Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 					<!--<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>-->
 				</field>
@@ -1044,8 +1044,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_search" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Search box</label>
@@ -1053,33 +1053,33 @@
 				</field>
 				<field id="search_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="search_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="search_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Search Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="search_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Search Hover Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="search_border_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Search Border Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="search_border_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Search Border Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_dropdown" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down boxes</label>
@@ -1087,63 +1087,63 @@
 				</field>
 				<field id="dropdown_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_link_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_link_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_mobile_header" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Mobile header</label>
 					<!-- <comment>Buttons (i.e. menu, search, account, cart) displayed in mobile header.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
 				</field>
 				<field id="mh_item_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_item_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_item_active_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Active Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_item_active_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Active Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_content_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Content Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_content_link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Content Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="mh_content_link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Content Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/header_top  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1151,18 +1151,18 @@
 				<label>Header - Top</label>
 				<field id="color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_outer" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Outer Container</label>
@@ -1170,8 +1170,8 @@
 				</field>
 				<field id="bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="padding_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Top Padding</label>
@@ -1189,8 +1189,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="content_padding_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Content Top Padding</label>
@@ -1258,8 +1258,8 @@
 				<label>Main Menu</label>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="stretched" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Stretched</label>
@@ -1289,33 +1289,33 @@
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Hover Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Hover Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="active_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Active Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="active_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Active Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_menuicons" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Icons: drop-down arrows, open/close icons in mobile menu</label>
@@ -1323,15 +1323,15 @@
 				</field>
 				<field id="mobile_opener_color" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Icon Color</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Icon\Color</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Icon\Color</source_model>
 				</field>
 				<field id="mobile_opener_hover_color" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Icon Color</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Icon\Color</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Icon\Color</source_model>
 				</field>
 				<field id="mobile_opener_current_color" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Active Icon Color</label>
-					<source_model>Wsu\Wsu\Model\System\Config\Source\Design\Icon\Color</source_model>
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Icon\Color</source_model>
 				</field>
 				<field id="heading_menumobile" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Mobile Menu</label>
@@ -1340,8 +1340,8 @@
 				<field id="mobile_link_separator_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Separator Color</label>
 					<!-- <comment>Vertical space between links in mobile version of the main menu. Leave empty to remove separator.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_dropdown" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down boxes</label>
@@ -1349,23 +1349,23 @@
 				</field>
 				<field id="dropdown_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_link_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="dropdown_link_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Drop-down Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_labels" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Category Labels</label>
@@ -1373,33 +1373,33 @@
 				</field>
 				<field id="label_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label-1 Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label-1 Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_bg_color2" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label-2 Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_color2" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label-2 Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="label_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Label Hover Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/main  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1413,12 +1413,12 @@
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 				</field>
 				<field id="padding_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -1437,8 +1437,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/category  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1451,13 +1451,13 @@
 				</field>
 				<field id="grid_item_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="grid_item_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/product_page  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1469,13 +1469,13 @@
 				</field>
 				<field id="addto_icon_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Add-to Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="addto_icon_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Add-to Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_tabs" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Tabs</label>
@@ -1483,49 +1483,49 @@
 				</field>
 				<field id="tab_inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_panel_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Panel Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_border_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Border Color</label>
 					<!-- <comment>Boder color will be also used in accordion.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_hover_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Hover Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Hover Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_active_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Active Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tab_active_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Active Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_accordion" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Accordion Tabs</label>
@@ -1533,23 +1533,23 @@
 				</field>
 				<field id="acco_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Accordion Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="acco_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Accordion Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="acco_active_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Accordion Active Item Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="acco_active_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Accordion Active Item Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/product_page  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1559,33 +1559,33 @@
 				<field id="heading_tool_icons" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Interface Icons</label>
 					<!-- <comment>Slider arrows and pagination.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Heading</frontend_model>
 				</field>
 				<field id="tool_icon_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_active_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Active Background Color</label>
 					<!-- <comment>Active pagination button. Note: not all styles of pagination use "active state" color.</comment> -->
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/footer  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1594,18 +1594,18 @@
 				<!-- <comment>In this tab, you can configure the entire footer of the page. Settings from this tab are inherited by all the other sub-sections of the footer. Some of the settings can be overridden in sub-sections.</comment> -->
 				<field id="color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_outer" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Outer Container</label>
@@ -1613,18 +1613,18 @@
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tex" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 					<!--<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>-->
 				</field>
 				<field id="tex2" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Second Pattern</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Tex</frontend_model>
 					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Design\Tex\Names</source_model>
 					<!--<tex_path>wysiwyg/wsu/themecontrol/_patterns/default/</tex_path>-->
 				</field>
@@ -1634,8 +1634,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_buttons" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Buttons</label>
@@ -1643,23 +1643,23 @@
 				</field>
 				<field id="button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="button_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Button Hover Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_tool_icons" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Interface Icons</label>
@@ -1667,23 +1667,23 @@
 				</field>
 				<field id="tool_icon_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="tool_icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_custom_icons" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Custom Icons</label>
@@ -1691,23 +1691,23 @@
 				</field>
 				<field id="icon_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_hover_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="icon_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Icon Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/footer_top  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1715,18 +1715,18 @@
 				<label>Footer - Top</label>
 				<field id="color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_outer" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Outer Container</label>
@@ -1734,8 +1734,8 @@
 				</field>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="padding_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Top Padding</label>
@@ -1753,8 +1753,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/footer_primary  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1762,18 +1762,18 @@
 				<label>Footer - Primary</label>
 				<field id="color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="heading_outer" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Outer Container</label>
@@ -1781,8 +1781,8 @@
 				</field>
 				<field id="bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="padding_top" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Top Padding</label>
@@ -1800,8 +1800,8 @@
 				</field>
 				<field id="inner_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 			<!-- wsu_themecontrol_design/footer_bottom  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -1809,28 +1809,28 @@
 				<label>Footer - Bottom</label>
 				<field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="inner_bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Inner Background Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Text Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 				<field id="link_hover_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Link Hover Color</label>
-					<frontend_model>Wsu\Wsu\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
-					<backend_model>Wsu\Wsu\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
+					<frontend_model>Wsu\Themecontrol\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+					<backend_model>Wsu\Themecontrol\Model\System\Config\Backend\Design\Color\Validatetransparent</backend_model>
 				</field>
 			</group>
 		</section>

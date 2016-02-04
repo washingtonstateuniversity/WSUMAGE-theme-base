@@ -1,22 +1,25 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Repeat {
+namespace Wsu\Themecontrol\Model\System\Config\Source\Css\Background;
+
+class Repeat implements \Magento\Framework\Option\ArrayInterface
+{
     public function toOptionArray() {
         return array(
             array(
                 'value' => 'no-repeat',
-                'label' => Mage::helper('wsu_themecontrol')->__('no-repeat')
+                'label' => __('no-repeat') //Mage::helper('wsu_themecontrol')->
             ),
             array(
                 'value' => 'repeat',
-                'label' => Mage::helper('wsu_themecontrol')->__('repeat')
+                'label' => __('repeat')
             ),
             array(
                 'value' => 'repeat-x',
-                'label' => Mage::helper('wsu_themecontrol')->__('repeat-x')
+                'label' => __('repeat-x')
             ),
             array(
                 'value' => 'repeat-y',
-                'label' => Mage::helper('wsu_themecontrol')->__('repeat-y')
+                'label' => __('repeat-y')
             )
         );
     }

@@ -11,7 +11,7 @@ class Tex extends \Magento\Config\Block\System\Config\Form\Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-		die('Tex');
+
         $html        = $this->toHtml(); //Default HTML
         $jsPath      = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         //$texPath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/wsu/wsu_themecontrol/patterns/default/';

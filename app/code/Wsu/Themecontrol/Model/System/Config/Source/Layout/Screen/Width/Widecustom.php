@@ -3,7 +3,7 @@ namespace Wsu\Themecontrol\Model\System\Config\Source\Layout\Screen\Width;
 
 class WideCustom implements \Magento\Framework\Option\ArrayInterface
 {
-    public function toOptionArray(){die('WideCustom');
+    public function toOptionArray(){
 		return array(
 			array('value' => 'default',		'label' => __('990 px')),//Mage::helper('wsu_themecontrol')->
 			array('value' => '1188',	'label' => __('1188 px')),

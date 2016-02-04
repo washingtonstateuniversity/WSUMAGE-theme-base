@@ -1,54 +1,58 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Design_Font_Family_Primary {
+namespace Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Family;
+
+class Primary implements \Magento\Framework\Option\ArrayInterface
+{
+
     public function toOptionArray() {
         return array(
             array(
                 'value' => 'Rokkitt',
-                'label' => Mage::helper('wsu_themecontrol')->__('Rokkitt')
+                'label' => __('Rokkitt') //Mage::helper('wsu_themecontrol')->
             ),
             array(
                 'value' => 'Bitter',
-                'label' => Mage::helper('wsu_themecontrol')->__('Bitter')
+                'label' => __('Bitter')
             ),
             array(
                 'value' => 'Arvo',
-                'label' => Mage::helper('wsu_themecontrol')->__('Arvo')
+                'label' => __('Arvo')
             ),
             array(
                 'value' => 'Lora',
-                'label' => Mage::helper('wsu_themecontrol')->__('Lora')
+                'label' => __('Lora')
             ),
             array(
                 'value' => 'Droid Serif',
-                'label' => Mage::helper('wsu_themecontrol')->__('Droid Serif')
+                'label' => __('Droid Serif')
             ),
             array(
                 'value' => 'Philosopher',
-                'label' => Mage::helper('wsu_themecontrol')->__('Philosopher')
+                'label' => __('Philosopher')
             ),
             array(
                 'value' => 'Open Sans',
-                'label' => Mage::helper('wsu_themecontrol')->__('Open Sans')
+                'label' => __('Open Sans')
             ),
             array(
                 'value' => 'Ubuntu',
-                'label' => Mage::helper('wsu_themecontrol')->__('Ubuntu')
+                'label' => __('Ubuntu')
             ),
             array(
                 'value' => 'Lato',
-                'label' => Mage::helper('wsu_themecontrol')->__('Lato')
+                'label' => __('Lato')
             ),
             array(
                 'value' => 'Droid Sans',
-                'label' => Mage::helper('wsu_themecontrol')->__('Droid Sans')
+                'label' => __('Droid Sans')
             ),
             array(
                 'value' => 'Play',
-                'label' => Mage::helper('wsu_themecontrol')->__('Play')
+                'label' => __('Play')
             ),
             array(
                 'value' => 'Oswald',
-                'label' => Mage::helper('wsu_themecontrol')->__('Oswald')
+                'label' => __('Oswald')
             )
         );
     }

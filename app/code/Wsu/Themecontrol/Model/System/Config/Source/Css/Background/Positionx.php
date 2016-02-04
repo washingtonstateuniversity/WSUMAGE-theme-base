@@ -1,18 +1,21 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Positionx {
+namespace Wsu\Themecontrol\Model\System\Config\Source\Css\Background;
+
+class Positionx implements \Magento\Framework\Option\ArrayInterface
+{
     public function toOptionArray() {
         return array(
             array(
                 'value' => 'left',
-                'label' => Mage::helper('wsu_themecontrol')->__('left')
+                'label' => __('left') //Mage::helper('wsu_themecontrol')->
             ),
             array(
                 'value' => 'center',
-                'label' => Mage::helper('wsu_themecontrol')->__('center')
+                'label' => __('center')
             ),
             array(
                 'value' => 'right',
-                'label' => Mage::helper('wsu_themecontrol')->__('right')
+                'label' => __('right')
             )
         );
     }

@@ -13,7 +13,6 @@ class Blockattr extends \Magento\Config\Block\System\Config\Form\Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-		die('Blockattr');
 		$element->setHtmlId(str_replace('.','_',$element->getHtmlId()));
         $html        = $this->toHtml();
         return $html;

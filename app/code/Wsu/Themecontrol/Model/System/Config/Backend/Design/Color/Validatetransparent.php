@@ -1,5 +1,8 @@
 <?php
-class Wsu_Wsu_Model_System_Config_Backend_Design_Color_Validatetransparent extends Mage_Core_Model_Config_Data {
+namespace Wsu\Themecontrol\Model\System\Config\Backend\Design\Color;
+
+class Validatetransparent extends  \Magento\Framework\App\Config\Value
+{
     public function save() {
         //Get the value from config
         $v = $this->getValue();

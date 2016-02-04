@@ -14,7 +14,6 @@ class Preview extends \Magento\Config\Block\System\Config\Form\Field
      * @return String
      */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
-		die('Preview');
 		$html        = $this->_toHtml();
 		return $html;
 

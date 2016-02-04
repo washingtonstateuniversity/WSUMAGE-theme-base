@@ -6,8 +6,7 @@ class Hint extends \Magento\Backend\Block\Template implements \Magento\Framework
     protected $_template = 'Wsu_Themecontrol::system/config/fieldset/hint.phtml';
 
     public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element)
-    {
-		die('hint');
+    
         return $this->toHtml();
     }
 }

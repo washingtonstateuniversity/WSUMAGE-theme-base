@@ -1,18 +1,22 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Design_Font_Size_Basic {
+
+namespace Wsu\Themecontrol\Model\System\Config\Source\Design\Font\Size;
+
+class Basic implements \Magento\Framework\Option\ArrayInterface
+{
     public function toOptionArray() {
         return array(
             array(
                 'value' => '12px',
-                'label' => Mage::helper('wsu_themecontrol')->__('12 px')
+                'label' => '12 px'
             ),
             array(
                 'value' => '13px',
-                'label' => Mage::helper('wsu_themecontrol')->__('13 px')
+                'label' => '13px'
             ),
             array(
                 'value' => '14px',
-                'label' => Mage::helper('wsu_themecontrol')->__('14 px')
+                'label' => '14px'
             )
         );
     }
