@@ -10,8 +10,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" src_type="url" />
 		<script src="https://repo.wsu.edu/spine/1/spine.min.js?2015-16-12" src_type="url" />-->
 		
-		<link type="text/plain" rel="author" src="https://repo.wsu.edu/spine/1/authors.txt" />
-		<link type="text/html" rel="help" src="https://brand.wsu.edu" />
+		<link type="text/plain" rel="author" src="https://repo.wsu.edu/spine/1/authors.txt" src_type="url" />
+		<link type="text/html" rel="help" src="https://brand.wsu.edu" src_type="url" />
 		
     </head>
 </page>
