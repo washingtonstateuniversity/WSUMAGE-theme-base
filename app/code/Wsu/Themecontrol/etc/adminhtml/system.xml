@@ -1874,11 +1874,22 @@
 			<!-- wsu_themecontrol_layout/spine  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 			<group id="spine" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 				<label>Spine Layout Options</label>
-				<field id="spine_version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-					<label>Show Store name in the header</label>
+				<field id="use_spine_version" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Version of the spine to use</label>
 					<!-- <comment>
 						<![CDATA[ Important, if you change this you may not get the latest updates ]]>
 					</comment> -->
+					<source_model>Wsu\Themecontrol\Model\System\Config\Source\Spine\Versions</source_model>
+				</field>
+				<field id="spine_version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Version of the spine to use</label>
+					<comment>
+						use the format of `1.x` or `1.x.x` to pin to a version set.
+					</comment>
+					
+					<depends>
+						<field id="*/*/use_spine_version">custom</field>
+					</depends>
 				</field>
 				<field id="show_headerstorename" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Show Store name in the header</label>
