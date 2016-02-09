@@ -18,4 +18,12 @@
 		</container>
 	</referenceContainer>
 	<move element="page.wrapper" destination="spine.main" />
+	<referenceContainer name="spine.spine">
+        <!--<block class="Wsu\Themecontroll\View\Element\Html\Links" name="header.links">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header links</argument>
+            </arguments>
+        </block>-->
+		<action class="Wsu\Themecontrol\Helper\Data" method="setContainerClass" />
+	</referenceContainer>
 </layout>

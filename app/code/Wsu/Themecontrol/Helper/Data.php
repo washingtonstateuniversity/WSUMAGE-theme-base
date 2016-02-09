@@ -1,30 +1,52 @@
 <?php
-class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
-    /**
-     * Patterns
-     *
-     * @var array
-     */
-    protected $_texPath;
-    /**
-     * Background images
-     *
-     * @var array
-     */
-    protected $_bgImagesPath;
+namespace Wsu\Themecontrol\Helper;
+class Data extends \Magento\Framework\App\Helper\AbstractHelper
+{
+	/**
+	 * Patterns
+	 *
+	 * @var array
+	 */
+	protected $_texPath;
+	/**
+	 * Background images
+	 *
+	 * @var array
+	 */
+	protected $_bgImagesPath;
 	
-    /**
-     * Sectional Data block
-     *
-     * @var array
-     */
-    protected $_sectionalData;
+	/**
+	 * Sectional Data block
+	 *
+	 * @var array
+	 */
+	protected $_sectionalData;
 	
-    public function __construct() {
-        //Create paths
-        $this->_texPath      = 'wysiwyg/wsu/themecontrol/_patterns/default/';
-        $this->_bgImagesPath = 'wysiwyg/wsu/themecontrol/_backgrounds/';
-    }
+	public function __construct() {
+		//Create paths
+		$this->_texPath      = 'wysiwyg/wsu/themecontrol/_patterns/default/';
+		$this->_bgImagesPath = 'wysiwyg/wsu/themecontrol/_backgrounds/';
+	}
+	
+	
+	public function setContainerClass(){
+		echo "<h1>here</h1>";
+		print("<h1>here</h1>");
+		die();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     // Get theme config (group) /////////////////////////////////////////////////////////////////
     /**
      * Get selected group from the main section (main settings) of the configuration array
@@ -237,7 +259,6 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		$type = $this->getCfgLayout('responsive/fluid_width', $storeCode);
 		return $type;
     }	
-	
 	
 	
 	
