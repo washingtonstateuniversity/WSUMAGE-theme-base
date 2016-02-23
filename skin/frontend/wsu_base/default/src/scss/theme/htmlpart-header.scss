@@ -131,14 +131,11 @@ $url_2: url(images/bkg_btn-small.png);
 			&[href*="#hideme_compare"] span:before{
 				content: "\f24e";
 			}
-
-			
-			
 		}
 	}
-	&.lighter .links a {
+	/*&.lighter .links a {
 		color: $gray_68 !important;
-	}
+	}*/
 }
 .form-search {
 	float: right;
