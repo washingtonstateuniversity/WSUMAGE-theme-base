@@ -21,6 +21,9 @@ module.exports = function(grunt) {
 			tasks: [ 'sass', 'concat', 'jshint', 'env:dev', 'autoprefixer', 'cssmin', 'uglify' , 'copy:maps' ]
 		},
 		sass: {	
+			options: {
+				sourceMap: true
+			},
 			dev: {
 				files: [
 					{ src: "src/scss/theme.scss", dest: "build/_pre_sass/theme.css" },
@@ -135,7 +138,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	// Default task(s).
 	grunt.registerTask('start', ['watch']);
 	grunt.registerTask('default', ['jshint']);
