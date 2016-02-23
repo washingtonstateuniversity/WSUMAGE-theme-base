@@ -359,4 +359,29 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
         }
         return $classes;
     }
+	
+	
+	
+	public function getWSUbrandColorByName( $name="default", $inverse=false, $mode="rgba", $alpha="1"){
+		$map = [
+			'default'		=>['rgba' => "rgba(255, 255, 255, ${alpha})",	'hex' => "#ffffff",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
+			'lightest'		=>['rgba' => "rgba(239, 240, 241, ${alpha})",	'hex' => "#eff0f1",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
+			'lighter'		=>['rgba' => "rgba(181, 186, 190, ${alpha})",	'hex' => "#b5babe",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
+			'light'			=>['rgba' => "rgba(141, 149, 154, ${alpha})",	'hex' => "#8d959a",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
+			'gray'			=>['rgba' => "rgba(94, 106, 113, ${alpha})",	'hex' => "#5E6A71",		'rgba_inverse' => "rgba(255, 255, 255, ${alpha})",	'hex_inverse' => "#ffffff"],
+			'dark'			=>['rgba' => "rgba(70, 78, 84, ${alpha})",		'hex' => "#464e54",		'rgba_inverse' => "rgba(255, 255, 255, ${alpha})",	'hex_inverse' => "#ffffff"],
+			'darker'		=>['rgba' => "rgba(42,48,51, ${alpha})",		'hex' => "#2a3033",		'rgba_inverse' => "rgba(255, 255, 255, ${alpha})",	'hex_inverse' => "#ffffff"],
+			'darkest'		=>['rgba' => "rgba(0, 0, 0, ${alpha})",			'hex' => "#000000",		'rgba_inverse' => "rgba(255, 255, 255, ${alpha})",	'hex_inverse' => "#ffffff"],
+			'crimson'		=>['rgba' => "rgba(152, 30, 50, ${alpha})",		'hex' => "#981e32",		'rgba_inverse' => "rgba(255, 255, 255, ${alpha})",	'hex_inverse' => "#ffffff"],
+			'transparent'	=>['rgba' => "rgba(255, 255, 255, 0)",			'hex' => "transparent",	'rgba_inverse' => "rgba(255, 255, 255, 0)",			'hex_inverse' => "transparent"]
+        ];
+		return $map[$name][$mode . ( true === $inverse ? "_inverse" : "")];
+
+	}
+
+	
+	
+	
+	
+	
 }

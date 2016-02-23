@@ -148,16 +148,13 @@ p.product-name a:hover
 $spine_color = $t->getCfgDesign('spine/spine_tool_bar_color');
 ?>
 .quick-access.<?=$spine_color;?>{
-	<?php if( 'lighter' === $spine_color):?>
-	
-	    background-color: #b5babe;
-    color: #444;
-	<?php else: ?>
-	    background: #444;
-		color: #fff;
-	<?php endif; ?>
+	background-color: <?=$t->getWSUbrandColorByName($spine_color)?>
+	color: <?=$t->getWSUbrandColorByName($spine_color,true)?>;
 }
-
+.quick-access.<?=$spine_color;?>:hover{
+	background-color: <?=$t->getWSUbrandColorByName($spine_color,true)?>
+	color: <?=$t->getWSUbrandColorByName($spine_color)?>;
+}
 <?php
 //Main font
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
