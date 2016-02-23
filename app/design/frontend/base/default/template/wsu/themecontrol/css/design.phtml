@@ -144,8 +144,19 @@ p.product-name a:hover
 	<?=$t->getCssRuleAttr('background-color','colors/additional_bg_color','',';')?>
 }
 
-
-
+<?php
+$spine_color = $t->getCfgDesign('spine/spine_tool_bar_color');
+?>
+.quick-access.<?=$spine_color;?>{
+	<?php if( 'lighter' === $spine_color):?>
+	
+	    background-color: #b5babe;
+    color: #444;
+	<?php else: ?>
+	    background: #444;
+		color: #fff;
+	<?php endif; ?>
+}
 
 <?php
 //Main font
