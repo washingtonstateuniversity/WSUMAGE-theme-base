@@ -457,6 +457,10 @@ $url_9: url(images/bg_x.png);
 		background-position: -80px -362px;
 		cursor: default;
 	}
+	#product_addtocart_form {
+		    display: flex;
+    flex-flow: row wrap;
+	}
 }
 .email-friend {
 	margin: 0;

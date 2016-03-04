@@ -33,7 +33,9 @@ $layout = $this->helper('wsu_themecontrol/layout')
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
             <input type="hidden" name="related_product" id="related-products-field" value="" />
         </div>
-
+        <div class="product-img-box column one">
+            <?php echo $this->getChildHtml('media') ?>
+        </div>
         <div class="product-shop column two">
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -75,9 +77,7 @@ $layout = $this->helper('wsu_themecontrol/layout')
 
         </div>
 
-        <div class="product-img-box column one">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
+
 
         <div class="clearer"></div>
         <?php if ($_product->isSaleable() && $this->hasOptions()):?>
