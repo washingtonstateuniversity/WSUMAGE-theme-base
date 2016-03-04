@@ -148,16 +148,16 @@ p.product-name a:hover
 $spine_color = $t->getCfgDesign('spine/spine_tool_bar_color');
 ?>
 .quick-access.<?=$spine_color;?>{
-	background-color: <?=$t->getWSUbrandColorByName($spine_color)?>;
-	color: <?=$t->getWSUbrandColorByName($spine_color,true)?>;
+	background-color: <?=$t->getWSUbrandColorByName($spine_color)?> !important;
+	color: <?=$t->getWSUbrandColorByName($spine_color,true)?> !important;
 }
 .quick-access.<?=$spine_color;?> .links a{
-	color: <?=$t->getWSUbrandColorByName($spine_color,true)?>;
+	color: <?=$t->getWSUbrandColorByName($spine_color,true)?> !important;
 }
 
 .quick-access.<?=$spine_color;?> .links a:hover{
-	background-color: <?=$t->getWSUbrandColorByName($spine_color,true)?>;
-	color: <?=$t->getWSUbrandColorByName($spine_color)?>;
+	background-color: <?=$t->getWSUbrandColorByName($spine_color,true)?> !important;
+	color: <?=$t->getWSUbrandColorByName($spine_color)?> !important;
 }
 
 
