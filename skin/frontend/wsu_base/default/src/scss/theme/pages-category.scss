@@ -26,12 +26,15 @@
 }
 .products-grid {
 	position: relative;
+	display: flex;
+    flex-flow: row wrap;
+	justify-content: center;
 	&.last {
 		border-bottom: 0;
 	}
 	li {
 		&.item {
-			float: left;
+			/*float: left;*/
 			width: 171px;
 			padding: 0 0 90px;
 		}
