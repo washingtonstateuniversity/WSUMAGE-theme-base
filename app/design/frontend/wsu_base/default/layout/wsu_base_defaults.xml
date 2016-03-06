@@ -85,11 +85,18 @@
 		<reference name="root">
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
-            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
 			<action method="addBodyClass"><class>DYNO-DEFAULT</class></action>
 		</reference>
+		<reference name="before_body_end">
+			<block type="core/template" name="adminbar" as="adminbar" before="-">
+				<action method="setBlockId"><block_id>adminbar_block</block_id></action>  
+				<action method="setTemplate"><template helper="wsu_themecontrol/data/showAdminFrontEndBar" /></action>
+			</block>
+		</reference>
+
 		
 		<reference name="top.links">
 			<block type="wishlist/links" name="wishlist_link" />

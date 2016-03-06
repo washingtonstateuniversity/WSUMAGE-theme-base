@@ -362,7 +362,8 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 	
 	
 	
-	public function getWSUbrandColorByName( $name="default", $inverse=false, $mode="rgba", $alpha="1"){
+	public function getWSUbrandColorByName( $name="default", $inverse=false, $mode="rgba", $alpha="1")
+	{
 		$map = [
 			'default'		=>['rgba' => "rgba(255, 255, 255, ${alpha})",	'hex' => "#ffffff",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
 			'lightest'		=>['rgba' => "rgba(239, 240, 241, ${alpha})",	'hex' => "#eff0f1",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
@@ -379,9 +380,44 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 
 	}
 
+	public function showAdminFrontEndBar()
+	{
+		// should first check options on if it is allowed
+		$loggedIn = false;
+		$userName = "";
+		$switchSessionName = 'adminhtml';
+		$currentSessionId = Mage::getSingleton('core/session')->getSessionId();
+		$currentSessionName = Mage::getSingleton('core/session')->getSessionName();
+		if ($currentSessionId && $currentSessionName && isset($_COOKIE[$currentSessionName])) {
+			
+			$switchSessionId = $_COOKIE[$switchSessionName];
+			$this->_switchSession($switchSessionName, $switchSessionId);
+			// Now you are in admin session. Get all the details you want using the below format:
+			// $whateverData = Mage::getModel('mymodule/session')->getWhateverData();
+			// To print the username and id of the admin logged in, you would use this:
+			$adminSession = Mage::getModel('admin/session');
+			if($adminSession){
+				$user = Mage::getModel('admin/session')->getUser();
+				if($user){
+					$loggedIn = true;
+					$userName = $user->getUsername();
+					$userId = $user->getId();
+				}
+			}
+			$this->_switchSession($currentSessionName, $currentSessionId);
+		}
+		return ($loggedIn ? "admin/admin_bar.phtml" : "");
+	}
 	
-	
-	
+protected function _switchSession($namespace, $id = null) {
+    session_write_close();
+    $GLOBALS['_SESSION'] = null;
+    $session = Mage::getSingleton('core/session');
+    if ($id) {
+        $session->setSessionId($id);
+    }
+    $session->start($namespace);
+}	
 	
 	
 }
