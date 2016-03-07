@@ -389,22 +389,23 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract {
 		$currentSessionId = Mage::getSingleton('core/session')->getSessionId();
 		$currentSessionName = Mage::getSingleton('core/session')->getSessionName();
 		if ($currentSessionId && $currentSessionName && isset($_COOKIE[$currentSessionName])) {
-			
-			$switchSessionId = $_COOKIE[$switchSessionName];
-			$this->_switchSession($switchSessionName, $switchSessionId);
-			// Now you are in admin session. Get all the details you want using the below format:
-			// $whateverData = Mage::getModel('mymodule/session')->getWhateverData();
-			// To print the username and id of the admin logged in, you would use this:
-			$adminSession = Mage::getModel('admin/session');
-			if($adminSession){
-				$user = Mage::getModel('admin/session')->getUser();
-				if($user){
-					$loggedIn = true;
-					$userName = $user->getUsername();
-					$userId = $user->getId();
+			if( isset($_COOKIE[$switchSessionName]) ){
+				$switchSessionId = $_COOKIE[$switchSessionName];
+				$this->_switchSession($switchSessionName, $switchSessionId);
+				// Now you are in admin session. Get all the details you want using the below format:
+				// $whateverData = Mage::getModel('mymodule/session')->getWhateverData();
+				// To print the username and id of the admin logged in, you would use this:
+				$adminSession = Mage::getModel('admin/session');
+				if($adminSession){
+					$user = Mage::getModel('admin/session')->getUser();
+					if($user){
+						$loggedIn = true;
+						$userName = $user->getUsername();
+						$userId = $user->getId();
+					}
 				}
+				$this->_switchSession($currentSessionName, $currentSessionId);
 			}
-			$this->_switchSession($currentSessionName, $currentSessionId);
 		}
 		return ($loggedIn ? "admin/admin_bar.phtml" : "");
 	}
