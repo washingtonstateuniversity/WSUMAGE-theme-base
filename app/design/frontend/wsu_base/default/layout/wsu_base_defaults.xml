@@ -112,7 +112,7 @@
 				<action method="addCheckoutLink"><position>11</position></action>
 			</block> -->
 			
-			<block type="checkout/links" name="checkout_cart_link_custom">
+			<block type="checkout/links" name="checkout_cart_link_wsu_base">
 				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
 				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
 				<action method="setData"><name>cart_label_full</name><value helper="wsu_themecontrol/layout/getCartLabelFull" /></action>
@@ -180,6 +180,7 @@
 				<position>1</position>
 				<liParams>id="link-sign-up"</liParams>
 			</action>
+			<remove name="wishlist_link"/>
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
 
 			<action method="addLink" translate="label title" module="customer">
@@ -196,6 +197,7 @@
 		</reference>-->
 		<!--<remove name="reorder"></remove>-->
 	</customer_logged_out>
+	
 	<customer_logged_in>
 		<reference name="top.links">
 			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
@@ -220,8 +222,6 @@
 	</customer_logged_in>
 
 
-
-	
 <!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_cart_index>
         <reference name="root">
@@ -235,6 +235,18 @@
 			</block>
 			<block type="cms/block" name="block_cart_below_totals">
 				<action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
+			</block>
+		</reference>
+
+		<reference name="top.links">
+			<!-- Removes 'My Cart' AND 'Checkout' links
+			Default position: 40 and 50 respectively -->
+			<remove name="checkout_cart_link_wsu_base"/>
+			<!-- To re-add 'My Cart' or 'Checkout' after removing both -->
+			<block type="checkout/links" name="checkout_cart_link_custom">
+				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
+				<action method="setData"><name>checkout_label</name><value helper="wsu_themecontrol/layout/getCheckoutLabel" /></action>
+				<action method="addCheckoutLink"><position>11</position></action>
 			</block>
 		</reference>
 	</checkout_cart_index>
@@ -253,10 +265,22 @@
 				</block>
 			</block>
 		</reference>
+		<reference name="top.links">
+			<remove name="checkout_cart_link_themed"/>
+			<block type="checkout/links" name="checkout_cart_link_themed_cart">
+				<action method="addCheckoutLink"><position>11</position></action>
+			</block>
+		</reference>
 	</checkout_onepage_index>	
 	<opc_index_index>
 		<reference name="root">
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<reference name="top.links">
+			<remove name="checkout_cart_link_themed"/>
+			<block type="checkout/links" name="checkout_cart_link_themed_cart">
+				<action method="addCheckoutLink"><position>11</position></action>
+			</block>
 		</reference>
 	</opc_index_index>
 	<checkout_multishipping>
