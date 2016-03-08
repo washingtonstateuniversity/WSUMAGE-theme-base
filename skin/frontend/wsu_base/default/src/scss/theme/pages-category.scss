@@ -41,7 +41,8 @@
 			    transform: scale(1.05);
 				background: #fff;
 				box-shadow: 0px 0px 15px rgba(50,25,25,0.75);
-				height: auto;	
+				height: auto;
+				z-index: 9;
 			}
 		}
 		&.last .product-image {
