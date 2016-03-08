@@ -16,129 +16,129 @@ $url_8: url(/media/store-media/eventstore/crowd1.jpg);
 $url_9: url(/media/store-media/eventstore/crowd2.jpg);
 
 .home-callout {
-	margin-bottom: 12px;
-	img {
-		display: block;
-	}
+    margin-bottom: 12px;
+    img {
+        display: block;
+    }
 }
 .best-selling {
-	h3 {
-		margin: 12px 0 6px;
-		color: $color_trinidad_approx;
-		font-size: 1.2em;
-	}
-	table {
-		border-top: 1px solid $gray_204;
-	}
-	tr {
-		&.odd {
-			background: $gray_237 $url_0 0 100% repeat-x;
-		}
-		&.even {
-			background: $white $url_1 0 100% repeat-x;
-		}
-	}
-	td {
-		width: 50%;
-		border-bottom: 1px solid $gray_204;
-		padding: 8px 10px 8px 8px;
-		font-size: 11px;
-	}
-	.product-img {
-		float: left;
-		border: 2px solid $gray_221;
-	}
-	.product-description {
-		margin-left: 107px;
-		line-height: 1.3em;
-	}
-	a.product-name {
-		color: $color_nile_blue_approx;
-	}
+    h3 {
+        margin: 12px 0 6px;
+        color: $color_trinidad_approx;
+        font-size: 1.2em;
+    }
+    table {
+        border-top: 1px solid $gray_204;
+    }
+    tr {
+        &.odd {
+            background: $gray_237 $url_0 0 100% repeat-x;
+        }
+        &.even {
+            background: $white $url_1 0 100% repeat-x;
+        }
+    }
+    td {
+        width: 50%;
+        border-bottom: 1px solid $gray_204;
+        padding: 8px 10px 8px 8px;
+        font-size: 11px;
+    }
+    .product-img {
+        float: left;
+        border: 2px solid $gray_221;
+    }
+    .product-description {
+        margin-left: 107px;
+        line-height: 1.3em;
+    }
+    a.product-name {
+        color: $color_nile_blue_approx;
+    }
 }
 .category-football {
-	&.five1 #jacket {
-		background: transparent $url_6 right top no-repeat;
-	}
-	&.five2 #jacket {
-		background: transparent $url_7 right top no-repeat;
-	}
-	&.five3 #jacket {
-		background: transparent $url_8 right top no-repeat;
-	}
-	&.five4 #jacket {
-		background: transparent $url_9 right top no-repeat;
-	}
+    &.five1 #jacket {
+        background: transparent $url_6 right top no-repeat;
+    }
+    &.five2 #jacket {
+        background: transparent $url_7 right top no-repeat;
+    }
+    &.five3 #jacket {
+        background: transparent $url_8 right top no-repeat;
+    }
+    &.five4 #jacket {
+        background: transparent $url_9 right top no-repeat;
+    }
 }
 .home-spot .best-selling a.product-name:hover {
-	color: $color_nile_blue_approx;
+    color: $color_nile_blue_approx;
 }
 .catalog-category-view .event {
-	&.verse {
-		text-align: center;
-		background-color: $color_WSU_Crimson;
-		a {
-			color: $gray_228 !important;
-			text-decoration: none;
-		}
-		&.away {
-			text-align: center;
-			background-color: $gray_228;
-			a {
-				color: $color_WSU_Crimson !important;
-			}
-		}
-	}
-	&.time {
-		text-align: center;
-		background-color: $gray_228;
-		color: $color_WSU_Crimson;
-		&.away {
-			text-align: center;
-			background-color: $color_WSU_Crimson;
-			a {
-				color: $gray_228 !important;
-				text-decoration: none;
-			}
-		}
-	}
-	&.status {
-		text-align: center;
-		text-decoration: none;
-		&.comming {
-		}
-		&.soldout {
-		}
-	}
+    &.verse {
+        text-align: center;
+        background-color: $color_WSU_Crimson;
+        a {
+            color: $gray_228 !important;
+            text-decoration: none;
+        }
+        &.away {
+            text-align: center;
+            background-color: $gray_228;
+            a {
+                color: $color_WSU_Crimson !important;
+            }
+        }
+    }
+    &.time {
+        text-align: center;
+        background-color: $gray_228;
+        color: $color_WSU_Crimson;
+        &.away {
+            text-align: center;
+            background-color: $color_WSU_Crimson;
+            a {
+                color: $gray_228 !important;
+                text-decoration: none;
+            }
+        }
+    }
+    &.status {
+        text-align: center;
+        text-decoration: none;
+        &.comming {
+        }
+        &.soldout {
+        }
+    }
 }
 .studentstore5 .main-ad-block {
-	background: transparent $url_2 right top no-repeat;
-	background-size: 100% auto;
-	.seven-twelfths img {
-		margin: 2%;
-		max-width: 96%;
-	}
-	.home-spot img {
-		display: none;
-	}
+    background: transparent $url_2 right top no-repeat;
+    background-size: 100% auto;
+    .seven-twelfths img {
+        margin: 2%;
+        max-width: 96%;
+    }
+    .home-spot img {
+        display: none;
+    }
 }
 .techstore6 .main-ad-block {
-	background: transparent $url_3 right top no-repeat;
-	background-size: 100% auto;
-	.product_feature {
-		background: transparent $url_4 right top repeat;
-		padding: 1%;
-		max-width: 31%;
-		margin: 1%;
-		&:hover {
-			background: transparent $url_5 right top repeat;
-		}
-		a {
-			color: $color_cararra_approx;
-			font-weight: bold;
-		}
-	}
-	img[src*="placeholder"] {
-		max-height: 220px;
-	}
+    background: transparent $url_3 right top no-repeat;
+    background-size: 100% auto;
+    .product_feature {
+        background: transparent $url_4 right top repeat;
+        padding: 1%;
+        max-width: 31%;
+        margin: 1%;
+        &:hover {
+            background: transparent $url_5 right top repeat;
+        }
+        a {
+            color: $color_cararra_approx;
+            font-weight: bold;
+        }
+    }
+    img[src*="placeholder"] {
+        max-height: 220px;
+    }
 }

@@ -138,7 +138,7 @@ ul{padding:0; margin:0;}
 .cart .cart-collaterals .col2-set .col-1{
 }
 .cart .cart-collaterals .col1-set .col-1 li{
-	width: 222px; display: inline-block;
+    width: 222px; display: inline-block;
 }
 .ui-widget-overlay {
     background: #aaa none;
@@ -172,31 +172,31 @@ ul{padding:0; margin:0;}
 
 
 .validation_overlay{
-	display:none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 10;
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
 }
 .validation_overlay.active{
-	display:block;
+    display:block;
 }
 .access_form {
-	background-color: #ffb81c;
-	border-radius: 5px;
-	left: 50%;
-	margin-left: -17.5%;
-	margin-top: -6.25%;
-	min-height: 55px;
-	padding: 0 15px;
-	position: absolute;
-	text-align: center;
-	top: 27%;
-	width: 30%;
-	z-index: 11;
+    background-color: #ffb81c;
+    border-radius: 5px;
+    left: 50%;
+    margin-left: -17.5%;
+    margin-top: -6.25%;
+    min-height: 55px;
+    padding: 0 15px;
+    position: absolute;
+    text-align: center;
+    top: 27%;
+    width: 30%;
+    z-index: 11;
 }
 
 

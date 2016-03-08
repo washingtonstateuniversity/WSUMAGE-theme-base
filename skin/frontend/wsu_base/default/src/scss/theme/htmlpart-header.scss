@@ -8,190 +8,190 @@ $url_1: url(images/bkg_pipe1.gif);
 $url_2: url(images/bkg_btn-small.png);
 
 .logo {
-	float: left;
+    float: left;
 }
 .header {
-	margin: 0 0 12px;
-	.logo {
-		float: left;
-		text-decoration: none !important;
-		strong {
-			position: absolute;
-			top: -999em;
-			left: -999em;
-			width: 0;
-			height: 0;
-			font-size: 0;
-			line-height: 0;
-			text-indent: -999em;
-			overflow: hidden;
-		}
-	}
-	.top-promo {
-		float: left;
-		width: 117px;
-		height: 30px;
-		margin: 12px 10px 0;
-		background: $url_0 0 0 no-repeat;
-		text-indent: -999em;
-		overflow: hidden;
-	}
+    margin: 0 0 12px;
+    .logo {
+        float: left;
+        text-decoration: none !important;
+        strong {
+            position: absolute;
+            top: -999em;
+            left: -999em;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -999em;
+            overflow: hidden;
+        }
+    }
+    .top-promo {
+        float: left;
+        width: 117px;
+        height: 30px;
+        margin: 12px 10px 0;
+        background: $url_0 0 0 no-repeat;
+        text-indent: -999em;
+        overflow: hidden;
+    }
 }
 .quick-access {
-	background: $gray_68;
-	color: $white;
-	padding: 7px 13px;
-	text-align: right;
-	.welcome-msg {
-		display: inline;
-		margin: 0;
-		color: $white;
-		a {
-			color: $gray_221;
-		}
-	}
-	.form-language {
-		float: left;
-		label {
-			font-weight: bold;
-			padding-right: 5px;
-			color: $white;
-			vertical-align: middle;
-		}
-		select {
-			padding: 0;
-			&.flags option {
-				background-position: 4px 50%;
-				background-repeat: no-repeat;
-				padding-left: 25px;
-			}
-		}
-	}
-	.links {
-		padding: 0;
-		display: inline-block;
-		li {
-			display: inline-block;
-			padding: 0 0 0 1px;
-			/*&.last a {
-				padding: 0;
-				background: none;
-			}*/
-		}
-		a {
-			color: $gray_221;
-			padding: 0 7px 0 0;
-			background: $url_1 no-repeat 100% 50%;
-			text-decoration: none;
-			position: relative;
-    		padding-left: 14px;
-			
-			span:before{
-				@include fa();
-				@include textshadow();
-				
-				//color:#ECECEC;
-				z-index:1;
-			
-				margin-right: 7px;
-				position: absolute;
-				top: 3px;
-				left: 0px;
-			}
+    background: $gray_68;
+    color: $white;
+    padding: 7px 13px;
+    text-align: right;
+    .welcome-msg {
+        display: inline;
+        margin: 0;
+        color: $white;
+        a {
+            color: $gray_221;
+        }
+    }
+    .form-language {
+        float: left;
+        label {
+            font-weight: bold;
+            padding-right: 5px;
+            color: $white;
+            vertical-align: middle;
+        }
+        select {
+            padding: 0;
+            &.flags option {
+                background-position: 4px 50%;
+                background-repeat: no-repeat;
+                padding-left: 25px;
+            }
+        }
+    }
+    .links {
+        padding: 0;
+        display: inline-block;
+        li {
+            display: inline-block;
+            padding: 0 0 0 1px;
+            /*&.last a {
+                padding: 0;
+                background: none;
+            }*/
+        }
+        a {
+            color: $gray_221;
+            padding: 0 7px 0 0;
+            background: $url_1 no-repeat 100% 50%;
+            text-decoration: none;
+            position: relative;
+            padding-left: 14px;
 
-			/*%--icons--%*/
-			&:hover span:before{
-				color:#fff;
-			}
-			&[href*="customer/account"] span:before{
-				content: "\f085";
-			}
-			&[href*="customer/account/create"] span:before{
-				content: "\f044";
-			}
-			&[href*="customer/account/logout"] span:before{
-				content: "\f08b";
-			}
-			&[href*="customer/account/login"] span:before{
-				content: "\f090";
-			}
-			&[href*="checkout"] span:before{
-				content: "\f046";
-			}
-			&[href*="checkout/cart"] span:before{
-				content: "\f07a";
-			}
-			&.with-items[href*="checkout/cart"] span:before{
-				content: "\f217";
-			}
-			&[href*="wishlist"] span:before{
-				content: "\f005";
-			}
-			&[href*="catalog/product_compare"] span:before,
-			&[href*="#hideme_compare"] span:before{
-				content: "\f24e";
-			}
-		}
-	}
-	/*&.lighter .links a {
-		color: $gray_68 !important;
-	}*/
+            span:before{
+                @include fa();
+                @include textshadow();
+
+                //color:#ECECEC;
+                z-index:1;
+
+                margin-right: 7px;
+                position: absolute;
+                top: 3px;
+                left: 0px;
+            }
+
+            /*%--icons--%*/
+            &:hover span:before{
+                color:#fff;
+            }
+            &[href*="customer/account"] span:before{
+                content: "\f085";
+            }
+            &[href*="customer/account/create"] span:before{
+                content: "\f044";
+            }
+            &[href*="customer/account/logout"] span:before{
+                content: "\f08b";
+            }
+            &[href*="customer/account/login"] span:before{
+                content: "\f090";
+            }
+            &[href*="checkout"] span:before{
+                content: "\f046";
+            }
+            &[href*="checkout/cart"] span:before{
+                content: "\f07a";
+            }
+            &.with-items[href*="checkout/cart"] span:before{
+                content: "\f217";
+            }
+            &[href*="wishlist"] span:before{
+                content: "\f005";
+            }
+            &[href*="catalog/product_compare"] span:before,
+            &[href*="#hideme_compare"] span:before{
+                content: "\f24e";
+            }
+        }
+    }
+    /*&.lighter .links a {
+        color: $gray_68 !important;
+    }*/
 }
 .form-search {
-	float: right;
-	label {
-		float: left;
-		font-size: 12px;
-		font-weight: bold;
-		padding: 0 5px 0 0;
-	}
-	.search-autocomplete {
-		z-index: 999;
-		ul {
-			border: 1px solid $color_mountain_mist_approx;
-			background-color: $color_spring_wood_approx;
-		}
-		li {
-			text-align: left;
-			border-bottom: 1px solid $color_merino_approx;
-			padding: 2px 8px 1px;
-			cursor: pointer;
-			.amount {
-				float: right;
-				font-weight: bold;
-			}
-			&.odd {
-				background-color: $gray_246;
-			}
-			&.selected {
-				background-color: $color_ottoman_approx;
-			}
-		}
-	}
-	input.input-text {
-		float: left;
-		width: 212px;
-		margin-right: 5px;
-	}
-	button.button {
-		float: left;
-		span {
-			height: 23px;
-			background-image: $url_2;
-			line-height: 21px;
-		}
-	}
+    float: right;
+    label {
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0 5px 0 0;
+    }
+    .search-autocomplete {
+        z-index: 999;
+        ul {
+            border: 1px solid $color_mountain_mist_approx;
+            background-color: $color_spring_wood_approx;
+        }
+        li {
+            text-align: left;
+            border-bottom: 1px solid $color_merino_approx;
+            padding: 2px 8px 1px;
+            cursor: pointer;
+            .amount {
+                float: right;
+                font-weight: bold;
+            }
+            &.odd {
+                background-color: $gray_246;
+            }
+            &.selected {
+                background-color: $color_ottoman_approx;
+            }
+        }
+    }
+    input.input-text {
+        float: left;
+        width: 212px;
+        margin-right: 5px;
+    }
+    button.button {
+        float: left;
+        span {
+            height: 23px;
+            background-image: $url_2;
+            line-height: 21px;
+        }
+    }
 }
 .header-container .top-container {
-	padding: 5px 12px;
-	background: $white;
-	border: 1px solid $color_pink_swan_approx;
-	border-width: 0 1px 1px;
-	text-align: right;
+    padding: 5px 12px;
+    background: $white;
+    border: 1px solid $color_pink_swan_approx;
+    border-width: 0 1px 1px;
+    text-align: right;
 }
 .top-bar .breadcrumbs {
-	width: 391px;
-	li {
-		display: inline-block;
-	}
+    width: 391px;
+    li {
+        display: inline-block;
+    }
 }
