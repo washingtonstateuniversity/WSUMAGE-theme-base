@@ -40,32 +40,55 @@
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>
-<div class="page-title category-title padded-left">
-    <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
-        <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
-    <?php endif; ?>
-    <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
+
+<script>
+	jQuery(window).on("resize",function(){
+		jQuery("#cat-area").css("font-size",(jQuery("#cat-area").width() * 0.00825));
+	 }).trigger("resize");
+</script>
+<div id="cat-area">
+
+	
+	<?php if($this->isContentMode()): ?>
+		<?php echo $this->getCmsBlockHtml() ?>
+	
+	<?php elseif($this->isMixedMode() && $tmp=$this->getCmsBlockHtml() ): ?>
+		<div class="cat-block-plus">
+			<div class="category-topper">
+				<?php echo $this->getCmsBlockHtml() ?>
+			</div>
+			
+				<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	
+				<?php if($_imgUrl): ?>
+					<?php echo $_imgHtml ?>
+				<?php endif; ?>
+				
+				<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+					<div class="category-description std">
+						<?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+					</div>
+				<?php endif; ?>
+			
+			
+			<?php echo $this->getProductListHtml() ?>
+		</div>
+	
+	<?php else: ?>
+	
+		<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	
+		<?php if($_imgUrl): ?>
+			<?php echo $_imgHtml ?>
+		<?php endif; ?>
+		
+		<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+			<div class="category-description std">
+				<?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+			</div>
+		<?php endif; ?>
+	
+	
+		<?php echo $this->getProductListHtml() ?>
+	<?php endif; ?>
 </div>
-
-<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-
-<?php if($_imgUrl): ?>
-    <?php echo $_imgHtml ?>
-<?php endif; ?>
-
-<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-    <div class="category-description std">
-        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
-    </div>
-    <?php endif; ?>
-
-<?php if($this->isContentMode()): ?>
-    <?php echo $this->getCmsBlockHtml() ?>
-
-<?php elseif($this->isMixedMode()): ?>
-    <?php echo $this->getCmsBlockHtml() ?>
-    <?php echo $this->getProductListHtml() ?>
-
-<?php else: ?>
-    <?php echo $this->getProductListHtml() ?>
-<?php endif; ?>
