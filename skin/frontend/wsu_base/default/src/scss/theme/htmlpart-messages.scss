@@ -77,6 +77,57 @@ $url_0: url(images/i_notice.gif);
     @extend %messages_extend_2;
     @extend %messages_extend_3;
 }
+
+
+/*--messages--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+ul.messages li[class$=-msg]:before{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 20px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);	
+	
+	color:#39424b;
+	z-index:1;
+	
+	float: left;
+    margin-right: 7px;
+    margin-top: -3px;
+
+}
+.error-msg{
+    border-color: #981E32;
+    background-color: #da6674;
+    color: #ffdfe3;
+}
+.error-msg:before{
+	content: "\f06a";
+}
+.warn-msg,.notice-msg{
+    border-color: #f47900;
+    background-color: #fed697;
+    color: #f48e2b;
+}
+.warn-msg:before,.notice-msg:before{
+	content:"\f071";
+}
+.success-msg{
+    border-color: #1d3c08;
+    background-color: #8ebe71;
+    color: #1e660d;
+}
+.success-msg:before{
+	content: "\f05d";
+}
+
+
+
+
+
+
+
 .global-site-notice {
     border: 1px solid $gray_204;
     border-width: 0 0 1px;
