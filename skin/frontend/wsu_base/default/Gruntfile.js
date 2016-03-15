@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			],
 			tasks: [ 'sass', 'concat', 'jshint', 'env:dev', 'autoprefixer', 'cssmin', 'uglify' , 'copy:maps' ]
 		},
-		sass: {	
+		sass: {
 			options: {
 				sourceMap: true
 			},
@@ -126,7 +126,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 	});
 
 	// Load the plugin that provides the "uglify" task.
