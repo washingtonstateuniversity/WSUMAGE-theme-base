@@ -30,6 +30,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
 	<!-- WRAPPING -->
 	<div id="jacket">
 		<div id="binder" class="<?=$binderClassStr?>" style="<?=$binderStyleStr?>">
+			<?=$this->getChildHtml('header') ?>
 			<!-- CONTENT -->
 			<main id="page" role="main">
 				<section class="row" id="siteID">
@@ -79,7 +80,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
 			</main><!--/#page-->
 			<!-- /CONTENT -->
 	
-			<?=$this->getChildHtml('header') ?>
+			
 		</div><!--/cover-->
 	</div><!--/jacket-->
 	<!-- /WRAPPING -->
