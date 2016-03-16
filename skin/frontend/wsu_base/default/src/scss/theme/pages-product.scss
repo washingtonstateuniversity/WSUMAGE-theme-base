@@ -230,10 +230,12 @@ $url_9: url(images/bg_x.png);
         width: 302px;
         .product-image {
             margin: 0 0 10px;
+			padding: 0px;
             border: 1px solid $gray_204;
             img {
                 width: 100%;
                 height: auto;
+				vertical-align: bottom;
             }
         }
         .product-image-zoom {
