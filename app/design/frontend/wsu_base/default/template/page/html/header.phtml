@@ -72,7 +72,7 @@ $show_storenetwork	= $theme->getCfgLayout('spine/show_storenetwork');
 
 
 $logo_link = $theme->getCfgLayout('spine/logo_link');
-if( "" === $logo_link ){
+if( "" === $logo_link || NULL === $logo_link ){
 	$logo_link = Mage::helper('core/url')->getHomeUrl();
 }
 
