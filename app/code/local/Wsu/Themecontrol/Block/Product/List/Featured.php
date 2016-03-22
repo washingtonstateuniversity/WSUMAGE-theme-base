@@ -1,12 +1,14 @@
 <?php
-class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Product_List {
+class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Product_List
+{
     protected $_collectionCount = NULL;
     protected $_productCollectionId = NULL;
     protected $_cacheKeyArray = NULL;
     /**
      * Initialize block's cache
      */
-    protected function _construct() {
+    protected function _construct()
+    {
         parent::_construct();
         $this->addData(array(
             'cache_lifetime' => 99999999,
@@ -20,7 +22,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      *
      * @return array
      */
-    public function getCacheKeyInfo() {
+    public function getCacheKeyInfo()
+    {
         if (NULL === $this->_cacheKeyArray) {
             $this->_cacheKeyArray = array(
                 'WSU_ITEMSLIDER',
@@ -50,7 +53,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      *
      * @return string
      */
-    public function getUniqueCollectionId() {
+    public function getUniqueCollectionId()
+    {
         if (NULL === $this->_productCollectionId) {
             $this->_prepareCollectionAndCache();
         }
@@ -61,7 +65,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      *
      * @return int
      */
-    public function getCollectionCount() {
+    public function getCollectionCount()
+    {
         if (NULL === $this->_collectionCount) {
             $this->_prepareCollectionAndCache();
         }
@@ -70,7 +75,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
     /**
      * Prepare collection id, count collection
      */
-    protected function _prepareCollectionAndCache() {
+    protected function _prepareCollectionAndCache()
+    {
         $ids = array();
         $i   = 0;
         foreach ($this->_getProductCollection() as $product) {
@@ -84,7 +90,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      * Retrieve loaded category collection.
      * Variables collected from CMS markup: category_id, product_count, is_random
      */
-    protected function _getProductCollection() {
+    protected function _getProductCollection()
+    {
         if (is_null($this->_productCollection)) {
             $categoryID = $this->getCategoryId();
             if ($categoryID) {
@@ -110,7 +117,8 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      *
      * @return string
      */
-    public function getFrontendHash() {
+    public function getFrontendHash()
+    {
         return md5(implode("+", $this->getCacheKeyInfo()));
     }
 }

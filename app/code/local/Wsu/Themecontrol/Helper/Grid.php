@@ -1,6 +1,7 @@
 <?php
 
-class Wsu_Themecontrol_Helper_Grid extends Mage_Core_Helper_Abstract {
+class Wsu_Themecontrol_Helper_Grid extends Mage_Core_Helper_Abstract
+{
 	/**
 	 * Values: number of columns / grid item width
 	 *
@@ -28,8 +29,7 @@ class Wsu_Themecontrol_Helper_Grid extends Mage_Core_Helper_Abstract {
 		$out = "\n";
 		$out .= '.itemgrid.itemgrid-adaptive .item { width:' . $this->_itemWidth[$columnCount] . '%; clear:none !important; }' . "\n";
 		
-		if ($columnCount > 1)
-		{
+		if ($columnCount > 1) {
 			$out .= '.itemgrid.itemgrid-adaptive .item:nth-child(' . $columnCount . 'n+1) { clear:left !important; }' . "\n";
 		}
 
@@ -41,7 +41,8 @@ class Wsu_Themecontrol_Helper_Grid extends Mage_Core_Helper_Abstract {
 	 *
 	 * @return string
 	 */
-	public function getCssDisableHoverEffect() {
+	public function getCssDisableHoverEffect()
+    {
 		return '
 	/* Disable hover effect
 	-------------------------------------------------------------- */
@@ -71,7 +72,8 @@ class Wsu_Themecontrol_Helper_Grid extends Mage_Core_Helper_Abstract {
 	 *
 	 * @return string
 	 */
-	public function getCssHideAddtoLinks() {
+	public function getCssHideAddtoLinks()
+    {
 		return'
 	/* Products grid
 	-------------------------------------------------------------- */

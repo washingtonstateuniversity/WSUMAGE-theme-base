@@ -1,5 +1,6 @@
 <?php
-class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
+class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract
+{
     /**
      * Path and directory of the automatically generated CSS
      *
@@ -10,7 +11,8 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
     protected $_generatedCssDir;
 	protected $_templatePath;
 	
-    public function __construct() {
+    public function __construct()
+    {
         //Create paths
         $this->_generatedCssFolder = 'css/_config/';
         $this->_generatedCssPath   = 'frontend/wsu_base/default/' . $this->_generatedCssFolder;
@@ -22,7 +24,8 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
      *
      * @return string
      */
-    public function getGeneratedCssDir() {
+    public function getGeneratedCssDir()
+    {
         return $this->_generatedCssDir;
     }
 	/**
@@ -30,17 +33,18 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
 	 *
 	 * @return string
 	 */
-	public function getTemplatePath() {
+	public function getTemplatePath()
+    {
         return $this->_templatePath;
     }
-	
-	
+ 
     /**
      * Get file path: CSS grid
      *
      * @return string
      */
-    public function getGridFile() {
+    public function getGridFile()
+    {
         return $this->_generatedCssFolder . 'grid_' . Mage::app()->getStore()->getCode() . '.css';
     }
     /**
@@ -48,7 +52,8 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
      *
      * @return string
      */
-    public function getLayoutFile() {
+    public function getLayoutFile()
+    {
         return $this->_generatedCssFolder . 'layout_' . Mage::app()->getStore()->getCode() . '.css';
     }
     /**
@@ -56,7 +61,8 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
      *
      * @return string
      */
-    public function getDesignFile() {
+    public function getDesignFile()
+    {
         return $this->_generatedCssFolder . 'design_' . Mage::app()->getStore()->getCode() . '.css';
     }
     /**
@@ -64,7 +70,8 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract {
      *
      * @return string
      */
-    public function getOverrideFile() {
+    public function getOverrideFile()
+    {
         return $this->_generatedCssFolder . 'override_' . Mage::app()->getStore()->getCode() . '.css';
     }
 }

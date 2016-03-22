@@ -37,25 +37,25 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '
-			<li><a class="link-wishlist feature feature-icon-hover first v-centered-content" 
-				href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
-				title="' . $this->__('Add to Wishlist') . '">
-				<span class="v-center">
-					<span class="icon i-wishlist-bw"></span>
-				</span>
-				<span class="v-center">' . $this->__('Add to Wishlist') . '</span>
-			</a></li>';
+            <li><a class="link-wishlist feature feature-icon-hover first v-centered-content" 
+                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
+                title="' . $this->__('Add to Wishlist') . '">
+                <span class="v-center">
+                    <span class="icon i-wishlist-bw"></span>
+                </span>
+                <span class="v-center">' . $this->__('Add to Wishlist') . '</span>
+            </a></li>';
         }
         if ($_compareUrl) {
             $html .= '
-			<li><a class="link-compare feature feature-icon-hover first v-centered-content"
-				href="' . $_compareUrl . '" 
-				title="' . $this->__('Add to Compare') . '">
-				<span class="v-center">
-					<span class="icon i-compare-bw"></span>
-				</span>
-    	        <span class="v-center">' . $this->__('Add to Compare') . '</span>
-			</a></li>';
+            <li><a class="link-compare feature feature-icon-hover first v-centered-content"
+                href="' . $_compareUrl . '" 
+                title="' . $this->__('Add to Compare') . '">
+                <span class="v-center">
+                    <span class="icon i-compare-bw"></span>
+                </span>
+                <span class="v-center">' . $this->__('Add to Compare') . '</span>
+            </a></li>';
         }
         //If any link rendered
         if (!empty($html)) {
@@ -75,19 +75,19 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '
-			<li><a class="link-wishlist" 
-				href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
-				title="' . $this->__('Add to Wishlist') . '">
-					<span class="icon icon-hover i-wishlist-bw"></span>
-			</a></li>';
+            <li><a class="link-wishlist" 
+                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
+                title="' . $this->__('Add to Wishlist') . '">
+                    <span class="icon icon-hover i-wishlist-bw"></span>
+            </a></li>';
         }
         if ($_compareUrl) {
             $html .= '
-			<li><a class="link-compare"
-				href="' . $_compareUrl . '" 
-				title="' . $this->__('Add to Compare') . '">
-					<span class="icon icon-hover i-compare-bw"></span>
-			</a></li>';
+            <li><a class="link-compare"
+                href="' . $_compareUrl . '" 
+                title="' . $this->__('Add to Compare') . '">
+                    <span class="icon icon-hover i-compare-bw"></span>
+            </a></li>';
         }
         //If any link rendered
         if (!empty($html)) {
@@ -95,26 +95,26 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         }
         return $html;
     }
-	
-	/**
-	 * Set up classes for a block called by name
-	 */
-	public function getBlockClasses($block)
+    
+    /**
+     * Set up classes for a block called by name
+     */
+    public function getBlockClasses($block)
     {
-		//@todo
-		//set options to make settings
-		//add logic to build
-		
-		
-		$theme = Mage::helper('wsu_themecontrol');
-		//$theme->getCfgLayout('content_area/row_type');
-		$pad_main = " ".$theme->getCfgLayout('content_area/padding')." ";
-		$pad_main .= " ".$theme->getCfgLayout('content_area/padding_flanks')." ";
-		$pad_main .= " ".$theme->getCfgLayout('content_area/padding_ends')." ";
-		$theme->getCfgLayout('content_area/row_type');
+        //@todo
+        //set options to make settings
+        //add logic to build
+        
+        
+        $theme = Mage::helper('wsu_themecontrol');
+        //$theme->getCfgLayout('content_area/row_type');
+        $pad_main = " ".$theme->getCfgLayout('content_area/padding')." ";
+        $pad_main .= " ".$theme->getCfgLayout('content_area/padding_flanks')." ";
+        $pad_main .= " ".$theme->getCfgLayout('content_area/padding_ends')." ";
+        $theme->getCfgLayout('content_area/row_type');
 
-		$classes="row  ".$pad_main;
-		return trim($classes);
-	}
+        $classes="row  ".$pad_main;
+        return trim($classes);
+    }
 
 }

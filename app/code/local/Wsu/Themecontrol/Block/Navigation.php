@@ -1,31 +1,5 @@
 <?php
 /**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magento.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magento.com for more information.
- *
- * @category    Mage
- * @package     Mage_Catalog
- * @copyright  Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
-
-
-/**
  * Catalog navigation
  *
  * @category   Mage
@@ -141,7 +115,7 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
      */
     public function getCurrentChildCategories()
     {
-        if (null === $this->_currentChildCategories) {
+        if (NULL === $this->_currentChildCategories) {
             $layer = Mage::getSingleton('catalog/layer');
             $category = $layer->getCurrentCategory();
             $this->_currentChildCategories = $category->getChildrenCategories();
@@ -204,7 +178,7 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
      */
     protected function _getItemPosition($level)
     {
-        if ($level == 0) {
+        if (0 === $level) {
             $zeroLevelPosition = isset($this->_itemLevelPositions[$level]) ? $this->_itemLevelPositions[$level] + 1 : 1;
             $this->_itemLevelPositions = array();
             $this->_itemLevelPositions[$level] = $zeroLevelPosition;
@@ -236,8 +210,7 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
      * @param boolean Whether ot not to add on* attributes to list item
      * @return string
      */
-    protected function _renderCategoryMenuItemHtml($category, $level = 0, $isLast = false, $isFirst = false,
-        $isOutermost = false, $outermostItemClass = '', $childrenWrapClass = '', $noEventAttributes = false)
+    protected function _renderCategoryMenuItemHtml($category, $level = 0, $isLast = false, $isFirst = false, $isOutermost = false, $outermostItemClass = '', $childrenWrapClass = '', $noEventAttributes = false)
     {
         if (!$category->getIsActive()) {
             return '';
@@ -297,10 +270,10 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
              $attributes['onmouseover'] = 'toggleMenu(this,1)';
              $attributes['onmouseout'] = 'toggleMenu(this,0)';
         }
-		
-		
+        
+        
 
-		
+        
 
         // assemble list item with attributes
         $htmlLi = '<li';
@@ -309,18 +282,18 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
         }
 
         $htmlLi .= '>';
-		
-		$overview_text = Mage::getResourceModel('catalog/category')->getAttributeRawValue($category->getId(), "overview_text", Mage::app()->getStore()->getId());
-		if( "" !== $overview_text && null !== $overview_text){
-			$textblocks = explode('"',$overview_text);
-			if( count($textblocks) > 1){
-				$overview_text = implode('\"',$textblocks);
-			}
-		}
+        
+        $overview_text = Mage::getResourceModel('catalog/category')->getAttributeRawValue($category->getId(), "overview_text", Mage::app()->getStore()->getId());
+        if( "" !== $overview_text && null !== $overview_text){
+            $textblocks = explode('"',$overview_text);
+            if( count($textblocks) > 1){
+                $overview_text = implode('\"',$textblocks);
+            }
+        }
         $html[] = $htmlLi;
         $html[] = '<a href="'.$this->getCategoryUrl($category).'" '.
-					(($overview_text !=="" && $overview_text !==null) ? 'data-overview="'.$overview_text.'"' : "").
-					' '.$linkClass.'>';
+                    (($overview_text !=="" && $overview_text !==null) ? 'data-overview="'.$overview_text.'"' : "").
+                    ' '.$linkClass.'>';
         $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
         $html[] = '</a>';
 

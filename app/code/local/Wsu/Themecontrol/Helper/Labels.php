@@ -49,7 +49,8 @@ class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract
             return false;
         }
     }
-    protected function _nowIsBetween($fromDate, $toDate) {
+    protected function _nowIsBetween($fromDate, $toDate)
+    {
         if ($fromDate) {
             $fromDate = strtotime($fromDate);
             $toDate   = strtotime($toDate);
