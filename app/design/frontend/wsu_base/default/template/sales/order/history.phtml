@@ -31,15 +31,24 @@
     <tbody>
         <?php $_odd = ''; ?>
         <?php foreach ($_orders as $_order): ?>
+			
+			<?php
+				$shippingAdd = $_order->getShippingAddress();
+			?>
+			
+                
         <tr>
             <td><?php echo $_order->getRealOrderId() ?></td>
             <td><span class="nobr"><?php echo $this->formatDate($_order->getCreatedAtStoreDate()) ?></span></td>
-            <td><span class="shipped_to"><?php echo $_order->getShippingAddress() ? $this->escapeHtml($_order->getShippingAddress()->getName()) : '&nbsp;' ?>
-				<ul class="shipped_address">
-					<li><?=$this->escapeHtml(implode("<br/>",$_order->getShippingAddress()->getStreet()))?></li>
-					<li><?=$this->escapeHtml($_order->getShippingAddress()->getCity())?>, <?=$this->escapeHtml($_order->getShippingAddress()->getRegion())?> <?=$this->escapeHtml($_order->getShippingAddress()->getPostcode())?></li>
-					<li><?=$this->escapeHtml($_order->getShippingAddress()->getCountry())?></li>
-				</ul></span>
+            <td><span class="shipped_to"><?php echo $shippingAdd ? $this->escapeHtml($shippingAdd->getName()) : '&nbsp;' ?>
+            
+                <?php if(!empty($shippingAdd)): ?>
+                    <ul class="shipped_address">
+                        <li><?=$this->escapeHtml(implode("<br/>",$shippingAdd->getStreet()))?></li>
+                        <li><?=$this->escapeHtml($shippingAdd->getCity(). '' .$shippingAdd->getRegion(). '' .$shippingAdd->getPostcode())?></li>
+                        <li><?=$this->escapeHtml($shippingAdd->getCountry())?></li>
+                    </ul>
+				<?php endif; ?>
 			</td>
             <td><?php echo $_order->formatPrice($_order->getGrandTotal()) ?></td>
             <td><em><?php echo $_order->getStatusLabel() ?></em></td>
