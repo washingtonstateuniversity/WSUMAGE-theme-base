@@ -29,13 +29,27 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
     }
     // Get theme config (group) /////////////////////////////////////////////////////////////////
     /**
+     * try to resolve the store code if not set or is NULL
+     *
+     * @return string or NULL
+     */
+	public function resoloveStoreCode($storeCode=NULL)
+	{
+		if ( NULL === $storeCode && isset($_SERVER['MAGE_RUN_CODE']) && "general" !== $_SERVER['MAGE_RUN_CODE'] ){
+			$storeCode = $_SERVER['MAGE_RUN_CODE'] ;
+		}
+		return $storeCode;
+	}
+	
+	
+    /**
      * Get selected group from the main section (main settings) of the configuration array
      *
      * @return array
      */
     public function getCfgGroup($group, $storeId = NULL)
 	{
-        if ($storeId) {
+        if (NULL !== $storeId) {
             return Mage::getStoreConfig('wsu_themecontrol/' . $group, $storeId);
 		} else {
             return Mage::getStoreConfig('wsu_themecontrol/' . $group);
@@ -48,9 +62,9 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgSectionDesign($storeId = NULL)
 	{
-        if ($storeId){
+        if (NULL !== $storeId){
             return Mage::getStoreConfig('wsu_themecontrol_design', $storeId);
-		}else{
+		} else {
             return Mage::getStoreConfig('wsu_themecontrol_design');
 		}
     }
@@ -61,9 +75,9 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgSectionOverride($storeId = NULL)
 	{
-        if ($storeId){
+        if (NULL !== $storeId){
             return Mage::getStoreConfig('wsu_themecontrol_override', $storeId);
-		}else{
+		} else {
             return Mage::getStoreConfig('wsu_themecontrol_override');
 		}
     }
@@ -75,17 +89,17 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 	public function get_static_layout_settings( $path )
 	{
 		$configFile = Mage::getBaseDir('design').DS.'frontend/wsu_base/'.Mage::getSingleton('core/design_package')->getTheme('frontend').'/layout/spine-settings.xml';
-		if(file_exists($configFile)){
+		if (file_exists($configFile)){
 			$string = file_get_contents($configFile);
 			$xml = simplexml_load_string($string, 'Varien_Simplexml_Element');
 			$path = '/wsu_spine/' . $path;
-			//var_dump( $path );
-			//var_dump($xml->xpath( $path ));
 			$value = $xml->xpath( $path );
-			if( false !== $value && count($value)>0){
+			if (false !== $value && !empty($value)){
 				$value=(string)$value[0];	
+			}else{
+				$value = null;	
 			}
-		}else{
+		} else {
 			$value = null;	
 		}
 		return $value;	
@@ -97,8 +111,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfg($optionString, $storeCode = NULL)
 	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
 		$value = $this->get_static_layout_settings( 'wsu_themecontrol/' . $optionString );
-		if($value == null){
+		if (NULL === $value){
 			$value = Mage::getStoreConfig('wsu_themecontrol/' . $optionString, $storeCode);
 		}
         return $value;
@@ -110,8 +126,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgDesign($optionString, $storeCode = NULL)
 	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
 		$value = $this->get_static_layout_settings( 'wsu_themecontrol_design/' . $optionString );
-		if($value == null){
+		if (NULL === $value){
 			$value = Mage::getStoreConfig('wsu_themecontrol_design/' . $optionString, $storeCode);
 		}
         return $value;
@@ -123,8 +141,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgLayout($optionString, $storeCode = NULL)
 	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
 		$value = $this->get_static_layout_settings( 'wsu_themecontrol_layout/' . $optionString );
-		if($value == null){
+		if (NULL === $value){
 			$value = Mage::getStoreConfig('wsu_themecontrol_layout/' . $optionString, $storeCode);
 		}
         return $value;
@@ -132,7 +152,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Set the data for the css file being rendered
      */	
-	public function setCssData( $data )
+	public function setCssData($data)
 	{
 		$this->_sectionalData = $data;	
 	}
@@ -141,15 +161,15 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 	 *
      * @return string
      */	
-	public function resolveArrayPath( $path, $default="" )
+	public function resolveArrayPath($path, $default="")
 	{
 		$data = $this->_sectionalData;
 		$paths = explode('/',$path);
 		$value = "";
 		foreach($paths as $path_part){
-			$value = $value==''?  isset($data[$path_part]) ? $data[$path_part] : '' : ( isset($value[$path_part]) ? $value[$path_part] : '' );
+			$value = '' === $value ?  (isset($data[$path_part]) ? $data[$path_part] : '') : ( isset($value[$path_part]) ? $value[$path_part] : '' );
 		}
-		return $value==""?$default:$value;
+		return ""===$value?$default:$value;
 	}
     // Get selected settings /////////////////////////////////////////////////////////////////
 	
@@ -161,14 +181,14 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
     public function getCssRuleAttr($cssAttr = NULL, $path = NULL, $default='', $append = '' )
 	{
 		$ouput = '';
-		if( $cssAttr == NULL || $path == NULL ){
+		if (NULL === $cssAttr || NULL === $path){
 			return $ouput;	
 		}
 		
 		$value = $this->resolveArrayPath( $path, $default );
-		if($value!=''){
-			if(strpos($cssAttr,"color")!==false){
-				if(!$this->isColor($value)){
+		if ('' !== $value){
+			if (false !== strpos($cssAttr,"color")){
+				if (!$this->isColor($value)){
 					return $ouput;	
 				}
 			}
@@ -184,8 +204,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getMaxWidth($storeCode = NULL)
 	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
         $w = $this->getCfgLayout('responsive/max_width', $storeCode);
-        if ($w == 'custom') {
+        if ('custom' === $w) {
             return intval($this->getCfgLayout('responsive/max_width_custom', $storeCode));
         } else {
             return intval($w);
@@ -199,8 +221,10 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCustomWidth($storeCode = NULL)
 	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
         $w = $this->getCfgLayout('responsive/max_width', $storeCode);
-        if ($w == 'custom') {
+        if ('custom' === $w) {
             return intval($this->getCfgLayout('responsive/max_width_custom', $storeCode));
         } else {
             return 0;
@@ -212,13 +236,15 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getBinderClassStr($storeCode = NULL)
 	{
-		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
-
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
 		$binderClassStr = "";
 		$binderClassStr .= $this->getBinderType($storeCode).' ';
 		$binderClassStr .= " folio ";
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
-		if($width!='custom')$binderClassStr .= ' max-'.$width ;
+		if ('custom' !== $width){
+			$binderClassStr .= ' max-'.$width ;
+		}
 		return $binderClassStr;
     }
 	
@@ -230,16 +256,14 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getBinderStyleStr($storeCode = NULL)
 	{
-		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
+		$storeCode = $this->resoloveStoreCode($storeCode);
 		
 		$width = $this->getCfgLayout('responsive/max_width', $storeCode);
 		$binderStyleStr = "";
-		if($width=='custom'){
+		if ('custom' === $width){
 			$width = intval(trim(str_replace('px','',$this->getCfgLayout('responsive/max_width_custom', $storeCode))));
 		}
 		$binderStyleStr.="max-width:{$width}px;";
-		//var_dump($binderStyleStr);
-		//die();
 		
 		return $binderStyleStr;
     }
@@ -250,7 +274,8 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getBinderType($storeCode = NULL)
 	{
-		if($storeCode == NULL)$storeCode = isset($_SERVER['MAGE_RUN_CODE']) && $_SERVER['MAGE_RUN_CODE']!="general"  ? $_SERVER['MAGE_RUN_CODE'] : NULL;
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
 		$type = $this->getCfgLayout('responsive/fluid_width', $storeCode);
 		return $type;
     }	
@@ -292,8 +317,8 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
         $column = $this->getCfg('category/alt_image_column');
         $value  = $this->getCfg('category/alt_image_column_value');
         $product->load('media_gallery');
-        if( $gal = $product->getMediaGalleryImages() ) {
-            if( $altImg = $gal->getItemByColumnValue($column, $value) ){
+        if ($gal = $product->getMediaGalleryImages()){
+            if ($altImg = $gal->getItemByColumnValue($column, $value)){
                 return '<img class="alt-img" src="' . Mage::helper('wsu/image')->getImg($product, $w, $h, $imgVersion, $altImg->getFile()) . '" alt="' . $product->getName() . '" />';
             }
         }
@@ -307,9 +332,9 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function isColor($color)
 	{
-        if( $color && 'transparent' !== $color ){
+        if ($color && 'transparent' !== $color){
             return true;
-		}else{
+		} else {
             return false;
 		}
     }
@@ -342,8 +367,9 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
                 //Grid units per static block
                 $n         = (int) (12 / $colCount);
                 $gridClass = $gridClassBase . $n;
-            } else
+            } else {
                 $gridClass = $gridClassBase . '2';
+			}
             for ($i = 0; $i < $colCount; $i++) {
                 $classString = $gridClassPersistent . ' ' . $gridClass . ($i == 0 ? ' alpha' : '') . ($i == $colCount - 1 ? ' omega' : '');
                 $html .= '<div class="' . $classString . '">';
@@ -386,7 +412,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 	
 	
 	
-	public function getWSUbrandColorByName( $name="default", $inverse=false, $mode="rgba", $alpha="1")
+	public function getWSUbrandColorByName($name="default", $inverse=false, $mode="rgba", $alpha="1")
 	{
 		$map = [
 			'default'		=>['rgba' => "rgba(255, 255, 255, ${alpha})",	'hex' => "#ffffff",		'rgba_inverse' => "rgba(42,48,51, ${alpha})",		'hex_inverse' => "#2a3033"],
@@ -413,16 +439,16 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 		$currentSessionId = Mage::getSingleton('core/session')->getSessionId();
 		$currentSessionName = Mage::getSingleton('core/session')->getSessionName();
 		if ($currentSessionId && $currentSessionName && isset($_COOKIE[$currentSessionName])) {
-			if( isset($_COOKIE[$switchSessionName]) ){
+			if ( isset($_COOKIE[$switchSessionName]) ){
 				$switchSessionId = $_COOKIE[$switchSessionName];
 				$this->_switchSession($switchSessionName, $switchSessionId);
 				// Now you are in admin session. Get all the details you want using the below format:
 				// $whateverData = Mage::getModel('mymodule/session')->getWhateverData();
 				// To print the username and id of the admin logged in, you would use this:
 				$adminSession = Mage::getModel('admin/session');
-				if($adminSession){
+				if ($adminSession){
 					$user = Mage::getModel('admin/session')->getUser();
-					if($user){
+					if ($user){
 						$loggedIn = true;
 						$userName = $user->getUsername();
 						$userId = $user->getId();
