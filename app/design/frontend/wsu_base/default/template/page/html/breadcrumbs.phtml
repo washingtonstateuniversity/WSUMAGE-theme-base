@@ -1,19 +1,46 @@
-<?php if(Mage::getStoreConfig('wsu_themecontrol_layout/responsive/show_breadcrumbs') && $crumbs && is_array($crumbs)): ?>
+<?php 
+$theme = Mage::helper('wsu_themecontrol');
+$show = $theme->getCfgLayout('responsive/show_breadcrumbs',true);
+?>
+
+<?php if( $show && $crumbs && is_array($crumbs)): ?>
 <div class="breadcrumbs">
     <ul>
-        <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+        <?php 
+		$reversed = $theme->getCfgLayout('responsive/breadcrumbs_reverse', false);
+		if($reversed){
+			$rev_array = array_reverse($crumbs);
+			$crumbs = $rev_array;
+		}
+		
+		$default = $reversed ? '&#171;' : '&#187;';
+		$seperator = $theme->getCfgLayout('responsive/breadcrumbs_seperator');
+		if( "" === $seperator || null === $seperator){
+			$seperator = $default;
+		}
+		
+		$i=1;
+		$count = count($crumbs);
+
+		foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+		
             <li class="<?php echo $_crumbName ?>">
+			
             <?php if($_crumbInfo['link']): ?>
-                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></a>
+                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>" class="parent_links" ><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
             <?php elseif($_crumbInfo['last']): ?>
-                <strong><?php echo $this->htmlEscape($_crumbInfo['label']) ?></strong>
+                <span class="last"><?php echo $this->escapeHtml($_crumbInfo['label']) ?> <?=($reversed?$seperator:'')?> </span>
             <?php else: ?>
-                <?php echo $this->htmlEscape($_crumbInfo['label']) ?>
+                <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
             <?php endif; ?>
-            <?php if(!$_crumbInfo['last']): ?>
-                <span>/ </span>
+			
+            <?php if(!$_crumbInfo['last'] && $i < $count): ?>
+                <span> <?=$seperator;?> </span>
             <?php endif; ?>
+			
             </li>
+
+			<?php $i++; ?>
         <?php endforeach; ?>
     </ul>
 </div>
