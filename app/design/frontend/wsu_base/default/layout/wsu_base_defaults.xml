@@ -85,7 +85,7 @@
 				</block>
 			<block type="core/template" name="offisite.links" as="offisite.links" before="-">
 				<action method="setBlockId"><block_id>offisite_links_block</block_id></action>  
-				<action method="setTemplate"><template>page/html/offisite.links.phtml</template></action>
+				<action method="setTemplate"><template>page/html/custom/offisite.links.phtml</template></action>
 			</block>
 				
 				
