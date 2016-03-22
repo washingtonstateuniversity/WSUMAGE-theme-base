@@ -1,5 +1,6 @@
 <?php
-class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract {
+class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
+{
     /**
      * Render "Add to" links for category view.
      *
@@ -8,7 +9,8 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract {
      * @param additional CSS class name
      * @return string
      */
-    public function getCategoryAddtoLinks($_product, $_compareUrl, $wrapperClasses = '') {
+    public function getCategoryAddtoLinks($_product, $_compareUrl, $wrapperClasses = '')
+    {
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '<li><a href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" class="link-wishlist" title="' . $this->__('Add to Wishlist') . '">' . $this->__('Add to Wishlist') . '</a></li>';
@@ -30,7 +32,8 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract {
      * @param additional CSS class name
      * @return string
      */
-    public function getCategoryAddtoLinksComplex($_product, $_compareUrl, $wrapperClasses = '') {
+    public function getCategoryAddtoLinksComplex($_product, $_compareUrl, $wrapperClasses = '')
+    {
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '
@@ -96,7 +99,8 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract {
 	/**
 	 * Set up classes for a block called by name
 	 */
-	public function getBlockClasses($block){
+	public function getBlockClasses($block)
+    {
 		//@todo
 		//set options to make settings
 		//add logic to build
@@ -112,10 +116,5 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract {
 		$classes="row  ".$pad_main;
 		return trim($classes);
 	}
-	
-	
-	
-	
-	
-	
+
 }

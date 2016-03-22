@@ -1,11 +1,13 @@
 <?php
-class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract {
+class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract
+{
     /**
      * Get product labels
      *
      * @return string
      */
-    public function getLabels($product) {
+    public function getLabels($product)
+    {
         $html  = '';
         $isNew = false;
         if (Mage::getStoreConfig('wsu_themecontrol/product_labels/new')) {
@@ -15,10 +17,10 @@ class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract {
         if (Mage::getStoreConfig('wsu_themecontrol/product_labels/sale')) {
             $isSale = $this->isOnSale($product);
         }
-        if ($isNew == true) {
+        if (true == $isNew) {
             $html .= '<span class="sticker-wrapper top-left"><span class="sticker new">' . $this->__('New') . '</span></span>';
         }
-        if ($isSale == true) {
+        if (true == $isSale) {
             $html .= '<span class="sticker-wrapper top-right"><span class="sticker sale">' . $this->__('Sale') . '</span></span>';
         }
         return $html;
@@ -28,7 +30,8 @@ class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract {
      *
      * @return  bool
      */
-    public function isNew($product) {
+    public function isNew($product)
+    {
         return $this->_nowIsBetween($product->getData('news_from_date'), $product->getData('news_to_date'));
     }
     /**
@@ -36,13 +39,15 @@ class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract {
      *
      * @return  bool
      */
-    public function isOnSale($product) {
+    public function isOnSale($product)
+    {
         $specialPrice = number_format($product->getFinalPrice(), 2);
         $regularPrice = number_format($product->getPrice(), 2);
-        if ($specialPrice != $regularPrice)
+        if ($specialPrice !== $regularPrice) {
             return $this->_nowIsBetween($product->getData('special_from_date'), $product->getData('special_to_date'));
-        else
+        } else {
             return false;
+        }
     }
     protected function _nowIsBetween($fromDate, $toDate) {
         if ($fromDate) {

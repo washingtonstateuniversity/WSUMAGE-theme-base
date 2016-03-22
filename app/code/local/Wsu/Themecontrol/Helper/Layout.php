@@ -1,5 +1,6 @@
 <?php
-class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
+class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
+{
 
 	/**
 	 * Get CSS for grid item based on number of columns
@@ -7,7 +8,8 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	 * @param int $columnCount
 	 * @return string
 	 */
-	public function setupLayout( $ref, $extract=array() ) {
+	public function setupLayout($ref, $extract=array())
+    {
 		$BlockName = str_replace('.','_',$ref->getNameInLayout());
 		$ControllerName = $ref->getRequest()->getControllerName();
 		$ActionName = $ref->getRequest()->getActionName();
@@ -43,7 +45,8 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 		return $extracted;
 	}
 	
-	public function getMapBlockMapping($block,$values){
+	public function getMapBlockMapping($block,$values)
+    {
 		/*
 		array('value' => 'single',			'label' => Mage::helper('wsu_themecontrol')->__('single')),
 		array('value' => 'halves',			'label' => Mage::helper('wsu_themecontrol')->__('halves')),
@@ -60,13 +63,13 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 			'wsu_themecontrol_layout_catalog_product_view_row_type_product_info'=>array('single','halves','side-left','side-right')
 		);
 		$used_values = array();
-		if(isset($map[$block])){
+		if (isset($map[$block])) {
 			foreach($values as $item){
 				if(in_array($item['value'],$map[$block])){
 					$used_values[]=$item;
 				}
 			}
-		}else{
+		} else {
 			$used_values = $values;
 		}
 		
@@ -75,34 +78,40 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract {
 	}
 	
 	
-	public function getCartLabel(){
+	public function getCartLabel()
+    {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label');
 		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart');
 	}
-	public function getCartLabelSingle(){
+    
+	public function getCartLabelSingle()
+    {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_single');
 		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart')." (%s ".Mage::helper('wsu_themecontrol')->__('item').")";
 	}
-	public function getCartLabelFull(){
+    
+	public function getCartLabelFull()
+    {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label_full');
 		return $cart_label!=null ? $cart_label : Mage::helper('wsu_themecontrol')->__('Cart')." (%s ".Mage::helper('wsu_themecontrol')->__('items').")";
 	}
-	public function getCheckoutLabel(){
+    
+	public function getCheckoutLabel()
+    {
 		$checkout_label = Mage::helper('wsu_themecontrol')->getCfg('header/checkout_label');
 		return $checkout_label!=null ? $checkout_label : Mage::helper('wsu_themecontrol')->__('Checkout');
 	}
-	
-	
-	
-	public function getSpineVersionCss(){
+
+	public function getSpineVersionCss()
+    {
 		$version = Mage::helper('wsu_themecontrol')->getCfgLayout('spine/spine_version');
 		return sprintf("//repo.wsu.edu/spine/%s/spine.min.css",($version!=null ? $version : "1"));
 	}	
-	public function getSpineVersionJs(){
+    
+	public function getSpineVersionJs()
+    {
 		$version = Mage::helper('wsu_themecontrol')->getCfgLayout('spine/spine_version');
 		return sprintf("//repo.wsu.edu/spine/%s/spine.min.js",($version!=null ? $version : "1"));
-	}	
-	
-	
+	}
 	
 }
