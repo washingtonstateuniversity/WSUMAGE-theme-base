@@ -17,48 +17,22 @@
  
 $socialChannels=array();
  
- 
-$slot_one = $theme->getCfgGroup('spine_social/slot_one');
-$slot_two = $theme->getCfgGroup('spine_social/slot_two');
-$slot_three = $theme->getCfgGroup('spine_social/slot_three');
-$slot_four = $theme->getCfgGroup('spine_social/slot_four');
- 
-if($slot_one!="skip"){
-	 $url = $theme->getCfgGroup('spine_social/slot_one_url');
-	 $text = $theme->getCfgGroup('spine_social/slot_one_text');
-	 $socialChannels[$slot_one]=array('url'=>$url,'text'=>$text);
+$slots = ['one','two','three','four'];
+foreach($slots as $slot){
+    $sloted = $theme->getCfg('spine_social/slot_' . $slot);
+    if($sloted!="skip"){
+         $url = $theme->getCfg('spine_social/slot_' . $slot . '_url');
+         $text = $theme->getCfg('spine_social/slot_' . $slot . '_text');
+         $socialChannels[$sloted]=array('url'=>$url,'text'=>$text);
+    }
 }
- 
-if($slot_two!="skip"){
-  	 $url = $theme->getCfgGroup('spine_social/slot_two_url');
-	 $text = $theme->getCfgGroup('spine_social/slot_two_text');
-	 $socialChannels[$slot_two]=array('url'=>$url,'text'=>$text);
-}
-if($slot_three!="skip"){
-	 $url = $theme->getCfgGroup('spine_social/slot_three_url');
-	 $text = $theme->getCfgGroup('spine_social/slot_three_text');
-	 $socialChannels[$slot_three]=array('url'=>$url,'text'=>$text);
-}
-if($slot_four!="skip"){
-	 $url = $theme->getCfgGroup('spine_social/slot_four_url');
-	 $text = $theme->getCfgGroup('spine_social/slot_four_text');
-	 $socialChannels[$slot_four]=array('url'=>$url,'text'=>$text);
-}
- 
- 
- 
- /*$socialChannels = array(
-					'facebook'=>array('url'=>'http://facebook.com/wsupullman','text'=>'Facebook'),
-					'twitter'=>array('url'=>'http://twitter.com/wsupullman','text'=>'Twitter'),
-					'youtube'=>array('url'=>'http://www.youtube.com/washingtonstateuniv','text'=>'YouTube'),
-					'social'=>array('url'=>'http://social.wsu.edu','text'=>'Social'),
-				);*/
- $wsuChannels = array(
-					'mywsu-link'=>array('url'=>'https://my.wsu.edu/','text'=>'myWSU'),
-					'access-link'=>array('url'=>'http://access.wsu.edu/','text'=>'Access'),
-					'policies-link'=>array('url'=>'http://policies.wsu.edu/','text'=>'Policies'),
-					'copyright-link'=>array('url'=>'http://copyright.wsu.edu','text'=>'&nbsp;&copy;'),
-				);
+
+$wsuChannels = array(
+                'mywsu-link'=>array('url'=>'https://my.wsu.edu/','text'=>'myWSU'),
+                'access-link'=>array('url'=>'http://access.wsu.edu/','text'=>'Access'),
+                'policies-link'=>array('url'=>'http://policies.wsu.edu/','text'=>'Policies'),
+                'copyright-link'=>array('url'=>'http://copyright.wsu.edu','text'=>'&nbsp;&copy;'),
+            );
  if ( !isset($cropping) ) { $cropping = ''; } else { $cropping = ' '.$cropping; }
  
  
