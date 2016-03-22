@@ -3957,6 +3957,22 @@ between the header and the footer).</comment>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </spine_version>
+						
+						
+						<logo_link translate="label comment">
+                            <label>Url of the logo link in the spine</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<show_homelink>1</show_homelink>
+							</depends>
+                        </logo_link>	
 						<show_headerstorename translate="label comment">
                             <label>Show Store name in the header</label>
                             <frontend_type>select</frontend_type>

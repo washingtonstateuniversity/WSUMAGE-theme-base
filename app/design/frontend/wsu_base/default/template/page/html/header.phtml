@@ -71,7 +71,10 @@ $homelinkText		= $theme->getCfgLayout('spine/homelinkText');
 $show_storenetwork	= $theme->getCfgLayout('spine/show_storenetwork');
 
 
-
+$logo_link = $theme->getCfgLayout('spine/logo_link');
+if( "" === $logo_link ){
+	$logo_link = Mage::helper('core/url')->getHomeUrl();
+}
 
 $homelink="";
 if($show_homelink){
@@ -87,7 +90,7 @@ $searchOptionClasses = implode(' ', $searchOps );
 <!-- SPINE -->
 <div id="spine" class="spine-column <?=$spineClasses?>">
     <div id="glue" class="spine-glue">
-        <header class="spine-header"><a href="http://www.wsu.edu/" id="wsu-signature">Washington State University</a></header>
+        <header class="spine-header"><a href="<?=$logo_link?>" id="wsu-signature">Washington State University</a></header>
         <!-- ACTIONS -->
         <section id="wsu-actions" class="spine-actions">
             <!-- Tabs -->
