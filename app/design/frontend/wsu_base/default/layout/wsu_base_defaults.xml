@@ -83,6 +83,12 @@
 				<block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
 					<action method="setElementClass"><value>top-bar</value></action>
 				</block>
+			<block type="core/template" name="offisite.links" as="offisite.links" before="-">
+				<action method="setBlockId"><block_id>offisite_links_block</block_id></action>  
+				<action method="setTemplate"><template>page/html/offisite.links.phtml</template></action>
+			</block>
+				
+				
 		</reference>	
 
 		<reference name="root">
