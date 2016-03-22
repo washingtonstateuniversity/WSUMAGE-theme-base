@@ -312,14 +312,14 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
 		
 		$overview_text = Mage::getResourceModel('catalog/category')->getAttributeRawValue($category->getId(), "overview_text", Mage::app()->getStore()->getId());
 		if( "" !== $overview_text && null !== $overview_text){
-			$textblocks = explode("'",$overview_text);
+			$textblocks = explode('"',$overview_text);
 			if( count($textblocks) > 1){
-				$overview_text = implode("\'",$textblocks);
+				$overview_text = implode('\"',$textblocks);
 			}
 		}
         $html[] = $htmlLi;
         $html[] = '<a href="'.$this->getCategoryUrl($category).'" '.
-					(($overview_text !=="" && $overview_text !==null) ? "data-overview='$overview_text'" : "").
+					(($overview_text !=="" && $overview_text !==null) ? 'data-overview="'.$overview_text.'"' : "").
 					' '.$linkClass.'>';
         $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
         $html[] = '</a>';
