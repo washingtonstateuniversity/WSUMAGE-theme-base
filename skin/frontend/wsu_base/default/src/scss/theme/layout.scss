@@ -1,6 +1,17 @@
 @import 'vars/global';
 @import 'vars/colors';
 
+/* note there should be a typography area */
+body{
+	font-family: 'Open Sans', "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-style:normal;
+	font-size:100%;
+	line-height:1.6;
+	background:#fff !important;
+}
+
+
+
 
 .wrapper {
 }
