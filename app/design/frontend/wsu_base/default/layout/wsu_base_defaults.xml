@@ -333,10 +333,7 @@
         <reference name="customer_account_navigation">
             <action method="addLink" translate="label" module="wishlist" ifconfig="wishlist/general/active"><name>wishlist</name><path>wishlist/</path><label>My Wishlist</label></action>
         </reference>
-                <!-- Mage_Wishlist -->
-        <reference name="right">
-            <block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" after="cart_sidebar" template="wishlist/sidebar.phtml" />
-        </reference>
+
     </customer_account>
     <wishlist_index_index>
 		<reference name="top.links">
@@ -351,7 +348,11 @@
             <action method="setTemplate"><template>page/dyno.phtml</template></action>
             <action method="addBodyClass"><class>customer-account</class></action>
         </reference>
-	</customer_account_index>	
+                        <!-- Mage_Wishlist -->
+        <reference name="right">
+            <block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" after="cart_sidebar" template="wishlist/sidebar.phtml" />
+        </reference>
+	</customer_account_index>
 <!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<cms_page>
 		<reference name="root">
