@@ -55,47 +55,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
             return Mage::getStoreConfig('wsu_themecontrol/' . $group);
 		}
     }
-    /**
-     * Get theme's design section from the configuration array
-     *
-     * @return array
-     */
-    public function getCfgSectionDesign($storeId = NULL)
-	{
-        $_adminSettings = [];
-        if (NULL !== $storeId){
-            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_design', $storeId);
-		} else {
-            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_design');
-		}
-        foreach ($_adminSettings as $group=>$items) {
-            foreach ($items as $name=>$value) {
-               $path = 'wsu_themecontrol_design/'.$group.'/'.$name;
-               $optionalValue = $this->get_static_layout_settings( $path );
-               if (NULL !== $optionalValue) {
-                   $_adminSettings[$group][$name] = $optionalValue;
-               }
-            }  
-        }
-        return $_adminSettings;
-    }
-    /**
-     * Get theme's design section from the configuration array
-     *
-     * @return array
-     */
-    public function getCfgSectionOverride($storeId = NULL)
-	{
-        $_adminSettings = [];
-        if (NULL !== $storeId){
-            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_override', $storeId);
-		} else {
-            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_override');
-		}
-        return $_adminSettings;
-        
-        
-    }
+    
     // Get theme config /////////////////////////////////////////////////////////////////
 	/**
 	 * Load a spine settings file value if it exists
@@ -119,6 +79,60 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 		}
 		return $value;	
 	}
+    
+    
+/**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
+    public function getCfgSection($section, $storeId = NULL)
+	{
+        $_adminSettings = [];
+        if (NULL !== $storeId){
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_'.$section, $storeId);
+		} else {
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_'.$section);
+		}
+        foreach ($_adminSettings as $group=>$items) {
+            foreach ($items as $name=>$value) {
+               $path = 'wsu_themecontrol_'.$section.'/'.$group.'/'.$name;
+               $optionalValue = $this->get_static_layout_settings( $path );
+               if (NULL !== $optionalValue) {
+                   $_adminSettings[$group][$name] = $optionalValue;
+               }
+            }  
+        }
+        return $_adminSettings;
+    }
+    
+    
+    
+    
+    /**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
+    public function getCfgSectionDesign($storeId = NULL)
+	{
+        $_adminSettings = $this->getCfgSection('design', $storeId);
+        return $_adminSettings;
+    }
+    /**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
+    public function getCfgSectionOverride($storeId = NULL)
+	{
+        $_adminSettings = $this->getCfgSection('override', $storeId);
+        return $_adminSettings;        
+    }
+    
+    
+    
+    
     /**
      * Get theme's main settings (single option)
      *
