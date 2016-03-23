@@ -62,11 +62,22 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgSectionDesign($storeId = NULL)
 	{
+        $_adminSettings = [];
         if (NULL !== $storeId){
-            return Mage::getStoreConfig('wsu_themecontrol_design', $storeId);
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_design', $storeId);
 		} else {
-            return Mage::getStoreConfig('wsu_themecontrol_design');
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_design');
 		}
+        foreach ($_adminSettings as $group=>$items) {
+            foreach ($items as $name=>$value) {
+               $path = 'wsu_themecontrol_design/'.$group.'/'.$name;
+               $optionalValue = $this->get_static_layout_settings( $path );
+               if (NULL !== $optionalValue) {
+                   $_adminSettings[$group][$name] = $optionalValue;
+               }
+            }  
+        }
+        return $_adminSettings;
     }
     /**
      * Get theme's design section from the configuration array
@@ -75,11 +86,15 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCfgSectionOverride($storeId = NULL)
 	{
+        $_adminSettings = [];
         if (NULL !== $storeId){
-            return Mage::getStoreConfig('wsu_themecontrol_override', $storeId);
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_override', $storeId);
 		} else {
-            return Mage::getStoreConfig('wsu_themecontrol_override');
+            $_adminSettings = Mage::getStoreConfig('wsu_themecontrol_override');
 		}
+        return $_adminSettings;
+        
+        
     }
     // Get theme config /////////////////////////////////////////////////////////////////
 	/**
