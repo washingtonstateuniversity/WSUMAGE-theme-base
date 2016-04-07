@@ -11,7 +11,42 @@ body{
 }
 
 
+.row-reverse,
+.column-reverse,
+.flex-row,
+.flex-column {
+    -js-display: flex;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
 
+.flex-row{ flex-direction: row; }
+.row-reverse { flex-direction: row-reverse; }
+.flex-column  { flex-direction: column; }
+.column-reverse { flex-direction: column-reverse; }
+
+.wrap { flex-wrap: nowrap; }
+.nowrap { flex-wrap: nowrap; }
+.wrap-reverse { flex-wrap: wrap-reverse; }
+
+.justify-start{ justify-content: flex-start; }
+.justify-end{ justify-content: flex-end; }
+.justify-center{ justify-content: center; }
+.justify-between{ justify-content: space-between; }
+.justify-around{ justify-content: space-around; }
+
+.content-start{ align-content: flex-start; }
+.content-end{ align-content: flex-end; }
+.content-center{ align-content: center; }
+.content-baseline{ align-content: baseline; }
+.content-end{ align-content: stretch; }
+
+.items-start{ align-items: flex-start; }
+.items-end{ align-items: flex-end; }
+.items-center{ align-items: center; }
+.items-baseline{ align-items: baseline; }
+.items-stretch{ align-items: stretch; }
 
 .wrapper {
 }
