@@ -28,9 +28,9 @@
 }
 .products-grid {
     position: relative;
-    display: flex;
+    /*display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: center;*/
     &.last {
         border-bottom: 0;
     }
