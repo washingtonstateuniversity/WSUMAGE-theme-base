@@ -26,7 +26,7 @@ body{
 .flex-column  { flex-direction: column; }
 .column-reverse { flex-direction: column-reverse; }
 
-.wrap { flex-wrap: nowrap; }
+.wrap { flex-wrap: wrap; }
 .nowrap { flex-wrap: nowrap; }
 .wrap-reverse { flex-wrap: wrap-reverse; }
 
