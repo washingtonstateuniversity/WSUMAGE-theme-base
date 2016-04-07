@@ -52,7 +52,14 @@
 		});
 	}
 	$(function(){
-		
+
+        $(window).on("resize",function(){
+            $(".scalebase").css("font-size",function(){
+               var ratio = $(this).data("scaleratio") || 0.00825;
+               return ($(this).width() * ratio); //we know the max from the main width but we hard coded the ratio value
+            });
+         }).trigger("resize");
+	
 		$('.remove-cart-item').off().on('click',function(e){
 			e.preventDefault();
 			e.stopPropagation();
