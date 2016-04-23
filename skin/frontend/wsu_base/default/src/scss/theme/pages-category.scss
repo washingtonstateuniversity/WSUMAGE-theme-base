@@ -19,26 +19,534 @@
     img {
     }
 }
+//@extend-elements
+//original selectors
+//.inline-filter span, .inline-filter a:before
+%extend_1 {
+    background: $black;
+    color: $white;
+    padding: 2px 6px;
+    margin-right: 3px;
+    font-size: 2em;
+    line-height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//original selectors
+//.viewing_selector a.active, .viewing_selector a:hover
+%extend_2 {
+    background: #181818;
+    font-weight: 700;
+    color: #ececec;
+}
+
+
 .category-description {
     margin: 0 0 10px;
-	font-size: 15px;
-	line-height: 18px;
+    font-size: 15px;
+    line-height: 18px;
 }
 .category-products {
 }
-.products-grid {
-    position: relative;
-    /*display: flex;
+.category-title {
+    margin-top: 0;
+    padding: 0;
+    border-bottom: 1px solid #38424a;
+    h1 {
+        font-size: 22px;
+        color: #5a5a5a;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+#mass_products {
+    padding: 0;
+}
+.cat_list_header_top {
+    display: flex;
     flex-flow: row wrap;
-    justify-content: center;*/
+}
+.cat_list_header_bottom {
+    display: flex;
+    flex-flow: row wrap;
+}
+.filtering_result_labels {
+    flex-grow: 2;
+    line-height: 44px;
+}
+.breadcrumbs {
+    flex-grow: 2;
+    color: $black;
+    a {
+        color: #202020;
+    }
+}
+.sort_by {
+}
+.filtering_area {
+    position: relative;
+}
+.filtering_button {
+    display: inline-block;
+    position: relative;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: italic;
+    border: 1px #494949 solid;
+    padding: 0 40px 4px 7px;
+    line-height: 30px;
+    background: #eee;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 1px 0 24px -5px $black_25;
+    cursor: pointer;
+    &:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0, 0);
+        content: "\f0fe";
+        color: #5a5a5a;
+        position: absolute;
+        top: 0;
+        right: 6px;
+        line-height: 34px;
+        font-size: 18px;
+    }
+    &:hover {
+        background: #5a5a5a;
+        color: #ececec;
+        &:before {
+            color: #ececec;
+        }
+    }
+    &.open {
+        background: #5a5a5a;
+        color: #ececec;
+        &:before {
+            color: #ececec;
+            content: "\f146";
+        }
+    }
+}
+.filtering_block {
+    display: none;
+    &.open {
+        display: block;
+        max-width: 330px;
+        position: absolute;
+        top: 44px;
+        right: 0;
+        z-index: 999999;
+        width: 330px;
+        background: #f9f9f9;
+        border: 1px #202020 solid;
+        padding: 10px 11px 34px 17px;
+    }
+    .currently {
+        .block-subtitle {
+            font-size: 20px;
+            font-weight: 900;
+            padding: 0;
+        }
+        li {
+            border-bottom: 1px solid;
+            font-size: 2em;
+            line-height: 2em;
+        }
+        .btn-remove {
+            display: inline-block;
+            float: right;
+            margin: 0;
+            border: 1px solid #525252;
+            padding: 3px 3px 4px 5px;
+            margin-top: 5px;
+        }
+        .label {
+            font-weight: 600;
+        }
+    }
+    .actions a {
+        border: 1px solid #525252;
+        padding: 3px 3px 4px 5px;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 15px;
+        display: block;
+        font-size: 2em;
+        &:hover {
+            color: #121212;
+            background: rgba(128,128,128,1.00);
+        }
+    }
+}
+#narrow-by-list {
+    a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    dt {
+        border-bottom: 1px #202020 solid;
+        position: relative;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 800;
+        font-style: italic;
+        line-height: 27px;
+        margin-bottom: 15px;
+        &.open {
+            margin-bottom: 0;
+            border-bottom: 1px #a92023 solid;
+            &:before {
+                content: "\f056";
+            }
+        }
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0, 0);
+            content: "\f055";
+            color: #5a5a5a;
+            position: absolute;
+            top: 0;
+            right: 6px;
+            line-height: 31px;
+            font-size: 22px;
+        }
+    }
+    dd {
+        display: none;
+        &.open {
+            margin-bottom: 15px;
+            display: block;
+            padding-top: 15px;
+        }
+    }
+}
+.sorting_area {
+    position: relative;
+    margin-right: 15px;
+}
+.sorting_button {
+    display: inline-block;
+    position: relative;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: italic;
+    border: 1px #494949 solid;
+    padding: 0 40px 4px 7px;
+    line-height: 30px;
+    background: #eee;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 1px 0 24px -5px $black_25;
+    cursor: pointer;
+    &:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0, 0);
+        content: "\f102";
+        color: #5a5a5a;
+        position: absolute;
+        top: 0;
+        right: 6px;
+        line-height: 34px;
+        font-size: 18px;
+    }
+    &:hover {
+        background: #5a5a5a;
+        color: #ececec;
+        &:before {
+            color: #ececec;
+        }
+    }
+    &.open {
+        background: #5a5a5a;
+        color: #ececec;
+        &:before {
+            color: #ececec;
+        }
+    }
+    &.desend:before {
+        content: "\f103";
+    }
+}
+.sorting_block {
+    display: none;
+    &.open {
+        display: block;
+        max-width: 174px;
+        position: absolute;
+        top: 44px;
+        right: 0;
+        z-index: 999999;
+        width: 330px;
+        background: #f9f9f9;
+        border: 1px #202020 solid;
+        padding: 10px 11px 34px 17px;
+    }
+    a {
+        display: block;
+        font-size: 18px;
+    }
+}
+.filters_applied {
+    font-size: 10px;
+}
+span {
+    &.inline-filter {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &.paged_label {
+        font-size: 10px;
+        font-style: italic;
+        vertical-align: middle;
+        margin-left: 15px;
+    }
+    &.match_count {
+        font-size: 18px;
+        font-weight: 600;
+        color: #181818;
+        vertical-align: middle;
+    }
+}
+.inline-filter {
+    span {
+        @extend %extend_1;
+    }
+    a {
+        &:before {
+            @extend %extend_1;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 2em;
+            text-rendering: auto;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0, 0);
+            content: "\f00d";
+            padding: 5px 7px;
+            line-height: 16px;
+        }
+        &:hover:before {
+            background: rgba(170,170,170,1.00);
+            color: #4d0a0b;
+        }
+    }
+}
+.designer_hr {
+    width: calc(100% - 2px );
+    height: 2px;
+    background: #b7b7b7;
+    border: 1px #707070 solid;
+    margin-top: 2px;
+}
+.viewing_selector {
+    padding: 5px 10px;
+    font-size: 19px;
+    a {
+        padding: 5px;
+        line-height: 35px;
+        color: #181818;
+        &.active {
+            @extend %extend_2;
+        }
+        &:hover {
+            @extend %extend_2;
+            background: #2a2a2a;
+        }
+    }
+}
+.limiter {
+    display: flex;
+}
+.sorter {
+    background: none;
+    padding: 0;
+    border: none;
+}
+.products-list {
+    list-style: none;
+    li {
+        list-style: none;
+        &.item {
+            border: 1px solid rgba(91,91,91,0.63);
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 9px;
+            background: rgba(241,241,241,0.90);
+            padding: 15px 11px;
+            margin-bottom: 15px;
+            position: relative;
+            margin-left: 0;
+            &.last {
+                border: 1px solid rgba(91,91,91,0.63);
+            }
+        }
+    }
+    .product-image {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+    .product-shop {
+        margin-left: 335px;
+    }
+    h2.product-name {
+        font-size: 1.75em;
+        font-weight: bold;
+        a {
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+}
+[name="goingToEvent"] {
+    display: none !important;
+    visibility: hidden;
+}
+.template {
+    display: none;
+}
+.display-onhover {
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+.promo_lables {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    display: block;
+    width: 107px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.product-view .product-img-box .more-views li a {
+    float: left;
+    width: 63px;
+    height: 63px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.product-image img {
+    width: 100%;
+}
+ul.products-list ul.add-to-links:after {
+    content: "";
+    clear: none;
+}
+
+
+
+
+
+.catalog-category-view{
+    .pg-animate .item {
+        animation-duration: .75s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+        animation-delay: 0.01s;
+        &:nth-child(2n+0) {
+            animation-delay: 0.05s;
+        }
+        &:nth-child(3n+0) {
+            animation-delay: 0.20s;
+        }
+        &:nth-child(5n+0) {
+            animation-delay: 0.35s;
+        }
+        &:nth-child(7n+0) {
+            animation-delay: 0.15s;
+        }
+    }
+    
+    $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
+    @each $current-delay in $delay-list {
+        $i: index($delay-list, $current-delay);
+        .pg-delay-#{$i-1} .item{ 
+            animation-delay: $current-delay;
+            &:nth-child(2n+0) {
+                animation-delay: $current-delay + 0.05s;
+            }
+            &:nth-child(3n+0) {
+                animation-delay: $current-delay + 0.20s;
+            }
+            &:nth-child(5n+0) {
+                animation-delay: $current-delay + 0.35s;
+            }
+            &:nth-child(7n+0) {
+                animation-delay: $current-delay + 0.15s;
+            }
+        }
+    }
+    
+    $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
+    @each $current-duration in $duration-list {
+        $i: index($duration-list, $current-duration);
+        .pg-duration-#{$i-1} .item{ 
+            animation-duration: $current-duration;
+        }
+    }
+    
+    
+    
+    &.reverse .item {
+        animation-name: fadeInUpReverse ;
+    }
+}
+
+
+
+
+
+.products-grid {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    position: relative;
     &.last {
         border-bottom: 0;
     }
     li {
         &.item {
-            /*float: left;*/
-            max-width: 200px;
-            padding:10px 5px 20px 5px;
+            position: relative;
+            align-self: flex-start;
+            max-width: 220px;
+            min-width: 175px;
+            width: auto;
+            float: initial;
+            padding: 2px 5px 10px;
+            margin-right: 15px;
+            .sticker-wrapper {
+                display: block;
+                margin-bottom: 5px;
+                .sticker {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    padding: 0;
+                    color: $white;
+                }
+                &.top-left {
+                    background: #941e3d;
+                }
+                &.top-right {
+                    background: #fea03b;
+                }
+            }
             &:hover,&.hover{
                 transform: scale(1.05);
                 background: #fff;
@@ -66,7 +574,7 @@
         /*width: 170px;
         height: 170px;*/
         border: 1px solid $gray_221;
-        border-width: 1px 1px 1px 0;
+        /*border-width: 1px 1px 1px 0;*/
         margin: 0 0 10px;
     }
     .product-name {

@@ -12,6 +12,7 @@
 <?php
 	$t = Mage::helper('wsu_themecontrol');
 	$d = $t->getCfgSectionDesign(Mage::registry('cssgen_store'));
+    $a = $t->getCfgSectionEffects(Mage::registry('cssgen_store'));
 	$t->setCssData( $d  );
 
 	//Determine background color of the main content area
@@ -253,8 +254,8 @@ h3.product-name, /*TODO:remove*/
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ?>
 <?php //Animation of structural elements ?>
-<?=isset($d['effects']['structural_elements_transition'])?'':$d['effects']['structural_elements_transition']=false?>
-<?php if ($d['effects']['structural_elements_transition']): ?>
+<?=isset($a['effects']['structural_elements_transition'])?'':$a['effects']['structural_elements_transition']=false?>
+<?php if ($a['effects']['structural_elements_transition']): ?>
 /* Layered nav */
 .block-layered-nav dd li,
 

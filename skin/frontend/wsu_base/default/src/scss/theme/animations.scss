@@ -1,0 +1,116 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+.animate {
+    display: block;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+$delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
+@each $current-delay in $delay-list {
+    $i: index($delay-list, $current-delay);
+    .delay-#{$i-1} { 
+        animation-delay: $current-delay;
+    }
+}
+
+$duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
+@each $current-duration in $duration-list {
+    $i: index($duration-list, $current-duration);
+    .duration-#{$i-1} { 
+        animation-duration: $current-duration;
+    }
+}
+
+
+/*=== FADE IN  ===*/
+.fadeIn {
+    animation-name: fadeIn;
+}
+.fadeIn.reverse,.fadeOut {
+    animation-name: fadeIn;
+    animation-direction:reverse;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*=== FADE IN DOWN ===*/
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+.fadeInDown.reverse  {
+    animation-direction:reverse;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*==== FADE IN UP ===*/
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+.fadeInUp.reverse  {
+    animation-direction:reverse;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*=== FADE IN LEFT ===*/
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+.fadeInLeft.reverse  {
+    animation-direction:reverse;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*==== FADE IN RIGHT ===*/
+.fadeInRight  {
+    animation-name: fadeInRight;
+}
+.fadeInRight.reverse  {
+    animation-direction:reverse;
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+

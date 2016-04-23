@@ -427,5 +427,13 @@
 				<padding_ends_footer>short</padding_ends_footer>
 			</layout_default>
 		</wsu_themecontrol_layout>
+		<wsu_themecontrol_effects>
+			<effects>
+				<product_grid_animation_used>1</product_grid_animation_used>
+				<product_grid_animation_type>fadeInUp</product_grid_animation_type>
+				<product_grid_animation_base_delay></product_grid_animation_base_delay>
+				<product_grid_animation_base_duration>duration-3</product_grid_animation_base_duration>
+			</effects>
+		</wsu_themecontrol_effects>
 	</default>
 </config>

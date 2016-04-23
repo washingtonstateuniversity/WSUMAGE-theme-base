@@ -53,53 +53,103 @@
 	}
 	$(function(){
 
-        $(window).on("resize",function(){
-            $(".scalebase").css("font-size",function(){
-               var ratio = $(this).data("scaleratio") || 0.00825;
-               return ($(this).width() * ratio); //we know the max from the main width but we hard coded the ratio value
-            });
-         }).trigger("resize");
-	
-		$('.remove-cart-item').off().on('click',function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			var btn=$(this);
-			var table=btn.closest('table');
-			$.popup_message(
-			"Are you sure you want to remove this item? <div id='confirm_btns'><a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a></div>",
-			true,
-			{
-				create:function(){
-					$('#yes_remove').off().on('click',function(e){
-						e.preventDefault();
-						e.stopPropagation();
-						var url = btn.data('remove_item_url');
-						$( "#mess" ).dialog( "close" );
-						$.popup_message("<h4><i class='fa fa-spinner fa-spin'></i> Processing</h4>",true);
-						$.get(url, function(){
-							$( "#mess" ).dialog( "close" );
-							btn.closest('tr').fadeOut(500,function(){
-								$(this).remove();
-								if(table.find('tbody tr').length<=0){
-									table.find('tbody').append('<tr><td colspan="'+table.find('thead th').length+'" style="text-align:center">No Items in your cart currently</td></tr>');
-								}
-							});
-						});
-					});
-					$('#no_remove').off().on('click',function(e){
-						e.preventDefault();
-						e.stopPropagation();
-						$( "#mess" ).dialog( "close" );
-					});
-				}
-			}
-			);
-
-		});
 		
 		/* remeber me block js */
 		$(document).ready(function(){
-			
+            $(".spine-sitenav .parent a span").on("click",function(){
+                $(this).closest("a").trigger("click");
+            });
+            $(window).on("resize",function(){
+                $(".scalebase").css("font-size",function(){
+                   var ratio = $(this).data("scaleratio") || 0.00825;
+                   return ($(this).width() * ratio); //we know the max from the main width but we hard coded the ratio value
+                });
+             }).trigger("resize");
+        
+            $('.remove-cart-item').off().on('click',function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                var btn=$(this);
+                var table=btn.closest('table');
+                $.popup_message(
+                "Are you sure you want to remove this item? <div id='confirm_btns'><a href='#' id='yes_remove' class='spine-button'>Yes</a><a href='#' id='no_remove'  class='spine-button'>No</a></div>",
+                true,
+                {
+                    create:function(){
+                        $('#yes_remove').off().on('click',function(e){
+                            e.preventDefault();
+                            e.stopPropagation();
+                            var url = btn.data('remove_item_url');
+                            $( "#mess" ).dialog( "close" );
+                            $.popup_message("<h4><i class='fa fa-spinner fa-spin'></i> Processing</h4>",true);
+                            $.get(url, function(){
+                                $( "#mess" ).dialog( "close" );
+                                btn.closest('tr').fadeOut(500,function(){
+                                    $(this).remove();
+                                    if(table.find('tbody tr').length<=0){
+                                        table.find('tbody').append('<tr><td colspan="'+table.find('thead th').length+'" style="text-align:center">No Items in your cart currently</td></tr>');
+                                    }
+                                });
+                            });
+                        });
+                        $('#no_remove').off().on('click',function(e){
+                            e.preventDefault();
+                            e.stopPropagation();
+                            $( "#mess" ).dialog( "close" );
+                        });
+                    }
+                }
+                );
+    
+            });
+            
+            $('.sorting_button').on('click',function(){
+                
+                if( $(this).is('.open') ){
+                    $(this).removeClass('open');
+                    $('.sorting_block').removeClass('open');
+                }else{
+                    $(this).addClass('open');
+                    $('.sorting_block').addClass('open');
+                }
+            });
+                    
+            $('.filtering_button').on('click',function(){
+                
+                if( $(this).is('.open') ){
+                    $(this).removeClass('open');
+                    $('.filtering_block').removeClass('open');
+                }else{
+                    $(this).addClass('open');
+                    $('.filtering_block').addClass('open');
+                }
+            });
+            
+            $('#narrow-by-list dt').on('click',function(){
+                
+                if( $(this).is('.open') ){
+                    $(this).removeClass('open');
+                    $(this).next('dd').removeClass('open');
+                }else{
+                    $(this).addClass('open');
+                    $(this).next('dd').addClass('open');
+                }
+            });
+            $(document).on('click',function(e){
+                //console.log($(e.target).attr('class'));
+                if( 0 === $(e.target).closest('.filtering_area ').length ){
+                    //console.log($(e.target).attr('class'));
+                    $('.filtering_block').removeClass('open');
+                    $('.filtering_button').removeClass('open');
+                }
+                
+                if( 0 === $(e.target).closest('.sorting_area ').length ){
+                    //console.log($(e.target).attr('class'));
+                    $('.sorting_block').removeClass('open');
+                    $('.sorting_button').removeClass('open');
+                }
+    
+            });
 			$('.remember-me-box a, .remember-me-popup a').off().on('click', function(e){
 				e.preventDefault();
 				e.stopPropagation();

@@ -124,6 +124,16 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @return array
      */
+    public function getCfgSectionEffects($storeId = NULL)
+	{
+        $_adminSettings = $this->getCfgSection('effects', $storeId);
+        return $_adminSettings;
+    }
+    /**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
     public function getCfgSectionOverride($storeId = NULL)
 	{
         $_adminSettings = $this->getCfgSection('override', $storeId);
@@ -160,6 +170,21 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 		$value = $this->get_static_layout_settings( 'wsu_themecontrol_design/' . $optionString );
 		if (NULL === $value){
 			$value = Mage::getStoreConfig('wsu_themecontrol_design/' . $optionString, $storeCode);
+		}
+        return $value;
+    }
+    /**
+     * Get theme's design settings (single option)
+     *
+     * @return string
+     */
+    public function getCfgEffects($optionString, $storeCode = NULL)
+	{
+		$storeCode = $this->resoloveStoreCode($storeCode);
+		
+		$value = $this->get_static_layout_settings( 'wsu_themecontrol_effects/' . $optionString );
+		if (NULL === $value){
+			$value = Mage::getStoreConfig('wsu_themecontrol_effects/' . $optionString, $storeCode);
 		}
         return $value;
     }

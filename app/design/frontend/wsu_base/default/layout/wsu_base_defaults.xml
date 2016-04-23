@@ -98,7 +98,12 @@
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
 			<action method="addBodyClass"><class>DYNO-DEFAULT</class></action>
-		</reference>
+
+            <action method="unsetChild"><name>breadcrumbs</name></action>
+            <reference name="content">
+                <action method="insert"><child>breadcrumbs</child></action>
+            </reference>
+        </reference>
         <!--
 		<reference name="before_body_end">
 			<block type="core/template" name="adminbar" as="adminbar" before="-">
@@ -415,14 +420,16 @@
             <!--<block type="configurableswatches/catalog_media_js_list" name="configurableswatches.media.js.list" />-->
         </reference>
     </product_list>
+<!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Default category (without layered navigation) -->
 	<catalog_category_default>
-		<update handle="product_list"/>
 		<reference name="root">
-			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
 		</reference>
 		<reference name="product_list">
 			<!-- HOWTO: Change review summary template
-			<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action> -->
+				<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action>
+			-->
 			<!-- Custom static blocks -->
 			<block type="cms/block" name="block_category_above_collection">
 				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
@@ -430,8 +437,8 @@
 			<block type="cms/block" name="block_category_above_empty_collection">
 				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
 			</block>
-			<block type="catalog/product_list_aboveproduct" name="block_category_above_product" as="block_category_above_product" />
-			<block type="catalog/product_links_belowproduct" name="block_category_below_product" as="block_category_below_product" />
+			<!--<block type="catalog/product_list_aboveproduct" name="block_category_above_product" as="block_category_above_product" />
+			<block type="catalog/product_links_belowproduct" name="block_category_below_product" as="block_category_below_product" />-->
 			<block type="cms/block" name="block_category_below_collection">
 				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
 			</block>
@@ -440,11 +447,58 @@
 		<reference name="left">
 			<action method="unsetChild"><name>currency</name></action>
 		</reference>
+		<reference name="category.products">
+			<!--<block type="page/html_breadcrumbs" name="onlybreadcrumbs" as="onlybreadcrumbs"/>-->
+		</reference>
+		<reference name="content">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>breadcrumbs</name></action>			
+		</reference>
+	    <reference name="product_list_toolbar">
+			<action method="insert"><child>breadcrumbs</child></action>
+		</reference>
 	</catalog_category_default>
 
-    <catalog_category_layered>
-        <update handle="product_list"/>
-    </catalog_category_layered>
+	<!-- Category with layered navigation -->
+	<catalog_category_layered>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="catalog.leftnav">
+			<!--<action method="unsetChild"><child>state_renderers</child></action>
+            <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml">
+                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+            </block>-->
+        </reference>
+		<reference name="left">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>catalog.leftnav</name></action>
+			<action method="unsetChild"><name>currency</name></action>			
+		</reference>
+
+		<reference name="content">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>breadcrumbs</name></action>			
+		</reference>
+	    <reference name="product_list_toolbar">
+			<action method="insert"><child>breadcrumbs</child></action>
+			<action method="insert"><child>state_renderers</child></action>
+			<action method="insert"><child>left_first</child></action>
+		</reference>
+		
+		<reference name="product_list">
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_above_empty_collection">
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_below_collection">
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
+		</reference>
+	</catalog_category_layered>
 
     <catalogsearch_result_index>
         <update handle="product_list"/>

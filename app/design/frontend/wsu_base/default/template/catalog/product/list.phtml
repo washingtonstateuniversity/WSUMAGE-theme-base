@@ -30,6 +30,7 @@
 	$helpTemplate = $this->helper('wsu_themecontrol/template');
 	$helpImg = $this->helper('wsu_wsu/image');
 	
+
 	//Default image size
 	$imgWidth = 295;
 	$imgHeight = 295;
@@ -44,7 +45,7 @@
 		$hideToolbar = true;
 	}
 ?>
-
+<a id="listTop"/>
 <div class="category-products">
 	<?php if (!$hideToolbar): ?>
 		<?php echo $this->getToolbarHtml() ?>
@@ -186,9 +187,23 @@
 		if ($gc['display_addtocart'] == 2 || ($gc['display_addtolinks'] == 2 && !$gc['addtolinks_simple'])) {
 			$actionsClasses = '';
 		}
+        
+        $effects = "";
+        $animate = $theme->getCfgEffects("effects/product_grid_animation_used");
+        if($animate){
+            $animate_type = $theme->getCfgEffects("effects/product_grid_animation_type");
+            $delay = $theme->getCfgEffects("effects/product_grid_animation_base_delay");
+            $duration = $theme->getCfgEffects("effects/product_grid_animation_base_duration");
+            
+            
+            //pg- is used as we want not to animate the grid block but the items
+            //to which we have it cued in the base css
+            $effects = 'pg-animate pg-'.$animate_type.' pg-'.$delay.' pg-'.$duration;
+        }
+        
 	?>
 	
-	<ul class="flex-row justify-between products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?php echo $columnCount; ?>col<?php if($gridClasses) echo $gridClasses; ?>">
+	<ul class="flex-row justify-between effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
 		<?php foreach ($_productCollection as $_product): ?>
 			<?php 
 				$productType=$_product->getTypeID();
@@ -297,7 +312,7 @@
 
 	<?php if (!$hideToolbar): ?>
 		<div class="toolbar-bottom">
-			<?php echo $this->getToolbarHtml() ?>
+			<?php echo $this->getToolbarBlock()->setTemplate('catalog/product/list/toolbar_bottom.phtml')->toHtml();?>
 		</div>
 	<?php endif; ?>
 </div>
