@@ -228,7 +228,7 @@
 							if ($theme->getCfg('category/alt_image')) {
 								echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight);
 							}
-							echo $helpLabels->getLabels($_product); //Product labels 
+							echo "<span class='promo_lables'>" . $helpLabels->getLabels($_product) . '</span>'; //Product labels 
 						?>
 					</a>
 				
