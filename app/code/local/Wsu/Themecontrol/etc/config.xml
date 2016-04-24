@@ -279,9 +279,6 @@
 				<primary_font_family>Bitter</primary_font_family>
 				<primary_char_latin_ext>0</primary_char_latin_ext>
 			</font>
-			<effects>
-				<shadow>0</shadow>
-			</effects>
 			<page>
 				<bg_color>transparent</bg_color>
 				<bg_image></bg_image>
@@ -340,6 +337,10 @@
 				<tex></tex>
 				<inner_bg_color>#fff</inner_bg_color>
 			</main>
+            <category>
+                <bottom_pager_use_top_anchor>1</bottom_pager_use_top_anchor>
+            </category>
+            
 			<product_page>
 				<addto_icon_bg_color>#aaa</addto_icon_bg_color>
 				<addto_icon_hover_bg_color>#333</addto_icon_hover_bg_color>
@@ -429,6 +430,8 @@
 		</wsu_themecontrol_layout>
 		<wsu_themecontrol_effects>
 			<effects>
+                <shadow>0</shadow>
+                <general_reverse_on_beforeunload>1</general_reverse_on_beforeunload>
 				<product_grid_animation_used>1</product_grid_animation_used>
 				<product_grid_animation_type>fadeInUp</product_grid_animation_type>
 				<product_grid_animation_base_delay></product_grid_animation_base_delay>

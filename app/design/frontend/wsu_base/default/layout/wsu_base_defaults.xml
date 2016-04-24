@@ -442,6 +442,12 @@
 			<block type="cms/block" name="block_category_below_collection">
 				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
 			</block>
+            
+            <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
+            <reference name="toolbar_bottom">
+               <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
+            </reference>
+
 		</reference>
 		<!-- Remove currency switcher from sidebar -->
 		<reference name="left">
@@ -452,7 +458,11 @@
 		</reference>
 		<reference name="content">
 			<!-- Remove currency switcher from sidebar -->
-			<action method="unsetChild"><name>breadcrumbs</name></action>			
+			<action method="unsetChild"><name>breadcrumbs</name></action>	
+            
+
+            
+            		
 		</reference>
 	    <reference name="product_list_toolbar">
 			<action method="insert"><child>breadcrumbs</child></action>
@@ -487,6 +497,13 @@
 		</reference>
 		
 		<reference name="product_list">
+        
+               
+            <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
+            <reference name="toolbar_bottom">
+               <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
+            </reference>
+
 			<!-- Custom static blocks -->
 			<block type="cms/block" name="block_category_above_collection">
 				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>

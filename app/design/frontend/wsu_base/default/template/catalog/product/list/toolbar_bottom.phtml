@@ -1,14 +1,9 @@
-<?php if($this->getCollection()->getSize()): ?>
-<div class="cat_list_header_bottom">
-<?php //echo $this->getLayout()->createBlock('page/html_pager', 'bottom.pager')->setTemplate('page/html/bottom-pager.phtml')->toHtml(); 
+<?php $filteredList = $this->getLayout()
+        ->getBlockSingleton('catalog/product_list')
+        ->getLoadedProductCollection();
 
-$blocks = Mage::app()->getLayout()->getAllBlocks();
-//$blockNames = array_keys($blocks);
-//var_dump($blocks['product_list_toolbar_pager']);
-?>
-
-<?php echo $this->getPagerHtml() ?>
-	<?php echo $this->getProductListToolbarPagerBlock()->setTemplate('page/html/bottom-pager.phtml')->toHtml();?>
-	product_list_toolbar_pager
-</div>
+if($filteredList->getSize()):  ?>
+    <div class="flex-row wrap cat_list_header_bottom">
+        <?=$this->getChildHtml('bottom_pager')?>
+    </div>
 <?php endif ?>
