@@ -9,16 +9,16 @@
 
 $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 @each $current-delay in $delay-list {
-    $i: index($delay-list, $current-delay);
-    .delay-#{$i-1} { 
+    $i: index($delay-list, $current-delay) - 1;
+    .delay-#{$i} { 
         animation-delay: $current-delay;
     }
 }
 
 $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 @each $current-duration in $duration-list {
-    $i: index($duration-list, $current-duration);
-    .duration-#{$i-1} { 
+    $i: index($duration-list, $current-duration) - 1;
+    .duration-#{$i} { 
         animation-duration: $current-duration;
     }
 }
@@ -28,7 +28,7 @@ $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 .fadeIn {
     animation-name: fadeIn;
 }
-.fadeIn.reverse,.fadeOut {
+.fadeIn.reverse, .fadeIn.reverse,.fadeOut {
     animation-name: fadeIn;
     animation-direction:reverse;
 }
@@ -60,11 +60,11 @@ $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 }
 
 /*==== FADE IN UP ===*/
-.fadeInUp {
+.fadeInUp,.fadeOutDown.reverse {
     animation-name: fadeInUp;
 }
-.fadeInUp.reverse  {
-    animation-direction:reverse;
+.fadeInUp.reverse,.fadeOutDown  {
+    animation-name: fadeOutDown;
 }
 @keyframes fadeInUp {
     from {
@@ -74,6 +74,16 @@ $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
     to {
         opacity: 1;
         transform: none;
+    }
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: none;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
 }
 

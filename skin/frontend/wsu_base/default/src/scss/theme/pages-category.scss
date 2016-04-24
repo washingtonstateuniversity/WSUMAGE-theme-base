@@ -63,14 +63,8 @@
 #mass_products {
     padding: 0;
 }
-.cat_list_header_top {
-    display: flex;
-    flex-flow: row wrap;
-}
-.cat_list_header_bottom {
-    display: flex;
-    flex-flow: row wrap;
-}
+.cat_list_header_top { }
+.cat_list_header_bottom { }
 .filtering_result_labels {
     flex-grow: 2;
     line-height: 44px;
@@ -445,29 +439,38 @@ ul.products-list ul.add-to-links:after {
 
 
 .catalog-category-view{
-    .pg-animate .item {
-        animation-duration: .75s;
-        animation-fill-mode: both;
-        animation-name: fadeInUp;
-        animation-delay: 0.01s;
-        &:nth-child(2n+0) {
-            animation-delay: 0.05s;
+    .pg-animate{ 
+        .item {
+            animation-duration: .75s;
+            animation-fill-mode: both;
+            
+            animation-delay: 0.01s;
+            &:nth-child(2n+0) {
+                animation-delay: 0.05s;
+            }
+            &:nth-child(3n+0) {
+                animation-delay: 0.20s;
+            }
+            &:nth-child(5n+0) {
+                animation-delay: 0.35s;
+            }
+            &:nth-child(7n+0) {
+                animation-delay: 0.15s;
+            }
+            
+            animation-name: fadeInUp;
         }
-        &:nth-child(3n+0) {
-            animation-delay: 0.20s;
-        }
-        &:nth-child(5n+0) {
-            animation-delay: 0.35s;
-        }
-        &:nth-child(7n+0) {
-            animation-delay: 0.15s;
+        &.reverse{
+            .item {
+                animation-name: fadeOutDown;
+            }
         }
     }
     
     $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
     @each $current-delay in $delay-list {
-        $i: index($delay-list, $current-delay);
-        .pg-delay-#{$i-1} .item{ 
+        $i: index($delay-list, $current-delay) - 1;
+        .pg-delay-#{$i} .item{ 
             animation-delay: $current-delay;
             &:nth-child(2n+0) {
                 animation-delay: $current-delay + 0.05s;
@@ -486,16 +489,10 @@ ul.products-list ul.add-to-links:after {
     
     $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
     @each $current-duration in $duration-list {
-        $i: index($duration-list, $current-duration);
-        .pg-duration-#{$i-1} .item{ 
+        $i: index($duration-list, $current-duration) - 1;
+        .pg-duration-#{$i} .item{ 
             animation-duration: $current-duration;
         }
-    }
-    
-    
-    
-    &.reverse .item {
-        animation-name: fadeInUpReverse ;
     }
 }
 

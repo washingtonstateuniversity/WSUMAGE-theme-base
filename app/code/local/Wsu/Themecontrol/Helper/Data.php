@@ -461,6 +461,16 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
                 }
             }
         }
+
+        $reverse = $this->getCfgEffects("effects/general_reverse_on_beforeunload");
+        if($reverse){
+            $classes .= ' reverse ';
+        }
+        
+        
+        
+        
+        
         return $classes;
     }
 	

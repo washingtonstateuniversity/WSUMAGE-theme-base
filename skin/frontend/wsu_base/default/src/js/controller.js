@@ -59,6 +59,20 @@
             $(".spine-sitenav .parent a span").on("click",function(){
                 $(this).closest("a").trigger("click");
             });
+            
+            $(window).on("beforeunload", function() {
+                if($("body.reverse").length){
+                    $(".fadeInRight").addClass("reverse");
+                    $(".fadeInLeft").addClass("reverse");
+                    $(".fadeInUp").addClass("reverse");
+                    $(".fadeInDown").addClass("reverse");
+                    $(".fadeIn").addClass("reverse");
+                    $(".category-products-grid").addClass("reverse");
+                }
+            });
+            
+            
+            
             $(window).on("resize",function(){
                 $(".scalebase").css("font-size",function(){
                    var ratio = $(this).data("scaleratio") || 0.00825;
