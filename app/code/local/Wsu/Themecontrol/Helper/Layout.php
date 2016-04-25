@@ -44,6 +44,82 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		}
 		return $extracted;
 	}
+
+	public function getLayoutOptions($ref, $extract=array())
+    {
+		$BlockName = str_replace('.','_',$ref->getNameInLayout());
+		$ControllerName = $ref->getRequest()->getControllerName();
+		$ActionName = $ref->getRequest()->getActionName();
+		$RouteName = $ref->getRequest()->getRouteName();
+		$ModuleName = $ref->getRequest()->getModuleName();
+		
+		$fullpath = $RouteName.'_'.$ControllerName.'_'.$ActionName;
+		echo "<!--\r";
+        echo "route :";
+		var_dump($fullpath);
+		echo "\rblock:";
+		var_dump($BlockName);
+		echo "\r-->";
+		$theme = $ref->helper('wsu_themecontrol');
+		//$block_settings = $theme->getCfgLayout($fullpath.'/used'.'_'.$BlockName);
+		//$extractables = !empty($extract) ? $extract : array('row_type','padding','padding_flanks','padding_ends');
+		//$extracted = array();
+		//var_dump($block_settings);
+		/*foreach($extractables as $name){
+			$setting = null;
+			if($block_settings==1){
+				$setting = $theme->getCfgLayout($fullpath.'/'.$name.'_'.$BlockName);
+				//var_dump($setting);
+				//var_dump($fullpath.'/'.$name.'_'.$BlockName);
+			}
+			if($setting==null){
+				$setting = $theme->getCfgLayout('layout_default/'.$name.'_'.$BlockName);
+				//var_dump('layout_default/'.$name.'_'.$BlockName);
+				//var_dump($setting);
+			}
+			
+			$extracted[$name] = $setting;
+		}*/
+        
+        
+        $layouts = [
+        
+            "product_info"=>[
+                    "product-content"=>["size"=>"fifths-3","order"=>"order-1"],
+                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"],         
+                ],
+            "product_info_media"=>[
+                    "media-block"=>["type"=>"flex-row"],
+                    "product-image"=>["size"=>"sixths-5","order"=>"order-2"],
+                    "more-views"=>["size"=>"sixths-1","order"=>"order-1"],
+                    "more-views-imgs"=>["type"=>"flex-column"]
+                ],        
+            "product_list"=>[
+                    "category-products-grid"=>["type"=>"flex-row","spacing"=>"justify-between"]
+                ]
+        
+        
+        
+        
+        ];
+        
+        
+        $tmp = [
+
+                ];
+        
+        
+        
+        
+        
+		return isset($layouts[$BlockName]) ? $layouts[$BlockName] : $tmp;
+	}
+
+
+
+
+
+
 	
 	public function getMapBlockMapping($block,$values)
     {

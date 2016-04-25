@@ -8,24 +8,8 @@ $template = $this->helper('wsu_themecontrol/template');
 ?>
 
 <?php
-$layout = $this->helper('wsu_themecontrol/layout')
-			->setupLayout( 
-				$this, 
-				array( 
-					'row_type',
-					'padding',
-					'padding_flanks',
-					'padding_ends'
-				 )
-			);
-            
-$_layout = [
-    "product-content"=>["size"=>"fifths-3","order"=>"order-1"],
-    "product-media"=>["size"=>"fifths-2","order"=>"order-2"],         
-];
-            
+$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 ?>
-
 
 <?php $_product = $this->getProduct(); ?>
 <script type="text/javascript">

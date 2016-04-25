@@ -30,6 +30,7 @@
 	$helpTemplate = $this->helper('wsu_themecontrol/template');
 	$helpImg = $this->helper('wsu_wsu/image');
 	
+    $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 
 	//Default image size
 	$imgWidth = 295;
@@ -204,7 +205,8 @@
         
 	?>
 	<a id="listTop"></a>
-	<ul class="flex-row justify-between effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
+    
+	<ul class="category-products-grid <?=$_layout["category-products-grid"]["type"]?> <?=$_layout["category-products-grid"]["spacing"]?> effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
 		<?php foreach ($_productCollection as $_product): ?>
 			<?php 
 				$productType=$_product->getTypeID();
