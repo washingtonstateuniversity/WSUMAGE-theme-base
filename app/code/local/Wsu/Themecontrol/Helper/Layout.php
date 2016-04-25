@@ -97,6 +97,7 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
                     "short_description_area"=>["order"=>"order-1"],
                     "other_area"=>["order"=>"order-6"],
                     "container1_area"=>["order"=>"order-2"],
+                    "description_area"=>["order"=>"order-10"],
 
                 ],
             "product_info_media"=>[

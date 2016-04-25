@@ -111,6 +111,19 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
+ 
+             <?php if ($_product->getDescription()):?>
+            <?php
+                    $description_class="";
+                    $description_class.=$_layout["description_area"]["order"]." ";
+                    ?>
+                <div class="description <?=$description_class?>">
+                    <h2><?php echo $this->__('Full Overview') ?></h2>
+                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description') ?></div>
+                </div>
+            <?php endif;?>
+ 
+ 
             
             <?php 
                 $other = $this->getChildHtml('other');
