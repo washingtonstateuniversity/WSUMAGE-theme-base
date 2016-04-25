@@ -85,8 +85,19 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
         $layouts = [
         
             "product_info"=>[
-                    "product-content"=>["size"=>"fifths-3","order"=>"order-1"],
-                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"]
+                    "product-content"=>["type"=>"flex-column","size"=>"fifths-3","order"=>"order-1"],
+                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"],
+                    
+                    "email_area"=>["order"=>"order-8"],
+                    "review_area"=>["order"=>"order-9"],
+                    "alert_urls_area"=>["order"=>"order-7"],
+                    "product_type_data_area"=>["order"=>"order-3"],
+                    "tier_price_area"=>["order"=>"order-4"],
+                    "extrahint_area"=>["order"=>"order-5"],
+                    "short_description_area"=>["order"=>"order-1"],
+                    "other_area"=>["order"=>"order-6"],
+                    "container1_area"=>["order"=>"order-2"],
+
                 ],
             "product_info_media"=>[
                     "media-block"=>["type"=>"flex-row"],

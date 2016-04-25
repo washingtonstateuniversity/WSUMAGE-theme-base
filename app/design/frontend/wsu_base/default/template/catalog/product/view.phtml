@@ -23,7 +23,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
         <div class="product-media grid-part <?=$_layout["product-media"]["size"]?> <?=$_layout["product-media"]["order"]?>">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-        <div class="product-content <?=$_layout["product-content"]["size"]?> <?=$_layout["product-content"]["order"]?>">
+        <div class="product-content <?=$_layout["product-content"]["type"]?> <?=$_layout["product-content"]["size"]?> <?=$_layout["product-content"]["order"]?>">
             <div class="no-display">
                 <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
@@ -33,14 +33,61 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             </div>
 
             <?php if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+            <?php
+                    $email_class="";
+                    $email_class.=$_layout["email_area"]["order"]." ";
+                    ?>
+
+                <div class="email-friend  <?=$email_class?>">
+                <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a>
+                </div>
             <?php endif; ?>
 
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
+            <?php 
+                $review = $this->getReviewsSummaryHtml($_product, false, true);
+                if( "" !== $review){
+                    $review_class="";
+                    $review_class.=$_layout["review_area"]["order"]." ";
+                    echo "<div id='review_area' class='".$review_class."'>".$review."</div>";
+                }
+            ?>
+            
+            <?php 
+                $alert_urls = $this->getChildHtml('alert_urls');
+                if( "" !== $alert_urls){
+                    $alert_urls_class="";
+                    $alert_urls_class.=$_layout["alert_urls_area"]["order"]." ";
+                    echo "<div id='alert_urls_area' class='".$alert_urls_class."'>".$alert_urls."</div>";
+                }
+            ?>
+
+            <?php 
+                $product_type_data = $this->getChildHtml('product_type_data');
+                if( "" !== $product_type_data){
+                    $product_type_data_class="";
+                    $product_type_data_class.=$_layout["product_type_data_area"]["order"]." ";
+                    echo "<div id='product_type_data_area' class='".$product_type_data_class."'>".$product_type_data."</div>";
+                }
+            ?>
+
+            <?php 
+                $tier_price = $this->getTierPriceHtml();
+                if( "" !== $tier_price){
+                    $tier_price_class="";
+                    $tier_price_class.=$_layout["tier_price_area"]["order"]." ";
+                    echo "<div id='tier_price_area' class='".$tier_price_class."'>".$tier_price."</div>";
+                }
+            ?>
+
+            <?php 
+                $extrahint = $this->getChildHtml('extrahint');
+                if( "" !== $extrahint){
+                    $extrahint_class="";
+                    $extrahint_class.=$_layout["extrahint_area"]["order"]." ";
+                    echo "<div id='extrahint_area' class='".$extrahint_class."'>".$extrahint."</div>";
+                }
+            ?>
+
 
             <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
@@ -55,16 +102,37 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             <?php endif; ?>
 
             <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
+            <?php
+                    $short_description_class="";
+                    $short_description_class.=$_layout["short_description_area"]["order"]." ";
+                    ?>
+                <div class="short-description <?=$short_description_class?>">
                     <h2><?php echo $this->__('Quick Overview') ?></h2>
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
+            
+            <?php 
+                $other = $this->getChildHtml('other');
+                if( "" !== $other){
+                    $other_class="";
+                    $other_class.=$_layout["other_area"]["order"]." ";
+                    echo "<div id='other_area' class='".$other_class."'>".$other."</div>";
+                }
+            ?>
+            
+            <?php if ($_product->isSaleable() && $this->hasOptions()):
+            
+                $container1 = $this->getChildChildHtml('container1', '', true, true);
+                if( "" !== $container1){
+                    $container1_class="";
+                    $container1_class.=$_layout["container1_area"]["order"]." ";
+                    echo "<div id='other_area' class='".$container1_class."'>".$container1."</div>";
+                }
+                endif;
+            ?>
+            
 
-            <?php echo $this->getChildHtml('other');?>
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
 
         </div>
 
