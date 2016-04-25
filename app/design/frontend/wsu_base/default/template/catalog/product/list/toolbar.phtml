@@ -7,8 +7,11 @@
         $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" style="width:100%"/></p>';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
+    
+    $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
+    
 ?>
-<div class="flex-row wrap cat_list_header_top">
+<div class="toolbox-top <?=$_layout["toolbox-top"]["type"]?> <?=$_layout["toolbox-top"]["flow"]?> cat_list_header_top">
 	<?=$this->getChildHtml('breadcrumbs') ?>
 	<div class="sorting_area ">
 		<h4 class="sorting_button <?=$this->getCurrentDirection();?>">
@@ -41,7 +44,7 @@
 </div>
 <div class="flex-row wrap designer_hr"></div>
 <?php if($this->getCollection()->getSize()): ?>
-<div class="flex-row wrap cat_list_header_bottom">
+<div class="toolbox-bottom <?=$_layout["toolbox-bottom"]["type"]?> <?=$_layout["toolbox-bottom"]["flow"]?> cat_list_header_bottom">
     <div class="filtering_result_labels">
 		<span class="match_count"><?=$this->getTotalNum()?> <?=( 1 == $this->getTotalNum() ? $this->__("Match") : $this->__("Matches") )?></span>
 		<?php if($this->getLastPageNum()>1): ?>

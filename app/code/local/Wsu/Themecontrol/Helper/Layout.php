@@ -96,8 +96,11 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
                 ],        
             "product_list"=>[
                     "category-products-grid"=>["type"=>"flex-row","spacing"=>"justify-between"]
+                ],
+            "product_list_toolbar"=>[
+                    "toolbox-top"=>["type"=>"flex-row", "flow"=>"wrap"],
+                    "toolbox-bottom"=>["type"=>"flex-row", "flow"=>"wrap"]
                 ]
-        
         
         
         
