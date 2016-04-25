@@ -188,7 +188,7 @@ $url_9: url(images/bg_x.png);
     }
 }
 .product-view {
-    .product-shop {
+    .product-content {
         /*float: right;
         width: 363px;*/
         .availability {
@@ -199,6 +199,7 @@ $url_9: url(images/bg_x.png);
             }
         }
         .product-name {
+            display:none;
             margin: 0 0 5px;
             h1 {
                 font: bold 13px/1.25 Arial, Helvetica, sans-serif;

@@ -3032,6 +3032,20 @@ between the header and the footer).</comment>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</bottom_pager_use_top_anchor>
+                        <pager_show_numbering translate="label">
+							<label>Show all page numbers in pager</label>
+							<comment></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</pager_show_numbering>                        
+                        
+                        
+                        
+                        
 					</fields>
 				</category>
 <!-- wsu_themecontrol_design/product_page  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->

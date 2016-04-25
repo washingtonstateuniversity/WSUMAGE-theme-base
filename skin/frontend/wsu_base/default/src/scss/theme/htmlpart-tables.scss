@@ -7,11 +7,11 @@ $url_0: url(images/bkg_toolbar.gif);
 $url_1: url(images/bkg_collapse.gif);
 
 .pager {
-    font-size: 11px;
+    /*font-size: 11px;
     background: $white $url_0 0 100% repeat-x;
     padding: 4px 8px;
     border-top: 1px solid $gray_221;
-    text-align: center;
+    text-align: center;*/
     .amount {
         float: left;
         margin: 0;
@@ -29,7 +29,7 @@ $url_1: url(images/bkg_collapse.gif);
         }
     }
     .pages {
-        margin: 0 140px;
+        /*margin: 0 140px;*/
         ol {
             display: inline;
         }
@@ -104,6 +104,11 @@ $url_1: url(images/bkg_collapse.gif);
     }
     .previous_jump{
         content:"\f100";	
+    }
+}
+.cat_list_header_bottom{
+    .pager .pages {
+        text-align: center;
     }
 }
 .sorter {

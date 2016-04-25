@@ -339,6 +339,7 @@
 			</main>
             <category>
                 <bottom_pager_use_top_anchor>1</bottom_pager_use_top_anchor>
+                <pager_show_numbering>1</pager_show_numbering>
             </category>
             
 			<product_page>
