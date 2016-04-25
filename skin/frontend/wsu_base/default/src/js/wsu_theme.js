@@ -32,6 +32,6 @@ if (!Array.prototype.indexOf) {
 				}
 				return options;
 			});
-		},
+		}
 	});
 })( jQuery, window, jQuery.wsu_theme||(jQuery.wsu_theme={}), _d );

@@ -364,7 +364,7 @@
 							//jObj.remove();
 							$('body').css({overflow:"auto"});
 						}
-					},
+					}
 				});
 			});
 			
