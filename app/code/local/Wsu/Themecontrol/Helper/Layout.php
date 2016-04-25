@@ -86,7 +86,7 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
         
             "product_info"=>[
                     "product-content"=>["size"=>"fifths-3","order"=>"order-1"],
-                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"],         
+                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"]
                 ],
             "product_info_media"=>[
                     "media-block"=>["type"=>"flex-row"],
@@ -95,13 +95,19 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
                     "more-views-imgs"=>["type"=>"flex-column"]
                 ],        
             "product_list"=>[
-                    "category-products-grid"=>["type"=>"flex-row","spacing"=>"justify-between"]
+                    "category-products-grid"=>["type"=>"flex-row","spacing"=>"justify-between"],
+                    "products-grid-item"=>["type"=>"flex-column"],
+                    "products-grid-item-image"=>["order"=>"order-1"],
+                    "products-grid-item-name"=>["order"=>"order-2"],
+                    "products-grid-item-price"=>["order"=>"order-4"],
+                    "products-grid-item-rating"=>["order"=>"order-3"],
+                    "products-grid-item-action"=>["order"=>"order-5"],
                 ],
             "product_list_toolbar"=>[
                     "toolbox-top"=>["type"=>"flex-row", "flow"=>"wrap"],
                     "toolbox-bottom"=>["type"=>"flex-row", "flow"=>"wrap"]
-                ]
-        
+                ],
+            
         
         
         ];

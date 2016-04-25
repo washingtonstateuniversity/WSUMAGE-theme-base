@@ -409,6 +409,8 @@ span {
     display: inline-block;
     float: right;
     position: relative;
+    margin: 0px !important;
+    padding: 0px;
 }
 .promo_lables {
     position: absolute;
@@ -572,7 +574,7 @@ ul.products-list ul.add-to-links:after {
         height: 170px;*/
         border: 1px solid $gray_221;
         /*border-width: 1px 1px 1px 0;*/
-        margin: 0 0 10px;
+        /*margin: 0 0 10px;*/
     }
     .product-name {
         font-size: 12px;
