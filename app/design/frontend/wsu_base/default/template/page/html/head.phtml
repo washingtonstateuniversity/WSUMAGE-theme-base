@@ -1,9 +1,15 @@
 <?php $theme = Mage::helper('wsu_themecontrol'); ?>
 <meta http-equiv="Content-Type" content="<?=$this->getContentType();?>" />
 <title><?=$this->getTitle();?></title>
-<?php if ($theme->getCfgLayout('responsive/responsive')): ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<?php endif; ?>
+
+<link rel="dns-prefetch" href="//repo.wsu.edu">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//code.jquery.com">
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
 <meta name="description" content="<?=htmlspecialchars($this->getDescription());?>" />
 <meta name="keywords" content="<?=htmlspecialchars($this->getKeywords());?>" />
 <meta name="robots" content="<?=htmlspecialchars($this->getRobots());?>" />
