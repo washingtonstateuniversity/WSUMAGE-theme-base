@@ -147,7 +147,7 @@
 			
 		</reference>
 
-		
+		<remove name="SHORTCUT_popup" /><!-- paypal not allowed at WSU -->
 	</default>
 	
 	
