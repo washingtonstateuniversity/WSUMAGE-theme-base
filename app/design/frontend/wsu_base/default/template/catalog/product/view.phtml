@@ -18,7 +18,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
     <div class="product-essential">
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="flex-row">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="flex-row column-at-480 full-width-at-480">
         
         <div class="product-media grid-part <?=$_layout["product-media"]["size"]?> <?=$_layout["product-media"]["order"]?>">
             <?php echo $this->getChildHtml('media') ?>
