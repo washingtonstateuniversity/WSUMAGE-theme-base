@@ -1215,4 +1215,9 @@ $url_9: url(images/bg_x.png);
     .has-image .swatch-label {
         padding: 0;
     }
+    ol{
+        overflow-y: scroll;
+        max-height: 250px;
+        overflow-x: hidden;
+    }
 }
