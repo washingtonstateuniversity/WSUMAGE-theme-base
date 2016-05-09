@@ -78,6 +78,18 @@
                    var ratio = $(this).data("scaleratio") || 0.00825;
                    return ($(this).width() * ratio); //we know the max from the main width but we hard coded the ratio value
                 });
+                
+                
+                if($('.filtering_button').length){
+                    var btn = $('.filtering_button');
+                    var offset = btn.offset();
+                    if ((offset.left - $(document).scrollLeft()) <= $(".filtering_block").width() ){
+                        $(".filtering_block").css("left",0);
+                    }else{
+                        $(".filtering_block").css("left","");
+                    }
+                }
+
              }).trigger("resize");
         
             $('.remove-cart-item').off().on('click',function(e){
