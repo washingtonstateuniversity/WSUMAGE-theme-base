@@ -101,25 +101,28 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 </div>
             <?php endif; ?>
 
-            <?php if ($_product->getShortDescription()):?>
+            <?php $short = trim($_product->getShortDescription());
+                if ($short):?>
             <?php
                     $short_description_class="";
                     $short_description_class.=$_layout["short_description_area"]["order"]." ";
                     ?>
                 <div class="short-description <?=$short_description_class?>">
                     <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                    <div class="std"><?=$short?></div>
                 </div>
             <?php endif;?>
  
-             <?php if ($_product->getDescription()):?>
+             <?php 
+            $full = trim($_product->getDescription());
+            if ($full && $full != $short):?>
             <?php
                     $description_class="";
                     $description_class.=$_layout["description_area"]["order"]." ";
                     ?>
                 <div class="description <?=$description_class?>">
                     <h2><?php echo $this->__('Full Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description') ?></div>
+                    <div class="std"><?=$full?></div>
                 </div>
             <?php endif;?>
  
