@@ -179,7 +179,27 @@
 					<show_in_website>1</show_in_website>
 					<show_in_store>1</show_in_store>
 				</hint>
-				
+                <general translate="label comment">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<comment></comment>
+                    <fields>
+                        <use_settings_file translate="label comment">
+							<label>Use settings file</label>
+							<comment></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</use_settings_file>
+					</fields>
+				</general>
 <!-- wsu_themecontrol/spine_social  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 				<spine_social translate="label comment">
                     <label>Spine Social Media Options</label>
