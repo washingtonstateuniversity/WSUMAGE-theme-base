@@ -5119,7 +5119,40 @@ between the header and the footer).</comment>
 				</editor>
 			</groups>
 		</wsu_themecontrol_override>
-		
+<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- wsu_themecontrol_override  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->		
+		<wsu_themecontrol_globaljs translate="label comment" module="wsu_themecontrol">
+			<label>globaljs</label>
+			<tab>wsu_themecontrol</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>60</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+            <groups>
+				<editor translate="label comment">
+                    <label>globaljs</label>
+                    <frontend_type>text</frontend_type>
+					<expanded>1</expanded>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<globaljs translate="label comment">
+                            <label>globaljs</label>
+                            <frontend_type>editor</frontend_type>
+    						<frontend_model>wsu_themecontrol/adminhtml_system_config_editor</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </globaljs>
+					</fields>
+				</editor>
+			</groups>
+		</wsu_themecontrol_globaljs>
 		
 		
     </sections>

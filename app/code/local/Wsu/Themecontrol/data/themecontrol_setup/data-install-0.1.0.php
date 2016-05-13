@@ -14,5 +14,6 @@ Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('grid',   N
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('layout', NULL, NULL);
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('design', NULL, NULL);
 Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('override', NULL, NULL);
+Mage::getSingleton('wsu_themecontrol/cssgen_generator')->generateCss('globaljs', NULL, NULL);
 
 $installer->endSetup();

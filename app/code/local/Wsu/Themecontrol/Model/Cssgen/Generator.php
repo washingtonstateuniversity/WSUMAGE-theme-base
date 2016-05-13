@@ -27,7 +27,7 @@ class Wsu_Themecontrol_Model_Cssgen_Generator extends Mage_Core_Model_Abstract {
         if (!Mage::app()->getStore($storeCode)->getIsActive())
             return;
         $storeMarker = '_' . $storeCode;
-        $fileName = $section . $storeMarker . '.css';
+        $fileName = $section . $storeMarker . ($section==="globaljs"?'.js':'.css');
         $filePath = Mage::helper('wsu_themecontrol/cssgen')->getGeneratedCssDir() . $fileName;
         $template = 'wsu/themecontrol/css/' . $section . '.phtml';
         Mage::register('cssgen_store', $storeCode);

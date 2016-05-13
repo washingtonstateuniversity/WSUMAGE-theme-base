@@ -39,4 +39,15 @@ class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Control
         Mage::getSingleton('wsu_themecontrol/cssgen_generate')->generateCss('override', $website, $store);
         $this->getResponse()->setRedirect($themecontrol_override_url);
     }
+    public function globaljsAction()
+    {
+        $website = Mage::app()->getRequest()->getParam('website');
+        $store = Mage::app()->getRequest()->getParam('store');
+        $themecontrol_globaljs_url = $this->getUrl('adminhtml/system_config/edit/section/wsu_themecontrol_globaljs', array(
+            'website' => $website,
+            'store' => $store
+        ));
+        Mage::getSingleton('wsu_themecontrol/cssgen_generate')->generateCss('globaljs', $website, $store);
+        $this->getResponse()->setRedirect($themecontrol_globaljs_url);
+    }
 }

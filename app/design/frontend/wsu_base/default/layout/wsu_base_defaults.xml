@@ -70,11 +70,16 @@
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getOverrideFile" /></action>
+            
+            
+            
+            
 				<!--
 			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
 -->
 			<!--<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />-->
 			<action method="addItem"><type>skin_js</type><name>src/js/custom.js</name></action>
+            <action method="addItem"><type>skin_js</type><name helper="wsu_themecontrol/cssgen/getGlobalJSFile" /></action>
 		</reference>
 <!-- Header ====================================================================== -->
 		<reference name="header">

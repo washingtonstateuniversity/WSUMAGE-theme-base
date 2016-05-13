@@ -23,6 +23,10 @@ class Wsu_Themecontrol_Model_Observer {
 			$websiteCode = Mage::app()->getRequest()->getParam('website');
 			$storeCode = Mage::app()->getRequest()->getParam('store');
 			$cssgen->generateCss('override', $websiteCode, $storeCode);
+		}elseif ($section == 'wsu_themecontrol_globaljs'){
+			$websiteCode = Mage::app()->getRequest()->getParam('website');
+			$storeCode = Mage::app()->getRequest()->getParam('store');
+			$cssgen->generateCss('globaljs', $websiteCode, $storeCode);
 		}elseif ($section == 'wsu_themecontrol'){
 			$websiteCode = Mage::app()->getRequest()->getParam('website');
 			$storeCode = Mage::app()->getRequest()->getParam('store');

@@ -28,6 +28,10 @@
 										<title>CSS Override</title>
 										<sort_order>1</sort_order> 
                                     </wsu_themecontrol_override>
+									<wsu_themecontrol_globaljs translate="title" module="wsu_themecontrol">
+										<title>Global js</title>
+										<sort_order>1</sort_order> 
+                                    </wsu_themecontrol_globaljs>
                                 </children>
                             </config>
                         </children>

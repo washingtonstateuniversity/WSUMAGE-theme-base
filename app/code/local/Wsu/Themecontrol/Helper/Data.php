@@ -61,7 +61,7 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
 	 * Load a spine settings file value if it exists
 	 * @return string
 	 */
-	public function get_static_layout_settings( $path )
+	public function get_static_layout_settings( $path , $storeCode = NULL)
 	{
         $use_settings_file = Mage::getStoreConfig('wsu_themecontrol/general/use_settings_file', $storeCode);
 
@@ -146,7 +146,16 @@ class Wsu_Themecontrol_Helper_Data extends Mage_Core_Helper_Abstract
         return $_adminSettings;        
     }
     
-    
+    /**
+     * Get theme's design section from the configuration array
+     *
+     * @return array
+     */
+    public function getCfgSectionGlobaljs($storeId = NULL)
+	{
+        $_adminSettings = $this->getCfgSection('globaljs', $storeId);
+        return $_adminSettings;        
+    }
     
     
     /**

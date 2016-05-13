@@ -74,4 +74,17 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract
     {
         return $this->_generatedCssFolder . 'override_' . Mage::app()->getStore()->getCode() . '.css';
     }
+    
+    /**
+     * Get file path: CSS Override
+     *
+     * @return string
+     */
+    public function getGlobalJSFile()
+    {
+        return $this->_generatedCssFolder . 'globaljs_' . Mage::app()->getStore()->getCode() . '.js';
+    }
+    
+    
+    
 }
