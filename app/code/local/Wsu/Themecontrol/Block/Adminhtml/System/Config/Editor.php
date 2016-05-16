@@ -9,7 +9,8 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminht
 
 		$html = '
 		<style>
-		#wsu_themecontrol_override_editor_override{
+		#wsu_themecontrol_override_editor_override,
+		#wsu_themecontrol_globaljs_editor_globaljs{
 			width:100%;
 			min-height:500px;
 			height:auto;
