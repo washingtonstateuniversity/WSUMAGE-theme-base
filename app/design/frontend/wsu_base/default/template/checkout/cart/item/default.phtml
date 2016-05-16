@@ -21,21 +21,10 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>
-            <?php echo "<!--"; 
-			var_dump($_option);
-			echo "-->";
-			
-			
-			?>
-            
-            
-            
-            
-            
             <dt><?php echo $this->escapeHtml($_option['label']) ?></dt>
             <?php if( false !== strpos($_option['value'],'useHTMLOutput')): ?>
             	<dd>
-                	<?=$_option['value']?>
+                	<?=$_option['value'];?>
                 </dd>
             <?php else: ?>
             	<?php $_formatedOptionValue = $this->getFormatedOptionValue($_option);?>
