@@ -24,7 +24,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
             <dt><?php echo $this->escapeHtml($_option['label']) ?></dt>
             <?php if( false !== strpos($_option['value'],'useHTMLOutput')): ?>
             	<dd>
-                	<?=$_option['value'];?>
+                	<?=htmlspecialchars_decode($_option['value']);?>
                 </dd>
             <?php else: ?>
             	<?php $_formatedOptionValue = $this->getFormatedOptionValue($_option);?>
