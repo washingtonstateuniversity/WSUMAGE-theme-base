@@ -16,28 +16,73 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminht
 			height:auto;
 		}
 		</style>
-		<script src="/js/wsu/codemirror/lib/codemirror.js"></script>
+        <script src="/js/wsu/codemirror/lib/codemirror.js"></script>
         <script src="/js/wsu/codemirror/mode/htmlmixed/htmlmixed.js"></script>
         <script src="/js/wsu/codemirror/mode/css/css.js"></script>
         <script src="/js/wsu/codemirror/mode/javascript/javascript.js"></script>
-        <link rel="stylesheet" href="/js/wsu/codemirror/lib/codemirror.css"><!---->
+        
+        <script src="/js/wsu/codemirror/addon/fold/foldcode.js"></script>
+        <script src="/js/wsu/codemirror/addon/fold/foldgutter.js"></script>
+        <script src="/js/wsu/codemirror/addon/fold/brace-fold.js"></script>
+        
+
+
+        <script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
+        <script src="http://csslint.net/js/csslint.js"></script>
+        <script src="/js/wsu/codemirror/addon/lint/lint.js"></script>
+        <script src="/js/wsu/codemirror/addon/lint/javascript-lint.js"></script>
+        <script src="/js/wsu/codemirror/addon/lint/css-lint.js"></script>
+        
+        <link rel="stylesheet" href="/js/wsu/codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="/js/wsu/codemirror/theme/lesser-dark.css">
+        <link rel="stylesheet" href="/js/wsu/codemirror/addon/lint/lint.css">
+        <link rel="stylesheet" href="/js/wsu/codemirror/addon/fold/foldgutter.css" /><!---->
 		<script>
+        (function($){
             var codeblockID = null;
             var mode = "htmlmixed";
-            if(jQuery("#wsu_themecontrol_override_editor_override").length){
-               jQuery("#wsu_themecontrol_override_editor_override").closest("td").attr("style","width:100% !important");
-               codeblockID = "wsu_themecontrol_override_editor_override";
-               mode = "css";
-            }else if(jQuery("#wsu_themecontrol_globaljs_editor_globaljs").length){
-                jQuery("#wsu_themecontrol_globaljs_editor_globaljs").closest("td").attr("style","width:100% !important");
+            var options = {};
+            var width = 500;
+            if($("#wsu_themecontrol_override_editor_override").length){
+                $(window).on("resize",function(){
+                    var row = $("#row_wsu_themecontrol_override_editor_override");
+                    row.find(".label").hide();
+                    width = $(".main-col-inner").width() - 50;
+                    $("#wsu_themecontrol_override_editor_override").closest("td").attr("style","max-width:"+width+"px !important;width:"+width+"px !important;");
+                }).trigger("resize");
+               
+                codeblockID = "wsu_themecontrol_override_editor_override";
+                mode = "css";
+                options ={
+                    mode: mode,
+                    lint: true
+                };
+            }else if($("#wsu_themecontrol_globaljs_editor_globaljs").length){
+                $(window).on("resize",function(){
+                    var row = $("#row_wsu_themecontrol_globaljs_editor_globaljs");
+                    row.find(".label").hide();
+                    width = $(".main-col-inner").width() - 50;
+                    $("#wsu_themecontrol_globaljs_editor_globaljs").closest("td").attr("style","max-width:"+width+"px !important;width:"+width+"px !important;");
+                }).trigger("resize");
+                
                 codeblockID = "wsu_themecontrol_globaljs_editor_globaljs";
                 mode = "javascript";
+                options ={
+                    mode: mode,
+                    lint: true
+                };
             }
-            
-            var myCodeMirror = CodeMirror.fromTextArea(document.getElementById(codeblockID), {
-                lineNumbers: true,
-                mode: mode
-              });
+            var settings = jQuery.extend({ 
+                                        theme:"lesser-dark",
+                                        lineWrapping: true,
+                                        lineNumbers: true,
+                                        gutters: ["CodeMirror-lint-markers","CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+                                        foldGutter: true
+                                    },
+                                    options);
+            var myCodeMirror = CodeMirror.fromTextArea(document.getElementById(codeblockID), settings);
+        }(jQuery));
+           
 
 		</script>';
         return parent::_getElementHtml($element).$html;
