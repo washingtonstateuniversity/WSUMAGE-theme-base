@@ -16,11 +16,29 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminht
 			height:auto;
 		}
 		</style>
-		<script src="/js/ace/ace.js"></script>
+		<script src="/js/wsu/codemirror/lib/codemirror.js"></script>
+        <script src="/js/wsu/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="/js/wsu/codemirror/mode/css/css.js"></script>
+        <script src="/js/wsu/codemirror/mode/javascript/javascript.js"></script>
+        <link rel="stylesheet" href="/js/wsu/codemirror/lib/codemirror.css"><!---->
 		<script>
-		 	//var editor = ace.edit("wsu_themecontrol_override_editor_override");
-			//editor.setTheme("ace/theme/monokai");
-			//editor.getSession().setMode("ace/mode/css");
+            var codeblockID = null;
+            var mode = "htmlmixed";
+            if(jQuery("#wsu_themecontrol_override_editor_override").length){
+               jQuery("#wsu_themecontrol_override_editor_override").closest("td").attr("style","width:100% !important");
+               codeblockID = "wsu_themecontrol_override_editor_override";
+               mode = "css";
+            }else if(jQuery("#wsu_themecontrol_globaljs_editor_globaljs").length){
+                jQuery("#wsu_themecontrol_globaljs_editor_globaljs").closest("td").attr("style","width:100% !important");
+                codeblockID = "wsu_themecontrol_globaljs_editor_globaljs";
+                mode = "javascript";
+            }
+            
+            var myCodeMirror = CodeMirror.fromTextArea(document.getElementById(codeblockID), {
+                lineNumbers: true,
+                mode: mode
+              });
+
 		</script>';
         return parent::_getElementHtml($element).$html;
     }
