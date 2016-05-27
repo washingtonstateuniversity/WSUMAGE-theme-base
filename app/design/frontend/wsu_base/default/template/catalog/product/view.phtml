@@ -17,10 +17,10 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
-    <div class="product-essential">
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="flex-row column-at-480 ">
+
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential flex-row column-at-480 ">
         
-        <div class="product-media grid-part <?=$_layout["product-media"]["size"]?> full-width-at-480 <?=$_layout["product-media"]["order"]?>">
+        <div class="product-media product_info_media media-block <?=$_layout["media-block"]["type"]?> grid-part <?=$_layout["product-media"]["size"]?> full-width-at-480 <?=$_layout["product-media"]["order"]?>  ">
             <?php echo $this->getChildHtml('media') ?>
         </div>
         <div class="product-content <?=$_layout["product-content"]["type"]?> <?=$_layout["product-content"]["size"]?> full-width-at-480 <?=$_layout["product-content"]["order"]?>">
@@ -48,7 +48,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $review){
                     $review_class="";
                     $review_class.=$_layout["review_area"]["order"]." ";
-                    echo "<div id='review_area' class='".$review_class."'>".$review."</div>";
+                    echo "<div id='review_area' class='review_area ".$review_class."'>".$review."</div>";
                 }
             ?>
             
@@ -57,7 +57,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $alert_urls){
                     $alert_urls_class="";
                     $alert_urls_class.=$_layout["alert_urls_area"]["order"]." ";
-                    echo "<div id='alert_urls_area' class='".$alert_urls_class."'>".$alert_urls."</div>";
+                    echo "<div id='alert_urls_area' class='alert_urls_area ".$alert_urls_class."'>".$alert_urls."</div>";
                 }
             ?>
 
@@ -66,7 +66,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $product_type_data){
                     $product_type_data_class="";
                     $product_type_data_class.=$_layout["product_type_data_area"]["order"]." ";
-                    echo "<div id='product_type_data_area' class='".$product_type_data_class."'>".$product_type_data."</div>";
+                    echo "<div id='product_type_data_area' class='product_type_data_area ".$product_type_data_class."'>".$product_type_data."</div>";
                 }
             ?>
 
@@ -75,7 +75,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $tier_price){
                     $tier_price_class="";
                     $tier_price_class.=$_layout["tier_price_area"]["order"]." ";
-                    echo "<div id='tier_price_area' class='".$tier_price_class."'>".$tier_price."</div>";
+                    echo "<div id='tier_price_area' class='tier_price_area ".$tier_price_class."'>".$tier_price."</div>";
                 }
             ?>
 
@@ -84,13 +84,13 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $extrahint){
                     $extrahint_class="";
                     $extrahint_class.=$_layout["extrahint_area"]["order"]." ";
-                    echo "<div id='extrahint_area' class='".$extrahint_class."'>".$extrahint."</div>";
+                    echo "<div id='extrahint_area' class='extrahint_area ".$extrahint_class."'>".$extrahint."</div>";
                 }
             ?>
 
 
             <?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
+                <div class="add_to_box">
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>
                         <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
@@ -133,7 +133,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $other){
                     $other_class="";
                     $other_class.=$_layout["other_area"]["order"]." ";
-                    echo "<div id='other_area' class='".$other_class."'>".$other."</div>";
+                    echo "<div id='other_area' class='other_area ".$other_class."'>".$other."</div>";
                 }
             ?>
             
@@ -143,7 +143,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
                 if( "" !== $container1){
                     $container1_class="";
                     $container1_class.=$_layout["container1_area"]["order"]." ";
-                    echo "<div id='other_area' class='".$container1_class."'>".$container1."</div>";
+                    echo "<div id='container1_area' class='container1_area ".$container1_class."'>".$container1."</div>";
                 }
                 endif;
             ?>
@@ -221,7 +221,7 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
     //]]>
     </script>
 	
-    </div>
+
 
     <div class="product-collateral">
         <?php echo $this->getChildHtml('info_tabs') ?>

@@ -87,7 +87,8 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
             "product_info"=>[
                     "product-content"=>["type"=>"flex-column","size"=>"fifths-3","order"=>"order-1"],
                     "product-media"=>["size"=>"fifths-2","order"=>"order-2"],
-                    
+                    "media-block"=>["type"=>"flex-row"],
+					
                     "email_area"=>["order"=>"order-8"],
                     "review_area"=>["order"=>"order-9"],
                     "alert_urls_area"=>["order"=>"order-7"],
@@ -101,7 +102,7 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 
                 ],
             "product_info_media"=>[
-                    "media-block"=>["type"=>"flex-row"],
+                    
                     "product-image"=>["size"=>"sixths-5","order"=>"order-2"],
                     "more-views"=>["size"=>"sixths-1","order"=>"order-1"],
                     "more-views-imgs"=>["type"=>"flex-column"]

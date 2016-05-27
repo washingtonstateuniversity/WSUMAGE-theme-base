@@ -36,7 +36,6 @@
     $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 ?>
 
-<div class="media-block <?=$_layout["media-block"]["type"]?>">
 
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
     <div class="product-image <?=$_layout["product-image"]["size"]?> <?=$_layout["product-image"]["order"]?>">
@@ -66,5 +65,4 @@
 </div>
 <?php endif; ?>
 
-</div>
 
