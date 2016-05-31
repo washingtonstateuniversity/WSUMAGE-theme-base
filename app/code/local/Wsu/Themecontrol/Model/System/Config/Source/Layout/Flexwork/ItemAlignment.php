@@ -1,0 +1,15 @@
+<?php
+class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_ItemAlignment
+{
+    public function toOptionArray()
+    {
+        return [
+            ['value' => 'items-start',         'label' => 'flex-start'],
+            ['value' => 'items-end',         'label' => 'flex-end'],
+            ['value' => 'items-center',         'label' => 'center'],
+            ['value' => 'items-baseline',         'label' => 'baseline'],
+            ['value' => 'items-end',         'label' => 'stretch'],
+
+        ];
+    }
+}
