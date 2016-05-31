@@ -539,7 +539,13 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 						$(this).siblings("dl:not(.parent)").toggle();
 						$(this).siblings("ul").toggle();
 						$(this).siblings("span").toggle();
+						
 						$(this).toggleClass("open","close");
+						if( ! $(this).is(".open") ){
+							$(this).siblings(".parent_option").hide();
+							$(this).siblings(".parent").hide();
+						}
+						
 					});
 					
 					$("#product_view_options .parent_option").off().on("click",function(){
