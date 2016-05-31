@@ -44,18 +44,35 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				position: relative;
 				box-sizing: border-box;
 				max-height: 750px;
+				zoom: .50;
 			}
 			.fake_spine{
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				width: 49.5px;
+				width: 198px;
 				background-color: #981e32;
 				box-sizing: border-box;
 				left: 25px;
 			}
+			.fake_spine #wsu-signature {
+				background-image: url(https://repo.wsu.edu/spine/1/marks/wsu-signature-vertical-white.svg);
+			}
+			#wsu-signature {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 150px auto;
+    background-color: transparent;
+    height: 155px;
+    display: block;
+    text-indent: 120%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 99;
+}
 			.fake_page{
-				padding-left: calc(49.5px + 30px);
+				padding-left: calc(198px + 30px);
 				box-sizing: border-box;
 				overflow-x: auto;
 				max-height: 748px;
@@ -76,9 +93,9 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			<div class="type_order"><select><option value="order-1">order-1</option><option value="order-2">order-2</option><option value="order-3">order-3</option><option value="order-4">order-4</option><option value="order-5">order-5</option><option value="order-6">order-6</option><option value="order-7">order-7</option><option value="order-8">order-8</option><option value="order-9">order-9</option><option value="order-10">order-10</option><option value="order-11">order-11</option><option value="order-12">order-12</option></select></div>
 		</div>
 		<link rel="stylesheet" type="text/css" href="/skin/adminhtml/default/default/wsu/css/_layout_preview.css" media="print" />
-		<i><b>NOTE:</b> preview is 1:4</i>
+		<i><b>NOTE:</b> preview is 1:2</i>
 		<div class="layoutframeworkPreview '. ($html_id!=''?''.$html_id.' ':'') .'">
-			<div class="fake_spine"></div>
+			<div class="fake_spine"><header class="spine-header"><a href="" id="wsu-signature">Washington State University</a></header></div>
 			<div class="fake_page">
 				<div class="product-view product_info">
 					<div id="product_addtocart_form" class="product-essential ">
@@ -251,6 +268,14 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 								}
 							});
 						}
+					});
+					
+					$("#product_view_options li").off( "mouseenter mouseleave" );
+					$("#product_view_options li").hover(function(){
+						var _class = $(this).data("block");
+						$(".product-view ."+_class).addClass("hovering");
+					}, function(){
+						$(".hovering").removeClass("hovering");
 					});
 				}
 				
