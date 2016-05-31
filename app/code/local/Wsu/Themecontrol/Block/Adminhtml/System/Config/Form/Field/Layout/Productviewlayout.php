@@ -85,7 +85,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			<div class="type_justification">'.$this->_makeOptionDropdown('**type_temp**','spacing').'</div>
 			<div class="type_wrap">'.$this->_makeOptionDropdown('**type_temp**','wrap').'</div>
 			<div class="type_size">'.$this->_makeOptionDropdown('**type_temp**','size').'</div>
-			<div class="type_content_alignment"><select><option value=""></option></select></div>
+			<div class="type_content_alignment">'.$this->_makeOptionDropdown('**type_temp**','contentalignment').'</select></div>
 			<div class="type_item_alignment"><select><option value=""></option></select></div>
 			
 			<div class="type_media-query-size"><select><option value="full-width-at-480">full-width-at-480</option></select></div>
