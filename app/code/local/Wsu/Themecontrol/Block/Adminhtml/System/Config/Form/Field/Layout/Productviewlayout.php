@@ -223,7 +223,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				};
 		
 				function cleanTarget(target,callback){
-					var clearOf = ["grid-", "flex-", "order-", "full-width-", "thirds-", "fours-", "fifths-", "sixths-", "eigths-", "ninths-", "tenths-", "twelfths-", "wrap", "space-", "center", "column-", "row-"];
+					var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-", "thirds-", "fours-", "fifths-", "sixths-", "eigths-", "ninths-", "tenths-", "twelfths-", "wrap", "space-", "center", "column-", "row-"];
 					$.each(clearOf,function(i,val){
 						target.stripClass(val,false);
 					});callback();
