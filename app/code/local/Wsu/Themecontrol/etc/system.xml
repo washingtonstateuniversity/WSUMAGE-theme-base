@@ -4675,173 +4675,25 @@ between the header and the footer).</comment>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
+					<expanded>1</expanded>
 					<comment>
 						<![CDATA[  ]]>
 					</comment>
                     <fields>
+
+						<productviewlayout translate="label comment">
+                            <label>Product Layout</label>
+							<comment>
+								<![CDATA[ ]]>
+							</comment>
+                            <frontend_type>textarea</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_productviewlayout</frontend_model>
+                            <sort_order>99</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </productviewlayout>
 						
-						<heading_inner_root translate="label">
-							<label>block root</label>
-							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
-							<sort_order>99</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>1</show_in_store>
-						</heading_inner_root>
-						<used_root translate="label comment">
-                            <label>Use dyno block</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>100</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </used_root>
-						<row_type_root translate="label comment">
-                            <label>Set the row type</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
-							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
-                            <sort_order>110</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_root>1</used_root>
-							</depends>
-                        </row_type_root>	
-						<padding_root translate="label comment">
-                            <label>Set the padding</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_type</source_model>
-                            <sort_order>120</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_root>1</used_root>
-							</depends>
-                        </padding_root>
-						<padding_flanks_root translate="label comment">
-                            <label>Padding flank style</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_flanks</source_model>
-                            <sort_order>130</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_root>1</used_root>
-							</depends>
-                        </padding_flanks_root>
-						<padding_ends_root translate="label comment">
-                            <label>Padding end style</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_ends</source_model>
-                            <sort_order>140</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_root>1</used_root>
-							</depends>
-                        </padding_ends_root>
-
-
-
-						<heading_inner_product_info translate="label">
-							<label>block product_info</label>
-							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
-							<sort_order>199</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>1</show_in_store>
-						</heading_inner_product_info>
-						<used_product_info translate="label comment">
-                            <label>Use dyno block</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>200</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </used_product_info>
-						<row_type_product_info translate="label comment">
-                            <label>Set the row type</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_layout_preview</frontend_model>
-							<source_model>wsu_themecontrol/system_config_source_layout_rows_type</source_model>
-                            <sort_order>210</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_product_info>1</used_product_info>
-							</depends>
-                        </row_type_product_info>	
-						<padding_product_info translate="label comment">
-                            <label>Set the padding</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_type</source_model>
-                            <sort_order>220</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_product_info>1</used_product_info>
-							</depends>
-                        </padding_product_info>
-						<padding_flanks_product_info translate="label comment">
-                            <label>Padding flank style</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_flanks</source_model>
-                            <sort_order>230</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_product_info>1</used_product_info>
-							</depends>
-                        </padding_flanks_product_info>
-						<padding_ends_product_info translate="label comment">
-                            <label>Padding end style</label>
-							<comment>
-								<![CDATA[ ]]>
-							</comment>
-                            <frontend_type>select</frontend_type>
-							<source_model>wsu_themecontrol/system_config_source_layout_padding_ends</source_model>
-                            <sort_order>240</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-								<used_product_info>1</used_product_info>
-							</depends>
-                        </padding_ends_product_info>
-
-
-
 					</fields>
 				</catalog_product_view>
 <!-- wsu_themecontrol_layout/checkout_cart_index  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
