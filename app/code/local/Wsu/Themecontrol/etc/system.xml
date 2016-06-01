@@ -3966,7 +3966,7 @@ between the header and the footer).</comment>
                     <show_in_store>1</show_in_store>
                     <fields>
 						<spine_version translate="label comment">
-                            <label>Show Store name in the header</label>
+                            <label>Spine version</label>
 							<comment><![CDATA[ Important, if you change this you may not get the latest updates ]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>1</sort_order>
