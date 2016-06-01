@@ -1,7 +1,14 @@
 <?php
 class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 {
-
+	
+    /**
+     * Sectional Data block
+     *
+     * @var array
+     */
+    protected $_sectionalData;
+    
 	/**
 	 * Get CSS for grid item based on number of columns
 	 *
@@ -44,19 +51,37 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		}
 		return $extracted;
 	}
-	public function getLayoutSettings($block,$part="",$settings = null)
+    
+    /**
+     * Set the data for the css file being rendered
+     */	
+	public function set_sectionalData( $name = 'catalog_product_view/productviewlayout' )
+	{
+        $theme = Mage::helper('wsu_themecontrol');
+        $block_settings = $theme->getCfgLayout($name);
+        $this->_sectionalData = json_decode($block_settings);
+	}
+    /**
+     * Set the data for the css file being rendered
+     */	
+	public function getLayout()
+	{
+        if( null === $this->_sectionalData ){
+            $this->set_sectionalData();
+        }
+        return $this->_sectionalData;
+	}    
+	public function getLayoutSettings( $block, $part="", $settings = null )
     {
-		if(""===$part){
-			$theme = Mage::helper('wsu_themecontrol');
-			$block_settings = $theme->getCfgLayout('catalog_product_view/productviewlayout');
-			$layout = json_decode($block_settings);
-		}else{
+		if( "" === $part ){
+			$layout = $this->getLayout();
+		} else {
 			$layout = $part;
 		}
 		
 		foreach($layout as $item=>$parts){
-			if($settings===null){
-				if($item===$block){
+			if( null === $settings ){
+				if( $item === $block ){
 					$settings = $parts->settings;
 				}elseif( isset($parts->children) && null !== $parts->children ){
 					$settings = $this->getLayoutSettings($block,$parts->children,$settings);
@@ -173,13 +198,6 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
         
 		return isset($layouts[$BlockName]) ? $layouts[$BlockName] : $tmp;
 	}
-
-
-
-
-
-
-	
 	public function getMapBlockMapping($block,$values)
     {
 		/*

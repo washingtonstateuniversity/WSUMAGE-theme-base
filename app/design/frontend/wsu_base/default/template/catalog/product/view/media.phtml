@@ -1,39 +1,8 @@
 <?php
-/**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     default_modern
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- */
-
-/**
- * Product media data template
- *
- * @see Mage_Catalog_Block_Product_View_Media
- */
-?>
-<?php
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
 	$layout = $this->helper('wsu_themecontrol/layout');
+    $$use_flexwork_spacer = true;
 ?>
 
 
@@ -56,11 +25,22 @@
 <div class="more-views <?=$layout->getLayoutBlockClass("more-views")?>">
     <h2><?php echo $this->__('More Views') ?></h2>
     <ul class="<?=$layout->getLayoutBlockClass("more-views-imgs")?>">
-    <?php foreach ($this->getGalleryImages() as $_image): ?>
+    <?php 
+    $_images = $this->getGalleryImages();
+    foreach ($_images as $_image): ?>
         <li>
             <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(1000); ?>"  title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(66); ?>" width="66" height="66" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a><!-- onclick="popWin('<?php echo $this->getGalleryUrl($_image) ?>', 'gallery', 'width=300,height=300,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes'); return false;" -->
         </li>
     <?php endforeach; ?>
+    
+    <?php 
+    if($use_flexwork_spacer){
+        $count = count($_images);
+        for ($i = 1; $i <=$count; $i++) {
+            echo '<li class="flexwork_spacer"></li>';
+        }
+    }?>
+    
     </ul>
 </div>
 <?php endif; ?>
