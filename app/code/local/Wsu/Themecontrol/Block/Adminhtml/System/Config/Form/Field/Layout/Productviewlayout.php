@@ -364,7 +364,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 						});
 					});
 					_layoutItOut(_root,_layout);
-					
+					$("#' . $html_id . '").val(JSON.stringify(_layout));
 					/*$.when.apply($, $.map($("#product_view_options li"), function() {
 						$(this).children("dl").find("dd").each(function(idx,val){
 							var path = $(this).data("path");
@@ -530,6 +530,15 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 							}
 						}
 					};
+					if($("#' . $html_id . '").val() !== ""){
+						try {
+							var str	= $("#' . $html_id . '").val();
+							var obj = JSON.parse(str); // this is how you parse a string into JSON 
+							_layout = obj;
+						} catch (ex) {
+							console.error(ex);
+						}
+					}
 					$("#row_' . $html_id . ' td.label").html( _createInputForm(_layout,"") );
 					
 					$("#product_view_options b").siblings("span").hide();
