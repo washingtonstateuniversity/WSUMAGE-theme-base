@@ -4,11 +4,14 @@ $_helper = $this->helper('catalog/output');
 
 $theme = $this->helper('wsu_themecontrol');
 $template = $this->helper('wsu_themecontrol/template');
-
+$layout = $this->helper('wsu_themecontrol/layout');
 ?>
 
 <?php
 $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
+//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutSettings("product-content");
+//var_dump($_layout);die();
+
 ?>
 
 <?php $_product = $this->getProduct(); ?>
@@ -18,39 +21,31 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
 
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential flex-row column-at-480 ">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential <?=$layout->getLayoutBlockClass("product-essential")?>">
         
-        <div class="product-media product_info_media media-block <?=$_layout["media-block"]["type"]?> grid-part <?=$_layout["product-media"]["size"]?> full-width-at-480 <?=$_layout["product-media"]["order"]?>  ">
+        <div class="product-media product_info_media media-block <?=$layout->getLayoutBlockClass("product_info_media")?>">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-        <div class="product-content <?=$_layout["product-content"]["type"]?> <?=$_layout["product-content"]["size"]?> full-width-at-480 <?=$_layout["product-content"]["order"]?>">
+        <div class="product-content <?=$layout->getLayoutBlockClass("product-content")?>">
             <div class="no-display">
                 <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
-            <div class="product-name">
+            <div class="product-name <?=$layout->getLayoutBlockClass("product-name")?>">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
 
             <?php if ($this->canEmailToFriend()): ?>
-            <?php
-                    $email_class="";
-                    $email_class.=$_layout["email_area"]["order"]." ";
-                    ?>
-
-                <div class="email-friend  <?=$email_class?>">
+                <div class="email-friend  <?=$layout->getLayoutBlockClass("email_area")?>">
                 <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a>
                 </div>
             <?php endif; ?>
 
             <?php 
                 $review = $this->getReviewsSummaryHtml($_product, false, true);
-                if( "" !== $review){
-                    $review_class="";
-                    $review_class.=$_layout["review_area"]["order"]." ";
-                    echo "<div id='review_area' class='review_area ".$review_class."'>".$review."</div>";
-                }
-            ?>
+                if( "" !== $review){?>
+                    <div id='review_area' class='review_area <?=$layout->getLayoutBlockClass("review_area")?>'><?=$review?></div>
+            <?php } ?>
             
             <?php 
                 $alert_urls = $this->getChildHtml('alert_urls');

@@ -44,7 +44,39 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		}
 		return $extracted;
 	}
-
+	public function getLayoutSettings($block,$part="")
+    {
+		if(""===$part){
+			$theme = Mage::helper('wsu_themecontrol');
+			$block_settings = $theme->getCfgLayout('catalog_product_view/productviewlayout');
+			$layout = json_decode($block_settings);
+		}else{
+			$layout = $part;
+		}
+		$settings = null;
+		foreach($layout as $item=>$parts){
+			if($item===$block){
+				$settings = $parts->settings;
+			}elseif( isset($parts->children) && null !== $parts->children ){
+				$settings = $this->getLayoutSettings($block,$parts->children);
+			}
+		}
+		return $settings;
+	}
+	public function getLayoutBlockClass($block)
+    {
+		$layout = $this->getLayoutSettings($block);
+		$class = "";
+		if(isset($layout)){
+			foreach($layout as $item=>$parts){
+				$class .= " ".$parts;
+			}
+		}
+		return $class;
+	}
+	
+	
+	
 	public function getLayoutOptions($ref, $extract=array())
     {
 		$BlockName = str_replace('.','_',$ref->getNameInLayout());
@@ -80,8 +112,8 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 			
 			$extracted[$name] = $setting;
 		}*/
-        
-        
+		
+
         $layouts = [
         
             "product_info"=>[
