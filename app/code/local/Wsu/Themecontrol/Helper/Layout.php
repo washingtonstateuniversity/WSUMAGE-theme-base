@@ -71,6 +71,9 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		$class = "";
 		if(isset($layout)){
 			foreach($layout as $item=>$parts){
+				if("size" === $item){
+					$class .= " grid-part";
+				}
 				$class .= " ".$parts;
 			}
 		}

@@ -143,7 +143,11 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 								<div class="std">Ribbed scoop neck tank. 100% cotton.Machine wash.</div>
 							</div>
 							<div id="other_area" class="other_area">
-								<div class="product-options" id="product-options-wrapper">
+								
+							</div>
+							
+							<div id="container1_area" class="container1_area">
+							<div class="product-options" id="product-options-wrapper">
 									<dl class="last"> 
 										<dt class="swatch-attr"> <label id="color_label" class="required"> <em>*</em>Color: <span id="select_label_color" class="select-label"></span> </label> </dt>
 										<dd class="clearfix swatch-attr">
@@ -191,6 +195,9 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 									</ul>
 								</div>
 							</div>
+							
+							
+							
 						</div>
 					</div>
 				<div class="product-collateral"> </div>
@@ -385,7 +392,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				$(document).ready(function(){
 
 					
-					$("#' . $html_id . '").hide();
+					//$("#' . $html_id . '").hide();
 					_layout = {
 						"product_info": {
 							"settings":{},
@@ -448,18 +455,6 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 													"settings":{
 														"type": "flex-column",
 														"order": "order-6"
-													},
-													"children":{
-														"product-options":{
-															"settings":{
-																"order": "order-1"
-															}
-														},
-														"product-options-bottom":{
-															"settings":{
-																"order": "order-2"
-															}
-														}
 													}
 												},
 												"add_to_box": {
@@ -483,6 +478,18 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 												"container1_area": {
 													"settings":{
 														"order": "order-2"
+													},
+													"children":{
+														"product-options":{
+															"settings":{
+																"order": "order-1"
+															}
+														},
+														"product-options-bottom":{
+															"settings":{
+																"order": "order-2"
+															}
+														}
 													}
 												},
 												"description_area": {
