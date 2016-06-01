@@ -82,7 +82,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 		<div style="display:none;">
 			<div class="type_show"><select><option value="true">yes</option><option value="false">no</option></select></div>
 			<div class="type_type">'.$this->_makeOptionDropdown('**type_temp**','type').'</div>
-			<div class="type_justification">'.$this->_makeOptionDropdown('**type_temp**','spacing').'</div>
+			<div class="type_justification">'.$this->_makeOptionDropdown('**type_temp**','justification').'</div>
 			<div class="type_wrap">'.$this->_makeOptionDropdown('**type_temp**','wrap').'</div>
 			<div class="type_size">'.$this->_makeOptionDropdown('**type_temp**','size').'</div>
 			<div class="type_content_alignment">'.$this->_makeOptionDropdown('**type_temp**','contentalignment').'</select></div>

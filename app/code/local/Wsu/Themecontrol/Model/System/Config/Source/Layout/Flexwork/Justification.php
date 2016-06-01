@@ -1,5 +1,5 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Spacing
+class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Justification
 {
     public function toOptionArray()
 	{
