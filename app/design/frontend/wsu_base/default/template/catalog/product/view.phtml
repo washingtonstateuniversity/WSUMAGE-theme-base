@@ -8,7 +8,7 @@ $layout = $this->helper('wsu_themecontrol/layout');
 ?>
 
 <?php
-$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
+//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 //$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutSettings("product-content");
 //var_dump($_layout);die();
 
@@ -43,45 +43,43 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 
             <?php 
                 $review = $this->getReviewsSummaryHtml($_product, false, true);
-                if( "" !== $review){?>
-                    <div id='review_area' class='review_area <?=$layout->getLayoutBlockClass("review_area")?>'><?=$review?></div>
+                if( "" !== $review){
+					$class = $layout->getLayoutBlockClass("review_area");
+				?>
+                    <div id='review_area' class='review_area <?=$class?>'><?=$review?></div>
             <?php } ?>
             
             <?php 
                 $alert_urls = $this->getChildHtml('alert_urls');
                 if( "" !== $alert_urls){
-                    $alert_urls_class="";
-                    $alert_urls_class.=$_layout["alert_urls_area"]["order"]." ";
-                    echo "<div id='alert_urls_area' class='alert_urls_area ".$alert_urls_class."'>".$alert_urls."</div>";
-                }
-            ?>
+					$class = $layout->getLayoutBlockClass("alert_urls_area");
+				?>
+                    <div id='alert_urls_area' class='alert_urls_area <?=$class?>'><?=$alert_urls?></div>
+            <?php } ?>
 
             <?php 
                 $product_type_data = $this->getChildHtml('product_type_data');
                 if( "" !== $product_type_data){
-                    $product_type_data_class="";
-                    $product_type_data_class.=$_layout["product_type_data_area"]["order"]." ";
-                    echo "<div id='product_type_data_area' class='product_type_data_area ".$product_type_data_class."'>".$product_type_data."</div>";
-                }
-            ?>
+					$class = $layout->getLayoutBlockClass("product_type_data_area");
+				?>
+                    <div id='product_type_data_area' class='product_type_data_area <?=$class?>'><?=$product_type_data?></div>
+            <?php } ?>
 
             <?php 
                 $tier_price = $this->getTierPriceHtml();
                 if( "" !== $tier_price){
-                    $tier_price_class="";
-                    $tier_price_class.=$_layout["tier_price_area"]["order"]." ";
-                    echo "<div id='tier_price_area' class='tier_price_area ".$tier_price_class."'>".$tier_price."</div>";
-                }
-            ?>
+					$class = $layout->getLayoutBlockClass("tier_price_area");
+				?>
+                    <div id='tier_price_area' class='tier_price_area <?=$class?>'><?=$tier_price?></div>
+            <?php } ?>
 
             <?php 
                 $extrahint = $this->getChildHtml('extrahint');
                 if( "" !== $extrahint){
-                    $extrahint_class="";
-                    $extrahint_class.=$_layout["extrahint_area"]["order"]." ";
-                    echo "<div id='extrahint_area' class='extrahint_area ".$extrahint_class."'>".$extrahint."</div>";
-                }
-            ?>
+					$class = $layout->getLayoutBlockClass("extrahint_area");
+				?>
+                    <div id='extrahint_area' class='extrahint_area <?=$class?>'><?=$extrahint?></div>
+            <?php } ?>
 
 
             <?php if (!$this->hasOptions()):?>
@@ -99,10 +97,9 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             <?php $short = trim($_product->getShortDescription());
                 if ($short):?>
             <?php
-                    $short_description_class="";
-                    $short_description_class.=$_layout["short_description_area"]["order"]." ";
+					$class = $layout->getLayoutBlockClass("short_description_area");
                     ?>
-                <div class="short-description <?=$short_description_class?>">
+                <div class="short-description <?=$class?>">
                     <h2><?php echo $this->__('Quick Overview') ?></h2>
                     <div class="std"><?=$short?></div>
                 </div>
@@ -112,10 +109,9 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             $full = trim($_product->getDescription());
             if ($full && $full != $short):?>
             <?php
-                    $description_class="";
-                    $description_class.=$_layout["description_area"]["order"]." ";
-                    ?>
-                <div class="description <?=$description_class?>">
+				$class = $layout->getLayoutBlockClass("description_area");
+            ?>
+                <div class="description <?=$class?>">
                     <h2><?php echo $this->__('Full Overview') ?></h2>
                     <div class="std"><?=$full?></div>
                 </div>
@@ -126,9 +122,8 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             <?php 
                 $other = $this->getChildHtml('other');
                 if( "" !== $other){
-                    $other_class="";
-                    $other_class.=$_layout["other_area"]["order"]." ";
-                    echo "<div id='other_area' class='other_area ".$other_class."'>".$other."</div>";
+                    $class = $layout->getLayoutBlockClass("other_area");
+                    echo "<div id='other_area' class='other_area ".$class."'>".$other."</div>";
                 }
             ?>
             
@@ -136,9 +131,8 @@ $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
             
                 $container1 = $this->getChildChildHtml('container1', '', true, true);
                 if( "" !== $container1){
-                    $container1_class="";
-                    $container1_class.=$_layout["container1_area"]["order"]." ";
-                    echo "<div id='container1_area' class='container1_area ".$container1_class."'>".$container1."</div>";
+                    $class = $layout->getLayoutBlockClass("container1_area");
+                    echo "<div id='container1_area' class='container1_area ".$class."'>".$container1."</div>";
                 }
                 endif;
             ?>

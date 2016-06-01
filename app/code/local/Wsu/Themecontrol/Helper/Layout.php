@@ -44,7 +44,7 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		}
 		return $extracted;
 	}
-	public function getLayoutSettings($block,$part="")
+	public function getLayoutSettings($block,$part="",$settings = null)
     {
 		if(""===$part){
 			$theme = Mage::helper('wsu_themecontrol');
@@ -53,12 +53,14 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		}else{
 			$layout = $part;
 		}
-		$settings = null;
+		
 		foreach($layout as $item=>$parts){
-			if($item===$block){
-				$settings = $parts->settings;
-			}elseif( isset($parts->children) && null !== $parts->children ){
-				$settings = $this->getLayoutSettings($block,$parts->children);
+			if($settings===null){
+				if($item===$block){
+					$settings = $parts->settings;
+				}elseif( isset($parts->children) && null !== $parts->children ){
+					$settings = $this->getLayoutSettings($block,$parts->children,$settings);
+				}
 			}
 		}
 		return $settings;
