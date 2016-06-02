@@ -2750,6 +2750,37 @@ between the header and the footer).</comment>
                             <show_in_store>1</show_in_store>
 						</addto_icon_hover_bg_color>
 						
+						<heading_product_options translate="label comment">
+							<label>Product Options Area</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_product_options>                        
+                        
+                        <product_options_bg_color translate="label comment">
+							<label>Product options Background Color</label>
+                            <frontend_type>text</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
+                            <sort_order>131</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</product_options_bg_color>
+                        
+                        <product_options_bottom_bg_color translate="label comment">
+							<label>Product options bottom Background Color</label>
+                            <frontend_type>text</frontend_type>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
+                            <sort_order>131</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</product_options_bottom_bg_color>
+                        
+                        
+                        
 						<heading_tabs translate="label comment">
 							<label>Tabs</label>
 							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
