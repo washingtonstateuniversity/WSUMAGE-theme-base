@@ -1743,7 +1743,7 @@
                             <label>Basic Font Size</label>
 							<comment>Size of the regular text. Font size of most of the other elements will be calculated relative to this value.</comment>
                             <frontend_type>select</frontend_type>
-							<source_model>wsu_wsu/system_config_source_design_font_size_basic</source_model>
+							<source_model>wsu_themecontrol/system_config_source_design_font_size_basic</source_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2683,7 +2683,7 @@
 							<label>Link Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
-                            <source_model>wsu_wsu/system_config_source_design_icon_color</source_model>
+                            <source_model>wsu_themecontrol/system_config_source_design_icon_color</source_model>
                             <sort_order>320</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2693,7 +2693,7 @@
 							<label>Link Hover Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
-                            <source_model>wsu_wsu/system_config_source_design_icon_color</source_model>
+                            <source_model>wsu_themecontrol/system_config_source_design_icon_color</source_model>
                             <sort_order>330</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2703,7 +2703,7 @@
 							<label>Link Active Icon Color</label>
 							<comment></comment>
 							<frontend_type>select</frontend_type>
-                            <source_model>wsu_wsu/system_config_source_design_icon_color</source_model>
+                            <source_model>wsu_themecontrol/system_config_source_design_icon_color</source_model>
                             <sort_order>340</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
