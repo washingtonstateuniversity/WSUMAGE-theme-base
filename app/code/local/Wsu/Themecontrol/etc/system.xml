@@ -1872,7 +1872,34 @@
 							<!--
 							<upload_dir config="system/filesystem/skin" scope_info="1">frontend/themecontrol/default/images/_backgrounds</upload_dir>
 							<base_url type="skin" scope_info="1">frontend/themecontrol/default/images/_backgrounds</base_url>
-							-->
+							--><comment><![CDATA[
+                                <script type="text/javascript">
+                                    (function($){
+                                        function setBKIMGfields(){
+                                            var val = $("#wsu_themecontrol_design_page_bg_image").val();
+                                            if(""===val){
+                                                $("#row_wsu_themecontrol_design_page_bg_repeat").hide();
+                                                $("#row_wsu_themecontrol_design_page_bg_attachment").hide();
+                                                $("#row_wsu_themecontrol_design_page_bg_positionx").hide();
+                                                $("#row_wsu_themecontrol_design_page_bg_positiony").hide();
+                                                $("#row_wsu_themecontrol_design_page_tex").hide();
+                                            }else{
+                                                $("#row_wsu_themecontrol_design_page_bg_repeat").show();
+                                                $("#row_wsu_themecontrol_design_page_bg_attachment").show();
+                                                $("#row_wsu_themecontrol_design_page_bg_positionx").show();
+                                                $("#row_wsu_themecontrol_design_page_bg_positiony").show();
+                                                $("#row_wsu_themecontrol_design_page_tex").show();
+                                            }
+                                        }
+                                        $(document).ready(function(){
+                                            $("#wsu_themecontrol_design_page_bg_image").on("change",function(){
+                                                setBKIMGfields();
+                                            });
+                                            setBKIMGfields();
+                                        });
+                                    }(jQuery));
+                                </script>
+                            ]]></comment>
                             <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
