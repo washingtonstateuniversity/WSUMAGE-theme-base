@@ -8,7 +8,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Color extends Ma
      */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
         $html   = $element->getElementHtml(); //Default HTML
-		
+		$value = $element->getEscapedValue();
         if (Mage::registry('colorPickerLoaded') == false) {
             $html .= '
 			<script type="text/javascript" src="/js/wsu/spectrum/js/spectrum.js"></script>
@@ -20,7 +20,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Color extends Ma
 			<script type="text/javascript">
 				jQuery(function($){
 					$("#' . $element->getHtmlId() . '").spectrum({
-						color: "#ECC",
+						color: "'.$value.'",
 						showInput: true,
 						showAlpha:true,
 						className: "full-spectrum",

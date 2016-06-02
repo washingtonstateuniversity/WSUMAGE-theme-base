@@ -1325,7 +1325,7 @@
 						<spine_color translate="label comment"><!-- we need to abstrack this more for real OS -->
 							<label>Spine colors</label>
                             <frontend_type>select</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <source_model>wsu_wsu/system_config_source_design_color_wsubrand</source_model>
                             <sort_order>410</sort_order>
                             <show_in_default>1</show_in_default>
@@ -1335,7 +1335,7 @@
 						<spine_tool_bar_color translate="label comment"><!-- we need to abstrack this more for real OS -->
 							<label>Spine tool bar colors</label>
                             <frontend_type>select</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <source_model>wsu_wsu/system_config_source_design_color_wsubrand</source_model>
                             <sort_order>420</sort_order>
                             <show_in_default>1</show_in_default>
@@ -1379,8 +1379,7 @@
 						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1389,8 +1388,7 @@
 						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1399,8 +1397,7 @@
 						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1419,8 +1416,7 @@
 						<button_bg_color translate="label comment">
 							<label>Button Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>110</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1429,8 +1425,7 @@
 						<button_color translate="label comment">
 							<label>Button Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>120</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1440,8 +1435,7 @@
 						<button_hover_bg_color translate="label comment">
 							<label>Button Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>130</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1450,8 +1444,7 @@
 						<button_hover_color translate="label comment">
 							<label>Button Hover Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>140</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1462,8 +1455,7 @@
 							<label>Button Active Background Color</label>
 							<comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>150</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1473,8 +1465,7 @@
 							<label>Button Active Text Color</label>
 							<comment>Selected emphasized buttons, e.g. "Add to cart" on product page, "Proceed to checkout" etc.</comment>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>160</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1497,8 +1488,7 @@
 						<tool_icon_bg_color translate="label comment">
 							<label>Icon Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>210</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1507,8 +1497,7 @@
 						<tool_icon_color translate="label">
 							<label>Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>220</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1517,8 +1506,7 @@
 						<tool_icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>220</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1527,8 +1515,7 @@
 						<tool_icon_hover_color translate="label">
 							<label>Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>240</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1537,8 +1524,7 @@
 						<tool_icon_active_bg_color translate="label comment">
 							<label>Icon Active Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>230</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1547,8 +1533,7 @@
 						<tool_icon_active_color translate="label">
 							<label>Icon Active Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>260</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1567,8 +1552,7 @@
 						<icon_bg_color translate="label comment">
 							<label>Icon Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>310</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1577,8 +1561,7 @@
 						<icon_color translate="label">
 							<label>Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>320</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1587,8 +1570,7 @@
 						<icon_hover_bg_color translate="label comment">
 							<label>Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>320</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1597,8 +1579,7 @@
 						<icon_hover_color translate="label">
 							<label>Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>340</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1608,8 +1589,7 @@
 						<social_icon_bg_color translate="label comment">
 							<label>Social Icon Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>330</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1618,8 +1598,7 @@
 						<social_icon_color translate="label">
 							<label>Social Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>360</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1628,8 +1607,7 @@
 						<social_icon_hover_bg_color translate="label comment">
 							<label>Social Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>340</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1638,8 +1616,7 @@
 						<social_icon_hover_color translate="label">
 							<label>Social Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>380</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1658,8 +1635,7 @@
 						<important_link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>410</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1668,8 +1644,7 @@
 						<important_link_hover_bg_color translate="label comment">
 							<label>Link Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>420</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1688,8 +1663,7 @@
 						<label_new_bg_color translate="label comment">
 							<label>Label "New" Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>510</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1698,8 +1672,7 @@
 						<label_new_color translate="label comment">
 							<label>Label "New" Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>520</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1708,8 +1681,7 @@
 						<label_sale_bg_color translate="label comment">
 							<label>Label "Sale" Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>530</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1718,8 +1690,7 @@
 						<label_sale_color translate="label comment">
 							<label>Label "Sale" Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>540</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1738,8 +1709,7 @@
 						<price_color translate="label comment">
 							<label>Price Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>810</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1749,8 +1719,7 @@
 							<label>Additional Background Color</label>
 							<comment>Background color used to emphasize some elements and blocks, e.g. totals on the cart page</comment>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>820</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1877,8 +1846,7 @@
 							<label>Viewport Background Color</label>
 							<comment><![CDATA[Background color of the web browser viewport (applied for HTML <code>body</code> element). Set the same color as for footer background to avoid blank space below the footer on large screens.]]></comment>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -1888,8 +1856,7 @@
 							<label>Page Background Color</label>
 							<comment>Background color applied for all sections of the page: header, main content area and footer</comment>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1992,8 +1959,7 @@
 						<top_border_color translate="label comment">
 							<label>Top Border Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>0</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2002,8 +1968,7 @@
 						<color translate="label">
 							<label>Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2012,8 +1977,7 @@
 						<link_color translate="label">
 							<label>Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2022,8 +1986,7 @@
 						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>40</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2042,8 +2005,7 @@
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2153,8 +2115,7 @@
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2164,8 +2125,7 @@
 						<!--<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>100</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2174,8 +2134,7 @@
 						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>120</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2184,8 +2143,7 @@
 						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>130</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2204,8 +2162,7 @@
 						<search_bg_color translate="label">
 							<label>Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>410</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2214,8 +2171,7 @@
 						<search_hover_bg_color translate="label">
 							<label>Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>420</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2224,8 +2180,7 @@
 						<search_color translate="label comment">
 							<label>Search Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>310</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2234,8 +2189,7 @@
 						<search_hover_color translate="label comment">
 							<label>Search Hover Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>320</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2244,8 +2198,7 @@
 						<search_border_color translate="label comment">
 							<label>Search Border Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>330</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2254,8 +2207,7 @@
 						<search_border_hover_color translate="label comment">
 							<label>Search Border Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>340</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2274,8 +2226,7 @@
 						<dropdown_bg_color translate="label comment">
 							<label>Drop-down Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>810</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2284,8 +2235,7 @@
 						<dropdown_color translate="label comment">
 							<label>Drop-down Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>820</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2294,8 +2244,7 @@
 						<dropdown_link_color translate="label comment">
 							<label>Drop-down Link Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>830</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2304,8 +2253,7 @@
 						<dropdown_link_hover_color translate="label comment">
 							<label>Drop-down Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>840</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2326,8 +2274,7 @@
 						<mh_item_bg_color translate="label">
 							<label>Item Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>910</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2336,8 +2283,7 @@
 						<mh_item_color translate="label">
 							<label>Item Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>920</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2346,8 +2292,7 @@
 						<mh_item_active_bg_color translate="label">
 							<label>Item Active Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>930</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2356,8 +2301,7 @@
 						<mh_item_active_color translate="label">
 							<label>Item Active Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>940</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2366,8 +2310,7 @@
 						<mh_content_color translate="label">
 							<label>Content Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>950</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2376,8 +2319,7 @@
 						<mh_content_link_color translate="label">
 							<label>Content Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>960</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2386,8 +2328,7 @@
 						<mh_content_link_hover_color translate="label">
 							<label>Content Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>970</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2410,8 +2351,7 @@
 						<color translate="label">
 							<label>Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2420,8 +2360,7 @@
 						<link_color translate="label">
 							<label>Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2430,8 +2369,7 @@
 						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2450,8 +2388,7 @@
 						<bg_color translate="label">
 							<label>Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>110</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2490,8 +2427,7 @@
 						<inner_bg_color translate="label">
 							<label>Inner Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>310</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -2621,8 +2557,7 @@
 						<inner_bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2683,8 +2618,7 @@
 						<bg_color translate="label comment">
 							<label>Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>210</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2693,8 +2627,7 @@
 						<color translate="label comment">
 							<label>Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>220</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2703,8 +2636,7 @@
 						<hover_bg_color translate="label comment">
 							<label>Hover Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>230</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2713,8 +2645,7 @@
 						<hover_color translate="label comment">
 							<label>Hover Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>240</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2723,8 +2654,7 @@
 						<active_bg_color translate="label comment">
 							<label>Active Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>250</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2733,8 +2663,7 @@
 						<active_color translate="label comment">
 							<label>Active Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>260</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2794,8 +2723,7 @@
 							<label>Link Separator Color</label>
 							<comment>Vertical space between links in mobile version of the main menu. Leave empty to remove separator.</comment>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>410</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2814,8 +2742,7 @@
 						<dropdown_bg_color translate="label comment">
 							<label>Drop-down Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>510</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2824,8 +2751,7 @@
 						<dropdown_color translate="label comment">
 							<label>Drop-down Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>520</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2834,8 +2760,7 @@
 						<dropdown_link_color translate="label comment">
 							<label>Drop-down Link Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>530</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2844,8 +2769,7 @@
 						<dropdown_link_hover_color translate="label comment">
 							<label>Drop-down Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>540</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2864,8 +2788,7 @@
 						<label_bg_color translate="label comment">
 							<label>Label-1 Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>610</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2874,8 +2797,7 @@
 						<label_color translate="label comment">
 							<label>Label-1 Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>620</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2884,8 +2806,7 @@
 						<label_bg_color2 translate="label comment">
 							<label>Label-2 Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>630</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2894,8 +2815,7 @@
 						<label_color2 translate="label comment">
 							<label>Label-2 Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>640</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2904,8 +2824,7 @@
 						<label_hover_bg_color translate="label comment">
 							<label>Label Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>650</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2914,8 +2833,7 @@
 						<label_hover_color translate="label comment">
 							<label>Label Hover Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>660</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2945,8 +2863,7 @@ between the header and the footer).</comment>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2994,8 +2911,7 @@ between the header and the footer).</comment>
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3025,8 +2941,7 @@ between the header and the footer).</comment>
 						<grid_item_bg_color translate="label">
 							<label>Item Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3035,8 +2950,7 @@ between the header and the footer).</comment>
 						<grid_item_hover_bg_color translate="label">
 							<label>Item Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3089,8 +3003,7 @@ between the header and the footer).</comment>
 						<addto_icon_bg_color translate="label comment">
 							<label>Add-to Icon Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>110</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3099,8 +3012,7 @@ between the header and the footer).</comment>
 						<addto_icon_hover_bg_color translate="label comment">
 							<label>Add-to Icon Hover Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>120</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3119,8 +3031,7 @@ between the header and the footer).</comment>
 						<tab_inner_bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>205</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3129,8 +3040,7 @@ between the header and the footer).</comment>
 						<tab_panel_bg_color translate="label">
 							<label>Panel Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>206</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3140,8 +3050,7 @@ between the header and the footer).</comment>
 							<label>Border Color</label>
 							<comment>Boder color will be also used in accordion.</comment>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>207</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3150,8 +3059,7 @@ between the header and the footer).</comment>
 						<tab_bg_color translate="label comment">
 							<label>Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>210</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3160,8 +3068,7 @@ between the header and the footer).</comment>
 						<tab_color translate="label comment">
 							<label>Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>220</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3170,8 +3077,7 @@ between the header and the footer).</comment>
 						<tab_hover_bg_color translate="label comment">
 							<label>Hover Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>230</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3180,8 +3086,7 @@ between the header and the footer).</comment>
 						<tab_hover_color translate="label comment">
 							<label>Hover Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>240</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3190,8 +3095,7 @@ between the header and the footer).</comment>
 						<tab_active_bg_color translate="label comment">
 							<label>Active Item Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>250</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3200,8 +3104,7 @@ between the header and the footer).</comment>
 						<tab_active_color translate="label comment">
 							<label>Active Item Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>260</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3221,8 +3124,7 @@ between the header and the footer).</comment>
 						<acco_bg_color translate="label">
 							<label>Accordion Item Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>310</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3231,8 +3133,7 @@ between the header and the footer).</comment>
 						<acco_color translate="label">
 							<label>Accordion Item Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>320</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3241,8 +3142,7 @@ between the header and the footer).</comment>
 						<acco_active_bg_color translate="label">
 							<label>Accordion Active Item Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>330</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3251,8 +3151,7 @@ between the header and the footer).</comment>
 						<acco_active_color translate="label">
 							<label>Accordion Active Item Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>340</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3284,8 +3183,7 @@ between the header and the footer).</comment>
 						<tool_icon_bg_color translate="label">
 							<label>Icon Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>210</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3294,8 +3192,7 @@ between the header and the footer).</comment>
 						<tool_icon_color translate="label">
 							<label>Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>220</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3304,8 +3201,7 @@ between the header and the footer).</comment>
 						<tool_icon_hover_bg_color translate="label">
 							<label>Icon Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>230</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3314,8 +3210,7 @@ between the header and the footer).</comment>
 						<tool_icon_hover_color translate="label">
 							<label>Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>240</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3325,8 +3220,7 @@ between the header and the footer).</comment>
 							<label>Icon Active Background Color</label>
 							<comment>Active pagination button. Note: not all styles of pagination use "active state" color.</comment>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>250</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3348,8 +3242,7 @@ between the header and the footer).</comment>
 						<color translate="label">
 							<label>Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3358,8 +3251,7 @@ between the header and the footer).</comment>
 						<link_color translate="label">
 							<label>Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3368,8 +3260,7 @@ between the header and the footer).</comment>
 						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3388,8 +3279,7 @@ between the header and the footer).</comment>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3430,8 +3320,7 @@ between the header and the footer).</comment>
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3450,8 +3339,7 @@ between the header and the footer).</comment>
 						<button_bg_color translate="label">
 							<label>Button Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>410</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3460,8 +3348,7 @@ between the header and the footer).</comment>
 						<button_color translate="label">
 							<label>Button Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>420</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3470,8 +3357,7 @@ between the header and the footer).</comment>
 						<button_hover_bg_color translate="label">
 							<label>Button Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>430</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3480,8 +3366,7 @@ between the header and the footer).</comment>
 						<button_hover_color translate="label">
 							<label>Button Hover Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>440</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3500,8 +3385,7 @@ between the header and the footer).</comment>
 						<tool_icon_bg_color translate="label">
 							<label>Icon Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>510</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3510,8 +3394,7 @@ between the header and the footer).</comment>
 						<tool_icon_color translate="label">
 							<label>Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>520</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3520,8 +3403,7 @@ between the header and the footer).</comment>
 						<tool_icon_hover_bg_color translate="label">
 							<label>Icon Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>530</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3530,8 +3412,7 @@ between the header and the footer).</comment>
 						<tool_icon_hover_color translate="label">
 							<label>Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>540</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3550,8 +3431,7 @@ between the header and the footer).</comment>
 						<icon_bg_color translate="label">
 							<label>Icon Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>610</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3560,8 +3440,7 @@ between the header and the footer).</comment>
 						<icon_color translate="label">
 							<label>Icon Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>620</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3570,8 +3449,7 @@ between the header and the footer).</comment>
 						<icon_hover_bg_color translate="label">
 							<label>Icon Hover Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>630</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3580,8 +3458,7 @@ between the header and the footer).</comment>
 						<icon_hover_color translate="label">
 							<label>Icon Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>640</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3602,8 +3479,7 @@ between the header and the footer).</comment>
 						<color translate="label">
 							<label>Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3612,8 +3488,7 @@ between the header and the footer).</comment>
 						<link_color translate="label">
 							<label>Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3622,8 +3497,7 @@ between the header and the footer).</comment>
 						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3641,8 +3515,7 @@ between the header and the footer).</comment>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3683,8 +3556,7 @@ between the header and the footer).</comment>
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3705,8 +3577,7 @@ between the header and the footer).</comment>
 						<color translate="label">
 							<label>Text Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>10</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3715,8 +3586,7 @@ between the header and the footer).</comment>
 						<link_color translate="label">
 							<label>Link Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>20</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3725,8 +3595,7 @@ between the header and the footer).</comment>
 						<link_hover_color translate="label">
 							<label>Link Hover Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3745,8 +3614,7 @@ between the header and the footer).</comment>
 						<bg_color translate="label">
 							<label>Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>210</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3785,8 +3653,7 @@ between the header and the footer).</comment>
 						<inner_bg_color translate="label">
 							<label>Inner Background Color</label>
 							<frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
 							<sort_order>310</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -3807,8 +3674,7 @@ between the header and the footer).</comment>
 						<bg_color translate="label comment">
 							<label>Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3817,8 +3683,7 @@ between the header and the footer).</comment>
 						<inner_bg_color translate="label comment">
 							<label>Inner Background Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3828,8 +3693,7 @@ between the header and the footer).</comment>
 						<color translate="label comment">
 							<label>Text Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>130</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3838,8 +3702,7 @@ between the header and the footer).</comment>
 						<link_color translate="label comment">
 							<label>Link Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>140</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -3848,8 +3711,7 @@ between the header and the footer).</comment>
 						<link_hover_color translate="label comment">
 							<label>Link Hover Color</label>
                             <frontend_type>text</frontend_type>
-							<frontend_model>wsu_wsu/adminhtml_system_config_form_field_color</frontend_model>
-							<backend_model>wsu_wsu/system_config_backend_design_color_validatetransparent</backend_model>
+							<frontend_model>wsu_themecontrol/adminhtml_system_config_form_field_color</frontend_model>
                             <sort_order>150</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
