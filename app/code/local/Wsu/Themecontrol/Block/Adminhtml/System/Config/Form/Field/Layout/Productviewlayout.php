@@ -461,18 +461,6 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 													"settings":{
 														"type": "flex-column",
 														"order": "order-6"
-													},
-													"children":{
-														"product-options":{
-															"settings":{
-																"order": "order-1"
-															}
-														},
-														"product-options-bottom":{
-															"settings":{
-																"order": "order-2"
-															}
-														}
 													}
 												},
 												"container1_area": {
