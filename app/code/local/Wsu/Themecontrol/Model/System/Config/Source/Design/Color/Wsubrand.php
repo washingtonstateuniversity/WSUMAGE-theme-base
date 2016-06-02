@@ -1,6 +1,6 @@
 <?php
 
-class Wsu_Wsu_Model_System_Config_Source_Design_Color_Wsubrand{
+class Wsu_Themecontrol_Model_System_Config_Source_Design_Color_Wsubrand{
     public function toOptionArray(){
 		return array(
 			array('value' => 'default', 'label' => Mage::helper('wsu_themecontrol')->__('Default [white]')),
