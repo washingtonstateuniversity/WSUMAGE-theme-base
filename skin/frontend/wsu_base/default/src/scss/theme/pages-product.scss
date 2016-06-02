@@ -226,7 +226,7 @@ $url_9: url(images/bg_x.png);
             float: left;
         }
     }
-    .product-img-box {
+    .product_info_media {
         /*float: left;
         width: 302px;*/
         .product-image {
@@ -300,13 +300,12 @@ $url_9: url(images/bg_x.png);
                 text-transform: uppercase;
             }
             ul {
-                margin-left: -10px;
             }
             li {
-                float: left;
                 margin: 0 0 8px 10px;
+                display: block;
+                max-width: 66px;
                 a {
-                    float: left;
                     width: 66px;
                     height: 66px;
                     border: 1px solid $gray_221;
