@@ -2573,7 +2573,7 @@
 					</fields>
 				</header_primary>
 <!-- wsu_themecontrol_design/nav  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-				<nav translate="label comment">
+				<!--<nav translate="label comment">
                     <label>Main Menu</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>40</sort_order>
@@ -2867,7 +2867,7 @@
                             <show_in_store>1</show_in_store>
 						</label_hover_color>
 					</fields>
-				</nav>
+				</nav>-->
 <!-- wsu_themecontrol_design/main  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 				<main translate="label comment">
                     <label>Main</label>

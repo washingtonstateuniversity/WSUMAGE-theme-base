@@ -306,7 +306,7 @@
 				<dropdown_link_color>#333</dropdown_link_color>
 				<dropdown_link_hover_color>#00a9c7</dropdown_link_hover_color>
 			</header>
-			<nav>
+			<!--<nav>
 				<inner_bg_color></inner_bg_color>
 				<stretched>0</stretched>
 				<border>1</border>
@@ -332,7 +332,7 @@
 				<label_color2>#fff</label_color2>
 				<label_hover_bg_color>#555</label_hover_bg_color>
 				<label_hover_color>#fff</label_hover_color>
-			</nav>
+			</nav>-->
 			<main>
 				<bg_color></bg_color>
 				<tex></tex>
