@@ -88,8 +88,8 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			<div class="type_content_alignment">'.$this->_makeOptionDropdown('**type_temp**','contentalignment').'</select></div>
 			<div class="type_item_alignment">'.$this->_makeOptionDropdown('**type_temp**','itemalignment').'</div>
 			
-			<div class="type_media-query-size"><select><option value="full-width-at-480">full-width-at-480</option></select></div>
-			<div class="type_media-query-type"><select><option value="column-at-480">column-at-480</option></select></div>
+			<div class="type_media-query-size">'.$this->_makeOptionDropdown('**type_temp**','mediaquerysize').'</select></div>
+			<div class="type_media-query-type">'.$this->_makeOptionDropdown('**type_temp**','mediaquerytype').'</select></div>
 			<div class="type_order"><select><option value="order-1">order-1</option><option value="order-2">order-2</option><option value="order-3">order-3</option><option value="order-4">order-4</option><option value="order-5">order-5</option><option value="order-6">order-6</option><option value="order-7">order-7</option><option value="order-8">order-8</option><option value="order-9">order-9</option><option value="order-10">order-10</option><option value="order-11">order-11</option><option value="order-12">order-12</option></select></div>
 		</div>
 		<link rel="stylesheet" type="text/css" href="/skin/adminhtml/default/default/wsu/css/_layout_preview.css" media="print" />
