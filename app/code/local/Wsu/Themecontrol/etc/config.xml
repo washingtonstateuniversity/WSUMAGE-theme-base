@@ -276,8 +276,9 @@
 				<font_size>12px</font_size>
 				<primary_font_family_group>google</primary_font_family_group>
 				<primary_font_family_custom>Arial, "Helvetica Neue", Helvetica, sans-serif</primary_font_family_custom>
-				<primary_font_family>Bitter</primary_font_family>
+				<primary_font_family>Open Sans</primary_font_family>
 				<primary_char_latin_ext>0</primary_char_latin_ext>
+				<primary_font_weight>300,400,600,700,800</primary_font_weight>
 			</font>
 			<page>
 				<bg_color>transparent</bg_color>
