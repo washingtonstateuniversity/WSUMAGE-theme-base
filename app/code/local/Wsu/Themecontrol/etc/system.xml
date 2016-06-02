@@ -1360,7 +1360,7 @@
 				</spine>			
 <!-- wsu_themecontrol_design/colors  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 				<colors translate="label comment">
-                    <label>Colors</label>
+                    <label>Base Colors</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>5</sort_order>
                     <show_in_default>1</show_in_default>
