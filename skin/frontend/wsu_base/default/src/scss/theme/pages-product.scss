@@ -690,10 +690,14 @@ $url_9: url(images/bg_x.png);
         font-weight: bold;
         line-height: 20px;
         color: $gray_85;
+        margin-top: 10px;
     }
     .qty {
         float: left;
         margin-right: 5px;
+        font-size: 1.57em;
+        margin-top: 3px;
+        text-align: center;
     }
     .paypal-logo {
         clear: left;
