@@ -901,55 +901,6 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 
 
-<?php
-//Slideshow
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-?>
-
-<?php
-/* Slideshow interface icons: prev/next arrows, pagination
--------------------------------------------------------------- */
-?>
-
-<?php //Default icon ?>
-/* Slider arrows */
-.the-slideshow .owl-controls .owl-buttons div,
-
-/* Slider pagination */
-.the-slideshow.slider-pagination1 .owl-controls .owl-page span,
-
-/* For pagination2 default color overrides color of active state and hover state */
-.the-slideshow.slider-pagination2 .owl-controls .owl-page span,
-.the-slideshow.slider-pagination2 .owl-controls				.owl-page.active span,
-.the-slideshow.slider-pagination2 .owl-controls.clickable 	.owl-page.active:hover span 
-{
-	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_bg_color','',';')?>
-	<?=$t->getCssRuleAttr('color','slideshow/tool_icon_color','',';')?>
-}
-
-
-<?php //Hover icon ?>
-/* Slider arrows */
-.the-slideshow .owl-controls.clickable .owl-buttons div:hover,
-
-/* Slider pagination */
-.the-slideshow.slider-pagination1 .owl-controls.clickable .owl-page:hover span,
-.the-slideshow.slider-pagination2 .owl-controls.clickable .owl-page:hover span
-{
-	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_hover_bg_color','',';')?>
-	<?=$t->getCssRuleAttr('color','slideshow/tool_icon_hover_color','',';')?>
-}
-
-
-<?php //Active icon ?>
-.the-slideshow.slider-pagination1 .owl-controls 			.owl-page.active span,
-.the-slideshow.slider-pagination1 .owl-controls.clickable 	.owl-page.active:hover span /* Active state overrides hover state */
-{
-	<?=$t->getCssRuleAttr('background-color','slideshow/tool_icon_active_bg_color','',';')?>
-	<?php //Not needed for pagination: ?>
-	<?php /* color: <?php echo $d['slideshow']['tool_icon_active_color']; ?>; */ ?>
-}
 
 
 
