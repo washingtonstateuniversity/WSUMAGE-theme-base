@@ -69,6 +69,9 @@ var ConfigurableSwatchesList = {
         });
 
         $swatch.addClass('selected');
+		if(jQuery(".ui-selectmenu-button").length){
+			jQuery( "select" ).iconselectmenu( "refresh" );
+		}
     }
 }
 

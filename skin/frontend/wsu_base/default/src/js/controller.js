@@ -31,16 +31,7 @@
 			return li.appendTo( ul );
 		}
 	});
-	
-	
 
-
-
-
-	
-	
-	
-	
 	//$( document ).tooltip();
 	$.popup_message = function(html_message,clean,callback) {
 		if(typeof(clean)==="undefined"){
@@ -92,6 +83,7 @@
 				.addClass( "ui-menu-icons" );
 			});
 			
+
 			
             $(".spine-sitenav .parent a span").on("click",function(){
                 $(this).closest("a").trigger("click");

@@ -389,6 +389,9 @@ Product.ConfigurableSwatches.prototype = {
             }
             this.setAvailableOptions();
             this.checkStockStatus();
+			if(jQuery(".ui-selectmenu-button").length){
+				jQuery( "select" ).iconselectmenu( "refresh" );
+			}
         }
     },
     /**
@@ -468,6 +471,11 @@ Product.ConfigurableSwatches.prototype = {
             this.updateSelect(attr);
             this._F.firstOptionSelected = true;
         }
+		
+		if(jQuery(".ui-selectmenu-button").length){
+			jQuery( "select" ).iconselectmenu( "refresh" );
+		}
+		
     },
     /**
      *
@@ -708,10 +716,12 @@ Product.ConfigurableSwatches.prototype = {
         if (opt._f.isSwatch) {
             var method = enabled ? 'removeClassName' : 'addClassName';
             opt._e.li[method]('not-available');
+			var attrDisable = enabled ? 'removeAttribute' : 'writeAttribute';
+			opt._e.li[method]('disabled');
         } else if (this._F.currentAction == "click" || this._F.currentAction == "change") {
             // Set disabled and selected if action is permanent, ONLY for non-swatch selects
             var attrDisable = enabled ? 'removeAttribute' : 'writeAttribute';
-            $(opt._e.option)[attrDisable]('disabled');
+            jQuery(opt._e.option)[attrDisable]('disabled');
         }
         return enabled;
     },
@@ -728,6 +738,9 @@ Product.ConfigurableSwatches.prototype = {
             ConfigurableMediaImages.updateImage(attr._e.optionSelect);
             this.productConfig.handleSelectChange(attr._e.optionSelect);
             this._F.nativeSelectChange = true;
+			if(jQuery(".ui-selectmenu-button").length){
+				jQuery( "select" ).iconselectmenu( "refresh" );
+			}
         };
     },
     /**
