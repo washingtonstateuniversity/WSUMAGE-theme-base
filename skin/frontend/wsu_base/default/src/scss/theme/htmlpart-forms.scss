@@ -547,3 +547,19 @@ xbutton.btn-checkout {
 .registered-users .captcha-image {
     margin: 0;
 }
+
+.field.name-middlename label{
+    visibility: hidden;
+    display: none;
+}
+.field.name-middlename:before{
+    content:"Initial";
+    float: left;
+    color: #555;
+    font-weight: 700;
+    position: relative;
+    z-index: 0;
+    font-size: 1.1em;
+}
+
+

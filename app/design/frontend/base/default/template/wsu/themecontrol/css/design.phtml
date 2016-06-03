@@ -64,6 +64,81 @@ p.product-name a:hover
 /* forms inputs and buttons
 -------------------------------------------------------------- */
 ?>
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"]
+{
+    <?=$t->getCssRuleAttr('font-size','forms/general_input_font_size','2em',';')?>
+    <?=$t->getCssRuleAttr('padding','forms/general_input_padding','0.2em 0.5em',';')?>
+    <?=$t->getCssRuleAttr('border-radius','forms/general_input_border_radius','0.3em',';')?>
+    <?=$t->getCssRuleAttr('border','forms/general_input_border','2px solid #A2A2A2',';')?>
+}
+
+
+input[type="checkbox"]{
+  visibility: hidden;
+}
+label[for="is_subscribed"]{
+    position:relative;
+    padding-left: 1.8em;
+    line-height: 1.6em;
+}
+label[for="is_subscribed"]:before ,
+label[for="is_subscribed"]:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    content: "\f096";
+    position:absolute;
+    top: -0.45em;
+    left: -0.1em;
+    height: 1.9em;
+    line-height: 1.8em;
+    width: 1.8em;
+    font-size: 1.8em;
+}
+
+label[for="is_subscribed"]:after {
+   content: "\f046";
+   opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ label[for="is_subscribed"]:after {
+	opacity: 1;
+}
+
+label[for="is_subscribed"]:hover:after {
+   opacity: .5;
+}
+
+
+
+
+
+
+
+
+
+
 <?php //All buttons ?>
 .button
 {
