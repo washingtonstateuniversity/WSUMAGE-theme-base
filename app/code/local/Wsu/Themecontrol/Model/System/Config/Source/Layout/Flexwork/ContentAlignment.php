@@ -9,7 +9,6 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_ContentAlignme
             ['value' => 'content-center',         'label' => 'center'],
             ['value' => 'content-baseline',         'label' => 'baseline'],
             ['value' => 'content-end',         'label' => 'stretch'],
-
         ];
     }
 }

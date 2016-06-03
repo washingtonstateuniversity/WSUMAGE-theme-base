@@ -12,10 +12,6 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Mediaquerysize
 				   
 		foreach($sizes as $size){
         	$tmp[] = ['value' => 'full-width-at-'.$size, 'label' => 'full-width-at-'.$size];
-			/*,.row-at-#{$current-size}{ flex-direction: row; }
-			.row-reverse-at-#{$current-size} { flex-direction: row-reverse; }
-			.column-at-#{$current-size}  { flex-direction: column; }
-			.column-reverse-at-#{$current-size} { flex-direction: column-reverse; }*/
 		}
 
         return $tmp;
