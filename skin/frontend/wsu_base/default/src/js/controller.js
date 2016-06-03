@@ -22,11 +22,13 @@
 			if ( item.disabled ) {
 				li.addClass( "ui-state-disabled" );
 			}
-		
-			$( "<span>", {
-				style: item.element.attr( "data-style" ),
-				"class": "ui-icon " + item.element.attr( "data-class" )
-			}).appendTo( li );
+		    if( "undefined" !== item.element.attr( "data-style" )){
+                $( "<span>", {
+                    style: item.element.attr( "data-style" ),
+                    "class": "ui-icon " + item.element.attr( "data-class" )
+                }).appendTo( li );
+                li.addClass("has-icon");
+            }
 		
 			return li.appendTo( ul );
 		}
@@ -76,7 +78,7 @@
 		/* remeber me block js */
 		$(document).ready(function(){
 			
-			$("select").each(function(){
+			$("select:visible").each(function(){
 				$( this )
 				.iconselectmenu()
 				.iconselectmenu( "menuWidget" )
