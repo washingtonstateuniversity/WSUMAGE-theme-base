@@ -306,33 +306,6 @@
 				<dropdown_link_color>#333</dropdown_link_color>
 				<dropdown_link_hover_color>#00a9c7</dropdown_link_hover_color>
 			</header>
-			<!--<nav>
-				<inner_bg_color></inner_bg_color>
-				<stretched>0</stretched>
-				<border>1</border>
-				<font_size>16</font_size>
-				<font_uppercase>1</font_uppercase>
-				<bg_color>#f5f5f5</bg_color>
-				<color>#333</color>
-				<hover_bg_color>#5bd2ec</hover_bg_color>
-				<hover_color>#fff</hover_color>
-				<active_bg_color>#333</active_bg_color>
-				<active_color>#fff</active_color>
-				<mobile_opener_color>b</mobile_opener_color>
-				<mobile_opener_hover_color>w</mobile_opener_hover_color>
-				<mobile_opener_current_color>w</mobile_opener_current_color>
-				<mobile_link_separator_color>#ddd</mobile_link_separator_color>
-				<dropdown_bg_color>#fff</dropdown_bg_color>
-				<dropdown_color>#333</dropdown_color>
-				<dropdown_link_color>#333</dropdown_link_color>
-				<dropdown_link_hover_color>#00a9c7</dropdown_link_hover_color>
-				<label_bg_color>#5BD2EC</label_bg_color>
-				<label_color>#fff</label_color>
-				<label_bg_color2>#D52462</label_bg_color2>
-				<label_color2>#fff</label_color2>
-				<label_hover_bg_color>#555</label_hover_bg_color>
-				<label_hover_color>#fff</label_hover_color>
-			</nav>-->
 			<main>
 				<bg_color></bg_color>
 				<tex></tex>

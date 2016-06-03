@@ -1843,7 +1843,7 @@
 							<show_in_store>1</show_in_store>
 						</heading_buttons>
 					</fields>
-				</page>
+				</forms>
 <!-- wsu_themecontrol_design/page  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 				<page translate="label comment">
                     <label>Page</label>

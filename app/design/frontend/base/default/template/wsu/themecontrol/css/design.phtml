@@ -61,7 +61,7 @@ p.product-name a:hover
 
 
 <?php
-/* Buttons
+/* forms inputs and buttons
 -------------------------------------------------------------- */
 ?>
 <?php //All buttons ?>
@@ -148,6 +148,40 @@ main .button:not(.bare):hover, main .spine-button:not(.bare):hover, main button:
 
 }
 <?php endif; ?>
+
+    select {
+      width: 200px;
+    }
+
+    /* select with custom icons */
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item {
+      padding: 0.5em 0 0.5em 3em;
+    }
+
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+      height: 24px;
+      width: 24px;
+      top: 0.1em;
+    }
+
+    .ui-icon.rss {
+      background: url("images/24-rss-square.png") 0 0 no-repeat;
+    }
+
+    /* select with CSS avatar icons */
+    option.avatar {
+      background-repeat: no-repeat !important;
+      padding-left: 20px;
+    }
+    .avatar .ui-icon {
+      background-position: left top;
+    }
+
+
+
+
+
+
 
 
 <?php

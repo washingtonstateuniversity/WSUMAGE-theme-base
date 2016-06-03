@@ -13,6 +13,34 @@
 			return "$"+parseFloat(n).toFixed(2);   
 		}
 	}
+	
+	
+	$.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+		_renderItem: function( ul, item ) {
+			var li = $( "<li>", { text: item.label } );
+		
+			if ( item.disabled ) {
+				li.addClass( "ui-state-disabled" );
+			}
+		
+			$( "<span>", {
+				style: item.element.attr( "data-style" ),
+				"class": "ui-icon " + item.element.attr( "data-class" )
+			}).appendTo( li );
+		
+			return li.appendTo( ul );
+		}
+	});
+	
+	
+
+
+
+
+	
+	
+	
+	
 	//$( document ).tooltip();
 	$.popup_message = function(html_message,clean,callback) {
 		if(typeof(clean)==="undefined"){
@@ -56,6 +84,15 @@
 		
 		/* remeber me block js */
 		$(document).ready(function(){
+			
+			$("select").each(function(){
+				$( this )
+				.iconselectmenu()
+				.iconselectmenu( "menuWidget" )
+				.addClass( "ui-menu-icons" );
+			});
+			
+			
             $(".spine-sitenav .parent a span").on("click",function(){
                 $(this).closest("a").trigger("click");
             });
