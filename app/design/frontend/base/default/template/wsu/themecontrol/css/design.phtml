@@ -24,6 +24,9 @@
 	} elseif ($t->isColor($d['page']['bg_color'])) {
 		$mainBgColor = $d['page']['bg_color'];
 	}
+	
+	$use_add_to_cart_icon = true; //@todo will have to come back to
+	
 ?>
 <?php
 //Global
@@ -67,12 +70,36 @@ p.product-name a:hover
 	<?=$t->getCssRuleAttr('background-color','colors/button_bg_color','',';')?>
 	<?=$t->getCssRuleAttr('color','colors/button_color','',';')?>
 }
+
 .button:hover,
 .button:focus
 {
 	<?=$t->getCssRuleAttr('background-color','colors/button_hover_bg_color','',';')?>
 	<?=$t->getCssRuleAttr('color','colors/button_hover_color','',';')?>
 }
+
+main .button:not(.bare), main .spine-button:not(.bare), main button:not(.bare), main input[type=submit]:not(.bare), main input[type=reset]:not(.bare), main input[type=button]:not(.bare) {
+	<?=$t->getCssRuleAttr('background-color','forms/button_bg_color','#E4E4E4',';')?>
+	<?=$t->getCssRuleAttr('color','forms/button_color','#676767',';')?>
+
+	<?=$t->getCssRuleAttr('height','forms/button_height','38px',';')?>
+    <?=$t->getCssRuleAttr('line-height','forms/button_line_height','34px',';')?>
+	<?=$t->getCssRuleAttr('border-radius','forms/button_border_radius','6px',';')?>
+	<?=$t->getCssRuleAttr('max-width','forms/button_max_width','250px',';')?>
+
+	<?=$t->getCssRuleAttr('border','forms/button_border','2px #8E8E8E solid',';')?>
+
+	<?=$t->getCssRuleAttr('margin','forms/button_margin','3px 0px 7px 0px',';')?>
+	<?=$t->getCssRuleAttr('padding','forms/button_padding','0px 15px',';')?>
+
+	<?=$t->getCssRuleAttr('text-shadow','forms/button_text_shadow','1px 1px 1px rgba(57, 57, 57, 0.42)',';')?>
+	<?=$t->getCssRuleAttr('font-weight','forms/button_font_weight','600',';')?>
+
+}
+main .button:not(.bare):hover, main .spine-button:not(.bare):hover, main button:not(.bare):hover, main input[type=submit]:not(.bare):hover, main input[type=reset]:not(.bare):hover, main input[type=button]:not(.bare):hover{
+	<?=$t->getCssRuleAttr('background-color','colors/button_bg_color','#a5abb2',';')?>
+}
+
 
 <?php //Add to cart (product view) & Proceed to checkout ?>
 .product-view .btn-cart,
@@ -87,6 +114,39 @@ p.product-name a:hover
 	<?=$t->getCssRuleAttr('background-color','colors/button_hover_bg_color','',';')?>
 	<?=$t->getCssRuleAttr('color','colors/button_hover_color','',';')?>
 }
+
+<?php if($use_add_to_cart_icon): ?>
+#product-addtocart-button:after {
+
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    
+    z-index: 1;
+    top: 2px;
+    position: relative;
+    margin-left: 7px;
+    font-size: 1.7em;
+    <?php
+		$default_to = trim($t->getCssRuleAttr('', 'forms/button_color', '#676767',''), ":");
+		echo $t->getCssRuleAttr('color', 'product_page/button_color', $default_to, ';');
+	?>
+
+    <?php
+		$default_to = trim($t->getCssRuleAttr('','forms/button_text_shadow','1px 1px 1px rgba(57, 57, 57, 0.42)',''),":");
+		echo $t->getCssRuleAttr('text-shadow','product_page/button_text_shadow', $default_to, ';');
+	?>    
+
+    <?=$t->getCssRuleAttr('content', 'product_page/button_add_to_cart_icon', '"\f217"', ';')?>
+
+}
+<?php endif; ?>
 
 
 <?php
