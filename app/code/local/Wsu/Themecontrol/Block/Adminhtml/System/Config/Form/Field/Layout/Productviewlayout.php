@@ -90,7 +90,8 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			
 			<div class="type_media-query-size">'.$this->_makeOptionDropdown('**type_temp**','mediaquerysize').'</select></div>
 			<div class="type_media-query-type">'.$this->_makeOptionDropdown('**type_temp**','mediaquerytype').'</select></div>
-			<div class="type_order"><select><option value="order-1">order-1</option><option value="order-2">order-2</option><option value="order-3">order-3</option><option value="order-4">order-4</option><option value="order-5">order-5</option><option value="order-6">order-6</option><option value="order-7">order-7</option><option value="order-8">order-8</option><option value="order-9">order-9</option><option value="order-10">order-10</option><option value="order-11">order-11</option><option value="order-12">order-12</option></select></div>
+			<div class="type_hideat">'.$this->_makeOptionDropdown('**type_temp**','hideat').'</select></div>
+			<div class="type_order">'.$this->_makeOptionDropdown('**type_temp**','order').'</div>
 		</div>
 		<link rel="stylesheet" type="text/css" href="/skin/adminhtml/default/default/wsu/css/_layout_preview.css" media="print" />
 		<i><b>NOTE:</b> preview is 1:2</i>
@@ -212,6 +213,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				var settings_default = {
 					"parent":{
 						"show":"true",
+						"hideat":"",
 						"type": "flex-row",
 						"media-query-type": "column-at-480",
 						"size": "thirds-3",
@@ -221,6 +223,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 					},
 					"child":{
 						"show":"true",
+						"hideat":"",
 						"size": "thirds-3",
 						"order": "order-1",
 						"media-query-size": "",
@@ -230,7 +233,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				};
 		
 				function cleanTarget(target,callback){
-					var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-", "thirds-", "fours-", "fifths-", "sixths-", "eigths-", "ninths-", "tenths-", "twelfths-", "wrap", "space-", "center", "column-", "row-"];
+					var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-", "thirds-", "fours-", "fifths-", "sixths-", "eigths-", "ninths-", "tenths-", "twelfths-", "wrap", "space-", "center", "column-", "row-", "hide-below-"];
 					$.each(clearOf,function(i,val){
 						target.stripClass(val,false);
 					});callback();
