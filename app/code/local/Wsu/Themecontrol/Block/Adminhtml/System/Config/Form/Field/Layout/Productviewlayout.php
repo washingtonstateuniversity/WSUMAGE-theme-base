@@ -395,7 +395,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				$(document).ready(function(){
 
 					
-					//$("#' . $html_id . '").hide();
+					$("#' . $html_id . '").hide();
 					_layout = {
 						"product_info": {
 							"settings":{},
