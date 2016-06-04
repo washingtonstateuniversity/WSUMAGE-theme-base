@@ -5,6 +5,7 @@
 <!--			<action method="addItem"><type>cdn_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css</name></action>	-->
 			<action method="addCss"><script>wsu/css/_layout_preview.css</script></action>
 			<action method="addCss"><script>wsu/css/admin_preview.css</script></action>
+			<action method="addItem"><type>skin_js</type><script>wsu/js/preview.js</script></action>
         </reference>
     </adminhtml_system_config_edit>
 </layout>

@@ -2,13 +2,7 @@
   /* Set up for row-at-* and column-at ----------- */
 }
 
-.layoutframeworkPreview .sortable{
-	border:1px dashed transparent;
-}
 
-.layoutframeworkPreview .hovering{
-	border:1px dashed red;
-}
 
 .layoutframeworkPreview .column img:not(.unscaled), .layoutframeworkPreview .column:not(.unscale) img, .layoutframeworkPreview .row:not(.unscale) .column img {
     max-width: 100%;
