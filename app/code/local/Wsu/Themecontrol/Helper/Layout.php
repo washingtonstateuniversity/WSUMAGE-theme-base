@@ -231,6 +231,39 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 	}
 	
 	
+	public function _testProductPage($store = null)
+	{
+       /* $store = Mage::app()->getStore($store);
+        $collection = Mage::getModel('catalog/product')->getCollection()->addStoreFilter($store);
+        Mage::getSingleton('cataloginventory/stock')->addInStockFilterToCollection($collection);
+        Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($collection);
+        $ids = $collection->getAllIds();*/
+		
+		
+		$products = Mage::getModel('catalog/product')->getCollection();
+        Mage::getSingleton('cataloginventory/stock')->addInStockFilterToCollection($products);
+        Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products);
+		$products->getSelect()->order(new Zend_Db_Expr('RAND()'))->limit(5);
+		$ids = $products->getAllIds();
+		
+		$url = "/skin/adminhtml/default/default/wsu/field/product_preview.phtml";
+        if (empty($ids)) {
+            return $url;
+        }
+		//var_dump($ids);
+        $productId = array_rand(array_flip($ids), 1);
+		//var_dump($productId);
+        $product = Mage::getModel('catalog/product')->load($productId);
+		if(isset($product)){
+        	$url = preg_replace('/\?.*/', '', $product->getProductUrl());
+		}
+
+        return $url;
+    }
+	
+	
+	
+	
 	public function getCartLabel()
     {
 		$cart_label = Mage::helper('wsu_themecontrol')->getCfg('header/cart_label');

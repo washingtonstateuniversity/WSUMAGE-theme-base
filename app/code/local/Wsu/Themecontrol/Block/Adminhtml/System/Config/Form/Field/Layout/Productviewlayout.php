@@ -32,11 +32,14 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 		$html_id = str_replace('.','_',$element->getHtmlId());
 		$html_id_stub = explode('_row_type_',str_replace('.','_',$html_id));
 		$html_id_stub = isset($html_id_stub[1])?$html_id_stub[1]:'';
-		
+		$url = $this->helper('wsu_themecontrol/layout')->_testProductPage();
 
         $html .= '
 		<br/>
 		<style>
+			#' . $html_id . '{
+				display:none;
+			}
 			.layoutframeworkPreview{
 				min-height: 70px;
 				max-width: 100%;
@@ -46,7 +49,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				max-height: 750px;
 				zoom: .50;
 			}
-			.fake_spine{
+			/*.fake_spine{
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -59,25 +62,25 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				background-image: url(https://repo.wsu.edu/spine/1/marks/wsu-signature-vertical-white.svg);
 			}
 			#wsu-signature {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 150px auto;
-    background-color: transparent;
-    height: 155px;
-    display: block;
-    text-indent: 120%;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    z-index: 99;
-}
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 150px auto;
+				background-color: transparent;
+				height: 155px;
+				display: block;
+				text-indent: 120%;
+				overflow: hidden;
+				white-space: nowrap;
+				position: relative;
+				z-index: 99;
+			}
 			.fake_page{
 				padding-left: calc(198px + 30px);
 				box-sizing: border-box;
 				overflow-x: auto;
 				max-height: 748px;
 				padding-right: 25px;
-			}
+			}*/
 		</style>
 		<div style="display:none;">
 			<div class="type_show"><select><option value="true">yes</option><option value="false">no</option></select></div>
@@ -93,120 +96,23 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			<div class="type_hideat">'.$this->_makeOptionDropdown('**type_temp**','hideat').'</select></div>
 			<div class="type_order">'.$this->_makeOptionDropdown('**type_temp**','order').'</div>
 		</div>
-		<link rel="stylesheet" type="text/css" href="/skin/adminhtml/default/default/wsu/css/_layout_preview.css" media="print" />
-		<i><b>NOTE:</b> preview is 1:2</i>
-		<div class="layoutframeworkPreview '. ($html_id!=''?''.$html_id.' ':'') .'">
-			<div class="fake_spine"><header class="spine-header"><a href="" id="wsu-signature">Washington State University</a></header></div>
-			<div class="fake_page">
-				<div class="product-view product_info">
-					<div id="product_addtocart_form" class="product-essential ">
-						<div class="product-media media-block product_info_media">
-							<div class="product-image">
-								<img id="image" src="/skin/adminhtml/default/default/wsu/images/product_image.png" alt="Tori Tank" title="Tori Tank" >
-							</div>
-							<div class="more-views">
-								<h2>More Views</h2>
-								<ul class="more-views-imgs">
-									<li>
-										<a href="#"><img src="/skin/adminhtml/default/default/wsu/images/product_image.png" width="16.5" height="16.5"  ></a>
-									</li>
-									<li>
-										<a href="#"><img src="/skin/adminhtml/default/default/wsu/images/product_image.png" width="16.5" height="16.5"  ></a>
-									</li>
-									<li>
-										<a href="#"><img src="/skin/adminhtml/default/default/wsu/images/product_image.png" width="16.5" height="16.5"  ></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="product-content">
-							<div class="no-display"> 
-								<input type="hidden" name="product">
-								<input type="hidden" name="related_product" id="related-products-field" >
-							</div>
-							<div class="product-name">
-								<h1>Tori Tank</h1>
-							</div>
-							<div class="email-friend email_area">
-								<a href="#"  >Email to a Friend</a>
-							</div>
-							<div id="review_area" class="review_area">
-								<p class="no-rating"><a href="#"  >Be the first to review this product</a></p>
-							</div>
-							<div id="product_type_data_area" class="product_type_data_area"> </div>
-							<div id="tier_price_area" class="tier_price_area"> </div>
-							<div class="short_description_area short-description ">
-								<h2>Quick Overview</h2>
-								<div class="std">A simple ribbed cotton tank. Great for layering.</div>
-							</div>
-							<div class="description_area description ">
-								<h2>Full Overview</h2>
-								<div class="std">Ribbed scoop neck tank. 100% cotton.Machine wash.</div>
-							</div>
-							<div id="other_area" class="other_area">
-								
-							</div>
-							
-							<div id="container1_area" class="container1_area">
-							<div class="product-options" id="product-options-wrapper">
-									<dl class="last"> 
-										<dt class="swatch-attr"> <label id="color_label" class="required"> <em>*</em>Color: <span id="select_label_color" class="select-label"></span> </label> </dt>
-										<dd class="clearfix swatch-attr">
-											<div class="input-box"> <select name="super_attribute[92]" id="attribute92" class="required-entry super-attribute-select no-display swatch-select">  <option >Choose an Option...</option><option value="26" price="0" data-label="indigo">Indigo</option></select>
-												<ul id="configurable_swatch_color" class="configurable-swatch-list clearfix">
-													<li class="option-indigo is-media" id="option26">
-														<a href="#" name="indigo" id="swatch26" class="swatch-link swatch-link-92 has-image" title="Indigo" style="height: 23px; width: 23px;"> <span class="swatch-label" style="height: 21px; width: 21px; line-height: 21px;"> <img src="http://store.wsu.dev/media/catalog/swatches/1/21x21/media/indigo.png" alt="Indigo" width="21" height="21" > </span>												<span class="x">X</span> </a>
-													</li>
-												</ul>
-											</div>
-										</dd> 
-										<dt class="swatch-attr"> <label id="size_label" class="required"> <em>*</em>Size: <span id="select_label_size" class="select-label"></span> </label> </dt>
-										<dd class="clearfix swatch-attr last">
-											<div class="input-box"> <select name="super_attribute[180]" id="attribute180" class="required-entry super-attribute-select no-display swatch-select">  <option >Choose an Option...</option><option value="79" price="0" >M</option><option value="78" price="0" data-label="l">L</option><option value="77" price="0" data-label="xl">XL</option></select>
-												<ul id="configurable_swatch_size" class="configurable-swatch-list clearfix">
-													<li class="option-m" id="option79">
-														<a href="#" name="m" id="swatch79" class="swatch-link swatch-link-180" title="M" style="height: 23px; min-width: 23px;"> <span class="swatch-label" style="height: 21px; min-width: 21px; line-height: 21px;"> M </span> <span class="x">X</span> </a>
-													</li>
-													<li class="option-l" id="option78">
-														<a href="#" name="l" id="swatch78" class="swatch-link swatch-link-180" title="L" style="height: 23px; min-width: 23px;"> <span class="swatch-label" style="height: 21px; min-width: 21px; line-height: 21px;"> L </span> <span class="x">X</span> </a>
-													</li>
-													<li class="option-xl" id="option77">
-														<a href="#" name="xl" id="swatch77" class="swatch-link swatch-link-180" title="XL" style="height: 23px; min-width: 23px;"> <span class="swatch-label" style="height: 21px; min-width: 21px; line-height: 21px;"> XL </span> <span class="x">X</span> </a>
-													</li>
-												</ul>
-											</div>
-										</dd>
-									</dl>
-									<p class="required">* Required Fields</p>
-								</div>
-								<div class="product-options-bottom">
-									<div class="price-box"> <span class="regular-price" id="product-price-418_clone"> <span class="price">$60.00</span> </span>
-									</div>
-									<div class="add-to-cart"> <label for="qty">Qty:</label> <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty"> <button type="button" title="Add to Cart" id="product-addtocart-button" class="button btn-cart " 
-											><span><span>Add to Cart</span></span></button> </div>
-									<ul class="add-to-links">
-										<li><a href="#"  class="link-wishlist " >Add to Wishlist</a></li>
-										<li><span class="separator">|</span> <a href="#" class="link-compare " >Add to Compare</a></li>
-									</ul>
-									<ul class="sharing-links">
-										<li><a href="#" class="link-email-friend " title="Email to a Friend" >Email to a Friend</a></li>
-										<li> <a href="#"
-												target="_blank" title="Share on Facebook" class="link-facebook " > Share Facebook </a> </li>
-										<li> <a href="#" target="_blank" title="Share on Twitter" class="link-twitter " >Share on Twitter</a> </li>
-									</ul>
-								</div>
-							</div>
-							
-							
-							
-						</div>
-					</div>
-				<div class="product-collateral"> </div>
-			</div>
-			</div>
-		</div>
-		<script type="text/javascript">
+		<!--<link rel="stylesheet" type="text/css" href="/skin/adminhtml/default/default/wsu/css/_layout_preview.css" media="print" />-->
+		<i><b>NOTE:</b> preview is 1:2</i><br/>
+		<!--<div class="layoutframeworkPreview '. ($html_id!=''?''.$html_id.' ':'') .'">
 			
+		</div>-->
+		
+		<iframe 
+		class="layoutframeworkPreview '. $html_id .'" 
+		name="layoutframeworkPreview_'. $html_id .'" 
+		id="layoutframeworkPreview_'. $html_id .'" 
+		src="'.$url.'" 
+		frameborder="0" 
+		width="660" 
+		height="450" 
+		style="width:100% !important;height: 1250px !important;max-width:100% !important;max-height: 1250px !important;"></iframe>
+
+		<script type="text/javascript">
 			(function($){
 
 				var _layout = {};
@@ -248,7 +154,11 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				var _root = $(".' . $html_id . '");
 				function _layoutItOut(root_obj,_data){
 					$.each(_data,function(idx,val){
-						var target = root_obj.find("." + idx);
+						
+						
+						
+						var target = $("iframe#layoutframeworkPreview_'. $html_id .'").contents().find("." + idx);
+						console.log(target);
 						if( target.length > 0 ){
 							target.addClass("sortable");
 							cleanTarget(target,function(){
@@ -360,11 +270,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 				
 					schema[pList[len-1]] = value;
 				}
-				
-				
-								
-				
-				
+
 				function _updateLayout(_data){
 					$("#product_view_options li").each(function(idx,val){
 						$(this).children("dl").find("dd").each(function(idx,val){
@@ -388,13 +294,9 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 					
 					
 				}
-				
-				
-				
-				
-				$(document).ready(function(){
 
-					
+				$(document).ready(function(){
+					$("#' . $html_id . '").closest("td").css("width","85%");
 					$("#' . $html_id . '").hide();
 					_layout = {
 						"product_info": {
@@ -528,6 +430,11 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 							}
 						}
 					};
+						
+						
+
+						
+						
 					if($("#' . $html_id . '").val() !== ""){
 						try {
 							var str	= $("#' . $html_id . '").val();
@@ -537,7 +444,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 							console.error(ex);
 						}
 					}
-					$("#row_' . $html_id . ' td.label").html( _createInputForm(_layout,"") );
+					$("#row_' . $html_id . ' td.label").html( _createInputForm( _layout, "" ) );
 					
 					$("#product_view_options b").siblings("span").hide();
 					$("#product_view_options b").siblings("dl").hide();
@@ -555,15 +462,20 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 						
 					});
 					
-					$("#product_view_options .parent_option").off().on("click",function(){
+					$("#product_view_options .parent_option").off().on( "click", function(){
 						$(this).siblings(".parent").toggle();
-						$(this).toggleClass("open","close");
+						$(this).toggleClass("open", "close");
 					});
 					
 					
+					$("iframe#layoutframeworkPreview_'. $html_id .'").on("load", function(){
+						$("iframe#layoutframeworkPreview_'. $html_id .'").contents().find("head")
+							.append("<meta name=\'viewport\' content=\'width=device-width, initial-scale=0.5\'/>");
+							_layoutItOut(_root, _layout);
+						$("#product_view_options :input").on( "change", function(){ _updateLayout(_layout); } );
+					});
 					
-					_layoutItOut(_root,_layout);
-					$("#product_view_options :input").on("change",function(){_updateLayout(_layout)});
+					
 				});
 			}(jQuery));
 		</script>
