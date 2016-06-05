@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         },
         watch: {
             files: [
-                "src/**/*"
+                "src/**/*",
+				"../../../adminhtml/default/default/wsu/js/*"
             ],
             tasks: [ "sass", "concat", "jshint", "env:dev", "autoprefixer", "cssmin", "uglify", "copy" ]
         },
@@ -62,11 +63,11 @@ module.exports = function(grunt) {
                 banner: "/*! <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today('yyyy-mm-dd') %> */\n" +
                     "/*   */\n"
             },
-            /*front_build: {
-                src: "build/js/maps.wsu.edu.js",
-                dest: "dis/js/maps.wsu.edu.js"
+            preview_build: {
+                src: "../../../adminhtml/default/default/wsu/js/preview.js",
+                dest: "../../../adminhtml/default/default/wsu/js/_preview.js"
             },
-            admin_build: {
+            /*admin_build: {
                 src: "build/js/admin.maps.wsu.edu.js",
                 dest: "dis/js/admin.maps.wsu.edu.js"
             }*/
