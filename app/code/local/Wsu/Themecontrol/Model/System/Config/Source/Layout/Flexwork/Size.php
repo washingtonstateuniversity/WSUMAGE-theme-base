@@ -6,6 +6,7 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Size
 
         //thirds,fourths,fifths,sixths,eigths,ninths,tenths,twelfths
         return [
+			['value' => 'full-width',        'label' => 'full width'],
             ['value' => 'thirds-1',         'label' => 'one third'],
             ['value' => 'thirds-2',         'label' => 'two thirds'],
             ['value' => 'thirds-3',         'label' => 'three thirds'],

@@ -12,7 +12,7 @@
 					"hideat":"",
 					"type": "flex-row",
 					"media-query-type": "column-at-480",
-					"size": "full",
+					"size": "full-width",
 					"media-query-size": "",
 					"justification":"",
 					"content_alignment":""
@@ -20,7 +20,7 @@
 				"child":{
 					"show":"true",
 					"hideat":"",
-					"size": "full",
+					"size": "full-width",
 					"order": "",
 					"media-query-size": "",
 					"item_alignment":""
@@ -32,7 +32,7 @@
 			var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-",
 						   "thirds-", "fours-", "fifths-", "sixths-", "eigths-",
 						   "ninths-", "tenths-", "twelfths-", "wrap", "space-",
-						   "center", "column-", "row-", "hide-below-"];
+						   "center", "column-", "row-", "hide-below-", "full-width"];
 						   
 			$.each(clearOf,function(i,val){
 				target.stripClass(val,false);
