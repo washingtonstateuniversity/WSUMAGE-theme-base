@@ -64,17 +64,17 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 			<div class="type_hideat">'.$this->_makeOptionDropdown('**type_temp**','hideat').'</select></div>
 			<div class="type_order">'.$this->_makeOptionDropdown('**type_temp**','order').'</div>
 		</div>
-		<i><b>NOTE:</b> preview is 1:2</i><br/>
 		<span class="refresh_iframe">Refresh</span>
+		<i><b>NOTE:</b> preview is 1:2 and a live page</i><br/>
+		
 		<iframe 
 		class="layoutframeworkPreview '. $html_id .'" 
 		name="layoutframeworkPreview_'. $html_id .'" 
 		id="layoutframeworkPreview_'. $html_id .'" 
-		src="'.$url.'" 
+		data-src="'.$url.'" 
 		frameborder="0" 
 		width="660" 
-		height="450" 
-		style="width:100% !important;height: 1250px !important;max-width:100% !important;max-height: 1250px !important;"></iframe>
+		height="450"></iframe>
 
 		<script type="text/javascript">
 			(function($){
