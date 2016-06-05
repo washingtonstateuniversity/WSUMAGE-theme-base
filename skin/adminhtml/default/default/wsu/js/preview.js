@@ -2,8 +2,8 @@
 	"use strict";
 	$.wsu = $.wsu || {};
 	$.wsu.product_preview = {};
-	$.wsu.product_preview.html_id = "";
-	
+	$.wsu.product_preview.html_id = null;
+	$.wsu.product_preview.iframe = null;
 	$.wsu.product_preview.settings_default = {
 			"parent":{
 				"show":"true",
@@ -46,9 +46,9 @@
 	};
 	
 	$.wsu.product_preview._layoutItOut = function(root_obj,_data){
-		var iFrame = $("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id).contents();
+		var iFrame = $.wsu.product_preview.iframe.contents();
 		$.each(_data,function(idx,val){
-			var target = $("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id).contents().find("." + idx);
+			var target = $.wsu.product_preview.iframe.contents().find("." + idx);
 			if( target.length ){
 				target.addClass("preview_sortable");
 				$.wsu.product_preview.cleanTarget( target, function(){
@@ -200,14 +200,16 @@
 	$.wsu.product_preview.setup = function( html_id ){
 		
 		$.wsu.product_preview.html_id = html_id;
+		$.wsu.product_preview.iframe = $("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id);
 
 		$(document).ready(function(){
-			$("#"+ html_id).closest("td").css("width","85%");
-			$("#"+ html_id).hide();
+			var _valField = $("#"+ html_id);
+			_valField.closest("td").css("width","85%");
+			_valField.hide();
 
-			if( $("#"+ html_id).val() !== "" ){
+			if( "" !== _valField.val() ){
 				try {
-					var str	= $("#"+ html_id).val();
+					var str	= _valField.val();
 					var obj = JSON.parse(str); // this is how you parse a string into JSON 
 					$.wsu.product_preview._layout = obj;
 				} catch (ex) {
@@ -216,35 +218,39 @@
 			}
 			$("#row_"+ html_id + " td.label").html( $.wsu.product_preview._createInputForm( $.wsu.product_preview._layout, "" ) );
 			
-			$("#product_view_options b").siblings("span").hide();
-			$("#product_view_options b").siblings("dl").hide();
-			$("#product_view_options b").siblings("ul").hide();
-			$("#product_view_options b").off().on("click",function(){
-				$(this).siblings("dl:not(.parent)").toggle();
-				$(this).siblings("ul").toggle();
-				$(this).siblings("span").toggle();
+			var _opNode = $("#product_view_options b");
+			
+			_opNode.siblings("span").hide();
+			_opNode.siblings("dl").hide();
+			_opNode.siblings("ul").hide();
+			_opNode.off().on("click",function(){
+				var _node = $(this);
+				_node.siblings("dl:not(.parent)").toggle();
+				_node.siblings("ul").toggle();
+				_node.siblings("span").toggle();
 				
-				$(this).toggleClass("open","close");
-				if( ! $(this).is(".open") ){
-					$(this).siblings(".parent_option").hide();
-					$(this).siblings(".parent").hide();
+				_node.toggleClass("open","close");
+				if( ! _node.is(".open") ){
+					_node.siblings(".parent_option").hide();
+					_node.siblings(".parent").hide();
 				}
 				
 			});
 			
 			$("#product_view_options .parent_option").off().on( "click", function(){
-				$(this).siblings(".parent").toggle();
-				$(this).toggleClass("open", "close");
+				var _node = $(this);
+				_node.siblings(".parent").toggle();
+				_node.toggleClass("open", "close");
 			});
 			
-			$.wsu.product_preview.setupIframe($("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id));
+			$.wsu.product_preview.setupIframe( $.wsu.product_preview.iframe );
 
 			
 			if( null !== $.wsu.product_preview.ajaxurl ){
 				$("#refresh_iframe").on("click",function(){
 					$.getJSON($.wsu.product_preview.ajaxurl).always(function(data){
 						console.log(data._url);
-						$("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id).attr("src",data._url);
+						$.wsu.product_preview.iframe.attr("src",data._url);
 						//$.wsu.product_preview.setupIframe($("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id));
 					});
 				});
