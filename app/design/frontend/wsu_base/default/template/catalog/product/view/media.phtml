@@ -2,6 +2,8 @@
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
 	$layout = $this->helper('wsu_themecontrol/layout');
+	
+	$layout->set_layoutTarget('catalog_product_view/productview');
     $use_flexwork_spacer = true;
 ?>
 

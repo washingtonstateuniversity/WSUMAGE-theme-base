@@ -8,6 +8,14 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
      * @var array
      */
     protected $_sectionalData;
+
+    /**
+     * Sectional Data block
+     *
+     * @var array
+     */
+    protected $_layoutTarget;
+
     
 	/**
 	 * Get CSS for grid item based on number of columns
@@ -55,10 +63,17 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
     /**
      * Set the data for the css file being rendered
      */	
-	public function set_sectionalData( $name = 'catalog_product_view/productviewlayout' )
+	 
+	public function set_layoutTarget( $name = 'catalog_product_view/productview' )
+	{
+        $this->_layoutTarget = $name;
+	}
+	 
+	 
+	public function set_sectionalData()
 	{
         $theme = Mage::helper('wsu_themecontrol');
-        $block_settings = $theme->getCfgLayout($name);
+        $block_settings = $theme->getCfgLayout($this->_layoutTarget);
         $this->_sectionalData = json_decode($block_settings);
 	}
     /**
@@ -254,7 +269,28 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		return $url;
     }
 	
-	
+	public function _testCategoryPage($store = null)
+	{
+		
+		$store = Mage::app()->getStore($store);
+        $ids = Mage::getModel('catalog/category')->getCollection()
+            ->setStoreId($store->getId())
+            ->addIsActiveFilter()
+            ->addFieldToFilter('level', array('gt' => 1))
+            ->getAllIds();
+
+
+		$url = "/skin/adminhtml/default/default/wsu/field/product_preview.html";
+		if (empty($ids)) {
+			return $url;
+		}
+
+        $categoryId = array_rand(array_flip($ids), 1);
+        $category = Mage::getModel('catalog/category')->load($categoryId)->setStoreId( $store->getId() );
+        $url = preg_replace('/\?.*/', '', $category->getUrl());
+		
+		return $url;
+    }
 	
 	
 	public function getCartLabel()

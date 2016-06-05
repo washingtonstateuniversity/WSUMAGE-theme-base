@@ -1,5 +1,10 @@
 
-<?php $_product = $this->getProduct(); ?>
+<?php $_product = $this->getProduct(); 
+$layout = $this->helper('wsu_themecontrol/layout');
+
+$layout->set_layoutTarget('catalog_product_view/productview');
+
+?>
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">

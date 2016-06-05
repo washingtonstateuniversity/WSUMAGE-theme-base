@@ -22,13 +22,22 @@ class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Control
     {
         $website = Mage::app()->getRequest()->getParam('website');
         $store = Mage::app()->getRequest()->getParam('store');
+		
+		$url = "";
+		if("productview" === $_REQUEST["type"]){
+			$url = Mage::helper('wsu_themecontrol/layout')->_testProductPage($store);
+		}
+		if("productlist" === $_REQUEST["type"]){
+			$url = Mage::helper('wsu_themecontrol/layout')->_testCategoryPage($store);
+		}
+		
+		
+		
 		$this->getResponse()->setHeader('Content-type', 'application/json');
-        $this->getResponse()->setBody( '{"_url":"' . Mage::helper('wsu_themecontrol/layout')->_testProductPage($store) . '"} ');
+        $this->getResponse()->setBody( '{"_url":"' . $url . '"} ');
         return;
     }
-	
-	
-	
+
     public function designAction()
     {
         $website = Mage::app()->getRequest()->getParam('website');
