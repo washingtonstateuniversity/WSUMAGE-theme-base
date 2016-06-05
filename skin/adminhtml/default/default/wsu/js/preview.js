@@ -12,20 +12,19 @@
 					"hideat":"",
 					"type": "flex-row",
 					"media-query-type": "column-at-480",
-					"size": "thirds-3",
+					"size": "full",
 					"media-query-size": "",
-					"justification":"justify-start",
-					"content_alignment":"content-start"
+					"justification":"",
+					"content_alignment":""
 				},
 				"child":{
 					"show":"true",
 					"hideat":"",
-					"size": "thirds-3",
-					"order": "order-1",
+					"size": "full",
+					"order": "",
 					"media-query-size": "",
-					"item_alignment":"items-start"
+					"item_alignment":""
 				}
-				
 			};
 	
 		EP.cleanTarget =  function( target, callback){
