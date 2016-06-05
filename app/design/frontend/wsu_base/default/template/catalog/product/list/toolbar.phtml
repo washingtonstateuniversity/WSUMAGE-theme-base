@@ -1,5 +1,10 @@
 <?php
     $_helper    = $this->helper('catalog/output');
+	
+	
+	$layout = $this->helper('wsu_themecontrol/layout');
+	$layout->set_layoutTarget('catalog_category_view/productlist');
+	
     //$_category  = $this->getCurrentCategory();
 	$_category = Mage::registry('current_category');
     $_imgHtml   = '';
@@ -11,9 +16,9 @@
     $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
     
 ?>
-<div class="toolbox-top <?=$_layout["toolbox-top"]["type"]?> <?=$_layout["toolbox-top"]["flow"]?> cat_list_header_top">
+<div class="toolbox-top <?=$layout->getLayoutBlockClass("toolbox-top")?> cat_list_header_top">
 	<?=$this->getChildHtml('breadcrumbs') ?>
-	<div class="sorting_area ">
+	<div class="sorting_area <?=$layout->getLayoutBlockClass("sorting_area")?>">
 		<h4 class="sorting_button <?=$this->getCurrentDirection();?>">
 			<?php echo $this->__('Sort By') ?>: <span class="sort_applied"><?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
 				<?php if($this->isOrderCurrent($_key)): ?>
@@ -44,8 +49,8 @@
 </div>
 <div class="flex-row wrap designer_hr"></div>
 <?php if($this->getCollection()->getSize()): ?>
-<div class="toolbox-bottom <?=$_layout["toolbox-bottom"]["type"]?> <?=$_layout["toolbox-bottom"]["flow"]?> cat_list_header_bottom">
-    <div class="filtering_result_labels">
+<div class="toolbox-bottom <?=$layout->getLayoutBlockClass("toolbox-bottom")?> cat_list_header_bottom">
+    <div class="filtering_result_labels <?=$layout->getLayoutBlockClass("filtering_result_labels")?>">
 		<span class="match_count"><?=$this->getTotalNum()?> <?=( 1 == $this->getTotalNum() ? $this->__("Match") : $this->__("Matches") )?></span>
 		<?php if($this->getLastPageNum()>1): ?>
 			<span class="paged_label"><?php echo $this->__('Showing %s through %s', $this->getFirstNum(), $this->getLastNum()) ?></span>
@@ -67,7 +72,7 @@
 		
 			
     </div>
-	<div class="limiter">
+	<div class="limiter <?=$layout->getLayoutBlockClass("limiter")?>">
 		<?php $pager=$this->getPagerHtml() ?>
 		<?php echo $pager ?>
 		<?php if( "" !== trim($pager) ): ?>
@@ -82,7 +87,7 @@
 		<?php endif; ?>
 	</div>
 	<?php if( $this->isExpanded() ): ?>
-	<div class="sorter">
+	<div class="sorter <?=$layout->getLayoutBlockClass("sorter")?>">
 		<?php if( $this->isEnabledViewSwitcher() ): ?>
 		<!--<p class="view-mode">
 			<?php $_modes = $this->getModes(); ?>

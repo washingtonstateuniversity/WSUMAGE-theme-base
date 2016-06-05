@@ -428,12 +428,14 @@
 								"children":{
 									"sorting_area":{
 										"settings":{
-											"order":"order-1"
+											"order":"order-1",
+					                        "size": ""
 										}
 									},
 									"filtering_area":{
 										"settings":{
-											"order":"order-2"
+											"order":"order-2",
+					                        "size": ""
 										}
 									}
 								}
