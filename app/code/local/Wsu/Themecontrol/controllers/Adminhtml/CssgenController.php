@@ -17,6 +17,18 @@ class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Control
         Mage::getSingleton('wsu_themecontrol/cssgen_generate')->generateCss('layout', $website, $store);
         $this->getResponse()->setRedirect($themecontrol_layout_url);
     }
+	
+	public function previewurlAction()
+    {
+        $website = Mage::app()->getRequest()->getParam('website');
+        $store = Mage::app()->getRequest()->getParam('store');
+		$this->getResponse()->setHeader('Content-type', 'application/json');
+        $this->getResponse()->setBody( '{"_url":"' . Mage::helper('wsu_themecontrol/layout')->_testProductPage($store) . '"} ');
+        return;
+    }
+	
+	
+	
     public function designAction()
     {
         $website = Mage::app()->getRequest()->getParam('website');

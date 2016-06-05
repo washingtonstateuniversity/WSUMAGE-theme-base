@@ -33,7 +33,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 		$html_id_stub = explode('_row_type_',str_replace('.','_',$html_id));
 		$html_id_stub = isset($html_id_stub[1])?$html_id_stub[1]:'';
 		$url = $this->helper('wsu_themecontrol/layout')->_testProductPage();
-
+		$ajaxurl = Mage::helper("adminhtml")->getUrl("adminhtml/cssgen/previewurl");
         $html .= '
 		<br/>
 		<style>
@@ -101,7 +101,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 		<!--<div class="layoutframeworkPreview '. ($html_id!=''?''.$html_id.' ':'') .'">
 			
 		</div>-->
-		
+		<span id="refresh_iframe">Refresh</span>
 		<iframe 
 		class="layoutframeworkPreview '. $html_id .'" 
 		name="layoutframeworkPreview_'. $html_id .'" 
@@ -114,6 +114,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Productvi
 
 		<script type="text/javascript">
 			(function($){
+				$.wsu.product_preview.ajaxurl = "'.$ajaxurl.'";
 				$.wsu.product_preview.setup("'.$html_id.'");
 			}(jQuery));
 		</script>

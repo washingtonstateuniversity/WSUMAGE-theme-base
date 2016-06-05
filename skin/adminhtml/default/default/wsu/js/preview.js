@@ -27,7 +27,7 @@
 		};
 
 	$.wsu.product_preview.cleanTarget =  function( target, callback){
-		console.log("** cleaning target **");
+		//console.log("** cleaning target **");
 		var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-",
 		               "thirds-", "fours-", "fifths-", "sixths-", "eigths-",
 					   "ninths-", "tenths-", "twelfths-", "wrap", "space-",
@@ -177,6 +177,25 @@
 		html += "</ul>"; 
 		return html;
 	};
+	$.wsu.product_preview.ajaxurl = null;
+	
+	
+	
+	$.wsu.product_preview.setupIframe = function(iframe){
+		iframe.off().on("load", function(){
+			iframe.contents().find("head")
+				.append("<meta name='viewport' content='width=device-width, initial-scale=0.5'/>");
+				
+			$.wsu.product_preview._layoutItOut( $("." + $.wsu.product_preview.html_id), $.wsu.product_preview._layout);
+
+			iframe.contents().find("head")
+				.append($("<style type='text/css'> .preview_sortable{ border:1px dashed rgba(0, 0, 0, 0); }  .preview_hovering{ border:1px dashed red; } </style>"));
+				
+			$("#product_view_options :input").on( "change", function(){ 
+				$.wsu.product_preview._updateLayout( $.wsu.product_preview._layout );
+			});
+		});
+	};
 	
 	$.wsu.product_preview.setup = function( html_id ){
 		
@@ -218,21 +237,21 @@
 				$(this).toggleClass("open", "close");
 			});
 			
-			
-			$("iframe#layoutframeworkPreview_" + html_id).on("load", function(){
-				$("iframe#layoutframeworkPreview_" + html_id).contents()
-				.find("head")
-					.append("<meta name='viewport' content='width=device-width, initial-scale=0.5'/>");
-					
-				$.wsu.product_preview._layoutItOut( $("." + $.wsu.product_preview.html_id), $.wsu.product_preview._layout);
+			$.wsu.product_preview.setupIframe($("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id));
 
-				$('iframe').contents().find("head")
-					.append($("<style type='text/css'> .preview_sortable{ border:1px dashed rgba(0, 0, 0, 0); }  .preview_hovering{ border:1px dashed red; } </style>"));
-					
-				$("#product_view_options :input").on( "change", function(){ 
-					$.wsu.product_preview._updateLayout( $.wsu.product_preview._layout );
+			
+			if( null !== $.wsu.product_preview.ajaxurl ){
+				$("#refresh_iframe").on("click",function(){
+					$.getJSON($.wsu.product_preview.ajaxurl).always(function(data){
+						console.log(data._url);
+						$("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id).attr("src",data._url);
+						//$.wsu.product_preview.setupIframe($("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id));
+					});
 				});
-			});
+			}
+			
+			
+			
 		});
 		$.wsu.product_preview._layout = {
 			"product_info": {
