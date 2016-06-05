@@ -30,8 +30,9 @@ class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Control
 		if("productlist" === $_REQUEST["type"]){
 			$url = Mage::helper('wsu_themecontrol/layout')->_testCategoryPage($store);
 		}
-		
-		
+		if("customeraccountareas" === $_REQUEST["type"]){
+			$url = Mage::getUrl('customer/account/login');
+		}
 		
 		$this->getResponse()->setHeader('Content-type', 'application/json');
         $this->getResponse()->setBody( '{"_url":"' . $url . '"} ');

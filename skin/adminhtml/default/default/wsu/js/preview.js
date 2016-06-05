@@ -136,7 +136,7 @@
 				html += "<li data-block='"+idx+"'><b>"+idx+"</b>";
 					if( "undefined" !== typeof val.settings ){
 							var parent = "";
-							if( "product_info" !== idx  && "productview" !== idx && "productlist" !== idx && "undefined" !== typeof val.children){
+							if( "customeraccountareas" !== idx  && "product_info" !== idx  && "productview" !== idx && "productlist" !== idx && "undefined" !== typeof val.children){
 								html += "<span class='parent_option'>Options</span>";
 								parent = "parent";
 							}
@@ -144,7 +144,7 @@
 							
 							//console.log( "---->> before " );
 							//console.log( val.settings );
-							if( "product_info" !== idx && "productview" !== idx && "productlist" !== idx ){
+							if( "customeraccountareas" !== idx && "product_info" !== idx && "productview" !== idx && "productlist" !== idx ){
 								var child = EP.settings_default.child;
 								_settings = $.extend({},child,val.settings);
 								if( "undefined" !== typeof val.children ){
@@ -506,6 +506,25 @@
 							}
 						}
 					}
+						}
+					},
+				},
+				"customeraccountareas":{
+					"account-login":{
+						"settings":{
+							"type":"flex-row"
+						},
+						"children":{
+							"new-users":{
+								"settings":{
+									"type":"flex-row"
+								},
+							},
+							"registered-users":{
+								"settings":{
+									"type":"flex-row"
+								},
+							},
 						}
 					},
 				},

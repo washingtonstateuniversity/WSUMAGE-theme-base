@@ -1,4 +1,9 @@
-<div class="account-login">
+<?php
+$layout = $this->helper('wsu_themecontrol/layout');
+
+$layout->set_layoutTarget('customer_account_index/customeraccountareas');
+?>
+<div class="account-login <?=$layout->getLayoutBlockClass("account-login")?>">
     <div class="page-title">
         <h1><?php echo $this->__('Login or Create an Account') ?></h1>
     </div>
@@ -8,8 +13,8 @@
     <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
         <?php echo $this->getBlockHtml('formkey'); ?>
         <!-- Responsive Sections -->
-        <section class="row">
-            <div class="column six-twelfths new-users">        
+        <section class="">
+            <div class="new-users <?=$layout->getLayoutBlockClass("new-users")?>">        
 
                 <div class="content">
                     <h2><?php echo $this->__('New Customers') ?></h2>
@@ -20,7 +25,7 @@
                 </div>
 
             </div><!--/column-->
-            <div class="column six-twelfths registered-users">
+            <div class="registered-users <?=$layout->getLayoutBlockClass("registered-users")?>">
                 <div class="content">
                     <h2><?php echo $this->__('Registered Customers') ?></h2>
                     <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>

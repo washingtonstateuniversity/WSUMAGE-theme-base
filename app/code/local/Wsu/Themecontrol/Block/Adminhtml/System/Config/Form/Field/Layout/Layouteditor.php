@@ -43,6 +43,11 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Layoutedi
 			$type = "productlist";
 			$url = $this->helper('wsu_themecontrol/layout')->_testCategoryPage($store);
 		}
+		
+		if( false !== strpos($html_id,'customeraccountareas') ){
+			$type = "customeraccountareas";
+			$url = Mage::getUrl('customer/account/login');
+		}
 
 		$ajaxurl = Mage::helper("adminhtml")->getUrl("adminhtml/cssgen/previewurl",['_query' => 'type='.$type]);
         $html .= '
