@@ -93,13 +93,14 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
 		} else {
 			$layout = $part;
 		}
-		
-		foreach($layout as $item=>$parts){
-			if( null === $settings ){
-				if( $item === $block ){
-					$settings = $parts->settings;
-				}elseif( isset($parts->children) && null !== $parts->children ){
-					$settings = $this->getLayoutSettings($block,$parts->children,$settings);
+		if(isset($layout)){
+			foreach($layout as $item=>$parts){
+				if( null === $settings ){
+					if( $item === $block ){
+						$settings = $parts->settings;
+					}elseif( isset($parts->children) && null !== $parts->children ){
+						$settings = $this->getLayoutSettings($block,$parts->children,$settings);
+					}
 				}
 			}
 		}

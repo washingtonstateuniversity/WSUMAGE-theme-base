@@ -11,7 +11,7 @@
 	$_collectionSize = $_productCollection->count();
 
 	$layout = $this->helper('wsu_themecontrol/layout');
-	$layout->set_layoutTarget('catalog_product_view/productview');
+	$layout->set_layoutTarget('catalog_category_view/productlist');
 ?>
 
 <?php if ($_collectionSize && $tmpHtml = $this->getChildHtml('block_category_above_collection')): ?>
@@ -245,7 +245,7 @@
 				</h2>
 				<?php
 				 	if($_product->getRatingSummary()) {
-                        echo '<div class="rating-area '.$_layout["products-grid-item-rating"]["order"].'">';
+                        echo '<div class="rating-area '.$layout->getLayoutBlockClass("rating-area").'">';
 						if ($gc['display_rating'] == 1){ //Display on hover 
 							?><div class="display-onhover"><?php echo $this->getReviewsSummaryHtml($_product, 'short') ?></div><?php
 						}elseif ($gc['display_rating'] == 2){ //Always display 
@@ -254,7 +254,7 @@
                         echo '</div>';
 					}
 					if ($gc['display_price'] == 1) { echo '<div class="display-onhover">'; }
-					echo '<div class="price-area '.$_layout["products-grid-item-price"]["order"].'">'.$this->getPriceHtml($_product, true).'</div>';
+					echo '<div class="price-area '.$layout->getLayoutBlockClass("price-area").'">'.$this->getPriceHtml($_product, true).'</div>';
 					if ($gc['display_price'] == 1){ echo '</div>'; }
 
 					//If at least one element was set as "Display on hover" but no element was set as "Display":
@@ -304,16 +304,16 @@
 			</li>
 		<?php endforeach; ?>
         <!-- keep flexbox in check on wrap -->
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
+        <li class="item order-999"></li>
 	</ul>
 	<?php endif; //end: if grid mode ?>
 
