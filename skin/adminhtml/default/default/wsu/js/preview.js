@@ -417,7 +417,51 @@
 				}
 				},
 				"productlist":{
-					"category-products-grid":{
+					"category-products":{
+						"settings":{
+							"type":"flex-row"
+						},
+						"children":{
+							"toolbox-top":{
+								"settings":{
+									"type":"flex-row"
+								},
+								"children":{
+									"sorting_area":{
+										"settings":{
+											"order":"order-1"
+										}
+									},
+									"filtering_area":{
+										"settings":{
+											"order":"order-2"
+										}
+									}
+								}
+							},
+							"toolbox-bottom":{
+								"settings":{
+									"type":"flex-row"
+								},
+								"children":{
+									"filtering_result_labels":{
+										"settings":{
+											"order":"order-1"
+										}
+									},
+									"limiter":{
+										"settings":{
+											"order":"order-2"
+										}
+									},
+									"sorter":{
+										"settings":{
+											"order":"order-3"
+										}
+									}
+								}
+							},
+							"category-products-grid":{
 						"settings":{
 							"type":"flex-row"
 						},
@@ -461,6 +505,8 @@
 							}
 						}
 					}
+						}
+					},
 				},
 			};
 		};
