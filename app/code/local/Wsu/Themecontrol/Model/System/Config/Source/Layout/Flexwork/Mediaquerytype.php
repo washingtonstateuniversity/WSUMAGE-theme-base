@@ -14,6 +14,8 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Mediaquerytype
 				   "1225", "1250", "1275", "1280", "1300", "1325", "1350", "1366",
 				   "1375", "1400", "1425", "1440", "1450" ];
 				   
+		$tmp[] = ['value' => '', 'label' => 'don\'t alter'];
+		
 		foreach($sizes as $size){
         	$tmp[] = ['value' => 'row-at-'.$size, 'label' => 'row-at-'.$size];
 			$tmp[] = ['value' => 'row-reverse-at-'.$size, 'label' => 'row-reverse-at-'.$size];

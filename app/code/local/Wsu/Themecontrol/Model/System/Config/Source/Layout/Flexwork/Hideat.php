@@ -13,7 +13,7 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Hideat
 				   "1024", "1050", "1075", "1100", "1125", "1150", "1175", "1200",
 				   "1225", "1250", "1275", "1280", "1300", "1325", "1350", "1366",
 				   "1375", "1400", "1425", "1440", "1450" ];
-				   
+		$tmp[] = ['value' => '', 'label' => 'never hide'];	   
 		foreach($sizes as $size){
         	$tmp[] = ['value' => 'hide-below-'.$size, 'label' => 'hide-below-'.$size];
 		}
