@@ -228,36 +228,31 @@
 				_node.siblings("dl:not(.parent)").toggle();
 				_node.siblings("ul").toggle();
 				_node.siblings("span").toggle();
-				
+
 				_node.toggleClass("open","close");
 				if( ! _node.is(".open") ){
 					_node.siblings(".parent_option").hide();
 					_node.siblings(".parent").hide();
 				}
-				
 			});
-			
+
 			$("#product_view_options .parent_option").off().on( "click", function(){
 				var _node = $(this);
 				_node.siblings(".parent").toggle();
 				_node.toggleClass("open", "close");
 			});
-			
+
 			$.wsu.product_preview.setupIframe( $.wsu.product_preview.iframe );
 
-			
 			if( null !== $.wsu.product_preview.ajaxurl ){
-				$("#refresh_iframe").on("click",function(){
+				$(".refresh_iframe").on("click",function(){
 					$.getJSON($.wsu.product_preview.ajaxurl).always(function(data){
 						console.log(data._url);
 						$.wsu.product_preview.iframe.attr("src",data._url);
-						//$.wsu.product_preview.setupIframe($("iframe#layoutframeworkPreview_" + $.wsu.product_preview.html_id));
 					});
 				});
 			}
-			
-			
-			
+
 		});
 		$.wsu.product_preview._layout = {
 			"product_info": {
