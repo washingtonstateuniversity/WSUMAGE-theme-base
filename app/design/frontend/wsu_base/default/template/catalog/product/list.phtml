@@ -9,6 +9,9 @@
 <?php
 	$_productCollection=$this->getLoadedProductCollection();
 	$_collectionSize = $_productCollection->count();
+
+	$layout = $this->helper('wsu_themecontrol/layout');
+	$layout->set_layoutTarget('catalog_product_view/productview');
 ?>
 
 <?php if ($_collectionSize && $tmpHtml = $this->getChildHtml('block_category_above_collection')): ?>
@@ -30,7 +33,6 @@
 	$helpTemplate = $this->helper('wsu_themecontrol/template');
 	$helpImg = $this->helper('wsu_wsu/image');
 	
-    $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 
 	//Default image size
 	$imgWidth = 295;
@@ -206,20 +208,20 @@
 	?>
 	<a id="listTop"></a>
     
-	<ul class="category-products-grid <?=$_layout["category-products-grid"]["type"]?> <?=$_layout["category-products-grid"]["spacing"]?> effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
+	<ul class="category-products-grid <?=$layout->getLayoutBlockClass("category-products-grid")?> effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
 		<?php foreach ($_productCollection as $_product): ?>
 			<?php 
 				$productType=$_product->getTypeID();
 				$product=Mage::getModel('catalog/product')->load($_product->getId());
 			?>
 		
-			<li class="item <?=$_layout["products-grid-item"]["type"]?>">
+			<li class="item <?=$layout->getLayoutBlockClass("item")?>">
 				<?php if ($tmpHtml = $this->getChildHtml('block_category_above_product')): ?>
 					<div class="block_category_above_product std"><?php echo $tmpHtml; ?></div>
 				<?php endif; ?>
 
 				    
-				<div class="product-image-wrapper <?=$_layout["products-grid-item-image"]["order"]?>" >
+				<div class="product-image-wrapper <?=$layout->getLayoutBlockClass("product-image-wrapper")?>" >
 					<?php 
 						$imgLable = $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true); 
 					?>
@@ -236,7 +238,7 @@
 					
 				</div> <!-- end: product-image-wrapper -->
 				
-				<h2 class="product-name <?=$_layout["products-grid-item-name"]["order"]?>">
+				<h2 class="product-name <?=$layout->getLayoutBlockClass("product-name")?>">
 					<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
 						<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
 					</a>
@@ -266,7 +268,7 @@
 					}
 				?>
 				
-				<div class="actions clearer<?php echo $actionsClasses; ?>  <?=$_layout["products-grid-item-action"]["order"]?>">
+				<div class="actions clearer<?php echo $actionsClasses; ?> <?=$layout->getLayoutBlockClass("actions")?>">
 					<?php //Cart button ?>
 					<?php if ($gc['display_addtocart'] != 0): ?>
 						<?php if ($_product->isSaleable()): ?>
@@ -290,9 +292,9 @@
 							} 
 							
 							if ($gc['display_addtolinks'] == 1) { //Display on hover
-								echo $helpTemplate->getCategoryAddtoLinksComplex_2($_product, $this->getAddToCompareUrl($_product), 'addto-links-icons addto-onimage display-onhover');
+								echo $helpTemplate->getCategoryAddtoLinksComplex_2( $_product, $this->getAddToCompareUrl($_product), 'addto-links-icons addto-onimage display-onhover ' . $layout->getLayoutBlockClass( "add-to-links" ) );
 							} else { //Always display
-								echo $helpTemplate->getCategoryAddtoLinksComplex_2($_product, $this->getAddToCompareUrl($_product), 'addto-links-icons addto-onimage');
+								echo $helpTemplate->getCategoryAddtoLinksComplex_2( $_product, $this->getAddToCompareUrl($_product), 'addto-links-icons addto-onimage ' . $layout->getLayoutBlockClass( "add-to-links" ) );
 							}
 						}
 					?>
