@@ -1,6 +1,195 @@
 <div style="background:#373737; color:#DFDFDF; position:fixed; top:0px;left:0px; width:100%; z-index:999999; height:50px;"><h1 style="color:#DFDFDF;line-height:50px;padding:0px;margin: 0px;padding-left: 15px;">Admin user logged in</h1></div>
+
+<span id="highlighter">
+	<span id="hl_top">
+    	<span id="hl_icon"></span>
+    	<span id="hl_right"></span>
+    </span>
+	<span id="hl_left">
+    	<span id="hl_bottom"></span>
+    </span>
+</span>
+
+
+<span id="toolbox">
+	<ul>
+        <li><a href="#">link 1 to use</a></li>
+        <li><a href="#">link 2 to use</a></li>
+        <li><input type="text" /></li>
+        <li><select><option>value 1</option><option>value 2</option><option>value 3</option><option>value 4</option><option>value 5</option><option>value 6</option><option>value 7</option><option>value 8</option><option>value 9</option><option>value 10</option><option>value 11</option><option>value 12</option></select></li>
+    </ul>
+</span>
+
+
+
 <style>
 body{
 	margin-top: 50px;
 }
+.showEditor{
+
+}
+#highlighter{ 
+	 display:none;
+}
+#highlighter.active{ 
+	display:block;
+	border:1px dashed red;
+	position:absolute;
+	z-index:9999999;
+	width:0px;
+	
+	 height:0px;
+ } 
+ 
+#hl_top{
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 height:0px;
+	 border-top:1px dashed red;
+ }
+#hl_right{
+	 position:absolute;
+	 top:0;
+	 right:0;
+	 width:0px;
+	 border-left:1px dashed red;
+ }
+#hl_left{
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 width:0px;
+	 border-left:1px dashed red;
+ } 
+#hl_bottom{
+	 position:absolute;
+	 bottom:0;
+	 left:0;
+	 height:0px;
+	 border-top:1px dashed red;
+ } 
+ 
+#hl_icon{
+	z-index:999999999;
+	position:absolute;
+	top:0;
+	right:0;
+	cursor:pointer;
+	color:#178F09;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+	display: inline-block;
+}
+#hl_icon:after{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+    content: "\f044";
+    font-size: 16px;
+    line-height: 16px;
+}
+#highlighter #hl_top:after:hover{
+	color:#2DE409;
+}
+#toolbox{
+	display:none;	
+}
+#toolbox.active{
+	display:block;	
+	background:#B1B1B1;
+	padding:10px;
+	position:absolute;
+	z-index:999999999;
+}
 </style>
+
+<script>
+(function($){
+	
+	$.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+		_renderItem: function( ul, item ) {
+			var li = $( "<li>", { text: item.label } );
+		
+			if ( item.disabled ) {
+				li.addClass( "ui-state-disabled" );
+			}
+		    if( "undefined" !== item.element.attr( "data-style" )){
+                $( "<span>", {
+                    style: item.element.attr( "data-style" ),
+                    "class": "ui-icon " + item.element.attr( "data-class" )
+                }).appendTo( li );
+                li.addClass("has-icon");
+            }
+		
+			return li.appendTo( ul );
+		}
+	});
+	
+	$(document).ready(function(){
+		$("div,span,h1,h2,h3,h4,h5,h6,section,article,p,main,ul,li,ol,dt,dl,dd").hover(
+			function(e){
+				var target = e.target;
+				var offset = $(target).offset();
+				var width = $(target).width();
+				var height = $(target).height();
+				
+				var offset = $(target).offset();
+				
+				if( ! $(target).parents("#toolbox").length && ! $(target).parents("#highlighter").length && $(target).parents("main").length ){
+					$("#highlighter").removeClass("active");
+					$("#toolbox").removeClass("active");
+					$("#highlighter").removeAttr("style");
+					$("#highlighter span").removeAttr("style");
+
+					$("#highlighter").addClass("active");
+					$("#highlighter").css({
+						"left":offset.left,
+						"top":offset.top
+					});
+					$("#highlighter, #highlighter #hl_top,#highlighter #hl_bottom").css({
+						"width":width+"px"
+					});
+					$("#highlighter #hl_right,#highlighter #hl_left").css({
+						"height":height+"px"
+					});			
+					$(".showEditor:after").css({
+						"right":offset.left+width,
+						"top":offset.top
+					});
+				}
+				$(document).off().on("click","#hl_icon",function(){
+					$("#toolbox").addClass("active");
+					$("#toolbox").css({
+						"left":offset.left,
+						"top":offset.top
+					});
+					$("#toolbox select").each(function(){
+						$( this )
+						.iconselectmenu()
+						.iconselectmenu( "menuWidget" )
+						.addClass( "ui-menu-icons" );
+					});
+				});
+			},
+			function(e){
+				if( ! $(e.target).parents("#highlighter").length ){
+
+				}
+			}
+		);
+
+	});
+}(jQuery));
+
+
+
+
+
+</script>

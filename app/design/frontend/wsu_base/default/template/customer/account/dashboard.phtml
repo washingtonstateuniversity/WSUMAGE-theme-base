@@ -1,49 +1,30 @@
 <?php 
-/* if this was on all.. maybe the admin should just use drop down and then pick what it can find, or a custom and then add to list.  look to grid system
-$_helper = $this->helper('catalog/output');
 
-$theme = $this->helper('wsu_themecontrol');
-$template = $this->helper('wsu_themecontrol/template');
-
-
-$row_type				= $theme->getCfgLayout('dashboard/row_type');
-$padding				= $theme->getCfgLayout('dashboard/padding');
-$padding_flanks			= $theme->getCfgLayout('dashboard/padding_flanks');
-$padding_ends			= $theme->getCfgLayout('dashboard/padding_ends');
-*/
 ?>
 <?php 
-$layout = $this->helper('wsu_themecontrol/layout')
-			->setupLayout( $this, array( 'row_type', 'padding', 'padding_flanks', 'padding_ends' ) );
-			
+$layout = $this->helper('wsu_themecontrol/layout');
+$layout->set_layoutTarget('catalog_product_view/customeraccountareas');		
 ?>
-<div class="dashboard">
+<div class="dashboard <?=$layout->getLayoutBlockClass("my-account-dashboard")?>">
     <div class="page-title">
         <h1><?=$this->__('My Dashboard') ?></h1>
     </div>
     <?=$this->getMessagesBlock()->getGroupedHtml() ?>
 	<?=$this->getChildHtml('hello') ?>
 	<?=$this->getChildHtml('top') ?>
-	<div class="row <?=$layout['row_type']?> <?=$layout['padding']?>  <?=$layout['padding_flanks']?>  <?=$layout['padding_ends']?>">
-		<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
-										two
-									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
-										one
-									<?php endif; ?>">
-			<div class="box-account box-info">
-				<div class="box-head">
-					<h2><?=$this->__('Account Information') ?></h2>
-				</div>
+	<div class="account-info-blocks <?=$layout->getLayoutBlockClass("account-info-blocks")?>">
+        <div class="box-account box-info <?=$layout->getLayoutBlockClass("account-info-box-info")?>">
+            <div class="box-head <?=$layout->getLayoutBlockClass("account-info-box-head")?>">
+                <h2><?=$this->__('Account Information') ?></h2>
+            </div>
+            <div class="dashboard-extra <?=$layout->getLayoutBlockClass("account-info-dashboard-extra")?>">
 				<?php /* Extensions placeholder */ ?>
-				<?=$this->getChildHtml('customer.account.dashboard.extra') ?>
-				<?=$this->getChildHtml('info') ?>
-			</div>
-		</div>
-		<div class="column <?php if( strpos($layout['row_type'],'right') !== false ):?>
-										two
-									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
-										one
-									<?php endif; ?>">		
+                <?=$this->getChildHtml('customer.account.dashboard.extra') ?>
+                <?=$this->getChildHtml('info') ?>
+            </div>
+        </div>
+
+		<div class="address-blocks <?=$layout->getLayoutBlockClass("account-info-address-blocks")?>">		
 			<?=$this->getChildHtml('address') ?>
 			<?=$this->getChildHtml('info1') ?>
 			<?=$this->getChildHtml('info2') ?>

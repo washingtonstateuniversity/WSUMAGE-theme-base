@@ -109,14 +109,14 @@
                 <action method="insert"><child>breadcrumbs</child></action>
             </reference>
         </reference>
-        <!--
+        
 		<reference name="before_body_end">
 			<block type="core/template" name="adminbar" as="adminbar" before="-">
 				<action method="setBlockId"><block_id>adminbar_block</block_id></action>  
 				<action method="setTemplate"><template helper="wsu_themecontrol/data/showAdminFrontEndBar" /></action>
 			</block>
 		</reference>
--->
+<!---->
 		
 		<reference name="top.links">
 			<block type="wishlist/links" name="wishlist_link" />

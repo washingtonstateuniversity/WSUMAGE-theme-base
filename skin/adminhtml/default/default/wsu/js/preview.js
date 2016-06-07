@@ -282,253 +282,292 @@
 				}
 	
 			});
-			EP._layout = {
-				"productview":{
-					"product_info": {
-					"settings":{},
-					"children":{
-						"product-essential": {
-							"settings":{
-								"type": "flex-row",
-								"media-query-type": "column-at-480",
-							},
-							"children":{
-								"product-content": {
-									"settings":{
-										"type": "flex-column",
-										"size": "fifths-3",
-										"order": "order-1",
-										"media-query-size": "full-width-at-480",
+
+		};
+		
+		EP._layout = {
+			"productview":{
+				"product_info": {
+				"settings":{},
+				"children":{
+					"product-essential": {
+						"settings":{
+							"type": "flex-row",
+							"media-query-type": "column-at-480",
+						},
+						"children":{
+							"product-content": {
+								"settings":{
+									"type": "flex-column",
+									"size": "fifths-3",
+									"order": "order-1",
+									"media-query-size": "full-width-at-480",
+								},
+								"children":{
+									"product-name": {
+										"settings":{
+											"show":"false"
+										}
 									},
-									"children":{
-										"product-name": {
-											"settings":{
-												"show":"false"
-											}
+									"email_area": {
+										"settings":{
+											"order": "order-8"
+										}
+									},
+									"review_area": {
+										"settings":{
+											"order": "order-9"
+										}
+									},
+									"alert_urls_area": {
+										"settings":{
+											"order": "order-7"
+										}
+									},
+									"product_type_data_area": {
+										"settings":{
+											"order": "order-3"
+										}
+									},
+									"tier_price_area": {
+										"settings":{
+											"order": "order-4"
+										}
+									},
+									"extrahint_area": {
+										"settings":{
+											"order": "order-5"
+										}
+									},
+									"short_description_area": {
+										"settings":{
+											"order": "order-1"
+										}
+									},
+									"other_area": {
+										"settings":{
+											"type": "flex-column",
+											"order": "order-6"
+										}
+									},
+									"add_to_box": {
+										"settings":{
+											"type": "flex-column",
+											"order": "order-6"
+										}
+									},
+									"container1_area": {
+										"settings":{
+											"order": "order-2"
 										},
-										"email_area": {
-											"settings":{
-												"order": "order-8"
-											}
-										},
-										"review_area": {
-											"settings":{
-												"order": "order-9"
-											}
-										},
-										"alert_urls_area": {
-											"settings":{
-												"order": "order-7"
-											}
-										},
-										"product_type_data_area": {
-											"settings":{
-												"order": "order-3"
-											}
-										},
-										"tier_price_area": {
-											"settings":{
-												"order": "order-4"
-											}
-										},
-										"extrahint_area": {
-											"settings":{
-												"order": "order-5"
-											}
-										},
-										"short_description_area": {
-											"settings":{
-												"order": "order-1"
-											}
-										},
-										"other_area": {
-											"settings":{
-												"type": "flex-column",
-												"order": "order-6"
-											}
-										},
-										"add_to_box": {
-											"settings":{
-												"type": "flex-column",
-												"order": "order-6"
-											}
-										},
-										"container1_area": {
-											"settings":{
-												"order": "order-2"
+										"children":{
+											"product-options":{
+												"settings":{
+													"order": "order-1"
+												}
 											},
-											"children":{
-												"product-options":{
-													"settings":{
-														"order": "order-1"
-													}
-												},
-												"product-options-bottom":{
-													"settings":{
-														"order": "order-2"
-													}
+											"product-options-bottom":{
+												"settings":{
+													"order": "order-2"
 												}
 											}
-										},
-										"description_area": {
-											"settings":{
-												"order": "order-10"
-											}
-										},
-									}
-								},
-								"product_info_media": {
-									"settings":{
-										"size": "fifths-2",
-										"order": "order-2",
-										"media-query-size": "full-width-at-480",
-										"type": "flex-row"
+										}
 									},
-									"children":{
-										"product-image": {
-											"settings":{
-												"size": "sixths-5",
-												"order": "order-2"
-											}
+									"description_area": {
+										"settings":{
+											"order": "order-10"
+										}
+									},
+								}
+							},
+							"product_info_media": {
+								"settings":{
+									"size": "fifths-2",
+									"order": "order-2",
+									"media-query-size": "full-width-at-480",
+									"type": "flex-row"
+								},
+								"children":{
+									"product-image": {
+										"settings":{
+											"size": "sixths-5",
+											"order": "order-2"
+										}
+									},
+									"more-views": {
+										"settings":{
+											"size": "sixths-1",
+											"order": "order-1"
 										},
-										"more-views": {
-											"settings":{
-												"size": "sixths-1",
-												"order": "order-1"
-											},
-											"children":{
-												"more-views-imgs": {
-													"settings":{
-														"type": "flex-column"
-													}
+										"children":{
+											"more-views-imgs": {
+												"settings":{
+													"type": "flex-column"
 												}
 											}
 										}
 									}
 								}
 							}
-			
+						}
+		
+					},
+					"product-collateral":{
+		
+					}
+				}
+			}
+			},
+			"productlist":{
+				"category-products":{
+					"settings":{
+						"type":"flex-row"
+					},
+					"children":{
+						"toolbox-top":{
+							"settings":{
+								"type":"flex-row"
+							},
+							"children":{
+								"sorting_area":{
+									"settings":{
+										"order":"order-1",
+										"size": ""
+									}
+								},
+								"filtering_area":{
+									"settings":{
+										"order":"order-2",
+										"size": ""
+									}
+								}
+							}
 						},
-						"product-collateral":{
-			
+						"toolbox-bottom":{
+							"settings":{
+								"type":"flex-row"
+							},
+							"children":{
+								"filtering_result_labels":{
+									"settings":{
+										"order":"order-1"
+									}
+								},
+								"limiter":{
+									"settings":{
+										"order":"order-2"
+									}
+								},
+								"sorter":{
+									"settings":{
+										"order":"order-3"
+									}
+								}
+							}
+						},
+						"category-products-grid":{
+					"settings":{
+						"type":"flex-row"
+					},
+					"children":{
+						"item":{
+							"settings":{
+								"type":"flex-column"
+							},
+							"children":{
+								"product-image-wrapper":{
+									"settings":{
+										"order":"order-1"
+									},
+								},
+								"product-name":{
+									"settings":{
+										"order":"order-2"
+									},
+								},
+								"rating-area":{
+									"settings":{
+										"order":"order-3"
+									},
+								},
+								"price-area":{
+									"settings":{
+										"order":"order-4"
+									},
+								},
+								"actions":{
+									"settings":{
+										"order":"order-5"
+									},
+								},
+								"add-to-links":{
+									"settings":{
+										"order":"order-6"
+									},
+								},
+							}
 						}
 					}
 				}
+					}
 				},
-				"productlist":{
-					"category-products":{
-						"settings":{
-							"type":"flex-row"
+			},
+			"customeraccountareas":{
+				"account-login":{
+					"settings":{
+						"type":"flex-row"
+					},
+					"children":{
+						"new-users":{
+							"settings":{
+								"type":"flex-row"
+							},
 						},
-						"children":{
-							"toolbox-top":{
-								"settings":{
-									"type":"flex-row"
-								},
-								"children":{
-									"sorting_area":{
-										"settings":{
-											"order":"order-1",
-					                        "size": ""
+						"registered-users":{
+							"settings":{
+								"type":"flex-row"
+							},
+						},
+					}
+				},
+				"my-account-dashboard":{
+					"settings":{
+					},
+					"children":{
+						"my-account-dashboard":{
+							"settings":{
+							},
+							"children":{
+								"account-info-blocks":{
+									"settings":{},
+									"children":{
+										"account-info-box-info":{
+											"settings":{},
+											"children":{
+												"account-info-box-head":{
+													"settings":{},
+													"children":{}
+												}
+												"account-info-dashboard-extra":{
+													"settings":{
+													},
+													"children":{}
+												}
+											}
 										}
-									},
-									"filtering_area":{
-										"settings":{
-											"order":"order-2",
-					                        "size": ""
+										"account-info-address-blocks":{
+											"settings":{},
+											"children":{}
 										}
 									}
-								}
-							},
-							"toolbox-bottom":{
-								"settings":{
-									"type":"flex-row"
-								},
-								"children":{
-									"filtering_result_labels":{
-										"settings":{
-											"order":"order-1"
-										}
-									},
-									"limiter":{
-										"settings":{
-											"order":"order-2"
-										}
-									},
-									"sorter":{
-										"settings":{
-											"order":"order-3"
-										}
-									}
-								}
-							},
-							"category-products-grid":{
-						"settings":{
-							"type":"flex-row"
-						},
-						"children":{
-							"item":{
-								"settings":{
-									"type":"flex-column"
-								},
-								"children":{
-									"product-image-wrapper":{
-										"settings":{
-											"order":"order-1"
-										},
-									},
-									"product-name":{
-										"settings":{
-											"order":"order-2"
-										},
-									},
-									"rating-area":{
-										"settings":{
-											"order":"order-3"
-										},
-									},
-									"price-area":{
-										"settings":{
-											"order":"order-4"
-										},
-									},
-									"actions":{
-										"settings":{
-											"order":"order-5"
-										},
-									},
-									"add-to-links":{
-										"settings":{
-											"order":"order-6"
-										},
-									},
 								}
 							}
 						}
 					}
-						}
-					},
-				},
-				"customeraccountareas":{
-					"account-login":{
-						"settings":{
-							"type":"flex-row"
-						},
-						"children":{
-							"new-users":{
-								"settings":{
-									"type":"flex-row"
-								},
-							},
-							"registered-users":{
-								"settings":{
-									"type":"flex-row"
-								},
-							},
-						}
-					},
-				},
-			};
+				}
+			},
 		};
+		
+		
 	};
 }(jQuery));
