@@ -1,5 +1,5 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_ContentAlignment
+class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Contentalignment
 {
     public function toOptionArray()
     {
