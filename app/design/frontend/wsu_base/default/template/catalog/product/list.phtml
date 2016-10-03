@@ -208,7 +208,7 @@
 	?>
 	<a id="listTop"></a>
     
-	<ul class="category-products-grid <?=$layout->getLayoutBlockClass("category-products-grid")?> effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?>">
+	<ul class="category-products-grid <?=$layout->getLayoutBlockClass("category-products-grid")?> effects <?=$effects?> products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-<?=$columnCount?>col<?=($gridClasses?$gridClasses:'')?> flex-row">
 		<?php foreach ($_productCollection as $_product): ?>
 			<?php 
 				$productType=$_product->getTypeID();
