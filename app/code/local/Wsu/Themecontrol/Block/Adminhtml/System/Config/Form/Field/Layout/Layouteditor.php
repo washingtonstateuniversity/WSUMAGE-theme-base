@@ -2,7 +2,7 @@
 class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Layout_Layouteditor extends Mage_Adminhtml_Block_System_Config_Form_Field {
 	
 	protected function _makeOptionDropdown($name,$type){
-		$types = Mage::getModel('wsu_themecontrol/system_Config_source_layout_flexwork_'.$type)->toOptionArray();
+		$types = Mage::getModel('wsu_themecontrol/system_config_source_layout_flexwork_'.$type)->toOptionArray();
 		$html = '<select name="'.$name.'" class="flextype">';
 		foreach($types as $option){
 			$html .= '<option value="'.$option['value'].'">'.$option['label'].'</option>';

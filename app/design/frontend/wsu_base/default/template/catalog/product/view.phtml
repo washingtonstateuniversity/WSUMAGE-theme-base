@@ -23,12 +23,12 @@ $layout->set_layoutTarget('catalog_product_view/productview');
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
 
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential <?=$layout->getLayoutBlockClass("product-essential")?>">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential <?=$layout->getLayoutBlockClass("product-essential")?> flex-row column-at-480 full-width grid-part">
         
-        <div class="product-media product_info_media media-block <?=$layout->getLayoutBlockClass("product_info_media")?>">
+        <div class="product-media product_info_media media-block <?=$layout->getLayoutBlockClass("product_info_media")?> items-start                   fifths-2 grid-part order-2 full-width-at-480 flex-row column-at-480">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-        <div class="product-content <?=$layout->getLayoutBlockClass("product-content")?>">
+        <div class="product-content <?=$layout->getLayoutBlockClass("product-content")?> content-start       items-start        flex-column fifths-3 grid-part order-1 full-width-at-480 column-at-480 justify-start">
             <div class="no-display">
                 <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
