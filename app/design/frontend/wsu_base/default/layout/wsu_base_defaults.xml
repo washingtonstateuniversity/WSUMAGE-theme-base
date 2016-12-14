@@ -111,10 +111,10 @@
         </reference>
         
 		<reference name="before_body_end">
-			<block type="core/template" name="adminbar" as="adminbar" before="-">
+			<!--<block type="core/template" name="adminbar" as="adminbar" before="-">
 				<action method="setBlockId"><block_id>adminbar_block</block_id></action>  
 				<action method="setTemplate"><template helper="wsu_themecontrol/data/showAdminFrontEndBar" /></action>
-			</block>
+			</block>-->
 		</reference>
 <!---->
 		
