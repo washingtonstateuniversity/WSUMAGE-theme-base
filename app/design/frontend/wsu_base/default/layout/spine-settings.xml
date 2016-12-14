@@ -35,7 +35,7 @@
 			<used_customer_account_dashboard>1</used_customer_account_dashboard>
 			<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
 			<row_type_root>side-right</row_type_root>
-			<row_type_customer_account_dashboard>single</row_type_customer_account_dashboard>
+			<row_type_customer_account_dashboard>side-right</row_type_customer_account_dashboard>
 			<row_type_customer_account_dashboard_address>halves</row_type_customer_account_dashboard_address>
 		</customer_account_index>
 		<customer_address_index>
