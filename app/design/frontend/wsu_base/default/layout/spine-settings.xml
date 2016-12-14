@@ -51,6 +51,14 @@
 			<used_root>1</used_root>
 			<row_type_root>side-right</row_type_root>
 		</customer_account_edit>
+		<downloadable_customer_products>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</downloadable_customer_products>		
+		
+		
+		
+		
 		<wishlist_index_index>
 			<used_root>1</used_root>
 			<row_type_root>side-right</row_type_root>
