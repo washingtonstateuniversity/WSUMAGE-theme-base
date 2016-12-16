@@ -77,19 +77,7 @@
 			<row_type_root>side-right</row_type_root>
 		</sales_order_history>
 	</wsu_themecontrol_layout>
-	<wsu_themecontrol_design>
-		<spine>
-			<spine_color>dark</spine_color>
-			<spine_bleed>0</spine_bleed>
-			<spine_tool_bar_color>light</spine_tool_bar_color>
-		</spine>
-		<font>
-			<primary_font_family_group>google</primary_font_family_group>
-			<primary_font_family>Open Sans</primary_font_family>
-			<primary_font_weight>300,400,600,700,800</primary_font_weight>
-		</font>
-	</wsu_themecontrol_design>
-	
+
 	
 
 </wsu_spine>
