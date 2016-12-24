@@ -1,0 +1,33 @@
+<?php 
+
+?>
+<?php 
+$layout = $this->helper('wsu_themecontrol/layout');
+$layout->set_layoutTarget('catalog_product_view/customeraccountareas');		
+?>
+<div class="dashboard <?=$layout->getLayoutBlockClass("my-account-dashboard")?>">
+    <div class="page-title">
+        <h1><?=$this->__('My Dashboard') ?></h1>
+    </div>
+    <?=$this->getMessagesBlock()->getGroupedHtml() ?>
+	<?=$this->getChildHtml('hello') ?>
+	<?=$this->getChildHtml('top') ?>
+	<div class="account-info-blocks <?=$layout->getLayoutBlockClass("account-info-blocks")?>">
+        <div class="box-account box-info <?=$layout->getLayoutBlockClass("account-info-box-info")?>">
+            <div class="box-head <?=$layout->getLayoutBlockClass("account-info-box-head")?>">
+                <h2><?=$this->__('Account Information') ?></h2>
+            </div>
+            <div class="dashboard-extra <?=$layout->getLayoutBlockClass("account-info-dashboard-extra")?>">
+				<?php /* Extensions placeholder */ ?>
+                <?=$this->getChildHtml('customer.account.dashboard.extra') ?>
+                <?=$this->getChildHtml('info') ?>
+            </div>
+        </div>
+
+		<div class="address-blocks <?=$layout->getLayoutBlockClass("account-info-address-blocks")?>">		
+			<?=$this->getChildHtml('address') ?>
+			<?=$this->getChildHtml('info1') ?>
+			<?=$this->getChildHtml('info2') ?>
+		</div>
+	</div>
+</div>

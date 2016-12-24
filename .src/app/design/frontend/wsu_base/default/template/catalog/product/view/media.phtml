@@ -1,0 +1,50 @@
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+	$layout = $this->helper('wsu_themecontrol/layout');
+	
+	$layout->set_layoutTarget('catalog_product_view/productview');
+    $use_flexwork_spacer = true;
+?>
+
+
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+    <div class="product-image <?=$layout->getLayoutBlockClass("product-image")?> sixths-5 grid-part order-2">
+        <?php
+            $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+            echo $_helper->productAttribute($_product, $_img, 'image');
+        ?>
+    </div>
+<?php else: ?>
+    <div class="product-image <?=$layout->getLayoutBlockClass("product-image")?>">
+        <?php
+            $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(300).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+            echo $_helper->productAttribute($_product, $_img, 'image');
+        ?>
+    </div>
+<?php endif; ?>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views <?=$layout->getLayoutBlockClass("more-views")?> sixths-1 grid-part order-1 flex-row column-at-480">
+    <h2><?php echo $this->__('More Views') ?></h2>
+    <ul class="<?=$layout->getLayoutBlockClass("more-views-imgs")?>">
+    <?php 
+    $_images = $this->getGalleryImages();
+    foreach ($_images as $_image): ?>
+        <li>
+            <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(1000); ?>"  title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(66); ?>" width="66" height="66" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a><!-- onclick="popWin('<?php echo $this->getGalleryUrl($_image) ?>', 'gallery', 'width=300,height=300,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes'); return false;" -->
+        </li>
+    <?php endforeach; ?>
+    
+    <?php 
+    if($use_flexwork_spacer){
+        $count = count($_images);
+        for ($i = 1; $i <=$count; $i++) {
+            echo '<li class="flexwork_spacer"></li>';
+        }
+    }?>
+    
+    </ul>
+</div>
+<?php endif; ?>
+
+

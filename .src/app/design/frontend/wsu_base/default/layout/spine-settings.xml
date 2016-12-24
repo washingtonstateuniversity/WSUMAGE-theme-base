@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsu_spine>
+	<wsu_themecontrol_layout>
+		<responsive>
+			<fluid_width>fluid</fluid_width>
+			<max_width>1386</max_width>
+			<max_width_custom></max_width_custom>
+			<show_breadcrumbs>1</show_breadcrumbs>
+            <breadcrumbs_reverse>1</breadcrumbs_reverse>
+		</responsive>
+		<spine>
+			<show_storenetwork>0</show_storenetwork>				
+		</spine>
+		<layout>
+			<default_padding_root> </default_padding_root>
+			<default_padding_footer> </default_padding_footer>
+		</layout>
+		<product_view>
+			<row_type>side-left</row_type>
+			<padding>pad</padding>
+			<padding_flanks>narrow</padding_flanks>
+			<padding_ends>short</padding_ends>
+		</product_view>
+		<content_area>
+			<row_type>single</row_type>
+			<padding>padded</padding>
+			<padding_flanks>narrow</padding_flanks>
+			<padding_ends>short</padding_ends>
+		</content_area>
+		<catalog_product_view>
+			<used_root>0</used_root>
+		</catalog_product_view>
+		<customer_account_index>
+			<used_root>1</used_root>
+			<used_customer_account_dashboard>1</used_customer_account_dashboard>
+			<used_customer_account_dashboard_address>1</used_customer_account_dashboard_address>
+			<row_type_root>side-right</row_type_root>
+			<row_type_customer_account_dashboard>side-right</row_type_customer_account_dashboard>
+			<row_type_customer_account_dashboard_address>halves</row_type_customer_account_dashboard_address>
+		</customer_account_index>
+		<customer_address_index>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</customer_address_index>
+		<customer_address_form>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</customer_address_form>
+		
+		<customer_account_edit>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</customer_account_edit>
+		<downloadable_customer_products>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</downloadable_customer_products>		
+		
+		
+		
+		
+		<wishlist_index_index>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</wishlist_index_index>
+		<sales_order_invoice>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</sales_order_invoice>
+		<sales_order_view>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</sales_order_view>
+        
+		<sales_order_history>
+			<used_root>1</used_root>
+			<row_type_root>side-right</row_type_root>
+		</sales_order_history>
+	</wsu_themecontrol_layout>
+
+	
+
+</wsu_spine>

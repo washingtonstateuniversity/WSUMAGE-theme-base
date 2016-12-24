@@ -1,0 +1,42 @@
+<?php 
+$layout = $this->helper('wsu_themecontrol/layout')
+			->setupLayout( $this, array( 'row_type', 'padding', 'padding_flanks', 'padding_ends' ) );
+?>
+<div class="box-account box-info">
+    <div class="box-head">
+        <h2><?php echo $this->__('Address Book') ?></h2>
+        <a href="<?php echo $this->getAddressBookUrl() ?>" class="button"><span><?php echo $this->__('Manage Addresses') ?></span></a>
+    </div>
+    <div class="col2-set row <?=$layout['row_type'].' '.$layout['padding'].' '.$layout['padding_flanks'].' '.$layout['padding_ends'];?>">
+        <div class="col-1 column  <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
+										one
+									<?php endif; ?>">
+            <div class="box">
+                <div class="box-title">
+                    <h3><?php echo $this->__('Default Billing Address') ?></h3>
+                    <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>" class="button"><span><?php echo $this->__('Edit Address') ?></span></a>
+                </div>
+                <div class="box-content">
+                    <address><?php echo str_replace('\\n',' ', $this->getPrimaryBillingAddressHtml()) ?></address>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 column  <?php if( strpos($layout['row_type'],'right') !== false ):?>
+										two
+									<?php elseif( strpos($layout['row_type'],'left') !== false):?>
+										one
+									<?php endif; ?>">
+            <div class="box">
+                <div class="box-title">
+                    <h3><?php echo $this->__('Default Shipping Address') ?></h3>
+                    <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>" class="button"><span><?php echo $this->__('Edit Address') ?></span></a>
+                </div>
+                <div class="box-content">
+                    <address><?php echo str_replace('\\n',' ', $this->getPrimaryShippingAddressHtml()) ?></address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

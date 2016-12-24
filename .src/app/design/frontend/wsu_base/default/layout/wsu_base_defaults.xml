@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<default>
+		<reference name="head">
+		
+
+		<!-- remove the rwd defaults -->
+			<action method="removeItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
+			
+			<action method="removeItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/app.js</name></action>
+			<!---->
+			<action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+
+			<action method="removeItem"><type>link_rel</type><name>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/minicart.js</name></action>
+
+			<!-- Add stylesheets with no media queries for use in IE 8 and below -->
+			<action method="removeItem"><type>skin_css</type><name>css/styles-ie8.css</name></action>
+			<action method="removeItem"><type>skin_css</type><name>css/madisonisland-ie8.css</name></action>
+
+			<!-- Add stylesheets with media queries for use by modern browsers -->
+			<action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+			<action method="removeItem"><type>skin_css</type><name>css/madisonisland.css</name></action>
+
+		
+		
+		<!-- JS -->
+			<action method="addItem"><type>external_js</type><name>//html5shiv.googlecode.com/svn/trunk/html5.js</name><params/><if>lt IE 9</if></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/flexibility.js</name><params/><if>lt IE 10</if></action>
+			
+			
+			<!-- base for all WSU -->
+			<action method="addItem"><type>external_css</type><name helper="wsu_themecontrol/layout/getSpineVersionCss"/></action>
+			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->
+			<action method="addItem"><type>external_js</type><name helper="wsu_themecontrol/layout/getSpineVersionJs"/></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/jQuery.dialog.lightbox.js</name></action>
+			
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.defaults.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.state.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.frontend.js</name></action>
+			
+			<action method="addItem"><type>skin_js</type><name>src/js/controller.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>src/js/lightbox.ini.js</name></action>
+			
+			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.starter.js</name></action>
+			<!-- End of WSU base -->
+
+		<!-- CSS: -->
+			<!-- CSS base -->
+			<action method="addCss"><stylesheet>theme.css</stylesheet></action>
+			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
+			
+			<action method="addCss"><stylesheet>src/css/print.css</stylesheet><params>media="print"</params></action>
+			<action ifconfig="wsu_themecontrol/customization/custom_css"  method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
+			<!-- Design settings
+			 -->
+			<!-- Override components, modules
+			<action method="addItem"><type>skin_css</type><name>css/override-components.css</name><params/></action>
+			<action method="addItem"><type>skin_css</type><name>css/override-modules.css</name><params/></action>
+			<action method="addItem"><type>skin_css</type><name>css/override-theme.css</name><params/></action> -->
+			<!-- -->
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getGridFile" /></action>
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
+			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getOverrideFile" /></action>
+            
+            
+            
+            
+				<!--
+			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
+-->
+			<!--<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />-->
+			<action method="addItem"><type>skin_js</type><name>src/js/custom.js</name></action>
+            <action method="addItem"><type>skin_js</type><name helper="wsu_themecontrol/cssgen/getGlobalJSFile" /></action>
+		</reference>
+<!-- Header ====================================================================== -->
+		<reference name="header">
+			<remove name="catalog.topnav"/>
+			<remove name="top.menu"/>
+				<block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
+					<action method="setElementClass"><value>top-bar</value></action>
+				</block>
+			<block type="core/template" name="offisite.links" as="offisite.links" before="-">
+				<action method="setBlockId"><block_id>offisite_links_block</block_id></action>  
+				<action method="setTemplate"><template>page/html/custom/offisite.links.phtml</template></action>
+			</block>
+				
+				
+		</reference>	
+
+		<reference name="root">
+			<remove name="store_language"/>
+			<block type="page/template_links" name="top.links" as="topLinks" />
+            
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+			<action method="addBodyClass"><class>DYNO-DEFAULT</class></action>
+
+            <action method="unsetChild"><name>breadcrumbs</name></action>
+            <reference name="content">
+                <action method="insert"><child>breadcrumbs</child></action>
+            </reference>
+        </reference>
+        
+		<reference name="before_body_end">
+			<!--<block type="core/template" name="adminbar" as="adminbar" before="-">
+				<action method="setBlockId"><block_id>adminbar_block</block_id></action>  
+				<action method="setTemplate"><template helper="wsu_themecontrol/data/showAdminFrontEndBar" /></action>
+			</block>-->
+		</reference>
+<!---->
+		
+		<reference name="top.links">
+			<block type="wishlist/links" name="wishlist_link" />
+			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
+
+			<!-- Removes 'My Cart' AND 'Checkout' links
+			Default position: 40 and 50 respectively -->
+			<remove name="checkout_cart_link"/>
+
+			<!-- To re-add 'My Cart' or 'Checkout' after removing both
+			<block type="checkout/links" name="checkout_cart_link_custom">
+				<action method="addCartLink"><position>10</position></action>
+				<action method="addCheckoutLink"><position>11</position></action>
+			</block> -->
+			
+			<block type="checkout/links" name="checkout_cart_link_wsu_base">
+				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
+				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
+				<action method="setData"><name>cart_label_full</name><value helper="wsu_themecontrol/layout/getCartLabelFull" /></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/checkout_hide_empty"><name>checkout_hide_empty</name><value>1</value></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
+				<action method="setData"><name>checkout_label</name><value helper="wsu_themecontrol/layout/getCheckoutLabel" /></action>
+				
+				<action method="addCartLink"><position>10</position></action>
+				<action method="addCheckoutLink"><position>11</position></action>
+				
+				<action method="makeCompareLink"></action>
+			</block>
+			
+			
+			
+			
+		</reference>
+
+		<remove name="SHORTCUT_popup" /><!-- paypal not allowed at WSU -->
+	</default>
+	
+	
+<!-- top.link block alerations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+	
+     <!-- Custom page layout handles -->
+    <page_halves translate="label">
+        <label>Halves Page Layout</label>
+        <reference name="root">
+            <action method="setTemplate"><template>page/halves.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+    </page_halves>
+    <page_dyno translate="label">
+        <label>Dynamic Page Layout</label>
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+    </page_dyno>
+		
+		
+<!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<page_three_columns>
+		<reference name="right">
+			<action method="unsetChild"><name>paypal.partner.right.logo</name></action>
+		</reference>
+		<reference name="left">
+			<action method="unsetChild"><name>wishlist</name></action>
+		</reference>
+	</page_three_columns>
+	
+<!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_logged_out>
+		<reference name="top.links">
+			<action method="addLink" translate="label title">
+				<label>Sign Up</label>
+				<url>customer/account/create</url>
+				<title>Sign Up</title>
+				<prepare>true</prepare>
+				<urlParams/>
+				<position>1</position>
+				<liParams>id="link-sign-up"</liParams>
+			</action>
+			<remove name="wishlist_link"/>
+			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[ Log In ]]></label>
+				<url helper="customer/getLoginUrl"/>
+				<title>Log In</title>
+				<prepare/>
+				<urlParams/>
+				<position>2</position>
+			</action>
+		</reference>
+		<!---<reference name="right">
+			<block type="customer/form_login" name="customer_form_mini_login" before="-" template="customer/form/mini.login.phtml"/>
+		</reference>-->
+		<!--<remove name="reorder"></remove>-->
+	</customer_logged_out>
+	
+	<customer_logged_in>
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[ Log Out ]]></label>
+				<url helper="customer/getLogoutUrl"/><title>Log Out</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
+<!--			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>-->
+			<action method="addLink" translate="label title" module="customer">
+				<label><![CDATA[ My Account ]]></label>
+				<url helper="customer/getAccountUrl"/>
+				<title>My Account</title>
+				<prepare/>
+				<urlParams/>
+				<position>10</position>
+			</action>
+		</reference>
+
+	</customer_logged_in>
+
+
+<!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<checkout_cart_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <action method="addBodyClass"><class>checkout-cart</class></action>
+        </reference>
+		<!-- Custom static blocks -->
+		<reference name="checkout.cart">
+			<block type="cms/block" name="block_cart_below_table">
+				<action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
+			</block>
+			<block type="cms/block" name="block_cart_below_totals">
+				<action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
+			</block>
+		</reference>
+
+		<reference name="top.links">
+			<!-- Removes 'My Cart' AND 'Checkout' links
+			Default position: 40 and 50 respectively -->
+			<remove name="checkout_cart_link_wsu_base"/>
+			<!-- To re-add 'My Cart' or 'Checkout' after removing both -->
+			<block type="checkout/links" name="checkout_cart_link_custom">
+				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
+				<action method="setData"><name>checkout_label</name><value helper="wsu_themecontrol/layout/getCheckoutLabel" /></action>
+				<action method="addCheckoutLink"><position>11</position></action>
+			</block>
+		</reference>
+	</checkout_cart_index>
+	
+<!-- CHECKOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<checkout_onepage_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<!-- Block below progress block, inserted directly -->
+		<reference name="right">
+			<block type="page/html_wrapper" name="i_block_opc_below_progress">
+				<action method="setElementClass"><value>block block_opc_below_progress std</value></action>
+				<block type="cms/block" name="block_opc_below_progress" after="checkout.progress.wrapper">
+					<action method="setBlockId"><block_id>block_opc_below_progress</block_id></action>
+				</block>
+			</block>
+		</reference>
+		<reference name="top.links">
+			<remove name="checkout_cart_link_custom"/>
+			<block type="checkout/links" name="checkout_cart_link_custom_checkout">
+				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
+				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
+				<action method="setData"><name>cart_label_full</name><value helper="wsu_themecontrol/layout/getCartLabelFull" /></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
+				<action method="addCartLink"><position>10</position></action>
+			</block>
+		</reference>
+	</checkout_onepage_index>	
+	<opc_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<reference name="top.links">
+			<remove name="checkout_cart_link_custom"/>
+			<block type="checkout/links" name="checkout_cart_link_custom_checkout">
+				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
+				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
+				<action method="setData"><name>cart_label_full</name><value helper="wsu_themecontrol/layout/getCartLabelFull" /></action>
+				<action method="setData" ifconfig="wsu_themecontrol/header/cart_hide_empty"><name>cart_hide_empty</name><value>1</value></action>
+				<action method="addCartLink"><position>10</position></action>
+			</block>
+		</reference>
+	</opc_index_index>
+	<checkout_multishipping>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+	</checkout_multishipping>
+	
+	
+	
+<!-- REVIEWS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<review_product_list>
+		<!-- IMPORTANT: same as 'catalog_product_view'. -->
+		<reference name="root">
+			<!--<action method="setTemplate"><template>page/1column.phtml</template></action>-->
+		</reference>
+	</review_product_list>
+
+	
+<!-- CUSTOMER ACCOUNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_account>
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <action method="addBodyClass"><class>customer-account</class></action>
+        </reference>
+        <reference name="right">
+            <block type="customer/account_navigation" name="customer_account_navigation" before="-" template="customer/account/navigation.phtml">
+                <action method="addLink" translate="label" module="customer"><name>account</name><path>customer/account/</path><label>Account Dashboard</label></action>
+                <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
+                <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>Address Book</label></action>
+                <action method="addLink" translate="label" module="downloadable"><name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloads</label></action>  
+            </block>
+        </reference>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="wishlist" ifconfig="wishlist/general/active"><name>wishlist</name><path>wishlist/</path><label>My Wishlist</label></action>
+        </reference>
+
+    </customer_account>
+    <wishlist_index_index>
+		<reference name="top.links">
+			<remove name="wishlist_link"/>
+		</reference>
+        <reference name="right">
+			<remove name="wishlist_sidebar"/>
+		</reference>
+    </wishlist_index_index>	
+	<customer_account_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/dyno.phtml</template></action>
+            <action method="addBodyClass"><class>customer-account</class></action>
+        </reference>
+                        <!-- Mage_Wishlist -->
+        <reference name="right">
+            <block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" after="cart_sidebar" template="wishlist/sidebar.phtml" />
+        </reference>
+	</customer_account_index>
+<!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<cms_page>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<!-- Custom static blocks -->
+		<!-- IMPORTANT: These blocks are removed from home page and 404 no route page -->
+		<reference name="content">
+			<block type="page/html_wrapper" name="i_block_cms_page_top" before="-">
+				<action method="setElementClass"><value>block_cms_page_top std</value></action>
+				<block type="cms/block" name="block_cms_page_top">
+					<action method="setBlockId"><block_id>block_cms_page_top</block_id></action>
+				</block>
+			</block>
+		</reference>
+	</cms_page>	
+	
+	<!-- Remove static blocks displayed on CMS pages from these pages: home page, 404 no route 
+		IMPORTANT: make sure that you use correct ID -->
+	<cms_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+	</cms_index>
+	<cms_index_noroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_noroute>
+	<cms_index_defaultnoroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_defaultnoroute>
+	<!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<cms_index_index>
+		<remove name="i_block_cms_page_top"/>
+		<!-- Uncomment to allow MAP functionality on home page -->
+		<!--<update handle="MAP_popup" />-->
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+	</cms_index_index>
+
+
+<!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Default category (without layered navigation) -->
+   <product_list>
+        <reference name="head">
+            <!--<action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-list.js</name></action>-->
+			<action method="removeItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+			<action method="removeItem"><type>skin_js</type><name>js/configurableswatches/swatches-list.js</name></action>
+        </reference>
+        <reference name="product_list.name.after">
+            <block type="core/template" name="product_list.swatches" template="configurableswatches/catalog/product/list/swatches.phtml" />
+        </reference>
+        <reference name="product_list.after">
+            <!--<block type="configurableswatches/catalog_media_js_list" name="configurableswatches.media.js.list" />-->
+        </reference>
+    </product_list>
+<!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Default category (without layered navigation) -->
+	<catalog_category_default>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="product_list">
+			<!-- HOWTO: Change review summary template
+				<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action>
+			-->
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_above_empty_collection">
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
+			<!--<block type="catalog/product_list_aboveproduct" name="block_category_above_product" as="block_category_above_product" />
+			<block type="catalog/product_links_belowproduct" name="block_category_below_product" as="block_category_below_product" />-->
+			<block type="cms/block" name="block_category_below_collection">
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
+            
+            <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
+            <reference name="toolbar_bottom">
+               <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
+            </reference>
+
+		</reference>
+		<!-- Remove currency switcher from sidebar -->
+		<reference name="left">
+			<action method="unsetChild"><name>currency</name></action>
+		</reference>
+		<reference name="category.products">
+			<!--<block type="page/html_breadcrumbs" name="onlybreadcrumbs" as="onlybreadcrumbs"/>-->
+		</reference>
+		<reference name="content">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>breadcrumbs</name></action>	
+            
+
+            
+            		
+		</reference>
+	    <reference name="product_list_toolbar">
+			<action method="insert"><child>breadcrumbs</child></action>
+		</reference>
+	</catalog_category_default>
+
+	<!-- Category with layered navigation -->
+	<catalog_category_layered>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="catalog.leftnav">
+			<!--<action method="unsetChild"><child>state_renderers</child></action>
+            <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml">
+                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+            </block>-->
+        </reference>
+		<reference name="left">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>catalog.leftnav</name></action>
+			<action method="unsetChild"><name>currency</name></action>			
+		</reference>
+
+		<reference name="content">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>breadcrumbs</name></action>			
+		</reference>
+	    <reference name="product_list_toolbar">
+			<action method="insert"><child>breadcrumbs</child></action>
+			<action method="insert"><child>state_renderers</child></action>
+			<action method="insert"><child>left_first</child></action>
+		</reference>
+		
+		<reference name="product_list">
+        
+               
+            <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
+            <reference name="toolbar_bottom">
+               <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
+            </reference>
+
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_above_empty_collection">
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_below_collection">
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
+		</reference>
+	</catalog_category_layered>
+
+    <catalogsearch_result_index>
+        <update handle="product_list"/>
+    </catalogsearch_result_index>
+
+    <catalogsearch_advanced_result>
+        <update handle="product_list"/>
+    </catalogsearch_advanced_result>
+
+    <PRODUCT_TYPE_configurable>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setGalleryFilterHelper"><helper>configurableswatches/productimg</helper></action>
+            <action method="setGalleryFilterMethod"><method>filterImageInGallery</method></action>
+        </reference>
+        <reference name="product.info.media.after">
+            <block type="configurableswatches/catalog_media_js_product" name="configurableswatches.media.js.product" />
+        </reference>
+        <reference name="product.info.options.configurable.renderers">
+            <block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
+        </reference>
+        <reference name="product.info.options.configurable.after">
+            <block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
+        </reference>
+    </PRODUCT_TYPE_configurable>
+	
+	
+	<!-- Category with layered navigation -->
+	<catalog_category_layered>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<reference name="left">
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>			
+		</reference>
+		<reference name="product_list">
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+				<action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_above_empty_collection">
+				<action method="setBlockId"><block_id>block_category_above_empty_collection</block_id></action>
+			</block>
+			<block type="cms/block" name="block_category_below_collection">
+				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+			</block>
+		</reference>
+	</catalog_category_layered>
+	<catalog_product_view>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+	</catalog_product_view>
+<!-- SEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Quick search -->
+	<catalogsearch_result_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<reference name="left">
+			<!-- Keep layered navigation always on top. Replace: after="currency" with: before="-" -->
+			<!--<action method="unsetChild"><name>catalogsearch.leftnav</name></action>
+			<block type="catalogsearch/layer" name="catalogsearch.leftnav" before="-" template="catalog/layer/view.phtml"/>-->
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>
+		</reference>
+	</catalogsearch_result_index>
+	<!-- Advanced search -->
+	<catalogsearch_advanced_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<!-- Remove (right) currency switcher from sidebar -->
+		<reference name="left">
+			<action method="unsetChild"><name>right_currency</name></action>
+		</reference>
+	</catalogsearch_advanced_index>
+	<!-- Advanced search results -->
+	<catalogsearch_advanced_result>
+		<reference name="root">
+			<action method="setTemplate"><template>page/dyno.phtml</template></action>
+		</reference>
+		<!-- Remove (right) currency switcher from RIGHT sidebar -->
+		<reference name="right">
+			<action method="unsetChild"><name>right_currency</name></action>
+		</reference>
+	</catalogsearch_advanced_result>
+	
+	
+	
+	
+</layout>

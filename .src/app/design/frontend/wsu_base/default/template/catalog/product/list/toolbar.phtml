@@ -1,0 +1,109 @@
+<?php
+    $_helper    = $this->helper('catalog/output');
+	
+	
+	$layout = $this->helper('wsu_themecontrol/layout');
+	$layout->set_layoutTarget('catalog_category_view/productlist');
+	
+    //$_category  = $this->getCurrentCategory();
+	$_category = Mage::registry('current_category');
+    $_imgHtml   = '';
+    if ($_category && $_imgUrl = $_category->getImageUrl()) {
+        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" style="width:100%"/></p>';
+        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+    }
+    
+    $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
+    
+?>
+<div class="toolbox-top <?=$layout->getLayoutBlockClass("toolbox-top")?> cat_list_header_top">
+	<?=$this->getChildHtml('breadcrumbs') ?>
+	<div class="sorting_area <?=$layout->getLayoutBlockClass("sorting_area")?>">
+		<h4 class="sorting_button <?=$this->getCurrentDirection();?>">
+			<?php echo $this->__('Sort By') ?>: <span class="sort_applied"><?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+				<?php if($this->isOrderCurrent($_key)): ?>
+							<?php echo $this->__($_order) ?>
+				<?php endif; ?>
+			<?php endforeach; ?></span>
+		<!--	
+<?php if($this->getCurrentDirection() == 'desc'): ?>
+				<a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Ascending Direction')) ?>"><img src="<?php echo $this->getSkinUrl('images/i_desc_arrow.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Ascending Direction')) ?>" class="v-middle" /></a>
+			<?php else: ?>
+				<a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Descending Direction')) ?>"><img src="<?php echo $this->getSkinUrl('images/i_asc_arrow.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Descending Direction')) ?>" class="v-middle" /></a>
+			<?php endif; ?>
+			-->
+			
+		</h4>
+		<div class="sorting_block">
+			<?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+				<a href="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> class="active"<?php endif; ?>>
+					<?php echo $this->__($_order) ?>
+				</a>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
+		<?php echo $_leftContent;   ?>
+	<?php endif; ?>
+
+</div>
+<div class="flex-row wrap designer_hr"></div>
+<?php if($this->getCollection()->getSize()): ?>
+<div class="toolbox-bottom <?=$layout->getLayoutBlockClass("toolbox-bottom")?> cat_list_header_bottom">
+    <div class="filtering_result_labels <?=$layout->getLayoutBlockClass("filtering_result_labels")?>">
+		<span class="match_count"><?=$this->getTotalNum()?> <?=( 1 == $this->getTotalNum() ? $this->__("Match") : $this->__("Matches") )?></span>
+		<?php if($this->getLastPageNum()>1): ?>
+			<span class="paged_label"><?php echo $this->__('Showing %s through %s', $this->getFirstNum(), $this->getLastNum()) ?></span>
+		<?php endif; ?>
+		
+		<?php if ($_stateContent = $this->getChildHtml('state_renderers')): ?>
+			<div class="state_of_the_list"><?php echo $_stateContent;   ?></div>
+		<?php endif; ?>
+		  <?php
+   if(Mage::registry('current_category')) {
+       $_filters = Mage::getSingleton('catalog/layer')->getState()->getFilters();
+   } else {
+       $_filters = Mage::getSingleton('catalogsearch/layer')->getState()->getFilters();
+   }
+   ?>
+	<?php foreach ($_filters as $_filter):?>
+	<span class="inline-filter"><a href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Remove This Item') ?>"><span><?php echo $this->stripTags($_filter->getLabel()) ?></span></a></span>
+	<?php endforeach; ?>
+		
+			
+    </div>
+	<div class="limiter <?=$layout->getLayoutBlockClass("limiter")?>">
+		<?php $pager=$this->getPagerHtml() ?>
+		<?php echo $pager ?>
+		<?php if( "" !== trim($pager) ): ?>
+			<div class="viewing_selector">
+			<?php echo $this->__('View') ?>
+			<?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
+				<a href="<?php echo $this->getLimitUrl($_key) ?>" onclick="setLocation(<?php echo $this->getLimitUrl($_key) ?>)"<?php if($this->isLimitCurrent($_key)): ?>class="active"<?php endif ?>>
+					<?php echo $_limit ?>
+				</a>
+			<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
+	</div>
+	<?php if( $this->isExpanded() ): ?>
+	<div class="sorter <?=$layout->getLayoutBlockClass("sorter")?>">
+		<?php if( $this->isEnabledViewSwitcher() ): ?>
+		<!--<p class="view-mode">
+			<?php $_modes = $this->getModes(); ?>
+			<?php if($_modes && count($_modes)>1): ?>
+			<label><?php echo $this->__('as') ?>:</label>
+			<?php foreach ($this->getModes() as $_code=>$_label): ?>
+				<?php if($this->isModeActive($_code)): ?>
+					<strong title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></strong>&nbsp;
+				<?php else: ?>
+					<a href="<?php echo $this->getModeUrl($_code) ?>" title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></a>&nbsp;
+				<?php endif; ?>
+			<?php endforeach; ?>
+			<?php endif; ?>
+		</p>-->
+		<?php endif; ?>		
+	</div>
+	<?php endif; ?>
+</div>
+<?php endif ?>

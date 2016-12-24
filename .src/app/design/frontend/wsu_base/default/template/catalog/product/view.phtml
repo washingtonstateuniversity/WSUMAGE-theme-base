@@ -1,0 +1,221 @@
+<?php 
+
+$_helper = $this->helper('catalog/output');
+
+$theme = $this->helper('wsu_themecontrol');
+$template = $this->helper('wsu_themecontrol/template');
+$layout = $this->helper('wsu_themecontrol/layout');
+
+$layout->set_layoutTarget('catalog_product_view/productview');
+?>
+
+<?php
+//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
+//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutSettings("product-content");
+//var_dump($_layout);die();
+
+?>
+
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential <?=$layout->getLayoutBlockClass("product-essential")?> flex-row column-at-480 full-width grid-part">
+        
+        <div class="product-media product_info_media media-block <?=$layout->getLayoutBlockClass("product_info_media")?> items-start                   fifths-2 grid-part order-2 full-width-at-480 flex-row column-at-480">
+            <?php echo $this->getChildHtml('media') ?>
+        </div>
+        <div class="product-content <?=$layout->getLayoutBlockClass("product-content")?> content-start       items-start        flex-column fifths-3 grid-part order-1 full-width-at-480 column-at-480 justify-start">
+            <div class="no-display">
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+            </div>
+            <div class="product-name <?=$layout->getLayoutBlockClass("product-name")?>">
+                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+            </div>
+
+            <?php if ($this->canEmailToFriend()): ?>
+                <div class="email-friend  <?=$layout->getLayoutBlockClass("email_area")?>">
+                <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a>
+                </div>
+            <?php endif; ?>
+
+            <?php 
+                $review = $this->getReviewsSummaryHtml($_product, false, true);
+                if( "" !== $review){
+					$class = $layout->getLayoutBlockClass("review_area");
+				?>
+                    <div id='review_area' class='review_area <?=$class?>'><?=$review?></div>
+            <?php } ?>
+            
+            <?php 
+                $alert_urls = $this->getChildHtml('alert_urls');
+                if( "" !== $alert_urls){
+					$class = $layout->getLayoutBlockClass("alert_urls_area");
+				?>
+                    <div id='alert_urls_area' class='alert_urls_area <?=$class?>'><?=$alert_urls?></div>
+            <?php } ?>
+
+            <?php 
+                $product_type_data = $this->getChildHtml('product_type_data');
+                if( "" !== $product_type_data){
+					$class = $layout->getLayoutBlockClass("product_type_data_area");
+				?>
+                    <div id='product_type_data_area' class='product_type_data_area <?=$class?>'><?=$product_type_data?></div>
+            <?php } ?>
+
+            <?php 
+                $tier_price = $this->getTierPriceHtml();
+                if( "" !== $tier_price){
+					$class = $layout->getLayoutBlockClass("tier_price_area");
+				?>
+                    <div id='tier_price_area' class='tier_price_area <?=$class?>'><?=$tier_price?></div>
+            <?php } ?>
+
+            <?php 
+                $extrahint = $this->getChildHtml('extrahint');
+                if( "" !== $extrahint){
+					$class = $layout->getLayoutBlockClass("extrahint_area");
+				?>
+                    <div id='extrahint_area' class='extrahint_area <?=$class?>'><?=$extrahint?></div>
+            <?php } ?>
+
+
+            <?php if (!$this->hasOptions()):?>
+                <div class="add_to_box">
+                    <?php if($_product->isSaleable()): ?>
+                        <?php echo $this->getChildHtml('addtocart') ?>
+                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                            <span class="or"><?php echo $this->__('OR') ?></span>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?php echo $this->getChildHtml('addto') ?>
+                </div>
+            <?php endif; ?>
+
+            <?php $short = trim($_product->getShortDescription());
+                if ($short):?>
+            <?php
+					$class = $layout->getLayoutBlockClass("short_description_area");
+                    ?>
+                <div class="short-description <?=$class?>">
+                    <h2><?php echo $this->__('Quick Overview') ?></h2>
+                    <div class="std"><?=$short?></div>
+                </div>
+            <?php endif;?>
+ 
+             <?php 
+            $full = trim($_product->getDescription());
+            if ($full && $full != $short):?>
+            <?php
+				$class = $layout->getLayoutBlockClass("description_area");
+            ?>
+                <div class="description <?=$class?>">
+                    <h2><?php echo $this->__('Full Overview') ?></h2>
+                    <div class="std"><?=$full?></div>
+                </div>
+            <?php endif;?>
+ 
+ 
+            
+            <?php 
+                $other = $this->getChildHtml('other');
+                if( "" !== $other){
+                    $class = $layout->getLayoutBlockClass("other_area");
+                    echo "<div id='other_area' class='other_area ".$class."'>".$other."</div>";
+                }
+            ?>
+            
+            <?php if ($_product->isSaleable() && $this->hasOptions()):
+            
+                $container1 = $this->getChildChildHtml('container1', '', true, true);
+                if( "" !== $container1){
+                    $class = $layout->getLayoutBlockClass("container1_area");
+                    echo "<div id='container1_area' class='container1_area ".$class."'>".$container1."</div>";
+                }
+                endif;
+            ?>
+            
+
+
+        </div>
+
+
+
+        
+        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+        <?php endif;?>
+    </form>
+    
+    <?php /*
+		//@todo
+		Look to the js controller script for the 
+		var productAddToCartForm = new VarienForm('product_addtocart_form');
+		it shouldbn't be in line.
+	*/
+
+	
+	
+	 ?><script type="text/javascript">
+    //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+    //]]>
+    </script>
+	
+
+
+    <div class="product-collateral">
+        <?php echo $this->getChildHtml('info_tabs') ?>
+        <?php echo $this->getChildHtml('product_additional_data') ?>
+    </div>
+</div>
