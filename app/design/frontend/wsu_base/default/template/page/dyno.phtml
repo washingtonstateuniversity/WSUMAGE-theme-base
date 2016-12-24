@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 /**
  * Template for Mage_Page_Block_Html
  */
@@ -19,21 +19,22 @@ $show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
 
 $mainContentClasses = $template->getBlockClasses("main_content");
 ?>
-<?php 
+<?php
 
 $blockname = $this->getNameInLayout();
 $layout = $this->helper('wsu_themecontrol/layout')
-			->setupLayout( 
-				$this, 
-				array( 
+			->setupLayout(
+				$this,
+				array(
 					'row_type',
 					'padding',
 					'padding_flanks',
 					'padding_ends'
 				 )
 			);
-?>
-<!DOCTYPE html>
+
+ob_end_clean();
+?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
 <!--[if IE 7]><html class="no-js no-svg lt-ie10 lt-ie9 lt-ie8" lang="<?=$lang ?>"> <![endif]-->
 <!--[if IE 8]><html class="no-js no-svg lt-ie10 lt-ie9" lang="<?=$lang ?>"> <![endif]-->
@@ -58,7 +59,7 @@ $layout = $this->helper('wsu_themecontrol/layout')
                     <article>
                         <h2>WSU Marketplace</h2>
                         <?php if($show_headerstorename==1):?><h1><?=$name?></h1><?php endif; ?>
-                        <?=$this->getChildHtml('breadcrumbs') ?> 
+                        <?=$this->getChildHtml('breadcrumbs') ?>
                     </article>
                 </section>
                 <!-- Responsive Sections -->
@@ -67,8 +68,8 @@ $layout = $this->helper('wsu_themecontrol/layout')
 
 
 
-				
-				<?php 
+
+				<?php
 				$section_layout = array(
 					'single'=>array('content'),
 					'side-left'=>array('left','content'),
@@ -76,10 +77,10 @@ $layout = $this->helper('wsu_themecontrol/layout')
 					'halves'=>array('content','right')
 				);
 				$sections = array();
-				
-				$content; 
+
+				$content;
 				?>
-				
+
 <?php
 ob_start();
 ?>
@@ -91,7 +92,7 @@ ob_start();
 			<?=$this->getChildHtml('global_notices') ?>
 			<?=$this->getChildHtml('global_messages') ?>
 			<?=$this->getChildHtml('content') ?>
-		</div><!-- end of main -->   
+		</div><!-- end of main -->
 	</article>
 <?php
 $sections['content'] =  ob_get_clean();
@@ -123,9 +124,9 @@ ob_start();
 <?php endif; ?>
 <?php
 $sections['right'] =  ob_get_clean();
-?>				
-				
-				<?php 
+?>
+
+				<?php
 					$number_names=array(1=>'one',2=>'two',3=>'three',4=>'four');
 					$i=1;
 					foreach($section_layout[$layout['row_type']] as $section){
@@ -134,10 +135,10 @@ $sections['right'] =  ob_get_clean();
 						echo "</div><!--/column-->";
 						$i++;
 					}
-				
+
 				?>
 
-					
+
                 </section>
                 <footer>
 					<?=$this->getChildHtml('footer') ?>
@@ -145,7 +146,7 @@ $sections['right'] =  ob_get_clean();
 				</footer>
             </main><!--/#page-->
             <!-- /CONTENT -->
-    
+
 
         </div><!--/cover-->
     </div><!--/jacket-->

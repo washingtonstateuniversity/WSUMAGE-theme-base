@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 /**
  * Template for Mage_Page_Block_Html
  */
@@ -15,9 +15,10 @@ $binderStyleStr =  $theme->getBinderStyleStr($storeCode);
 $bodyClasses = $storeCode.$storeId.' '.$this->getBodyClass() .' '. $theme->getThemeBodyClasses() .' '. $randomClass;
 $spine_tool_bar_color = $theme->getCfgDesign('spine/spine_tool_bar_color');
 $show_headerstorename	= $theme->getCfgLayout('spine/show_headerstorename');
-$mainContentClasses= $template->getBlockClasses("main_content"); 
-?>
-<!DOCTYPE html>
+$mainContentClasses= $template->getBlockClasses("main_content");
+
+ob_end_clean();
+?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js no-svg lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="<?=$lang ?>"> <![endif]-->
 <!--[if IE 7]><html class="no-js no-svg lt-ie10 lt-ie9 lt-ie8" lang="<?=$lang ?>"> <![endif]-->
 <!--[if IE 8]><html class="no-js no-svg lt-ie10 lt-ie9" lang="<?=$lang ?>"> <![endif]-->
@@ -42,7 +43,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
 					<article>
 						<h2>WSU Marketplace</h2>
 						<?php if($show_headerstorename==1):?><h1><?=$name?></h1><?php endif; ?>
-						<?=$this->getChildHtml('breadcrumbs') ?> 
+						<?=$this->getChildHtml('breadcrumbs') ?>
 					</article>
 				</section>
 				<!-- Responsive Sections -->
@@ -62,7 +63,7 @@ $mainContentClasses= $template->getBlockClasses("main_content");
 								<?=$this->getChildHtml('global_notices') ?>
 								<?=$this->getChildHtml('global_messages') ?>
 								<?=$this->getChildHtml('content') ?>
-							</div><!-- end of main -->   
+							</div><!-- end of main -->
 						</article>
 					</div><!--/column-->
 					<div class="column three">
@@ -79,8 +80,8 @@ $mainContentClasses= $template->getBlockClasses("main_content");
 				</footer>
 			</main><!--/#page-->
 			<!-- /CONTENT -->
-	
-			
+
+
 		</div><!--/cover-->
 	</div><!--/jacket-->
 	<!-- /WRAPPING -->
