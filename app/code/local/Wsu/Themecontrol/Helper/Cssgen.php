@@ -9,15 +9,15 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract
     protected $_generatedCssFolder;
     protected $_generatedCssPath;
     protected $_generatedCssDir;
-	protected $_templatePath;
-	
+    protected $_templatePath;
+    
     public function __construct()
     {
         //Create paths
         $this->_generatedCssFolder = 'css/_config/';
         $this->_generatedCssPath   = 'frontend/wsu_base/default/' . $this->_generatedCssFolder;
         $this->_generatedCssDir    = Mage::getBaseDir('skin') . '/' . $this->_generatedCssPath;
-		$this->_templatePath = 'wsu/themecontrol/css/';
+        $this->_templatePath = 'wsu/themecontrol/css/';
     }
     /**
      * Get automatically generated CSS directory
@@ -28,12 +28,12 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract
     {
         return $this->_generatedCssDir;
     }
-	/**
-	 * Get path to CSS template
-	 *
-	 * @return string
-	 */
-	public function getTemplatePath()
+    /**
+     * Get path to CSS template
+     *
+     * @return string
+     */
+    public function getTemplatePath()
     {
         return $this->_templatePath;
     }
@@ -84,7 +84,4 @@ class Wsu_Themecontrol_Helper_Cssgen extends Mage_Core_Helper_Abstract
     {
         return $this->_generatedCssFolder . 'globaljs_' . Mage::app()->getStore()->getCode() . '.js';
     }
-    
-    
-    
 }

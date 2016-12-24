@@ -1,7 +1,7 @@
 <?php
 $layout = $this->helper('wsu_themecontrol/layout');
 
-$layout->set_layoutTarget('customer_account_index/customeraccountareas');
+$layout->setLayoutTarget('customer_account_index/customeraccountareas');
 ?>
 <div class="account-login <?=$layout->getLayoutBlockClass("account-login")?>">
     <div class="page-title">
@@ -14,7 +14,7 @@ $layout->set_layoutTarget('customer_account_index/customeraccountareas');
         <?php echo $this->getBlockHtml('formkey'); ?>
         <!-- Responsive Sections -->
         <section class="">
-            <div class="new-users <?=$layout->getLayoutBlockClass("new-users")?>">        
+            <div class="new-users <?=$layout->getLayoutBlockClass("new-users")?>">
 
                 <div class="content">
                     <h2><?php echo $this->__('New Customers') ?></h2>

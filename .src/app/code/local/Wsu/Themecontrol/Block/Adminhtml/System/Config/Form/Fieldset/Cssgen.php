@@ -1,12 +1,14 @@
 <?php
-class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Fieldset_Cssgen extends Mage_Adminhtml_Block_System_Config_Form_Field {
+class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Fieldset_Cssgen extends Mage_Adminhtml_Block_System_Config_Form_Field
+{
     /**
      * Generate CSS
      *
      * @param Varien_Data_Form_Element_Abstract $element
      * @return String
      */
-    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
+    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
+    {
         $elementOriginalData = $element->getOriginalData();
         if (isset($elementOriginalData['process'])) {
             $name = $elementOriginalData['process'];
@@ -20,12 +22,13 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Fieldset_Cssgen extend
             'store' => $store
         ));
         $buttonSuffix = '';
-        if ($store)
+        if ($store) {
             $buttonSuffix = ' for "' . Mage::app()->getStore($store)->getName() . '" store view';
-        elseif ($website)
+        } elseif ($website)
             $buttonSuffix = ' for "' . Mage::app()->getWebsite($website)->getName() . '" website';
-        else
+        else {
             $buttonSuffix = ' for Default Config';
+        }
         $html = $this->getLayout()->createBlock('adminhtml/widget_button')->setType('button')->setClass('generate-css')->setLabel('Refresh CSS' . $buttonSuffix)->setOnClick("setLocation('$url')")->toHtml();
         return $html;
     }

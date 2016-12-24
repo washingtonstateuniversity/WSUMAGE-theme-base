@@ -62,7 +62,7 @@ class Wsu_Themecontrol_Block_Wishlist_Links extends Mage_Page_Block_Template_Lin
     {
         if ($count > 1) {
             return $this->__('<span>My Wishlist (%d items)</span>', $count);
-        } else if ($count == 1) {
+        } elseif ($count == 1) {
             return $this->__('<span>My Wishlist (%d item)</span>', $count);
         } else {
             return $this->__('<span>My Wishlist</span>');

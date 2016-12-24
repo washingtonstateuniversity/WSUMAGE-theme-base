@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreFile
 class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
@@ -17,25 +17,25 @@ class Wsu_Themecontrol_Adminhtml_CssgenController extends Mage_Adminhtml_Control
         Mage::getSingleton('wsu_themecontrol/cssgen_generate')->generateCss('layout', $website, $store);
         $this->getResponse()->setRedirect($themecontrol_layout_url);
     }
-	
-	public function previewurlAction()
+
+    public function previewurlAction()
     {
         $website = Mage::app()->getRequest()->getParam('website');
         $store = Mage::app()->getRequest()->getParam('store');
-		
-		$url = "";
-		if("productview" === $_REQUEST["type"]){
-			$url = Mage::helper('wsu_themecontrol/layout')->_testProductPage($store);
-		}
-		if("productlist" === $_REQUEST["type"]){
-			$url = Mage::helper('wsu_themecontrol/layout')->_testCategoryPage($store);
-		}
-		if("customeraccountareas" === $_REQUEST["type"]){
-			$url = Mage::getUrl('customer/account/login');
-		}
-		
-		$this->getResponse()->setHeader('Content-type', 'application/json');
-        $this->getResponse()->setBody( '{"_url":"' . $url . '"} ');
+
+        $url = "";
+        if ("productview" === $_REQUEST["type"]) {
+            $url = Mage::helper('wsu_themecontrol/layout')->_testProductPage($store);
+        }
+        if ("productlist" === $_REQUEST["type"]) {
+            $url = Mage::helper('wsu_themecontrol/layout')->_testCategoryPage($store);
+        }
+        if ("customeraccountareas" === $_REQUEST["type"]) {
+            $url = Mage::getUrl('customer/account/login');
+        }
+
+        $this->getResponse()->setHeader('Content-type', 'application/json');
+        $this->getResponse()->setBody('{"_url":"' . $url . '"} ');
         return;
     }
 

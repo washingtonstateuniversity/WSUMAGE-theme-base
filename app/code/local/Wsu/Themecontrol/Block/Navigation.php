@@ -7,7 +7,6 @@
  * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
-
 {
     /**
      * Category instance
@@ -115,7 +114,7 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
      */
     public function getCurrentChildCategories()
     {
-        if (NULL === $this->_currentChildCategories) {
+        if (null === $this->_currentChildCategories) {
             $layer = Mage::getSingleton('catalog/layer');
             $category = $layer->getCurrentCategory();
             $this->_currentChildCategories = $category->getChildrenCategories();
@@ -189,7 +188,7 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
         }
 
         $position = array();
-        for($i = 0; $i <= $level; $i++) {
+        for ($i = 0; $i <= $level; $i++) {
             if (isset($this->_itemLevelPositions[$i])) {
                 $position[] = $this->_itemLevelPositions[$i];
             }
@@ -243,37 +242,23 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
         $classes = array();
         $classes[] = 'level' . $level;
         $classes[] = 'nav-' . $this->_getItemPosition($level);
-        if ($this->isCategoryActive($category)) {
-            $classes[] = 'active';
-        }
-        $linkClass = '';
-        if ($isOutermost && $outermostItemClass) {
-            $classes[] = $outermostItemClass;
-            $linkClass = ' class="'.$outermostItemClass.'"';
-        }
-        if ($isFirst) {
-            $classes[] = 'first';
-        }
-        if ($isLast) {
-            $classes[] = 'last';
-        }
-        if ($hasActiveChildren) {
-            $classes[] = 'parent';
-        }
+
+        $classes[] = $this->isCategoryActive($category) ? 'active' : '';
+
+        $classes[] = ($isOutermost && $outermostItemClass) ? $outermostItemClass : '';
+        $linkClass = ($isOutermost && $outermostItemClass) ? ' class="'.$outermostItemClass.'"' : '';
+
+        $classes[] = $isFirst ? 'first' : '';
+        $classes[] = $isLast ? 'last' : '';
+        $classes[] = $hasActiveChildren ? 'parent' : '';
 
         // prepare list item attributes
         $attributes = array();
-        if (count($classes) > 0) {
-            $attributes['class'] = implode(' ', $classes);
-        }
-        if ($hasActiveChildren && !$noEventAttributes) {
-             $attributes['onmouseover'] = 'toggleMenu(this,1)';
-             $attributes['onmouseout'] = 'toggleMenu(this,0)';
-        }
-        
-        
 
-        
+        $attributes['class'] = (count($classes) > 0) ? implode(' ', $classes) : '';
+        $attributes['onmouseover'] = ($hasActiveChildren && !$noEventAttributes) ? 'toggleMenu(this,1)' : '';
+        $attributes['onmouseout'] = ($hasActiveChildren && !$noEventAttributes) ? 'toggleMenu(this,0)' : '';
+
 
         // assemble list item with attributes
         $htmlLi = '<li';
@@ -282,12 +267,12 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
         }
 
         $htmlLi .= '>';
-        
+
         $overview_text = Mage::getResourceModel('catalog/category')->getAttributeRawValue($category->getId(), "overview_text", Mage::app()->getStore()->getId());
-        if( "" !== $overview_text && null !== $overview_text){
-            $textblocks = explode('"',$overview_text);
-            if( count($textblocks) > 1){
-                $overview_text = implode('\"',$textblocks);
+        if ("" !== $overview_text && null !== $overview_text) {
+            $textblocks = explode('"', $overview_text);
+            if (count($textblocks) > 1) {
+                $overview_text = implode('\"', $textblocks);
             }
         }
         $html[] = $htmlLi;
@@ -314,15 +299,11 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
             $j++;
         }
         if (!empty($htmlChildren)) {
-            if ($childrenWrapClass) {
-                $html[] = '<div class="' . $childrenWrapClass . '">';
-            }
+            $html[] = $childrenWrapClass ? '<div class="' . $childrenWrapClass . '">' : '';
             $html[] = '<ul class="level' . $level . '">';
             $html[] = $htmlChildren;
             $html[] = '</ul>';
-            if ($childrenWrapClass) {
-                $html[] = '</div>';
-            }
+            $html[] = $childrenWrapClass ? '</div>' : '';
         }
 
         $html[] = '</li>';
@@ -377,7 +358,8 @@ class Wsu_Themecontrol_Block_Navigation extends Mage_Catalog_Block_Navigation
      * @param Mage_Catalog_Model_Category $category
      * @return string
      */
-    public function drawOpenCategoryItem($category) {
+    public function drawOpenCategoryItem($category)
+    {
         $html = '';
         if (!$category->getIsActive()) {
             return $html;

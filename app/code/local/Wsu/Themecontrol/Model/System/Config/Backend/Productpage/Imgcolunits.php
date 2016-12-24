@@ -1,6 +1,8 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Backend_Productpage_ImgColUnits extends Mage_Core_Model_Config_Data {
-    public function _afterSave() {
+class Wsu_Themecontrol_Model_System_Config_Backend_Productpage_ImgColUnits extends Mage_Core_Model_Config_Data
+{
+    public function _afterSave()
+    {
         //Get the saved value
         $value    = $this->getValue();
         //Get the value from config (previous value)

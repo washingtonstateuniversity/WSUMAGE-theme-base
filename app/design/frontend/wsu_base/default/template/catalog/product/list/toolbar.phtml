@@ -1,10 +1,10 @@
 <?php
     $_helper    = $this->helper('catalog/output');
-	
-	
+
+
 	$layout = $this->helper('wsu_themecontrol/layout');
-	$layout->set_layoutTarget('catalog_category_view/productlist');
-	
+	$layout->setLayoutTarget('catalog_category_view/productlist');
+
     //$_category  = $this->getCurrentCategory();
 	$_category = Mage::registry('current_category');
     $_imgHtml   = '';
@@ -12,9 +12,9 @@
         $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" style="width:100%"/></p>';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
-    
+
     $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
-    
+
 ?>
 <div class="toolbox-top <?=$layout->getLayoutBlockClass("toolbox-top")?> cat_list_header_top">
 	<?=$this->getChildHtml('breadcrumbs') ?>
@@ -25,14 +25,14 @@
 							<?php echo $this->__($_order) ?>
 				<?php endif; ?>
 			<?php endforeach; ?></span>
-		<!--	
+		<!--
 <?php if($this->getCurrentDirection() == 'desc'): ?>
 				<a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Ascending Direction')) ?>"><img src="<?php echo $this->getSkinUrl('images/i_desc_arrow.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Ascending Direction')) ?>" class="v-middle" /></a>
 			<?php else: ?>
 				<a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Descending Direction')) ?>"><img src="<?php echo $this->getSkinUrl('images/i_asc_arrow.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Set Descending Direction')) ?>" class="v-middle" /></a>
 			<?php endif; ?>
 			-->
-			
+
 		</h4>
 		<div class="sorting_block">
 			<?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
@@ -55,7 +55,7 @@
 		<?php if($this->getLastPageNum()>1): ?>
 			<span class="paged_label"><?php echo $this->__('Showing %s through %s', $this->getFirstNum(), $this->getLastNum()) ?></span>
 		<?php endif; ?>
-		
+
 		<?php if ($_stateContent = $this->getChildHtml('state_renderers')): ?>
 			<div class="state_of_the_list"><?php echo $_stateContent;   ?></div>
 		<?php endif; ?>
@@ -69,8 +69,8 @@
 	<?php foreach ($_filters as $_filter):?>
 	<span class="inline-filter"><a href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Remove This Item') ?>"><span><?php echo $this->stripTags($_filter->getLabel()) ?></span></a></span>
 	<?php endforeach; ?>
-		
-			
+
+
     </div>
 	<div class="limiter <?=$layout->getLayoutBlockClass("limiter")?>">
 		<?php $pager=$this->getPagerHtml() ?>
@@ -102,7 +102,7 @@
 			<?php endforeach; ?>
 			<?php endif; ?>
 		</p>-->
-		<?php endif; ?>		
+		<?php endif; ?>
 	</div>
 	<?php endif; ?>
 </div>

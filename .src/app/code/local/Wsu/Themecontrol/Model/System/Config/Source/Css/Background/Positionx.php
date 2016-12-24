@@ -1,6 +1,8 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Positionx {
-    public function toOptionArray() {
+class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Positionx
+{
+    public function toOptionArray()
+    {
         return array(
             array(
                 'value' => 'left',

@@ -4,7 +4,7 @@ class Wsu_Themecontrol_Model_System_Config_Source_Layout_Flexwork_Contentalignme
     public function toOptionArray()
     {
         return [
-			['value' => '',         			'label' => 'select alignment of content'],
+            ['value' => '',                     'label' => 'select alignment of content'],
             ['value' => 'content-start',        'label' => 'flex-start'],
             ['value' => 'content-end',          'label' => 'flex-end'],
             ['value' => 'content-center',       'label' => 'center'],

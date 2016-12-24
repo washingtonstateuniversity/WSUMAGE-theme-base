@@ -56,11 +56,13 @@ class Wsu_Themecontrol_Helper_Labels extends Mage_Core_Helper_Abstract
             $toDate   = strtotime($toDate);
             $now      = strtotime(date("Y-m-d H:i:s"));
             if ($toDate) {
-                if ($fromDate <= $now && $now <= $toDate)
+                if ($fromDate <= $now && $now <= $toDate) {
                     return true;
+                }
             } else {
-                if ($fromDate <= $now)
+                if ($fromDate <= $now) {
                     return true;
+                }
             }
         }
         return false;

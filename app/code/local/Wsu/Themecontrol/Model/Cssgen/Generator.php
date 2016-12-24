@@ -1,9 +1,12 @@
 <?php
-class Wsu_Themecontrol_Model_Cssgen_Generator extends Mage_Core_Model_Abstract {
-    public function __construct() {
+class Wsu_Themecontrol_Model_Cssgen_Generator extends Mage_Core_Model_Abstract
+{
+    /*public function __construct()
+    {
         parent::__construct();
-    }
-    public function generateCss($section, $websiteCode, $storeCode){
+    }*/
+    public function generateCss($section, $websiteCode, $storeCode)
+    {
         if ($websiteCode) {
             if ($storeCode) {
                 $this->_generateStoreCss($section, $storeCode);
@@ -17,15 +20,19 @@ class Wsu_Themecontrol_Model_Cssgen_Generator extends Mage_Core_Model_Abstract {
             }
         }
     }
-    protected function _generateWebsiteCss($section, $websiteCode){//$x0b, $x0c) {
+    protected function _generateWebsiteCss($section, $websiteCode)
+    {
+//$x0b, $x0c) {
         $site = Mage::app()->getWebsite($websiteCode);
         foreach ($site->getStoreCodes() as $siteobj) {
             $this->_generateStoreCss($section, $siteobj);
         }
     }
-    protected function _generateStoreCss($section, $storeCode) {
-        if (!Mage::app()->getStore($storeCode)->getIsActive())
+    protected function _generateStoreCss($section, $storeCode)
+    {
+        if (!Mage::app()->getStore($storeCode)->getIsActive()) {
             return;
+        }
         $storeMarker = '_' . $storeCode;
         $fileName = $section . $storeMarker . ($section==="globaljs"?'.js':'.css');
         $filePath = Mage::helper('wsu_themecontrol/cssgen')->getGeneratedCssDir() . $fileName;
@@ -41,14 +48,13 @@ class Wsu_Themecontrol_Model_Cssgen_Generator extends Mage_Core_Model_Abstract {
             $cssFile->open(array(
                 'path' => Mage::helper('wsu_themecontrol/cssgen')->getGeneratedCssDir()
             ));
-			
+
             $cssFile->streamOpen($filePath, 'w+');
             $cssFile->streamLock(true);
             $cssFile->streamWrite($html);
             $cssFile->streamUnlock();
             $cssFile->streamClose();
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             Mage::getSingleton('adminhtml/session')->addError(Mage::helper('wsu_themecontrol')->__('Failed generating CSS file: %s in %s', $fileName, Mage::helper('wsu_themecontrol/cssgen')->getGeneratedCssDir()) . '<br/>Message: ' . $e->getMessage());
             Mage::logException($e);
         }

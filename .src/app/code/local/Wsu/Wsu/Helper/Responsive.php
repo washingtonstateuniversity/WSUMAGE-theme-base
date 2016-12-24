@@ -1,23 +1,26 @@
 <?php
-class Wsu_Wsu_Helper_Responsive extends Mage_Core_Helper_Abstract {
+class Wsu_Wsu_Helper_Responsive extends Mage_Core_Helper_Abstract
+{
     /**
      * Map maximum page width to maximum responsive layout breakpoint
      *
-     * @param int		Maximum page width
-     * @param string	Store code
+     * @param int       Maximum page width
+     * @param string    Store code
      * @return int
      */
-    public function mapWidthToBreakpoint($width, $storeCode = NULL) {
-        if ($width < 1280)
+    public function mapWidthToBreakpoint($width)//, $storeCode = null)
+    {
+        if ($width < 1280) {
             $maxBreak = 960;
-        elseif ($width < 1360)
+        } elseif ($width < 1360)
             $maxBreak = 1280;
         elseif ($width < 1440)
             $maxBreak = 1360;
         elseif ($width < 1680)
             $maxBreak = 1440;
-        else
+        else {
             $maxBreak = 1680;
+        }
         return $maxBreak;
     }
     /**
@@ -25,7 +28,8 @@ class Wsu_Wsu_Helper_Responsive extends Mage_Core_Helper_Abstract {
      *
      * @return array
      */
-    public function getArrayMapBreakpointToActualWidth() {
+    public function getArrayMapBreakpointToActualWidth()
+    {
         return array(
             "1680" => 1520,
             "1440" => 1380,

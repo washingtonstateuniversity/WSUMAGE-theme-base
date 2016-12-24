@@ -6,7 +6,7 @@ class Wsu_Themecontrol_Helper_Responsive extends Mage_Core_Helper_Abstract
      *
      * @return int
      */
-    public function getMaxWidth($storeCode = NULL)
+    public function getMaxWidth($storeCode = null)
     {
         $w = Mage::helper('wsu_themecontrol')->getLayoutCfg('responsive/max_width', $storeCode);
         if ('custom' === $w) {
@@ -21,7 +21,7 @@ class Wsu_Themecontrol_Helper_Responsive extends Mage_Core_Helper_Abstract
      *
      * @return int
      */
-    public function getCustomWidth($storeCode = NULL)
+    public function getCustomWidth($storeCode = null)
     {
         $w = Mage::helper('wsu_themecontrol')->getLayoutCfg('responsive/max_width', $storeCode);
         if ('custom' === $w) {
@@ -35,12 +35,12 @@ class Wsu_Themecontrol_Helper_Responsive extends Mage_Core_Helper_Abstract
      *
      * @return int
      */
-    public function getMaxBreakpoint($storeCode = NULL)
+    public function getMaxBreakpoint($storeCode = null)
     {
         //Get maximum page width
         $w = $this->getMaxWidth($storeCode);
         //Estimate max break point
-        if ($w < 1280){
+        if ($w < 1280) {
             $maxBreak = 960;
         } elseif ($w < 1360) {
             $maxBreak = 1280;

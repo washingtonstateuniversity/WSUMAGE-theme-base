@@ -1,9 +1,9 @@
 <?php
 class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Product_List
 {
-    protected $_collectionCount = NULL;
-    protected $_productCollectionId = NULL;
-    protected $_cacheKeyArray = NULL;
+    protected $_collectionCount = null;
+    protected $_productCollectionId = null;
+    protected $_cacheKeyArray = null;
     /**
      * Initialize block's cache
      */
@@ -24,7 +24,7 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      */
     public function getCacheKeyInfo()
     {
-        if (NULL === $this->_cacheKeyArray) {
+        if (null === $this->_cacheKeyArray) {
             $this->_cacheKeyArray = array(
                 'WSU_ITEMSLIDER',
                 Mage::app()->getStore()->getCurrentCurrency()->getCode(),
@@ -55,7 +55,7 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      */
     public function getUniqueCollectionId()
     {
-        if (NULL === $this->_productCollectionId) {
+        if (null === $this->_productCollectionId) {
             $this->_prepareCollectionAndCache();
         }
         return $this->_productCollectionId;
@@ -67,7 +67,7 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
      */
     public function getCollectionCount()
     {
-        if (NULL === $this->_collectionCount) {
+        if (null === $this->_collectionCount) {
             $this->_prepareCollectionAndCache();
         }
         return $this->_collectionCount;
@@ -95,6 +95,7 @@ class Wsu_Themecontrol_Block_Product_List_Featured extends Mage_Catalog_Block_Pr
         if (is_null($this->_productCollection)) {
             $categoryID = $this->getCategoryId();
             if ($categoryID) {
+                // @codingStandardsIgnoreLine
                 $category = new Mage_Catalog_Model_Category();
                 $category->load($categoryID);
                 $collection = $category->getProductCollection();

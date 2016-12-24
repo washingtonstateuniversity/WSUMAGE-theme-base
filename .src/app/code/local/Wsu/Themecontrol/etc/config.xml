@@ -108,7 +108,7 @@
 					<wsu_themecontrol>
 						<type>singleton</type>
 						<class>wsu_themecontrol/observer</class>
-						<method>hookTo_controllerActionPostdispatchAdminhtmlSystemConfigSave</method>
+						<method>hookToControllerActionPostdispatchAdminhtmlSystemConfigSave</method>
 					</wsu_themecontrol>
 				</observers>
 			</controller_action_postdispatch_adminhtml_system_config_save>
@@ -117,7 +117,7 @@
 					<wsu_themecontrol>
 						<type>singleton</type>
 						<class>wsu_themecontrol/observer</class>
-						<method>hookTo_storeEdit</method>
+						<method>hookToStoreEdit</method>
 					</wsu_themecontrol>
 				</observers>
 			</store_edit>

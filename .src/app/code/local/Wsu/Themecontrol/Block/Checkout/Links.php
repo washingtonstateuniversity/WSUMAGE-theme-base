@@ -6,7 +6,8 @@
  * @package     Mage_Checkout
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
+class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template
+{
     /**
      * Add shopping cart link to parent block
      *
@@ -16,7 +17,6 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
     {
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
-            
             $hide_empty = $this->getData('cart_hide_empty');
             $label = $this->getData('cart_label');
             $label_signle = $this->getData('cart_label_signle');
@@ -29,7 +29,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
 
             $count = $this->getSummaryQty() ? $this->getSummaryQty()
                 : $this->helper('checkout/cart')->getSummaryCount();
-            if($count > 0 || ($count==0 && $hide_empty==0)){
+            if ($count > 0 || ($count==0 && $hide_empty==0)) {
                 if ($count == 1) {
                     $text = $this->__($label_signle, $count);
                 } elseif ($count > 0) {
@@ -58,7 +58,6 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
 
         $parentBlock = $this->getParentBlock();
         if ($parentBlock && Mage::helper('core')->isModuleOutputEnabled('Mage_Checkout')) {
-            
             $hide_empty = $this->getData('checkout_hide_empty');
             $label = $this->getData('checkout_label');
             $show_price = $this->getData('checkout_total');
@@ -70,24 +69,29 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
             $count = $this->getSummaryQty() ? $this->getSummaryQty()
                 : $this->helper('checkout/cart')->getSummaryCount();
                 
-            if($count > 0 || ($count==0 && $hide_empty==0)){
+            if ($count > 0 || ($count==0 && $hide_empty==0)) {
                 $text = $label;
                 $html_text = $text;
-                if($show_price>0){
+                if ($show_price>0) {
                     $cartTotal = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
                     $price_point = Mage::getModel('directory/currency')->formatTxt(
-                                        $cartTotal,
-                                        array('display' => Zend_Currency::NO_SYMBOL)
-                                    );
-                    if( (int)$price_point != 0 ){
+                        $cartTotal,
+                        array('display' => Zend_Currency::NO_SYMBOL)
+                    );
+                    if ((int)$price_point != 0) {
                         $currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
-                        $currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
+                        $currency_symbol = Mage::app()->getLocale()->currency($currency_code)->getSymbol();
                         $html_text .='<span class="cart_total"> [<span class="currency_symbol">'.$currency_symbol.'</span>'.$price_point.']</span>';
                     }
                 }
                 $parentBlock->addLink(
-                    $html_text, 'checkout', $text,
-                    true, array('_secure' => true), 60, null,
+                    $html_text,
+                    'checkout',
+                    $text,
+                    true,
+                    array('_secure' => true),
+                    60,
+                    null,
                     'class="top-link-checkout"'
                 );//($label, $url='', $title='', $prepare=false, $urlParams=array(), $position=null, $liParams=null, $aParams=null, $beforeText='', $afterText='')
             }
@@ -100,7 +104,7 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
         $itemIds = array();
         $_productCollection = Mage::helper('catalog/product_compare')->getItemCollection();
 
-        if(count($_productCollection)>0){
+        if (count($_productCollection)>0) {
             foreach ($_productCollection as $item) {
                 $itemIds[] = $item->getId();
             }
@@ -119,8 +123,13 @@ class Wsu_Themecontrol_Block_Checkout_Links extends Mage_Core_Block_Template {
 
             $text = $label;
             $parentBlock->addLink(
-                $text, 'catalog/product_compare', $text,
-                true, $params, 60, null,
+                $text,
+                'catalog/product_compare',
+                $text,
+                true,
+                $params,
+                60,
+                null,
                 'class="top-link-compare"'
             );
 

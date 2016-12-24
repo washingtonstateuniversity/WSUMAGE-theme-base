@@ -1,6 +1,6 @@
 <?php
 	$layout = $this->helper('wsu_themecontrol/layout');
-	$layout->set_layoutTarget('customer_account_index/customeraccountareas');
+	$layout->setLayoutTarget('customer_account_index/customeraccountareas');
 ?>
 
 <div class="page-title">
@@ -9,7 +9,7 @@
 
 <?=$this->getMessagesBlock()->getGroupedHtml()?>
 <form action="<?=$this->getPostActionUrl();?>" method="post" id="login-form" class="account-login <?=$layout->getLayoutBlockClass("account-login")?>">
-    <div class="new-users <?=$layout->getLayoutBlockClass("new-users")?>">        
+    <div class="new-users <?=$layout->getLayoutBlockClass("new-users")?>">
 		<?=$this->getBlockHtml('formkey');?>
         <div class="content">
             <h2><?=$this->__('New Customers');?></h2>

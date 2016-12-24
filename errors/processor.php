@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreFile
 /**
  * Magento
  *
@@ -140,10 +140,9 @@ class Error_Processor
         $this->_reportDir = dirname($this->_errorDir) . '/var/report/';
 
         if (!empty($_SERVER['SCRIPT_NAME'])) {
-            if (in_array(basename($_SERVER['SCRIPT_NAME'],'.php'), array('404','503','report'))) {
+            if (in_array(basename($_SERVER['SCRIPT_NAME'], '.php'), array('404','503','report'))) {
                 $this->_scriptName = dirname($_SERVER['SCRIPT_NAME']);
-            }
-            else {
+            } else {
                 $this->_scriptName = $_SERVER['SCRIPT_NAME'];
             }
         }
@@ -196,7 +195,7 @@ class Error_Processor
         $this->reportAction = $this->_config->action;
         $this->_setReportUrl();
 
-        if($this->reportAction == 'email') {
+        if ($this->reportAction == 'email') {
             $this->showSendForm = true;
             $this->sendReport();
         }
@@ -249,7 +248,7 @@ class Error_Processor
     {
         $path = $this->_scriptName;
 
-        if($param && !$this->_root) {
+        if ($param && !$this->_root) {
             $path = dirname($path);
         }
 
@@ -264,39 +263,40 @@ class Error_Processor
      */
     protected function _getClientIp()
     {
-		$ip_keys = array(
-			'HTTP_CLIENT_IP',
-			'HTTP_X_FORWARDED_FOR',
-			'HTTP_X_FORWARDED',
-			'HTTP_X_CLUSTER_CLIENT_IP',
-			'HTTP_FORWARDED_FOR',
-			'HTTP_FORWARDED',
-			'REMOTE_ADDR'
-		);
-		foreach ($ip_keys as $key) {
-			if (array_key_exists($key, $_SERVER) === true) {
-				foreach (explode(',', $_SERVER[$key]) as $ip) {
-					// trim for safety measures
-					$ip = trim($ip);
-					// attempt to validate IP
-					if ($this->validate_ip($ip)) {
-						return $ip;
-					}
-				}
-			}
-		}
-		return isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'undefined';
+        $ip_keys = array(
+            'HTTP_CLIENT_IP',
+            'HTTP_X_FORWARDED_FOR',
+            'HTTP_X_FORWARDED',
+            'HTTP_X_CLUSTER_CLIENT_IP',
+            'HTTP_FORWARDED_FOR',
+            'HTTP_FORWARDED',
+            'REMOTE_ADDR'
+        );
+        foreach ($ip_keys as $key) {
+            if (array_key_exists($key, $_SERVER) === true) {
+                foreach (explode(',', $_SERVER[$key]) as $ip) {
+                    // trim for safety measures
+                    $ip = trim($ip);
+                    // attempt to validate IP
+                    if ($this->validateIp($ip)) {
+                        return $ip;
+                    }
+                }
+            }
+        }
+        return isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'undefined';
     }
-	/**
-	 * Ensures an ip address is both a valid IP and does not fall within
-	 * a private network range.
-	 */
-	public function validate_ip($ip) {
-		if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
-			return false;
-		}
-		return true;
-	}
+    /**
+     * Ensures an ip address is both a valid IP and does not fall within
+     * a private network range.
+     */
+    public function validateIp($ip)
+    {
+        if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+            return false;
+        }
+        return true;
+    }
     /**
      * Get index dir
      *
@@ -306,7 +306,7 @@ class Error_Processor
     {
         $documentRoot = '';
         if (!empty($_SERVER['DOCUMENT_ROOT'])) {
-            $documentRoot = rtrim($_SERVER['DOCUMENT_ROOT'],'/');
+            $documentRoot = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
         }
         return dirname($documentRoot . $this->_scriptName) . '/';
     }
@@ -467,8 +467,7 @@ class Error_Processor
 
         if (!isset($reportData['url'])) {
             $this->reportData['url'] = '';
-        }
-        else {
+        } else {
             $this->reportData['url'] = $this->getHostUrl() . $reportData['url'];
         }
 
@@ -542,7 +541,6 @@ class Error_Processor
 
         if (isset($_POST['submit'])) {
             if ($this->_validate()) {
-
                 $msg  = "URL: {$this->reportData['url']}\n"
                     . "IP Address: {$this->_getClientIp()}\n"
                     . "First Name: {$this->postData['firstName']}\n"
@@ -581,7 +579,7 @@ class Error_Processor
         }
     }
 
-	
+
     /**
      * Validate submitted post data
      *
@@ -589,8 +587,10 @@ class Error_Processor
      */
     protected function _validate()
     {
-        $email = preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/',
-            $this->postData['email']);
+        $email = preg_match(
+            '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/',
+            $this->postData['email']
+        );
         return ($this->postData['firstName'] && $this->postData['lastName'] && $email);
     }
 

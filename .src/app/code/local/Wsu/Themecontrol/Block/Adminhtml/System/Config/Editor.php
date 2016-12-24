@@ -1,21 +1,23 @@
 <?php
-class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminhtml_Block_System_Config_Form_Field implements Varien_Data_Form_Element_Renderer_Interface{
-    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element){
+class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminhtml_Block_System_Config_Form_Field implements Varien_Data_Form_Element_Renderer_Interface
+{
+    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
+    {
        // $element->setWysiwyg(true);
        // $element->setConfig(Mage::getSingleton('cms/wysiwyg_config')->getConfig());
-	   
-	   
+       
+       
 /**/
 
-		$html = '
-		<style>
-		#wsu_themecontrol_override_editor_override,
-		#wsu_themecontrol_globaljs_editor_globaljs{
-			width:100%;
-			min-height:500px;
-			height:auto;
-		}
-		</style>
+        $html = '
+        <style>
+        #wsu_themecontrol_override_editor_override,
+        #wsu_themecontrol_globaljs_editor_globaljs{
+            width:100%;
+            min-height:500px;
+            height:auto;
+        }
+        </style>
         <script src="/js/wsu/codemirror/lib/codemirror.js"></script>
         <script src="/js/wsu/codemirror/mode/htmlmixed/htmlmixed.js"></script>
         <script src="/js/wsu/codemirror/mode/css/css.js"></script>
@@ -37,7 +39,7 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Editor extends Mage_Adminht
         <link rel="stylesheet" href="/js/wsu/codemirror/theme/lesser-dark.css">
         <link rel="stylesheet" href="/js/wsu/codemirror/addon/lint/lint.css">
         <link rel="stylesheet" href="/js/wsu/codemirror/addon/fold/foldgutter.css" /><!---->
-		<script>
+        <script>
         (function($){
             var codeblockID = null;
             var mode = "htmlmixed";

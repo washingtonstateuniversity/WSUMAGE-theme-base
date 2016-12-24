@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 ?>
-<?php 
+<?php
 $layout = $this->helper('wsu_themecontrol/layout');
-$layout->set_layoutTarget('catalog_product_view/customeraccountareas');		
+$layout->setLayoutTarget('catalog_product_view/customeraccountareas');
 ?>
 <div class="dashboard <?=$layout->getLayoutBlockClass("my-account-dashboard")?>">
     <div class="page-title">
@@ -24,7 +24,7 @@ $layout->set_layoutTarget('catalog_product_view/customeraccountareas');
             </div>
         </div>
 
-		<div class="address-blocks <?=$layout->getLayoutBlockClass("account-info-address-blocks")?>">		
+		<div class="address-blocks <?=$layout->getLayoutBlockClass("account-info-address-blocks")?>">
 			<?=$this->getChildHtml('address') ?>
 			<?=$this->getChildHtml('info1') ?>
 			<?=$this->getChildHtml('info2') ?>

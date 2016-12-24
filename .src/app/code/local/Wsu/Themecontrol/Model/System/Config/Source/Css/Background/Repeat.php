@@ -1,6 +1,8 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Repeat {
-    public function toOptionArray() {
+class Wsu_Themecontrol_Model_System_Config_Source_Css_Background_Repeat
+{
+    public function toOptionArray()
+    {
         return array(
             array(
                 'value' => 'no-repeat',

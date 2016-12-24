@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreFile
 class Wsu_Themecontrol_Adminhtml_ImportController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()

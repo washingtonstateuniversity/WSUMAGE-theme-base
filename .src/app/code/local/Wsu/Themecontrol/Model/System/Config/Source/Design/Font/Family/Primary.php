@@ -1,6 +1,8 @@
 <?php
-class Wsu_Themecontrol_Model_System_Config_Source_Design_Font_Family_Primary {
-    public function toOptionArray() {
+class Wsu_Themecontrol_Model_System_Config_Source_Design_Font_Family_Primary
+{
+    public function toOptionArray()
+    {
         return array(
             array(
                 'value' => 'Rokkitt',

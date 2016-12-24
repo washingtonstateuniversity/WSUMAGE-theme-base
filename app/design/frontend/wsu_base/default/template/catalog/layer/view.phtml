@@ -1,6 +1,6 @@
 <?php
 	$layout = $this->helper('wsu_themecontrol/layout');
-	$layout->set_layoutTarget('catalog_category_view/productlist');
+	$layout->setLayoutTarget('catalog_category_view/productlist');
 ?>
 <?php if($this->canShowBlock()): ?>
 <?php  $filters = $this->getLayer()->getState()->getFilters(); ?>
@@ -9,7 +9,7 @@
         <?php echo $this->__('Filtering') ?> <?php if (!$filters && count($filters)>0): ?> <span class="filters_applied">(<?=count($filters)?> applied)</span><?php endif; ?>
     </h4>
     <div class="filtering_block">
-        
+
         <?php if ($this->getLayer()->getState()->getFilters()): ?>
 			<?php echo $this->getStateHtml() ?>
             <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>

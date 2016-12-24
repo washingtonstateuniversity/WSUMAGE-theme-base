@@ -37,8 +37,8 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '
-            <li><a class="link-wishlist feature feature-icon-hover first v-centered-content" 
-                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
+            <li><a class="link-wishlist feature feature-icon-hover first v-centered-content"
+                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '"
                 title="' . $this->__('Add to Wishlist') . '">
                 <span class="v-center">
                     <span class="icon i-wishlist-bw"></span>
@@ -49,7 +49,7 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         if ($_compareUrl) {
             $html .= '
             <li><a class="link-compare feature feature-icon-hover first v-centered-content"
-                href="' . $_compareUrl . '" 
+                href="' . $_compareUrl . '"
                 title="' . $this->__('Add to Compare') . '">
                 <span class="v-center">
                     <span class="icon i-compare-bw"></span>
@@ -71,12 +71,13 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
      * @param additional CSS class name
      * @return string
      */
-    public function getCategoryAddtoLinksComplex_2($_product, $_compareUrl, $wrapperClasses = '') {
+    public function getCategoryAddtoLinksComplex2($_product, $_compareUrl, $wrapperClasses = '')
+    {
         $html = '';
         if (Mage::helper('wishlist')->isAllow()) {
             $html .= '
-            <li><a class="link-wishlist" 
-                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '" 
+            <li><a class="link-wishlist"
+                href="' . Mage::helper('wishlist')->getAddUrl($_product) . '"
                 title="' . $this->__('Add to Wishlist') . '">
                     <span class="icon icon-hover i-wishlist-bw"></span>
             </a></li>';
@@ -84,7 +85,7 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         if ($_compareUrl) {
             $html .= '
             <li><a class="link-compare"
-                href="' . $_compareUrl . '" 
+                href="' . $_compareUrl . '"
                 title="' . $this->__('Add to Compare') . '">
                     <span class="icon icon-hover i-compare-bw"></span>
             </a></li>';
@@ -95,17 +96,17 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         }
         return $html;
     }
-    
+
     /**
      * Set up classes for a block called by name
      */
-    public function getBlockClasses($block)
+    public function getBlockClasses()//$block)
     {
-        //@todo
+        //@ to do
         //set options to make settings
         //add logic to build
-        
-        
+
+
         $theme = Mage::helper('wsu_themecontrol');
         //$theme->getCfgLayout('content_area/row_type');
         $pad_main = " ".$theme->getCfgLayout('content_area/padding')." ";
@@ -116,5 +117,4 @@ class Wsu_Themecontrol_Helper_Template extends Mage_Core_Helper_Abstract
         $classes="row  ".$pad_main;
         return trim($classes);
     }
-
 }

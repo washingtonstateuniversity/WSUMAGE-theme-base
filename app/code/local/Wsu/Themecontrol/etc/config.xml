@@ -79,7 +79,7 @@
         <page>
             <remove_layouts>
                 <layouts><!--empty,two_columns_right,three_columns--></layouts>
-            </remove_layouts>	
+            </remove_layouts>
 			<layouts>
 				<page_halves module="page" translate="label">
 					<label>Halves Page Layout</label>
@@ -92,7 +92,7 @@
 					<layout_handle>page_dyno</layout_handle>
 				</page_dyno>
 			</layouts>
-        </page>   
+        </page>
     </global>
 	<adminhtml>
 		<layout>
@@ -102,13 +102,13 @@
                 </wsu_themecontrol>
             </updates>
         </layout>
-		<events>            	
+		<events>
 			<controller_action_postdispatch_adminhtml_system_config_save>
 				<observers>
 					<wsu_themecontrol>
 						<type>singleton</type>
 						<class>wsu_themecontrol/observer</class>
-						<method>hookTo_controllerActionPostdispatchAdminhtmlSystemConfigSave</method>
+						<method>hookToControllerActionPostdispatchAdminhtmlSystemConfigSave</method>
 					</wsu_themecontrol>
 				</observers>
 			</controller_action_postdispatch_adminhtml_system_config_save>
@@ -117,7 +117,7 @@
 					<wsu_themecontrol>
 						<type>singleton</type>
 						<class>wsu_themecontrol/observer</class>
-						<method>hookTo_storeEdit</method>
+						<method>hookToStoreEdit</method>
 					</wsu_themecontrol>
 				</observers>
 			</store_edit>
@@ -315,7 +315,7 @@
                 <bottom_pager_use_top_anchor>1</bottom_pager_use_top_anchor>
                 <pager_show_numbering>1</pager_show_numbering>
             </category>
-            
+
 			<product_page>
 				<addto_icon_bg_color>#aaa</addto_icon_bg_color>
 				<addto_icon_hover_bg_color>#333</addto_icon_hover_bg_color>
@@ -392,12 +392,12 @@
 			</spine>
 			<layout_default>
 				<used_root>1</used_root>
-				<row_type_root>single</row_type_root>	
+				<row_type_root>single</row_type_root>
 				<padding_root>pad</padding_root>
 				<padding_flanks_root>narrow</padding_flanks_root>
 				<padding_ends_root>short</padding_ends_root>
 				<used_footer>1</used_footer>
-				<row_type_footer>single</row_type_footer>	
+				<row_type_footer>single</row_type_footer>
 				<padding_footer>pad</padding_footer>
 				<padding_flanks_footer>narrow</padding_flanks_footer>
 				<padding_ends_footer>short</padding_ends_footer>

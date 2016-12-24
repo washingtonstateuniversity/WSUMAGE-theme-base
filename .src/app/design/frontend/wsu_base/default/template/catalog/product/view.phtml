@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $_helper = $this->helper('catalog/output');
 
@@ -6,7 +6,7 @@ $theme = $this->helper('wsu_themecontrol');
 $template = $this->helper('wsu_themecontrol/template');
 $layout = $this->helper('wsu_themecontrol/layout');
 
-$layout->set_layoutTarget('catalog_product_view/productview');
+$layout->setLayoutTarget('catalog_product_view/productview');
 ?>
 
 <?php
@@ -24,7 +24,7 @@ $layout->set_layoutTarget('catalog_product_view/productview');
 <div class="product-view">
 
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?> class="product-essential <?=$layout->getLayoutBlockClass("product-essential")?> flex-row column-at-480 full-width grid-part">
-        
+
         <div class="product-media product_info_media media-block <?=$layout->getLayoutBlockClass("product_info_media")?> items-start                   fifths-2 grid-part order-2 full-width-at-480 flex-row column-at-480">
             <?php echo $this->getChildHtml('media') ?>
         </div>
@@ -43,15 +43,15 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                 </div>
             <?php endif; ?>
 
-            <?php 
+            <?php
                 $review = $this->getReviewsSummaryHtml($_product, false, true);
                 if( "" !== $review){
 					$class = $layout->getLayoutBlockClass("review_area");
 				?>
                     <div id='review_area' class='review_area <?=$class?>'><?=$review?></div>
             <?php } ?>
-            
-            <?php 
+
+            <?php
                 $alert_urls = $this->getChildHtml('alert_urls');
                 if( "" !== $alert_urls){
 					$class = $layout->getLayoutBlockClass("alert_urls_area");
@@ -59,7 +59,7 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                     <div id='alert_urls_area' class='alert_urls_area <?=$class?>'><?=$alert_urls?></div>
             <?php } ?>
 
-            <?php 
+            <?php
                 $product_type_data = $this->getChildHtml('product_type_data');
                 if( "" !== $product_type_data){
 					$class = $layout->getLayoutBlockClass("product_type_data_area");
@@ -67,7 +67,7 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                     <div id='product_type_data_area' class='product_type_data_area <?=$class?>'><?=$product_type_data?></div>
             <?php } ?>
 
-            <?php 
+            <?php
                 $tier_price = $this->getTierPriceHtml();
                 if( "" !== $tier_price){
 					$class = $layout->getLayoutBlockClass("tier_price_area");
@@ -75,7 +75,7 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                     <div id='tier_price_area' class='tier_price_area <?=$class?>'><?=$tier_price?></div>
             <?php } ?>
 
-            <?php 
+            <?php
                 $extrahint = $this->getChildHtml('extrahint');
                 if( "" !== $extrahint){
 					$class = $layout->getLayoutBlockClass("extrahint_area");
@@ -106,8 +106,8 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                     <div class="std"><?=$short?></div>
                 </div>
             <?php endif;?>
- 
-             <?php 
+
+             <?php
             $full = trim($_product->getDescription());
             if ($full && $full != $short):?>
             <?php
@@ -118,19 +118,19 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                     <div class="std"><?=$full?></div>
                 </div>
             <?php endif;?>
- 
- 
-            
-            <?php 
+
+
+
+            <?php
                 $other = $this->getChildHtml('other');
                 if( "" !== $other){
                     $class = $layout->getLayoutBlockClass("other_area");
                     echo "<div id='other_area' class='other_area ".$class."'>".$other."</div>";
                 }
             ?>
-            
+
             <?php if ($_product->isSaleable() && $this->hasOptions()):
-            
+
                 $container1 = $this->getChildChildHtml('container1', '', true, true);
                 if( "" !== $container1){
                     $class = $layout->getLayoutBlockClass("container1_area");
@@ -138,28 +138,28 @@ $layout->set_layoutTarget('catalog_product_view/productview');
                 }
                 endif;
             ?>
-            
+
 
 
         </div>
 
 
 
-        
+
         <?php if ($_product->isSaleable() && $this->hasOptions()):?>
             <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
         <?php endif;?>
     </form>
-    
+
     <?php /*
 		//@todo
-		Look to the js controller script for the 
+		Look to the js controller script for the
 		var productAddToCartForm = new VarienForm('product_addtocart_form');
 		it shouldbn't be in line.
 	*/
 
-	
-	
+
+
 	 ?><script type="text/javascript">
     //<![CDATA[
         var productAddToCartForm = new VarienForm('product_addtocart_form');
@@ -211,7 +211,7 @@ $layout->set_layoutTarget('catalog_product_view/productview');
         }.bind(productAddToCartForm);
     //]]>
     </script>
-	
+
 
 
     <div class="product-collateral">

@@ -1,12 +1,14 @@
 <?php
-class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Tex extends Mage_Adminhtml_Block_System_Config_Form_Field {
+class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Tex extends Mage_Adminhtml_Block_System_Config_Form_Field
+{
     /**
      * Add texture preview
      *
      * @param Varien_Data_Form_Element_Abstract $element
      * @return String
      */
-    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element) {
+    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
+    {
         $html        = $element->getElementHtml(); //Default HTML
         $jsPath      = $this->getJsUrl('wsu/jquery/jquery-1.7.2.min.js');
         //$texPath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/wsu/wsu_themecontrol/patterns/default/';
@@ -18,29 +20,29 @@ class Wsu_Themecontrol_Block_Adminhtml_System_Config_Form_Field_Tex extends Mage
         if (Mage::registry('jqueryLoaded') == false) {
             $html .= '
 			<script type="text/javascript" src="' . $jsPath . '"></script>
-			<script type="text/javascript">jQuery.noConflict();</script>
+            <script type="text/javascript">jQuery.noConflict();</script>
 			';
             Mage::register('jqueryLoaded', 1);
         }
         $html .= '
 		<br/><div id="' . $previewId . '" style="width:280px; height:160px; margin:10px 0; background-color:transparent;"></div>
-		<script type="text/javascript">
-			jQuery(function($){
+        <script type="text/javascript">
+            jQuery(function($){
 				var tex		= $("#' . $element->getHtmlId() . '");
 				var bgc		= $("#' . $bgcPickerId . '");
 				var preview	= $("#' . $previewId . '");
-				
-				preview.css("background-color", bgc.attr("value"));
-				
-				tex.change(function() {
-					preview.css({
-						"background-color": bgc.css("background-color"),
+                
+                preview.css("background-color", bgc.attr("value"));
+                
+                tex.change(function() {
+                    preview.css({
+                        "background-color": bgc.css("background-color"),
 						"background-image": "url(' . $texPath . '" + tex.val() + ".png)"
-					});
-				})
-				.change();
-			});
-		</script>
+                    });
+                })
+                .change();
+            });
+        </script>
 		';
         return $html;
     }

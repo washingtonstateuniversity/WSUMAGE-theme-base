@@ -2,7 +2,8 @@
 /**
  * Call actions after configuration is saved
  */
-class Wsu_Themecontrol_Model_Config extends Mage_Page_Model_Config {
+class Wsu_Themecontrol_Model_Config extends Mage_Page_Model_Config
+{
 
     const XML_PATH_PAGE_REMOVE_LAYOUTS = 'global/page/remove_layouts';
 
@@ -11,17 +12,19 @@ class Wsu_Themecontrol_Model_Config extends Mage_Page_Model_Config {
      *
      * @return Labor_Templates_Model_Config
      */
-    protected function _initPageLayouts(){
+    protected function _initPageLayouts()
+    {
         parent::_initPageLayouts();
         return $this->_removePageLayouts(self::XML_PATH_PAGE_REMOVE_LAYOUTS);
     }
 
     /**
      * Removes page layouts found in the remove_layouts XML directive
-     * 
-     * @return Labor_Templates_Model_Config 
+     *
+     * @return Labor_Templates_Model_Config
      */
-    protected function _removePageLayouts($xmlPath){
+    protected function _removePageLayouts($xmlPath)
+    {
         if (!Mage::getConfig()->getNode($xmlPath) || !is_array($this->_pageLayouts)) {
             return $this;
         }
@@ -30,9 +33,4 @@ class Wsu_Themecontrol_Model_Config extends Mage_Page_Model_Config {
         }
         return $this;
     }
-	
-	
 }
-
-
-?>
