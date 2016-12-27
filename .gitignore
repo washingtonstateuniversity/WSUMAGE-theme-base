@@ -5,4 +5,5 @@
 **/skin/adminhtml/default/wsu/node_modules/**/*
 **/node_modules/**/*
 **/vendor/**/*
+**/.build/**/*
 debug.log
