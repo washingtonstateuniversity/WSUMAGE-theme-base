@@ -19,6 +19,14 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
     "grunt-sync": "^0.6.2",
+
+
+		"grunt-contrib-jshint": "^1.1.0",
+		"grunt-contrib-uglify": "~2.0.0",
+		"grunt-autoprefixer":"^3.0.4",
+
+
+
     "install": "^0.8.1",
     "npm": "^3.10.2"
   }

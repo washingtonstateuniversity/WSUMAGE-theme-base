@@ -1,4 +1,8 @@
 module.exports = function(grunt) {
+
+    var skin_path = "./skin/frontend/wsu_base/default/";
+    var admin_skin_path = "./skin/adminhtml/default/default/";
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -13,46 +17,90 @@ module.exports = function(grunt) {
         },*/
         watch: {
             files: [ "./app/**/*.*","./js/**/*.*","./errors/**/*.*","./skin/**/*.*","./media/**/*.*" ],
-            tasks: [/*"concat", "sass", "postcss", "cssmin", "copy", "csslint",*/  "clean", "phpcbf", "phpcs", "sync"]
+            tasks: [/*"concat", "sass", "postcss", "cssmin", "copy", "csslint",*/
+            "clean", "sass", "concat", "jshint", "autoprefixer", "cssmin", "uglify", "copy", "phpcbf", "phpcs", "sync"]
         },
+
 
         sass: {
             options: {
                 sourceMap: true
             },
-            style: {
+            dev: {
                 files: [
-                    { src: "css/scss/style.scss", dest: "build/_post_sass/style.css" },
+                    { src: skin_path + "src/scss/theme.scss", dest: "./.build/_pre_sass/theme.css" },
+                    { src: skin_path + "src/scss/admin_preview.scss", dest: "./.build/_pre_sass/admin_preview.css" },
                 ]
             },
         },
-        postcss: {
-            options: {
-                map: false,//true,
-                diff: false,
-                processors: [
-                    require( "autoprefixer" )( {
-                        browsers: [ "> 1%", "ie 8-11", "Firefox ESR" ]
-                    } )
+        copy:{
+            maps: {
+                files: [
+                    { expand: true, src: ["./.build/_pre_sass/theme.css.map"], dest: skin_path, flatten: true, },
                 ]
             },
-            dist: {
-                src: "build/_post_sass/style.css",
-                dest: "build/_precss/style.css"
+            preview_maps: {
+                files: [
+                    { expand: true, src: ["./.build/_pre_sass/admin_preview.css.map"], dest: admin_skin_path+"wsu/css/", flatten: true },
+                    { expand: true, src: ["./.build/wsu/css/admin_preview.css"], dest: admin_skin_path+"wsu/css/", flatten: true },
+                    { expand: true, src: ["./.build/theme.css"], dest: skin_path, flatten: true },
+                ]
             }
+        },
+
+        concat: {
+            front_styles: {
+                src: [
+                    "./.build/_pre_sass/theme.css"
+                ],
+                dest: "./.build/css/theme.css",
+            },
+            admin_preview_styles: {
+                src: [
+                    "./.build/_pre_sass/admin_preview.css"
+                ],
+                dest: "./.build/css/admin_preview.css",
+            },
+        },
+        uglify: {
+            options: {
+                banner: "/*! <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today('yyyy-mm-dd') %> */\n" +
+                    "/*   */\n"
+            },
+            preview_build: {
+                src: admin_skin_path+"wsu/js/preview.js",
+                dest: admin_skin_path+"wsu/js/_preview.js"
+            },
+            /*admin_build: {
+                src: "build/js/admin.maps.wsu.edu.js",
+                dest: "dis/js/admin.maps.wsu.edu.js"
+            }*/
+        },
+        autoprefixer: {
+            options: {
+                browsers: ["> 1%", "last 2 versions", "Firefox ESR", "Opera 12.1", "ie 8", "ie 9","ie 10"]
+            },
+            front_styles: {
+                src: "./.build/css/theme.css",
+                dest: "./.build/_precss/theme.css"
+            },
+            admin_preview_styles: {
+                src: "./.build/css/admin_preview.css",
+                dest: "./.build/_precss/admin_preview.css"
+            },
         },
         cssmin: {
             options: {
                 sourceMap: true,
             },
-            style: {
+            combine: {
                 files: {
                     // Hmmm, in reverse order
-                    "style.css": ["build/_precss/style.css"],
+                    "./.build/theme.css": ["./.build/_precss/theme.css"],
+                    "./.build/wsu/css/admin_preview.css": ["./.build/_precss/admin_preview.css"],
                 }
-            },
+            }
         },
-
         sync:{
             /*maps: {
                 files: [
@@ -102,7 +150,44 @@ module.exports = function(grunt) {
                 }
             }
         },
-
+        jshint: {
+            files: [
+                    //"src/js/zeroclipboard/ZeroClipboard.js",
+                ],
+            options: {
+                // options here to override JSHint defaults
+                boss: true,
+                curly: true,
+                eqeqeq: true,
+                eqnull: true,
+                expr: true,
+                immed: true,
+                noarg: true,
+                //onevar: true,
+                //quotmark: "double",
+                smarttabs: true,
+                //trailing: true,
+                undef: true,
+                unused: true,
+                globals: {
+                    jQuery: true,
+                    $: true,
+                    console: true,
+                    module: true,
+                    document: true,
+                    window:true,
+                    define:true,
+                    alert:true,
+                    setTimeout:true,
+                    ZeroClipboard:true,
+                    MutationObserver:true,
+                    google:true,
+                    tinyMCE:true,
+                    tinymce:true,
+                    addthis:true,
+                }
+            }
+        },
         clean: {
             options: {
                 force: true
@@ -156,6 +241,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( "grunt-contrib-watch" );
     grunt.loadNpmTasks( "grunt-phpcs" );
     grunt.loadNpmTasks( 'grunt-phpcbf' );
+
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.loadNpmTasks("grunt-contrib-cssmin");
+    grunt.loadNpmTasks("grunt-contrib-concat");
+    grunt.loadNpmTasks("grunt-autoprefixer");
+
+
+
+
 
     // Default task(s).
     grunt.registerTask("default", [/*"concat",*/ "sass", "postcss", "cssmin", "copy", "csslint", "clean", "phpcbf", "phpcs"]);

@@ -26,26 +26,26 @@
 					"item_alignment":""
 				}
 			};
-	
+
 		EP.cleanTarget =  function( target, callback){
 			//console.log("** cleaning target **");
 			var clearOf = ["grid-", "justify-", "flex-", "order-", "full-width-",
 						   "thirds-", "fours-", "fifths-", "sixths-", "eigths-",
 						   "ninths-", "tenths-", "twelfths-", "wrap", "space-",
 						   "center", "column-", "row-", "hide-below-", "full-width"];
-						   
+
 			$.each(clearOf,function(i,val){
 				target.stripClass(val,false);
 			});
 			callback();
-			
+
 			/*$.when.apply($, $.map(clearOf, function(idx,val) {
 				target.stripClass(val,false);
 			})).done(function() {
 				callback();
 			});*/
 		};
-		
+
 		EP._layoutItOut = function(root_obj,_data){
 			var iFrame = EP.iframe.contents();
 			$.each(_data,function(idx,val){
@@ -74,14 +74,14 @@
 								target.addClass(_classes);
 							}
 						}
-	
+
 					});
 				}
 				if("undefined" !== typeof val.children){
 					EP._layoutItOut(root_obj,val.children);
 				}
 			});
-			
+
 			$("#"+EP.type+"_options li").off( "mouseenter mouseleave" );
 			$("#"+EP.type+"_options li").hover(function(){
 				var _class = $(this).data("block");
@@ -90,7 +90,7 @@
 				iFrame.find(".preview_hovering").removeClass("preview_hovering");
 			});
 		};
-		
+
 		EP.set = function (path, value) {
 			var schema = EP._layout[EP.type];  // a moving reference to internal objects within obj
 			var pList = path.split(".");
@@ -102,11 +102,11 @@
 				}
 				schema = schema[elem];
 			}
-		
+
 			schema[pList[len-1]] = value;
 		};
-		
-		
+
+
 		EP._updateLayout = function (){//_data){
 			$("#"+EP.type+"_options li").each(function(){//idx,val){
 				$(this).children("dl").find("dd").each(function(){//subidx,val){
@@ -116,17 +116,17 @@
 				});
 			});
 			EP._layoutItOut( $("." + EP.html_id), EP._layout[EP.type] );
-			$("#"+ EP.html_id).val( JSON.stringify( EP._layout[EP.type] ) );					
+			$("#"+ EP.html_id).val( JSON.stringify( EP._layout[EP.type] ) );
 		};
-		
-		
+
+
 		EP._createInputForm = function( _data, path ){
-			
+
 			//console.log( "-------- defaults " );
 			//	console.log( settings_default.child );
 			//	console.log( settings_default.parent );
 			//console.log( "-------- defaults " );
-			
+
 			path = path || "";
 			var html = "<ul id='"+EP.type+"_options' class='editor_option_list'>";
 			//console.log( _data );
@@ -141,7 +141,7 @@
 								parent = "parent";
 							}
 							html += "<dl class='"+parent+"'>";
-							
+
 							//console.log( "---->> before " );
 							//console.log( val.settings );
 							if( "customeraccountareas" !== idx && "product_info" !== idx && "productview" !== idx && "productlist" !== idx ){
@@ -153,9 +153,9 @@
 								}
 							}
 							//console.log( _settings );
-							
+
 							//console.log( "----<< after " );
-							
+
 							$.each( _settings, function( setting_idx, setting ){
 								html += "<dt>"+setting_idx+"</dt>";
 								var currentpath = (path !== "" ? path+"." : "" ) + idx + ".settings." + setting_idx;
@@ -163,7 +163,7 @@
 								$(".type_" + setting_idx).find(":selected").attr("selected",false);
 								$(".type_" + setting_idx).find(":selected").removeAttr("selected");
 								$(".type_" + setting_idx).find("[value='" + setting + "']").attr("selected",true);
-								
+
 								var input = $(".type_"+setting_idx).html();
 								html += "<dd data-classes='" + setting_idx + "' data-path='" + currentpath + "'>" + input + "</dd>";
 							});
@@ -175,13 +175,13 @@
 					}
 				html += "</li>";
 			});
-			html += "</ul>"; 
+			html += "</ul>";
 			return html;
 		};
 		EP.ajaxurl = null;
-		
-		
-		
+
+
+
 		EP.setupIframe = function(iframe){
 			var ary = EP.html_id.split("_");
 			ary.pop();
@@ -190,9 +190,9 @@
 				iframe.off("load").on("load", function(){
 					iframe.contents().find("head")
 						.append("<meta name='viewport' content='width=device-width, initial-scale=0.5'/>");
-						
+
 					EP._layoutItOut( $("." + EP.html_id), EP._layout[EP.type]);
-		
+
 					iframe.contents().find("head")
 						.append($("<style type='text/css'> .preview_sortable{ border:1px dashed rgba(0, 0, 0, 0); }  .preview_hovering{ border:1px dashed red; } </style>"));
 					iframe.siblings(".refresh_iframe").removeClass("loading");
@@ -202,7 +202,7 @@
 				});
 				iframe.siblings(".refresh_iframe").addClass("loading");
 				if( "" === EP.iframe.attr("src") ){
-					EP.iframe.attr("src",EP.iframe.data("src"));	
+					EP.iframe.attr("src",EP.iframe.data("src"));
 				}
 				EP.iframe.removeClass("iframeClose");
 			}else{
@@ -211,31 +211,31 @@
 				EP.iframe.addClass("iframeClose");
 			}
 		};
-		
+
 		EP.setup = function( html_id ){
-			
+
 			EP.html_id = html_id;
 			EP.iframe = $("iframe#layoutframeworkPreview_" + EP.html_id);
-	
+
 			$(document).ready(function(){
 				var _valField = $("#"+ EP.html_id);
 				_valField.closest("td").css("width","85%");
 				_valField.closest("tr").find("td.label").addClass("editor_options");
 				_valField.hide();
-	
+
 				if( "" !== _valField.val() ){
 					try {
 						var str	= _valField.val();
-						var obj = JSON.parse(str); // this is how you parse a string into JSON 
+						var obj = JSON.parse(str); // this is how you parse a string into JSON
 						EP._layout[EP.type] = obj;
 					} catch (ex) {
 						console.error(ex);
 					}
 				}
 				$("#row_"+ EP.html_id + " td.label").html( EP._createInputForm( EP._layout[EP.type], "" ) );
-				
+
 				var _opNode = $("#"+EP.type+"_options b");
-				
+
 				_opNode.siblings("span").hide();
 				_opNode.siblings("dl").hide();
 				_opNode.siblings("ul").hide();
@@ -244,20 +244,20 @@
 					_node.siblings("dl:not(.parent)").toggle();
 					_node.siblings("ul").toggle();
 					_node.siblings("span").toggle();
-	
+
 					_node.toggleClass("open","close");
 					if( ! _node.is(".open") ){
 						_node.siblings(".parent_option").hide();
 						_node.siblings(".parent").hide();
 					}
 				});
-	
+
 				$("#"+EP.type+"_options .parent_option").off().on( "click", function(){
 					var _node = $(this);
 					_node.siblings(".parent").toggle();
 					_node.toggleClass("open", "close");
 				});
-	
+
 				var ary = EP.html_id.split("_");
 				ary.pop();
 				var sectionHeadObj = $("#"+ (ary.join("_"))+"-head");
@@ -265,10 +265,10 @@
 					EP.setupIframe( EP.iframe );
 				});
 				window.setTimeout(function(){
-					EP.setupIframe( EP.iframe ); // delaying so mage can catch up with it's ui alterations 
+					EP.setupIframe( EP.iframe ); // delaying so mage can catch up with it's ui alterations
 				}, 100);
-				
-				
+
+
 				if( null !== EP.ajaxurl ){
 					EP.iframe.siblings(".refresh_iframe").on("click",function(){
 						var btn = $(this);
@@ -280,11 +280,11 @@
 						});
 					});
 				}
-	
+
 			});
 
 		};
-		
+
 		EP._layout = {
 			"productview":{
 				"product_info": {
@@ -410,10 +410,10 @@
 								}
 							}
 						}
-		
+
 					},
 					"product-collateral":{
-		
+
 					}
 				}
 			}
@@ -547,14 +547,14 @@
 												"account-info-box-head":{
 													"settings":{},
 													"children":{}
-												}
+												},
 												"account-info-dashboard-extra":{
 													"settings":{
 													},
 													"children":{}
 												}
 											}
-										}
+										},
 										"account-info-address-blocks":{
 											"settings":{},
 											"children":{}
@@ -567,7 +567,5 @@
 				}
 			},
 		};
-		
-		
 	};
 }(jQuery));

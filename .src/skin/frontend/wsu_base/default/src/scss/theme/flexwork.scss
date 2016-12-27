@@ -41,12 +41,12 @@
 $order: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;
 @each $current-order in $order {
     $i: index($order, $current-order);
-    .order-#{$i} { 
+    .order-#{$i} {
         order: $current-order;
     }
 }
- .order-999{ 
-	order: 999;
+.order-999{
+    order: 999;
 }
 
 
@@ -61,12 +61,9 @@ $size: 100 125 150 175 200 225 250 275 300 320 325 350 360 375 390 400 425 450 4
         .row-reverse-at-#{$current-size} { flex-direction: row-reverse; }
         .column-at-#{$current-size}  { flex-direction: column; }
         .column-reverse-at-#{$current-size} { flex-direction: column-reverse; }
-		.hide-below-#{$current-size} { display:none !important; }
-    }  
+        .hide-below-#{$current-size} { display:none !important; }
+    }
 }
-
-
-
 
 .grid-part{
     padding:5px;
@@ -74,13 +71,13 @@ $size: 100 125 150 175 200 225 250 275 300 320 325 350 360 375 390 400 425 450 4
 }
 
 .full-width{
-	width: 100%;
+    width: 100%;
 }
 
 $size: 33.3333333% 66.6666666% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .thirds-#{$i} { 
+    .thirds-#{$i} {
         width: $current-size;
     }
 }
@@ -88,21 +85,21 @@ $size: 33.3333333% 66.6666666% 100%;
 $size: 25% 50% 75% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .fourths-#{$i} { 
+    .fourths-#{$i} {
         width: $current-size;
     }
 }
 $size: 20% 40% 60% 80% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .fifths-#{$i} { 
+    .fifths-#{$i} {
         width: $current-size;
     }
 }
 $size: 16.6666666% 33.3333333% 50% 66.6666666% 83.3333333% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .sixths-#{$i} { 
+    .sixths-#{$i} {
         width: $current-size;
     }
 }
@@ -110,7 +107,7 @@ $size: 16.6666666% 33.3333333% 50% 66.6666666% 83.3333333% 100%;
 $size: 12.5% 25% 37.5% 50% 62.5% 75% 87.5% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .eigths-#{$i} { 
+    .eigths-#{$i} {
         width: $current-size;
     }
 }
@@ -118,16 +115,15 @@ $size: 12.5% 25% 37.5% 50% 62.5% 75% 87.5% 100%;
 $size: 11.1111111% 22.2222222% 33.3333333% 44.4444444% 55.5555555% 66.6666666% 77.7777777% 88.8888888% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .ninths-#{$i} { 
+    .ninths-#{$i} {
         width: $current-size;
     }
 }
 
-
 $size: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .tenths-#{$i} { 
+    .tenths-#{$i} {
         width: $current-size;
     }
 }
@@ -135,7 +131,7 @@ $size: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%;
 $size: 8.3333333% 16.6666666% 25% 33.3333333% 41.6666666% 50% 58.3333333% 66.6666666% 75% 83.3333333% 91.6666666% 100%;
 @each $current-size in $size {
     $i: index($size, $current-size);
-    .twelfths-#{$i} { 
+    .twelfths-#{$i} {
         width: $current-size;
     }
 }
@@ -144,6 +140,6 @@ $size: 100 125 150 175 200 225 250 275 300 320 325 350 360 375 390 400 425 450 4
 @each $current-size in $size {
     @media only screen and (max-width : #{$current-size}px) {
         .full-width-at-#{$current-size}{ width: 100%; }
-    }  
+    }
 }
 
