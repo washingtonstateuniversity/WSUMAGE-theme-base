@@ -1,7 +1,6 @@
 <?php
     $_helper    = $this->helper('catalog/output');
 
-
 	$layout = $this->helper('wsu_themecontrol/layout');
 	$layout->setLayoutTarget('catalog_category_view/productlist');
 
@@ -12,8 +11,6 @@
         $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" style="width:100%"/></p>';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
-
-    $_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
 
 ?>
 <div class="toolbox-top <?=$layout->getLayoutBlockClass("toolbox-top")?> cat_list_header_top">

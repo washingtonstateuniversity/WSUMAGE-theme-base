@@ -16,7 +16,6 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
      */
     protected $_layoutTarget;
 
-
     /**
      * Get CSS for grid item based on number of columns
      *
@@ -123,99 +122,6 @@ class Wsu_Themecontrol_Helper_Layout extends Mage_Core_Helper_Abstract
     }
 
 
-
-    public function getLayoutOptions($ref)//, $extract = array())
-    {
-        $BlockName = str_replace('.', '_', $ref->getNameInLayout());
-        $ControllerName = $ref->getRequest()->getControllerName();
-        $ActionName = $ref->getRequest()->getActionName();
-        $RouteName = $ref->getRequest()->getRouteName();
-        $ModuleName = $ref->getRequest()->getModuleName();
-
-        $fullpath = $RouteName.'_'.$ControllerName.'_'.$ActionName;
-        // @codingStandardsIgnoreStart
-        echo "<!--\r";
-        echo "route :";
-        var_dump($fullpath);
-        echo "\rblock:";
-        var_dump($BlockName);
-        echo "\r-->";
-        $theme = $ref->helper('wsu_themecontrol');
-        //$block_settings = $theme->getCfgLayout($fullpath.'/used'.'_'.$BlockName);
-        //$extractables = !empty($extract) ? $extract : array('row_type','padding','padding_flanks','padding_ends');
-        //$extracted = array();
-        //var_dump($block_settings);
-        /*foreach($extractables as $name){
-            $setting = null;
-            if($block_settings==1){
-                $setting = $theme->getCfgLayout($fullpath.'/'.$name.'_'.$BlockName);
-                //var_dump($setting);
-                //var_dump($fullpath.'/'.$name.'_'.$BlockName);
-            }
-            if($setting==null){
-                $setting = $theme->getCfgLayout('layout_default/'.$name.'_'.$BlockName);
-                //var_dump('layout_default/'.$name.'_'.$BlockName);
-                //var_dump($setting);
-            }
-
-            $extracted[$name] = $setting;
-		}*/
-
-
-        $layouts = [
-
-            "product_info"=>[
-                    "product-content"=>["type"=>"flex-column","size"=>"fifths-3","order"=>"order-1"],
-                    "product-media"=>["size"=>"fifths-2","order"=>"order-2"],
-                    "media-block"=>["type"=>"flex-row"],
-
-                    "email_area"=>["order"=>"order-8"],
-                    "review_area"=>["order"=>"order-9"],
-                    "alert_urls_area"=>["order"=>"order-7"],
-                    "product_type_data_area"=>["order"=>"order-3"],
-                    "tier_price_area"=>["order"=>"order-4"],
-                    "extrahint_area"=>["order"=>"order-5"],
-                    "short_description_area"=>["order"=>"order-1"],
-                    "other_area"=>["order"=>"order-6"],
-                    "container1_area"=>["order"=>"order-2"],
-                    "description_area"=>["order"=>"order-10"],
-
-                ],
-            "product_info_media"=>[
-
-                    "product-image"=>["size"=>"sixths-5","order"=>"order-2"],
-                    "more-views"=>["size"=>"sixths-1","order"=>"order-1"],
-                    "more-views-imgs"=>["type"=>"flex-column"]
-                ],
-            "product_list"=>[
-                    "category-products-grid"=>["type"=>"flex-row","spacing"=>"justify-between"],
-                    "products-grid-item"=>["type"=>"flex-column"],
-                    "products-grid-item-image"=>["order"=>"order-1"],
-                    "products-grid-item-name"=>["order"=>"order-2"],
-                    "products-grid-item-price"=>["order"=>"order-4"],
-                    "products-grid-item-rating"=>["order"=>"order-3"],
-                    "products-grid-item-action"=>["order"=>"order-5"],
-                ],
-            "product_list_toolbar"=>[
-                    "toolbox-top"=>["type"=>"flex-row", "flow"=>"wrap"],
-                    "toolbox-bottom"=>["type"=>"flex-row", "flow"=>"wrap"]
-                ],
-
-
-
-        ];
-
-
-        $tmp = [
-
-                ];
-
-
-
-// @codingStandardsIgnoreEnd
-
-        return isset($layouts[$BlockName]) ? $layouts[$BlockName] : $tmp;
-    }
     public function getMapBlockMapping($block, $values)
     {
         /*

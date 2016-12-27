@@ -9,13 +9,6 @@ $layout = $this->helper('wsu_themecontrol/layout');
 $layout->setLayoutTarget('catalog_product_view/productview');
 ?>
 
-<?php
-//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutOptions($this);
-//$_layout =  $this->helper('wsu_themecontrol/layout')->getLayoutSettings("product-content");
-//var_dump($_layout);die();
-
-?>
-
 <?php $_product = $this->getProduct(); ?>
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
