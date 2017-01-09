@@ -578,11 +578,11 @@
 		<reference name="root">
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
-        <reference name="content">
+        <!--<reference name="content">
             <block type="catalog/product_view" name="product.info.custom" template="catalog/product/view.phtml">
 				<block type="catalog/product_list_related" name="catalog.product.related" as="related_products" template="catalog/product/list/related.phtml" />
             </block>
-        </reference>
+        </reference>-->
 	</catalog_product_view>
 <!-- SEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<!-- Quick search -->
