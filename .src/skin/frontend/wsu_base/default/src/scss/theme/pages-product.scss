@@ -69,7 +69,9 @@ $url_9: url(images/bg_x.png);
     //Instead of the line below you could use @include box-sizing($bs)
     box-sizing: content-box;
 }
-
+.swatch-select{
+    display:none;
+}
 
 .no-rating {
     margin: 0;
