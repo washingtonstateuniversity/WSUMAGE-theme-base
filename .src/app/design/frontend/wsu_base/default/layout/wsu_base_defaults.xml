@@ -2,13 +2,13 @@
 <layout>
 	<default>
 		<reference name="head">
-		
+
 
 		<!-- remove the rwd defaults -->
 			<action method="removeItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
 			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
 			<action method="removeItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
-			
+
 			<action method="removeItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
 			<action method="removeItem"><type>skin_js</type><name>js/app.js</name></action>
 			<!---->
@@ -28,27 +28,27 @@
 			<action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
 			<action method="removeItem"><type>skin_css</type><name>css/madisonisland.css</name></action>
 
-		
-		
+
+
 		<!-- JS -->
 			<action method="addItem"><type>external_js</type><name>//html5shiv.googlecode.com/svn/trunk/html5.js</name><params/><if>lt IE 9</if></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/flexibility.js</name><params/><if>lt IE 10</if></action>
-			
-			
+
+
 			<!-- base for all WSU -->
 			<action method="addItem"><type>external_css</type><name helper="wsu_themecontrol/layout/getSpineVersionCss"/></action>
 			<!--<action method="addItem"><type>external_css</type><name>//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css</name></action>-->
 			<action method="addItem"><type>external_js</type><name helper="wsu_themecontrol/layout/getSpineVersionJs"/></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/jQuery.dialog.lightbox.js</name></action>
-			
+
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.defaults.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.state.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.frontend.js</name></action>
-			
+
 			<action method="addItem"><type>skin_js</type><name>src/js/controller.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>src/js/lightbox.ini.js</name></action>
-			
+
 			<action method="addItem"><type>skin_js</type><name>src/js/wsu_theme.starter.js</name></action>
 			<!-- End of WSU base -->
 
@@ -56,7 +56,7 @@
 			<!-- CSS base -->
 			<action method="addCss"><stylesheet>theme.css</stylesheet></action>
 			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
-			
+
 			<action method="addCss"><stylesheet>src/css/print.css</stylesheet><params>media="print"</params></action>
 			<action ifconfig="wsu_themecontrol/customization/custom_css"  method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<!-- Design settings
@@ -70,12 +70,12 @@
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getLayoutFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<action method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getOverrideFile" /></action>
-            
-            
-            
-            
+
+
+
+
 				<!--
-			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action> 
+			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addItem"><type>skin_css</type><name>css/custom.css</name></action>
 -->
 			<!--<block type="core/template" name="head.theme.css" template="page/html/head_theme_css.phtml" before="-" />-->
 			<action method="addItem"><type>skin_js</type><name>src/js/custom.js</name></action>
@@ -89,17 +89,17 @@
 					<action method="setElementClass"><value>top-bar</value></action>
 				</block>
 			<block type="core/template" name="offisite.links" as="offisite.links" before="-">
-				<action method="setBlockId"><block_id>offisite_links_block</block_id></action>  
+				<action method="setBlockId"><block_id>offisite_links_block</block_id></action>
 				<action method="setTemplate"><template>page/html/custom/offisite.links.phtml</template></action>
 			</block>
-				
-				
-		</reference>	
+
+
+		</reference>
 
 		<reference name="root">
 			<remove name="store_language"/>
 			<block type="page/template_links" name="top.links" as="topLinks" />
-            
+
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
 			<action method="addBodyClass"><class>DYNO-DEFAULT</class></action>
@@ -109,15 +109,15 @@
                 <action method="insert"><child>breadcrumbs</child></action>
             </reference>
         </reference>
-        
+
 		<reference name="before_body_end">
 			<!--<block type="core/template" name="adminbar" as="adminbar" before="-">
-				<action method="setBlockId"><block_id>adminbar_block</block_id></action>  
+				<action method="setBlockId"><block_id>adminbar_block</block_id></action>
 				<action method="setTemplate"><template helper="wsu_themecontrol/data/showAdminFrontEndBar" /></action>
 			</block>-->
 		</reference>
 <!---->
-		
+
 		<reference name="top.links">
 			<block type="wishlist/links" name="wishlist_link" />
 			<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
@@ -131,7 +131,7 @@
 				<action method="addCartLink"><position>10</position></action>
 				<action method="addCheckoutLink"><position>11</position></action>
 			</block> -->
-			
+
 			<block type="checkout/links" name="checkout_cart_link_wsu_base">
 				<action method="setData"><name>cart_label</name><value helper="wsu_themecontrol/layout/getCartLabel" /></action>
 				<action method="setData"><name>cart_label_signle</name><value helper="wsu_themecontrol/layout/getCartLabelSingle" /></action>
@@ -140,25 +140,25 @@
 				<action method="setData" ifconfig="wsu_themecontrol/header/checkout_hide_empty"><name>checkout_hide_empty</name><value>1</value></action>
 				<action method="setData" ifconfig="wsu_themecontrol/header/show_checkout_total" ><name>checkout_total</name><value>1</value></action>
 				<action method="setData"><name>checkout_label</name><value helper="wsu_themecontrol/layout/getCheckoutLabel" /></action>
-				
+
 				<action method="addCartLink"><position>10</position></action>
 				<action method="addCheckoutLink"><position>11</position></action>
-				
+
 				<action method="makeCompareLink"></action>
 			</block>
-			
-			
-			
-			
+
+
+
+
 		</reference>
 
 		<remove name="SHORTCUT_popup" /><!-- paypal not allowed at WSU -->
 	</default>
-	
-	
+
+
 <!-- top.link block alerations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-	
+
      <!-- Custom page layout handles -->
     <page_halves translate="label">
         <label>Halves Page Layout</label>
@@ -176,8 +176,8 @@
             <action method="setIsHandle"><applied>1</applied></action>
         </reference>
     </page_dyno>
-		
-		
+
+
 <!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<page_three_columns>
 		<reference name="right">
@@ -187,7 +187,7 @@
 			<action method="unsetChild"><name>wishlist</name></action>
 		</reference>
 	</page_three_columns>
-	
+
 <!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_logged_out>
 		<reference name="top.links">
@@ -217,7 +217,7 @@
 		</reference>-->
 		<!--<remove name="reorder"></remove>-->
 	</customer_logged_out>
-	
+
 	<customer_logged_in>
 		<reference name="top.links">
 			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
@@ -270,7 +270,7 @@
 			</block>
 		</reference>
 	</checkout_cart_index>
-	
+
 <!-- CHECKOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<checkout_onepage_index>
 		<reference name="root">
@@ -295,7 +295,7 @@
 				<action method="addCartLink"><position>10</position></action>
 			</block>
 		</reference>
-	</checkout_onepage_index>	
+	</checkout_onepage_index>
 	<opc_index_index>
 		<reference name="root">
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
@@ -316,9 +316,9 @@
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
 	</checkout_multishipping>
-	
-	
-	
+
+
+
 <!-- REVIEWS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<review_product_list>
 		<!-- IMPORTANT: same as 'catalog_product_view'. -->
@@ -327,7 +327,7 @@
 		</reference>
 	</review_product_list>
 
-	
+
 <!-- CUSTOMER ACCOUNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<customer_account>
         <reference name="root">
@@ -339,7 +339,7 @@
                 <action method="addLink" translate="label" module="customer"><name>account</name><path>customer/account/</path><label>Account Dashboard</label></action>
                 <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
                 <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>Address Book</label></action>
-                <action method="addLink" translate="label" module="downloadable"><name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloads</label></action>  
+                <action method="addLink" translate="label" module="downloadable"><name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloads</label></action>
             </block>
         </reference>
         <reference name="customer_account_navigation">
@@ -354,7 +354,7 @@
         <reference name="right">
 			<remove name="wishlist_sidebar"/>
 		</reference>
-    </wishlist_index_index>	
+    </wishlist_index_index>
 	<customer_account_index>
         <reference name="root">
             <action method="setTemplate"><template>page/dyno.phtml</template></action>
@@ -380,9 +380,9 @@
 				</block>
 			</block>
 		</reference>
-	</cms_page>	
-	
-	<!-- Remove static blocks displayed on CMS pages from these pages: home page, 404 no route 
+	</cms_page>
+
+	<!-- Remove static blocks displayed on CMS pages from these pages: home page, 404 no route
 		IMPORTANT: make sure that you use correct ID -->
 	<cms_index>
 		<reference name="root">
@@ -448,7 +448,7 @@
 			<block type="cms/block" name="block_category_below_collection">
 				<action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
 			</block>
-            
+
             <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
             <reference name="toolbar_bottom">
                <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
@@ -464,11 +464,11 @@
 		</reference>
 		<reference name="content">
 			<!-- Remove currency switcher from sidebar -->
-			<action method="unsetChild"><name>breadcrumbs</name></action>	
-            
+			<action method="unsetChild"><name>breadcrumbs</name></action>
 
-            
-            		
+
+
+
 		</reference>
 	    <reference name="product_list_toolbar">
 			<action method="insert"><child>breadcrumbs</child></action>
@@ -489,22 +489,22 @@
 		<reference name="left">
 			<!-- Remove currency switcher from sidebar -->
 			<action method="unsetChild"><name>catalog.leftnav</name></action>
-			<action method="unsetChild"><name>currency</name></action>			
+			<action method="unsetChild"><name>currency</name></action>
 		</reference>
 
 		<reference name="content">
 			<!-- Remove currency switcher from sidebar -->
-			<action method="unsetChild"><name>breadcrumbs</name></action>			
+			<action method="unsetChild"><name>breadcrumbs</name></action>
 		</reference>
 	    <reference name="product_list_toolbar">
 			<action method="insert"><child>breadcrumbs</child></action>
 			<action method="insert"><child>state_renderers</child></action>
 			<action method="insert"><child>left_first</child></action>
 		</reference>
-		
+
 		<reference name="product_list">
-        
-               
+
+
             <block type="catalog/product_list_toolbar" name="toolbar_bottom" as="toolbar_bottom" template="catalog/product/list/toolbar_bottom.phtml" />
             <reference name="toolbar_bottom">
                <block type="page/html_pager" name="product_list_toolbar_pager" as="bottom_pager" template="page/html/bottom-pager.phtml"/>
@@ -550,8 +550,8 @@
             <block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
         </reference>
     </PRODUCT_TYPE_configurable>
-	
-	
+
+
 	<!-- Category with layered navigation -->
 	<catalog_category_layered>
 		<reference name="root">
@@ -559,7 +559,7 @@
 		</reference>
 		<reference name="left">
 			<!-- Remove currency switcher from sidebar -->
-			<action method="unsetChild"><name>currency</name></action>			
+			<action method="unsetChild"><name>currency</name></action>
 		</reference>
 		<reference name="product_list">
 			<!-- Custom static blocks -->
@@ -578,6 +578,11 @@
 		<reference name="root">
 			<action method="setTemplate"><template>page/dyno.phtml</template></action>
 		</reference>
+        <reference name="content">
+            <block type="catalog/product_view" name="product.info.custom" template="catalog/product/view.phtml">
+				<block type="catalog/product_list_related" name="catalog.product.related" as="related_products" template="catalog/product/list/related.phtml" />
+            </block>
+        </reference>
 	</catalog_product_view>
 <!-- SEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 	<!-- Quick search -->
@@ -613,8 +618,8 @@
 			<action method="unsetChild"><name>right_currency</name></action>
 		</reference>
 	</catalogsearch_advanced_result>
-	
-	
-	
-	
+
+
+
+
 </layout>
