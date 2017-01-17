@@ -2,8 +2,8 @@
 
 .layoutframeworkPreview{
 	&{
-		@import 'theme/normalize';
-		@import 'theme/flexwork';
+		//@import 'theme/normalize';
+		//@import 'theme/flexwork';
 		@import 'theme/layout';
 		@import 'theme/htmlpart-forms';
 		@import 'theme/htmlpart-messages';
@@ -11,7 +11,7 @@
 		@import 'theme/htmlpart-footer';
 		@import 'theme/htmlpart-sidebar';
 		@import 'theme/htmlpart-tables';
-		
+
 		@import 'theme/pages';
 		@import 'theme/pages-category';
 		@import 'theme/pages-product';

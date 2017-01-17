@@ -441,11 +441,11 @@ ul.products-list ul.add-to-links:after {
 
 
 .catalog-category-view{
-    .pg-animate{ 
+    .pg-animate{
         .item {
             animation-duration: .75s;
             animation-fill-mode: both;
-            
+
             animation-delay: 0.01s;
             &:nth-child(2n+0) {
                 animation-delay: 0.05s;
@@ -459,7 +459,7 @@ ul.products-list ul.add-to-links:after {
             &:nth-child(7n+0) {
                 animation-delay: 0.15s;
             }
-            
+
             animation-name: fadeInUp;
         }
         &.reverse{
@@ -468,11 +468,11 @@ ul.products-list ul.add-to-links:after {
             }
         }
     }
-    
+
     $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
     @each $current-delay in $delay-list {
         $i: index($delay-list, $current-delay) - 1;
-        .pg-delay-#{$i} .item{ 
+        .pg-delay-#{$i} .item{
             animation-delay: $current-delay;
             &:nth-child(2n+0) {
                 animation-delay: $current-delay + 0.05s;
@@ -488,11 +488,11 @@ ul.products-list ul.add-to-links:after {
             }
         }
     }
-    
+
     $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
     @each $current-duration in $duration-list {
         $i: index($duration-list, $current-duration) - 1;
-        .pg-duration-#{$i} .item{ 
+        .pg-duration-#{$i} .item{
             animation-duration: $current-duration;
         }
     }
@@ -503,15 +503,6 @@ ul.products-list ul.add-to-links:after {
 
 
 .products-grid {
-    
-    
-    
-    
-    
-    
-    
-    
-    
     position: relative;
     &.last {
         border-bottom: 0;
@@ -562,11 +553,11 @@ ul.products-list ul.add-to-links:after {
         &.last .product-image {
             border-right: 0;
         }
-        &:empty {
+        /*&:empty {
             height: 0;
             border: none;
-            width: 100% !important;
-        }
+            //width: 100% !important;
+        }*/
     }
     .product-image {
         display: block;

@@ -44,14 +44,14 @@ $url_1: url(images/bkg_collapse.gif);
     .pages {
         padding: 0px 10px;
     }
-    
+
     .pages ol {
         padding: 0px;
         display: inline-block;
-        
+
     }
-    
-    
+
+
     .pages ol li {
         display: inline-block;
             vertical-align: top;
@@ -63,7 +63,7 @@ $url_1: url(images/bkg_collapse.gif);
         font-size: 24px;
         font-weight: 700;
     }
-    
+
     .pages .previous:before{
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -71,12 +71,12 @@ $url_1: url(images/bkg_collapse.gif);
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);	
+        transform: translate(0, 0);
         content:"\f104";
         color:#181818;
     }
     .pages .previous:before.disabled{color:#5a5a5a;}
-    
+
     .pages .next:before{
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -84,26 +84,26 @@ $url_1: url(images/bkg_collapse.gif);
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);	
+        transform: translate(0, 0);
         content:"\f105";
         color:#181818;
     }
     .pages .next:before.disabled{color:#5a5a5a;}
-    
+
     .pages .next_jump, .pages .previous_jump{	display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: 20px;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);	
+        transform: translate(0, 0);
         line-height: 26px;
         color:#181818;}
     .next_jump{
-        content:"\f101";	
+        content:"\f101";
     }
     .previous_jump{
-        content:"\f100";	
+        content:"\f100";
     }
 }
 .cat_list_header_bottom{

@@ -10,7 +10,7 @@
 $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 @each $current-delay in $delay-list {
     $i: index($delay-list, $current-delay) - 1;
-    .delay-#{$i} { 
+    .delay-#{$i} {
         animation-delay: $current-delay;
     }
 }
@@ -18,7 +18,7 @@ $delay-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 $duration-list: 0.25s 0.50s 0.75s 1s 1.25s 1.5s 1.75s  2s;
 @each $current-duration in $duration-list {
     $i: index($duration-list, $current-duration) - 1;
-    .duration-#{$i} { 
+    .duration-#{$i} {
         animation-duration: $current-duration;
     }
 }

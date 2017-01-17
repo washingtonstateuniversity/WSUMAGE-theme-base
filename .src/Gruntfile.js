@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         watch: {
             files: [ "./app/**/*.*","./js/**/*.*","./errors/**/*.*","./skin/**/*.*","./media/**/*.*" ],
             tasks: [/*"concat", "sass", "postcss", "cssmin", "copy", "csslint",*/
-            "clean", "sass", "concat", "jshint", "autoprefixer", "cssmin", "uglify", "copy", "phpcbf", "phpcs", "sync"]
+            "clean", "sass", "concat", "jshint", "autoprefixer", "cssmin", "uglify", "copy", "sync", "phpcbf", "phpcs", "sync"]
         },
 
 

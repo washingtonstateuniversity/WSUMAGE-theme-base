@@ -1,7 +1,7 @@
 
 (function($) { // when jQuery is loaded
 
-    $.flexwork = $.flexwork || { cache: {} };
+    $.flexed = $.flexed || { cache: {} };
 
     ( function( factory ) {
         if ( typeof define === "function" && define.amd ) {
@@ -174,12 +174,12 @@ console.log("-------------------------------------->>>>>>>");
         return regex.test(jQuery(elem)[attr.method](attr.property));
     };
 
-    $.flexwork.map = {"thirds":33.333,"fourths":25,"fifths":20,"sixths":16.666,"eigths":12.5,"ninths":11.111,"tenths":10,"twelfths":8.333};
+    $.flexed.map = {"thirds":33.333,"fourths":25,"fifths":20,"sixths":16.666,"eigths":12.5,"ninths":11.111,"tenths":10,"twelfths":8.333};
 
     /**
      * Equalize columns in a layout.
      */
-    $.flexwork.equalizing = function() {
+    $.flexed.equalizing = function() {
         var containers;
 
         //if ( $( ".flex-row,.row-reverse, .flex-column, .column-reverse" ).length ) {
@@ -229,7 +229,7 @@ console.log("-------------------------------------->>>>>>>");
                 var found = re.exec( $(this).attr("class") );
                 var type = found[1];
                 var times = found[2];
-                var taken = $.flexwork.map[type] * times;
+                var taken = $.flexed.map[type] * times;
                 $(this).css( "min-height", $(this).parent().outerHeight() * (taken/100) );
             });
 
@@ -241,17 +241,17 @@ console.log("-------------------------------------->>>>>>>");
 
         //}
     };
-    $(document ).on("flexwork:preped",function(){
-        console.log("flexwork:preped");
+    $(document ).on("flexed:preped",function(){
+        console.log("flexed:preped");
         $( "[data-uid]" ).css( "min-height", "" );
     });
-    $(document ).on("flexwork:init",function(){
-        console.log("flexwork:init");
-        $.flexwork.equalizing();
+    $(document ).on("flexed:init",function(){
+        console.log("flexed:init");
+        $.flexed.equalizing();
         $.observeDOM( $( ".flex-row, .row-reverse, .flex-column, .column-reverse, .grid-part" ), function(){
-            $.flexwork.prep();
+            $.flexed.prep();
             console.log("equalizing ");
-            $.flexwork.equalizing();
+            $.flexed.equalizing();
         });
     });
 

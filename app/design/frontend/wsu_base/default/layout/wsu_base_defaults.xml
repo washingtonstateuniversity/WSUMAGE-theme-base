@@ -54,6 +54,11 @@
 
 		<!-- CSS: -->
 			<!-- CSS base -->
+
+            <action method="addItem"><type>skin_css</type><name>src/css/flexed/flexed-custom.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>src/css/flexed/extra/flexed-typography.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>src/css/flexed/extra/flexed-ui.css</name></action>
+
 			<action method="addCss"><stylesheet>theme.css</stylesheet></action>
 			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
 

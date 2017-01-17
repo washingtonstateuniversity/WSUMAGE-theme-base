@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8b2eb518690dc7c4db99ec156d50fe1",
     "content-hash": "602fac0c40f0d762404d18994befb187",
     "packages": [],
     "packages-dev": [
@@ -39,7 +38,7 @@
             ],
             "description": "A set of PHP_CodeSniffer rules and sniffs.",
             "homepage": "https://github.com/magento-ecg/coding-standard",
-            "time": "2015-12-18 16:52:59"
+            "time": "2015-12-18T16:52:59+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -113,7 +112,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2015-09-09 00:18:50"
+            "time": "2015-09-09T00:18:50+00:00"
         }
     ],
     "aliases": [],
