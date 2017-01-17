@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<theme>
+    <parent>rwd/default</parent>
+    <layout>
+        <updates>
+            <wsu_base>
+                <file>wsu_base_defaults.xml</file>
+            </wsu_base>
+        </updates>
+    </layout>
+</theme>

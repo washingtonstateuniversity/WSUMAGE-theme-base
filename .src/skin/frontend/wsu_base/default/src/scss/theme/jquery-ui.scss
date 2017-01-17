@@ -1,0 +1,239 @@
+@import 'vars/global';
+@import 'vars/colors';
+
+
+
+//urls
+$url_0: url(//beta.maps.wsu.edu/Content/images/tab_next_prev.png);
+
+#confirm_btns {
+    display: flex;
+    justify-content: space-around;
+    a {
+        text-align: center;
+        width: 100%;
+    }
+}
+#yes_remove {
+    background-color: $color_chestnut_rose_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px 0 0 5px;
+}
+#no_remove {
+    background-color: $color_fern_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0 5px 5px 0;
+}
+.ui-widget-overlay {
+    z-index: 99998!important;
+    &.ui-front {
+        z-index: 99165;
+    }
+}
+.ui-dialog {
+    overflow: visible;
+    z-index: 99999!important;
+    &.lightbox {
+        z-index: 99166;
+    }
+    .infoClose {
+        right: -9px;
+        top: -9px;
+        z-index: 1;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 15px;
+        background-color: $color_old_brick_approx;
+        cursor: pointer;
+        display: block;
+        height: 22px;
+        position: absolute;
+        width: 22px;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        color: $gray_221;
+    }
+    .ui-dialog-content {
+        overflow: visible;
+    }
+    .cycle {
+        position: relative;
+        margin-left: 10px;
+        .cWrap {
+            margin: 0 auto;
+            ul {
+                display: block;
+                list-style: none outside none;
+                margin: 0 auto;
+            }
+        }
+        .prev {
+            left: 0;
+            top: 55px;
+            text-indent: -9999em;
+            display: block;
+            width: 24px;
+            height: 71px;
+            position: absolute;
+            background: $url_0 no-repeat scroll left top transparent;
+            z-index: 9;
+            &:hover {
+                background-position: left bottom;
+            }
+        }
+        .next {
+            right: 0;
+            top: 55px;
+            text-indent: -9999em;
+            display: block;
+            width: 24px;
+            height: 71px;
+            position: absolute;
+            background: $url_0 no-repeat scroll right top transparent;
+            z-index: 9;
+            &:hover {
+                background-position: right bottom;
+            }
+        }
+    }
+    .lightbox-api {
+        background: trasparent;
+        display: block;
+        position: absolute;
+        top: 9px;
+        height: 100%;
+        width: 15%;
+        z-index: 1;
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0,0);
+            color: $color_old_brick_approx;
+            position: absolute;
+            font-size: 3em;
+            font-weight: 900;
+            top: 50%;
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: $white 0 0 5px;
+            opacity: 0;
+        }
+        &.next {
+            right: 0;
+            &:before {
+                content: "\f101";
+            }
+            &:hover {
+                background-position: right bottom;
+                &:before {
+                    right: 25%;
+                    opacity: 1;
+                }
+            }
+        }
+        &.prev {
+            left: 0;
+            &:before {
+                content: "\f100";
+            }
+            &:hover {
+                background-position: right bottom;
+                &:before {
+                    left: 25%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    #header_block {
+        position: absolute;
+        bottom: calc(100% - 5px);
+        left: -1px;
+        background-color: $gray_50;
+        color: $gray_221;
+        font-weight: 700;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 10px 10px 0 0;
+        width: calc(100% +2px);
+        #wrapped {
+            padding: 1em;
+        }
+    }
+    #modeArea {
+        #your_location {
+            position: relative;
+            font-size: 1.5em;
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid $gray_50;
+            margin-bottom: 15px;
+            &:before {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: translate(0,0);
+                content: "\f05b";
+                color: $color_gray_50_approx;
+                position: absolute;
+                right: 9px;
+                top: -25spx;
+                font-size: 1.05em;
+            }
+        }
+        fieldset {
+            border: 1px solid $gray_221;
+            legend {
+                position: relative;
+                padding: 0 10px;
+            }
+            ul {
+                margin: 2px 5px;
+            }
+        }
+        #onMapLocations {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        #customLocation {
+            position: relative;
+            input::-webkit-input-placeholder {
+                color: $color_silver_sand_approx!important;
+            }
+            input:-moz-placeholder {
+                color: $color_silver_sand_approx!important;
+            }
+            i:before {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: translate(0,0);
+                content: "\f002";
+                color: $gray_164;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 2em;
+            }
+        }
+    }
+}
+.ui-effects-animated {
+    overflow: visible;
+}
+.ui-effects-placeholder {
+    overflow: visible;
+}
+.ui-effects-wrapper {
+    overflow: visible;
+}
+.infoClose:hover {
+    background-position: center bottom;
+}
+.lightbox-content.inline {
+    overflow: auto;
+    height: 100%;
+}

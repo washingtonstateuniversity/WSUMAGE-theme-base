@@ -1,4 +1,9 @@
-skin/frontend/wsu_base/default/css/custom.css
-skin/frontend/wsu_base/default/build/**/*
-skin/frontend/wsu_base/default/.sass-cache/**/*scssc
-skin/frontend/wsu_base/default/node_modules/**/*
+**/skin/adminhtml/default/wsu/build/**/*
+**/skin/adminhtml/default/wsu/.sass-cache/**/*scssc
+**/skin/adminhtml/default/wsu/node_modules/**/*
+
+**/skin/adminhtml/default/wsu/node_modules/**/*
+**/node_modules/**/*
+**/vendor/**/*
+**/.build/**/*
+debug.log

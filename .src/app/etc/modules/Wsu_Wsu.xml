@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category	Wsu
+ * @package		Wsu_Wsu
+ * @author		Wsu
+ * @copyright	Copyright 2012 Wsu
+ */
+ -->
+<config>
+    <modules>
+        <Wsu_Wsu>
+            <active>true</active>
+            <codePool>local</codePool>
+			<depends>
+				<Mage_Page />
+				<Wsu_Storeutilities/>
+			</depends>
+        </Wsu_Wsu>
+    </modules>
+</config> 

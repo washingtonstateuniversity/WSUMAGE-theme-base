@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <skin>wsubase</skin>
+    <report>
+        <!-- print|email -->
+        <action>email</action>
+        <!-- email subject -->
+        <subject>Store Debug Information</subject>
+        <email_address>jeremy.bass@wsu.edu</email_address>
+        <!-- leave|delete e.g. delete or leave on disk-->
+        <trash>leave</trash>
+    </report>
+</config>

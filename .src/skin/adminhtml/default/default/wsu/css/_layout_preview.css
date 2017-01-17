@@ -1,0 +1,111 @@
+td.label.editor_options ul.editor_option_list {
+    text-align:left;
+
+
+}
+td.label.editor_options ul.editor_option_list ul,
+td.label.editor_options ul.editor_option_list dl{
+	padding-left:15px
+}
+td.label.editor_options{
+    width:250px;
+}
+td.label.editor_options b{
+	cursor:pointer;
+}
+td.label.editor_options b:hover{
+	color:#981e32;
+}
+
+
+.layoutframeworkPreview{
+	border: 1px solid #000;
+	position: relative;
+	box-sizing: border-box;
+	zoom: .50;
+	width:100% !important;
+	height: 750px !important;
+	max-width:100% !important;
+	max-height: 750px !important;
+}
+.layoutframeworkPreview.iframeClose{
+	width:100% !important;
+	height: 0px !important;
+}
+.refresh_iframe {
+    border: 1px solid #C3C3C3;
+    background: #E8E8E8;
+    border-radius: 5px;
+    padding: 7px 15px;
+    display: inline-block;
+    margin-bottom: 5px;
+	cursor:pointer;
+	float: right;
+}
+.refresh_iframe:hover {
+	background:#9E9E9E;
+}
+.refresh_iframe:before{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+    content: "\f021";
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 5px;
+}
+.refresh_iframe.loading:before{
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+.refresh_iframe.loading:after{
+	content: "ing";
+}
+
+
+td.label.editor_options .editor_option_list b:before{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	float:left;
+	content: "\f196";
+	width:16px;
+	height:16px;
+	font-size:16px;
+	line-height: 27px;
+}
+td.label.editor_options .editor_option_list b.open:before{
+	content: "\f146";
+}
+td.label.editor_options span.parent_option{
+    display:block;
+    padding-left:15px;
+    cursor:pointer;
+}
+td.label.editor_options span.parent_option:hover{
+    color: #5D5D5D;
+}
+td.label.editor_options span.parent_option:before {
+    	display: inline-block;
+    	font: normal normal normal 14px/1 FontAwesome;
+    	text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+    	-moz-osx-font-smoothing: grayscale;
+    	float:left;
+    	content: "\f085";
+    	width:16px;
+    	height:16px;
+    	font-size:16px;
+    	line-height: 27px;
+    	margin-right: 5px;
+}
+td.label.editor_options span.parent_option:hover:before {
+	color: #A91313;
+}
