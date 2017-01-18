@@ -35,9 +35,9 @@ $url_6: url(images/btn_edit.gif);
 input {
     @extend %forms_extend_1;
     &.input-text {
-        background: $white;
-        border: 1px solid $color_nobel_approx;
-        padding: 2px;
+        //background: $white;
+        //border: 1px solid $color_nobel_approx;
+        //padding: 2px;
     }
     &.radio {
         margin-right: 3px;

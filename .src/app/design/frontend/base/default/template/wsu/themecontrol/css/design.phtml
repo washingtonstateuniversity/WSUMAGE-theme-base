@@ -24,9 +24,9 @@
 	} elseif ($t->isColor($d['page']['bg_color'])) {
 		$mainBgColor = $d['page']['bg_color'];
 	}
-	
+
 	$use_add_to_cart_icon = true; //@todo will have to come back to
-	
+
 ?>
 <?php
 //Global
@@ -64,7 +64,7 @@ p.product-name a:hover
 /* forms inputs and buttons
 -------------------------------------------------------------- */
 ?>
-
+input:not([type="checkbox"]):not([type="radio"]),
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -202,13 +202,13 @@ main .button:not(.bare):hover, main .spine-button:not(.bare):hover, main button:
     -webkit-transform: translate(0,0);
     -ms-transform: translate(0,0);
     transform: translate(0,0);
-    
+
     z-index: 1;
     top: 2px;
     position: relative;
     margin-left: 7px;
     font-size: 1.7em;
-    
+
     <?php
 		$default_to = trim($t->getCssRuleAttr('', 'forms/button_color', '#676767',''), ":");
 		echo $t->getCssRuleAttr('color', 'product_page/button_color', $default_to, ';');
@@ -217,7 +217,7 @@ main .button:not(.bare):hover, main .spine-button:not(.bare):hover, main button:
     <?php
 		$default_to = trim($t->getCssRuleAttr('','forms/button_text_shadow','1px 1px 1px rgba(57, 57, 57, 0.42)',''),":");
 		echo $t->getCssRuleAttr('text-shadow','product_page/button_text_shadow', $default_to, ';');
-	?>    
+	?>
 
     <?=$t->getCssRuleAttr('content', 'product_page/button_add_to_cart_icon', '"\f217"', ';')?>
 
@@ -385,21 +385,21 @@ h3.product-name, /*TODO:remove*/
 /* Captions */
 .caption .heading
 {
-	
+
 	<?php if ($d['font']['primary_font_family_group'] == 'google'): //Google Fonts ?>
 
 		<?=$t->getCssRuleAttr('font-family','font/primary_font_family','',' , georgia, serif;')?>
-		
+
 	<?php elseif ($d['font']['primary_font_family_group'] == 'custom'): //User-defined font stack ?>
-	
+
 		<?=$t->getCssRuleAttr('font-family','font/primary_font_family_custom','',';')?>
 
 	<?php else: //Predefined font stack ?>
-	
+
 		<?=$t->getCssRuleAttr('font-family','font/primary_font_family_group','',';')?>
-		
+
 	<?php endif; ?>
-	
+
 	<?=$t->getCssRuleAttr('font-weight','font/primary_font_weight','',';')?>
 
 }
@@ -608,7 +608,7 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 .wrapper
 {
 	<?php //Header top border ?>
-	
+
 	<?php if (isset($d['header']['top_border_color']) && $t->isColor($d['header']['top_border_color'])): ?>
 		<?=$t->getCssRuleAttr('border-top-color','header/top_border_color','',';')?>
 	<?php else: ?>
@@ -616,7 +616,7 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 	<?php endif; ?>
 
 	<?=$t->getCssRuleAttr('background-color','page/bg_color','',';')?>
-	
+
 	<?php if ($d['page']['bg_image']): ?>
 		<?=$t->getCssRuleAttr('background-repeat','page/bg_repeat','',';')?>
 		<?=$t->getCssRuleAttr('background-attachment','page/bg_attachment','',';')?>
@@ -684,7 +684,7 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 
 <?php //Header caret (the same color as text) ?>
 .header .caret {
-	
+
 	<?php if (isset($d['header']['color']) && $t->isColor($d['header']['color'])): ?>
 		<?=$t->getCssRuleAttr('border-top-color','header/color','',';')?>
 	<?php else: ?>
@@ -769,7 +769,7 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 .header-top-container
 {
 	<?=$t->getCssRuleAttr('background-color','header_top/bg_color','',';')?>
-	
+
 	<?=$t->getCssRuleAttr('padding-top','header_top/padding_top','','px;')?>
 
 	<?=$t->getCssRuleAttr('padding-bottom','header_top/padding_bottom','','px;')?>
