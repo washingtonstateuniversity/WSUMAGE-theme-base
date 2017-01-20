@@ -63,7 +63,7 @@
 			<action method="addCss"><stylesheet>src/css/widgets.css</stylesheet></action>
 
 			<action method="addCss"><stylesheet>src/css/print.css</stylesheet><params>media="print"</params></action>
-			<action ifconfig="wsu_themecontrol/customization/custom_css"  method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
+			<action ifconfig="wsu_themecontrol/customization/custom_css" method="addCss"><stylesheet helper="wsu_themecontrol/cssgen/getDesignFile" /></action>
 			<!-- Design settings
 			 -->
 			<!-- Override components, modules
