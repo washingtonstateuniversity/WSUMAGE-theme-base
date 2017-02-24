@@ -68,7 +68,7 @@ $show_numbering = $theme->getCfgDesign("category/pager_show_numbering");
             <li><a class="first" href="<?php echo $this->getFirstPageUrl() ?>"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
 			<li>
 				<?php if (!$this->isFirstPage()): ?>
-                    <a class="previous active <?php (!$this->getAnchorTextForPrevious() ? "i-previous":"");?> " href="<?=$this->getPreviousPageUrl();?>" title="<?=$this->__('Previous');?>"></a>
+                    <a class="previous active <?php (!$this->getAnchorTextForPrevious() ? "i-previous":"");?> " href="<?=$this->getPreviousPageUrl();?>" title="<?=$this->__('Previous');?>"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 				<?php else: ?>
 					<a href="#" class="previous disabled"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 				<?php endif;?>
@@ -97,13 +97,13 @@ $show_numbering = $theme->getCfgDesign("category/pager_show_numbering");
 
             <li>
 				<?php if (!$this->isLastPage()): ?>
-					<a class="next active <?=(!$this->getAnchorTextForNext() ? "i-next" : "");?>" href="<?=$this->getNextPageUrl() ?>" title="<?=$this->__('Next') ?>"></a>
+					<a class="next active <?=(!$this->getAnchorTextForNext() ? "i-next" : "");?>" href="<?=$this->getNextPageUrl() ?>" title="<?=$this->__('Next') ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 				<?php else: ?>
                     <a href="#" class="next disabled"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 				<?php endif;?>
             </li>
        	 <!--<li><a class="next_jump" title="" href="<?php echo $this->getNextJumpUrl() ?>">»</a></li>-->
-        </ol>
+        </ul>
 
     </div>
     <?php endif; ?>

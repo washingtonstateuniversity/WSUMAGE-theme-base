@@ -31,13 +31,13 @@
  * @see Mage_Page_Block_Html_Pager
  */
 ?>
-<?php 
+<?php
 
 $filteredList = $this->getLayout()
         ->getBlockSingleton('catalog/product_list')
         ->getLoadedProductCollection();
 
-if($filteredList->getSize()): 
+if($filteredList->getSize()):
 
 $this->setCollection($filteredList);
 
@@ -50,33 +50,33 @@ if(1 === $use_anchor){
 }
 
 ?>
-<div class="pager">
+<div class="">
     <?php if($this->getLastPageNum()>1): ?>
-    <div class="pages">
-        
-        <ol>
+    <div class="">
+
+        <ul class="pagination large">
             <!--<li><a class="previous_jump" title="" href="<?php echo $this->getPreviousJumpUrl() ?><?=$anchor?>">«</a></li>-->
             <li>
                 <?php if (!$this->isFirstPage()): ?>
-                <a class="previous active <?php (!$this->getAnchorTextForPrevious() ? "i-previous":"");?> " href="<?=$this->getPreviousPageUrl();?><?=$anchor?>" title="<?=$this->__('Previous');?>"></a>
+                <a class="previous active <?php (!$this->getAnchorTextForPrevious() ? "i-previous":"");?> " href="<?=$this->getPreviousPageUrl();?><?=$anchor?>" title="<?=$this->__('Previous');?>"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                 <?php else: ?>
-                    <span class="previous disabled"></span>
+                    <a href="#" class="previous disabled"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                 <?php endif;?>
             </li>
-            
-        
+
+
             <li><span class="page_label"><?php echo $this->__('Page') ?><?php if ( ! $show_numbering ): ?>s<?php endif;?></span></li>
 
-        
+
             <li><a class="first" href="<?php echo $this->getFirstPageUrl() ?><?=$anchor?>"></a></li>
-            
-            
+
+
             <?php foreach ($this->getFramePages() as $_page): ?>
                 <?php if ($this->isPageCurrent($_page)): ?>
                     <li><span class="current"><?php echo $_page ?></span></li>
                 <?php else: ?>
-                
-                
+
+
                     <?php if ($show_numbering): ?>
                         <li><a href="<?php echo $this->getPageUrl($_page) ?><?=$anchor?>"><?php echo $_page ?></a></li>
                     <?php endif;?>
@@ -85,27 +85,27 @@ if(1 === $use_anchor){
 <?php if ( ! $show_numbering ): ?>
             <li>of <a class="last" href="<?php echo $this->getLastPageUrl() ?><?=$anchor?>"><?php echo $this->getLastPageNum() ?></a></li>
 <?php endif;?>
-        
-            
+
+
             <li>
                 <?php if (!$this->isLastPage()): ?>
-                    <a class="next active <?=(!$this->getAnchorTextForNext() ? "i-next" : "");?>" href="<?=$this->getNextPageUrl() ?><?=$anchor?>" title="<?=$this->__('Next') ?>"></a>
+                    <a class="next active <?=(!$this->getAnchorTextForNext() ? "i-next" : "");?>" href="<?=$this->getNextPageUrl() ?><?=$anchor?>" title="<?=$this->__('Next') ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 <?php else: ?>
-                    <span class="next disabled"></span>
+                    <a href="#" class="next disabled"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 <?php endif;?>
             </li>
          <!--<li><a class="next_jump" title="" href="<?php echo $this->getNextJumpUrl() ?><?=$anchor?>">»</a></li>-->
-        </ol>
+        </ul>
 
     </div>
     <?php endif; ?>
 </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 
 <?php endif ?>
