@@ -56,7 +56,7 @@ if(1 === $use_anchor){
 
         <ul class="pagination large">
             <!--<li><a class="previous_jump" title="" href="<?php echo $this->getPreviousJumpUrl() ?><?=$anchor?>">«</a></li>-->
-            <li>
+            <li <?php if (!$this->isFirstPage()): ?> <?php else: ?> class="previous disabled" <?php endif;?>>
                 <?php if (!$this->isFirstPage()): ?>
                 <a class="previous active <?php (!$this->getAnchorTextForPrevious() ? "i-previous":"");?> " href="<?=$this->getPreviousPageUrl();?><?=$anchor?>" title="<?=$this->__('Previous');?>"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                 <?php else: ?>
@@ -73,7 +73,7 @@ if(1 === $use_anchor){
 
             <?php foreach ($this->getFramePages() as $_page): ?>
                 <?php if ($this->isPageCurrent($_page)): ?>
-                    <li><span class="current"><?php echo $_page ?></span></li>
+                    <li class="active"><span class="current"><?php echo $_page ?></span></li>
                 <?php else: ?>
 
 
@@ -87,7 +87,7 @@ if(1 === $use_anchor){
 <?php endif;?>
 
 
-            <li>
+            <li <?php if (!$this->isLastPage()): ?> <?php else: ?> class="next disabled" <?php endif;?>>
                 <?php if (!$this->isLastPage()): ?>
                     <a class="next active <?=(!$this->getAnchorTextForNext() ? "i-next" : "");?>" href="<?=$this->getNextPageUrl() ?><?=$anchor?>" title="<?=$this->__('Next') ?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 <?php else: ?>
