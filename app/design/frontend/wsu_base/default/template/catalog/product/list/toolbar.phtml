@@ -47,7 +47,7 @@
 <div class="flex-row wrap designer_hr"></div>
 <?php if($this->getCollection()->getSize()): ?>
 <div class="toolbox-bottom <?=$layout->getLayoutBlockClass("toolbox-bottom")?> cat_list_header_bottom">
-    <div class="filtering_result_labels <?=$layout->getLayoutBlockClass("filtering_result_labels")?>">
+    <div class="filtering_result_labels <?=$layout->getLayoutBlockClass("filtering_result_labels")?> true fifths-2">
 		<span class="match_count"><?=$this->getTotalNum()?> <?=( 1 == $this->getTotalNum() ? $this->__("Match") : $this->__("Matches") )?></span>
 		<?php if($this->getLastPageNum()>1): ?>
 			<span class="paged_label"><?php echo $this->__('Showing %s through %s', $this->getFirstNum(), $this->getLastNum()) ?></span>
@@ -69,7 +69,7 @@
 
 
     </div>
-	<div class="limiter <?=$layout->getLayoutBlockClass("limiter")?>">
+	<div class="limiter <?=$layout->getLayoutBlockClass("limiter")?> fifths-3 flex-row">
 		<?php $pager=$this->getPagerHtml() ?>
 		<?php echo $pager ?>
 		<?php if( "" !== trim($pager) ): ?>

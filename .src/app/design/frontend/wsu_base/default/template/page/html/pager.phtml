@@ -63,7 +63,7 @@ $show_numbering = $theme->getCfgDesign("category/pager_show_numbering");
     <?php if($this->getLastPageNum()>1): ?>
     <div class="">
 
-        <ul class="pagination large">
+        <ul class="pagination large  no-margins" style="margin:.7rem 0;">
 			<!--<li><a class="previous_jump" title="" href="<?php echo $this->getPreviousJumpUrl() ?>">«</a></li>-->
             <li><a class="first" href="<?php echo $this->getFirstPageUrl() ?>"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
 			<li <?php if (!$this->isFirstPage()): ?> <?php else: ?> class="previous disabled" <?php endif;?>>
